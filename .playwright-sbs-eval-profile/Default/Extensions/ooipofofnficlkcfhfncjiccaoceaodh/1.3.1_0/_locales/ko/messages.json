@@ -1,0 +1,89 @@
+{
+   "authRequired": {
+      "message": "먼저 로그인해주세요."
+   },
+   "cancel": {
+      "message": "취소"
+   },
+   "collectionMoveComplete": {
+      "message": "컬렉션 이동 완료!"
+   },
+   "complete": {
+      "message": "완료!"
+   },
+   "creatingNote": {
+      "message": "노트 생성 중.."
+   },
+   "defaultCollection": {
+      "message": "기본 컬렉션"
+   },
+   "disableButtonTitle": {
+      "message": "Lilys 버튼\n사용하지 않기"
+   },
+   "disableOnAllSites": {
+      "message": "모든 사이트에서 끄기"
+   },
+   "disableOnThisSite": {
+      "message": "현재 사이트에서 끄기"
+   },
+   "extensionDescription": {
+      "message": "웹사이트, 유튜브 영상등 웹 상의 모든 자료를 클리핑하고 요약할 수 있는 강력한 확장프로그램"
+   },
+   "extensionName": {
+      "message": "LilysAI - 웹사이트, 유튜브 영상을 손 쉽게 요약하세요"
+   },
+   "getInsight": {
+      "message": "인사이트 얻기"
+   },
+   "getPdfInsight": {
+      "message": "PDF 인사이트 얻기"
+   },
+   "getVideoInsight": {
+      "message": "영상 인사이트 얻기"
+   },
+   "invalidRequest": {
+      "message": "오류가 발생했습니다. 다시 시도해주세요."
+   },
+   "invalidToken": {
+      "message": "세션이 만료되었습니다. 다시 로그인해주세요."
+   },
+   "networkError": {
+      "message": "네트워크 오류입니다. 연결을 확인해주세요."
+   },
+   "ongoingRequest": {
+      "message": "이미 요청이 진행 중입니다."
+   },
+   "openExtensionPage": {
+      "message": "확장 프로그램 페이지로 이동하시겠습니까?"
+   },
+   "pdfDownloadFailed": {
+      "message": "PDF 다운로드에 실패했습니다."
+   },
+   "savedCollections": {
+      "message": "저장된 컬렉션"
+   },
+   "scrapeComplete": {
+      "message": "스크랩 완료!"
+   },
+   "scrapeFailed": {
+      "message": "스크래핑 중 에러가 발생했습니다. 다시 시도해주세요."
+   },
+   "unknownError": {
+      "message": "오류가 발생했습니다. 다시 시도해주세요."
+   },
+   "updateButton": {
+      "message": "업데이트"
+   },
+   "updateRequired": {
+      "message": "업데이트가 필요합니다."
+   },
+   "usageLimitExceeded": {
+      "message": "사용량이 초과되었습니다."
+   },
+   "viewNote": {
+      "message": "노트 보기"
+   },
+   "viewSummaryNote": {
+      "message": "요약 노트 보기"
+   }
+}

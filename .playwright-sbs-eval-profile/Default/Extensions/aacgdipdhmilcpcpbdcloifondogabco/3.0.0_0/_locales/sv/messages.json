@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "Klicka bara på vår förlängningsikon på verktygsfältet för att förkorta URL: en för den aktuella sidan med TinyURL.com url-förkortningstjänst."
+   },
+   "app_name": {
+      "message": "Url Shortener för Google Chrome ™"
+   },
+   "msg_1": {
+      "message": "Dag"
+   },
+   "msg_2": {
+      "message": "Natt"
+   },
+   "msg_3": {
+      "message": "Ogiltig URL"
+   },
+   "msg_4": {
+      "message": "Observera att du kan kopiera och klistra in valfri url i den här textrutan."
+   },
+   "msg_5": {
+      "message": "PASTE LANG URL"
+   },
+   "msg_6": {
+      "message": "Vänligen betygsätt oss!"
+   }
+}

@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "TinyURL.com url shortener 서비스로 현재 페이지의 URL을 줄이려면 툴바에서 확장 프로그램 아이콘을 클릭하십시오."
+   },
+   "app_name": {
+      "message": "Chrome ™ 용 URL 단축기"
+   },
+   "msg_1": {
+      "message": "일"
+   },
+   "msg_2": {
+      "message": "밤"
+   },
+   "msg_3": {
+      "message": "잘못된 URL"
+   },
+   "msg_4": {
+      "message": "이 텍스트 상자의 모든 URL을 복사하여 붙여 넣을 수 있습니다."
+   },
+   "msg_5": {
+      "message": "페이스트 긴 URL"
+   },
+   "msg_6": {
+      "message": "우리를 평가하십시오!"
+   }
+}

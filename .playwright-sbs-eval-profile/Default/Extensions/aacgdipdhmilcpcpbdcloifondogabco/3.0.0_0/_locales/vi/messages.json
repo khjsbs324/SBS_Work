@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "Chỉ cần nhấp vào biểu tượng tiện ích mở rộng của chúng tôi trên thanh công cụ để rút ngắn URL của trang hiện tại với dịch vụ rút ngắn url TinyURL.com."
+   },
+   "app_name": {
+      "message": "Trình rút gọn Url cho Google Chrome ™"
+   },
+   "msg_1": {
+      "message": "Ngày"
+   },
+   "msg_2": {
+      "message": "Đêm"
+   },
+   "msg_3": {
+      "message": "URL không hợp lệ"
+   },
+   "msg_4": {
+      "message": "Xin lưu ý, bạn có thể sao chép và dán bất kỳ url nào trong hộp văn bản này."
+   },
+   "msg_5": {
+      "message": "URL dài"
+   },
+   "msg_6": {
+      "message": "Hãy đánh giá chúng tôi!"
+   }
+}

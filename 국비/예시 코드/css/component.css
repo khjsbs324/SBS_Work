@@ -1,0 +1,64 @@
+/* STEP 01 · 공통 기반 + 상단 안내 바 + 헤더 */
+:root {
+  --main: var(--color-background-dark-info);
+  --blue-dark: #2441e6;
+  --ink: #333;
+  --muted: #6f7178;
+  --line: #e3e4e8;
+  --soft-blue: #eef5ff;
+  --soft-gray: #f7f7f7;
+  --container: 80rem;
+  --radius-sm: .625rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+
+  /* 글자 사이즈 */
+  --text-XS: var(--font-text-size14);
+  --text-SMALL: var(--font-text-size18);
+  --text-MEDIUM: var(--font-text-size20);
+  --text-LARGE: var(--font-text-size26);
+  /* 지역 글자 사이즈 */
+  --text-logo: var(--font-text-size40);
+
+  /* 글자 두께 */
+  --textW-XS: var(--font-weight300);
+  --textW-SMALL: var(--font-weight500);
+  --textW-MEDIUM: var(--font-weight600);
+  --textW-LARGE: var(--font-weight700);
+  /* 지역 글자 두께 */
+  --textW-logo: var(--font-weight900);
+
+  /* 글자 색상 */
+  --color-default-light: var(--color-Wh);
+  --color-default-dark: var(--color-def);
+
+  /* padding */
+  --padding-XSS: var(--num2) var(--num6);
+  --padding-XS: var(--num10) var(--num16);
+
+  /* grid-padding */
+  --padding-grid-MEDIUM: var(--num80);
+  --padding-grid-LARGE: var(--num140);
+
+  /* 아이콘 */
+  --icon-FS-XS: var(--font-text-size20);
+  --icon-W-XS: var(--font-weight300);
+  --icon-FS-SMALL: var(--font-text-size24);
+  --icon-W-SMALL: var(--font-weight400);
+  --icon-FS-MEDIUM: var(--font-text-size28);
+  --icon-W-MEDIUM: var(--font-weight600);
+  --icon-FS-LARGE: var(--font-text-size32);
+  --icon-W-LARGE: var(--font-weight700);
+
+  /* 라운디드(모서리 둥글) */
+  --bd-radius2: var(--num2);
+  --bd-radius4: var(--num4);
+  --bd-radius6: var(--num6);
+
+  /* 그리드 */
+  --G-center: var(--num0) var(--auto);
+  --grid-1080: var(--GW-S);
+
+  /* 최소 범위 그리드 */
+  --gridM-1080: var(--GWM-M);
+}

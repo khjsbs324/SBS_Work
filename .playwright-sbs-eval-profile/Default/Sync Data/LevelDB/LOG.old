@@ -1,0 +1,17 @@
+2026/08/18-17:35:47.473 38ec Creating DB C:\Users\SBS\Documents\GitHub\SBS_Work\.playwright-sbs-eval-profile\Default\Sync Data\LevelDB since it was missing.
+2026/08/18-17:35:47.489 38ec Reusing MANIFEST C:\Users\SBS\Documents\GitHub\SBS_Work\.playwright-sbs-eval-profile\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/08/18-17:36:34.896 44d0 Level-0 table #5: started
+2026/08/18-17:36:34.902 44d0 Level-0 table #5: 457566 bytes OK
+2026/08/18-17:36:34.904 44d0 Delete type=0 #3
+2026/08/18-17:36:40.491 44d0 Level-0 table #7: started
+2026/08/18-17:36:40.493 44d0 Level-0 table #7: 136561 bytes OK
+2026/08/18-17:36:40.495 44d0 Delete type=0 #4
+2026/08/18-17:36:43.255 521c Level-0 table #9: started
+2026/08/18-17:36:43.258 521c Level-0 table #9: 120643 bytes OK
+2026/08/18-17:36:43.260 521c Delete type=0 #6
+2026/08/18-17:36:48.457 44d0 Level-0 table #11: started
+2026/08/18-17:36:48.461 44d0 Level-0 table #11: 121287 bytes OK
+2026/08/18-17:36:48.462 44d0 Delete type=0 #8
+2026/08/18-17:36:54.303 44d0 Level-0 table #13: started
+2026/08/18-17:36:54.306 44d0 Level-0 table #13: 119920 bytes OK
+2026/08/18-17:36:54.307 44d0 Delete type=0 #10

@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "Just click our extension icon on toolbar to shorten the URL of current page with TinyURL.com url shortener service."
+   },
+   "app_name": {
+      "message": "Url Shortener for Google Chrome™"
+   },
+   "msg_1": {
+      "message": "Day"
+   },
+   "msg_2": {
+      "message": "Night"
+   },
+   "msg_3": {
+      "message": "Invalid URL"
+   },
+   "msg_4": {
+      "message": "Please notice, you can copy&paste any url in this textbox."
+   },
+   "msg_5": {
+      "message": "PASTE LONG URL"
+   },
+   "msg_6": {
+      "message": "Please Rate Us!"
+   }
+}

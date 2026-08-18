@@ -1,0 +1,75 @@
+:root {
+  /* ------ 색상(원본 토큰) ------ */
+  --color-black: #111111;
+  --color-white: #ffffff;
+  --color-ink: #222222;
+  --color-muted: #767676;
+  --color-line: #e5e5e5;
+  --color-line-dark: #33452f;
+  --color-offwhite: #f7f6f3;
+  --color-green-900: #0f2018;
+  --color-green-700: #1b3a29;
+  --color-green-600: #24523a;
+  --color-green-100: #eaf0ea;
+  --color-danger: #c0392b;
+
+  /* ------ Typography ------ */
+  /* 고정형 */
+  --font-text-size10: 10px;
+  --font-text-size11: 11px;
+  --font-text-size12: 12px;
+  --font-text-size13: 13px;
+  --font-text-size14: 14px;
+  --font-text-size15: 15px;
+  --font-text-size16: 16px;
+  --font-text-size18: 18px;
+  --font-text-size20: 20px;
+  --font-text-size22: 22px;
+  --font-text-size24: 24px;
+  --font-text-size26: 26px;
+  --font-text-size28: 28px;
+  --font-text-size32: 32px;
+  --font-text-size36: 36px;
+  --font-text-size44: 44px;
+
+  /* 적응형(뷰포트 대응) */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.8125rem;  /* 13px */
+  --text-base: 0.875rem; /* 14px */
+  --text-md: 1rem;       /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.375rem;   /* 22px */
+  --text-2xl: 1.75rem;   /* 28px */
+  --text-3xl: 2.25rem;   /* 36px */
+
+  --font-weight300: 300;
+  --font-weight400: 400;
+  --font-weight500: 500;
+  --font-weight600: 600;
+  --font-weight700: 700;
+  --font-weight800: 800;
+
+  --color-Wh: #fff;
+  --color-def: #222;
+
+  /* ------ 배수(spacing scale) ------ */
+  --num0: 0; --num2: 2px; --num4: 4px; --num6: 6px; --num8: 8px; --num10: 10px;
+  --num12: 12px; --num14: 14px; --num16: 16px; --num18: 18px; --num20: 20px;
+  --num24: 24px; --num28: 28px; --num32: 32px; --num36: 36px; --num40: 40px;
+  --num44: 44px; --num48: 48px; --num52: 52px; --num56: 56px; --num60: 60px;
+  --num64: 64px; --num72: 72px; --num80: 80px; --num88: 88px; --num96: 96px;
+  --num104: 104px; --num120: 120px; --num140: 140px; --num160: 160px;
+
+  /* ------ 그리드 ------ */
+  --auto: auto;
+  --GW-XXS: 375px;
+  --GW-XS: 600px;
+  --GW-S: 768px;
+  --GW-M: 1024px;
+  --GW-L: 1280px;
+  --GW-XL: 1600px;
+
+  /* 그리드 최소 너비 */
+  --GWM-S: 320px;
+  --GWM-M: 768px;
+}

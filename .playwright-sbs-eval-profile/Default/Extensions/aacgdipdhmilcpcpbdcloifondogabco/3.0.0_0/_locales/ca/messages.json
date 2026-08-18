@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "Feu clic a la nostra icona d&#39;extensions a la barra d&#39;eines per escurçar l&#39;URL de la pàgina actual amb el servei d&#39;escurçador d&#39;URL TinyURL.com."
+   },
+   "app_name": {
+      "message": "Abreviador d’URL per a Google Chrome ™"
+   },
+   "msg_1": {
+      "message": "dia"
+   },
+   "msg_2": {
+      "message": "Nit"
+   },
+   "msg_3": {
+      "message": "URL no vàlid"
+   },
+   "msg_4": {
+      "message": "Tingueu en compte que podeu copiar i enganxar qualsevol URL en aquest quadre de text."
+   },
+   "msg_5": {
+      "message": "PASSAR URL LLARG"
+   },
+   "msg_6": {
+      "message": "Valoreu-nos!"
+   }
+}

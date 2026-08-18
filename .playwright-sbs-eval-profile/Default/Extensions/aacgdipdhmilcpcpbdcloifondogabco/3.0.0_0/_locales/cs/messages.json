@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "Stačí kliknout na naši ikonu rozšíření na panelu nástrojů a zkrátit adresu URL aktuální stránky pomocí služby zkrácení adresy URL TinyURL.com."
+   },
+   "app_name": {
+      "message": "Zkrácení adresy URL pro Google Chrome ™"
+   },
+   "msg_1": {
+      "message": "Den"
+   },
+   "msg_2": {
+      "message": "Noc"
+   },
+   "msg_3": {
+      "message": "neplatná URL"
+   },
+   "msg_4": {
+      "message": "V tomto textovém poli můžete zkopírovat a vložit libovolnou adresu URL."
+   },
+   "msg_5": {
+      "message": "PASTE LONG URL"
+   },
+   "msg_6": {
+      "message": "Ohodnoťte nás!"
+   }
+}

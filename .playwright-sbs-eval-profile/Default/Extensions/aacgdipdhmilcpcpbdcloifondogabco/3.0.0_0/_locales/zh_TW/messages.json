@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "只需單擊工具欄上的擴展程序圖標，即可使用TinyURL.com網址縮短工具縮短當前頁面的網址。"
+   },
+   "app_name": {
+      "message": "適用於Google Chrome™的網址縮短器"
+   },
+   "msg_1": {
+      "message": "天"
+   },
+   "msg_2": {
+      "message": "晚"
+   },
+   "msg_3": {
+      "message": "無效的網址"
+   },
+   "msg_4": {
+      "message": "請注意，您可以在此文本框中復制並粘貼任何URL。"
+   },
+   "msg_5": {
+      "message": "粘貼長網址"
+   },
+   "msg_6": {
+      "message": "請給我們評分！"
+   }
+}

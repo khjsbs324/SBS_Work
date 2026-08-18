@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "เพียงคลิกไอคอนส่วนขยายของเราบนแถบเครื่องมือเพื่อย่อ URL ของหน้าปัจจุบันด้วยบริการย่อ URL ของ TinyURL.com"
+   },
+   "app_name": {
+      "message": "Url Shortener สำหรับ Google Chrome ™"
+   },
+   "msg_1": {
+      "message": "วัน"
+   },
+   "msg_2": {
+      "message": "กลางคืน"
+   },
+   "msg_3": {
+      "message": "URL ไม่ถูกต้อง"
+   },
+   "msg_4": {
+      "message": "โปรดสังเกตว่าคุณสามารถคัดลอกและวาง URL ใด ๆ ในกล่องข้อความนี้"
+   },
+   "msg_5": {
+      "message": "PASTE LONG URL"
+   },
+   "msg_6": {
+      "message": "กรุณาให้คะแนนเรา!"
+   }
+}

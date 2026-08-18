@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "Cuma klik ikon pelanjutan kami pada bar alat untuk memendekkan URL halaman semasa dengan perkhidmatan pemendekan url TinyURL.com."
+   },
+   "app_name": {
+      "message": "Url Shortener untuk Google Chrome ™"
+   },
+   "msg_1": {
+      "message": "hari"
+   },
+   "msg_2": {
+      "message": "Malam"
+   },
+   "msg_3": {
+      "message": "URL tidak sah"
+   },
+   "msg_4": {
+      "message": "Sila perhatikan, anda boleh salin &amp; tampal sebarang url dalam kotak teks ini."
+   },
+   "msg_5": {
+      "message": "PASTE LONG URL"
+   },
+   "msg_6": {
+      "message": "Sila Berikan Kami!"
+   }
+}

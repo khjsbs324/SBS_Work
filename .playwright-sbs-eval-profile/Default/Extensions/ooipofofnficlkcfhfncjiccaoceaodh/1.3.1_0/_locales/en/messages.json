@@ -1,0 +1,89 @@
+{
+   "authRequired": {
+      "message": "Please log in first."
+   },
+   "cancel": {
+      "message": "Cancel"
+   },
+   "collectionMoveComplete": {
+      "message": "Move Complete!"
+   },
+   "complete": {
+      "message": "Complete!"
+   },
+   "creatingNote": {
+      "message": "Creating note.."
+   },
+   "defaultCollection": {
+      "message": "Default Collection"
+   },
+   "disableButtonTitle": {
+      "message": "Disable\nLilys Button"
+   },
+   "disableOnAllSites": {
+      "message": "Disable on all sites"
+   },
+   "disableOnThisSite": {
+      "message": "Disable on this site"
+   },
+   "extensionDescription": {
+      "message": "Powerful AI web clipper to save and summarize everything, including YouTube videos and web pages."
+   },
+   "extensionName": {
+      "message": "LilysAI - Save and Summarize Everything"
+   },
+   "getInsight": {
+      "message": "Get Insights"
+   },
+   "getPdfInsight": {
+      "message": "Get PDF Insights"
+   },
+   "getVideoInsight": {
+      "message": "Get Video Insights"
+   },
+   "invalidRequest": {
+      "message": "An error occurred. Please try again."
+   },
+   "invalidToken": {
+      "message": "Session expired. Please log in again."
+   },
+   "networkError": {
+      "message": "Network error. Please check your connection."
+   },
+   "ongoingRequest": {
+      "message": "Request already in progress."
+   },
+   "openExtensionPage": {
+      "message": "Would you like to open the extensions page?"
+   },
+   "pdfDownloadFailed": {
+      "message": "Failed to download PDF."
+   },
+   "savedCollections": {
+      "message": "Saved Collections"
+   },
+   "scrapeComplete": {
+      "message": "Scrape Done!"
+   },
+   "scrapeFailed": {
+      "message": "An error occurred while scraping. Please try again."
+   },
+   "unknownError": {
+      "message": "An error occurred. Please try again."
+   },
+   "updateButton": {
+      "message": "Update"
+   },
+   "updateRequired": {
+      "message": "Update required."
+   },
+   "usageLimitExceeded": {
+      "message": "Usage limit exceeded."
+   },
+   "viewNote": {
+      "message": "View Note"
+   },
+   "viewSummaryNote": {
+      "message": "View Summary"
+   }
+}

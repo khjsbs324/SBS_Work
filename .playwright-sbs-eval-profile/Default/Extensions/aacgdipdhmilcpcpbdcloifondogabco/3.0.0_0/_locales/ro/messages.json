@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "Nu trebuie decât să faceți clic pe pictograma extensiei noastre în bara de instrumente pentru a scurta adresa URL a paginii curente cu serviciul de scurtare a urlului TinyURL.com."
+   },
+   "app_name": {
+      "message": "Scurtare Url pentru Google Chrome ™"
+   },
+   "msg_1": {
+      "message": "Zi"
+   },
+   "msg_2": {
+      "message": "Noapte"
+   },
+   "msg_3": {
+      "message": "URL invalid"
+   },
+   "msg_4": {
+      "message": "Vă rugăm să observați, puteți copia și insera orice adresă URL în această casetă."
+   },
+   "msg_5": {
+      "message": "PASTA URL LUNGĂ"
+   },
+   "msg_6": {
+      "message": "Vă rugăm să ne evaluați!"
+   }
+}

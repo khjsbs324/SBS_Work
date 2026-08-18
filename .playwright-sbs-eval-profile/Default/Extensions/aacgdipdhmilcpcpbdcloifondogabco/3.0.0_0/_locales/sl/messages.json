@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "Samo kliknite ikono razširitve v orodni vrstici, da skrajšate URL trenutne strani s storitvijo za krajšanje url TinyURL.com."
+   },
+   "app_name": {
+      "message": "Skrajšanje URL-ja za Google Chrome ™"
+   },
+   "msg_1": {
+      "message": "dan"
+   },
+   "msg_2": {
+      "message": "Noč"
+   },
+   "msg_3": {
+      "message": "Neveljaven URL"
+   },
+   "msg_4": {
+      "message": "Prosimo, upoštevajte, da lahko kopirate in prilepite kateri koli URL v to besedilno polje."
+   },
+   "msg_5": {
+      "message": "URL PASTE LONG"
+   },
+   "msg_6": {
+      "message": "Prosimo ocenite nas!"
+   }
+}

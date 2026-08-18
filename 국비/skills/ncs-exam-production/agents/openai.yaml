@@ -1,0 +1,5 @@
+interface:
+  display_name: "국비 NCS 시험 산출물"
+  short_description: "NCS 평가자료 분석부터 시험 등록 검증까지 지원"
+  default_prompt: "Use $ncs-exam-production to analyze the NCS source and prepare validated instructor and student exam deliverables."
+

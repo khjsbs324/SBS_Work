@@ -1,0 +1,64 @@
+/* ------ 전역 ------ */
+/* 전체 브라우저에 들어가는 기본 글자 색상 */
+.col-de-light { color: var(--color-default-light); }
+.col-de-dark { color: var(--color-default-dark); }
+.col-muted { color: var(--muted); }
+.col-main { color: var(--main); }
+
+/* 전체 브라우저에 들어가는 텍스트 사이즈 */
+.XS-text-cpn { font-size: var(--text-XS); font-weight: var(--textW-SMALL); }
+.SMALL-text-cpn { font-size: var(--text-SMALL); font-weight: var(--textW-SMALL); }
+.MEDIUM-text-cpn { font-size: var(--text-MEDIUM); font-weight: var(--textW-MEDIUM); }
+.LARGE-text-cpn { font-size: var(--text-LARGE); font-weight: var(--textW-LARGE); }
+
+/* ------ 지역 ------ */
+/* 상단바에 들어가는 SMALL */
+.SMALL-li-header {
+  font-size: var(--text-base);
+  font-weight: var(--textW-MEDIUM);
+  letter-spacing: 0.02em;
+}
+
+/* 섹션 타이틀 */
+.section-title {
+  font-size: var(--text-LARGE);
+  font-weight: var(--textW-LARGE);
+  letter-spacing: -0.01em;
+}
+.section-sub {
+  font-size: var(--text-XS);
+  font-weight: var(--textW-XS);
+  color: var(--muted);
+}
+
+/* 상품 텍스트 */
+.product-name {
+  font-size: var(--text-SMALL);
+  font-weight: var(--textW-XS);
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.product-code {
+  font-size: 11px;
+  font-weight: var(--textW-XS);
+  color: var(--muted);
+}
+.product-price {
+  font-size: var(--text-SMALL);
+  font-weight: var(--textW-LARGE);
+  color: var(--ink);
+}
+
+/* 컬러 스와치 */
+.swatch-list { display: flex; gap: var(--num6); }
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--line);
+  display: inline-block;
+}

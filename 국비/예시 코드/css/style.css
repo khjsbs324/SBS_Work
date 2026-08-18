@@ -1,0 +1,57 @@
+body{height: 30px;}
+.notice-bar {
+    background-color: var(--main);
+    height: 4vh; min-height: 3vh;
+    display: flex; justify-content: center;
+    align-items: center; gap: 8px;
+}
+header {
+	border-bottom: 1px solid var(--main);
+}
+header .con {
+		height: 12vh;
+		display: flex; justify-content: space-between;		
+}
+.logo-box {
+    align-self: center;
+}
+
+.user-box, .user-box-1240{
+    display: flex;
+		border: 1px solid red;
+}
+.menu1 ul{
+	display: flex; height: 100%;
+	gap: var(--num40);
+}
+.menu1 li {
+	display: flex; align-items: center;
+	position: relative;
+}
+.menu1 li:nth-child(2) {
+	padding-left: var(--num60);
+}
+.menu1 li>.icon-new {
+	left: calc(50% + 10px);
+	top: calc(50% - 35px);
+	transform: translate(-50%, -50%);
+}
+.menu1 a {
+	padding-top: var(--num8);
+	padding-bottom: var(--num8);
+	font-weight: var(--textW-LARGE);
+}
+.user-menu-box {
+    align-self: center;
+		display: flex;
+		border: 1px solid red;
+}
+.se-box {
+	display: flex;
+	align-items: center;
+}
+.user-ex {
+	display: flex;
+	align-items: center;
+	gap: var(--num8);
+}

@@ -1,0 +1,26 @@
+{
+   "app_description": {
+      "message": "Simplemente haga clic en nuestro icono de extensión en la barra de herramientas para acortar la URL de la página actual con el servicio de acortador de URL TinyURL.com."
+   },
+   "app_name": {
+      "message": "Acortador de URL para Google Chrome ™"
+   },
+   "msg_1": {
+      "message": "Día"
+   },
+   "msg_2": {
+      "message": "Noche"
+   },
+   "msg_3": {
+      "message": "URL invalida"
+   },
+   "msg_4": {
+      "message": "Tenga en cuenta que puede copiar y pegar cualquier URL en este cuadro de texto."
+   },
+   "msg_5": {
+      "message": "PEGAR URL LARGA"
+   },
+   "msg_6": {
+      "message": "¡Por favor califícanos!"
+   }
+}

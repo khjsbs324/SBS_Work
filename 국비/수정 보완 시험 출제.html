@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>수정 보완 시험 출제</title>
+<style>
+@page { size: A4 landscape; margin: 12mm; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #222; font-family: "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 9px; line-height: 1.3; }
+.page { height: 185mm; page-break-after: always; position: relative; padding-bottom: 7mm; overflow: hidden; }
+.page:last-child { page-break-after: auto; }
+.top { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid #444; padding:0 4px 5px; margin-bottom:7px; }
+.brand { color:#777; font-weight:700; letter-spacing:-.5px; }
+h1 { margin:0; font-size:17px; }
+h2 { margin:8px 0 4px; padding:5px 8px; font-size:11.5px; background:#f2f7f8; border-left:4px solid #30a6b6; }
+h3 { margin:7px 0 3px; font-size:10px; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; }
+th, td { border:1px solid #bbb; padding:4px 5px; vertical-align:top; }
+th { background:#f3f3f3; text-align:center; font-weight:700; }
+.meta th { width:11%; }
+.meta td { text-align:center; }
+.criteria col:nth-child(1) { width:21%; }
+.criteria col:nth-child(2) { width:auto; }
+.criteria col:nth-child(3) { width:7%; }
+.score { text-align:center; font-weight:700; }
+.box { border:1px solid #aaa; padding:7px 9px; margin:4px 0; }
+.label { display:inline-block; min-width:60px; font-weight:700; color:#176c77; }
+ul, ol { margin:3px 0 3px 17px; padding:0; }
+li { margin:2px 0; }
+code { font-family: Consolas, monospace; background:#f4f4f4; padding:1px 3px; }
+pre { margin:4px 0; padding:6px; background:#f6f6f6; border:1px solid #ddd; white-space:pre-wrap; font:8px/1.25 Consolas, monospace; }
+.rubric td:first-child { font-weight:700; text-align:center; }
+.rubric col:nth-child(1) { width:18%; }
+.rubric col:nth-child(2) { width:9%; }
+.rubric col:nth-child(3) { width:auto; }
+.rubric col:nth-child(4) { width:10%; }
+.small { font-size:8px; color:#555; }
+.warning { padding:5px 8px; border:1px solid #d7a23b; background:#fff8e8; }
+.footer { position:absolute; left:0; right:0; bottom:0; display:flex; justify-content:space-between; color:#666; font-size:9px; }
+.total { background:#e8f5f7; font-weight:700; }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="top"><div class="brand">SBS아카데미컴퓨터아트학원</div><h1>수정 보완 능력단위 평가문제 출제안</h1><div>NCS 0802010406_13v1</div></div>
+  <table class="meta">
+    <tr><th>과정명</th><td colspan="3">디지털디자인 AI 기반 UIUX 웹디자인 &amp; 웹퍼블리셔 양성과정</td><th>평가유형</th><td>실기평가</td></tr>
+    <tr><th>능력단위</th><td>수정 보완</td><th>제한시간</th><td>180분</td><th>총점</th><td>100점</td></tr>
+    <tr><th>사용기술</th><td colspan="3">HTML5, CSS3, Git, GitHub</td><th>제출방식</th><td>GitHub 링크 + ZIP</td></tr>
+  </table>
+
+  <h2>평가기준 및 배점</h2>
+  <table class="criteria">
+    <colgroup><col><col><col></colgroup>
+    <tr><th>능력단위요소명</th><th>채점기준</th><th>배점</th></tr>
+    <tr><td>심미적 디자인 요소 수정 보완하기</td><td>프로젝트 설계와 기준 이미지의 적용 여부를 리뷰하고 수정·보완 필요 요소를 파악할 수 있다.</td><td class="score">8</td></tr>
+    <tr><td>심미적 디자인 요소 수정 보완하기</td><td>디자인 보완사항에 따라 컨테이너, Grid, 반응형 레이아웃을 본래 의도대로 수정할 수 있다.</td><td class="score">12</td></tr>
+    <tr><td>심미적 디자인 요소 수정 보완하기</td><td>수정 후 1920/1600/1024/768/480px에서 전체 레이아웃을 재검증할 수 있다.</td><td class="score">8</td></tr>
+    <tr><td>콘텐츠 사용성 수정 보완하기</td><td>제공된 HTML/CSS 산출물을 리뷰하여 구조·사용성 측면의 수정 필요 요소를 파악할 수 있다.</td><td class="score">8</td></tr>
+    <tr><td>콘텐츠 사용성 수정 보완하기</td><td>혼합된 CSS를 책임에 맞는 8개 파일로 분리하여 유지보수성과 사용성을 개선할 수 있다.</td><td class="score">10</td></tr>
+    <tr><td>콘텐츠 사용성 수정 보완하기</td><td>파일 분리 후 누락·중복·캐스케이드 변화와 CSS 로딩 오류를 재검증할 수 있다.</td><td class="score">8</td></tr>
+    <tr><td>콘텐츠 사용성 수정 보완하기</td><td>시맨틱 HTML, 대체텍스트, 링크·버튼 구분 등 웹 표준·접근성 준수 여부를 확인할 수 있다.</td><td class="score">8</td></tr>
+    <tr><td>매체 기능적 요소 수정 보완하기</td><td>개발자 도구를 사용하여 CSS 무효 선언과 가로 스크롤 원인을 리뷰하고 파악할 수 있다.</td><td class="score">8</td></tr>
+    <tr><td>매체 기능적 요소 수정 보완하기</td><td>파악한 오류의 정확한 원인에 따라 CSS 변수, Grid 문법, body 최소 너비를 수정할 수 있다.</td><td class="score">12</td></tr>
+    <tr><td>매체 기능적 요소 수정 보완하기</td><td>수정 후 주요 브라우저·화면 너비에서 기능과 표시 결과를 재검증할 수 있다.</td><td class="score">8</td></tr>
+    <tr><td>매체 기능적 요소 수정 보완하기</td><td>CSS 변수, Grid 함수, 미디어쿼리, 캐스케이드와 GitHub 협업 방식을 이해하고 설명할 수 있다.</td><td class="score">10</td></tr>
+    <tr class="total"><td colspan="2">합계</td><td class="score">100</td></tr>
+  </table>
+  <div class="footer"><span>수정 보완 능력단위 평가</span><span>1 / 4</span></div>
+</section>
+
+<section class="page">
+  <div class="top"><div class="brand">SBS아카데미컴퓨터아트학원</div><h1>문제 및 제출 안내</h1><div>실기평가</div></div>
+  <h2>문제</h2>
+  <div class="box"><strong>제공된 MALBON 반응형 페이지의 CSS를 역할별 8개 파일로 분리하고, 화면을 깨뜨리는 CSS 오류 3건을 찾아 수정하여 기준 이미지와 동일한 반응형 결과물을 완성하시오.</strong></div>
+
+  <h2>제공 자료</h2>
+  <div class="box">
+    <ul>
+      <li><code>문제 코드/index.html</code></li>
+      <li><code>문제 코드/css/style.css</code> — 모든 스타일이 혼합된 파일</li>
+      <li><code>문제 코드/정답.png</code> — 완성 기준 이미지</li>
+    </ul>
+  </div>
+
+  <h2>수행 지시</h2>
+  <ol>
+    <li><code>style.css</code>를 분석하여 <code>normal.css</code>, <code>root.css</code>, <code>component.css</code>, <code>btn_cpn.css</code>, <code>item_cpn.css</code>, <code>layout_cpn.css</code>, <code>style.css</code>, <code>media.css</code>의 8개 파일로 분리한다.</li>
+    <li><code>index.html</code>에서 8개 CSS 파일을 캐스케이드가 유지되는 순서로 연결한다.</li>
+    <li>기준 이미지와 개발자 도구의 Styles·Computed·Layout 패널을 사용해 의도적 결함 3건을 찾는다.</li>
+    <li>결함의 선택자, 문제 선언, 화면 증상, 원인, 수정 선언을 보고서에 기록한다.</li>
+    <li>1920, 1600, 1024, 768, 480px에서 레이아웃을 재검증한다.</li>
+    <li>Git 기능 브랜치에서 최소 4개의 의미 있는 커밋을 작성하고 GitHub에 Push한다.</li>
+  </ol>
+
+  <h2>제출물</h2>
+  <table>
+    <tr><th style="width:20%">제출 항목</th><th>내용</th></tr>
+    <tr><td>GitHub 링크</td><td>강사가 열람 가능한 저장소 URL과 Pull Request URL</td></tr>
+    <tr><td>결과 ZIP</td><td><code>성명_수정보완.zip</code> — index.html, css 폴더, 보고서 포함</td></tr>
+    <tr><td>결함 보고서</td><td>오류 3건의 진단 근거와 수정 전·후 화면</td></tr>
+    <tr><td>반응형 증빙</td><td>1920px, 1024px, 480px 완료 화면 캡처</td></tr>
+  </table>
+
+  <h2>유의사항</h2>
+  <div class="warning">
+    HTML의 상품·배너·문구를 삭제하여 화면을 임의로 맞추지 않는다. JavaScript, 프레임워크, 백엔드를 추가하지 않는다. 정답 코드 복사는 부정행위로 처리하며, 개발자 도구를 이용한 진단 과정과 Git 커밋 기록을 평가한다.
+  </div>
+
+  <h2>정답 제출 예시</h2>
+  <div class="box">
+    <span class="label">링크</span> https://github.com/[계정]/[저장소]<br>
+    <span class="label">PR</span> https://github.com/[계정]/[저장소]/pull/[번호]<br>
+    <span class="label">파일</span> 홍길동_수정보완.zip
+  </div>
+  <div class="footer"><span>수정 보완 능력단위 평가</span><span>2 / 4</span></div>
+</section>
+
+<section class="page">
+  <div class="top"><div class="brand">SBS아카데미컴퓨터아트학원</div><h1>강사용 정답</h1><div>평가 종료 전 비공개</div></div>
+  <h2>CSS 연결 정답</h2>
+  <pre>&lt;link rel="stylesheet" href="./css/normal.css"&gt;
+&lt;link rel="stylesheet" href="./css/root.css"&gt;
+&lt;link rel="stylesheet" href="./css/component.css"&gt;
+&lt;link rel="stylesheet" href="./css/btn_cpn.css"&gt;
+&lt;link rel="stylesheet" href="./css/item_cpn.css"&gt;
+&lt;link rel="stylesheet" href="./css/layout_cpn.css"&gt;
+&lt;link rel="stylesheet" href="./css/style.css"&gt;
+&lt;link rel="stylesheet" href="./css/media.css"&gt;</pre>
+
+  <h2>CSS 파일별 역할</h2>
+  <table>
+    <tr><th style="width:18%">파일</th><th>분리 기준</th></tr>
+    <tr><td>normal.css</td><td>폰트, reset, 기본 HTML 요소</td></tr>
+    <tr><td>root.css</td><td>색상·글자·간격·radius·container 원시 변수</td></tr>
+    <tr><td>component.css</td><td>main, ink, muted 등 프로젝트 의미 변수</td></tr>
+    <tr><td>btn_cpn.css</td><td>버튼, 아이콘, 탭, more, slide, scroll-top</td></tr>
+    <tr><td>item_cpn.css</td><td>글자 유틸리티, 이미지, 상품명·가격·swatch</td></tr>
+    <tr><td>layout_cpn.css</td><td>컨테이너, section, Grid, 공통 배치</td></tr>
+    <tr><td>style.css</td><td>header, hero, collection, promotion, lookbook, footer 등 페이지 섹션</td></tr>
+    <tr><td>media.css</td><td>1600, 1024, 768, 480px 반응형 재정의</td></tr>
+  </table>
+
+  <h2>의도적 결함 3건</h2>
+  <table>
+    <tr><th style="width:10%">ID</th><th style="width:14%">선택자</th><th style="width:23%">문제 코드</th><th>증상·원인</th><th style="width:21%">정답</th></tr>
+    <tr><td>BUG-01</td><td><code>.con</code></td><td><code>max-width: var(--containner);</code></td><td>미정의 변수로 선언이 무효가 되어 컨테이너 최대 폭이 적용되지 않음</td><td><code>max-width: var(--container);</code></td></tr>
+    <tr><td>BUG-02</td><td><code>.grid-5</code></td><td><code>repeat(5 1fr)</code></td><td>함수 인수의 콤마 누락으로 열 정의가 무효가 되어 상품이 1단으로 표시됨</td><td><code>repeat(5, 1fr)</code></td></tr>
+    <tr><td>BUG-03</td><td><code>body</code></td><td><code>min-width: 1600px;</code></td><td>1600px 미만에서 body가 줄지 않아 태블릿·모바일 전체에 가로 스크롤 발생</td><td>해당 <code>min-width</code> 삭제</td></tr>
+  </table>
+
+  <h2>핵심 진단 근거</h2>
+  <ul>
+    <li>BUG-01: 1920px에서 좌우 여백과 Computed <code>max-width</code>를 확인한다.</li>
+    <li>BUG-02: Grid Layout 또는 Computed에서 <code>grid-template-columns</code>가 무효인지 확인한다.</li>
+    <li>BUG-03: 1024/768/480px에서 하단 가로 스크롤과 body의 Computed <code>min-width</code>를 확인한다. flex 속성은 원인이 아니다.</li>
+  </ul>
+  <div class="footer"><span>수정 보완 능력단위 평가</span><span>3 / 4</span></div>
+</section>
+
+<section class="page">
+  <div class="top"><div class="brand">SBS아카데미컴퓨터아트학원</div><h1>세부 채점기준</h1><div>총 100점</div></div>
+  <table class="rubric">
+    <colgroup><col><col><col><col></colgroup>
+    <tr><th>평가영역</th><th>배점</th><th>채점 기준</th><th>취득점수</th></tr>
+    <tr><td>디자인 산출물 리뷰</td><td class="score">8</td><td>기준 이미지와 문제 화면을 비교해 컨테이너, Grid, 모바일 가로 스크롤의 수정 필요 요소를 모두 파악 8점 / 2개 5~7점 / 1개 3~4점 / 파악 불가 0~2점</td><td></td></tr>
+    <tr><td>디자인 수정</td><td class="score">12</td><td>세 레이아웃 결함을 본래 의도대로 수정 10~12점 / 2건 수정 7~9점 / 1건 수정 4~6점 / 미수정 0~3점</td><td></td></tr>
+    <tr><td>디자인 재검증</td><td class="score">8</td><td>5개 기준 너비와 전체 섹션을 검증 7~8점 / 일부 검증 4~6점 / 근거 부족 1~3점 / 미검증 0점</td><td></td></tr>
+    <tr><td>콘텐츠 산출물 리뷰</td><td class="score">8</td><td>HTML/CSS 구조, 중복, 책임 분리 필요성을 구체적으로 분석 7~8점 / 일부 분석 4~6점 / 단편적 1~3점 / 미수행 0점</td><td></td></tr>
+    <tr><td>CSS 분리·개선</td><td class="score">10</td><td>8개 파일에 책임별로 누락·중복 없이 분리 9~10점 / 경미한 혼재 6~8점 / 다수 혼재 3~5점 / 미분리 0~2점</td><td></td></tr>
+    <tr><td>분리 후 재검증</td><td class="score">8</td><td>연결 순서, 캐스케이드, CSS 404, 콘솔 오류를 모두 검증 7~8점 / 일부 4~6점 / 근거 부족 1~3점 / 미검증 0점</td><td></td></tr>
+    <tr><td>웹 표준·접근성</td><td class="score">8</td><td>시맨틱 구조, alt, 링크·버튼, 기본 문서 구조를 점검하고 유지 7~8점 / 일부 누락 4~6점 / 다수 누락 1~3점 / 훼손 0점</td><td></td></tr>
+    <tr><td>기능 오류 리뷰</td><td class="score">8</td><td>개발자 도구의 Styles·Computed·Layout으로 무효 선언과 너비 원인을 증빙 7~8점 / 도구 사용 근거 일부 4~6점 / 추측 중심 1~3점 / 미수행 0점</td><td></td></tr>
+    <tr><td>원인 분석·수정</td><td class="score">12</td><td>변수 철자, repeat 문법, body min-width 원인을 정확히 설명하고 수정 10~12점 / 2건 7~9점 / 1건 4~6점 / 미수정 0~3점</td><td></td></tr>
+    <tr><td>기능 재검증</td><td class="score">8</td><td>주요 브라우저·너비에서 Grid, 메뉴, 스크롤, CSS 로딩을 재검증 7~8점 / 일부 4~6점 / 근거 부족 1~3점 / 미검증 0점</td><td></td></tr>
+    <tr><td>프로그래밍·협업 이해</td><td class="score">10</td><td>CSS 변수·Grid·미디어쿼리·캐스케이드 설명과 4개 이상 의미 있는 커밋·PR 9~10점 / 일부 미흡 6~8점 / 기록·설명 부족 3~5점 / 단일 커밋·설명 없음 0~2점</td><td></td></tr>
+    <tr class="total"><td>합계</td><td class="score">100</td><td>60점 이상 이수. 정답 코드 복사 또는 수행하지 않은 테스트 허위 기재 시 재평가한다.</td><td></td></tr>
+  </table>
+
+  <h2>평가자 최종 확인</h2>
+  <table>
+    <tr><th style="width:30%">확인 항목</th><th>결과</th><th style="width:30%">비고</th></tr>
+    <tr><td>CSS 8개 파일 및 연결 순서</td><td>□ 적합　□ 보완</td><td></td></tr>
+    <tr><td>의도적 결함 3건 수정</td><td>□ 적합　□ 보완</td><td></td></tr>
+    <tr><td>반응형·회귀 테스트</td><td>□ 적합　□ 보완</td><td></td></tr>
+    <tr><td>GitHub 및 제출 ZIP</td><td>□ 적합　□ 보완</td><td></td></tr>
+    <tr><td>평가자 의견</td><td colspan="2" style="height:38px"></td></tr>
+  </table>
+  <div class="footer"><span>수정 보완 능력단위 평가</span><span>4 / 4</span></div>
+</section>
+
+</body>
+</html>

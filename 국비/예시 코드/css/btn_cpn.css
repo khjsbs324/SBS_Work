@@ -1,0 +1,57 @@
+/* ------버튼------ */
+/* ----전역 버튼---- */
+.btn-XS-color {
+  padding: var(--padding-XS);
+  background-color: var(--main);
+  border-radius: var(--num10);
+  color: var(--color-default-light);
+  font-size: var(--text-XS);
+  font-weight: var(--textW-MEDIUM);
+}
+.btn-XS-Ncolor {
+  padding: var(--padding-XS);
+  border-radius: var(--num10);
+  color: var(--main);
+  font-size: var(--text-XS);
+  font-weight: var(--textW-MEDIUM);
+  border: 1px solid var(--main);
+}
+.mo-menu-btn {
+  font-size: var(--icon-FS-MEDIUM);
+  font-weight: var(--icon-W-MEDIUM);
+}
+
+
+/* ----지역 버튼---- */
+
+
+
+/* ------아이콘------ */
+/* ----전역 아이콘---- */
+.icon-FS-XS {
+  font-size: var(--icon-FS-XS);
+  font-weight: var(--icon-W-XS);
+}
+.icon-FS-SMALL {
+  font-size: var(--icon-FS-SMALL);
+  font-weight: var(--icon-W-SMALL);
+}
+.icon-new {
+  background: linear-gradient(135deg, #8b7cf6, #5942d7);
+  padding: var(--padding-XSS);
+  color: var(--color-default-light);
+  font-size: var(--text-XS);
+  font-weight: var(--textW-LARGE);
+  border-radius: var(--bd-radius4);
+  position: absolute;
+}
+
+/* ----지역 아이콘---- */
+.circle-icon-XS {
+  font-size: var(--icon-FS-SMALL);
+  font-weight: var(--icon-W-XS);
+}
+.menu-icon {
+  font-size: var(--icon-FS-LARGE);
+  font-weight: var(--icon-W-LARGE);
+}

@@ -1,0 +1,26 @@
+{
+  "msg_1": {
+    "message": "araw"
+  },
+  "msg_6": {
+    "message": "Paki-rate sa Amin!"
+  },
+  "app_name": {
+    "message": "Url Shortener para sa Google Chrome ™"
+  },
+  "app_description": {
+    "message": "I-click lamang ang aming icon ng extension sa toolbar upang paikliin ang URL ng kasalukuyang pahina gamit ang serbisyo ng TinyURL.com url."
+  },
+  "msg_2": {
+    "message": "Gabi"
+  },
+  "msg_3": {
+    "message": "Hindi wastong URL"
+  },
+  "msg_4": {
+    "message": "Mangyaring mapansin, maaari mong kopyahin at i-paste ang anumang url sa textbox na ito."
+  },
+  "msg_5": {
+    "message": "PASTE LONG URL"
+  }
+}
