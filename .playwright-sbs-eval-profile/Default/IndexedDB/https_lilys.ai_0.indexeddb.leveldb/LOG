@@ -1,6 +1,0 @@
-2026/08/18-17:36:37.560 44d0 Creating DB C:\Users\SBS\Documents\GitHub\SBS_Work\.playwright-sbs-eval-profile\Default\IndexedDB\https_lilys.ai_0.indexeddb.leveldb since it was missing.
-2026/08/18-17:36:37.564 44d0 Reusing MANIFEST C:\Users\SBS\Documents\GitHub\SBS_Work\.playwright-sbs-eval-profile\Default\IndexedDB\https_lilys.ai_0.indexeddb.leveldb/MANIFEST-000001
-2026/08/18-17:36:37.711 44d0 Level-0 table #5: started
-2026/08/18-17:36:37.713 44d0 Level-0 table #5: 2519 bytes OK
-2026/08/18-17:36:37.715 44d0 Delete type=0 #3
-2026/08/18-17:36:37.715 38ec Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
