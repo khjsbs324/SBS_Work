@@ -1,0 +1,30 @@
+{
+  "slides": [
+    {"slide": 2, "mode": "toc", "title": "국비 컨택&상담 노하우", "subtitle": "Overview · 목차"},
+    {"slide": 3, "mode": "image", "title": "국비지원 종류", "subtitle": "Chapter 1. 국비지원", "cropTop": 115},
+    {"slide": 4, "mode": "image", "title": "국비지원 대상 및 지원한도", "subtitle": "Chapter 1. 국비지원", "cropTop": 0},
+    {"slide": 5, "mode": "image", "title": "내일배움카드 vs 국민취업지원제도", "subtitle": "Chapter 1. 국비지원", "cropTop": 125},
+    {"slide": 6, "mode": "merge", "title": "국비 문의 흐름", "subtitle": "Chapter 2. 컨택 스피치", "cropTop": 0, "mergeLabel": "기본 컨택 스피치 · 편집 레이어 원문"},
+    {"slide": 7, "mode": "merge", "title": "국비 문의자 유형", "subtitle": "Chapter 2. 컨택 스피치", "cropTop": 125, "mergeLabel": "기본 컨택 스피치 · 편집 레이어 원문"},
+    {"slide": 8, "mode": "cards", "title": "구직자 컨택 스피치", "subtitle": "Chapter 2. 컨택 스피치", "callout": "정확한 자격 유형과 일정은 상담 시 조회 후 안내해드리는 것이 가장 안전합니다."},
+    {"slide": 9, "mode": "cards", "title": "재직자 컨택 스피치", "subtitle": "Chapter 2. 컨택 스피치"},
+    {"slide": 10, "mode": "image", "title": "페이스북 DB 컨택 스피치", "subtitle": "Chapter 2. 컨택 스피치", "cropTop": 145},
+    {"slide": 11, "mode": "image", "title": "실업급여 수령자 컨택 스피치", "subtitle": "Chapter 2. 컨택 스피치", "cropTop": 145},
+    {"slide": 12, "mode": "image", "title": "구직자 국비문의 상담", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 135},
+    {"slide": 13, "mode": "image", "title": "구직자 국비문의 상담", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 135},
+    {"slide": 14, "mode": "image", "title": "재직자 국비문의 상담", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 125},
+    {"slide": 15, "mode": "image", "title": "재직자 국비문의 상담", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 125},
+    {"slide": 16, "mode": "merge", "title": "내일배움카드 타파 방법", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 205, "mergeLabel": "기본 컨택 스피치 · 편집 레이어 원문"},
+    {"slide": 17, "mode": "image", "title": "상담 시 선택 가이드", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 18, "mode": "image", "title": "국민취업지원제도 상담", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 19, "mode": "image", "title": "가구단위·소득 기준 안내", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 20, "mode": "image", "title": "졸업예정자 상담", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 21, "mode": "image", "title": "견적서 활용", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 22, "mode": "image", "title": "카드 결제 스피치", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 23, "mode": "image", "title": "카카오톡 활용", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 24, "mode": "image", "title": "기존 수강생 수급내역", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 25, "mode": "image", "title": "국취제 과정 확대", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 26, "mode": "image", "title": "대상자가 아닐 때", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145},
+    {"slide": 27, "mode": "image", "title": "국취제 할인율", "subtitle": "Chapter 3. 상담 스피치", "cropTop": 145}
+  ]
+}
