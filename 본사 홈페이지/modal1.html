@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBS아카데미AIX 참여 신청 안내 모달 시안</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<style>
+  :root{
+    --ink:#14161c;
+    --ink-soft:#4a4c56;
+    --muted:#767a86;
+    --paper:#f7f7f8;
+    --line:#e5e6ea;
+    --white:#fff;
+    --black:#111214;
+    --blue:#1554c9;
+    --blue-dark:#0e43a5;
+    --blue-tint:#eef4ff;
+    --coral:#e8332f;
+    --coral-tint:#fdecec;
+    --radius:12px;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;min-height:100%;}
+  body{
+    font-family:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
+    color:var(--ink);background:#eef0f4;line-height:1.55;-webkit-font-smoothing:antialiased;
+  }
+  button,input{font:inherit;}
+  button{color:inherit;}
+  [hidden]{display:none!important;}
+
+  .preview-stage{
+    min-height:100vh;display:grid;place-items:center;padding:24px;
+    background:
+      radial-gradient(circle at 20% 0%,rgba(21,84,201,.08),transparent 30%),
+      linear-gradient(135deg,#f7f8fb,#e8ebf1);
+  }
+  .preview-reopen{
+    border:0;border-radius:999px;background:var(--blue);color:#fff;
+    padding:14px 24px;font-weight:800;cursor:pointer;box-shadow:0 12px 28px rgba(21,84,201,.25);
+  }
+
+  .modal-overlay{
+    position:fixed;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;
+    padding:20px;background:rgba(17,18,20,.58);backdrop-filter:blur(4px);
+  }
+  .application-modal{
+    position:relative;width:min(520px,100%);height:min(760px,calc(100dvh - 40px));
+    display:flex;flex-direction:column;overflow:hidden;background:var(--white);
+    border:1px solid rgba(255,255,255,.62);border-radius:20px;
+    box-shadow:0 28px 80px rgba(17,18,20,.3);
+  }
+
+  .modal-header{flex:none;padding:22px 26px 0;background:var(--white);}
+  .modal-topline{display:flex;align-items:center;justify-content:space-between;gap:18px;}
+  .modal-brand{display:flex;align-items:center;gap:10px;min-width:0;}
+  .brand-symbol{
+    width:28px;height:28px;display:grid;place-items:center;position:relative;
+    border-radius:50%;background:#ffd226;color:var(--blue);font-size:11px;font-weight:900;
+  }
+  .brand-symbol::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--blue);}
+  .brand-copy{min-width:0;}
+  .brand-copy strong{display:block;font-size:13px;line-height:1.25;letter-spacing:-.01em;}
+  .brand-copy span{display:block;margin-top:2px;color:var(--muted);font-size:10.5px;line-height:1.25;}
+  .modal-close{
+    width:34px;height:34px;display:grid;place-items:center;flex:none;border:0;border-radius:50%;
+    background:var(--paper);color:var(--ink-soft);cursor:pointer;transition:background .16s ease,color .16s ease;
+  }
+  .modal-close:hover{background:var(--black);color:#fff;}
+  .modal-close svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;}
+
+  .progress-row{display:grid;grid-template-columns:34px minmax(0,1fr) 42px;align-items:center;gap:10px;margin-top:18px;}
+  .step-back{
+    width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--line);
+    border-radius:50%;background:#fff;color:var(--ink-soft);cursor:pointer;
+  }
+  .step-back:hover{border-color:var(--blue);color:var(--blue);}
+  .step-back:disabled{opacity:.35;cursor:default;}
+  .step-back svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;}
+  .progress-track{height:8px;overflow:hidden;border-radius:999px;background:#eceef2;}
+  .progress-bar{height:100%;width:20%;border-radius:inherit;background:var(--blue);transition:width .35s cubic-bezier(.22,.61,.36,1);}
+  .progress-count{text-align:right;color:var(--muted);font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;}
+
+  .application-form{display:flex;min-height:0;flex:1;flex-direction:column;}
+  .step-viewport{min-height:0;flex:1;overflow-y:auto;overscroll-behavior:contain;padding:34px 38px 20px;scrollbar-gutter:stable;}
+  .form-step{min-height:100%;outline:none;}
+  .form-step.is-entering{animation:step-in .38s cubic-bezier(.22,.61,.36,1) both;}
+  .form-step.is-reversing{animation:step-back-in .32s cubic-bezier(.22,.61,.36,1) both;}
+  @keyframes step-in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+  @keyframes step-back-in{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}
+
+  .question-kicker{margin:0 0 10px;color:var(--blue);font-size:14px;font-weight:900;letter-spacing:.04em;}
+  .question-title{margin:0;color:var(--ink);font-size:clamp(24px,4vw,29px);font-weight:850;line-height:1.3;letter-spacing:-.025em;word-break:keep-all;}
+  .question-desc{margin:12px 0 0;color:var(--muted);font-size:14px;line-height:1.7;word-break:keep-all;}
+  .required-dot{color:var(--coral);}
+  .question-body{margin-top:30px;}
+
+  .branch-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;}
+  .choice-chip{position:relative;display:block;cursor:pointer;}
+  .choice-chip input{position:absolute;opacity:0;pointer-events:none;}
+  .choice-chip span{
+    min-height:46px;display:flex;align-items:center;justify-content:center;padding:9px 5px;
+    border:1px solid var(--line);border-radius:10px;background:var(--paper);
+    color:var(--ink-soft);font-size:13px;font-weight:700;transition:all .16s ease;
+  }
+  .choice-chip:hover span{border-color:#b7c7e8;background:var(--blue-tint);color:var(--blue);}
+  .choice-chip input:focus-visible + span{outline:3px solid rgba(21,84,201,.24);outline-offset:2px;}
+  .choice-chip input:checked + span{border-color:var(--blue);background:var(--blue);color:#fff;box-shadow:0 8px 18px rgba(21,84,201,.18);}
+
+  .field{display:grid;gap:9px;}
+  .field + .field{margin-top:18px;}
+  .field-label{font-size:13px;font-weight:800;color:var(--ink-soft);}
+  .field-label small{color:var(--muted);font-size:11px;font-weight:600;}
+  .text-input{
+    width:100%;height:56px;border:1px solid var(--line);border-radius:10px;
+    padding:0 16px;background:var(--paper);color:var(--ink);font-size:16px;transition:border-color .15s ease,box-shadow .15s ease,background .15s ease;
+  }
+  .text-input::placeholder{color:#a7aab3;}
+  .text-input:focus{outline:0;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(21,84,201,.12);}
+
+  .privacy-card{margin-top:20px;padding:16px;border:1px solid var(--line);border-radius:12px;background:#fff;}
+  .privacy-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+  .check-label{display:flex;align-items:flex-start;gap:9px;min-width:0;cursor:pointer;}
+  .check-label input{width:18px;height:18px;flex:none;margin:2px 0 0;accent-color:var(--blue);}
+  .check-label span{font-size:13px;font-weight:700;line-height:1.5;}
+  .required-tag{display:inline-block;margin-left:4px;color:var(--coral);font-size:11px;font-weight:900;}
+  .detail-toggle{flex:none;border:0;background:none;padding:2px;color:var(--blue);font-size:11px;font-weight:750;cursor:pointer;white-space:nowrap;}
+  .detail-toggle svg{width:12px;height:12px;margin-left:2px;vertical-align:-2px;stroke:currentColor;stroke-width:2;fill:none;transition:transform .15s ease;}
+  .detail-toggle[aria-expanded="true"] svg{transform:rotate(180deg);}
+  .privacy-detail{margin-top:14px;padding:13px 14px;border-radius:9px;background:var(--paper);}
+  .privacy-detail dl{display:grid;grid-template-columns:72px 1fr;gap:7px 10px;margin:0;font-size:11.5px;line-height:1.5;}
+  .privacy-detail dt{color:var(--blue);font-weight:800;}
+  .privacy-detail dd{margin:0;color:var(--muted);}
+
+  .marketing-copy{display:grid;gap:13px;margin:0;padding:0;list-style:none;counter-reset:marketing;}
+  .marketing-copy li{position:relative;padding-left:25px;color:var(--ink-soft);font-size:13.5px;line-height:1.65;counter-increment:marketing;}
+  .marketing-copy li::before{content:counter(marketing) ')';position:absolute;left:0;color:var(--ink);font-weight:800;}
+  .marketing-note{margin:22px 0 0;padding:14px 15px;border-radius:10px;background:var(--paper);color:var(--muted);font-size:12px;line-height:1.65;}
+  .marketing-choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;}
+  .marketing-choice{position:relative;cursor:pointer;}
+  .marketing-choice input{position:absolute;opacity:0;pointer-events:none;}
+  .marketing-choice span{
+    min-height:56px;display:flex;align-items:center;justify-content:center;gap:8px;
+    border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink-soft);font-size:13.5px;font-weight:800;transition:all .16s ease;
+  }
+  .marketing-choice input:focus-visible + span{outline:3px solid rgba(21,84,201,.24);outline-offset:2px;}
+  .marketing-choice input:checked + span{border-color:var(--blue);background:var(--blue);color:#fff;box-shadow:0 8px 18px rgba(21,84,201,.2);}
+  .choice-mark{font-size:18px;line-height:1;}
+
+  .review-card{overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff;}
+  .review-row{display:grid;grid-template-columns:92px 1fr;gap:16px;padding:15px 17px;border-bottom:1px solid var(--line);}
+  .review-row:last-child{border-bottom:0;}
+  .review-row dt{color:var(--muted);font-size:12px;font-weight:700;}
+  .review-row dd{margin:0;color:var(--ink);font-size:13.5px;font-weight:800;overflow-wrap:anywhere;}
+  .review-notice{margin:16px 0 0;color:var(--muted);font-size:12px;line-height:1.65;}
+
+  .field-error{min-height:20px;margin:10px 0 0;color:var(--coral);font-size:12px;font-weight:700;}
+  .modal-actions{flex:none;padding:14px 26px 22px;border-top:1px solid var(--line);background:rgba(255,255,255,.96);}
+  .primary-action{
+    width:100%;min-height:56px;display:flex;align-items:center;justify-content:center;gap:10px;
+    border:0;border-radius:999px;background:var(--blue);color:#fff;font-size:15px;font-weight:850;cursor:pointer;
+    box-shadow:0 10px 22px rgba(21,84,201,.22);transition:background .16s ease,transform .16s ease,box-shadow .16s ease;
+  }
+  .primary-action:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 12px 26px rgba(14,67,165,.27);}
+  .primary-action:focus-visible,.modal-close:focus-visible,.step-back:focus-visible,.detail-toggle:focus-visible,.preview-reopen:focus-visible{
+    outline:3px solid rgba(21,84,201,.3);outline-offset:3px;
+  }
+  .primary-action svg{width:17px;height:17px;stroke:currentColor;stroke-width:2;fill:none;}
+
+  .success-view{flex:1;display:grid;place-items:center;padding:42px;text-align:center;}
+  .success-icon{width:64px;height:64px;display:grid;place-items:center;margin:0 auto 22px;border-radius:50%;background:var(--blue);color:#fff;box-shadow:0 12px 28px rgba(21,84,201,.24);}
+  .success-icon svg{width:29px;height:29px;stroke:currentColor;stroke-width:2.2;fill:none;}
+  .success-view h2{margin:0;font-size:26px;line-height:1.35;letter-spacing:-.025em;}
+  .success-view p{margin:12px 0 24px;color:var(--muted);font-size:14px;line-height:1.7;}
+  .success-close{border:0;border-radius:999px;background:var(--black);color:#fff;padding:13px 24px;font-weight:800;cursor:pointer;}
+
+  @media (max-width:600px){
+    .preview-stage{padding:0;}
+    .modal-overlay{padding:0;background:#fff;backdrop-filter:none;}
+    .application-modal{width:100%;height:100dvh;border:0;border-radius:0;box-shadow:none;}
+    .modal-header{padding:18px 20px 0;}
+    .step-viewport{padding:28px 24px 18px;}
+    .modal-actions{padding:13px 20px max(18px,env(safe-area-inset-bottom));}
+    .branch-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+    .choice-chip span{min-height:43px;font-size:12.5px;}
+    .marketing-choices{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:360px){
+    .step-viewport{padding-left:20px;padding-right:20px;}
+    .marketing-choices{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+  }
+</style>
+</head>
+<body>
+<main class="preview-stage" aria-label="참여 신청 안내 모달 단독 시안">
+  <button type="button" class="preview-reopen" id="previewReopen" hidden>참여 신청 모달 다시 보기</button>
+
+  <div class="modal-overlay" id="applicationOverlay">
+    <section class="application-modal" id="applicationModal" role="dialog" aria-modal="true" aria-labelledby="step1Title">
+      <header class="modal-header" id="modalHeader">
+        <div class="modal-topline">
+          <div class="modal-brand" aria-label="SBS아카데미AIX 미래내일 일경험">
+            <span class="brand-symbol" aria-hidden="true"></span>
+            <span class="brand-copy">
+              <strong>SBS아카데미AIX</strong>
+              <span>미래내일 일경험 · 참여 신청 안내</span>
+            </span>
+          </div>
+          <button type="button" class="modal-close" id="modalClose" aria-label="참여 신청 모달 닫기">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+
+        <div class="progress-row" id="progressRow">
+          <button type="button" class="step-back" id="stepBack" aria-label="이전 질문" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <div class="progress-track" role="progressbar" aria-label="참여 신청 진행률" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" id="progressTrack">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <div class="progress-count" id="progressCount" aria-live="polite">1 / 5</div>
+        </div>
+      </header>
+
+      <form class="application-form" id="applicationForm" novalidate>
+        <div class="step-viewport" id="stepViewport">
+          <section class="form-step is-entering" data-step="1" tabindex="-1" aria-labelledby="step1Title">
+            <p class="question-kicker">Q1.</p>
+            <h1 class="question-title" id="step1Title">희망 지점을 선택해 주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+            <p class="question-desc">가까운 지점에서 프로그램 참여 절차와 모집 일정을 안내해드립니다.</p>
+            <div class="question-body">
+              <div class="branch-grid" role="radiogroup" aria-label="희망 지점">
+                <label class="choice-chip"><input type="radio" name="branch" value="강남"><span>강남</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="홍대"><span>홍대</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="부산"><span>부산</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="인천"><span>인천</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="대구"><span>대구</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="대전"><span>대전</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="광주"><span>광주</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="수원"><span>수원</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="일산"><span>일산</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="울산"><span>울산</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="노원"><span>노원</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="분당"><span>분당</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="안산"><span>안산</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="안양"><span>안양</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="천안"><span>천안</span></label>
+                <label class="choice-chip"><input type="radio" name="branch" value="청주"><span>청주</span></label>
+              </div>
+              <p class="field-error" id="branchError" role="alert"></p>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="2" tabindex="-1" aria-labelledby="step2Title" hidden>
+            <p class="question-kicker">Q2.</p>
+            <h1 class="question-title" id="step2Title">이름을 입력해 주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+            <p class="question-desc">담당 지점에서 안내드릴 때 사용할 이름을 적어주세요.</p>
+            <div class="question-body">
+              <div class="field">
+                <label class="field-label" for="applicantName">이름 <span class="required-tag">필수</span></label>
+                <input class="text-input" type="text" id="applicantName" name="name" placeholder="홍길동" autocomplete="name" aria-describedby="nameError">
+              </div>
+              <p class="field-error" id="nameError" role="alert"></p>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="3" tabindex="-1" aria-labelledby="step3Title" hidden>
+            <p class="question-kicker">Q3.</p>
+            <h1 class="question-title" id="step3Title">연락받을 정보를 입력해 주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+            <p class="question-desc">정확한 연락처를 입력해주셔야 담당 지점의 안내를 받을 수 있습니다.</p>
+            <div class="question-body">
+              <div class="field">
+                <label class="field-label" for="applicantPhone">연락처 <span class="required-tag">필수</span></label>
+                <input class="text-input" type="tel" id="applicantPhone" name="phone" placeholder="010-0000-0000" inputmode="numeric" autocomplete="tel" aria-describedby="contactError">
+              </div>
+              <div class="field">
+                <label class="field-label" for="applicantEmail">이메일 <small>(선택)</small></label>
+                <input class="text-input" type="email" id="applicantEmail" name="email" placeholder="name@example.com" autocomplete="email" aria-describedby="contactError">
+              </div>
+
+              <div class="privacy-card">
+                <div class="privacy-row">
+                  <label class="check-label" for="privacyRequired">
+                    <input type="checkbox" id="privacyRequired" name="privacyRequired">
+                    <span>개인정보 수집·이용에 동의합니다.<b class="required-tag">필수</b></span>
+                  </label>
+                  <button type="button" class="detail-toggle" id="privacyToggle" aria-expanded="false" aria-controls="privacyDetail">
+                    자세히 보기
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                </div>
+                <div class="privacy-detail" id="privacyDetail" hidden>
+                  <dl>
+                    <dt>수집 항목</dt><dd>이름, 연락처, 희망 지점, 이메일(입력 시), 상담 이력</dd>
+                    <dt>이용 목적</dt><dd>프로그램 참여 및 수강 안내, 관련 이력 관리, 맞춤형 재안내</dd>
+                    <dt>보유 기간</dt><dd>수집일로부터 최대 3년간 보관 후 파기</dd>
+                  </dl>
+                </div>
+              </div>
+              <p class="field-error" id="contactError" role="alert"></p>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="4" tabindex="-1" aria-labelledby="step4Title" hidden>
+            <p class="question-kicker">Q4.</p>
+            <h1 class="question-title" id="step4Title">마케팅 활용 동의</h1>
+            <p class="question-desc">선택 동의 항목입니다. 동의하지 않아도 프로그램 신청은 가능합니다.</p>
+            <div class="question-body">
+              <ol class="marketing-copy">
+                <li>수집/이용 항목: 핸드폰번호, 이메일(입력 시)</li>
+                <li>수집/이용 목적: 무료 이벤트와 상품·서비스 정보 제공, 경품 및 할인 쿠폰 발송</li>
+                <li>보유 기간: SBS아카데미AIX 사이트 내 동의 철회 시까지</li>
+              </ol>
+              <p class="marketing-note">귀하는 위의 개인정보 수집·이용에 대한 동의를 거부할 권리가 있으며, 거부하셔도 프로그램 신청에는 제한이 없습니다.</p>
+              <div class="marketing-choices" role="radiogroup" aria-label="마케팅 활용 동의 여부">
+                <label class="marketing-choice">
+                  <input type="radio" name="marketingConsent" value="미동의">
+                  <span><b class="choice-mark" aria-hidden="true">×</b>동의하지 않음</span>
+                </label>
+                <label class="marketing-choice">
+                  <input type="radio" name="marketingConsent" value="동의">
+                  <span><b class="choice-mark" aria-hidden="true">✓</b>동의함</span>
+                </label>
+              </div>
+              <p class="field-error" id="marketingError" role="alert"></p>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="5" tabindex="-1" aria-labelledby="step5Title" hidden>
+            <p class="question-kicker">FINAL.</p>
+            <h1 class="question-title" id="step5Title">신청 내용을 확인해 주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+            <p class="question-desc">내용이 다르면 이전 버튼을 눌러 수정할 수 있습니다.</p>
+            <div class="question-body">
+              <dl class="review-card">
+                <div class="review-row"><dt>희망 지점</dt><dd id="reviewBranch">-</dd></div>
+                <div class="review-row"><dt>이름</dt><dd id="reviewName">-</dd></div>
+                <div class="review-row"><dt>연락처</dt><dd id="reviewPhone">-</dd></div>
+                <div class="review-row"><dt>이메일</dt><dd id="reviewEmail">입력 안 함</dd></div>
+                <div class="review-row"><dt>마케팅 활용</dt><dd id="reviewMarketing">-</dd></div>
+              </dl>
+              <p class="review-notice">아래 완료 버튼을 누르면 참여 신청 안내 요청이 접수됩니다.</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="modal-actions" id="modalActions">
+          <button type="button" class="primary-action" id="primaryAction">
+            <span>다음 질문</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+          </button>
+        </div>
+      </form>
+
+      <section class="success-view" id="successView" aria-labelledby="successTitle" hidden>
+        <div>
+          <div class="success-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 6"/></svg>
+          </div>
+          <h2 id="successTitle" tabindex="-1">안내 요청이 완료됐어요</h2>
+          <p><strong id="successBranch">선택 지점</strong> 담당자가 확인 후<br>빠르게 연락드리겠습니다.</p>
+          <button type="button" class="success-close" id="successClose">확인</button>
+        </div>
+      </section>
+    </section>
+  </div>
+</main>
+
+<script>
+(function(){
+  const TOTAL_STEPS = 5;
+  const overlay = document.getElementById('applicationOverlay');
+  const modal = document.getElementById('applicationModal');
+  const form = document.getElementById('applicationForm');
+  const steps = Array.from(document.querySelectorAll('.form-step'));
+  const progressRow = document.getElementById('progressRow');
+  const progressTrack = document.getElementById('progressTrack');
+  const progressBar = document.getElementById('progressBar');
+  const progressCount = document.getElementById('progressCount');
+  const stepBack = document.getElementById('stepBack');
+  const primaryAction = document.getElementById('primaryAction');
+  const primaryLabel = primaryAction.querySelector('span');
+  const modalClose = document.getElementById('modalClose');
+  const previewReopen = document.getElementById('previewReopen');
+  const stepViewport = document.getElementById('stepViewport');
+  const privacyToggle = document.getElementById('privacyToggle');
+  const privacyDetail = document.getElementById('privacyDetail');
+  const successView = document.getElementById('successView');
+  const successClose = document.getElementById('successClose');
+  let currentStep = 1;
+  let lastFocusedElement = null;
+
+  const errorMap = {
+    1: document.getElementById('branchError'),
+    2: document.getElementById('nameError'),
+    3: document.getElementById('contactError'),
+    4: document.getElementById('marketingError')
+  };
+
+  function clearError(step){
+    if (errorMap[step]) errorMap[step].textContent = '';
+  }
+
+  function getSelectedValue(name){
+    const selected = form.querySelector('input[name="' + name + '"]:checked');
+    return selected ? selected.value : '';
+  }
+
+  function validateStep(step){
+    clearError(step);
+    if (step === 1 && !getSelectedValue('branch')) {
+      errorMap[1].textContent = '안내받을 지점을 선택해 주세요.';
+      form.querySelector('input[name="branch"]').focus();
+      return false;
+    }
+    if (step === 2) {
+      const name = document.getElementById('applicantName');
+      if (!name.value.trim()) {
+        errorMap[2].textContent = '이름을 입력해 주세요.';
+        name.focus();
+        return false;
+      }
+    }
+    if (step === 3) {
+      const phone = document.getElementById('applicantPhone');
+      const email = document.getElementById('applicantEmail');
+      const privacy = document.getElementById('privacyRequired');
+      const phoneDigits = phone.value.replace(/\D/g,'');
+      if (phoneDigits.length < 10 || phoneDigits.length > 11) {
+        errorMap[3].textContent = '연락 가능한 전화번호를 정확히 입력해 주세요.';
+        phone.focus();
+        return false;
+      }
+      if (email.value && !email.validity.valid) {
+        errorMap[3].textContent = '이메일 형식을 확인해 주세요.';
+        email.focus();
+        return false;
+      }
+      if (!privacy.checked) {
+        errorMap[3].textContent = '필수 개인정보 수집·이용에 동의해 주세요.';
+        privacy.focus();
+        return false;
+      }
+    }
+    if (step === 4 && !getSelectedValue('marketingConsent')) {
+      errorMap[4].textContent = '마케팅 활용 동의 여부를 선택해 주세요.';
+      form.querySelector('input[name="marketingConsent"]').focus();
+      return false;
+    }
+    return true;
+  }
+
+  function populateReview(){
+    document.getElementById('reviewBranch').textContent = getSelectedValue('branch') || '-';
+    document.getElementById('reviewName').textContent = document.getElementById('applicantName').value.trim() || '-';
+    document.getElementById('reviewPhone').textContent = document.getElementById('applicantPhone').value || '-';
+    document.getElementById('reviewEmail').textContent = document.getElementById('applicantEmail').value.trim() || '입력 안 함';
+    document.getElementById('reviewMarketing').textContent = getSelectedValue('marketingConsent') || '-';
+  }
+
+  function showStep(nextStep, direction){
+    currentStep = Math.max(1,Math.min(TOTAL_STEPS,nextStep));
+    steps.forEach(function(step){
+      const isCurrent = Number(step.dataset.step) === currentStep;
+      step.hidden = !isCurrent;
+      step.classList.remove('is-entering','is-reversing');
+      if (isCurrent) {
+        void step.offsetWidth;
+        step.classList.add(direction === 'back' ? 'is-reversing' : 'is-entering');
+      }
+    });
+
+    const activeStep = steps[currentStep - 1];
+    const percent = (currentStep / TOTAL_STEPS) * 100;
+    progressBar.style.width = percent + '%';
+    progressTrack.setAttribute('aria-valuenow',String(currentStep));
+    progressCount.textContent = currentStep + ' / ' + TOTAL_STEPS;
+    modal.setAttribute('aria-labelledby','step' + currentStep + 'Title');
+    stepBack.disabled = currentStep === 1;
+    primaryLabel.textContent = currentStep === TOTAL_STEPS ? '참여 신청 완료하기' : '다음 질문';
+    stepViewport.scrollTop = 0;
+    if (currentStep === TOTAL_STEPS) populateReview();
+    window.setTimeout(function(){ activeStep.focus(); },20);
+  }
+
+  function formatPhone(value){
+    const digits = value.replace(/\D/g,'').slice(0,11);
+    if (digits.length <= 3) return digits;
+    if (digits.length <= 7) return digits.slice(0,3) + '-' + digits.slice(3);
+    if (digits.length === 10) return digits.slice(0,3) + '-' + digits.slice(3,6) + '-' + digits.slice(6);
+    return digits.slice(0,3) + '-' + digits.slice(3,7) + '-' + digits.slice(7);
+  }
+
+  function finishApplication(){
+    form.hidden = true;
+    progressRow.hidden = true;
+    successView.hidden = false;
+    modal.setAttribute('aria-labelledby','successTitle');
+    document.getElementById('successBranch').textContent = getSelectedValue('branch') + '점';
+    successView.querySelector('h2').focus({preventScroll:true});
+  }
+
+  function resetFlow(){
+    form.reset();
+    form.hidden = false;
+    progressRow.hidden = false;
+    successView.hidden = true;
+    privacyDetail.hidden = true;
+    privacyToggle.setAttribute('aria-expanded','false');
+    Object.keys(errorMap).forEach(function(key){ clearError(Number(key)); });
+    showStep(1,'next');
+  }
+
+  function openModal(){
+    lastFocusedElement = document.activeElement;
+    resetFlow();
+    overlay.hidden = false;
+    previewReopen.hidden = true;
+    document.body.style.overflow = 'hidden';
+    window.setTimeout(function(){ modalClose.focus(); },20);
+  }
+
+  function closeModal(){
+    overlay.hidden = true;
+    previewReopen.hidden = false;
+    document.body.style.overflow = '';
+    if (lastFocusedElement && document.contains(lastFocusedElement)) lastFocusedElement.focus();
+    else previewReopen.focus();
+  }
+
+  primaryAction.addEventListener('click',function(){
+    if (!validateStep(currentStep)) return;
+    if (currentStep === TOTAL_STEPS) {
+      finishApplication();
+      return;
+    }
+    showStep(currentStep + 1,'next');
+  });
+
+  stepBack.addEventListener('click',function(){
+    if (currentStep > 1) showStep(currentStep - 1,'back');
+  });
+
+  document.getElementById('applicantPhone').addEventListener('input',function(event){
+    event.target.value = formatPhone(event.target.value);
+    clearError(3);
+  });
+  document.getElementById('applicantName').addEventListener('input',function(){ clearError(2); });
+  document.getElementById('applicantEmail').addEventListener('input',function(){ clearError(3); });
+  document.getElementById('privacyRequired').addEventListener('change',function(){ clearError(3); });
+  form.querySelectorAll('input[name="branch"]').forEach(function(input){ input.addEventListener('change',function(){ clearError(1); }); });
+  form.querySelectorAll('input[name="marketingConsent"]').forEach(function(input){ input.addEventListener('change',function(){ clearError(4); }); });
+
+  privacyToggle.addEventListener('click',function(){
+    const willOpen = privacyDetail.hidden;
+    privacyDetail.hidden = !willOpen;
+    privacyToggle.setAttribute('aria-expanded',String(willOpen));
+  });
+
+  form.addEventListener('submit',function(event){ event.preventDefault(); });
+  modalClose.addEventListener('click',closeModal);
+  successClose.addEventListener('click',closeModal);
+  previewReopen.addEventListener('click',openModal);
+  overlay.addEventListener('mousedown',function(event){ if (event.target === overlay) closeModal(); });
+
+  document.addEventListener('keydown',function(event){
+    if (overlay.hidden) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeModal();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const focusable = Array.from(modal.querySelectorAll('button:not([disabled]),input:not([disabled]),[tabindex="0"]')).filter(function(element){
+      return !element.closest('[hidden]') && element.offsetParent !== null;
+    });
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();first.focus();
+    }
+  });
+
+  document.body.style.overflow = 'hidden';
+  showStep(1,'next');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>SBS아카데미AIX 참여 신청 안내 모달 2차 시안</title>
+  <style>
+    :root{
+      --ink:#14161c;
+      --ink-soft:#4b4f59;
+      --muted:#767a86;
+      --paper:#f7f7f8;
+      --line:#e4e5e9;
+      --blue:#1554c9;
+      --blue-deep:#0e43aa;
+      --blue-tint:#edf3ff;
+      --coral:#e8332f;
+      --coral-deep:#c92a27;
+      --coral-tint:#fff0ef;
+      --black:#111214;
+      --shadow:0 26px 70px rgba(13,16,23,.22);
+    }
+
+    *{box-sizing:border-box;}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:#eceef2;
+      font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo",Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    button,input{font:inherit;}
+    button{color:inherit;}
+    [hidden]{display:none!important;}
+
+    .preview-stage{
+      min-height:100%;
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+    .preview-reopen{
+      min-height:48px;
+      padding:0 24px;
+      border:0;
+      border-radius:999px;
+      background:var(--blue);
+      color:#fff;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 10px 24px rgba(21,84,201,.22);
+    }
+
+    .modal-overlay{
+      position:fixed;
+      inset:0;
+      z-index:100;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      background:rgba(17,18,20,.58);
+    }
+    .application-modal{
+      position:relative;
+      width:min(520px,100%);
+      height:min(790px,calc(100dvh - 40px));
+      min-height:560px;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      background:#fff;
+      border-radius:16px;
+      box-shadow:var(--shadow);
+    }
+
+    .modal-header{
+      position:relative;
+      z-index:2;
+      flex:none;
+      padding:22px 26px 15px;
+      background:#fff;
+      border-bottom:1px solid #f0f1f3;
+    }
+    .modal-topline{
+      min-height:32px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .modal-eyebrow{
+      margin:0;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:-.01em;
+    }
+    .modal-close{
+      width:32px;
+      height:32px;
+      flex:none;
+      display:grid;
+      place-items:center;
+      padding:0;
+      border:0;
+      border-radius:50%;
+      background:var(--paper);
+      color:var(--ink-soft);
+      font-size:22px;
+      font-weight:400;
+      line-height:1;
+      cursor:pointer;
+      transition:background .15s ease,color .15s ease,transform .15s ease;
+    }
+    .modal-close:hover{background:var(--black);color:#fff;}
+    .modal-close.is-armed{background:var(--coral);color:#fff;}
+    .modal-close:active{transform:scale(.94);}
+
+    .progress-row{
+      display:grid;
+      grid-template-columns:32px minmax(0,1fr) 46px;
+      align-items:center;
+      gap:10px;
+      margin-top:15px;
+    }
+    .step-back{
+      width:30px;
+      height:30px;
+      display:grid;
+      place-items:center;
+      padding:0;
+      border:1px solid var(--line);
+      border-radius:50%;
+      background:#fff;
+      color:var(--ink-soft);
+      cursor:pointer;
+    }
+    .step-back:hover:not(:disabled){border-color:var(--blue);color:var(--blue);}
+    .step-back:disabled{opacity:.34;cursor:default;}
+    .step-back svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;}
+    .progress-track{
+      height:8px;
+      overflow:hidden;
+      border-radius:999px;
+      background:#eceef2;
+    }
+    .progress-bar{
+      width:16.6667%;
+      height:100%;
+      border-radius:inherit;
+      background:var(--blue);
+      transition:width .35s cubic-bezier(.22,.61,.36,1);
+    }
+    .progress-count{
+      color:var(--muted);
+      font-size:11px;
+      font-weight:800;
+      text-align:right;
+      font-variant-numeric:tabular-nums;
+    }
+    .exit-nudge{
+      margin:12px 0 0 42px;
+      padding:11px 13px;
+      border:1px solid #ffd7d5;
+      border-radius:10px;
+      background:var(--coral-tint);
+      color:#9e2926;
+      font-size:12px;
+      font-weight:600;
+      line-height:1.55;
+      outline:none;
+      animation:nudge-in .24s ease both;
+    }
+    .exit-nudge strong{display:block;color:var(--coral);font-weight:900;}
+    @keyframes nudge-in{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+
+    .application-form{
+      min-height:0;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+    }
+    .step-viewport{
+      min-height:0;
+      flex:1;
+      overflow-y:auto;
+      overscroll-behavior:contain;
+      padding:30px 32px 22px;
+      scrollbar-gutter:stable;
+    }
+    .form-step{min-height:100%;outline:none;}
+    .form-step.is-entering{animation:step-in .34s cubic-bezier(.22,.61,.36,1) both;}
+    .form-step.is-reversing{animation:step-back-in .3s cubic-bezier(.22,.61,.36,1) both;}
+    @keyframes step-in{from{opacity:0;transform:translateX(22px)}to{opacity:1;transform:none}}
+    @keyframes step-back-in{from{opacity:0;transform:translateX(-22px)}to{opacity:1;transform:none}}
+
+    .question-kicker{
+      margin:0 0 8px;
+      color:var(--blue);
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.04em;
+    }
+    .question-title{
+      margin:0;
+      color:var(--ink);
+      font-size:clamp(23px,5.2vw,28px);
+      font-weight:900;
+      line-height:1.32;
+      letter-spacing:-.045em;
+      text-wrap:balance;
+    }
+    .required-dot{color:var(--coral);}
+    .question-desc{
+      margin:11px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+    .question-body{margin-top:27px;}
+
+    .choice-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+    }
+    .choice-grid.single{grid-template-columns:1fr;}
+    .choice-card{position:relative;display:block;cursor:pointer;}
+    .choice-card input{
+      position:absolute;
+      width:1px;
+      height:1px;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+    }
+    .choice-card span{
+      min-height:54px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 14px;
+      border:1px solid var(--line);
+      border-radius:10px;
+      background:var(--paper);
+      color:var(--ink-soft);
+      font-size:13px;
+      font-weight:800;
+      line-height:1.4;
+      text-align:center;
+      transition:border-color .15s ease,background .15s ease,color .15s ease,box-shadow .15s ease;
+    }
+    .choice-card:hover span{border-color:#b8bbc4;background:#fff;}
+    .choice-card input:checked + span{
+      border-color:var(--black);
+      background:var(--black);
+      color:#fff;
+      box-shadow:0 7px 16px rgba(17,18,20,.13);
+    }
+    .choice-card input:focus-visible + span{outline:3px solid rgba(21,84,201,.28);outline-offset:2px;}
+
+    .reason-grid .choice-card span{justify-content:flex-start;text-align:left;}
+
+    .field-grid{display:grid;gap:17px;}
+    .field{display:grid;gap:7px;}
+    .field-label{
+      color:var(--ink-soft);
+      font-size:12.5px;
+      font-weight:800;
+    }
+    .req-tag{
+      display:inline-block;
+      margin-left:4px;
+      padding:2px 7px;
+      border-radius:999px;
+      background:var(--coral-tint);
+      color:var(--coral);
+      font-size:10px;
+      font-weight:900;
+      vertical-align:1px;
+    }
+    .text-input{
+      width:100%;
+      min-height:48px;
+      padding:12px 14px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      outline:none;
+      background:var(--paper);
+      color:var(--ink);
+      font-size:14px;
+      transition:border-color .15s ease,box-shadow .15s ease,background .15s ease;
+    }
+    .text-input::placeholder{color:#a8abb3;}
+    .text-input:focus{border-color:var(--black);background:#fff;box-shadow:0 0 0 2px rgba(17,18,20,.08);}
+    .text-input[aria-invalid="true"]{border-color:var(--coral);background:#fff8f8;}
+
+    .region-title{margin:1px 0 9px;color:var(--ink-soft);font-size:12.5px;font-weight:800;}
+    .region-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:8px;
+    }
+    .region-choice{position:relative;display:block;cursor:pointer;}
+    .region-choice input{position:absolute;opacity:0;pointer-events:none;}
+    .region-choice span{
+      min-height:42px;
+      display:grid;
+      place-items:center;
+      padding:8px 4px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:var(--paper);
+      color:var(--ink-soft);
+      font-size:12px;
+      font-weight:800;
+    }
+    .region-choice input:checked + span{border-color:var(--black);background:var(--black);color:#fff;}
+    .region-choice input:focus-visible + span{outline:3px solid rgba(21,84,201,.28);outline-offset:2px;}
+
+    .privacy-block{
+      margin-top:18px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:10px;
+      background:#fff;
+    }
+    .privacy-row{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px;
+    }
+    .privacy-check{
+      min-width:0;
+      display:flex;
+      align-items:flex-start;
+      gap:9px;
+      color:var(--ink-soft);
+      font-size:12px;
+      font-weight:700;
+      line-height:1.55;
+      cursor:pointer;
+    }
+    .privacy-check input{width:17px;height:17px;flex:none;margin:1px 0 0;accent-color:var(--blue);}
+    .detail-toggle{
+      flex:none;
+      padding:2px 0;
+      border:0;
+      background:transparent;
+      color:var(--muted);
+      font-size:11px;
+      font-weight:800;
+      text-decoration:underline;
+      text-underline-offset:3px;
+      cursor:pointer;
+    }
+    .privacy-detail{
+      padding:13px 14px;
+      border-top:1px solid var(--line);
+      background:var(--paper);
+    }
+    .privacy-detail dl{display:grid;gap:9px;margin:0;}
+    .privacy-detail div{display:grid;grid-template-columns:68px 1fr;gap:8px;}
+    .privacy-detail dt{color:var(--ink-soft);font-size:11px;font-weight:900;}
+    .privacy-detail dd{margin:0;color:var(--muted);font-size:11px;line-height:1.5;}
+
+    .marketing-copy{padding-top:1px;}
+    .marketing-list{
+      display:grid;
+      gap:14px;
+      margin:0;
+      padding:0;
+      list-style:none;
+      counter-reset:marketing;
+    }
+    .marketing-list li{
+      position:relative;
+      padding-left:25px;
+      color:var(--ink);
+      font-size:14px;
+      line-height:1.65;
+      counter-increment:marketing;
+    }
+    .marketing-list li::before{content:counter(marketing) ')';position:absolute;left:0;top:0;}
+    .marketing-note{
+      position:relative;
+      margin:55px 0 0;
+      padding-left:17px;
+      color:#9b9ea7;
+      font-size:12px;
+      line-height:1.65;
+    }
+    .marketing-note::before{content:'▶';position:absolute;left:0;top:1px;color:#b7b9c0;font-size:9px;}
+
+    .review-list{
+      overflow:hidden;
+      margin:0;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fff;
+    }
+    .review-row{
+      display:grid;
+      grid-template-columns:112px minmax(0,1fr);
+      gap:14px;
+      padding:12px 14px;
+      border-bottom:1px solid var(--line);
+    }
+    .review-row:last-child{border-bottom:0;}
+    .review-row dt{color:var(--muted);font-size:12px;font-weight:700;}
+    .review-row dd{margin:0;color:var(--ink);font-size:12.5px;font-weight:800;line-height:1.45;overflow-wrap:anywhere;}
+    .review-notice{margin:14px 2px 0;color:var(--muted);font-size:11.5px;line-height:1.55;}
+
+    .field-error{
+      min-height:19px;
+      margin:12px 0 0;
+      color:var(--coral);
+      font-size:12px;
+      font-weight:800;
+      line-height:1.5;
+    }
+    .field-error:empty{visibility:hidden;}
+
+    .action-panel{
+      flex:none;
+      padding:14px 26px 18px;
+      border-top:1px solid var(--line);
+      background:#fff;
+      box-shadow:0 -8px 24px rgba(20,22,28,.035);
+    }
+    .primary-action{
+      width:100%;
+      min-height:52px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 20px;
+      border:0;
+      border-radius:999px;
+      background:var(--blue);
+      color:#fff;
+      font-size:14.5px;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 8px 18px rgba(21,84,201,.2);
+      transition:background .15s ease,transform .15s ease,box-shadow .15s ease,opacity .15s ease;
+    }
+    .primary-action:hover:not(:disabled){background:var(--blue-deep);transform:translateY(-1px);box-shadow:0 11px 23px rgba(21,84,201,.25);}
+    .primary-action:disabled{background:#c9ccd3;color:#f5f5f6;box-shadow:none;cursor:not-allowed;}
+    .marketing-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .marketing-button{
+      min-height:56px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      padding:10px 12px;
+      border:0;
+      border-radius:999px;
+      background:#d83b3b;
+      color:#fff;
+      font-size:13.5px;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 8px 18px rgba(216,59,59,.2);
+      transition:background .15s ease,transform .15s ease;
+    }
+    .marketing-button:hover{background:#bd2f2f;transform:translateY(-1px);}
+    .marketing-button .choice-icon{font-size:20px;font-weight:400;line-height:1;}
+
+    .success-view{
+      min-height:0;
+      flex:1;
+      overflow-y:auto;
+      display:grid;
+      align-content:center;
+      justify-items:center;
+      padding:42px 34px;
+      text-align:center;
+    }
+    .success-icon{
+      width:58px;
+      height:58px;
+      display:grid;
+      place-items:center;
+      margin-bottom:20px;
+      border-radius:50%;
+      background:var(--blue-tint);
+      color:var(--blue);
+      font-size:25px;
+      font-weight:900;
+    }
+    .success-view h2{margin:0;color:var(--ink);font-size:25px;font-weight:900;letter-spacing:-.04em;outline:none;}
+    .success-view p{max-width:330px;margin:12px 0 24px;color:var(--muted);font-size:13px;line-height:1.65;}
+    .success-summary{
+      width:100%;
+      margin-bottom:22px;
+      padding:14px 16px;
+      border-radius:10px;
+      background:var(--paper);
+      color:var(--ink-soft);
+      font-size:12.5px;
+      font-weight:800;
+    }
+    .success-reset{
+      min-height:44px;
+      padding:0 18px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      color:var(--ink-soft);
+      font-size:12.5px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    :focus-visible{outline:3px solid rgba(21,84,201,.35);outline-offset:3px;}
+
+    @media (max-width:640px){
+      .preview-stage{padding:0;}
+      .modal-overlay{padding:0;align-items:stretch;}
+      .application-modal{width:100%;height:100dvh;min-height:0;border-radius:0;box-shadow:none;}
+      .modal-header{padding:18px 20px 13px;}
+      .exit-nudge{margin-left:42px;}
+      .step-viewport{padding:26px 20px 20px;scrollbar-gutter:auto;}
+      .action-panel{padding:13px 20px calc(15px + env(safe-area-inset-bottom));}
+      .question-body{margin-top:24px;}
+      .question-title{font-size:24px;}
+      .region-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+      .marketing-note{margin-top:38px;}
+    }
+
+    @media (max-width:390px){
+      .modal-header{padding-inline:16px;}
+      .step-viewport{padding-inline:16px;}
+      .action-panel{padding-inline:16px;}
+      .choice-grid{grid-template-columns:1fr;}
+      .career-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .review-row{grid-template-columns:94px minmax(0,1fr);}
+      .marketing-button{font-size:12.5px;}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+    }
+  </style>
+</head>
+<body>
+  <main class="preview-stage" aria-label="참여 신청 안내 모달 단독 시안">
+    <button type="button" class="preview-reopen" id="previewReopen" hidden>참여 신청 모달 다시 보기</button>
+
+    <div class="modal-overlay" id="applicationOverlay">
+      <section class="application-modal" id="applicationModal" role="dialog" aria-modal="true" aria-labelledby="step1Title">
+        <header class="modal-header">
+          <div class="modal-topline">
+            <p class="modal-eyebrow">SBS아카데미AIX 미래내일 일경험</p>
+            <button type="button" class="modal-close" id="modalClose" aria-label="참여 신청 창 닫기">×</button>
+          </div>
+
+          <div class="progress-row" id="progressRow">
+            <button type="button" class="step-back" id="stepBack" aria-label="이전 질문" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <div class="progress-track" id="progressTrack" role="progressbar" aria-label="참여 신청 진행률" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-count" id="progressCount" aria-live="polite">1 / 6</div>
+          </div>
+
+          <p class="exit-nudge" id="exitNudge" role="status" tabindex="-1" hidden>
+            <strong>잠깐, 그냥 나가시나요?</strong>
+            탈락 없는 100% 합격 가이드북을 무료로 받아가세요.
+          </p>
+        </header>
+
+        <form class="application-form" id="applicationForm" novalidate>
+          <div class="step-viewport" id="stepViewport">
+            <section class="form-step is-entering" data-step="1" tabindex="-1" aria-labelledby="step1Title">
+              <p class="question-kicker">Q1.</p>
+              <h1 class="question-title" id="step1Title">현재 경력을 선택해 주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+              <p class="question-desc">현재 상황과 가장 가까운 경력을 선택해주세요.</p>
+              <div class="question-body">
+                <div class="choice-grid career-grid" role="radiogroup" aria-label="현재 경력" aria-describedby="step1Error">
+                  <label class="choice-card"><input type="radio" name="career" value="1년차 이하"><span>1년차 이하</span></label>
+                  <label class="choice-card"><input type="radio" name="career" value="2년차 이상 4년차 미만"><span>2년차 이상<br>4년차 미만</span></label>
+                  <label class="choice-card"><input type="radio" name="career" value="4년차 이상 6년차 미만"><span>4년차 이상<br>6년차 미만</span></label>
+                  <label class="choice-card"><input type="radio" name="career" value="6년차 이상"><span>6년차 이상</span></label>
+                </div>
+                <p class="field-error" id="step1Error" data-error-step="1" role="alert"></p>
+              </div>
+            </section>
+
+            <section class="form-step" data-step="2" tabindex="-1" aria-labelledby="step2Title" hidden>
+              <p class="question-kicker">Q2.</p>
+              <h1 class="question-title" id="step2Title">성별을 선택해 주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+              <p class="question-desc">상담을 위한 정보를 입력해주세요.</p>
+              <div class="question-body">
+                <div class="choice-grid" role="radiogroup" aria-label="성별" aria-describedby="step2Error">
+                  <label class="choice-card"><input type="radio" name="gender" value="남"><span>남</span></label>
+                  <label class="choice-card"><input type="radio" name="gender" value="여"><span>여</span></label>
+                </div>
+                <p class="field-error" id="step2Error" data-error-step="2" role="alert"></p>
+              </div>
+            </section>
+
+            <section class="form-step" data-step="3" tabindex="-1" aria-labelledby="step3Title" hidden>
+              <p class="question-kicker">Q3.</p>
+              <h1 class="question-title" id="step3Title">프로그램에 참여하려는 이유를 알려주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+              <p class="question-desc">가장 가까운 한 가지를 선택해주세요.</p>
+              <div class="question-body">
+                <div class="choice-grid single reason-grid" role="radiogroup" aria-label="프로그램 참여 이유" aria-describedby="step3Error">
+                  <label class="choice-card"><input type="radio" name="reason" value="취업·이직을 준비하고 있어요"><span>취업·이직을 준비하고 있어요</span></label>
+                  <label class="choice-card"><input type="radio" name="reason" value="AI 실무 역량을 키우고 싶어요"><span>AI 실무 역량을 키우고 싶어요</span></label>
+                  <label class="choice-card"><input type="radio" name="reason" value="실무 포트폴리오를 만들고 싶어요"><span>실무 포트폴리오를 만들고 싶어요</span></label>
+                  <label class="choice-card"><input type="radio" name="reason" value="직무 전환을 준비하고 있어요"><span>직무 전환을 준비하고 있어요</span></label>
+                  <label class="choice-card"><input type="radio" name="reason" value="진로 상담이 필요해요"><span>진로 상담이 필요해요</span></label>
+                </div>
+                <p class="field-error" id="step3Error" data-error-step="3" role="alert"></p>
+              </div>
+            </section>
+
+            <section class="form-step" data-step="4" tabindex="-1" aria-labelledby="step4Title" hidden>
+              <p class="question-kicker">Q4–Q5.</p>
+              <h1 class="question-title" id="step4Title">기본 정보를 입력해 주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+              <p class="question-desc">이름, 전화번호, 거주 지역을 한 페이지에서 입력합니다.</p>
+              <div class="question-body">
+                <div class="field-grid">
+                  <div class="field">
+                    <label class="field-label" for="applicantName">이름 <span class="req-tag">필수</span></label>
+                    <input class="text-input" type="text" id="applicantName" name="name" placeholder="홍길동" autocomplete="name">
+                  </div>
+                  <div class="field">
+                    <label class="field-label" for="applicantPhone">전화번호 <span class="req-tag">필수</span></label>
+                    <input class="text-input" type="tel" id="applicantPhone" name="phone" placeholder="010-0000-0000" inputmode="numeric" autocomplete="tel">
+                  </div>
+                  <fieldset style="margin:0;padding:0;border:0;">
+                    <legend class="region-title">거주 지역 <span class="req-tag">필수</span></legend>
+                    <div class="region-grid" role="radiogroup" aria-label="거주 지역">
+                      <label class="region-choice"><input type="radio" name="region" value="서울"><span>서울</span></label>
+                      <label class="region-choice"><input type="radio" name="region" value="경기도"><span>경기도</span></label>
+                      <label class="region-choice"><input type="radio" name="region" value="경상도"><span>경상도</span></label>
+                      <label class="region-choice"><input type="radio" name="region" value="충청도"><span>충청도</span></label>
+                      <label class="region-choice"><input type="radio" name="region" value="전라도"><span>전라도</span></label>
+                      <label class="region-choice"><input type="radio" name="region" value="강원도"><span>강원도</span></label>
+                      <label class="region-choice"><input type="radio" name="region" value="제주도"><span>제주도</span></label>
+                    </div>
+                  </fieldset>
+                </div>
+                <p class="field-error" id="step4Error" data-error-step="4" role="alert"></p>
+              </div>
+            </section>
+
+            <section class="form-step" data-step="5" tabindex="-1" aria-labelledby="step5Title" hidden>
+              <p class="question-kicker">Q6.</p>
+              <h1 class="question-title" id="step5Title">이메일을 입력해주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+              <p class="question-desc">안내 자료와 프로그램 관련 정보를 받을 이메일을 입력해주세요.</p>
+              <div class="question-body">
+                <div class="field">
+                  <label class="field-label" for="applicantEmail">이메일 <span class="req-tag">필수</span></label>
+                  <input class="text-input" type="email" id="applicantEmail" name="email" placeholder="name@example.com" autocomplete="email">
+                </div>
+
+                <div class="privacy-block">
+                  <div class="privacy-row">
+                    <label class="privacy-check" for="privacyRequired">
+                      <input type="checkbox" id="privacyRequired" name="privacyRequired">
+                      <span>계속하시면 개인정보처리방침에 동의하게 됩니다.</span>
+                    </label>
+                    <button type="button" class="detail-toggle" id="privacyToggle" aria-expanded="false" aria-controls="privacyDetail">자세히 보기</button>
+                  </div>
+                  <div class="privacy-detail" id="privacyDetail" hidden>
+                    <dl>
+                      <div><dt>수집 항목</dt><dd>경력, 성별, 참여 이유, 이름, 전화번호, 거주 지역, 이메일</dd></div>
+                      <div><dt>이용 목적</dt><dd>프로그램 참여 및 수강 안내, 관련 이력 관리, 맞춤형 재안내</dd></div>
+                      <div><dt>보유 기간</dt><dd>수집일로부터 최대 3년간 보관 후 파기</dd></div>
+                    </dl>
+                  </div>
+                </div>
+                <p class="field-error" id="step5Error" data-error-step="5" role="alert"></p>
+              </div>
+            </section>
+
+            <section class="form-step" data-step="6" tabindex="-1" aria-labelledby="step6Title" hidden>
+              <p class="question-kicker">CONSENT.</p>
+              <h1 class="question-title" id="step6Title">마케팅 활용 동의</h1>
+              <p class="question-desc">아래 내용을 확인한 뒤 동의 여부를 선택해주세요.</p>
+              <div class="question-body marketing-copy">
+                <ol class="marketing-list">
+                  <li>수집/이용 항목 : 핸드폰번호, 이메일</li>
+                  <li>수집/이용 목적 : 무료 이벤트나 상품 및 서비스 정보 제공(이메일, SMS, DM 등 이용), 경품 및 할인 쿠폰 등 발송</li>
+                  <li>보유 기간: SBS아카데미AIX 사이트 내 동의 철회 시까지</li>
+                </ol>
+                <p class="marketing-note">귀하는 위의 개인정보 수집/이용에 대한 동의를 거부할 권리가 있습니다. 동의를 거부하셔도 프로그램 신청은 가능합니다.</p>
+                <p class="field-error" id="step6Error" data-error-step="6" role="alert"></p>
+              </div>
+            </section>
+
+            <section class="form-step" data-step="7" tabindex="-1" aria-labelledby="step7Title" hidden>
+              <p class="question-kicker">FINAL.</p>
+              <h1 class="question-title" id="step7Title">신청 내용을 확인해 주세요<span class="required-dot" aria-hidden="true">.</span></h1>
+              <p class="question-desc">내용이 다르면 이전 버튼을 눌러 수정할 수 있습니다.</p>
+              <div class="question-body">
+                <dl class="review-list">
+                  <div class="review-row"><dt>경력</dt><dd id="reviewCareer">-</dd></div>
+                  <div class="review-row"><dt>성별</dt><dd id="reviewGender">-</dd></div>
+                  <div class="review-row"><dt>참여 이유</dt><dd id="reviewReason">-</dd></div>
+                  <div class="review-row"><dt>이름</dt><dd id="reviewName">-</dd></div>
+                  <div class="review-row"><dt>전화번호</dt><dd id="reviewPhone">-</dd></div>
+                  <div class="review-row"><dt>거주 지역</dt><dd id="reviewRegion">-</dd></div>
+                  <div class="review-row"><dt>이메일</dt><dd id="reviewEmail">-</dd></div>
+                  <div class="review-row"><dt>마케팅 활용</dt><dd id="reviewMarketing">동의</dd></div>
+                </dl>
+                <p class="review-notice">아래 완료 버튼을 누르면 참여 신청 안내 요청이 접수됩니다.</p>
+              </div>
+            </section>
+          </div>
+
+          <div class="action-panel" id="actionPanel">
+            <button type="button" class="primary-action" id="primaryAction"><span>다음 질문</span></button>
+            <div class="marketing-actions" id="marketingActions" hidden>
+              <button type="button" class="marketing-button" id="marketingDisagree"><span class="choice-icon" aria-hidden="true">×</span>동의하지 않음</button>
+              <button type="button" class="marketing-button" id="marketingAgree"><span class="choice-icon" aria-hidden="true">✓</span>동의함</button>
+            </div>
+          </div>
+
+          <input type="hidden" id="marketingConsent" name="marketingConsent" value="미동의">
+        </form>
+
+        <section class="success-view" id="successView" aria-labelledby="successTitle" hidden>
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <h2 id="successTitle" tabindex="-1">제출이 완료됐어요</h2>
+          <p>입력해주신 내용을 확인한 뒤 담당자가 참여 신청 절차를 안내해드릴게요.</p>
+          <div class="success-summary"><span id="successName">신청자</span> · <span id="successRegion">지역</span></div>
+          <button type="button" class="success-reset" id="successReset">처음부터 다시 작성</button>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      const QUESTION_STEPS = 6;
+      const FINAL_STEP = 7;
+      const overlay = document.getElementById('applicationOverlay');
+      const modal = document.getElementById('applicationModal');
+      const form = document.getElementById('applicationForm');
+      const steps = Array.from(document.querySelectorAll('.form-step'));
+      const stepViewport = document.getElementById('stepViewport');
+      const progressRow = document.getElementById('progressRow');
+      const progressTrack = document.getElementById('progressTrack');
+      const progressBar = document.getElementById('progressBar');
+      const progressCount = document.getElementById('progressCount');
+      const stepBack = document.getElementById('stepBack');
+      const primaryAction = document.getElementById('primaryAction');
+      const primaryLabel = primaryAction.querySelector('span');
+      const marketingActions = document.getElementById('marketingActions');
+      const marketingAgree = document.getElementById('marketingAgree');
+      const marketingDisagree = document.getElementById('marketingDisagree');
+      const marketingConsent = document.getElementById('marketingConsent');
+      const closeButton = document.getElementById('modalClose');
+      const exitNudge = document.getElementById('exitNudge');
+      const previewReopen = document.getElementById('previewReopen');
+      const successView = document.getElementById('successView');
+      const successReset = document.getElementById('successReset');
+      const privacy = document.getElementById('privacyRequired');
+      const privacyToggle = document.getElementById('privacyToggle');
+      const privacyDetail = document.getElementById('privacyDetail');
+      const nameInput = document.getElementById('applicantName');
+      const phoneInput = document.getElementById('applicantPhone');
+      const emailInput = document.getElementById('applicantEmail');
+      const errors = Object.fromEntries(
+        Array.from(document.querySelectorAll('[data-error-step]')).map(function(node){
+          return [Number(node.dataset.errorStep),node];
+        })
+      );
+
+      let currentStep = 1;
+      let exitArmed = false;
+      let lastFocused = null;
+
+      function selectedValue(name){
+        const selected = form.querySelector('input[name="' + name + '"]:checked');
+        return selected ? selected.value : '';
+      }
+
+      function clearError(step){
+        if (errors[step]) errors[step].textContent = '';
+        if (step === 4) {
+          nameInput.removeAttribute('aria-invalid');
+          phoneInput.removeAttribute('aria-invalid');
+        }
+        if (step === 5) emailInput.removeAttribute('aria-invalid');
+      }
+
+      function showError(step,message,target){
+        errors[step].textContent = message;
+        if (target) {
+          target.setAttribute('aria-invalid','true');
+          target.focus();
+        }
+        return false;
+      }
+
+      function validateStep(step){
+        clearError(step);
+
+        if (step === 1 && !selectedValue('career')) {
+          return showError(1,'현재 경력을 선택해 주세요.',form.querySelector('input[name="career"]'));
+        }
+        if (step === 2 && !selectedValue('gender')) {
+          return showError(2,'성별을 선택해 주세요.',form.querySelector('input[name="gender"]'));
+        }
+        if (step === 3 && !selectedValue('reason')) {
+          return showError(3,'프로그램 참여 이유를 선택해 주세요.',form.querySelector('input[name="reason"]'));
+        }
+        if (step === 4) {
+          if (!nameInput.value.trim()) return showError(4,'이름을 입력해 주세요.',nameInput);
+          const phoneDigits = phoneInput.value.replace(/\D/g,'');
+          if (!/^010\d{8}$/.test(phoneDigits)) return showError(4,'010으로 시작하는 전화번호 11자리를 입력해 주세요.',phoneInput);
+          if (!selectedValue('region')) return showError(4,'거주 지역을 선택해 주세요.',form.querySelector('input[name="region"]'));
+        }
+        if (step === 5) {
+          if (!emailInput.value.trim()) return showError(5,'이메일을 입력해 주세요.',emailInput);
+          if (!emailInput.validity.valid) return showError(5,'이메일 형식을 확인해 주세요.',emailInput);
+          if (!privacy.checked) return showError(5,'개인정보처리방침 동의 체크박스를 선택해 주세요.',privacy);
+        }
+        return true;
+      }
+
+      function updateReview(){
+        document.getElementById('reviewCareer').textContent = selectedValue('career') || '-';
+        document.getElementById('reviewGender').textContent = selectedValue('gender') || '-';
+        document.getElementById('reviewReason').textContent = selectedValue('reason') || '-';
+        document.getElementById('reviewName').textContent = nameInput.value.trim() || '-';
+        document.getElementById('reviewPhone').textContent = phoneInput.value || '-';
+        document.getElementById('reviewRegion').textContent = selectedValue('region') || '-';
+        document.getElementById('reviewEmail').textContent = emailInput.value.trim() || '-';
+        document.getElementById('reviewMarketing').textContent = marketingConsent.value;
+      }
+
+      function updatePrimaryState(){
+        primaryAction.disabled = currentStep === 5 && !privacy.checked;
+      }
+
+      function showStep(nextStep,direction,moveFocus){
+        currentStep = nextStep;
+        form.hidden = false;
+        successView.hidden = true;
+        progressRow.hidden = false;
+
+        steps.forEach(function(step){
+          step.hidden = Number(step.dataset.step) !== currentStep;
+          step.classList.remove('is-entering','is-reversing');
+        });
+
+        const activeStep = steps[currentStep - 1];
+        activeStep.classList.add(direction === 'back' ? 'is-reversing' : 'is-entering');
+        modal.setAttribute('aria-labelledby','step' + currentStep + 'Title');
+        stepBack.disabled = currentStep === 1;
+
+        if (currentStep <= QUESTION_STEPS) {
+          progressBar.style.width = ((currentStep / QUESTION_STEPS) * 100) + '%';
+          progressTrack.setAttribute('aria-valuenow',String(currentStep));
+          progressCount.textContent = currentStep + ' / ' + QUESTION_STEPS;
+        } else {
+          progressBar.style.width = '100%';
+          progressTrack.setAttribute('aria-valuenow',String(QUESTION_STEPS));
+          progressCount.textContent = 'FINAL';
+          updateReview();
+        }
+
+        const marketingStep = currentStep === QUESTION_STEPS;
+        primaryAction.hidden = marketingStep;
+        marketingActions.hidden = !marketingStep;
+        primaryLabel.textContent = currentStep === FINAL_STEP ? '참여 신청 완료하기' : '다음 질문';
+        updatePrimaryState();
+        stepViewport.scrollTop = 0;
+
+        if (moveFocus !== false) {
+          requestAnimationFrame(function(){ activeStep.focus({preventScroll:true}); });
+        }
+      }
+
+      function goNext(){
+        if (currentStep <= 5) {
+          if (!validateStep(currentStep)) return;
+          showStep(currentStep + 1,'next');
+          return;
+        }
+        if (currentStep === FINAL_STEP) finishApplication();
+      }
+
+      function goBack(){
+        if (currentStep > 1) showStep(currentStep - 1,'back');
+      }
+
+      function finishApplication(){
+        form.hidden = true;
+        progressRow.hidden = true;
+        successView.hidden = false;
+        modal.setAttribute('aria-labelledby','successTitle');
+        document.getElementById('successName').textContent = nameInput.value.trim();
+        document.getElementById('successRegion').textContent = selectedValue('region');
+        requestAnimationFrame(function(){ document.getElementById('successTitle').focus({preventScroll:true}); });
+      }
+
+      function armOrClose(){
+        if (!exitArmed) {
+          exitArmed = true;
+          exitNudge.hidden = false;
+          closeButton.classList.add('is-armed');
+          closeButton.setAttribute('aria-label','참여 신청 창 닫기 확인');
+          requestAnimationFrame(function(){ exitNudge.focus({preventScroll:true}); });
+          return;
+        }
+        closeModal();
+      }
+
+      function closeModal(){
+        overlay.hidden = true;
+        overlay.setAttribute('aria-hidden','true');
+        document.body.style.overflow = '';
+        previewReopen.hidden = false;
+        previewReopen.focus();
+      }
+
+      function resetExitWarning(){
+        exitArmed = false;
+        exitNudge.hidden = true;
+        closeButton.classList.remove('is-armed');
+        closeButton.setAttribute('aria-label','참여 신청 창 닫기');
+      }
+
+      function resetFlow(){
+        form.reset();
+        Object.keys(errors).forEach(function(key){ clearError(Number(key)); });
+        privacyDetail.hidden = true;
+        privacyToggle.setAttribute('aria-expanded','false');
+        marketingConsent.value = '미동의';
+        successView.hidden = true;
+        resetExitWarning();
+        showStep(1,'next');
+      }
+
+      function reopenModal(){
+        lastFocused = document.activeElement;
+        overlay.hidden = false;
+        overlay.removeAttribute('aria-hidden');
+        previewReopen.hidden = true;
+        document.body.style.overflow = 'hidden';
+        resetFlow();
+      }
+
+      function formatPhone(value){
+        const digits = value.replace(/\D/g,'').slice(0,11);
+        if (digits.length <= 3) return digits;
+        if (digits.length <= 7) return digits.slice(0,3) + '-' + digits.slice(3);
+        return digits.slice(0,3) + '-' + digits.slice(3,7) + '-' + digits.slice(7);
+      }
+
+      function trapFocus(event){
+        if (event.key !== 'Tab' || overlay.hidden) return;
+        const focusable = Array.from(modal.querySelectorAll('button:not([disabled]):not([hidden]),input:not([disabled]):not([type="hidden"]),[tabindex]:not([tabindex="-1"])'))
+          .filter(function(node){ return !node.closest('[hidden]') && node.offsetParent !== null; });
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+
+      primaryAction.addEventListener('click',goNext);
+      stepBack.addEventListener('click',goBack);
+      closeButton.addEventListener('click',armOrClose);
+      previewReopen.addEventListener('click',reopenModal);
+      successReset.addEventListener('click',resetFlow);
+
+      marketingDisagree.addEventListener('click',function(){
+        marketingConsent.value = '미동의';
+        showStep(5,'back');
+      });
+      marketingAgree.addEventListener('click',function(){
+        marketingConsent.value = '동의';
+        showStep(FINAL_STEP,'next');
+      });
+
+      privacy.addEventListener('change',function(){
+        clearError(5);
+        updatePrimaryState();
+      });
+      privacyToggle.addEventListener('click',function(){
+        const expanded = privacyToggle.getAttribute('aria-expanded') === 'true';
+        privacyToggle.setAttribute('aria-expanded',String(!expanded));
+        privacyDetail.hidden = expanded;
+      });
+      phoneInput.addEventListener('input',function(){
+        phoneInput.value = formatPhone(phoneInput.value);
+        clearError(4);
+      });
+      nameInput.addEventListener('input',function(){ clearError(4); });
+      emailInput.addEventListener('input',function(){ clearError(5); });
+      form.addEventListener('change',function(event){
+        const step = event.target.closest('.form-step');
+        if (step) clearError(Number(step.dataset.step));
+      });
+      form.addEventListener('submit',function(event){
+        event.preventDefault();
+        if (!primaryAction.hidden && !primaryAction.disabled) goNext();
+      });
+
+      overlay.addEventListener('mousedown',function(event){
+        if (event.target === overlay) armOrClose();
+      });
+      document.addEventListener('keydown',function(event){
+        if (overlay.hidden) return;
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          armOrClose();
+          return;
+        }
+        trapFocus(event);
+      });
+
+      document.body.style.overflow = 'hidden';
+      lastFocused = document.activeElement;
+      showStep(1,'next',false);
+    }());
+  </script>
+</body>
+</html>
