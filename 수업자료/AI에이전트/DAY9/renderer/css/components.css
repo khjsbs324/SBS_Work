@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  background: #222;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-title);
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.h1 {
+  margin: 0;
+  font-size: var(--font-h1);
+  line-height: 1.2;
+}
+
+.t2 {
+  font-size: 24px;
+  line-height: 1.34;
+  color: var(--text-secondary);
+}
+
+.content-body {
+  font-size: var(--font-body3);
+  line-height: 1.34;
+}
+
+.slide-image {
+  display: block;
+  object-fit: cover;
+}

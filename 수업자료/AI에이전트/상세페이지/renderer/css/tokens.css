@@ -1,0 +1,53 @@
+:root {
+  --canvas-width: 1080px;
+  --content-width: 888px;
+  --canvas-gutter: 96px;
+  --pdf-page-height: 1528px;
+
+  --surface-porcelain: #f8f6f1;
+  --surface-cream: #efe8db;
+  --surface-oat: #d9ccb8;
+  --surface-sage: #dde1d4;
+  --surface-ink: #1b211e;
+  --surface-card: #fffefa;
+  --surface-glass: rgba(255, 254, 250, 0.78);
+  --text-primary: #1e2421;
+  --text-secondary: #626862;
+  --text-muted: #777d77;
+  --text-on-dark: #f8f6f1;
+  --accent-bronze: #9a7451;
+  --accent-sage: #667565;
+  --border-soft: #cfc8bb;
+  --border-on-dark: rgba(248, 246, 241, 0.28);
+
+  --font-display: Georgia, "Noto Serif KR", "Malgun Gothic", serif;
+  --font-body: Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+  --display-xl: 88px;
+  --display-lg: 72px;
+  --heading-1: 56px;
+  --heading-2: 40px;
+  --heading-3: 30px;
+  --body-lg: 28px;
+  --body: 24px;
+  --body-sm: 21px;
+  --caption: 18px;
+  --eyebrow: 16px;
+
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 80px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --radius-sm: 16px;
+  --radius-md: 28px;
+  --radius-lg: 48px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 28px 70px rgba(49, 43, 34, 0.12);
+  --shadow-product: 0 38px 72px rgba(43, 36, 27, 0.2);
+}
