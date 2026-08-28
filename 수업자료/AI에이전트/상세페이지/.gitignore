@@ -1,0 +1,18 @@
+# Claude local permissions
+.claude/settings.local.json
+
+# Generated artifacts (the delivery PDF at project root may be committed separately)
+output/html/*
+output/pdf/*
+output/pptx/*
+logs/*
+
+# Temporary browser and editor files
+.edge-headless/
+.chrome-headless/
+*.tmp
+*.bak
+~$*
+Thumbs.db
+.DS_Store
+.vscode/

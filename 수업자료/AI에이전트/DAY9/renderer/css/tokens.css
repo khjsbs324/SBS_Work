@@ -1,0 +1,22 @@
+:root {
+  --document-width: 1920px;
+  --document-height: 1080px;
+  --grid-width: 1440px;
+  --grid-left: 240px;
+
+  --surface-page: #ffffff;
+  --surface-soft: #f1f1f1;
+  --text-primary: #000000;
+  --text-secondary: #565656;
+
+  --font-title: 96px;
+  --font-h1: 60px;
+  --font-h2: 48px;
+  --font-h3: 36px;
+  --font-body1: 36px;
+  --font-body3: 24px;
+
+  --img-xl: 640px;
+  --img-lg: 420px;
+  --img-md: 300px;
+}

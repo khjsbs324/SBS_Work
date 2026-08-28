@@ -1,0 +1,37 @@
+.slide {
+  position: relative;
+  width: var(--document-width);
+  height: var(--document-height);
+  overflow: hidden;
+  background: var(--surface-page);
+  page-break-after: always;
+}
+
+.slide[data-background="surface-soft"],
+.slide.surface-soft {
+  background: var(--surface-soft);
+}
+
+.slide__grid {
+  position: relative;
+  width: var(--grid-width);
+  height: 100%;
+  margin-left: var(--grid-left);
+}
+
+.image-right .slide-image {
+  position: absolute;
+  width: var(--img-xl);
+  right: 0;
+  top: 180px;
+}
+
+.overlap-title-box .title {
+  position: relative;
+  z-index: 2;
+}
+
+@media print {
+  body { background: transparent; }
+  .slide { break-after: page; }
+}

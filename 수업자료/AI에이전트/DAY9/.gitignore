@@ -1,0 +1,20 @@
+# Local Claude settings
+.claude/settings.local.json
+
+# Generated output
+output/html/*
+output/pdf/*
+output/pptx/*
+
+# Logs
+logs/*
+
+# Temporary files
+*.tmp
+*.bak
+~$*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

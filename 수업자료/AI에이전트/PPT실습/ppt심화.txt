@@ -1,0 +1,96 @@
+[DAY9 PPT 자동화 실습 — 심화]
+
+당신은 전략기획자, 프레젠테이션 디자이너, 구현 엔지니어, QA 리뷰어로 구성된 AI 에이전트 팀이다. DAY9 프로젝트를 사용해 경영진 의사결정용 전략 프레젠테이션을 완성하라. 실습은 원본 보존을 위해 DAY9를 복제한 별도 작업본에서 수행한다.
+
+프로젝트 브리프
+- 제목: 「AI Agent Operating Model 2026」
+- 부제: “90일 안에 검증하고, 12개월 안에 확장하는 운영체계”
+- 청중: 대표, 본부장, 재무·보안·IT 책임자
+- 의사결정: 90일 1단계 투자, 전담 스쿼드 구성, 데이터 접근 범위 승인
+- 분량: 정확히 10페이지
+- 화면: 16:9, 1920×1080
+- 스타일: 프리미엄 다크 테크, 차콜 배경 + 시안/바이올렛 포인트
+- 외부 이미지 사용 금지. 도형, 연결선, 표, 데이터 시각화, 타이포그래피만 사용한다.
+
+작업 전 필수 분석
+1. CLAUDE.md의 Source of Truth와 변경 범위 원칙
+2. presentation/config의 canvas, page type, manifest 구조
+3. presentation/design-system의 토큰과 레이아웃
+4. .claude/rules 전체
+5. planner/designer/builder/reviewer의 책임 분리
+6. 모든 Skill의 입력·출력·검증 절차
+7. hooks와 scripts가 실제로 검사하는 조건
+
+콘텐츠 가정(모두 “내부 시나리오 가정”으로 표기)
+- 대상 인원 120명
+- 현재 월 반복업무 2,400시간
+- 12개월 자동화 가능 시간 8,600시간
+- 시간당 내부 비용 42,000원
+- 1년 총투자 2.1억원
+- 목표 채택률 70%
+- 고위험 업무는 자동 실행 금지, 사람 승인 필수
+- 1단계 후보: 제안서 초안, VOC 분류, 주간 보고 취합, 지식 검색, 캠페인 QA
+
+필수 스토리라인
+1. p1 / cover — 제목, 부제, 의사결정 날짜
+2. ps1 / section — North Star: 12개월 목표와 경영진이 오늘 결정할 3가지
+3. ps1_1 / content — 가치 풀: 생산성·품질·속도·학습효과와 정량 목표
+4. ps1_2 / content — 성숙도 모델: Assist → Automate → Orchestrate → Transform
+5. ps1_3 / content — 목표 아키텍처: Experience / Orchestration / Skills / Data / Governance 5계층
+6. pb1 / section — Trust by Design: 위험 등급, 승인 게이트, 감사 로그, Kill Switch
+7. pb1_1 / content — 포트폴리오 우선순위: 가치×실행 가능성 매트릭스와 5개 후보
+8. pb1_2 / content — 비즈니스 케이스: 투자, 절감 가치, 손익분기 시점, 민감도
+9. pb1_3 / content — 90일 로드맵: Discover / Build / Pilot / Scale Gate, 주차·오너·산출물
+10. pb1_4 / content — Decision Page: 승인 요청 3개, 성공 게이트 4개, 다음 72시간 액션
+
+정량 계산 규칙
+- 8,600시간 × 42,000원 = 3.612억원의 잠재 연간 시간가치로 표시한다.
+- 투자 2.1억원 대비 단순 가치/투자 비율은 약 1.72×로 표시한다.
+- 손익분기 시점은 월별 실현률을 가정해 계산하고, 계산식과 가정값을 각주에 남긴다.
+- 숫자를 과장된 확정 성과로 표현하지 말고 “잠재”, “목표”, “가정”을 명시한다.
+- 모든 차트에는 단위, 기준 시점, 가정 출처를 표기한다.
+
+시각 설계 규칙
+- 한 페이지에는 결론형 제목 1개와 근거 구조 1개만 둔다.
+- Executive 메시지는 36~44px, 본문은 24~30px, 각주는 16~18px 범위로 한다.
+- 색은 의미를 갖게 사용한다: 시안=핵심 흐름, 바이올렛=플랫폼, 라임=성과, 앰버=위험/승인.
+- 아키텍처의 계층과 연결 방향을 한눈에 식별할 수 있어야 한다.
+- 성숙도 모델과 로드맵은 현재/목표 상태를 명확히 구분한다.
+- 장식용 3D, 그라데이션 남용, 의미 없는 아이콘을 사용하지 않는다.
+- 중요 표와 차트는 컬러에만 의존하지 말고 라벨을 직접 표기한다.
+
+에이전트 워크플로
+1. slide-planner가 `ID / Type / Purpose / Required Elements / Evidence` 형식의 계획을 작성한다.
+2. slide-designer가 토큰 재사용 목록, 필요한 신규 토큰, 페이지별 좌표 전략을 작성한다.
+3. slide-builder가 manifest, pages, 필요한 renderer/design-system 파일만 수정한다.
+4. slide-reviewer가 자동 검증과 수동 QA를 수행하고 이슈를 경로·Page ID·Element ID 단위로 보고한다.
+5. builder가 이슈를 수정한다.
+6. reviewer가 전체 회귀 검증을 다시 수행한다.
+
+검증 명령
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\validate.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\build.ps1
+powershell -ExecutionPolicy Bypass -File .\.claude\hooks\validate-build.ps1
+```
+
+추가 QA 체크리스트
+- 정확히 10페이지이며 manifest와 실제 파일이 1:1 대응하는가
+- 모든 ID가 규칙을 따르고 중복되지 않는가
+- 1920×1080 밖으로 벗어난 요소가 없는가
+- 겹침이 의도된 레이아웃 외에 텍스트/도형 충돌이 없는가
+- 수치의 산식과 표시값이 일치하는가
+- 위험 등급별 사람 승인 정책이 모순되지 않는가
+- 최소 본문 글자 크기와 대비 기준을 만족하는가
+- 출력 JSON에 10개 페이지가 올바른 순서로 포함되는가
+- 요청 범위 밖의 파일이 바뀌지 않았는가
+
+최종 산출물
+- 구조화된 10개 페이지 Markdown
+- 갱신된 manifest와 필요한 디자인 토큰/레이아웃
+- output/html 완성본과 presentation.json
+- 환경이 지원하면 output/pdf 및 output/pptx도 생성하고, 지원하지 않으면 정확한 사유와 재현 명령을 보고
+- QA 보고서: 통과 항목, 수정한 이슈, 잔여 리스크, 계산 검산 결과
+- 경영진용 한 문장 결론과 승인 요청 3개
+
+질문을 되묻지 말고 합리적인 내부 시나리오 가정을 명시한 뒤, 계획부터 회귀 검증까지 자율적으로 완수하라.

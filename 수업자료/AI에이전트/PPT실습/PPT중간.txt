@@ -1,0 +1,84 @@
+[DAY9 PPT 자동화 실습 — 중간]
+
+당신은 기업 교육용 제안서를 만드는 PPT 에이전트 팀이다. 현재 작업 폴더는 DAY9 프로젝트 루트이며, 원본 보존을 위해 DAY9를 복제한 별도 작업본에서 실행한다.
+
+미션
+- 주제: 「AI 에이전트 업무 자동화 파일럿 제안」
+- 대상: 팀장·실무 리더
+- 목적: 8주 파일럿 승인을 얻는다.
+- 분량: 총 8페이지, 16:9(1920×1080)
+- 스타일: 신뢰감 있는 다크 네이비 + 틸 포인트, 데이터 중심
+- 외부 이미지와 외부 조사는 사용하지 않는다. 수치는 반드시 “가정 기반 예시”로 표시한다.
+
+사전 탐색
+- CLAUDE.md, README.md
+- presentation/config/*.md
+- presentation/design-system/*.md
+- .claude/rules/*.md
+- .claude/agents/*.md
+- .claude/skills/*/SKILL.md
+- scripts/validate.ps1, scripts/build.ps1
+
+에이전트별 작업 순서
+1. slide-planner: 메시지 구조, Page ID, 페이지 목적, 필수 요소를 표로 설계
+2. slide-designer: 기존 토큰을 우선 사용해 레이아웃·색·타입·좌표를 결정
+3. slide-builder: manifest와 pages 원본을 구현하고 빌드
+4. slide-reviewer: 스키마, 레이아웃, 변경 범위, 빌드 결과를 독립 검수
+
+필수 페이지
+1. p1 / cover — 제목, “8주 파일럿 제안”, 발표 대상
+2. ps1 / section — Executive Summary: 문제·해법·의사결정 요청
+3. ps1_1 / content — 현재 업무의 병목: 수작업 시간, 재작업, 대기시간
+4. ps1_2 / content — 목표 아키텍처: Intake → Orchestrator → Skills → Systems → Review
+5. ps1_3 / content — 후보 업무 우선순위 2×2 매트릭스(효과×구현 난이도)
+6. pb1 / section — 파일럿 운영안: Human-in-the-loop 흐름과 역할 구분
+7. pb1_1 / content — 8주 로드맵: 진단·설계·실행·검증 4단계
+8. pb1_2 / content — KPI 대시보드와 승인 요청 3가지
+
+예시 데이터(외부 사실로 표현하지 말 것)
+- 월 반복업무 420시간
+- 초안 작성시간 목표 35% 절감
+- 재작업률 18% → 목표 10%
+- 검토 SLA 2일 → 목표 1일
+- 파일럿 사용자 20명, 대상 프로세스 3개
+
+디자인 요구
+- 표지와 섹션은 다크 배경, 콘텐츠 페이지는 밝은 배경을 기본으로 한다.
+- 핵심 수치는 큰 숫자 카드로 표현한다.
+- 아키텍처는 최소 5개 노드와 연결선으로 표현한다.
+- 2×2 매트릭스에는 후보 업무를 5개 이상 배치한다.
+- 로드맵에는 주차, 책임자, 산출물이 함께 보여야 한다.
+- 장식보다 정보 위계를 우선하고 페이지당 강조색은 2개 이하로 제한한다.
+
+구현 규칙
+- Page ID를 임의 변경하지 않는다.
+- 요소 ID는 `{pageId}.{elementId}` 형식으로 쓴다.
+- 기존 디자인 토큰이 있으면 재사용한다.
+- output을 직접 수정하지 않는다.
+- 구현에 필요한 신규 레이아웃/토큰은 이름, 목적, 재사용 조건을 문서화한다.
+- 모든 차트 수치에는 단위와 “가정 기반 예시” 각주를 둔다.
+
+검증 및 빌드
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\validate.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\build.ps1
+powershell -ExecutionPolicy Bypass -File .\.claude\hooks\validate-build.ps1
+```
+
+완료 기준
+- 8페이지가 manifest 순서대로 생성됨
+- validation/build exit code 0
+- 1920×1080 경계 초과 요소 없음
+- 최소 글자 크기: 본문 28px, 각주 18px
+- 예시 수치와 사실이 시각적으로 구분됨
+- 같은 유형의 카드, 제목, 페이지 번호가 일관됨
+- reviewer가 발견한 오류를 수정한 뒤 한 번 더 전체 검증함
+
+최종 보고
+1. 페이지별 핵심 메시지
+2. 신규/재사용 토큰 목록
+3. 생성·수정 파일 목록
+4. 세 차례 검증 명령의 결과
+5. 파일럿 승인자가 확인해야 할 가정 3개
+
+필요한 문구와 도형 배치는 스스로 결정하고, 승인 가능한 완성도까지 중단 없이 수행하라.

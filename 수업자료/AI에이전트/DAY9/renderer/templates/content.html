@@ -1,0 +1,20 @@
+<section class="slide slide--content {{page.layout}}" data-page-id="{{page.id}}">
+  <div class="slide__grid">
+    <h1 class="h1" data-element-id="{{page.id}}.title">
+      {{title.text}}
+    </h1>
+
+    <div class="content-body" data-element-id="{{page.id}}.body01">
+      {{body01.text}}
+    </div>
+
+    {{#if image01}}
+    <img
+      class="slide-image"
+      data-element-id="{{page.id}}.image01"
+      src="{{image01.source}}"
+      alt=""
+    >
+    {{/if}}
+  </div>
+</section>
