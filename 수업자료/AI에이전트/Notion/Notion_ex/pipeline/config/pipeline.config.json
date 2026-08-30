@@ -1,0 +1,39 @@
+{
+  "notion": {
+    "tokenEnvVar": "NOTION_TOKEN",
+    "dataSourceEnvVar": "NOTION_DATA_SOURCE_ID",
+    "notionVersion": "2026-03-11",
+    "titleProperty": "프로젝트 이름",
+    "propertyMapping": {
+      "title": "프로젝트 이름",
+      "start": "시작일",
+      "end": "종료일"
+    },
+    "defaults": {
+      "상태": "시작 전",
+      "우선순위": "보통"
+    }
+  },
+  "googleCalendar": {
+    "toolPrefix": "mcp__claude_ai_Google_Calendar__",
+    "calendarId": "primary",
+    "lookAheadDays": 14,
+    "snapshotPath": ".state/calendar-snapshot-latest.json"
+  },
+  "recommend": {
+    "daysAhead": 7,
+    "workStart": "09:00",
+    "workEnd": "18:00",
+    "slotMinutes": 60,
+    "maxSuggestions": 3
+  },
+  "output": {
+    "changesDir": "output/changes",
+    "recommendationsDir": "output/recommendations",
+    "dateFormat": "yyyy-MM-dd"
+  },
+  "state": {
+    "lastSyncFile": ".state/last-sync.json",
+    "calendarSnapshotFile": ".state/calendar-snapshot-latest.json"
+  }
+}

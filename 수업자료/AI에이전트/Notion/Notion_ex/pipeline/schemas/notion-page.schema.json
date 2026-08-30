@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NotionProjectPageFromEvent",
+  "type": "object",
+  "description": "CalendarEvent가 Notion '프로젝트' Data Source의 페이지 속성으로 어떻게 매핑되는지 정의한다.",
+  "properties": {
+    "프로젝트 이름": { "type": "string", "mapsFrom": "title" },
+    "시작일": { "type": "string", "format": "date", "mapsFrom": "start" },
+    "종료일": { "type": "string", "format": "date", "mapsFrom": "end" },
+    "상태": { "type": "string", "enum": ["시작 전", "진행 중", "Done"], "default": "시작 전" },
+    "우선순위": { "type": "string", "enum": ["낮음", "보통", "높음"], "default": "보통" },
+    "담당자": { "type": "array", "note": "캘린더에 대응 정보 없으면 비움" },
+    "팀": { "type": "array", "note": "캘린더에 대응 정보 없으면 비움" }
+  }
+}

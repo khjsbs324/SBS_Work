@@ -1,0 +1,167 @@
+[설정]
+1.개발자 UI모드[on]
+2.[이름 성]의 워크스페이스 -> 개발자 -> 개발자 도구 열기 ->  신규 연결 -> 연결 이름: my-agent -> 인증 방법: 엑세스 토큰
+
+
+[필요 요소]
+① Access Token(파일이나 LLM모델 작성X)
+② Database ID
+③ Data Source ID
+
+
+[① Access Token]
+ntn_... 
+
+
+[② Database ID]
+https://www.notion.so/워크스페스/
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+?v=yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+https://app.notion.com/p/
+1eee6482d0b88036af74efd6aab6cff8
+?v=3cce6482d0b880748b20000c5d36ce56&source=copy_link
+
+
+https://www.notion.so/워크스페스/
+database_id
+?v=View ID
+
+
+[③ Data Source ID]
+3cce6482-d0b8-800f-bacb-000b9165e785
+
+
+
+[환경변수 등록]
+$env:NOTION_TOKEN="ntn_여기에_본인_토큰"
+$env:NOTION_DATA_SOURCE_ID="여기에_데이터소스_ID"
+
+
+[환경변수 확인]
+$env:NOTION_DATA_SOURCE_ID
+if ($env:NOTION_TOKEN) { "NOTION_TOKEN 설정 완료" }
+
+
+
+
+[프로젝트 데이터가 실제로 읽히는지 확인]
+*현재 Notion API에서는 Data Source ID를 사용해 POST /v1/data_sources/{data_source_id}/query로 조회
+
+POST /v1/data_sources/{data_source_id}/query로 조회
+
+(명령어)
+$response = Invoke-RestMethod `
+  -Method Post `
+  -Uri "https://api.notion.com/v1/data_sources/$env:NOTION_DATA_SOURCE_ID/query" `
+  -Headers @{
+    "Authorization"  = "Bearer $env:NOTION_TOKEN"
+    "Notion-Version" = "2026-03-11"
+    "Content-Type"   = "application/json"
+  } `
+  -Body '{}'
+
+
+
+(명령어 동작 확인)
+$response
+
+
+(정상 연결 결과)
+object      : list
+results     : {@{...}, @{...}}
+next_cursor :
+has_more    : False
+type        : page_or_data_source
+
+
+(오류)
+401 Unauthorized
+→ Access Token 문제
+
+403 Forbidden
+→ my-agent 권한 문제
+
+404 Not Found
+→ Data Source ID 오류 또는
+   my-agent가 해당 DB에 연결되지 않음
+
+
+
+
+[프로젝트 이름 확인]
+*Query Data Source의 results에는 데이터베이스의 각 항목이 Page 형태로 반환
+(명령어)
+$response.results | ForEach-Object {
+    ($_.properties.'프로젝트 이름'.title | ForEach-Object { $_.plain_text }) -join ""
+}
+
+
+(정상 출력 결과)
+분기별 영업 계획
+신입 사원 온보딩 개선
+IOS 앱 공식 출시
+
+
+
+[Claude 실행]
+★★필수!!!!!!!명령어 입력 PosweShell에서 Claude 실행★★
+
+
+[NOTION_TOKEN, NOTION_DATA_SOURCE_ID 상속]
+현재 환경변수 NOTION_TOKEN과 NOTION_DATA_SOURCE_ID를 사용해서
+Notion API의 Data Source를 조회해줘.
+
+조건:
+- NOTION_TOKEN 값은 절대 화면에 출력하지 말 것
+- POST /v1/data_sources/{data_source_id}/query 사용
+- 조회 결과에서 프로젝트 이름만 출력할 것
+- 파일은 생성하지 말고 먼저 조회만 진행할 것
+
+
+(정상 동작)
+PowerShell
+│
+├─ NOTION_TOKEN
+├─ NOTION_DATA_SOURCE_ID
+│
+└─ claude
+     ↓
+Claude CLI
+     ↓
+PowerShell/curl 등의 명령 실행
+     ↓
+Notion API
+     ↓
+프로젝트 DB 조회
+
+
+(정상 출력 결과)
+분기별 영업 계획
+신입 사원 온보딩 개선
+IOS 앱 공식 출시
+
+
+
+
+[DB구조 추가]
+현재 환경변수 NOTION_TOKEN과 NOTION_DATA_SOURCE_ID를 사용해서
+Notion 프로젝트 Data Source에 테스트 항목을 정확히 1개 생성해줘.
+
+조건:
+- POST /v1/pages 사용
+- Notion-Version: 2026-03-11
+- parent는 data_source_id 사용
+- 프로젝트 이름은 "Notion API 연결 테스트"
+- 기존 프로젝트는 절대 수정하거나 삭제하지 말 것
+- NOTION_TOKEN 값은 절대 출력하지 말 것
+- 명령어에서도 실제 토큰 문자열을 직접 작성하지 말고 환경변수를 참조할 것
+- 생성 완료 후 생성된 프로젝트 이름과 Page ID만 출력할 것
+
+
+[자동화 구조 만들기]
+Day9폴더 구조를 Notion폴더에 복사해서 Notion_ex이름으로 수정하고 아래 파이프라인에 맞춰서 진행될 수 있도록 파이프라인 구축해줘
+1.구글 캘린더 일정 읽기
+2.노션 등록하기
+3.수정 사항 output 날짜로 정리하기
+4.다음 일정 추천해서 output 날짜로 정리하기

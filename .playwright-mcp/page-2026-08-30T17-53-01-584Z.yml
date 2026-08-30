@@ -1,0 +1,306 @@
+- generic [ref=f20e1]:
+  - table [ref=f20e2]:
+    - rowgroup [ref=f20e6]:
+      - row [ref=f20e7]:
+        - cell "SBS아카데미 대전" [ref=f20e8]
+      - row [ref=f20e11]:
+        - cell "김혜지 수정 비번변경 로그아웃  훈련과정  공지사항  고객센터  카톡문의" [ref=f20e12]:
+          - generic [ref=f20e13]:
+            - generic [ref=f20e14]: 김혜지
+            - generic [ref=f20e15]:
+              - link "수정" [ref=f20e16] [cursor=pointer]:
+                - /url: "#"
+              - link "비번변경" [ref=f20e17] [cursor=pointer]:
+                - /url: "#"
+              - link "로그아웃" [ref=f20e18] [cursor=pointer]:
+                - /url: /logout.php?mode=teacher_logout
+          - list [ref=f20e19]:
+            - listitem [ref=f20e20] [cursor=pointer]:
+              - generic [ref=f20e21]:
+                - generic [ref=f20e22]: 
+                - text: 훈련과정
+            - listitem [ref=f20e23] [cursor=pointer]:
+              - generic [ref=f20e24]:
+                - generic [ref=f20e25]: 
+                - text: 공지사항
+          - list [ref=f20e26]:
+            - listitem [ref=f20e27] [cursor=pointer]:
+              - generic [ref=f20e28]:
+                - paragraph [ref=f20e29]:
+                  - generic [ref=f20e30]: 
+                - paragraph [ref=f20e31]: 고객센터
+            - listitem [ref=f20e32] [cursor=pointer]:
+              - generic [ref=f20e33]:
+                - paragraph [ref=f20e34]:
+                  - generic [ref=f20e35]: 
+                - paragraph [ref=f20e36]: 카톡문의
+        - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A(1회차) 처음으로 출결관리 집체훈련 시간표 훈련생 사전평가  오리엔테이션  출석현황 능력단위평가  훈련생평가 이의신청 상담일지 보충수업  훈련일지 과정회의록 과정공지사항 지원내역 과제 서식공유 게시판생성  게시판순서변경 평가정보 돌아가기 평가내역 평가점수 일괄등록" [ref=f20e37]:
+          - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A(1회차) 처음으로" [ref=f20e38]:
+            - caption [ref=f20e39]:
+              - generic [ref=f20e40]:
+                - generic [ref=f20e41]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A(1회차)"
+                - link "처음으로" [ref=f20e42] [cursor=pointer]:
+                  - /url: /teacher/ver4/curri/index.php
+            - rowgroup [ref=f20e50]:
+              - row [ref=f20e51]:
+                - cell "개강일" [ref=f20e52]
+                - cell "2026-05-20" [ref=f20e53]
+                - cell "종강일" [ref=f20e54]
+                - cell "2026-12-02" [ref=f20e55]
+                - cell "강사" [ref=f20e56]
+                - cell "김가경, 김혜지" [ref=f20e57]
+              - row [ref=f20e58]:
+                - cell "실시인원" [ref=f20e59]
+                - cell "11" [ref=f20e60]
+                - cell "수강인원" [ref=f20e61]
+                - cell "10" [ref=f20e62]
+                - cell "수강포기인원" [ref=f20e63]
+                - cell "1" [ref=f20e64]
+          - list [ref=f20e65]:
+            - listitem [ref=f20e66] [cursor=pointer]:
+              - list [ref=f20e67]:
+                - listitem [ref=f20e68]: 출결관리
+            - listitem [ref=f20e69] [cursor=pointer]:
+              - list [ref=f20e70]:
+                - listitem [ref=f20e71]: 집체훈련
+            - listitem [ref=f20e72] [cursor=pointer]:
+              - list [ref=f20e73]:
+                - listitem [ref=f20e74]: 시간표
+            - listitem [ref=f20e75] [cursor=pointer]:
+              - list [ref=f20e76]:
+                - listitem [ref=f20e77]: 훈련생
+            - listitem [ref=f20e78] [cursor=pointer]:
+              - list [ref=f20e79]:
+                - listitem [ref=f20e80]: 사전평가
+                - listitem [ref=f20e81]:
+                  - generic [ref=f20e82]: 
+            - listitem [ref=f20e83] [cursor=pointer]:
+              - list [ref=f20e84]:
+                - listitem [ref=f20e85]: 오리엔테이션
+                - listitem [ref=f20e86]:
+                  - generic [ref=f20e87]: 
+            - listitem [ref=f20e88] [cursor=pointer]:
+              - list [ref=f20e89]:
+                - listitem [ref=f20e90]: 출석현황
+            - listitem [ref=f20e91] [cursor=pointer]:
+              - list [ref=f20e92]:
+                - listitem [ref=f20e93]: 능력단위평가
+                - listitem [ref=f20e94]:
+                  - generic [ref=f20e95]: 
+            - listitem [ref=f20e96] [cursor=pointer]:
+              - list [ref=f20e97]:
+                - listitem [ref=f20e98]: 훈련생평가
+            - listitem [ref=f20e99] [cursor=pointer]:
+              - list [ref=f20e100]:
+                - listitem [ref=f20e101]: 이의신청
+            - listitem [ref=f20e102] [cursor=pointer]:
+              - list [ref=f20e103]:
+                - listitem [ref=f20e104]: 상담일지
+            - listitem [ref=f20e105] [cursor=pointer]:
+              - list [ref=f20e106]:
+                - listitem [ref=f20e107]: 보충수업
+                - listitem [ref=f20e108]:
+                  - generic [ref=f20e109]: 
+            - listitem [ref=f20e110] [cursor=pointer]:
+              - list [ref=f20e111]:
+                - listitem [ref=f20e112]: 훈련일지
+            - listitem [ref=f20e113] [cursor=pointer]:
+              - generic [ref=f20e114]: 과정회의록
+            - listitem [ref=f20e115] [cursor=pointer]:
+              - generic [ref=f20e116]: 과정공지사항
+            - listitem [ref=f20e117] [cursor=pointer]:
+              - generic [ref=f20e118]: 지원내역
+            - listitem [ref=f20e119] [cursor=pointer]:
+              - generic [ref=f20e120]: 과제
+            - listitem [ref=f20e121] [cursor=pointer]:
+              - generic [ref=f20e122]: 서식공유
+            - listitem [ref=f20e123] [cursor=pointer]:
+              - list [ref=f20e124]:
+                - listitem [ref=f20e125]:
+                  - link "게시판생성" [ref=f20e126]:
+                    - /url: "#"
+                - listitem [ref=f20e127]:
+                  - generic [ref=f20e128]: 
+            - listitem [ref=f20e129] [cursor=pointer]:
+              - link "게시판순서변경" [ref=f20e131]:
+                - /url: "#"
+          - table "평가정보 돌아가기" [ref=f20e132]:
+            - caption [ref=f20e133]:
+              - generic [ref=f20e134]:
+                - generic [ref=f20e135]: 평가정보
+                - link "돌아가기" [ref=f20e137] [cursor=pointer]:
+                  - /url: ../app/appraisal.php?Pcode=300002&Lcode=10&AppCode=B
+            - rowgroup [ref=f20e144]:
+              - row [ref=f20e145]:
+                - cell "능력단위명" [ref=f20e146]
+                - cell "디지털디자인 사후관리" [ref=f20e147]
+                - cell "평가일시" [ref=f20e148]
+                - cell "2026-08-28" [ref=f20e149]
+                - cell [ref=f20e150]:
+                  - paragraph [ref=f20e151]: 0 / 100
+                  - paragraph [ref=f20e152]: "패널티 : 0점"
+              - row [ref=f20e153]:
+                - cell "훈련강사" [ref=f20e154]
+                - cell "김*지" [ref=f20e155]
+                - cell "훈련생명" [ref=f20e156]
+                - cell "강민경" [ref=f20e157]
+          - table "평가내역 평가점수 일괄등록" [ref=f20e159]:
+            - caption [ref=f20e160]:
+              - generic [ref=f20e161]:
+                - generic [ref=f20e162]: 평가내역
+                - link "평가점수 일괄등록" [ref=f20e164] [cursor=pointer]:
+                  - /url: "#"
+            - rowgroup [ref=f20e171]:
+              - row [ref=f20e172]:
+                - columnheader "문항" [ref=f20e173]
+                - columnheader "문제" [ref=f20e174]
+                - columnheader "파일" [ref=f20e175]
+                - columnheader "링크" [ref=f20e176]
+                - columnheader "상세정보" [ref=f20e177]
+            - rowgroup [ref=f20e178]:
+              - row [ref=f20e179]:
+                - cell "1" [ref=f20e180]
+                - cell "클라이언트 요구사항 제출" [ref=f20e181]
+                - cell [ref=f20e182]:
+                  - link "다운로드" [ref=f20e183] [cursor=pointer]:
+                    - /url: /uflist/download.php?type=project_appraisal&pcode=300002&lcode=10&file=1787925407_5d336098.zip
+                - cell "-" [ref=f20e184]
+                - cell [ref=f20e185]:
+                  - button "상세정보" [ref=f20e186] [cursor=pointer]
+  - dialog [active] [ref=f20e187]:
+    - generic [ref=f20e188]:
+      - generic [ref=f20e189]:
+        - heading "평가점수 일괄등록" [level=5] [ref=f20e190]
+        - button [ref=f20e191] [cursor=pointer]
+      - iframe [ref=f20e193]:
+        - table [ref=f21e4]:
+          - rowgroup [ref=f21e9]:
+            - row [ref=f21e10]:
+              - columnheader "능력단위요소명" [ref=f21e11]
+              - columnheader "채점기준" [ref=f21e12]
+              - columnheader "점수" [ref=f21e13]
+          - rowgroup [ref=f21e14]:
+            - row [ref=f21e15]:
+              - cell "오류 수정하기" [ref=f21e16]
+              - cell "프로젝트 완료 후 오류에 대해 지속적ㆍ정기적으로 모니터링 할 수 있다." [ref=f21e17]
+              - cell "0 7" [ref=f21e18]:
+                - generic [ref=f21e19]:
+                  - spinbutton [ref=f21e20]: "0"
+                  - generic [ref=f21e21]: "7"
+            - row [ref=f21e22]:
+              - cell "오류 수정하기" [ref=f21e23]
+              - cell "오류에 대한 정확한 원인 분석을 통하여 수정ㆍ최적화 작업을 할 수 있다." [ref=f21e24]
+              - cell "0 10" [ref=f21e25]:
+                - generic [ref=f21e26]:
+                  - spinbutton [ref=f21e27]: "0"
+                  - generic [ref=f21e28]: "10"
+            - row [ref=f21e29]:
+              - cell "오류 수정하기" [ref=f21e30]
+              - cell "수정된 작업에 대한 재검증을 통하여 완성도를 극대화할 수 있다." [ref=f21e31]
+              - cell "0 7" [ref=f21e32]:
+                - generic [ref=f21e33]:
+                  - spinbutton [ref=f21e34]: "0"
+                  - generic [ref=f21e35]: "7"
+            - row [ref=f21e36]:
+              - cell "클라이언트 요청사항 반영하기" [ref=f21e37]
+              - cell "클라이언트와의 직접적인 커뮤니케이션을 통하여 요구사항을 명확히 파악할 수 있다." [ref=f21e38]
+              - cell "0 6" [ref=f21e39]:
+                - generic [ref=f21e40]:
+                  - spinbutton [ref=f21e41]: "0"
+                  - generic [ref=f21e42]: "6"
+            - row [ref=f21e43]:
+              - cell "클라이언트 요청사항 반영하기" [ref=f21e44]
+              - cell "클라이언트와의 협상을 통해 요청사항에 관한 작업 범위를 조율할 수 있다." [ref=f21e45]
+              - cell "0 6" [ref=f21e46]:
+                - generic [ref=f21e47]:
+                  - spinbutton [ref=f21e48]: "0"
+                  - generic [ref=f21e49]: "6"
+            - row [ref=f21e50]:
+              - cell "클라이언트 요청사항 반영하기" [ref=f21e51]
+              - cell "클라이언트의 의견을 협의하고 수렴하여 요청사항을 반영할 수 있다." [ref=f21e52]
+              - cell "0 7" [ref=f21e53]:
+                - generic [ref=f21e54]:
+                  - spinbutton [ref=f21e55]: "0"
+                  - generic [ref=f21e56]: "7"
+            - row [ref=f21e57]:
+              - cell "클라이언트 요청사항 반영하기" [ref=f21e58]
+              - cell "사용자 반응ㆍ피드백(feedback) 분석을 기반으로 필요 시 수정 보완할 수 있다." [ref=f21e59]
+              - cell "0 6" [ref=f21e60]:
+                - generic [ref=f21e61]:
+                  - spinbutton [ref=f21e62]: "0"
+                  - generic [ref=f21e63]: "6"
+            - row [ref=f21e64]:
+              - cell "클라이언트 요청사항 반영하기" [ref=f21e65]
+              - cell "클라이언트의 피드백을 경청하고 필요에 따라 수정 보완할 수 있다." [ref=f21e66]
+              - cell "0 6" [ref=f21e67]:
+                - generic [ref=f21e68]:
+                  - spinbutton [ref=f21e69]: "0"
+                  - generic [ref=f21e70]: "6"
+            - row [ref=f21e71]:
+              - cell "클라이언트 요청사항 반영하기" [ref=f21e72]
+              - cell "필요 및 계약에 따라 유지보수ㆍ관리를 하고 발생하는 피드백(feedback)에 대해 판단하고 대응할 수 있다." [ref=f21e73]
+              - cell "0 5" [ref=f21e74]:
+                - generic [ref=f21e75]:
+                  - spinbutton [ref=f21e76]: "0"
+                  - generic [ref=f21e77]: "5"
+            - row [ref=f21e78]:
+              - cell "프로젝트 내부 공유ㆍ리뷰하기" [ref=f21e79]
+              - cell "프로젝트 진행의 전반적 리뷰를 통하여 성공적인 점과 아쉬운 점을 파악할 수 있다." [ref=f21e80]
+              - cell "0 6" [ref=f21e81]:
+                - generic [ref=f21e82]:
+                  - spinbutton [ref=f21e83]: "0"
+                  - generic [ref=f21e84]: "6"
+            - row [ref=f21e85]:
+              - cell "프로젝트 내부 공유ㆍ리뷰하기" [ref=f21e86]
+              - cell "장ㆍ단점 파악을 통하여 인사이트를 도출하고 이에 대한 보완책을 강구할 수 있다." [ref=f21e87]
+              - cell "0 7" [ref=f21e88]:
+                - generic [ref=f21e89]:
+                  - spinbutton [ref=f21e90]: "0"
+                  - generic [ref=f21e91]: "7"
+            - row [ref=f21e92]:
+              - cell "프로젝트 내부 공유ㆍ리뷰하기" [ref=f21e93]
+              - cell "향후 디자인 개발 활용을 위해 리뷰 결과를 정리하여 노하우와 고유방식을 내부적으로 공유ㆍ학습할 수 있다." [ref=f21e94]
+              - cell "0 7" [ref=f21e95]:
+                - generic [ref=f21e96]:
+                  - spinbutton [ref=f21e97]: "0"
+                  - generic [ref=f21e98]: "7"
+            - row [ref=f21e99]:
+              - cell "데이터베이스 관리하기" [ref=f21e100]
+              - cell "향후 디자인 개발 참고를 위해 완료된 프로젝트의 소스 데이터를 백업(backup)하고 정리할 수 있다." [ref=f21e101]
+              - cell "0 6" [ref=f21e102]:
+                - generic [ref=f21e103]:
+                  - spinbutton [ref=f21e104]: "0"
+                  - generic [ref=f21e105]: "6"
+            - row [ref=f21e106]:
+              - cell "데이터베이스 관리하기" [ref=f21e107]
+              - cell "프로젝트 버전에 따른 색인(index)화를 통해 위급 상황에 대처할 수 있다." [ref=f21e108]
+              - cell "0 6" [ref=f21e109]:
+                - generic [ref=f21e110]:
+                  - spinbutton [ref=f21e111]: "0"
+                  - generic [ref=f21e112]: "6"
+            - row [ref=f21e113]:
+              - cell "데이터베이스 관리하기" [ref=f21e114]
+              - cell "선정된 디자인 제작 과정에서 수정할 수 있는 소스파일을 정리할 수 있다." [ref=f21e115]
+              - cell "0 4" [ref=f21e116]:
+                - generic [ref=f21e117]:
+                  - spinbutton [ref=f21e118]: "0"
+                  - generic [ref=f21e119]: "4"
+            - row [ref=f21e120]:
+              - cell "데이터베이스 관리하기" [ref=f21e121]
+              - cell "구축된 데이터베이스를 차후 디자인 개발에 참고할 수 있다." [ref=f21e122]
+              - cell "0 4" [ref=f21e123]:
+                - generic [ref=f21e124]:
+                  - spinbutton [ref=f21e125]: "0"
+                  - generic [ref=f21e126]: "4"
+            - row [ref=f21e127]:
+              - cell [ref=f21e128]:
+                - textbox "이곳에 피드백을 입력하세요." [ref=f21e129]
+          - rowgroup [ref=f21e130]:
+            - row [ref=f21e131]:
+              - cell [ref=f21e132]:
+                - generic [ref=f21e133]:
+                  - button " 피드백 자동생성" [ref=f21e134] [cursor=pointer]:
+                    - generic [ref=f21e135]: 
+                    - text: 피드백 자동생성
+                  - text: 
+                  - button "채점하기" [ref=f21e136] [cursor=pointer]

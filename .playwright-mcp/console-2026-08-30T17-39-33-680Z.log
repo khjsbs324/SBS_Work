@@ -1,0 +1,3 @@
+[    2469ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://sbsartdj.maniaro.net/favicon.ico:0
+[    3689ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ https://sbsartdj.maniaro.net/teacher/:0
+[    3689ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ https://sbsartdj.maniaro.net/teacher/:0

@@ -1,0 +1,24 @@
+# Local Claude settings
+.claude/settings.local.json
+
+# Pipeline generated output (keep folder via .gitkeep)
+output/changes/*
+!output/changes/.gitkeep
+output/recommendations/*
+!output/recommendations/.gitkeep
+
+# Runtime state / logs
+.state/*
+!.state/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# Temporary files
+*.tmp
+*.bak
+~$*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

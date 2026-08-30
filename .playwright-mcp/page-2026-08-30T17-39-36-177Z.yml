@@ -1,0 +1,17 @@
+- table [ref=f1e3]:
+  - rowgroup [ref=f1e9]:
+    - row [ref=f1e10]:
+      - cell "SBS아카데미 대전" [ref=f1e11]
+    - row [ref=f1e12]:
+      - cell [ref=f1e13] [cursor=pointer]:
+        - img "행정모드" [ref=f1e14]
+        - text: 행정모드
+      - cell [ref=f1e15] [cursor=pointer]:
+        - img "강사모드" [ref=f1e16]
+        - text: 강사모드
+      - cell [ref=f1e17] [cursor=pointer]:
+        - img "훈련생모드" [ref=f1e18]
+        - text: 훈련생모드
+      - cell [ref=f1e19] [cursor=pointer]:
+        - img "이수자평가" [ref=f1e20]
+        - text: 이수자평가

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CalendarEvent",
+  "type": "object",
+  "required": ["id", "title", "start", "end"],
+  "properties": {
+    "id": { "type": "string", "description": "캘린더 원본 이벤트 ID (샘플 데이터는 sample-<n>)" },
+    "title": { "type": "string", "description": "Notion 프로젝트 이름과 매핑되는 제목" },
+    "start": { "type": "string", "format": "date-time" },
+    "end": { "type": "string", "format": "date-time" },
+    "location": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"] }
+  }
+}
