@@ -1,0 +1,56 @@
+flowchart TD
+  %% 시작 노드
+  START([🎁 플로뜰리에 웹 진입]) --> P01[P-GF-01: 선물 메인 & 큐레이션 허브]
+
+  %% 1장 체험팩 분기
+  P01 -.->|선물 전 직접 사용| M04[M-GF-04: 1장 3,000원 체험팩 신청]
+  M04 -->|체험팩 발송 + 100% 환급 쿠폰| P01
+
+  %% 소창 가이드 분기
+  P01 -.->|소창 특징 & 겹수 궁금증| P05[P-GF-05: 30초 소창 가이드 & 겹수관]
+  P05 -->|추천 세트 바로가기| P02
+
+  %% 상황/예산 큐레이션 및 상품 선택
+  P01 --> SELECT_CAT{상황 및 예산 선택}
+  SELECT_CAT -- 집들이 / 5만원대 / BEST 1위 --> P02[P-GF-02: 시그니처 4종 세트 상세]
+  SELECT_CAT -- 라이프스타일 / 비누 결합 --> P03[P-GF-03: 리추얼 라이프세트 상세]
+  SELECT_CAT -- 출산 축하 / 아기 전용 --> P04[P-GF-04: 베이비 퓨어 오가닉 세트]
+
+  %% 상세 화면 인터랙션
+  P02 --> OPT_CUSTOM{커스텀 & 포장 옵션}
+  P03 --> OPT_CUSTOM
+  P04 --> OPT_CUSTOM
+
+  OPT_CUSTOM -- 자수 각인 추가 --> M01[M-GF-01: Canvas 자수 시뮬레이터]
+  M01 --> M02[M-GF-02: 100% 무비닐 패키징 3D 뷰어]
+  OPT_CUSTOM -- 무지/기본 포장 --> M02
+  M02 --> M03[M-GF-03: 자필 메시지 카드 작성기]
+
+  %% 주문서 진입 및 직배송
+  M03 --> P06[P-GF-06: 선물 직배송 주문서]
+  P06 --> VALID_ADDR{주소 및 자수 유효성 검사}
+
+  VALID_ADDR -- 오류 발견 --> ERR_BRANCH[EX-GF-01/02: 오류 교정 모달]
+  ERR_BRANCH --> P06
+
+  VALID_ADDR -- 유효성 통과 --> SAFE_CHECK[안심 확인: 가격표/영수증 100% 제외 보증]
+  SAFE_CHECK --> PAY_GATEWAY[1초 간편결제: N페이/카카오페이]
+
+  PAY_GATEWAY --> P07[P-GF-07: 선물 주문 완료 & 포장 리포트]
+  P07 --> ALIMTALK[카카오 알림톡 송장 발송 & 모바일 카드 링크]
+  ALIMTALK --> FINISH([종료: 감동적인 선물 전달 완료])
+
+  %% 스타일 클래스
+  classDef start fill:#2B3A42,stroke:#1A262C,stroke-width:2px,color:#FFFFFF;
+  classDef step fill:#FFFFFF,stroke:#64748B,stroke-width:1.5px,color:#0F172A;
+  classDef modal fill:#FFFDF8,stroke:#C47A5A,stroke-width:1.5px,color:#9A3412;
+  classDef branch fill:#FEF3C7,stroke:#D97706,stroke-width:1.5px,color:#92400E;
+  classDef success fill:#F0FDF4,stroke:#16A34A,stroke-width:2px,color:#166534;
+  classDef error fill:#FEF2F2,stroke:#EF4444,stroke-width:1.5px,color:#991B1B;
+
+  class START start;
+  class P01,P02,P03,P04,P05,P06 step;
+  class M01,M02,M03,M04 modal;
+  class SELECT_CAT,OPT_CUSTOM,VALID_ADDR branch;
+  class SAFE_CHECK,PAY_GATEWAY,P07,ALIMTALK,FINISH success;
+  class ERR_BRANCH error;

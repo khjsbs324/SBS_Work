@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 (Flottelier) HAIR - 김헤어(백승현) 페르소나 와이어프레임 뷰어</title>
+  <style>
+    :root {
+      --bg-app: #FAFDFD;
+      --bg-sidebar: #18201D;
+      --bg-card: #FFFFFF;
+      --text-main: #1E2522;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+      --border-color: #E2E8F0;
+      --accent-brand: #2B5A4B;
+      --accent-brand-light: #EDF5F1;
+      --accent-gold: #C59B27;
+      --accent-gold-light: #FFFBEB;
+      --accent-dark-charcoal: #232527;
+      --accent-blue: #1E3A8A;
+      --accent-blue-light: #EFF6FF;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #0F172A;
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    #sidebar {
+      width: 320px;
+      background-color: var(--bg-sidebar);
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      z-index: 100;
+      border-right: 1px solid #283530;
+    }
+
+    .sidebar-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid #283530;
+    }
+
+    .sidebar-header h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-header p {
+      font-size: 11px;
+      color: #94A3B8;
+      margin-top: 4px;
+    }
+
+    .sidebar-menu {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .menu-group-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #64748B;
+      padding: 10px 10px 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      margin-bottom: 2px;
+    }
+
+    .nav-item:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+    }
+
+    .nav-item.active {
+      background-color: var(--accent-brand);
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .nav-item .badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #E2E8F0;
+      font-family: monospace;
+      margin-right: 4px;
+    }
+
+    .sidebar-footer {
+      padding: 14px 18px;
+      border-top: 1px solid #283530;
+      font-size: 11px;
+      color: #64748B;
+      background-color: #121815;
+    }
+
+    /* Main Workspace Container */
+    #workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #1E293B;
+      overflow: hidden;
+    }
+
+    /* Top Control Bar */
+    #control-bar {
+      height: 52px;
+      background-color: #0F172A;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      color: #F8FAFC;
+    }
+
+    .screen-title-indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .screen-title-indicator .badge-active {
+      background-color: var(--accent-brand);
+      color: #FFFFFF;
+      font-weight: bold;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .viewport-switchers {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #1E293B;
+      padding: 3px;
+      border-radius: 8px;
+    }
+
+    .viewport-btn {
+      background: none;
+      border: none;
+      color: #94A3B8;
+      padding: 5px 12px;
+      font-size: 11px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+
+    .viewport-btn:hover {
+      color: #FFFFFF;
+    }
+
+    .viewport-btn.active {
+      background-color: #334155;
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+
+    /* Device Preview Stage */
+    #preview-stage {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+      background-color: #0F172A;
+    }
+
+    #device-frame {
+      background-color: var(--bg-app);
+      width: 100%;
+      max-width: 1160px;
+      min-height: 800px;
+      border-radius: 12px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      transition: max-width 0.25s ease;
+      position: relative;
+    }
+
+    #device-frame.tablet {
+      max-width: 768px;
+    }
+
+    #device-frame.mobile {
+      max-width: 390px;
+    }
+
+    /* Screen Component Containers */
+    .screen-view {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .screen-view.active {
+      display: flex;
+    }
+
+    /* Common Header & Banner */
+    .top-notice-bar {
+      background-color: #1E2522;
+      color: #FFFFFF;
+      padding: 7px 16px;
+      font-size: 11px;
+      text-align: center;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-notice-bar a {
+      color: #FCD34D;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .app-header {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #1E2522;
+      cursor: pointer;
+    }
+
+    .brand-logo span {
+      color: var(--accent-brand);
+    }
+
+    .app-gnb {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .gnb-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+
+    .gnb-link:hover, .gnb-link.active {
+      color: var(--accent-brand);
+    }
+
+    .header-utils {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cart-btn {
+      position: relative;
+      background-color: var(--accent-brand-light);
+      color: var(--accent-brand);
+      border: 1px solid var(--accent-brand);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cart-badge {
+      background-color: var(--accent-brand);
+      color: #FFFFFF;
+      font-size: 10px;
+      border-radius: 50%;
+      padding: 1px 5px;
+    }
+
+    /* Main Content Area */
+    .screen-content {
+      padding: 24px;
+      flex: 1;
+    }
+
+    /* Hero Section */
+    .hero-banner {
+      background: linear-gradient(135deg, #FAF7F2 0%, #F1EDE4 100%);
+      border: 1px solid #E2D9CC;
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1E2522;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 13px;
+      color: #585D62;
+      margin-bottom: 18px;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tag-pill {
+      background-color: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      color: #475569;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .btn-brand {
+      background-color: var(--accent-brand);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .btn-brand:hover {
+      background-color: #1E4035;
+    }
+
+    .btn-outline {
+      background-color: #FFFFFF;
+      color: #334155;
+      border: 1px solid #CBD5E1;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      background-color: #F8FAFC;
+    }
+
+    /* Product Grid */
+    .section-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1E293B;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .product-card {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-img-holder {
+      background-color: #F1F5F9;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94A3B8;
+      font-size: 12px;
+      font-weight: 600;
+      border-bottom: 1px solid #F1F5F9;
+      position: relative;
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: var(--accent-brand);
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1E293B;
+      margin-bottom: 6px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: #64748B;
+      margin-bottom: 12px;
+    }
+
+    .card-price {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 12px;
+    }
+
+    .card-price span {
+      font-size: 11px;
+      color: #2563EB;
+      margin-left: 4px;
+    }
+
+    /* Widgets */
+    .widget-box {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .b2b-calc-box {
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 1px solid #BFDBFE;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-bottom: 24px;
+    }
+
+    .calc-display {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 18px 0;
+      text-align: center;
+    }
+
+    /* Live Canvas Atelier */
+    .atelier-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .atelier-layout {
+        grid-template-columns: 1fr;
+      }
+      .app-gnb {
+        display: none;
+      }
+    }
+
+    .canvas-preview-box {
+      background-color: #232527;
+      border: 2px dashed #475569;
+      border-radius: var(--radius-md);
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .embroidery-render {
+      font-family: 'Times New Roman', serif;
+      font-size: 26px;
+      font-weight: bold;
+      color: #D4AF37;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+      letter-spacing: 3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #CBD5E1;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+    }
+
+    .color-picker {
+      display: flex;
+      gap: 8px;
+    }
+
+    .color-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 0 0 1px #CBD5E1;
+    }
+
+    .color-dot.active {
+      box-shadow: 0 0 0 2px var(--accent-brand);
+    }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      max-width: 520px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #F1F5F9;
+      padding-bottom: 10px;
+    }
+
+    .modal-header h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1E293B;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: #94A3B8;
+    }
+
+    /* Global Footer */
+    .app-footer {
+      background-color: #18201D;
+      color: #94A3B8;
+      padding: 24px;
+      font-size: 11px;
+      margin-top: auto;
+      border-top: 1px solid #283530;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Left Sidebar Navigation -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h1>✂️ 플로뜰리에 HAIR</h1>
+      <p>김헤어 (백승현) 페르소나 와이어프레임 뷰어</p>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="menu-group-title">1. 메인 및 홈</div>
+      <div class="nav-item active" onclick="switchScreen('SCR-01')">
+        <span class="badge">SCR-01</span> 메인 홈
+      </div>
+
+      <div class="menu-group-title">2. 살롱 기어 &amp; 패브릭</div>
+      <div class="nav-item" onclick="switchScreen('SCR-02')">
+        <span class="badge">SCR-02</span> 루프 단추 헤어 터번 (40x100cm)
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-03')">
+        <span class="badge">SCR-03</span> 샴푸 넥 가드 수분 타월
+      </div>
+
+      <div class="menu-group-title">3. 살롱 브랜딩 &amp; 도매</div>
+      <div class="nav-item" onclick="switchScreen('SCR-04')">
+        <span class="badge">SCR-04</span> 살롱 로고 자수 아틀리에
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-05')">
+        <span class="badge">SCR-05</span> 살롱 B2B 도매 발주 센터
+      </div>
+
+      <div class="menu-group-title">4. 안전 검증 &amp; 프로 팁</div>
+      <div class="nav-item" onclick="switchScreen('SCR-06')">
+        <span class="badge">SCR-06</span> 성능 &amp; 200회 세탁 검증실
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-07')">
+        <span class="badge">SCR-07</span> 프로 살롱 타월 드라이 가이드
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-08')">
+        <span class="badge">SCR-08</span> 디자이너 1장 체험팩 (3,000원)
+      </div>
+
+      <div class="menu-group-title">5. B2B 주문 결제 여정</div>
+      <div class="nav-item" onclick="switchScreen('SCR-09')">
+        <span class="badge">SCR-09</span> 살롱 B2B 장바구니
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-10')">
+        <span class="badge">SCR-10</span> B2B 주문 및 사업자 결제
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-11')">
+        <span class="badge">SCR-11</span> 발주 완료 &amp; 납품 확약서
+      </div>
+
+      <div class="menu-group-title">6. 살롱 후기 &amp; 모달</div>
+      <div class="nav-item" onclick="switchScreen('SCR-12')">
+        <span class="badge">SCR-12</span> 전국 살롱 원장 후기
+      </div>
+      <div class="nav-item" onclick="openModal('MODAL-01')">
+        <span class="badge">MODAL-01</span> 3초 터번 착용법 가이드
+      </div>
+      <div class="nav-item" onclick="openModal('MODAL-02')">
+        <span class="badge">MODAL-02</span> 살롱 로고 시안 확정
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div>플로뜰리에 HAIR Wireframe v1.0.0</div>
+      <div>프리미엄 살롱 B2B 헤어 패브릭</div>
+    </div>
+  </aside>
+
+  <!-- 2. Main Workspace -->
+  <main id="workspace">
+    <!-- Top Control Bar -->
+    <div id="control-bar">
+      <div class="screen-title-indicator">
+        <span id="current-screen-badge" class="badge-active">SCR-01</span>
+        <span id="current-screen-name" style="font-weight: 700;">플로뜰리에 HAIR 메인</span>
+      </div>
+
+      <div class="viewport-switchers">
+        <button class="viewport-btn active" onclick="setViewport('desktop')">💻 Desktop (1160px)</button>
+        <button class="viewport-btn" onclick="setViewport('tablet')">📱 Tablet (768px)</button>
+        <button class="viewport-btn" onclick="setViewport('mobile')">📲 Mobile (390px)</button>
+      </div>
+    </div>
+
+    <!-- Preview Stage -->
+    <div id="preview-stage">
+      <div id="device-frame">
+
+        <!-- Top Notice Bar -->
+        <div class="top-notice-bar">
+          <span>✂️ 살롱 B2B 20장 이상 발주 시 살롱 로고 무료 자수 &amp; 세금계산서 100% 즉시 발행</span>
+          <a onclick="switchScreen('SCR-08')">3,000원 체험팩 신청 &rarr;</a>
+        </div>
+
+        <!-- Global Header -->
+        <header class="app-header">
+          <div class="brand-logo" onclick="switchScreen('SCR-01')">
+            ✂️ Flottelier <span>HAIR</span>
+          </div>
+
+          <nav class="app-gnb">
+            <span class="gnb-link" onclick="switchScreen('SCR-02')">SALON GEAR</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-04')">로고 자수</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-05')">B2B 도매센터</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-06')">성능 검증실</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-07')">살롱 팁</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-12')">원장 후기</span>
+          </nav>
+
+          <div class="header-utils">
+            <button class="cart-btn" onclick="switchScreen('SCR-09')">
+              📑 B2B 견적함 <span class="cart-badge" id="cart-count">50</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- ==================== SCREENS ==================== -->
+
+        <!-- [SCR-01] 메인 홈 -->
+        <div id="SCR-01" class="screen-view active">
+          <div class="screen-content">
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+              <div class="hero-text">
+                <div class="hero-tags">
+                  <span class="tag-pill">드라이 시간 70% 단축</span>
+                  <span class="tag-pill">흘러내림 제로 루프 단추</span>
+                  <span class="tag-pill">200회 세탁 보증</span>
+                </div>
+                <h2>흘러내림 제로, 목덜미 누수 차단!<br>드라이 시간을 70% 단축하는 살롱 헤어 랩</h2>
+                <p>소창의 3배 빠른 흡수력으로 타월 드라이 단계에서 수분의 70%를 순간 흡수합니다.</p>
+                <div style="display:flex; gap:10px;">
+                  <button class="btn-brand" onclick="switchScreen('SCR-05')">살롱 B2B 도매 발주 센터</button>
+                  <button class="btn-outline" onclick="openModal('MODAL-01')">🎬 3초 착용법 가이드</button>
+                </div>
+              </div>
+              <div style="background:#232527; width:220px; height:180px; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#D4AF37; font-weight:bold; font-size:13px; text-align:center;">
+                [살롱 시술 컷<br>루프 단추 헤어 터번<br>다크 딥차콜]
+              </div>
+            </div>
+
+            <!-- B2B Calculator Widget -->
+            <div class="b2b-calc-box">
+              <div style="font-size:14px; font-weight:bold; color:#1E3A8A; margin-bottom:8px;">💡 살롱 회전율 &amp; 시간 절감 시뮬레이터</div>
+              <div style="font-size:12px; color:#475569;">매장 의자 수(좌석)를 선택하면 절감되는 월간 드라이 시간과 추가 수용 가능 고객수를 연산합니다.</div>
+              
+              <div class="calc-display">
+                <div>
+                  <div style="font-size:11px; color:#64748B;">살롱 좌석 수</div>
+                  <div style="font-size:22px; font-weight:800; color:#1E2522;" id="calc-chairs">5석 살롱</div>
+                </div>
+                <div style="font-size:18px; color:#2563EB;">➔</div>
+                <div>
+                  <div style="font-size:11px; color:#64748B;">월간 절감 드라이 시간</div>
+                  <div style="font-size:22px; font-weight:800; color:#2563EB;">월 150시간 단축</div>
+                </div>
+                <div style="font-size:18px; color:#2563EB;">➔</div>
+                <div>
+                  <div style="font-size:11px; color:#64748B;">월간 추가 예약 수용</div>
+                  <div style="font-size:22px; font-weight:800; color:#16A34A;">+30명 예약 가능</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Best Salon Lineup -->
+            <div class="section-title">
+              <span>💈 살롱 필수 패브릭 라인업</span>
+              <span style="font-size:12px; color:var(--text-muted); cursor:pointer;" onclick="switchScreen('SCR-05')">B2B 대량 도매 단가표 &rarr;</span>
+            </div>
+
+            <div class="grid-3">
+              <div class="product-card">
+                <div class="card-img-holder">
+                  <span class="card-badge">인기 1위</span>
+                  [루프 단추 헤어 터번 40x100cm]
+                </div>
+                <div class="card-body">
+                  <div class="card-title">루프 단추형 살롱 헤어 터번</div>
+                  <div class="card-desc">롱헤어 감싸기 / 샴푸 후 흔들림 없는 원터치 고정</div>
+                  <div class="card-price">24,000원 <span>[도매가 14,880원~]</span></div>
+                  <button class="btn-brand" onclick="switchScreen('SCR-02')">상세보기 &amp; 자수추가</button>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="card-img-holder">
+                  <span class="card-badge">누수 차단</span>
+                  [샴푸 넥 가드 수분 타월]
+                </div>
+                <div class="card-body">
+                  <div class="card-title">샴푸 넥 가드 수분 타월 10장 세트</div>
+                  <div class="card-desc">샴푸대 목덜미 누수 0% 차단 U자형 패턴</div>
+                  <div class="card-price">85,000원 <span>[10장 살롱번들]</span></div>
+                  <button class="btn-brand" onclick="switchScreen('SCR-03')">상세보기 &amp; 담기</button>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="card-img-holder">
+                  <span class="card-badge">B2B 특판</span>
+                  [50장 살롱 대량 패키지]
+                </div>
+                <div class="card-body">
+                  <div class="card-title">살롱 B2B 50장 도매 패키지</div>
+                  <div class="card-desc">살롱 로고 무료 자수 + 전자세금계산서 즉시 발행</div>
+                  <div class="card-price">816,000원 <span>[32% 할인]</span></div>
+                  <button class="btn-brand" onclick="switchScreen('SCR-05')">도매 발주 센터</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-02] 루프 단추 헤어 터번 상세 -->
+        <div id="SCR-02" class="screen-view">
+          <div class="screen-content">
+            <div class="atelier-layout">
+              <div style="background:#232527; border-radius:var(--radius-md); height:380px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#94A3B8;">
+                <div style="font-size:16px; font-weight:bold; color:#FFFFFF; margin-bottom:8px;">[40x100cm 루프 단추 터번 갤러리]</div>
+                <div style="font-size:12px;">살롱 다크 컬렉션 / 500% HD 소창 원단 줌</div>
+                <button class="btn-outline" style="margin-top:18px; color:#1E2522;" onclick="openModal('MODAL-01')">🎬 3초 착용법 인터랙티브 가이드</button>
+              </div>
+
+              <div>
+                <div class="tag-pill" style="display:inline-block; margin-bottom:8px;">살롱 전용 4겹 롱헤어 랩</div>
+                <h2 style="font-size:20px; font-weight:800; color:#1E293B; margin-bottom:8px;">루프 단추형 살롱 헤어 터번 (40x100cm)</h2>
+                <div style="font-size:22px; font-weight:900; color:#2B5A4B; margin-bottom:16px;">24,000원 <span style="font-size:12px; color:#64748B; font-weight:normal;">(B2B 도매가 14,880원~)</span></div>
+
+                <div class="widget-box" style="padding:14px; margin-bottom:16px; font-size:12px; line-height:1.6;">
+                  <div>✔️ <strong>루프 단추 고정</strong>: 고객이 고개를 숙여도 절대 풀리지 않는 완벽 고정</div>
+                  <div>✔️ <strong>드라이 70% 단축</strong>: 타월 드라이 3분 만에 수분 70% 순간 흡수</div>
+                  <div>✔️ <strong>살롱 다크 컬러</strong>: 염색약 착색과 오염을 방지하는 프리미엄 다크 톤</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">살롱 다크 컬러 선택</label>
+                  <div class="color-picker">
+                    <div class="color-dot active" style="background-color:#232527;" title="다크 딥차콜"></div>
+                    <div class="color-dot" style="background-color:#1B263B;" title="나이트 네이비"></div>
+                    <div class="color-dot" style="background-color:#4A3728;" title="모카 브라운"></div>
+                  </div>
+                </div>
+
+                <div class="form-group" style="background:#EDF5F1; padding:12px; border-radius:6px; border:1px solid #C2DBD0;">
+                  <label style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:bold; cursor:pointer;">
+                    <input type="checkbox" id="add-salon-jasu" checked>
+                    <span>🧵 살롱 로고 / 디자이너명 톤온톤 자수 추가</span>
+                  </label>
+                  <div style="font-size:11px; color:#4A7C6D; margin-top:4px; margin-left:22px;">살롱 BI 업로드 시 톤온톤 실크 자수 시안 생성 (20장 이상 무료)</div>
+                </div>
+
+                <div style="display:flex; gap:10px; margin-top:20px;">
+                  <button class="btn-outline" style="flex:1;" onclick="switchScreen('SCR-04')">로고 자수 아틀리에</button>
+                  <button class="btn-brand" style="flex:2;" onclick="switchScreen('SCR-05')">B2B 도매 발주 센터</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-03] 샴푸 넥 가드 수분 타월 상세 -->
+        <div id="SCR-03" class="screen-view">
+          <div class="screen-content">
+            <div class="atelier-layout">
+              <div style="background:#F1F5F9; border-radius:var(--radius-md); height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#64748B;">
+                <div style="font-size:16px; font-weight:bold; color:#1E293B;">[샴푸 넥 가드 10장 세트]</div>
+                <div style="font-size:12px; margin-top:6px;">샴푸대 목덜미 밀착 U자형 입체 패턴 시연</div>
+              </div>
+
+              <div>
+                <span class="tag-pill">목덜미 누수 0%</span>
+                <h2 style="font-size:18px; font-weight:800; margin:8px 0;">샴푸 넥 가드 수분 타월 10장 세트</h2>
+                <div style="font-size:20px; font-weight:900; color:#2B5A4B; margin-bottom:14px;">85,000원</div>
+
+                <p style="font-size:12px; color:#585D62; margin-bottom:14px;">샴푸 시 목덜미로 흘러내리는 물기를 완벽히 흡수하여 고객의 옷이 젖는 불편을 100% 차단합니다.</p>
+
+                <div style="display:flex; gap:10px;">
+                  <button class="btn-brand" style="flex:1;" onclick="switchScreen('SCR-09')">견적함 담기</button>
+                  <button class="btn-outline" onclick="switchScreen('SCR-05')">B2B 도매 단가표</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-04] 살롱 로고 자수 아틀리에 -->
+        <div id="SCR-04" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>🧵 살롱 로고 실시간 Canvas 자수 아틀리에</span>
+              <span style="font-size:12px; color:var(--text-muted);">0.05초 실시간 렌더링</span>
+            </div>
+
+            <div class="atelier-layout">
+              <!-- Preview Box -->
+              <div>
+                <div class="canvas-preview-box">
+                  <div style="position:absolute; top:12px; left:16px; font-size:11px; color:#8E949A;">살롱 다크 패브릭 자수 프리뷰</div>
+                  <div class="embroidery-render" id="salon-live-preview">
+                    <span id="salon-preview-text">MAISON DE HAIR</span>
+                  </div>
+                  <div style="position:absolute; bottom:12px; font-size:11px; color:#C59B27;">4차 정련 소창 4겹 위 톤온톤 골드 각인 시안</div>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <div>
+                <div class="form-group">
+                  <label class="form-label">살롱명 / 브랜드명 입력 (영문 최대 12자 / 한글 최대 8자)</label>
+                  <input type="text" id="salon-name-input" class="form-input" value="MAISON DE HAIR" maxlength="12" oninput="updateSalonPreview()">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">살롱 BI 로고 파일 업로드 (AI, PNG)</label>
+                  <input type="file" class="form-input" style="padding:6px;">
+                  <div style="font-size:11px; color:#64748B; margin-top:4px;">* 20장 이상 발주 시 디자이너 1:1 무료 벡터 보정 지원</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">자수 실 색상</label>
+                  <div class="color-picker">
+                    <div class="color-dot active" style="background-color:#D4AF37;" onclick="selectSalonColor('#D4AF37', this)" title="샴페인골드"></div>
+                    <div class="color-dot" style="background-color:#C0C0C0;" onclick="selectSalonColor('#C0C0C0', this)" title="모던실버"></div>
+                    <div class="color-dot" style="background-color:#4A4D52;" onclick="selectSalonColor('#4A4D52', this)" title="톤온톤차콜"></div>
+                    <div class="color-dot" style="background-color:#1E3A8A;" onclick="selectSalonColor('#1E3A8A', this)" title="딥네이비"></div>
+                  </div>
+                </div>
+
+                <button class="btn-brand" style="width:100%; margin-top:10px;" onclick="openModal('MODAL-02')">✨ 자수 시안 확정 &amp; B2B 견적함 담기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-05] 살롱 B2B 도매 발주 센터 -->
+        <div id="SCR-05" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>🏢 살롱 B2B 도매 발주 센터 (대량 할인 단가표)</span>
+            </div>
+
+            <div class="widget-box">
+              <div class="form-group">
+                <label class="form-label">발주 수량 선택 (슬라이더)</label>
+                <input type="range" min="20" max="100" step="10" value="50" style="width:100%;" oninput="updateB2BQuote(this.value)">
+                <div style="display:flex; justify-content:space-between; font-size:11px; color:#64748B; margin-top:4px;">
+                  <span>20장 (25% 할인)</span>
+                  <span>50장 (32% 할인)</span>
+                  <span>100장 (38% 할인)</span>
+                </div>
+              </div>
+
+              <div style="background:#FAF7F2; padding:18px; border-radius:8px; border:1px solid #E2D9CC; margin-top:16px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #E2D9CC; padding-bottom:12px;">
+                  <div>
+                    <div style="font-weight:bold; font-size:15px;" id="b2b-qty-text">루프 단추 헤어 터번 50장 번들</div>
+                    <div style="font-size:12px; color:#2B5A4B;">✔️ 살롱 로고 무료 자수 + 전자세금계산서 즉시 발행</div>
+                  </div>
+                  <div style="text-align:right;">
+                    <div style="font-size:12px; color:#94A3B8; text-decoration:line-through;">1,200,000원</div>
+                    <div style="font-size:22px; font-weight:900; color:#2B5A4B;" id="b2b-price-text">816,000원</div>
+                    <div style="font-size:11px; color:#2563EB;">(장당 16,320원 / 32% 절감)</div>
+                  </div>
+                </div>
+
+                <div style="display:flex; gap:10px; margin-top:16px;">
+                  <button class="btn-outline" style="flex:1;" onclick="alert('법인 직인 날인 공식 견적서 PDF가 다운로드되었습니다.')">📄 공식 견적서 PDF 출력</button>
+                  <button class="btn-brand" style="flex:2;" onclick="switchScreen('SCR-10')">B2B 주문 및 결제하기 &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-06] 성능 검증실 -->
+        <div id="SCR-06" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>🔬 과학적 성능 &amp; 200회 세탁 검증실</span>
+            </div>
+
+            <div class="grid-3">
+              <div class="widget-box">
+                <div style="font-weight:bold; color:#1E293B; font-size:14px; margin-bottom:8px;">타월 드라이 70% 흡수</div>
+                <div style="font-size:12px; color:#64748B; line-height:1.6;">
+                  타월 드라이 3분 만에 모발 수분 70%를 흡수하여 헤어드라이어 열풍 노출 시간을 15분에서 5분으로 단축합니다.
+                </div>
+              </div>
+
+              <div class="widget-box">
+                <div style="font-weight:bold; color:#1E293B; font-size:14px; margin-bottom:8px;">더마테스트 엑설런트</div>
+                <div style="font-size:12px; color:#64748B; line-height:1.6;">
+                  독일 더마테스트 최고 등급 인증. 펌/염색으로 민감해진 두피에 닿아도 자극이 전혀 없습니다.
+                </div>
+              </div>
+
+              <div class="widget-box">
+                <div style="font-weight:bold; color:#1E293B; font-size:14px; margin-bottom:8px;">살롱 200회 세탁 보증</div>
+                <div style="font-size:12px; color:#64748B; line-height:1.6;">
+                  하루 10회 고온 살균 세탁에도 결착 단추와 루프의 인장강도 변형률이 0.8% 미만임을 입증했습니다.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-07] 프로 살롱 팁 -->
+        <div id="SCR-07" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>💈 프로 살롱 타월 드라이 &amp; 큐티클 케어 가이드</span>
+            </div>
+
+            <div class="widget-box">
+              <h3 style="font-size:14px; font-weight:bold; margin-bottom:10px;">디자이너 큐티클 보호 3단계</h3>
+              <div style="font-size:12px; line-height:1.8; color:#475569;">
+                1단계: 샴푸대에서 지그재그 두피 마사지로 두피 수분 1차 흡수<br>
+                2단계: 모발을 비비지 않고 타월로 가볍게 쥐어짜듯 프레스 탭<br>
+                3단계: 루프 터번을 3초 만에 감싸 3분간 방치 후 드라이 진행 (드라이 70% 단축)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-08] 1장 체험팩 -->
+        <div id="SCR-08" class="screen-view">
+          <div class="screen-content">
+            <div class="widget-box" style="text-align:center; padding:36px 20px; background:#FAF7F2;">
+              <span class="tag-pill">디자이너 전용 체험</span>
+              <h2 style="font-size:20px; font-weight:800; margin:10px 0;">디자이너 1장 안심 체험팩 (3,000원)</h2>
+              <p style="font-size:13px; color:#64748B; max-width:480px; margin:0 auto 20px;">
+                배송비 3,000원만 결제하고 살롱 샴푸대에서 루프 단추 터번의 흡수력과 고정력을 직접 테스트하세요.<br>
+                B2B 도매 발주 시 사용 가능한 <strong>100% 전액 환급 쿠폰</strong>을 드립니다.
+              </p>
+              <button class="btn-brand" onclick="switchScreen('SCR-10')">3,000원 체험팩 신청하기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-09] B2B 장바구니 -->
+        <div id="SCR-09" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>📑 살롱 B2B 장바구니</span>
+            </div>
+
+            <div class="widget-box">
+              <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #E2E8F0; padding-bottom:14px; margin-bottom:14px;">
+                <div>
+                  <div style="font-weight:bold; font-size:14px;">루프 단추형 살롱 헤어 터번 (50장 번들)</div>
+                  <div style="font-size:12px; color:#2B5A4B;">🧵 살롱 로고 자수: <strong id="cart-salon-name">MAISON DE HAIR</strong> (샴페인골드 무료각인)</div>
+                </div>
+                <div style="font-size:16px; font-weight:bold;">816,000원</div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; font-size:16px; font-weight:800; margin-top:20px;">
+                <div>총 결제 예정 금액 (부가세 포함 / 세금계산서 발행)</div>
+                <div style="color:#2B5A4B; font-size:22px;">816,000원</div>
+              </div>
+
+              <button class="btn-brand" style="width:100%; margin-top:20px;" onclick="switchScreen('SCR-10')">B2B 발주서 작성 및 결제하기 &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-10] B2B 결제 -->
+        <div id="SCR-10" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>💳 B2B 주문 및 사업자 결제</span>
+            </div>
+
+            <div class="widget-box">
+              <div class="form-group">
+                <label class="form-label">살롱 상호명 / 대표자명</label>
+                <input type="text" class="form-input" value="메종드헤어 청담본점 / 백승현">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">사업자등록번호 (국세청 실시간 인증)</label>
+                <input type="text" class="form-input" value="211-88-12345 (인증완료 ✔️)">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">전자세금계산서 수령 이메일</label>
+                <input type="text" class="form-input" value="tax@maisondehair.com">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">결제 수단</label>
+                <div style="display:flex; gap:10px;">
+                  <button class="btn-brand" style="flex:1;">법인카드</button>
+                  <button class="btn-outline" style="flex:1;">기업 가상계좌</button>
+                  <button class="btn-outline" style="flex:1;">간편결제</button>
+                </div>
+              </div>
+
+              <button class="btn-brand" style="width:100%;" onclick="switchScreen('SCR-11')">816,000원 결제 및 세금계산서 발행 신청</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-11] 발주 완료 -->
+        <div id="SCR-11" class="screen-view">
+          <div class="screen-content">
+            <div class="widget-box" style="text-align:center; padding:36px 20px;">
+              <div style="font-size:36px; margin-bottom:10px;">🎉</div>
+              <h2 style="font-size:20px; font-weight:800; color:#1E293B; margin-bottom:8px;">살롱 B2B 발주가 정상적으로 완료되었습니다!</h2>
+              <p style="font-size:12px; color:#64748B; margin-bottom:20px;">발주번호: FLOT-HAIR-2026-0818 | 전자세금계산서 발행 완료</p>
+
+              <div style="background:#FAF7F2; border:1px solid #E2D9CC; border-radius:8px; padding:16px; max-width:420px; margin:0 auto 20px; text-align:left; font-size:12px;">
+                <div><strong>🧵 살롱 로고 자수</strong>: <span id="complete-salon-text">MAISON DE HAIR (샴페인골드)</span></div>
+                <div><strong>📦 패키지</strong>: 루프 단추 헤어 터번 50장 번들</div>
+                <div><strong>📄 혜택</strong>: D-Day 납품 확약서 &amp; 전자세금계산서 이메일 발송</div>
+              </div>
+
+              <button class="btn-brand" onclick="switchScreen('SCR-01')">홈으로 돌아가기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-12] 살롱 원장 후기 -->
+        <div id="SCR-12" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>💈 전국 살롱 원장님 실사용 후기</span>
+              <span style="font-size:12px; color:var(--text-muted);">평점 5.0 / 5.0 (99.8% 만족)</span>
+            </div>
+
+            <div class="grid-3">
+              <div class="widget-box">
+                <div style="font-weight:bold; font-size:13px; color:#1E293B;">"드라이 시간이 10분 줄어 예약 2팀 더 받습니다."</div>
+                <div style="font-size:11px; color:#2B5A4B; margin:4px 0;">청담 살롱 대표원장 / 백승현 님</div>
+                <p style="font-size:12px; color:#64748B;">샴푸 후 터번이 절대 풀리지 않고 넥 가드로 목덜미 물기도 완벽 차단됩니다. 매장 타월 100장 전면 교체했습니다.</p>
+              </div>
+
+              <div class="widget-box">
+                <div style="font-weight:bold; font-size:13px; color:#1E293B;">"하루 10번 고온 세탁해도 단추가 짱짱해요."</div>
+                <div style="font-size:11px; color:#2B5A4B; margin:4px 0;">강남 프리미엄 샵 / 이수진 님</div>
+                <p style="font-size:12px; color:#64748B;">소창 원단이라 건조도 엄청 빠르고 염색약 묻어도 다크 컬러라 매장이 항상 깔끔해 보여요.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Footer -->
+        <footer class="app-footer">
+          <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+            <div>
+              <div style="font-weight:bold; color:#FFFFFF; margin-bottom:4px;">플로뜰리에 HAIR (Flottelier Hair)</div>
+              <div>프리미엄 살롱 B2B 헤어 패브릭 | 더마테스트 엑설런트 인증 완료</div>
+            </div>
+            <div>
+              <div>B2B 직통 상담: 1588-0000 | 세금계산서 100% 즉시 발행</div>
+              <div>사업자등록번호: 211-88-12345 | 통신판매업신고 완료</div>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- [MODAL-01] 3초 착용법 가이드 모달 -->
+  <div id="MODAL-01" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>🎬 루프 단추 헤어 터번 3초 착용법</h3>
+        <button class="modal-close" onclick="closeModal('MODAL-01')">&times;</button>
+      </div>
+
+      <div style="background:#FAF7F2; padding:16px; border-radius:8px; border:1px solid #E2D9CC; margin-bottom:16px; font-size:12px; line-height:1.8;">
+        <div><strong>1단계: 머리 모으기</strong> - 샴푸 후 젖은 모발을 터번 안쪽으로 모아 넣습니다.</div>
+        <div><strong>2단계: 가볍게 꼬기</strong> - 앞쪽 터번 끝단을 2~3회 가볍게 비틀어 꼬아줍니다.</div>
+        <div><strong>3단계: 단추 결착</strong> - 끝단의 신축 루프를 뒷목의 단추에 쏙 걸어 고정합니다.</div>
+      </div>
+
+      <button class="btn-brand" style="width:100%;" onclick="closeModal('MODAL-01'); switchScreen('SCR-05');">이 터번으로 B2B 도매 발주하기</button>
+    </div>
+  </div>
+
+  <!-- [MODAL-02] 살롱 로고 시안 확정 모달 -->
+  <div id="MODAL-02" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>✨ 살롱 로고 자수 시안 최종 확인</h3>
+        <button class="modal-close" onclick="closeModal('MODAL-02')">&times;</button>
+      </div>
+
+      <div style="background:#232527; border:2px dashed #C59B27; border-radius:8px; padding:24px; text-align:center; margin-bottom:16px;">
+        <div class="embroidery-render" id="modal-salon-render" style="justify-content:center;">
+          MAISON DE HAIR
+        </div>
+        <div style="font-size:11px; color:#D4AF37; margin-top:8px;">자수 실: 샴페인골드 | 톤온톤 프리미엄 각인</div>
+      </div>
+
+      <div style="font-size:12px; color:#64748B; margin-bottom:16px; line-height:1.5;">
+        위 살롱 로고 시안대로 1:1 맞춤 자수가 진행됩니다. B2B 견적함에 담으시겠습니까?
+      </div>
+
+      <div style="display:flex; gap:10px;">
+        <button class="btn-outline" style="flex:1;" onclick="closeModal('MODAL-02')">수정하기</button>
+        <button class="btn-brand" style="flex:2;" onclick="confirmSalonJasuAndCart()">시안 확정 &amp; 견적함 담기</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State
+    let currentSalonColor = '#D4AF37';
+
+    // Screen Switching
+    function switchScreen(screenId) {
+      document.querySelectorAll('.screen-view').forEach(view => {
+        view.classList.remove('active');
+      });
+
+      const target = document.getElementById(screenId);
+      if (target) {
+        target.classList.add('active');
+      }
+
+      // Update Sidebar Active State
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('onclick') && item.getAttribute('onclick').includes(screenId)) {
+          item.classList.add('active');
+        }
+      });
+
+      // Update Header Indicator
+      const badge = document.getElementById('current-screen-badge');
+      const name = document.getElementById('current-screen-name');
+      if (badge && name) {
+        badge.innerText = screenId;
+        const navItem = document.querySelector(`.nav-item[onclick*="${screenId}"]`);
+        if (navItem) {
+          name.innerText = navItem.innerText.replace(screenId, '').trim();
+        }
+      }
+
+      const frame = document.getElementById('device-frame');
+      if (frame) frame.scrollTop = 0;
+    }
+
+    // Viewport Switcher
+    function setViewport(mode) {
+      const frame = document.getElementById('device-frame');
+      document.querySelectorAll('.viewport-btn').forEach(btn => btn.classList.remove('active'));
+      
+      frame.className = mode;
+      if (event && event.target) {
+        event.target.classList.add('active');
+      }
+    }
+
+    // Modal Handlers
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) modal.classList.add('active');
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) modal.classList.remove('active');
+    }
+
+    // Live Embroidery Functions
+    function updateSalonPreview() {
+      const input = document.getElementById('salon-name-input');
+      const previewText = document.getElementById('salon-preview-text');
+      
+      if (input && previewText) {
+        previewText.innerText = input.value.trim() || 'SALON NAME';
+      }
+    }
+
+    function selectSalonColor(color, dot) {
+      currentSalonColor = color;
+      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+      document.getElementById('salon-live-preview').style.color = color;
+    }
+
+    function confirmSalonJasuAndCart() {
+      const name = document.getElementById('salon-name-input').value || 'MAISON DE HAIR';
+      
+      const cartName = document.getElementById('cart-salon-name');
+      const compName = document.getElementById('complete-salon-text');
+      if (cartName) cartName.innerText = name;
+      if (compName) compName.innerText = `${name} (샴페인골드)`;
+
+      closeModal('MODAL-02');
+      switchScreen('SCR-09');
+    }
+
+    // B2B Wholesale Quantity Discount Logic
+    function updateB2BQuote(qty) {
+      const qtyNum = parseInt(qty, 10);
+      let discountRate = 0.25;
+      if (qtyNum >= 100) discountRate = 0.38;
+      else if (qtyNum >= 50) discountRate = 0.32;
+
+      const regularTotal = qtyNum * 24000;
+      const discountedTotal = Math.round(regularTotal * (1 - discountRate));
+      const perUnit = Math.round(discountedTotal / qtyNum);
+
+      const qtyText = document.getElementById('b2b-qty-text');
+      const priceText = document.getElementById('b2b-price-text');
+      if (qtyText && priceText) {
+        qtyText.innerText = `루프 단추 헤어 터번 ${qtyNum}장 번들`;
+        priceText.innerText = `${discountedTotal.toLocaleString()}원`;
+        priceText.parentElement.querySelector('div:last-child').innerText = `(장당 ${perUnit.toLocaleString()}원 / ${Math.round(discountRate*100)}% 절감)`;
+      }
+    }
+  </script>
+</body>
+</html>

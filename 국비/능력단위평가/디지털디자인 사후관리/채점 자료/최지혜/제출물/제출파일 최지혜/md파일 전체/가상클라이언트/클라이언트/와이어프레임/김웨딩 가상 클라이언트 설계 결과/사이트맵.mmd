@@ -1,0 +1,52 @@
+flowchart TD
+  %% 글로벌 루트
+  ROOT["🌿 플로뜰리에 웨딩 아틀리에 (Flottelier Wedding)"]
+
+  %% 1차 Depth 영역
+  ROOT --> DEPTH1_PKG["01. WEDDING PACKAGES<br>(신혼 패키지 컬렉션)"]
+  ROOT --> DEPTH1_EMB["02. EMBROIDERY & BOJAGI<br>(부부 자수 & 예단 선물)"]
+  ROOT --> DEPTH1_GUD["03. STYLING & REGISTRY<br>(신혼 가이드 & 위시리스트)"]
+  ROOT --> DEPTH1_ORD["04. CHECKOUT & DELIVERY<br>(주문 & 양가 분할배송)"]
+
+  %% 2차 Depth 페이지
+  DEPTH1_PKG --> P01["P-WD-01: 웨딩 메인 & 큐레이션 허브<br>(4차 정련 보증 & 3종 퀵 셀렉터)"]
+  DEPTH1_PKG --> P02["P-WD-02: 신혼 15장 풀 패키지 상세<br>(데일리+바스+발매트+와입스)"]
+  DEPTH1_PKG --> P03["P-WD-03: His & Hers 8장 커플 세트<br>(아이보리 + 샌드베이지 톤온톤)"]
+
+  DEPTH1_EMB --> P04["P-WD-04: 양가 부모님 소창 보자기 예단관<br>(전통 매듭 & 가격표 미동봉 보증)"]
+  DEPTH1_EMB --> M01["M-WD-01: Canvas 웨딩 자수 시뮬레이터<br>(영문 필기체 & 샴페인/로즈골드 실)"]
+
+  DEPTH1_GUD --> P05["P-WD-05: 호텔식 욕실 수납 & 수명 가이드<br>(롤 접기 3단계 & 3년 품질보증)"]
+  DEPTH1_GUD --> P06["P-WD-06: 혼수 위시리스트 & 청첩장 공유<br>(카카오톡 공유 & 하객 선물 펀딩)"]
+
+  DEPTH1_ORD --> P07["P-WD-07: 2곳 분할 직배송 주문서<br>(시댁/친정 분할 입력 & 가격표 제외)"]
+  DEPTH1_ORD --> P08["P-WD-08: 웨딩 주문 완료 & D-Day 현황<br>(자수 제작 진행바 & 2곳 개별 송장)"]
+
+  %% 상호 연결 및 모달 트리거
+  P01 -.->|1초 사전확인| M02["M-WD-02: 웨딩 D-Day 안심 배송 계산기"]
+  P01 -.->|3,000원 체험| M03["M-WD-03: 1장 웨딩 안심 체험팩 (100% 환급)"]
+  P02 -.->|자수 커스텀| M01
+  P02 -.->|배송일 계산| M02
+  P02 -->|주문 진행| P07
+  P03 -.->|자수 커스텀| M01
+  P03 -->|주문 진행| P07
+  P04 -.->|360도 회전| M04["M-WD-04: 보자기 360 뷰어 & 감사 카드"]
+  P04 -->|예단 주문| P07
+  P07 -->|결제 완료| P08
+
+  %% 예외 분기
+  M02 -.->|D-3 이내 초임박| EX01["EX-WD-01: 긴급 퀵배송/픽업 안내 [가정]"]
+  P07 -.->|주소지 오류| EX02["EX-WD-02: 2곳 분할 주소 오류 교정 [가정]"]
+
+  %% 스타일링 클래스
+  classDef root fill:#2E4036,stroke:#1C2922,stroke-width:2px,color:#FFFFFF;
+  classDef depth1 fill:#D8E2DC,stroke:#9CAB9E,stroke-width:2px,color:#1C2922;
+  classDef page fill:#FFFFFF,stroke:#7E8D7F,stroke-width:1.5px,color:#232527;
+  classDef modal fill:#FFF5EB,stroke:#C47A5A,stroke-width:1.5px,color:#8C4320;
+  classDef exception fill:#FDE8E8,stroke:#E02424,stroke-width:1.5px,color:#9B1C1C;
+
+  class ROOT root;
+  class DEPTH1_PKG,DEPTH1_EMB,DEPTH1_GUD,DEPTH1_ORD depth1;
+  class P01,P02,P03,P04,P05,P06,P07,P08 page;
+  class M01,M02,M03,M04 modal;
+  class EX01,EX02 exception;

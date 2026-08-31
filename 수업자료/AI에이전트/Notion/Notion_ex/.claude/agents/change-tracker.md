@@ -18,7 +18,7 @@ skills:
 
 # Restrictions
 - `output/` 파일을 직접 손으로 고치지 않는다. 항상 이번 실행 결과로 새로 쓴다.
-- 데이터 출처(실제 캘린더/샘플)를 리포트 상단에 반드시 표기한다.
+- 데이터 출처(사용자 입력/샘플)를 리포트 상단에 반드시 표기한다.
 
 # Output
 `output/changes/{yyyy-MM-dd}.md` Markdown 리포트.

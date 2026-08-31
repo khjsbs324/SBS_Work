@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 (Flottelier) - 김웨딩 가상 클라이언트 인터랙티브 와이어프레임 (v3.0)</title>
+  <style>
+    :root {
+      --bg-canvas: #FAF9F6;
+      --bg-card: #FFFFFF;
+      --color-primary: #2E4036;
+      --color-secondary: #7E8D7F;
+      --color-accent-rose: #C47A5A;
+      --color-accent-blue: #2B6CB0;
+      --color-text-main: #1C2922;
+      --color-text-sub: #585D62;
+      --color-text-muted: #8E949A;
+      --color-border: #D8D2C7;
+      --color-border-light: #ECE7DE;
+      --color-error: #DC2626;
+      --color-error-bg: #FDF2F2;
+      
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+      --font-serif: 'Noto Serif KR', 'Batang', serif;
+      --transition-base: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: #E8E5DF;
+      color: var(--color-text-main);
+      line-height: 1.6;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Wireframe Control Bar */
+    .wf-topbar {
+      background: #1C2922;
+      color: #FFFFFF;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .wf-title-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .wf-badge {
+      background: var(--color-accent-rose);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .wf-title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    .wf-client-tag {
+      font-size: 12px;
+      color: #A3B899;
+      background: rgba(255,255,255,0.1);
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    .wf-controls {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .viewport-switch {
+      display: flex;
+      background: rgba(255,255,255,0.12);
+      border-radius: 6px;
+      padding: 2px;
+    }
+
+    .vp-btn {
+      background: none;
+      border: none;
+      color: #D8E2DC;
+      padding: 5px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: var(--transition-base);
+    }
+    .vp-btn.active, .vp-btn:hover {
+      background: var(--color-primary);
+      color: #FFFFFF;
+    }
+
+    /* Main Workspace Layout */
+    .wf-workspace {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 52px);
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    .wf-sidebar {
+      width: 320px;
+      background: #FAF8F5;
+      border-right: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .sidebar-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--color-border);
+      background: #F3EFEA;
+    }
+
+    .sidebar-header h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .sidebar-header p {
+      font-size: 11px;
+      color: var(--color-text-sub);
+      margin-top: 2px;
+    }
+
+    .sidebar-menu {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      list-style: none;
+    }
+
+    .menu-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--color-secondary);
+      padding: 10px 10px 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .screen-nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      margin-bottom: 3px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--color-text-main);
+      cursor: pointer;
+      transition: var(--transition-base);
+      border: 1px solid transparent;
+    }
+    .screen-nav-item:hover {
+      background: #ECE6DC;
+    }
+    .screen-nav-item.active {
+      background: #FFFFFF;
+      border-color: var(--color-primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .screen-code-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #E2DBD0;
+      color: #374151;
+    }
+    .screen-nav-item.active .screen-code-badge {
+      background: var(--color-primary);
+      color: #FFFFFF;
+    }
+    .screen-code-badge.modal-badge {
+      background: #F8E6DD;
+      color: #8C4320;
+    }
+
+    /* Screen Stage Area */
+    .wf-stage-container {
+      flex: 1;
+      background: #E5E1D8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      overflow-y: auto;
+    }
+
+    /* Viewport Simulator Frame */
+    .wf-viewport-frame {
+      background: var(--bg-canvas);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%;
+      max-width: 1200px;
+      min-height: 800px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .wf-viewport-frame.tablet {
+      max-width: 768px;
+    }
+    .wf-viewport-frame.mobile {
+      max-width: 390px;
+      border-radius: 24px;
+      border: 8px solid #232527;
+    }
+
+    /* Top Screen Breadcrumb & Header in Frame */
+    .screen-meta-header {
+      background: #F3EFEA;
+      padding: 10px 20px;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+
+    .screen-id-tag {
+      font-weight: bold;
+      color: var(--color-primary);
+    }
+
+    /* Wireframe Components */
+    .global-notice-bar {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-size: 12px;
+      padding: 6px 16px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-nav {
+      background: #FFFFFF;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .logo-box {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--color-primary);
+      letter-spacing: 1px;
+    }
+
+    .gnb-list {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-size: 13px;
+    }
+
+    .gnb-link {
+      cursor: pointer;
+      color: var(--color-text-sub);
+      transition: var(--transition-base);
+    }
+    .gnb-link:hover, .gnb-link.active {
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .wf-btn {
+      padding: 7px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: var(--transition-base);
+      border: 1px solid var(--color-border);
+      background: #FFFFFF;
+      color: var(--color-text-main);
+    }
+    .wf-btn:hover {
+      background: #F3EFEA;
+    }
+    .wf-btn.primary {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      border-color: var(--color-primary);
+    }
+    .wf-btn.primary:hover {
+      background: #1C2922;
+    }
+    .wf-btn.rose {
+      background: var(--color-accent-rose);
+      color: #FFFFFF;
+      border-color: var(--color-accent-rose);
+    }
+    .wf-btn.rose:hover {
+      background: #A85D3F;
+    }
+
+    /* Screen Views Container */
+    .screen-view {
+      display: none;
+      padding: 24px;
+      flex: 1;
+    }
+    .screen-view.active {
+      display: block;
+    }
+
+    /* Common Card Box */
+    .wf-box {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .wf-box-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Placeholder Box for Images */
+    .image-placeholder {
+      background: #ECE7DE;
+      border: 1px dashed var(--color-border);
+      border-radius: 6px;
+      padding: 30px 16px;
+      text-align: center;
+      color: var(--color-text-sub);
+      font-size: 13px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Grid Layouts */
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-3col, .grid-2col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Live Canvas Embroidery Simulator UI */
+    .canvas-emb-box {
+      border: 2px solid var(--color-accent-rose);
+      background: #FFFDF9;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    #liveEmbroideryCanvas {
+      width: 100%;
+      height: 180px;
+      background: #F5EFEB;
+      border-radius: 6px;
+      border: 1px solid #DFD5CD;
+      margin-bottom: 16px;
+    }
+
+    .emb-options-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .emb-input {
+      padding: 8px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      font-size: 14px;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    /* Modal Layer */
+    .wf-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .wf-modal-overlay.active {
+      display: flex;
+    }
+
+    .wf-modal-content {
+      background: #FFFFFF;
+      width: 90%;
+      max-width: 640px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+      padding: 24px;
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .modal-close-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--color-text-sub);
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--color-text-main);
+    }
+    .form-control {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: inherit;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+    .form-control.error {
+      border-color: var(--color-error);
+      background-color: var(--color-error-bg);
+    }
+
+    /* Step Timeline Tracker */
+    .timeline-steps {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      position: relative;
+    }
+    .timeline-steps::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: var(--color-border);
+      z-index: 0;
+    }
+    .timeline-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      flex: 1;
+    }
+    .step-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 2px solid var(--color-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 6px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .timeline-step.active .step-circle {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+    .step-name {
+      font-size: 11px;
+      color: var(--color-text-sub);
+    }
+
+    /* Footer */
+    .global-footer {
+      background: #F3EFEA;
+      border-top: 1px solid var(--color-border);
+      padding: 24px;
+      font-size: 12px;
+      color: var(--color-text-sub);
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Global Wireframe Controller Bar -->
+  <div class="wf-topbar">
+    <div class="wf-title-area">
+      <span class="wf-badge">WIREFRAME v3.0</span>
+      <span class="wf-title">플로뜰리에 (Flottelier) 신혼 혼수 &amp; 예단 커스텀 아틀리에</span>
+      <span class="wf-client-tag">페르소나: 김웨딩(최유진 님) 15대 요구사항 100% 반영</span>
+    </div>
+    <div class="wf-controls">
+      <div class="viewport-switch">
+        <button class="vp-btn active" onclick="setViewport('desktop')">🖥️ Desktop</button>
+        <button class="vp-btn" onclick="setViewport('tablet')">📱 Tablet</button>
+        <button class="vp-btn" onclick="setViewport('mobile')">📲 Mobile</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Workspace Container -->
+  <div class="wf-workspace">
+    
+    <!-- Sidebar: Screen Navigation Index -->
+    <aside class="wf-sidebar">
+      <div class="sidebar-header">
+        <h2>🗺️ 화면 설계 목차 (Screen Index)</h2>
+        <p>클릭하여 각 화면 와이어프레임으로 즉시 이동</p>
+      </div>
+      <ul class="sidebar-menu">
+        <div class="menu-group-title">01. 신혼 패키지 컬렉션</div>
+        <li class="screen-nav-item active" onclick="switchScreen('P-WD-01')">
+          <span>웨딩 메인 &amp; 큐레이션</span>
+          <span class="screen-code-badge">P-WD-01</span>
+        </li>
+        <li class="screen-nav-item" onclick="switchScreen('P-WD-02')">
+          <span>신혼 15장 풀 패키지 상세 (★)</span>
+          <span class="screen-code-badge">P-WD-02</span>
+        </li>
+        <li class="screen-nav-item" onclick="switchScreen('P-WD-03')">
+          <span>His &amp; Hers 8장 커플 세트</span>
+          <span class="screen-code-badge">P-WD-03</span>
+        </li>
+
+        <div class="menu-group-title">02. 부부 자수 &amp; 예단 보자기</div>
+        <li class="screen-nav-item" onclick="switchScreen('P-WD-04')">
+          <span>양가 예단 소창 보자기 선물관 (★)</span>
+          <span class="screen-code-badge">P-WD-04</span>
+        </li>
+        <li class="screen-nav-item" onclick="openModal('M-WD-01')">
+          <span>Canvas 자수 시뮬레이터 (모달)</span>
+          <span class="screen-code-badge modal-badge">M-WD-01</span>
+        </li>
+        <li class="screen-nav-item" onclick="openModal('M-WD-04')">
+          <span>보자기 360 뷰어 &amp; 감사카드 (모달)</span>
+          <span class="screen-code-badge modal-badge">M-WD-04</span>
+        </li>
+
+        <div class="menu-group-title">03. 스타일링 가이드 &amp; 위시리스트</div>
+        <li class="screen-nav-item" onclick="switchScreen('P-WD-05')">
+          <span>호텔식 욕실 수납 &amp; 수명 가이드</span>
+          <span class="screen-code-badge">P-WD-05</span>
+        </li>
+        <li class="screen-nav-item" onclick="switchScreen('P-WD-06')">
+          <span>혼수 위시리스트 &amp; 청첩장 공유</span>
+          <span class="screen-code-badge">P-WD-06</span>
+        </li>
+
+        <div class="menu-group-title">04. 주문 &amp; 2곳 분할 배송</div>
+        <li class="screen-nav-item" onclick="switchScreen('P-WD-07')">
+          <span>2곳 분할 직배송 주문서 (★)</span>
+          <span class="screen-code-badge">P-WD-07</span>
+        </li>
+        <li class="screen-nav-item" onclick="switchScreen('P-WD-08')">
+          <span>주문 완료 &amp; D-Day 현황</span>
+          <span class="screen-code-badge">P-WD-08</span>
+        </li>
+
+        <div class="menu-group-title">05. 도구 &amp; 예외 플로우 [가정]</div>
+        <li class="screen-nav-item" onclick="openModal('M-WD-02')">
+          <span>웨딩 D-Day 배송 계산기 (모달)</span>
+          <span class="screen-code-badge modal-badge">M-WD-02</span>
+        </li>
+        <li class="screen-nav-item" onclick="openModal('M-WD-03')">
+          <span>1장 3,000원 안심 체험팩 (모달)</span>
+          <span class="screen-code-badge modal-badge">M-WD-03</span>
+        </li>
+        <li class="screen-nav-item" onclick="switchScreen('EX-WD-01')">
+          <span>예식일 초임박 긴급 안내 [가정]</span>
+          <span class="screen-code-badge modal-badge">EX-WD-01</span>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Stage Container -->
+    <main class="wf-stage-container">
+      <div class="wf-viewport-frame" id="viewportFrame">
+        
+        <!-- Frame Internal Meta Header -->
+        <div class="screen-meta-header">
+          <div><span class="screen-id-tag" id="currentScreenId">P-WD-01</span> · <span id="currentScreenName">웨딩 메인 &amp; 큐레이션 허브</span></div>
+          <div>상태: <span id="currentScreenState">정상 (Default)</span></div>
+        </div>
+
+        <!-- Global Header Component -->
+        <div class="global-notice-bar">
+          <span>🌿 신혼 첫날부터 바로 쓰는 4차 정련 완제품 보증</span>
+          <span>양가 2곳 분할 직배송 (가격표 100% 미동봉 보증)</span>
+          <button class="wf-btn rose" style="padding:2px 8px; font-size:11px;" onclick="openModal('M-WD-02')">📅 D-Day 계산기</button>
+        </div>
+
+        <header class="header-nav">
+          <div class="logo-box" onclick="switchScreen('P-WD-01')" style="cursor:pointer;">Flottelier</div>
+          <ul class="gnb-list">
+            <li class="gnb-link active" onclick="switchScreen('P-WD-01')">WEDDING</li>
+            <li class="gnb-link" onclick="switchScreen('P-WD-02')">15장 풀세트</li>
+            <li class="gnb-link" onclick="switchScreen('P-WD-04')">예단 보자기</li>
+            <li class="gnb-link" onclick="openModal('M-WD-01')">부부 자수기</li>
+            <li class="gnb-link" onclick="switchScreen('P-WD-05')">욕실 수납 팁</li>
+            <li class="gnb-link" onclick="switchScreen('P-WD-06')">위시리스트</li>
+          </ul>
+          <div class="header-actions">
+            <button class="wf-btn" onclick="openModal('M-WD-03')">🎁 1장 체험팩</button>
+            <button class="wf-btn primary" onclick="switchScreen('P-WD-07')">🛍️ 주문서</button>
+          </div>
+        </header>
+
+        <!-- ==================== SCREEN 01: P-WD-01 ==================== -->
+        <section class="screen-view active" id="view-P-WD-01">
+          <div class="image-placeholder" style="height: 240px; background: #2E4036; color: #FFFFFF;">
+            <div style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #A3B899;">FLOTTEILIER WEDDING ATELIER</div>
+            <h1 style="font-family: var(--font-serif); font-size: 26px; margin: 6px 0;">"두 사람의 새로운 시작을 축복하는 고요한 에코 리추얼"</h1>
+            <p style="font-size: 13px; color: #D8E2DC;">삶을 필요 없는 4차 정련 소창 100% 완제품 · 세상에 하나뿐인 부부 이니셜 자수 각인</p>
+            <div style="margin-top: 14px; display: flex; gap: 10px;">
+              <button class="wf-btn rose" onclick="switchScreen('P-WD-02')">💍 신혼 15장 풀 패키지 보기</button>
+              <button class="wf-btn" onclick="openModal('M-WD-02')">📅 웨딩 D-Day 배송일 확인</button>
+            </div>
+          </div>
+
+          <div class="wf-box">
+            <div class="wf-box-title">
+              <span>🌿 예비신부 최유진 님을 위한 3대 베스트 혼수 큐레이션</span>
+              <span style="font-size: 12px; color: var(--color-accent-rose); font-weight: normal;">4차 정련 100% 완제품 보증</span>
+            </div>
+            
+            <div class="grid-3col">
+              <!-- 카드 1 -->
+              <div style="border: 1px solid var(--color-border); border-radius: 6px; padding: 14px; background: #FAF8F5;">
+                <div class="image-placeholder" style="height: 120px;">[15장 풀 세트 연출 컷]</div>
+                <h3 style="font-size: 14px; font-weight: bold;">신혼부부 홈 스위트 홈 15장 풀 세트</h3>
+                <p style="font-size: 12px; color: var(--color-text-sub); margin: 4px 0;">데일리 8 + 바스 4 + 발매트 1 + 와입스 2</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+                  <div>
+                    <span style="font-size: 11px; text-decoration: line-through; color: #9CA3AF;">132,000원</span>
+                    <strong style="font-size: 15px; color: var(--color-accent-rose); margin-left: 4px;">99,000원 (25%↓)</strong>
+                  </div>
+                  <button class="wf-btn primary" style="padding: 4px 10px; font-size: 12px;" onclick="switchScreen('P-WD-02')">상세보기</button>
+                </div>
+              </div>
+
+              <!-- 카드 2 -->
+              <div style="border: 1px solid var(--color-border); border-radius: 6px; padding: 14px; background: #FAF8F5;">
+                <div class="image-placeholder" style="height: 120px;">[His & Hers 커플 세트]</div>
+                <h3 style="font-size: 14px; font-weight: bold;">His &amp; Hers 톤온톤 8장 커플 세트</h3>
+                <p style="font-size: 12px; color: var(--color-text-sub); margin: 4px 0;">아이보리(Her 4장) + 샌드베이지(Him 4장)</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+                  <strong style="font-size: 15px; color: var(--color-primary);">59,000원</strong>
+                  <button class="wf-btn" style="padding: 4px 10px; font-size: 12px;" onclick="switchScreen('P-WD-03')">상세보기</button>
+                </div>
+              </div>
+
+              <!-- 카드 3 -->
+              <div style="border: 1px solid var(--color-border); border-radius: 6px; padding: 14px; background: #FAF8F5;">
+                <div class="image-placeholder" style="height: 120px;">[소창 보자기 예단 포장]</div>
+                <h3 style="font-size: 14px; font-weight: bold;">양가 부모님 소창 보자기 예단 선물</h3>
+                <p style="font-size: 12px; color: var(--color-text-sub); margin: 4px 0;">오동나무 상자 + 감사카드 + 2곳 분할배송</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+                  <strong style="font-size: 15px; color: var(--color-accent-rose);">120,000원</strong>
+                  <button class="wf-btn rose" style="padding: 4px 10px; font-size: 12px;" onclick="switchScreen('P-WD-04')">예단보기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 02: P-WD-02 ==================== -->
+        <section class="screen-view" id="view-P-WD-02">
+          <div class="grid-2col">
+            <!-- 좌측: 상품 갤러리 및 확대 -->
+            <div>
+              <div class="image-placeholder" style="height: 280px; position: relative;">
+                <span>[신혼부부 15장 풀 패키지 500% 초고화질 확대 뷰어]</span>
+                <div style="position: absolute; bottom: 12px; background: rgba(0,0,0,0.7); color: #fff; padding: 4px 10px; border-radius: 4px; font-size: 11px;">
+                  🔍 500% 무형광 4차 정련 봉제선 확인 가능
+                </div>
+              </div>
+              <div class="grid-3col" style="gap: 8px;">
+                <div class="image-placeholder" style="padding: 10px; font-size: 11px;">데일리 8장</div>
+                <div class="image-placeholder" style="padding: 10px; font-size: 11px;">바스 4장</div>
+                <div class="image-placeholder" style="padding: 10px; font-size: 11px;">매트 1+와입스 2</div>
+              </div>
+            </div>
+
+            <!-- 우측: 패키지 옵션 및 자수 발주 -->
+            <div>
+              <div style="font-size: 12px; color: var(--color-accent-rose); font-weight: bold; margin-bottom: 4px;">WEDDING BEST 1위 · 혼수 전용 25% 할인</div>
+              <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 8px;">신혼부부 홈 스위트 홈 15장 풀 패키지</h2>
+              <div style="font-size: 22px; font-weight: bold; color: var(--color-accent-rose); margin-bottom: 16px;">
+                99,000원 <span style="font-size: 13px; color: var(--color-text-sub); font-weight: normal;">(정가 132,000원 / 장당 9,900원꼴)</span>
+              </div>
+
+              <!-- 자수 커스텀 인터랙티브 선택 박스 -->
+              <div class="canvas-emb-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <strong style="font-size: 13px; color: var(--color-accent-rose);">🪡 신랑·신부 부부 자수 각인 옵션</strong>
+                  <button class="wf-btn rose" style="padding: 3px 8px; font-size: 11px;" onclick="openModal('M-WD-01')">실시간 자수기 열기</button>
+                </div>
+                <div style="font-size: 12px; color: var(--color-text-sub);" id="selectedEmbroideryPreview">
+                  현재 선택: <strong>샴페인 골드 실 / 영문 필기체 ("Yujin &amp; Dohyun 2026.10.24")</strong>
+                </div>
+              </div>
+
+              <div class="wf-box" style="padding: 12px; font-size: 12px; background: #FAF8F5;">
+                <div>📅 <strong>웨딩 D-Day 안심 배송 보증</strong>: 오늘 주문 시 3일 이내 자수 제작 완료 후 예식 14일 전 도착 보증</div>
+              </div>
+
+              <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button class="wf-btn" style="flex: 1;" onclick="switchScreen('P-WD-06')">💌 혼수 위시리스트 담기</button>
+                <button class="wf-btn primary" style="flex: 1.5;" onclick="switchScreen('P-WD-07')">🛍️ 신혼 패키지 주문하기</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 03: P-WD-03 ==================== -->
+        <section class="screen-view" id="view-P-WD-03">
+          <div class="wf-box">
+            <div class="wf-box-title">
+              <span>His &amp; Hers 톤온톤 8장 커플 세트</span>
+              <span class="wf-badge">부부 톤온톤 컬러 구분</span>
+            </div>
+            <div class="grid-2col">
+              <div class="image-placeholder" style="height: 220px;">[아이보리 4장(Her) + 샌드베이지 4장(Him) 톤온톤 컷]</div>
+              <div>
+                <p style="font-size: 13px; margin-bottom: 12px;">부부가 서로의 타월을 헷갈리지 않고 위생적으로 사용할 수 있도록 고안된 톤온톤 컬러 매칭 세트입니다.</p>
+                <div class="form-group">
+                  <label class="form-label">고리 라벨 컬러 옵션</label>
+                  <select class="form-control">
+                    <option>Her: 피치 로즈 / Him: 세이지 그린 (추천)</option>
+                    <option>Her: 내추럴 아이보리 / Him: 샌드 베이지</option>
+                  </select>
+                </div>
+                <button class="wf-btn primary" style="width: 100%; margin-top: 10px;" onclick="switchScreen('P-WD-07')">커플 세트 주문하기 (59,000원)</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 04: P-WD-04 ==================== -->
+        <section class="screen-view" id="view-P-WD-04">
+          <div class="wf-box">
+            <div class="wf-box-title">
+              <span>🌸 양가 부모님 소창 보자기 예단 감사 선물관</span>
+              <span style="color: var(--color-accent-blue); font-size: 12px;">시댁/친정 2곳 분할 직배송 지원</span>
+            </div>
+            
+            <div class="grid-2col">
+              <div>
+                <div class="image-placeholder" style="height: 220px; position: relative;">
+                  <span>[순면 소창 보자기 수국 매듭 360도 뷰어]</span>
+                  <button class="wf-btn" style="position: absolute; bottom: 10px; font-size: 11px;" onclick="openModal('M-WD-04')">🔄 360도 회전 모달 열기</button>
+                </div>
+              </div>
+
+              <div>
+                <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 8px;">순면 보자기 예단 선물 세트 (오동나무 상자 포함)</h3>
+                <p style="font-size: 12px; color: var(--color-text-sub); margin-bottom: 12px;">품격 있는 전통 매듭과 정성 어린 감사 웰컴 카드로 양가 부모님께 깊은 감사를 전하세요.</p>
+
+                <div class="form-group">
+                  <label class="form-label">양가 부모님 감사 카드 문구 (선택)</label>
+                  <textarea class="form-control" rows="3">낳아주시고 길러주신 은혜에 깊이 감사드리며, 예쁘고 정갈하게 잘 살겠습니다.</textarea>
+                </div>
+
+                <div style="background: #EBF3EF; padding: 10px; border-radius: 4px; font-size: 12px; color: var(--color-primary); margin-bottom: 14px;">
+                  🛡️ <strong>가격표/영수증 100% 미동봉 보증</strong>: 양가 부모님 댁으로 가격 노출 없이 품격 있게 배송됩니다.
+                </div>
+
+                <button class="wf-btn rose" style="width: 100%;" onclick="switchScreen('P-WD-07')">양가 2곳 분할 배송 주문서 작성하기</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 05: P-WD-05 ==================== -->
+        <section class="screen-view" id="view-P-WD-05">
+          <div class="wf-box">
+            <div class="wf-box-title">
+              <span>🛁 신혼집 호텔식 욕실 수납 셋업 &amp; 3년 수명 가이드</span>
+              <span class="wf-badge">롤 접기 3단계 모션</span>
+            </div>
+            
+            <div class="grid-3col" style="margin-bottom: 20px;">
+              <div class="image-placeholder" style="height: 120px;">Step 1. 삼등분 접기</div>
+              <div class="image-placeholder" style="height: 120px;">Step 2. 끝단 단단히 말기</div>
+              <div class="image-placeholder" style="height: 120px;">Step 3. 상부장 슬림 수납 (1/3 부피)</div>
+            </div>
+
+            <div class="wf-box" style="background: #FAF8F5;">
+              <h4 style="font-size: 14px; font-weight: bold; margin-bottom: 6px;">📋 3년 품질 보증 &amp; KATRI 4無 인증</h4>
+              <p style="font-size: 12px; color: var(--color-text-sub);">형광증백제 0%, 염소표백제 0%, 화학염색 0%, 인공향료 0%. 미래에 태어날 아기까지 안심하고 사용하실 수 있습니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 06: P-WD-06 ==================== -->
+        <section class="screen-view" id="view-P-WD-06">
+          <div class="wf-box">
+            <div class="wf-box-title">
+              <span>💌 최유진 &amp; 김도현 님의 신혼 혼수 레지스트리 (위시리스트)</span>
+              <button class="wf-btn rose" style="font-size: 11px;" onclick="copyWishLink()">🔗 카카오톡 청첩장 링크 복사</button>
+            </div>
+            <p style="font-size: 13px; color: var(--color-text-sub); margin-bottom: 16px;">모바일 청첩장에 위시리스트를 연동하여 지인들에게 꼭 필요한 혼수 선물을 축하받으세요.</p>
+
+            <div class="grid-2col">
+              <div style="border: 1px solid var(--color-border); padding: 12px; border-radius: 6px;">
+                <h4>신혼 15장 풀 패키지 (자수 옵션 포함)</h4>
+                <p style="font-size: 12px; color: var(--color-accent-rose);">99,000원 · [선물 펀딩 가능]</p>
+              </div>
+              <div style="border: 1px solid var(--color-border); padding: 12px; border-radius: 6px;">
+                <h4>양가 예단 소창 보자기 선물 세트</h4>
+                <p style="font-size: 12px; color: var(--color-accent-rose);">120,000원 · [선물 펀딩 가능]</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 07: P-WD-07 ==================== -->
+        <section class="screen-view" id="view-P-WD-07">
+          <div class="wf-box">
+            <div class="wf-box-title">
+              <span>📦 2곳 분할 직배송 주문서 작성</span>
+              <span style="font-size: 12px; color: var(--color-accent-blue);">시댁 / 친정 양가 분할 발송</span>
+            </div>
+
+            <!-- 2곳 분할 배송지 탭 -->
+            <div class="grid-2col" style="margin-bottom: 16px;">
+              <!-- 1번 배송지 -->
+              <div style="border: 1px solid var(--color-border); padding: 14px; border-radius: 6px; background: #FAF8F5;">
+                <h4 style="font-size: 13px; font-weight: bold; margin-bottom: 10px; color: var(--color-primary);">1번 배송지 (시댁 / 감사 선물)</h4>
+                <div class="form-group">
+                  <label class="form-label">받는 분 성함</label>
+                  <input type="text" class="form-control" value="김민수 (시부모님)" id="addr1_name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">연락처</label>
+                  <input type="text" class="form-control" value="010-3344-5566" id="addr1_phone">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">도로명 주소</label>
+                  <input type="text" class="form-control" value="서울시 서초구 반포대로 123" id="addr1_addr">
+                </div>
+              </div>
+
+              <!-- 2번 배송지 -->
+              <div style="border: 1px solid var(--color-border); padding: 14px; border-radius: 6px; background: #FAF8F5;">
+                <h4 style="font-size: 13px; font-weight: bold; margin-bottom: 10px; color: var(--color-primary);">2번 배송지 (친정 / 신혼집)</h4>
+                <div class="form-group">
+                  <label class="form-label">받는 분 성함</label>
+                  <input type="text" class="form-control" value="최영호 (친정부모님)" id="addr2_name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">연락처</label>
+                  <input type="text" class="form-control" value="010-7788-9900" id="addr2_phone">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">도로명 주소</label>
+                  <input type="text" class="form-control" value="경기도 성남시 분당구 판교역로 456" id="addr2_addr">
+                </div>
+              </div>
+            </div>
+
+            <!-- 가격표 미동봉 체크박스 -->
+            <div style="background: #EBF3EF; padding: 12px; border-radius: 6px; margin-bottom: 16px;">
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: bold; color: var(--color-primary); cursor: pointer;">
+                <input type="checkbox" checked disabled>
+                <span>[필수 적용] ✔ 양가 배송 시 가격표 / 영수증 100% 미동봉 선물 배송 보증</span>
+              </label>
+            </div>
+
+            <button class="wf-btn primary" style="width: 100%; padding: 12px; font-size: 15px;" onclick="processPayment()">
+              💳 99,000원 N Pay / 카카오페이 1초 간편결제 승인
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 08: P-WD-08 ==================== -->
+        <section class="screen-view" id="view-P-WD-08">
+          <div class="wf-box" style="text-align: center; padding: 30px;">
+            <div style="font-size: 32px; margin-bottom: 10px;">🎉</div>
+            <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 6px;">최유진 님, 혼수 주문이 정상 완료되었습니다!</h2>
+            <p style="font-size: 13px; color: var(--color-text-sub); margin-bottom: 20px;">주문번호: <strong>FLOT-WED-20261024-8891</strong> · 예식 14일 전 안전 도착 확정</p>
+
+            <!-- 실시간 D-Day 진행 바 -->
+            <div class="timeline-steps">
+              <div class="timeline-step active">
+                <div class="step-circle">1</div>
+                <div class="step-name">주문 접수 완료</div>
+              </div>
+              <div class="timeline-step active">
+                <div class="step-circle">2</div>
+                <div class="step-name">장인 웨딩 자수 각인 중</div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-circle">3</div>
+                <div class="step-name">보자기 정성 매듭 포장</div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-circle">4</div>
+                <div class="step-name">2곳 개별 발송 완료</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 24px;">
+              <button class="wf-btn" onclick="switchScreen('P-WD-06')">💌 청첩장 위시리스트 생성</button>
+              <button class="wf-btn primary" onclick="switchScreen('P-WD-01')">홈으로 돌아가기</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== EXCEPTION SCREEN: EX-WD-01 ==================== -->
+        <section class="screen-view" id="view-EX-WD-01">
+          <div class="wf-box" style="border: 2px solid var(--color-error); background: var(--color-error-bg);">
+            <div class="wf-box-title" style="color: var(--color-error);">
+              <span>⚠️ 예식일 초임박 긴급 안내 (D-3 이내) [가정]</span>
+            </div>
+            <p style="font-size: 13px; margin-bottom: 14px;">
+              고객님의 예식일이 3일 이내로 임박하여 일반 택배 출고가 마감되었습니다. 아래 긴급 옵션을 선택해주세요.
+            </p>
+            <div class="grid-2col">
+              <button class="wf-btn rose" style="padding: 12px;" onclick="alert('당일 퀵서비스 접수가 완료되었습니다.'); switchScreen('P-WD-07');">
+                🛵 서울/수도권 당일 퀵 배송 전환
+              </button>
+              <button class="wf-btn primary" style="padding: 12px;" onclick="alert('성수동 쇼룸 방문 픽업 예약이 완료되었습니다.'); switchScreen('P-WD-07');">
+                🏬 성수 쇼룸 방문 직접 수령 (당일 가능)
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Global Footer -->
+        <footer class="global-footer">
+          <p>플로뜰리에 웨딩 전담 컨시어지 02-1588-0000 | 한국의류시험연구원(KATRI) 4無 인증 | 독일 더마테스트 Excellent 획득</p>
+          <p style="margin-top: 4px; color: var(--color-text-muted);">© 2026 Flottelier Wedding Atelier. All rights reserved.</p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- Modal M-WD-01: Canvas 자수 시뮬레이터 -->
+  <div class="wf-modal-overlay" id="modal-M-WD-01">
+    <div class="wf-modal-content">
+      <div class="modal-header">
+        <h3 style="font-size: 16px; font-weight: bold; color: var(--color-accent-rose);">🪡 Canvas 실시간 부부 자수 시뮬레이터</h3>
+        <button class="modal-close-btn" onclick="closeModal('M-WD-01')">&times;</button>
+      </div>
+
+      <canvas id="liveEmbroideryCanvas" width="580" height="180"></canvas>
+
+      <div class="emb-options-row">
+        <div style="flex: 1;">
+          <label class="form-label">웨딩 시그니처 실 색상</label>
+          <select class="form-control" id="threadColorSelect" onchange="renderEmbroidery()">
+            <option value="#C47A5A">샴페인 골드 (Champagne Gold)</option>
+            <option value="#B76E79">로즈 골드 (Rose Gold)</option>
+            <option value="#9CAB9E">세이지 그린 (Sage Green)</option>
+            <option value="#2B6CB0">클래식 네이비 (Classic Navy)</option>
+          </select>
+        </div>
+        <div style="flex: 1;">
+          <label class="form-label">웨딩 폰트 스타일</label>
+          <select class="form-control" id="fontStyleSelect" onchange="renderEmbroidery()">
+            <option value="italic">영문 필기체 (Elegant Script)</option>
+            <option value="serif">클래식 세리프 (Classic Serif)</option>
+            <option value="sans-serif">모던 산세리프 (Modern Clean)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">각인 텍스트 입력 (신랑·신부 영문명 &amp; 예식일 - 최대 20자)</label>
+        <input type="text" class="form-control" id="embroideryTextInput" value="Yujin &amp; Dohyun 2026.10.24" maxlength="20" oninput="renderEmbroidery()">
+      </div>
+
+      <button class="wf-btn rose" style="width: 100%; padding: 10px;" onclick="applyEmbroidery()">
+        ✨ 이 자수 옵션으로 확정 적용하기
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal M-WD-02: D-Day 계산기 -->
+  <div class="wf-modal-overlay" id="modal-M-WD-02">
+    <div class="wf-modal-content">
+      <div class="modal-header">
+        <h3 style="font-size: 16px; font-weight: bold; color: var(--color-primary);">📅 웨딩 D-Day 맞춤 안심 배송 계산기</h3>
+        <button class="modal-close-btn" onclick="closeModal('M-WD-02')">&times;</button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">예식일(Wedding Day) 선택</label>
+        <input type="date" class="form-control" id="weddingDatePicker" value="2026-10-24" onchange="calcDDay()">
+      </div>
+
+      <div id="ddayResultBox" style="background: #EBF3EF; padding: 16px; border-radius: 6px; text-align: center; margin-bottom: 16px;">
+        <div style="font-size: 13px; color: var(--color-primary);">자수 제작(2일) + 안심 택배(2일) 소요</div>
+        <strong style="font-size: 16px; color: var(--color-accent-rose); display: block; margin-top: 4px;" id="ddayBadgeText">
+          예식 D-14일 전 안전 수령 가능 (안심 배송 보증)
+        </strong>
+      </div>
+
+      <button class="wf-btn primary" style="width: 100%;" onclick="closeModal('M-WD-02'); switchScreen('P-WD-02');">
+        신혼 15장 풀 패키지 보러가기
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal M-WD-03: 1장 체험팩 -->
+  <div class="wf-modal-overlay" id="modal-M-WD-03">
+    <div class="wf-modal-content">
+      <div class="modal-header">
+        <h3 style="font-size: 16px; font-weight: bold; color: var(--color-accent-rose);">🎁 1장 3,000원 웨딩 안심 체험팩 (100% 환급)</h3>
+        <button class="modal-close-btn" onclick="closeModal('M-WD-03')">&times;</button>
+      </div>
+      <p style="font-size: 13px; color: var(--color-text-sub); margin-bottom: 14px;">
+        3,000원에 소창 원단 감촉과 자수 퀄리티를 미리 경험하세요. 본품 세트 구매 시 3,000원을 전액 돌려드립니다.
+      </p>
+      <div class="form-group">
+        <label class="form-label">배송받으실 주소</label>
+        <input type="text" class="form-control" value="서울시 강남구 테헤란로 123">
+      </div>
+      <button class="wf-btn rose" style="width: 100%;" onclick="alert('3,000원 결제 완료! 3,000원 페이백 쿠폰이 발급되었습니다.'); closeModal('M-WD-03');">
+        3,000원 체험팩 신청 및 쿠폰 받기
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal M-WD-04: 보자기 360 뷰어 -->
+  <div class="wf-modal-overlay" id="modal-M-WD-04">
+    <div class="wf-modal-content">
+      <div class="modal-header">
+        <h3 style="font-size: 16px; font-weight: bold; color: var(--color-accent-rose);">🌸 순면 소창 보자기 전통 매듭 360도 뷰어</h3>
+        <button class="modal-close-btn" onclick="closeModal('M-WD-04')">&times;</button>
+      </div>
+      <div class="image-placeholder" style="height: 240px; cursor: grab;" id="bojagi360Box">
+        <span id="knotAngleText">🔄 마우스를 좌우로 드래그하여 회전 (현재 각도: 0°)</span>
+      </div>
+      <button class="wf-btn primary" style="width: 100%;" onclick="closeModal('M-WD-04')">확인 완료</button>
+    </div>
+  </div>
+
+  <script>
+    // Screen Switch Engine
+    const screenNames = {
+      'P-WD-01': '웨딩 메인 & 큐레이션 허브',
+      'P-WD-02': '신혼 15장 풀 패키지 상세 (★)',
+      'P-WD-03': 'His & Hers 8장 커플 세트 상세',
+      'P-WD-04': '양가 부모님 소창 보자기 예단관 (★)',
+      'P-WD-05': '호텔식 욕실 수납 & 수명 가이드',
+      'P-WD-06': '신혼 혼수 위시리스트 & 청첩장 공유',
+      'P-WD-07': '2곳 분할 직배송 주문서 작성 (★)',
+      'P-WD-08': '웨딩 주문 완료 & D-Day 현황',
+      'EX-WD-01': '예식일 초임박 긴급 안내 [가정]'
+    };
+
+    function switchScreen(screenId) {
+      document.querySelectorAll('.screen-view').forEach(view => view.classList.remove('active'));
+      const targetView = document.getElementById(`view-${screenId}`);
+      if (targetView) {
+        targetView.classList.add('active');
+        document.getElementById('currentScreenId').textContent = screenId;
+        document.getElementById('currentScreenName').textContent = screenNames[screenId] || screenId;
+      }
+
+      document.querySelectorAll('.screen-nav-item').forEach(item => {
+        item.classList.remove('active');
+        if (item.textContent.includes(screenId)) {
+          item.classList.add('active');
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Viewport Toggle
+    function setViewport(mode) {
+      const frame = document.getElementById('viewportFrame');
+      document.querySelectorAll('.vp-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      frame.className = 'wf-viewport-frame';
+      if (mode === 'tablet') frame.classList.add('tablet');
+      if (mode === 'mobile') frame.classList.add('mobile');
+    }
+
+    // Modal Control
+    function openModal(modalId) {
+      const modal = document.getElementById(`modal-${modalId}`);
+      if (modal) {
+        modal.classList.add('active');
+        if (modalId === 'M-WD-01') renderEmbroidery();
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(`modal-${modalId}`);
+      if (modal) modal.classList.remove('active');
+    }
+
+    // Live HTML5 Canvas Embroidery Simulator
+    function renderEmbroidery() {
+      const canvas = document.getElementById('liveEmbroideryCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const text = document.getElementById('embroideryTextInput').value || 'Yujin & Dohyun';
+      const color = document.getElementById('threadColorSelect').value;
+      const fontStyle = document.getElementById('fontStyleSelect').value;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Background Texture Simulation
+      ctx.fillStyle = '#F5EFEB';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Grid stitch background
+      ctx.strokeStyle = 'rgba(215, 205, 195, 0.4)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < canvas.width; x += 8) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+
+      // Stitch Text Rendering
+      ctx.fillStyle = color;
+      ctx.font = `${fontStyle} 24px 'Georgia', serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.shadowColor = 'rgba(0,0,0,0.15)';
+      ctx.shadowBlur = 3;
+      ctx.shadowOffsetX = 1;
+      ctx.shadowOffsetY = 1;
+
+      ctx.fillText(`🪡 ${text}`, canvas.width / 2, canvas.height / 2);
+    }
+
+    function applyEmbroidery() {
+      const text = document.getElementById('embroideryTextInput').value;
+      document.getElementById('selectedEmbroideryPreview').innerHTML = `선택 완료: <strong>${text}</strong>`;
+      closeModal('M-WD-01');
+      alert(`부부 자수 각인 옵션 ("${text}")이 정상 적용되었습니다!`);
+    }
+
+    // D-Day Calculator
+    function calcDDay() {
+      const dateVal = document.getElementById('weddingDatePicker').value;
+      if (!dateVal) return;
+      const weddingDate = new Date(dateVal);
+      const today = new Date();
+      const diffTime = weddingDate - today;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      const badge = document.getElementById('ddayBadgeText');
+      if (diffDays <= 3) {
+        badge.innerHTML = `<span style="color:red;">⚠️ 예식 D-${diffDays}일 초임박! 긴급 퀵배송 필요</span>`;
+        switchScreen('EX-WD-01');
+        closeModal('M-WD-02');
+      } else {
+        badge.innerHTML = `예식 D-${diffDays}일 전 안전 수령 가능 (안심 배송 확약)`;
+      }
+    }
+
+    // Payment Processor
+    function processPayment() {
+      const btn = event.target;
+      btn.textContent = '⏳ 결제 검증 및 주문 접수 중...';
+      setTimeout(() => {
+        switchScreen('P-WD-08');
+        btn.textContent = '💳 99,000원 N Pay / 카카오페이 1초 간편결제 승인';
+      }, 600);
+    }
+
+    function copyWishLink() {
+      alert('💌 모바일 청첩장용 혼수 위시리스트 링크가 클립보드에 복사되었습니다!\n(https://flottelier.com/wish/yujin-dohyun)');
+    }
+
+    // Initialize Canvas on Load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderEmbroidery();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+flowchart TD
+  %% 글로벌 루트
+  ROOT["🎁 플로뜰리에 기프트 아틀리에 (Flottelier Gift)"]
+
+  %% 1차 Depth 영역
+  ROOT --> DEPTH1_CUR["01. GIFT CURATION<br>(상황별 & 예산별 큐레이션)"]
+  ROOT --> DEPTH1_SET["02. GIFT SETS<br>(선물 세트 컬렉션)"]
+  ROOT --> DEPTH1_GUD["03. GIFT GUIDE<br>(30초 소창 & 겹수 가이드)"]
+  ROOT --> DEPTH1_ORD["04. ORDER & SAFE DELIVERY<br>(직배송 & 가격표 미동봉 보증)"]
+
+  %% 2차 Depth 페이지
+  DEPTH1_CUR --> P01["P-GF-01: 선물 메인 & 큐레이션 허브<br>(상황/예산 필터 & BEST 1위 시그니처)"]
+  DEPTH1_CUR --> M04["M-GF-04: 1장 3,000원 기프트 체험팩<br>(선물 전 직접 사용 & 100% 환급)"]
+
+  DEPTH1_SET --> P02["P-GF-02: 시그니처 4종 선물 세트 상세<br>(3겹 데일리 2장 + 2겹 세안 2장)"]
+  DEPTH1_SET --> P03["P-GF-03: 리추얼 라이프스타일 세트 상세<br>(소창 타월 + 천연 EM 비누 + 미스트)"]
+  DEPTH1_SET --> P04["P-GF-04: 베이비 퓨어 출산 세트 상세<br>(2겹 가제 + 와입스 + 턱받이 + 4無)"]
+
+  DEPTH1_GUD --> P05["P-GF-05: 30초 소창 가이드 & 겹수 선택관<br>(소창 가치 비교 & 2/3/4겹 매트릭스)"]
+
+  DEPTH1_ORD --> P06["P-GF-06: 선물 직배송 주문서<br>(수령인 주소 & 가격표 100% 제외 보증)"]
+  DEPTH1_ORD --> P07["P-GF-07: 선물 주문 완료 & 배송/카드 확인<br>(포장 리포트 & 실시간 알림톡)"]
+
+  %% 모달 및 인터랙션 연결
+  P01 --> P02
+  P01 --> P03
+  P01 --> P04
+  P01 --> P05
+  P01 -.->|1장 먼저 체험| M04
+
+  P02 -.->|실시간 자수 프리뷰| M01["M-GF-01: Canvas 자수 시뮬레이터"]
+  P02 -.->|포장 상태 360도| M02["M-GF-02: 100% 무비닐 패키징 뷰어"]
+  P02 -.->|감성 카드 작성| M03["M-GF-03: 자필 메시지 카드 작성기"]
+  P02 -->|선물 주문하기| P06
+
+  P03 -.->|자수/패키지 커스텀| M01
+  P03 -.->|패키징 확인| M02
+  P03 -.->|메시지 작성| M03
+  P03 -->|선물 주문하기| P06
+
+  P04 -.->|태명 자수 커스텀| M01
+  P04 -.->|베이비 패키지 확인| M02
+  P04 -.->|출산 카드 작성| M03
+  P04 -->|선물 주문하기| P06
+
+  P05 -->|추천 세트 바로가기| P02
+  P06 -->|결제 완료| P07
+
+  %% 예외 분기
+  P06 -.->|자수 문구 미입력 오류| EX01["EX-GF-01: 자수 문구 오류 모달 [가정]"]
+  P06 -.->|수령인 주소 불완전| EX02["EX-GF-02: 직배송 주소 확인 모달 [가정]"]
+
+  %% 스타일 클래스 정의
+  classDef root fill:#2B3A42,stroke:#1A262C,stroke-width:2px,color:#FFFFFF;
+  classDef depth1 fill:#E3EAEB,stroke:#8B9D9F,stroke-width:2px,color:#1A262C;
+  classDef page fill:#FFFFFF,stroke:#5C7375,stroke-width:1.5px,color:#232527;
+  classDef modal fill:#FFF8F0,stroke:#C47A5A,stroke-width:1.5px,color:#8C4320;
+  classDef exception fill:#FDE8E8,stroke:#E02424,stroke-width:1.5px,color:#9B1C1C;
+
+  class ROOT root;
+  class DEPTH1_CUR,DEPTH1_SET,DEPTH1_GUD,DEPTH1_ORD depth1;
+  class P01,P02,P03,P04,P05,P06,P07 page;
+  class M01,M02,M03,M04 modal;
+  class EX01,EX02 exception;

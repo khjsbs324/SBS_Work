@@ -1,0 +1,51 @@
+flowchart TD
+  classDef main fill:#FAF7F2,stroke:#232527,stroke-width:2px;
+  classDef shop fill:#EFEAE2,stroke:#C47A5A,stroke-width:2px;
+  classDef modal fill:#FAF0E6,stroke:#7E8D7F,stroke-width:1px,stroke-dasharray: 5 5;
+  classDef my fill:#F0F4F1,stroke:#2A2624,stroke-width:2px;
+
+  ROOT["클린소창 (CLEAN SOCHANG) 홈"] :::main
+
+  subgraph MAIN_LAYER["01. 메인 & 공인 인증 (P-01 ~ P-03)"]
+    P01["P-01: 메인페이지<br>(국가 공인 환경표지 뱃지)"] :::main
+    P02["P-02: 공인 인증서 원문<br>(공식 조회 링크 연결)"] :::main
+    P03["P-03: 수명 & 세탁 가이드<br>(정련 폐수공정 공개)"] :::main
+  end
+
+  subgraph SHOP_LAYER["02. 커머스 & 환경 데이터 (P-04 ~ P-07)"]
+    P04["P-04: 전체 에코 카탈로그<br>(무비닐 / 오가닉 타월)"] :::shop
+    P05["P-05: 상품 상세 페이지<br>(친환경 정보표 & 무비닐포장)"] :::shop
+    P06["P-06: 친환경 정보표 비교<br>(Eco Specs Sheet)"] :::shop
+    P07["P-07: 폐수 공정 & 데이터<br>(탄소/물 절감 데이터)"] :::shop
+  end
+
+  subgraph MEDIA_LAYER["03. 팝업 & 수명 가이드 (P-08 ~ P-10)"]
+    P08["P-08: 성수 팝업스토어<br>(제로웨이스트 체험관)"] :::main
+    P09["P-09: 업사이클 청소 가이드<br>(낡은 수건 걸레 활용)"] :::main
+    P10["P-10: 에코 맘리뷰<br>(무비닐 포장 실후기)"] :::main
+  end
+
+  subgraph MY_LAYER["04. 마이페이지 & 자원 회수 (P-11 ~ P-12)"]
+    P11["P-11: 장바구니 & 1초 결제<br>(무비닐 0% / 묶음 합배송)"] :::my
+    P12["P-12: 마이페이지 & 자원 회수<br>(포장재/수건 수거 신청)"] :::my
+  end
+
+  subgraph MODAL_LAYER["05. 레이어드 모달 시스템"]
+    M01["M-01: 성수 팝업 사전예약 모달"] :::modal
+    M02["M-02: 공인 인증서 200% 원문 모달"] :::modal
+    M03["M-03: 자원 회수 무료 수거 모달"] :::modal
+  end
+
+  ROOT --> P01
+  P01 --> P04
+  P01 --> P02
+  P01 --> P08
+  P04 --> P05
+  P05 --> P06
+  P05 --> P07
+  P01 --> M02
+  P05 --> M02
+  P12 --> M03
+  P08 --> M01
+  P05 --> P11
+  P11 --> P12

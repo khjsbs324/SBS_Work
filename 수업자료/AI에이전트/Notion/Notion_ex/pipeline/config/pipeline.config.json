@@ -14,10 +14,7 @@
       "우선순위": "보통"
     }
   },
-  "googleCalendar": {
-    "toolPrefix": "mcp__claude_ai_Google_Calendar__",
-    "calendarId": "primary",
-    "lookAheadDays": 14,
+  "scheduleInput": {
     "snapshotPath": ".state/calendar-snapshot-latest.json"
   },
   "recommend": {

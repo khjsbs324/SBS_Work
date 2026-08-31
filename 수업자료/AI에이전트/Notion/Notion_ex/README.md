@@ -1,7 +1,7 @@
-# Notion_ex - Google Calendar → Notion Sync Pipeline
+# Notion_ex - 텍스트 일정 → Notion Sync Pipeline
 
 DAY9(PPT Automation) 프로젝트의 구조(`.claude` Rules/Agents/Skills/Hooks + 도메인 디렉터리 + `scripts` + `output`)를
-그대로 가져와 "구글 캘린더 → Notion 등록 → 변경/추천 리포트" 파이프라인 실습용으로 구성한 프로젝트다.
+그대로 가져와 "텍스트로 붙여넣은 일정 → Notion 등록 → 변경/추천 리포트" 파이프라인 실습용으로 구성한 프로젝트다.
 
 ## 사전 준비
 
@@ -12,18 +12,17 @@ cd "수업자료\AI에이전트\Notion\Notion_ex"
 claude
 ```
 
-Google Calendar는 최초 1회 인증이 필요하다. Claude 세션에서
-`mcp__claude_ai_Google_Calendar__authenticate`를 호출하면 인증 URL이 발급된다.
-인증 전에는 `pipeline/samples/sample-calendar-events.json`으로 드라이런할 수 있다.
+일정은 Claude 세션 대화창에 자유형식 텍스트로 붙여넣으면 된다(예: "9/2 10:00-11:00 스프린트 회의").
+아직 붙여넣지 않았다면 `pipeline/samples/sample-calendar-events.json`으로 드라이런할 수 있다.
 
 ## 주요 디렉터리
 
 - `.claude/rules` : 파이프라인 상시 규칙
-- `.claude/agents` : 단계별 Subagent (calendar-reader / notion-syncer / change-tracker / schedule-recommender)
+- `.claude/agents` : 단계별 Subagent (schedule-text-reader / notion-syncer / change-tracker / schedule-recommender)
 - `.claude/skills` : 4단계 절차 + 오케스트레이션 Skill
 - `.claude/hooks` : 실행 전후 자동 검증 PowerShell
 - `pipeline/config` : Notion 속성 매핑 등 설정
-- `pipeline/connectors` : Notion / Google Calendar 연동 코드
+- `pipeline/connectors` : Notion 연동 코드 / 텍스트 일정 파싱 안내
 - `pipeline/services` : 변경 비교(diff), 추천, 리포트 포맷 로직
 - `pipeline/schemas` : 이벤트/페이지 스키마 정의
 - `pipeline/samples` : 인증 전 드라이런용 샘플 데이터
@@ -34,7 +33,7 @@ Google Calendar는 최초 1회 인증이 필요하다. Claude 세션에서
 
 ## 파이프라인 4단계
 
-1. 구글 캘린더 일정 읽기 → `.claude/skills/read-google-calendar`
+1. 텍스트로 붙여넣은 일정 읽기 → `.claude/skills/read-pasted-schedule`
 2. Notion 등록 → `.claude/skills/sync-notion`
 3. 수정 사항 output 날짜로 정리 → `.claude/skills/organize-output`
 4. 다음 일정 추천 → output 날짜로 정리 → `.claude/skills/recommend-schedule`

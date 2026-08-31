@@ -1,0 +1,50 @@
+flowchart TD
+  classDef main fill:#FAF7F2,stroke:#232527,stroke-width:2px;
+  classDef shop fill:#EFEAE2,stroke:#C47A5A,stroke-width:2px;
+  classDef modal fill:#FAF0E6,stroke:#7E8D7F,stroke-width:1px,stroke-dasharray: 5 5;
+  classDef my fill:#F0F4F1,stroke:#2A2624,stroke-width:2px;
+
+  ROOT["플로뜰리에 (Flottelier) 홈"] :::main
+
+  subgraph MAIN_LAYER["01. 메인 & 브랜드 (P-01 ~ P-03)"]
+    P01["P-01: 메인페이지<br>(수채화 잉크/에디토리얼)"] :::main
+    P02["P-02: 4차 정련 스토리<br>(4無 공정)"] :::main
+    P03["P-03: 소창 길들이기 가이드<br>(4단계 수축 타임라인)"] :::main
+  end
+
+  subgraph SHOP_LAYER["02. 커머스 & 체험팩 (P-04 ~ P-07)"]
+    P04["P-04: 전체 상품 카탈로그<br>(2/3/4겹 용도 필터)"] :::shop
+    P05["P-05: 상품 상세 페이지<br>(정련뱃지/자수프리뷰)"] :::shop
+    P06["P-06: 1장 체험팩 100% 환급<br>(3,000원 체험)"] :::shop
+    P07["P-07: 커스텀 자수 & 답례품<br>(Canvas 단가 계산기)"] :::shop
+  end
+
+  subgraph MEDIA_LAYER["03. 팝업 & 미디어 (P-08 ~ P-10)"]
+    P08["P-08: 성수 팝업스토어<br>(오프라인 체험관)"] :::main
+    P09["P-09: 에디토리얼 룩북<br>(1-Click 장바구니)"] :::main
+    P10["P-10: SNS 언박싱 & 리뷰<br>(무비닐 패키징)"] :::main
+  end
+
+  subgraph MY_LAYER["04. 마이 & 재구매 (P-11 ~ P-12)"]
+    P11["P-11: 장바구니 & 1초 결제<br>(N Pay 1초 결제)"] :::my
+    P12["P-12: 마이페이지 & 재구매<br>(교체주기 알림)"] :::my
+  end
+
+  subgraph MODAL_LAYER["05. 레이어드 모달 시스템"]
+    M01["M-01: 성수 팝업 사전예약 모달"] :::modal
+    M02["M-02: KC 성적서 원문 모달"] :::modal
+    M03["M-03: 실시간 자수 프리뷰 모달"] :::modal
+  end
+
+  ROOT --> P01
+  P01 --> P04
+  P01 --> P02
+  P01 --> P08
+  P04 --> P05
+  P05 --> P06
+  P05 --> P07
+  P05 --> M03
+  P01 --> M02
+  P08 --> M01
+  P05 --> P11
+  P11 --> P12

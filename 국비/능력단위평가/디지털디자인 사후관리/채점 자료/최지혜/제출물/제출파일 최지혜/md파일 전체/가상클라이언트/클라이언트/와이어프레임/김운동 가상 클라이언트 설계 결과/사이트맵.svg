@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 960" width="100%" height="100%" style="background-color: #F8FAFC; font-family: 'Pretendard', 'Noto Sans KR', sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08" />
+    </filter>
+    <linearGradient id="rootGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="catGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="100%" stop-color="#DBEAFE" />
+    </linearGradient>
+    <linearGradient id="modalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7" />
+      <stop offset="100%" stop-color="#FDE68A" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#94A3B8" />
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#D97706" />
+    </marker>
+  </defs>
+
+  <!-- Title Header -->
+  <text x="700" y="45" font-size="24" font-weight="800" text-anchor="middle" fill="#0F172A">🗺️ 플로뜰리에 오하운 스포츠 센터 마스터 사이트맵 (Sitemap v1.0)</text>
+  <text x="700" y="70" font-size="13" text-anchor="middle" fill="#64748B">20대 후반 애슬레저 유저(김운동) 15대 요구사항 100% 반영 정보 아키텍처</text>
+
+  <!-- Root Node -->
+  <g filter="url(#shadow)">
+    <rect x="475" y="95" width="450" height="54" rx="27" fill="url(#rootGrad)" />
+    <text x="700" y="128" font-size="16" font-weight="700" text-anchor="middle" fill="#FFFFFF">🏃 플로뜰리에 오하운 스포츠 센터 (Flottelier Sport)</text>
+  </g>
+
+  <!-- Main Connectors from Root -->
+  <path d="M 700 149 L 700 180" stroke="#94A3B8" stroke-width="2" />
+  <path d="M 130 180 L 1270 180" stroke="#94A3B8" stroke-width="2" />
+  
+  <path d="M 130 180 L 130 210" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 360 180 L 360 210" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 590 180 L 590 210" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 820 180 L 820 210" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 1050 180 L 1050 210" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 1270 180 L 1270 210" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Column 1: SPORT & LINEUP -->
+  <g filter="url(#shadow)">
+    <rect x="25" y="210" width="210" height="44" rx="8" fill="url(#catGrad)" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="130" y="237" font-size="14" font-weight="700" text-anchor="middle" fill="#1E3A8A">01. SPORT &amp; LINEUP</text>
+  </g>
+  <path d="M 130 254 L 130 550" stroke="#CBD5E1" stroke-width="1.5" />
+  
+  <g filter="url(#shadow)">
+    <rect x="30" y="275" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="40" y="296" font-size="12" font-weight="700" fill="#0F172A">SCR-01: 스포츠 메인 홈</text>
+    <text x="40" y="315" font-size="10" fill="#64748B">1초 흡수 비주얼 &amp; 13인 퀵필터</text>
+
+    <rect x="30" y="345" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="40" y="366" font-size="12" font-weight="700" fill="#0F172A">SCR-02: 전체 카탈로그</text>
+    <text x="40" y="385" font-size="10" fill="#64748B">2·3·4겹 겹수 &amp; 종목별 태그</text>
+
+    <rect x="30" y="415" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="40" y="436" font-size="12" font-weight="700" fill="#0F172A">SCR-03: 오하운 스타터 팩</text>
+    <text x="40" y="455" font-size="10" fill="#64748B">롱타월+와입스+메쉬파우치</text>
+
+    <rect x="30" y="485" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="40" y="506" font-size="12" font-weight="700" fill="#0F172A">SCR-04: 스포츠 슬림 롱타월</text>
+    <text x="40" y="525" font-size="10" fill="#64748B">30x90cm &amp; 스냅 스트랩 옵션</text>
+  </g>
+
+  <!-- Column 2: PERFORMANCE & LAB -->
+  <g filter="url(#shadow)">
+    <rect x="255" y="210" width="210" height="44" rx="8" fill="url(#catGrad)" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="360" y="237" font-size="14" font-weight="700" text-anchor="middle" fill="#1E3A8A">02. PERFORMANCE LAB</text>
+  </g>
+  <path d="M 360 254 L 360 480" stroke="#CBD5E1" stroke-width="1.5" />
+  
+  <g filter="url(#shadow)">
+    <rect x="260" y="275" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="270" y="296" font-size="12" font-weight="700" fill="#0F172A">SCR-05: 1초 땀 흡수 챌린지</text>
+    <text x="270" y="315" font-size="10" fill="#64748B">극세사 vs 소창 흡수 비교 영상</text>
+
+    <rect x="260" y="345" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="270" y="366" font-size="12" font-weight="700" fill="#0F172A">SCR-06: 땀 냄새 제로 랩</text>
+    <text x="270" y="385" font-size="10" fill="#64748B">KATRI 99.8% 탈취 &amp; 격자구조</text>
+
+    <rect x="260" y="415" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="270" y="436" font-size="12" font-weight="700" fill="#0F172A">SCR-07: 40% 초경량 &amp; 퀵드라이</text>
+    <text x="270" y="455" font-size="10" fill="#64748B">실측 95g 저울 &amp; 1시간 건조표</text>
+  </g>
+
+  <!-- Column 3: CUSTOM STUDIO -->
+  <g filter="url(#shadow)">
+    <rect x="485" y="210" width="210" height="44" rx="8" fill="url(#catGrad)" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="590" y="237" font-size="14" font-weight="700" text-anchor="middle" fill="#1E3A8A">03. CUSTOM STUDIO</text>
+  </g>
+  <path d="M 590 254 L 590 410" stroke="#CBD5E1" stroke-width="1.5" />
+
+  <g filter="url(#shadow)">
+    <rect x="490" y="275" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="500" y="296" font-size="12" font-weight="700" fill="#0F172A">SCR-08: 슬로건 자수 스튜디오</text>
+    <text x="500" y="315" font-size="10" fill="#64748B">Canvas 실시간 0.05초 프리뷰</text>
+
+    <rect x="490" y="345" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="500" y="366" font-size="12" font-weight="700" fill="#0F172A">SCR-09: 러닝 크루 단체 자수</text>
+    <text x="500" y="385" font-size="10" fill="#64748B">대량 할인 &amp; 로고 AI 시뮬레이터</text>
+  </g>
+
+  <!-- Column 4: SPORT GUIDE -->
+  <g filter="url(#shadow)">
+    <rect x="715" y="210" width="210" height="44" rx="8" fill="url(#catGrad)" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="820" y="237" font-size="14" font-weight="700" text-anchor="middle" fill="#1E3A8A">04. SPORT GUIDE</text>
+  </g>
+  <path d="M 820 254 L 820 480" stroke="#CBD5E1" stroke-width="1.5" />
+
+  <g filter="url(#shadow)">
+    <rect x="720" y="275" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="730" y="296" font-size="12" font-weight="700" fill="#0F172A">SCR-10: 운동 종목별 겹수 매칭</text>
+    <text x="730" y="315" font-size="10" fill="#64748B">러닝/헬스/크로스핏 추천 툴</text>
+
+    <rect x="720" y="345" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="730" y="366" font-size="12" font-weight="700" fill="#0F172A">SCR-11: 세탁기 간편 관리서</text>
+    <text x="730" y="385" font-size="10" fill="#64748B">삶기 불필요 O/X 표 &amp; PDF</text>
+
+    <rect x="720" y="415" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="730" y="436" font-size="12" font-weight="700" fill="#0F172A">SCR-12: 미세플라스틱 0% 4無</text>
+    <text x="730" y="455" font-size="10" fill="#64748B">더마테스트 무자극 안전 인증</text>
+  </g>
+
+  <!-- Column 5: MY & CREW -->
+  <g filter="url(#shadow)">
+    <rect x="945" y="210" width="210" height="44" rx="8" fill="url(#catGrad)" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="1050" y="237" font-size="14" font-weight="700" text-anchor="middle" fill="#1E3A8A">05. MY &amp; CREW</text>
+  </g>
+  <path d="M 1050 254 L 1050 480" stroke="#CBD5E1" stroke-width="1.5" />
+
+  <g filter="url(#shadow)">
+    <rect x="950" y="275" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="960" y="296" font-size="12" font-weight="700" fill="#0F172A">SCR-13: 1장 안심 체험팩</text>
+    <text x="960" y="315" font-size="10" fill="#64748B">3천원 결제 ➔ 100% 환급 쿠폰</text>
+
+    <rect x="950" y="345" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="960" y="366" font-size="12" font-weight="700" fill="#0F172A">SCR-14: 장바구니 &amp; 1초 결제</text>
+    <text x="960" y="385" font-size="10" fill="#64748B">N Pay/카카오 &amp; 메쉬파우치</text>
+
+    <rect x="950" y="415" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="960" y="436" font-size="12" font-weight="700" fill="#0F172A">SCR-15: 마이페이지 &amp; 재주문</text>
+    <text x="960" y="455" font-size="10" fill="#64748B">자수 템플릿 저장 &amp; 알림톡</text>
+  </g>
+
+  <!-- Column 6: EXCEPTION -->
+  <g filter="url(#shadow)">
+    <rect x="1175" y="210" width="190" height="44" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5" />
+    <text x="1270" y="237" font-size="13" font-weight="700" text-anchor="middle" fill="#991B1B">00. EXCEPTION</text>
+  </g>
+  <path d="M 1270 254 L 1270 410" stroke="#FECACA" stroke-width="1.5" />
+
+  <g filter="url(#shadow)">
+    <rect x="1175" y="275" width="190" height="52" rx="6" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="1" />
+    <text x="1185" y="296" font-size="12" font-weight="700" fill="#991B1B">SCR-EX01: 검색없음/품절</text>
+    <text x="1185" y="315" font-size="10" fill="#64748B">추천 키워드 &amp; 스타터팩 대안</text>
+
+    <rect x="1175" y="345" width="190" height="52" rx="6" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="1" />
+    <text x="1185" y="366" font-size="12" font-weight="700" fill="#991B1B">SCR-EX02: 404 에러</text>
+    <text x="1185" y="385" font-size="10" fill="#64748B">홈 바로가기 복귀 지원</text>
+  </g>
+
+  <!-- Modal Layer System -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="600" width="1320" height="310" rx="12" fill="#FFFFFF" stroke="#FCD34D" stroke-width="2" />
+    <rect x="40" y="600" width="1320" height="38" rx="12" fill="url(#modalGrad)" />
+    <text x="60" y="625" font-size="14" font-weight="800" fill="#92400E">⚡ 5대 레이어드 모달 및 인터랙션 시스템 (Modal Architecture)</text>
+  </g>
+
+  <!-- Modal Cards -->
+  <g filter="url(#shadow)">
+    <rect x="65" y="660" width="230" height="100" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-dasharray="4 4" stroke-width="1.5" />
+    <text x="80" y="685" font-size="13" font-weight="700" fill="#B45309">MOD-01: 슬로건 자수 모달</text>
+    <text x="80" y="708" font-size="11" fill="#4B5563">· Canvas 실시간 0.05초 합성</text>
+    <text x="80" y="726" font-size="11" fill="#4B5563">· 8종 폰트 &amp; 7종 애슬레저 실</text>
+    <text x="80" y="744" font-size="11" fill="#6B7280">(연결: SCR-03, 04, 08)</text>
+
+    <rect x="325" y="660" width="230" height="100" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-dasharray="4 4" stroke-width="1.5" />
+    <text x="340" y="685" font-size="13" font-weight="700" fill="#B45309">MOD-02: 스냅 스트랩 3D 뷰</text>
+    <text x="340" y="708" font-size="11" fill="#4B5563">· 기구/락커 체결 360도 뷰어</text>
+    <text x="340" y="726" font-size="11" fill="#4B5563">· 원터치 단추 탈부착 시뮬</text>
+    <text x="340" y="744" font-size="11" fill="#6B7280">(연결: SCR-04)</text>
+
+    <rect x="585" y="660" width="230" height="100" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-dasharray="4 4" stroke-width="1.5" />
+    <text x="600" y="685" font-size="13" font-weight="700" fill="#B45309">MOD-03: 1장 체험팩 100% 환급</text>
+    <text x="600" y="708" font-size="11" fill="#4B5563">· 3,000원 체험 1초 간편 신청</text>
+    <text x="600" y="726" font-size="11" fill="#4B5563">· 본품 구매 시 100% 페이백 쿠폰</text>
+    <text x="600" y="744" font-size="11" fill="#6B7280">(연결: SCR-01, 05, 13)</text>
+
+    <rect x="845" y="660" width="230" height="100" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-dasharray="4 4" stroke-width="1.5" />
+    <text x="860" y="685" font-size="13" font-weight="700" fill="#B45309">MOD-04: 크루 견적서 PDF 1초</text>
+    <text x="860" y="708" font-size="11" fill="#4B5563">· 20~100장 수량별 할인 산출</text>
+    <text x="860" y="726" font-size="11" fill="#4B5563">· 직인 날인 견적서 PDF 출력</text>
+    <text x="860" y="744" font-size="11" fill="#6B7280">(연결: SCR-09)</text>
+
+    <rect x="1105" y="660" width="230" height="100" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-dasharray="4 4" stroke-width="1.5" />
+    <text x="1120" y="685" font-size="13" font-weight="700" fill="#B45309">MOD-05: KATRI 탈취 성적서</text>
+    <text x="1120" y="708" font-size="11" fill="#4B5563">· 모락셀라균 99.8% 200% 확대</text>
+    <text x="1120" y="726" font-size="11" fill="#4B5563">· 공인 원본 시험 성적서 다운</text>
+    <text x="1120" y="744" font-size="11" fill="#6B7280">(연결: SCR-06)</text>
+  </g>
+
+  <!-- Modal Connectors -->
+  <path d="M 130 537 C 130 570 180 570 180 660" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrowGold)" />
+  <path d="M 130 537 C 130 580 440 580 440 660" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrowGold)" />
+  <path d="M 1050 327 C 1050 580 700 580 700 660" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrowGold)" />
+  <path d="M 590 397 C 590 560 960 560 960 660" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrowGold)" />
+  <path d="M 360 397 C 360 560 1220 560 1220 660" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrowGold)" />
+
+  <text x="700" y="880" font-size="12" text-anchor="middle" fill="#64748B">✅ Flottelier Sport Platform Master Architecture • WCAG 2.1 AA Compliant • Mobile Touch Optimized</text>
+</svg>

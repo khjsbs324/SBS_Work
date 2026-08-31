@@ -6,7 +6,7 @@ description: 캘린더 이벤트 스냅샷을 Notion 데이터소스에 생성/�
 # Sync to Notion
 
 ## Procedure
-1. `.state/calendar-snapshot-latest.json`을 읽는다. 없으면 `read-google-calendar` 스킬을 먼저 실행한다.
+1. `.state/calendar-snapshot-latest.json`을 읽는다. 없으면 `read-pasted-schedule` 스킬을 먼저 실행한다.
 2. `scripts/sync-to-notion.ps1`을 실행한다.
    ```powershell
    powershell -ExecutionPolicy Bypass -File .\scripts\sync-to-notion.ps1

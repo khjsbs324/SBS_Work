@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 (Flottelier) - 김기업 B2B 와이어프레임 뷰어 (Wireframe v3.0)</title>
+  <style>
+    :root {
+      --wf-bg: #F0F4F8;
+      --wf-card-bg: #FFFFFF;
+      --wf-border: #CBD5E1;
+      --wf-border-dark: #334155;
+      --wf-text-main: #0F172A;
+      --wf-text-sub: #475569;
+      --wf-text-muted: #94A3B8;
+      --wf-accent: #2B6CB0;
+      --wf-accent-dark: #1A365D;
+      --wf-accent-light: #EBF3FA;
+      --wf-gold: #D97706;
+      --wf-placeholder: #E2E8F0;
+      --wf-tag-bg: #F1F5F9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+      background-color: var(--wf-bg);
+      color: var(--wf-text-main);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      width: 330px;
+      background: #FFFFFF;
+      border-right: 1px solid var(--wf-border);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      height: 100%;
+    }
+
+    .sidebar-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--wf-border);
+      background: #F8FAFC;
+    }
+
+    .sidebar-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--wf-accent-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-badge {
+      font-size: 11px;
+      background: var(--wf-accent);
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .sidebar-desc {
+      font-size: 12px;
+      color: var(--wf-text-sub);
+      margin-top: 4px;
+    }
+
+    .screen-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px 8px;
+      list-style: none;
+    }
+
+    .screen-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--wf-text-muted);
+      padding: 12px 10px 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .screen-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 12px;
+      border-radius: 6px;
+      margin-bottom: 2px;
+      cursor: pointer;
+      font-size: 12.5px;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+    }
+    .screen-item:hover {
+      background: var(--wf-tag-bg);
+    }
+    .screen-item.active {
+      background: var(--wf-accent-light);
+      color: var(--wf-accent);
+      font-weight: 700;
+      border-color: rgba(43, 108, 176, 0.3);
+    }
+
+    .screen-code {
+      font-size: 10.5px;
+      font-weight: 700;
+      background: #E2E8F0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    .screen-item.active .screen-code {
+      background: var(--wf-accent);
+      color: #FFFFFF;
+    }
+
+    /* Viewport & Controls */
+    .main-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: #E2E8F0;
+      overflow: hidden;
+    }
+
+    .toolbar {
+      height: 52px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--wf-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      flex-shrink: 0;
+    }
+
+    .current-screen-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .curr-badge {
+      font-size: 12px;
+      font-weight: 700;
+      background: var(--wf-accent-dark);
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .curr-name {
+      font-size: 14.5px;
+      font-weight: 700;
+    }
+
+    .viewport-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vp-btn {
+      padding: 6px 12px;
+      border: 1px solid var(--wf-border);
+      border-radius: 6px;
+      font-size: 12px;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .vp-btn.active {
+      background: var(--wf-accent-dark);
+      color: #fff;
+      border-color: var(--wf-accent-dark);
+    }
+
+    .canvas-wrapper {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .wireframe-device {
+      background: #FFFFFF;
+      border: 1px solid var(--wf-border-dark);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      transition: width 0.3s ease;
+      min-height: 850px;
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Wireframe UI Elements */
+    .wf-topbar {
+      background: var(--wf-accent-dark);
+      color: #F8FAFC;
+      font-size: 11px;
+      padding: 6px 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .wf-header {
+      border-bottom: 1px solid var(--wf-border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FFFFFF;
+    }
+    .wf-logo {
+      font-weight: 900;
+      font-size: 17px;
+      letter-spacing: 0.5px;
+      color: var(--wf-accent-dark);
+    }
+    .wf-nav {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .wf-body {
+      padding: 24px;
+      flex: 1;
+    }
+
+    .wf-footer {
+      border-top: 1px solid var(--wf-border);
+      padding: 18px 24px;
+      background: #F8FAFC;
+      font-size: 11px;
+      color: var(--wf-text-sub);
+      text-align: center;
+    }
+
+    .wf-box {
+      border: 1px dashed var(--wf-border-dark);
+      background: var(--wf-placeholder);
+      padding: 20px;
+      border-radius: 4px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .wf-card {
+      border: 1px solid var(--wf-border);
+      background: #FFFFFF;
+      padding: 18px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .wf-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .wf-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .wf-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--wf-accent);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      border: none;
+      text-decoration: none;
+    }
+    .wf-btn:hover {
+      background: var(--wf-accent-dark);
+    }
+    .wf-btn-sub {
+      background: #E2E8F0;
+      color: var(--wf-text-main);
+    }
+    .wf-btn-sub:hover {
+      background: #CBD5E1;
+    }
+    .wf-btn-gold {
+      background: var(--wf-gold);
+      color: #fff;
+    }
+
+    .wf-input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid var(--wf-border);
+      border-radius: 4px;
+      font-size: 13px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      background: #fff;
+    }
+
+    .wf-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      background: #E2E8F0;
+      color: #334155;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    /* Modal Overlay Simulation */
+    .wf-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .wf-modal-box {
+      background: #FFFFFF;
+      border-radius: 8px;
+      max-width: 650px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      border: 2px solid var(--wf-accent-dark);
+    }
+    .wf-modal-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--wf-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #F8FAFC;
+    }
+    .wf-modal-body {
+      padding: 20px;
+    }
+
+    /* Device Responsive Modes */
+    .device-desktop { max-width: 1200px; }
+    .device-tablet { max-width: 768px; }
+    .device-mobile { max-width: 375px; }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-title">
+        <span>Flottelier ENTERPRISE</span>
+        <span class="sidebar-badge">v3.0</span>
+      </div>
+      <p class="sidebar-desc">김기업(송민재) 인사·총무팀장 페르소나 와이어프레임</p>
+    </div>
+
+    <ul class="screen-list" id="screenListNav">
+      <!-- Injected via JS -->
+    </ul>
+  </aside>
+
+  <!-- Main Stage -->
+  <main class="main-stage">
+    <header class="toolbar">
+      <div class="current-screen-info">
+        <span class="curr-badge" id="currBadge">P-01</span>
+        <span class="curr-name" id="currName">B2B 기업 메인페이지</span>
+      </div>
+
+      <div class="viewport-controls">
+        <button class="vp-btn active" onclick="setDevice('desktop')">💻 Desktop (1200px)</button>
+        <button class="vp-btn" onclick="setDevice('tablet')">📱 Tablet (768px)</button>
+        <button class="vp-btn" onclick="setDevice('mobile')">📱 Mobile (375px)</button>
+      </div>
+    </header>
+
+    <div class="canvas-wrapper">
+      <div class="wireframe-device device-desktop" id="deviceContainer">
+        <!-- Common Top Notice Bar -->
+        <div class="wf-topbar">
+          <span>[B2B 사업자 세금계산서 100% 즉시 발행]</span>
+          <span>[엑셀 1초 일괄 업로드 개별 직배송] | [ESG 탄소 절감 리포트 동봉]</span>
+        </div>
+
+        <!-- Common Header -->
+        <div class="wf-header">
+          <div class="wf-logo" onclick="showScreen('P-01')" style="cursor: pointer;">Flottelier ENTERPRISE</div>
+          <div class="wf-nav">
+            <span style="cursor: pointer;" onclick="showScreen('P-02')">01. 예산별 기프트</span>
+            <span style="cursor: pointer;" onclick="showScreen('P-05')">02. 로고 자수기</span>
+            <span style="cursor: pointer;" onclick="showScreen('P-07')">03. 엑셀 일괄배송</span>
+            <span style="cursor: pointer;" onclick="showScreen('P-10')">04. 실시간 견적서</span>
+            <span style="cursor: pointer;" onclick="showScreen('P-12')">05. 기업 무료샘플</span>
+          </div>
+          <div>
+            <button class="wf-btn" onclick="showModal('M-04')">📄 직인 견적서 PDF 출력</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Screen Content Body -->
+        <div class="wf-body" id="screenContainer">
+          <!-- Screen content injected here -->
+        </div>
+
+        <!-- Common Footer -->
+        <div class="wf-footer">
+          <p>플로뜰리에 B2B 기업 특판 전담팀 | 사업자 세금계산서 원클릭 발행 | 100% 무비닐 ESG 친환경 패키징 보증</p>
+          <p style="margin-top: 4px; opacity: 0.7;">&copy; 2026 Flottelier Enterprise. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Layered Modals -->
+  <div class="wf-modal-overlay" id="modalOverlay">
+    <div class="wf-modal-box">
+      <div class="wf-modal-header">
+        <h3 id="modalTitle" style="font-size: 14.5px; font-weight: 700;">모달 타이틀</h3>
+        <button onclick="closeModal()" style="font-size: 18px; border:none; background:none; cursor:pointer;">&times;</button>
+      </div>
+      <div class="wf-modal-body" id="modalBody">
+        <!-- Modal Content -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const screens = [
+      { id: "P-01", group: "메인 & 카탈로그", name: "B2B 기업 메인페이지", render: renderP01 },
+      { id: "P-02", group: "예산별 기프트 팩", name: "3만원대 실속 베이직 팩", render: renderP02 },
+      { id: "P-03", group: "예산별 기프트 팩", name: "5만원대 프리미엄 팩 (BEST)", render: renderP03 },
+      { id: "P-04", group: "예산별 기프트 팩", name: "10만원대 VIP 프레스티지", render: renderP04 },
+      { id: "P-05", group: "CI 브랜딩 & 메시지", name: "기업 로고 자수 센터", render: renderP05 },
+      { id: "P-06", group: "CI 브랜딩 & 메시지", name: "맞춤 슬리브 & CEO 감사 카드", render: renderP06 },
+      { id: "P-07", group: "엑셀 배송 & 납기", name: "엑셀 일괄 배송 센터", render: renderP07 },
+      { id: "P-08", group: "엑셀 배송 & 납기", name: "납기일 엄수 보증관 (D-Day)", render: renderP08 },
+      { id: "P-09", group: "엑셀 배송 & 납기", name: "실시간 배송 트래킹 대시보드", render: renderP09 },
+      { id: "P-10", group: "견적 & ESG 실증", name: "실시간 견적 & 세금계산서", render: renderP10 },
+      { id: "P-11", group: "견적 & ESG 실증", name: "ESG 탄소/플라스틱 리포트관", render: renderP11 },
+      { id: "P-12", group: "견적 & ESG 실증", name: "기업 무료 샘플 키트 신청", render: renderP12 },
+      { id: "M-01", group: "레이어드 모달", name: "주소록 엑셀 1초 파서 모달", render: () => renderModalDirect('M-01') },
+      { id: "M-02", group: "레이어드 모달", name: "KC 4無 성적서 200% 확대", render: () => renderModalDirect('M-02') },
+      { id: "M-03", group: "레이어드 모달", name: "Canvas 실시간 로고 자수기", render: () => renderModalDirect('M-03') },
+      { id: "M-04", group: "레이어드 모달", name: "실시간 견적서 PDF 1초 출력", render: () => renderModalDirect('M-04') },
+      { id: "EX-01", group: "예외 페이지", name: "엑셀 주소록 형식 오류 [가정]", render: renderEX01 },
+      { id: "EX-02", group: "예외 페이지", name: "1,000세트 생산 조율 [가정]", render: renderEX02 },
+      { id: "EX-03", group: "예외 페이지", name: "404 Not Found [가정]", render: renderEX03 }
+    ];
+
+    let currentScreenId = "P-01";
+
+    function initNav() {
+      const nav = document.getElementById('screenListNav');
+      let currentGroup = "";
+      
+      screens.forEach(s => {
+        if (s.group !== currentGroup) {
+          currentGroup = s.group;
+          const grpEl = document.createElement('li');
+          grpEl.className = 'screen-group-title';
+          grpEl.innerText = currentGroup;
+          nav.appendChild(grpEl);
+        }
+
+        const item = document.createElement('li');
+        item.className = 'screen-item' + (s.id === currentScreenId ? ' active' : '');
+        item.id = 'nav-' + s.id;
+        item.onclick = () => showScreen(s.id);
+        item.innerHTML = `
+          <span><span class="screen-code">${s.id}</span>${s.name}</span>
+          <span style="font-size: 11px; color: #94A3B8;">&rarr;</span>
+        `;
+        nav.appendChild(item);
+      });
+    }
+
+    function showScreen(id) {
+      currentScreenId = id;
+      document.querySelectorAll('.screen-item').forEach(el => el.classList.remove('active'));
+      const activeNav = document.getElementById('nav-' + id);
+      if (activeNav) activeNav.classList.add('active');
+
+      const screenObj = screens.find(s => s.id === id);
+      if (screenObj) {
+        document.getElementById('currBadge').innerText = screenObj.id;
+        document.getElementById('currName').innerText = screenObj.name;
+        
+        if (id.startsWith('M-')) {
+          showModal(id);
+        } else {
+          closeModal();
+          document.getElementById('screenContainer').innerHTML = screenObj.render();
+        }
+      }
+    }
+
+    function setDevice(type) {
+      const dev = document.getElementById('deviceContainer');
+      const btns = document.querySelectorAll('.vp-btn');
+      btns.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      dev.className = 'wireframe-device device-' + type;
+    }
+
+    // Modal Simulation
+    function showModal(modalId) {
+      const overlay = document.getElementById('modalOverlay');
+      const title = document.getElementById('modalTitle');
+      const body = document.getElementById('modalBody');
+
+      overlay.style.display = 'flex';
+
+      if (modalId === 'M-01') {
+        title.innerText = '엑셀 주소록 1초 일괄 파서 모달 (M-01)';
+        body.innerHTML = `
+          <div class="wf-box" style="height: 180px; background:#F8FAFC; border:2px dashed #2B6CB0; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer;" onclick="alert('엑셀 파일이 정상 파싱되었습니다: 총 200명 수령인 주소 등록 완료'); closeModal(); showScreen('P-07');">
+            <div style="font-size: 28px; margin-bottom: 6px;">📊</div>
+            <strong>[플로뜰리에_B2B_주소록_표준양식.xlsx] 파일 드래그 앤 드롭</strong>
+            <p style="font-size: 11px; color: #64748B; margin-top: 4px;">수백 명 주소지를 1초 만에 자동 검증 및 분기합니다.</p>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+            <a href="javascript:void(0)" onclick="alert('표준 엑셀 템플릿 다운로드 완료');" style="font-size:12px; color:#2B6CB0; text-decoration:underline;">📥 표준 엑셀 템플릿 다운로드</a>
+            <button class="wf-btn wf-btn-sub" onclick="closeModal()">닫기</button>
+          </div>
+        `;
+      } else if (modalId === 'M-02') {
+        title.innerText = 'KC 공인 4無 및 100회 세탁 시험성적서 200% 확대 (M-02)';
+        body.innerHTML = `
+          <div class="wf-box" style="height: 280px; display:flex; align-items:center; justify-content:center; background:#FFF;">
+            <div style="text-align:center;">
+              <div style="font-size: 26px; margin-bottom: 6px;">📑</div>
+              <strong>KATRI 한국의류시험연구원 100회 세탁 내구성 성적서</strong>
+              <p style="font-size: 12px; color: #475569; margin-top: 4px;">• 100회 세탁 후 수축률 2.8% (안정 합격)<br>• 형광증백제/화학잔여물 0.00% 불검출 인증</p>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap: 8px; margin-top: 14px;">
+            <button class="wf-btn wf-btn-sub" onclick="closeModal()">닫기</button>
+            <button class="wf-btn" onclick="alert('성적서 원본 PDF 다운로드가 완료되었습니다.'); closeModal();">원본 PDF 다운로드</button>
+          </div>
+        `;
+      } else if (modalId === 'M-03') {
+        title.innerText = 'Canvas 실시간 기업 CI 로고 자수 시뮬레이터 (M-03)';
+        body.innerHTML = `
+          <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap: 14px;">
+            <div class="wf-box" style="height: 210px; background:#FAF7F2; border:1px solid #CBD5E1; display:flex; align-items:center; justify-content:center;">
+              <div style="text-align:center;">
+                <div style="font-size: 18px; font-weight:800; color:#B45309;">[ HYUNDAI CORP CI ]</div>
+                <div style="font-size: 11px; color:#64748B; margin-top:4px;">샴페인 골드 실 자수 정밀 렌더링 완료</div>
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 12px; font-weight:700;">자수 실 색상 선택</label>
+              <div style="display:flex; gap: 6px; margin: 6px 0 12px;">
+                <span style="width:22px; height:22px; border-radius:50%; background:#D97706; border:2px solid #000; cursor:pointer;" title="샴페인 골드 (인기 1위)"></span>
+                <span style="width:22px; height:22px; border-radius:50%; background:#94A3B8; cursor:pointer;" title="플래티넘 실버"></span>
+                <span style="width:22px; height:22px; border-radius:50%; background:#334155; cursor:pointer;" title="앤티크 차콜"></span>
+              </div>
+              <label style="font-size: 12px; font-weight:700;">자수 위치</label>
+              <select class="wf-input">
+                <option>우측 하단 (추천)</option>
+                <option>중앙 상단</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap: 8px; margin-top: 14px;">
+            <button class="wf-btn wf-btn-sub" onclick="closeModal()">취소</button>
+            <button class="wf-btn" onclick="closeModal(); showScreen('P-06');">자수 시안 확정 &rarr;</button>
+          </div>
+        `;
+      } else if (modalId === 'M-04') {
+        title.innerText = '직인 날인 실시간 공식 견적서 PDF 1초 출력 (M-04)';
+        body.innerHTML = `
+          <div class="wf-card" style="background:#FFF; border:1px solid #1E293B;">
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #E2E8F0; padding-bottom:6px; margin-bottom:8px;">
+              <strong>[공식 견적서] 플로뜰리에 B2B ENTERPRISE</strong>
+              <span class="wf-tag" style="background:#D97706; color:#fff;">법인 직인 날인 완료</span>
+            </div>
+            <p style="font-size:12px;">• 공급자: 주식회사 플로뜰리에 (사업자번호: 123-45-67890)</p>
+            <p style="font-size:12px;">• 품목: 5만원대 프리미엄 ESG 기프트 팩 (200세트 / 로고 자수 포함)</p>
+            <p style="font-size:12px; font-weight:700; color:#2B6CB0; margin-top:6px;">• 총 합계금액: 6,500,000원 (VAT 포함 / 엑셀 200곳 무료 직배송)</p>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap: 8px; margin-top: 14px;">
+            <button class="wf-btn wf-btn-sub" onclick="closeModal()">닫기</button>
+            <button class="wf-btn" onclick="alert('견적서 PDF 다운로드가 완료되었습니다.'); closeModal(); showScreen('P-10');">PDF 다운로드 후 결제 이동 &rarr;</button>
+          </div>
+        `;
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').style.display = 'none';
+    }
+
+    function renderModalDirect(id) {
+      showModal(id);
+      return `<div class="wf-box">모달 [${id}]이 활성화되었습니다.</div>`;
+    }
+
+    /* Screen Renderers */
+    function renderP01() {
+      return `
+        <div class="wf-card" style="background:#EBF3FA; border-color:#2B6CB0; text-align:center; padding: 28px;">
+          <span class="wf-tag" style="background:#1A365D; color:#fff;">B2B ENTERPRISE SPECIAL</span>
+          <h2 style="font-size:21px; margin: 8px 0; color:#1A365D;">기업의 품격과 ESG 경영 실적을 전하는 4차 정련 소창 기프트</h2>
+          <p style="font-size:13px; color:#475569;">임직원 명절/창립기념일 &amp; VIP 고객을 위한 친환경 프리미엄 패키지 (최대 40% 대량 할인)</p>
+          <div style="margin-top:16px; display:flex; justify-content:center; gap:10px;">
+            <button class="wf-btn" onclick="showScreen('P-03')">📦 5만원대 BEST 팩 보기</button>
+            <button class="wf-btn wf-btn-sub" onclick="showScreen('P-12')">🎁 경영진 보고용 무료 샘플 신청</button>
+            <button class="wf-btn wf-btn-gold" onclick="showModal('M-04')">📄 직인 견적서 1초 출력</button>
+          </div>
+        </div>
+
+        <div style="font-weight:700; font-size:14.5px; margin: 18px 0 10px;">예산별 B2B 기업 전용 기프트 라인업</div>
+        <div class="wf-grid-3">
+          <div class="wf-card">
+            <span class="wf-tag">임직원 복지/근로자의 날</span>
+            <h3 style="font-size:15.5px; margin:6px 0;">3만원대 실속 베이직 팩</h3>
+            <p style="font-size:12px; color:#64748B;">3겹 세안타월 3장 + 재생지 패키징</p>
+            <p style="font-size:12px; color:#2B6CB0; font-weight:700; margin-top:4px;">세트당 24,500원 (30%↓)</p>
+            <button class="wf-btn" style="width:100%; margin-top:10px;" onclick="showScreen('P-02')">상세보기 &amp; 견적</button>
+          </div>
+
+          <div class="wf-card" style="border: 2px solid #2B6CB0;">
+            <span class="wf-tag" style="background:#2B6CB0; color:#fff;">BEST 1위 (창립기념일/명절)</span>
+            <h3 style="font-size:15.5px; margin:6px 0;">5만원대 프리미엄 팩</h3>
+            <p style="font-size:12px; color:#64748B;">세안 3장+바스 1장+맞춤 슬리브+CEO카드</p>
+            <p style="font-size:12px; color:#2B6CB0; font-weight:700; margin-top:4px;">세트당 32,500원 (35%↓ / 200세트)</p>
+            <button class="wf-btn" style="width:100%; margin-top:10px;" onclick="showScreen('P-03')">상세보기 &amp; 자수 &rarr;</button>
+          </div>
+
+          <div class="wf-card">
+            <span class="wf-tag">VIP 임원 및 주요 고객</span>
+            <h3 style="font-size:15.5px; margin:6px 0;">10만원대 VIP 프레스티지</h3>
+            <p style="font-size:12px; color:#64748B;">풀세트 + 고급 한지 지함 + 소창 보자기</p>
+            <p style="font-size:12px; color:#2B6CB0; font-weight:700; margin-top:4px;">세트당 68,000원 (40%↓)</p>
+            <button class="wf-btn" style="width:100%; margin-top:10px;" onclick="showScreen('P-04')">상세보기 &amp; 견적</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP02() {
+      return `
+        <h2>P-02. 3만원대 실속 베이직 팩 (임직원 복지형)</h2>
+        <div class="wf-grid-2" style="margin-top:14px;">
+          <div class="wf-box" style="height:220px;">[ 3겹 세안타월 3장 + 재생지 박스 연출 컷 ]</div>
+          <div class="wf-card">
+            <span class="wf-tag">실속 대량 추천</span>
+            <h3 style="margin:6px 0;">3만원대 실속 베이직 팩</h3>
+            <p style="font-size:12px; color:#64748B;">100% 무비닐 재생지 &amp; 콩기름 인쇄 패키징 동봉</p>
+            <div style="margin:12px 0; padding:10px; background:#F8FAFC; border-radius:4px;">
+              <div style="font-size:12px;">100세트 기준 대량 할인가</div>
+              <strong style="font-size:18px; color:#2B6CB0;">세트당 24,500원 (정가 35,000원 대비 30%↓)</strong>
+            </div>
+            <button class="wf-btn" style="width:100%;" onclick="showScreen('P-05')">기업 로고 자수 커스텀 &rarr;</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP03() {
+      return `
+        <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap: 20px;">
+          <div>
+            <div class="wf-box" style="height:280px;">[ 5만원대 프리미엄 팩 + 맞춤 슬리브 &amp; CEO 카드 실물 컷 ]</div>
+            <div class="wf-card">
+              <strong>🌱 기업 ESG 실적 기여 지수</strong>
+              <p style="font-size:12px; color:#475569; margin-top:4px;">• 세트당 플라스틱 포장재 120g 절감 확약</p>
+              <p style="font-size:12px; color:#2B6CB0; font-weight:700;">• 200세트 발주 시 플라스틱 24kg &amp; 탄소 85kg 저감 리포트 동봉</p>
+            </div>
+          </div>
+          <div>
+            <span class="wf-tag" style="background:#2B6CB0; color:#fff;">BEST 1위</span>
+            <h2 style="font-size:19px; margin: 6px 0;">5만원대 프리미엄 기프트 팩</h2>
+            <p style="font-size:12px; color:#64748B;">세안타월 3장 + 대형 바스타월 1장 + 맞춤 슬리브</p>
+            
+            <div style="margin:14px 0; padding:12px; background:#F8FAFC; border-radius:6px; border:1px solid #CBD5E1;">
+              <div style="display:flex; justify-content:space-between; font-size:12px;">
+                <span>발주 수량: <strong>200 세트</strong></span>
+                <span style="color:#2B6CB0; font-weight:700;">대량 할인 35% 적용</span>
+              </div>
+              <div style="font-size:21px; font-weight:800; color:#2B6CB0; margin-top:4px;">
+                6,500,000원 <span style="font-size:12px; color:#64748B; font-weight:400;">(세트당 32,500원 / VAT 포함)</span>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <button class="wf-btn" style="padding:11px;" onclick="showScreen('P-05')">🎨 기업 로고 AI 자수 커스텀 &rarr;</button>
+              <button class="wf-btn wf-btn-sub" style="padding:11px;" onclick="showScreen('P-07')">📊 엑셀 1초 일괄 배송지 등록 &rarr;</button>
+              <button class="wf-btn wf-btn-gold" style="padding:11px;" onclick="showModal('M-04')">📄 직인 날인 견적서 PDF 1초 출력</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP04() {
+      return `
+        <h2>P-04. 10만원대 VIP 프레스티지 팩</h2>
+        <div class="wf-grid-2" style="margin-top:14px;">
+          <div class="wf-box" style="height:220px;">[ 고급 한지 지함 박스 &amp; 순면 소창 보자기 포장 컷 ]</div>
+          <div class="wf-card">
+            <span class="wf-tag" style="background:#D97706; color:#fff;">VIP 전용</span>
+            <h3 style="margin:6px 0;">10만원대 VIP 프레스티지</h3>
+            <p style="font-size:12px; color:#64748B;">바스 2장 + 세안 4장 + 핸드 2장 + 소창 보자기 포장</p>
+            <div style="margin:12px 0; padding:10px; background:#F8FAFC; border-radius:4px;">
+              <strong style="font-size:18px; color:#2B6CB0;">세트당 68,000원 (40%↓ / 50세트 이상)</strong>
+            </div>
+            <button class="wf-btn" style="width:100%;" onclick="showScreen('P-05')">VIP 금사 로고 자수 커스텀 &rarr;</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP05() {
+      return `
+        <h2>P-05. 기업 로고 자수 센터 (Canvas Preview)</h2>
+        <p style="font-size:12.5px; color:#64748B; margin-bottom:14px;">기업 CI 로고 AI/PNG 파일을 업로드하면 0.05초 만에 소창 패브릭 위에 금사/은사 자수가 렌더링됩니다.</p>
+        
+        <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:18px;">
+          <div class="wf-box" style="height:280px; background:#FAF7F2; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+            <div style="font-size:22px; font-weight:800; color:#B45309;">[ HYUNDAI CORP CI ]</div>
+            <p style="font-size:11px; color:#64748B; margin-top:6px;">Canvas 금사 실 자수 정밀 렌더링 프리뷰 (실제 1:1 규격)</p>
+          </div>
+          <div>
+            <div class="wf-card">
+              <label style="font-size:12px; font-weight:700;">1. 기업 로고 파일 업로드 (AI / SVG / PNG)</label>
+              <div class="wf-box" style="padding:12px; margin:6px 0; cursor:pointer;" onclick="showModal('M-03')">
+                📂 로고 파일 드래그 앤 드롭 (또는 클릭)
+              </div>
+              <label style="font-size:12px; font-weight:700;">2. 자수 실 색상</label>
+              <select class="wf-input">
+                <option>샴페인 골드 (기업 창립기념일 인기 1위)</option>
+                <option>플래티넘 실버</option>
+                <option>앤티크 차콜 그레이</option>
+              </select>
+              <button class="wf-btn" style="width:100%;" onclick="showScreen('P-06')">자수 확정 &amp; CEO 카드 작성 &rarr;</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP06() {
+      return `
+        <h2>P-06. 맞춤 슬리브 &amp; CEO 감사 카드 제작관</h2>
+        <div class="wf-grid-2" style="margin-top:14px;">
+          <div class="wf-card">
+            <div class="wf-box" style="height:180px;">[ 대표이사 인사말 인쇄 카드 &amp; 슬리브 3D 뷰어 ]</div>
+            <strong>대표이사 인사말 카드 동봉</strong>
+            <p style="font-size:12px; color:#64748B; margin-top:4px;">임직원의 헌신에 감사하는 대표이사 메시지를 콩기름 친환경 종이에 인쇄하여 동봉합니다.</p>
+          </div>
+          <div class="wf-card">
+            <h4>인사말 템플릿 선택</h4>
+            <select class="wf-input" style="margin:8px 0;">
+              <option>창립기념일 감사 인사말</option>
+              <option>추석/설 명절 임직원 격려사</option>
+              <option>VIP 고객 감사장</option>
+            </select>
+            <textarea class="wf-input" rows="3">지난 한 해 동안 회사의 성장을 위해 헌신해 주신 임직원 여러분의 노고에 깊은 감사를 드립니다.</textarea>
+            <button class="wf-btn" style="width:100%; margin-top:10px;" onclick="showScreen('P-07')">엑셀 일괄 배송 설정 &rarr;</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP07() {
+      return `
+        <h2>P-07. 엑셀 일괄 배송 센터 (Excel Mass Delivery)</h2>
+        <p style="font-size:12.5px; color:#64748B; margin-bottom:14px;">수백 명 임직원 주소지를 엑셀 파일 하나로 1초 만에 일괄 등록합니다.</p>
+        
+        <div class="wf-card" style="border: 2px dashed #2B6CB0; text-align:center; padding:24px; cursor:pointer;" onclick="showModal('M-01')">
+          <div style="font-size:28px;">📊</div>
+          <strong>엑셀 주소록 파일 드래그 앤 드롭 (M-01 파서 연동)</strong>
+          <p style="font-size:11px; color:#64748B; margin-top:4px;">표준 엑셀 양식을 업로드하면 200명 주소를 1초 만에 검증합니다.</p>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+          <button class="wf-btn wf-btn-sub" onclick="showScreen('EX-01')">(오류 시뮬레이션: 엑셀 주소 오류 테스트)</button>
+          <button class="wf-btn" onclick="showScreen('P-10')">직인 견적서 확인 및 발주 &rarr;</button>
+        </div>
+      `;
+    }
+
+    function renderP08() {
+      return `
+        <h2>P-08. 납기일 엄수 보증관 (D-Day 확약서)</h2>
+        <div class="wf-card" style="max-width:650px; margin:16px auto;">
+          <div class="wf-box" style="height:160px;">[ D-Day 납품 확약서 양식 샘플 ]</div>
+          <h3>창립기념일/명절 기한 내 납품 100% 보증</h3>
+          <p style="font-size:12px; color:#64748B; margin:6px 0;">행사 일정에 맞춘 납기 지연 시 결제 금액의 100%를 전액 보상하는 공식 확약서를 발급해 드립니다.</p>
+          <button class="wf-btn" style="width:100%; margin-top:10px;" onclick="alert('D-Day 납품 확약서 PDF 저장이 완료되었습니다.');">D-Day 확약서 PDF 다운로드</button>
+        </div>
+      `;
+    }
+
+    function renderP09() {
+      return `
+        <h2>P-09. 실시간 임직원 배송 트래킹 대시보드</h2>
+        <div class="wf-card" style="margin-top:14px;">
+          <h4>200명 임직원 실시간 배송 현황</h4>
+          <div style="display:flex; gap:12px; margin:12px 0;">
+            <span class="wf-tag" style="background:#059669; color:#fff; padding:6px 12px;">배송완료 188건 (94%)</span>
+            <span class="wf-tag" style="background:#2B6CB0; color:#fff; padding:6px 12px;">배송중 12건 (6%)</span>
+          </div>
+          <button class="wf-btn wf-btn-sub" onclick="alert('전체 배송 송장 엑셀 파일이 다운로드되었습니다.');">전체 송장 엑셀 다운로드</button>
+        </div>
+      `;
+    }
+
+    function renderP10() {
+      return `
+        <h2>P-10. 실시간 견적 &amp; 세금계산서 센터</h2>
+        <div class="wf-grid-2" style="margin-top:14px;">
+          <div class="wf-card">
+            <h3>B2B 공식 견적서 (직인 날인)</h3>
+            <table style="width:100%; font-size:12px; margin-top:10px; border-collapse:collapse;">
+              <tr style="border-bottom:1px solid #E2E8F0;"><td style="padding:6px 0;">품목</td><td style="text-align:right;">5만원대 프리미엄 팩 (200세트)</td></tr>
+              <tr style="border-bottom:1px solid #E2E8F0;"><td style="padding:6px 0;">공급가액</td><td style="text-align:right;">5,909,091원</td></tr>
+              <tr style="border-bottom:1px solid #E2E8F0;"><td style="padding:6px 0;">부가세 (10%)</td><td style="text-align:right;">590,909원</td></tr>
+              <tr style="border-bottom:1px solid #E2E8F0;"><td style="padding:6px 0;">로고 자수 (200개)</td><td style="text-align:right;">0원 (무료 프로모션)</td></tr>
+              <tr style="border-bottom:1px solid #E2E8F0;"><td style="padding:6px 0;">엑셀 200곳 개별 배송비</td><td style="text-align:right;">0원 (무료 특판)</td></tr>
+              <tr style="font-weight:700; color:#2B6CB0;"><td style="padding:8px 0; font-size:14px;">총 견적 합계</td><td style="text-align:right; font-size:16px;">6,500,000원</td></tr>
+            </table>
+            <button class="wf-btn wf-btn-gold" style="width:100%; margin-top:12px;" onclick="showModal('M-04')">📄 직인 날인 견적서 PDF 1초 출력</button>
+          </div>
+          <div class="wf-card">
+            <h3>사업자 세금계산서 신청</h3>
+            <label style="font-size:12px; margin-top:6px; display:block;">사업자등록번호</label>
+            <input type="text" class="wf-input" value="123-45-67890">
+            <label style="font-size:12px; display:block;">세금계산서 수신 이메일</label>
+            <input type="email" class="wf-input" value="tax@hyundai-corp.com">
+            <button class="wf-btn" style="width:100%;" onclick="showScreen('P-08')">법인 결제 완료 및 D-Day 확약서 발급 &rarr;</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP11() {
+      return `
+        <h2>P-11. 친환경 ESG 탄소/플라스틱 절감 리포트관</h2>
+        <div class="wf-box" style="height:220px; margin-top:14px; cursor:pointer;" onclick="showModal('M-02')">
+          📑 [ KATRI 100회 세탁 성적서 및 플라스틱 120g/세트 절감 공인 인증서 - 클릭 시 200% 확대 ]
+        </div>
+        <p style="font-size:12px; text-align:center; color:#475569;">전 세트에 친환경 ESG 성과 리포트가 무료 동봉되어 기업 ESG 평가 보고서에 즉각 활용 가능합니다.</p>
+      `;
+    }
+
+    function renderP12() {
+      return `
+        <h2>P-12. 경영진 보고용 기업 무료 샘플 키트 신청관</h2>
+        <div class="wf-card" style="max-width:600px; margin: 16px auto;">
+          <div class="wf-box" style="height:140px;">[ 2/3/4겹 원단 + 로고 자수 + 슬리브 실물 샘플 키트 ]</div>
+          <h3>경영진 품의 대면 보고용 무료 샘플</h3>
+          <p style="font-size:12px; color:#64748B; margin:6px 0;">사업자등록번호 인증 시 24시간 내 긴급 퀵/택배로 무료 발송해 드립니다.</p>
+          <button class="wf-btn" style="width:100%; margin-top:10px;" onclick="alert('무료 샘플 키트 신청이 완료되었습니다. 24시간 내 발송됩니다.'); showScreen('P-01');">기업 무료 샘플 신청하기</button>
+        </div>
+      `;
+    }
+
+    function renderEX01() {
+      return `
+        <div class="wf-card" style="border-color:#EF4444; max-width:600px; margin:24px auto; text-align:center;">
+          <span class="wf-tag" style="background:#EF4444; color:#fff;">오류 코드 EX-01</span>
+          <h2 style="font-size:17px; color:#991B1B; margin:8px 0;">엑셀 주소록 형식 오류 안내</h2>
+          <p style="font-size:12.5px; color:#475569;">업로드하신 파일의 3번째 행에 우편번호(5자리)가 누락되었습니다.<br>화면 상에서 즉시 수정하거나 표준 템플릿을 재업로드해 주세요.</p>
+          <div style="margin-top:14px; display:flex; justify-content:center; gap:8px;">
+            <button class="wf-btn wf-btn-sub" onclick="showScreen('P-07')">인라인 즉시 수정</button>
+            <button class="wf-btn" onclick="showModal('M-01')">파일 다시 업로드</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderEX02() {
+      return `
+        <div class="wf-card" style="border-color:#D97706; max-width:600px; margin:24px auto; text-align:center;">
+          <span class="wf-tag" style="background:#D97706; color:#fff;">예외 분기 EX-02</span>
+          <h2 style="font-size:17px; color:#92400E; margin:8px 0;">1,000세트 이상 초대형 특판 납기 조율</h2>
+          <p style="font-size:12.5px; color:#475569;">1,000세트 이상 초대형 발주는 긴급 생산 라인 가동 및 분할 순차 배송으로 전담 배정됩니다.</p>
+          <button class="wf-btn" style="margin-top:14px;" onclick="showScreen('P-10')">전담 매니저 1:1 납기 조율 상담</button>
+        </div>
+      `;
+    }
+
+    function renderEX03() {
+      return `
+        <div class="wf-card" style="max-width:500px; margin:30px auto; text-align:center;">
+          <span class="wf-tag">404 Not Found</span>
+          <h2 style="font-size:19px; margin:8px 0;">요청하신 페이지를 찾을 수 없습니다.</h2>
+          <p style="font-size:12px; color:#64748B;">주소가 변경되었거나 삭제되었습니다.</p>
+          <button class="wf-btn" style="margin-top:14px;" onclick="showScreen('P-01')">B2B 메인 홈으로 이동</button>
+        </div>
+      `;
+    }
+
+    window.onload = () => {
+      initNav();
+      showScreen('P-01');
+    };
+  </script>
+</body>
+</html>

@@ -10,7 +10,7 @@ $config = Get-PipelineConfig -ConfigPath (Join-Path $root "pipeline\config\pipel
 $snapshotFullPath = Join-Path $root $SnapshotPath
 
 if (-not (Test-Path $snapshotFullPath)) {
-    Write-Warning "[sync] 스냅샷이 없습니다: $SnapshotPath. read-google-calendar 단계를 먼저 실행하세요."
+    Write-Warning "[sync] 스냅샷이 없습니다: $SnapshotPath. read-pasted-schedule 단계를 먼저 실행하세요."
     exit 1
 }
 

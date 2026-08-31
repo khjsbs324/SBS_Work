@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1150" width="100%" height="100%" style="background-color: #FAFDFD; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', 'Noto Sans KR', sans-serif;">
+  <defs>
+    <filter id="flow-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Title Header Banner -->
+  <g transform="translate(60, 30)">
+    <rect width="1320" height="68" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" filter="url(#flow-shadow)"/>
+    <text x="25" y="38" font-size="18" font-weight="bold" fill="#2A3B30">🔄 플로뜰리에 TEA &amp; COFFEE 서비스 흐름도 (End-to-End User Journey Flow)</text>
+    <text x="25" y="56" font-size="12" fill="#64748B">페르소나: 김티타임(고은서) | 탐색 ➔ 글라스 광택 확인 ➔ 카페 로고 자수 ➔ B2B 도매 견적 ➔ 세금계산서 발급 ➔ D-Day 납품</text>
+  </g>
+
+  <!-- Legend (4대 도형 구분 범례) -->
+  <g transform="translate(60, 110)">
+    <text x="0" y="24" font-size="13" font-weight="bold" fill="#334155">【도형 범례】</text>
+    
+    <!-- 1. 시작/종료 -->
+    <rect x="90" y="2" width="120" height="32" rx="16" fill="#2A3B30"/>
+    <text x="150" y="22" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">시작 / 종료</text>
+    
+    <!-- 2. 사용자 행동 -->
+    <rect x="230" y="2" width="130" height="32" rx="8" fill="#FAF7F2" stroke="#C47A5A" stroke-width="1.8"/>
+    <text x="295" y="22" font-size="11" font-weight="bold" fill="#C47A5A" text-anchor="middle">사용자 행동 (화면)</text>
+    
+    <!-- 3. 시스템 처리 -->
+    <rect x="380" y="2" width="130" height="32" rx="4" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.8"/>
+    <line x1="388" y1="2" x2="388" y2="34" stroke="#16A34A" stroke-width="1.2"/>
+    <line x1="502" y1="2" x2="502" y2="34" stroke="#16A34A" stroke-width="1.2"/>
+    <text x="445" y="22" font-size="11" font-weight="bold" fill="#16A34A" text-anchor="middle">시스템 연산/처리</text>
+    
+    <!-- 4. 판단 분기 -->
+    <polygon points="580,2 640,18 580,34 520,18" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+    <text x="580" y="22" font-size="11" font-weight="bold" fill="#D97706" text-anchor="middle">판단 분기</text>
+  </g>
+
+  <!-- STEP 0: START NODE -->
+  <g transform="translate(540, 160)" filter="url(#flow-shadow)">
+    <rect width="360" height="46" rx="23" fill="#2A3B30"/>
+    <text x="180" y="28" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">🏁 시작: SCR-01 플로뜰리에 TEA 메인</text>
+  </g>
+  <path d="M 720 206 L 720 235" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 1: 탐색 & 4대 진입 분기 -->
+  <g transform="translate(80, 235)">
+    <!-- Branch 1: SCR-02 글라스 티 타월 -->
+    <g transform="translate(0, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#FAF7F2" stroke="#C47A5A" stroke-width="2"/>
+      <text x="140" y="26" font-size="12" font-weight="bold" fill="#C47A5A" text-anchor="middle">SCR-02 | 글라스 티 타월 상세</text>
+      <text x="140" y="46" font-size="11" fill="#475569" text-anchor="middle">40x60cm / 보풀 제로</text>
+    </g>
+
+    <!-- Branch 2: SCR-03 스팀완드 와입스 -->
+    <g transform="translate(320, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#FAF7F2" stroke="#C47A5A" stroke-width="1.5"/>
+      <text x="140" y="26" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">SCR-03 | 스팀완드 와입스 5장</text>
+      <text x="140" y="46" font-size="11" fill="#475569" text-anchor="middle">100℃ 고온 내열 엠보싱</text>
+    </g>
+
+    <!-- Branch 3: SCR-05 도매 센터 -->
+    <g transform="translate(640, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#EBF3FA" stroke="#2B6CB0" stroke-width="2"/>
+      <text x="140" y="26" font-size="12" font-weight="bold" fill="#1A365D" text-anchor="middle">SCR-05 | 카페 B2B 도매 센터</text>
+      <text x="140" y="46" font-size="11" fill="#475569" text-anchor="middle">20/50/100장 번들 최대 35%</text>
+    </g>
+
+    <!-- Branch 4: SCR-08 바리스타 체험팩 -->
+    <g transform="translate(960, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#FAF7F2" stroke="#C47A5A" stroke-width="1.5"/>
+      <text x="140" y="26" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">SCR-08 | 바리스타 체험팩</text>
+      <text x="140" y="46" font-size="11" fill="#475569" text-anchor="middle">3,000원 + 100% 환급 쿠폰</text>
+    </g>
+  </g>
+
+  <!-- Flow Lines from Step 1 Branches -->
+  <path d="M 220 299 L 220 335" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 540 299 L 540 455 L 680 455" stroke="#64748B" stroke-width="1.5" fill="none"/>
+  <path d="M 860 299 L 860 455 L 720 455" stroke="#64748B" stroke-width="1.5" fill="none"/>
+  <path d="M 1180 299 L 1180 670 L 860 670" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 2: 상세 확인 & 광택 모달 -->
+  <g transform="translate(80, 335)">
+    <!-- MODAL-01 -->
+    <g transform="translate(0, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="56" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+      <text x="140" y="24" font-size="12" font-weight="bold" fill="#78350F" text-anchor="middle">MODAL-01 | 글라스 광택 비교 뷰어</text>
+      <text x="140" y="42" font-size="11" fill="#B45309" text-anchor="middle">보풀 제로 &amp; 물자국 무발생 시연</text>
+    </g>
+
+    <!-- SCR-06 검증실 -->
+    <g transform="translate(320, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="56" rx="8" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+      <text x="140" y="24" font-size="12" font-weight="bold" fill="#14532D" text-anchor="middle">SCR-06 | 식품 위생 &amp; 검증실</text>
+      <text x="140" y="42" font-size="11" fill="#16A34A" text-anchor="middle">KTR 식품용 기구 안전성 인증</text>
+    </g>
+  </g>
+
+  <!-- Line to Customization Decision -->
+  <path d="M 220 391 L 220 425" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 460 391 L 460 410 L 220 410" stroke="#64748B" stroke-width="1.5" fill="none"/>
+
+  <!-- STEP 3: 카페 로고 자수 판단 분기 -->
+  <g transform="translate(90, 425)" filter="url(#flow-shadow)">
+    <polygon points="130,0 260,35 130,70 0,35" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+    <text x="130" y="32" font-size="12" font-weight="bold" fill="#78350F" text-anchor="middle">카페 BI 로고</text>
+    <text x="130" y="48" font-size="12" font-weight="bold" fill="#78350F" text-anchor="middle">자수 추가 여부?</text>
+  </g>
+
+  <!-- 자수 없음 -> 바로 장바구니 -->
+  <path d="M 90 460 L 50 460 L 50 670 L 560 670" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <text x="55" y="450" font-size="11" font-weight="bold" fill="#64748B">아니오 (무각인 구매)</text>
+
+  <!-- 자수 추가 -> SCR-04 자수 아틀리에 -->
+  <path d="M 350 460 L 440 460" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <text x="365" y="450" font-size="11" font-weight="bold" fill="#D97706">예 (로고 자수 각인)</text>
+
+  <g transform="translate(440, 432)" filter="url(#flow-shadow)">
+    <rect width="280" height="56" rx="8" fill="#FAF7F2" stroke="#C47A5A" stroke-width="2"/>
+    <text x="140" y="24" font-size="12" font-weight="bold" fill="#C47A5A" text-anchor="middle">SCR-04 | 카페 로고 자수 아틀리에</text>
+    <text x="140" y="42" font-size="11" fill="#475569" text-anchor="middle">AI 로고 업로드 &amp; 톤온톤 실 선택</text>
+  </g>
+
+  <path d="M 720 460 L 780 460" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- 로고 유효성 검사 분기 -->
+  <g transform="translate(780, 425)" filter="url(#flow-shadow)">
+    <polygon points="120,0 240,35 120,70 0,35" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+    <text x="120" y="32" font-size="11" font-weight="bold" fill="#78350F" text-anchor="middle">로고 파일 형식</text>
+    <text x="120" y="48" font-size="11" font-weight="bold" fill="#78350F" text-anchor="middle">유효성 검사</text>
+  </g>
+
+  <!-- 유효성 오류 -->
+  <path d="M 900 425 L 900 375 L 580 375 L 580 432" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)" fill="none"/>
+  <text x="730" y="365" font-size="11" font-weight="bold" fill="#EF4444">저화질/형식오류 ➔ 1:1 무료 벡터 보정</text>
+
+  <!-- 유효성 통과 -> Canvas 시스템 처리 -->
+  <path d="M 1020 460 L 1080 460" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <text x="1025" y="450" font-size="11" font-weight="bold" fill="#16A34A">정상 파일</text>
+
+  <g transform="translate(1080, 432)" filter="url(#flow-shadow)">
+    <rect width="280" height="56" rx="4" fill="#F0FDF4" stroke="#16A34A" stroke-width="2"/>
+    <line x1="1090" y1="432" x2="1090" y2="488" stroke="#16A34A" stroke-width="1.5"/>
+    <line x1="1350" y1="432" x2="1350" y2="488" stroke="#16A34A" stroke-width="1.5"/>
+    <text x="140" y="24" font-size="12" font-weight="bold" fill="#14532D" text-anchor="middle">Canvas 실시간 톤온톤 자수 엔진</text>
+    <text x="140" y="42" font-size="11" fill="#16A34A" text-anchor="middle">0.05초 시안 렌더링 &amp; MODAL-02</text>
+  </g>
+
+  <path d="M 1220 488 L 1220 540 L 720 540" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 4: B2B 도매 장바구니 -->
+  <g transform="translate(560, 640)" filter="url(#flow-shadow)">
+    <rect width="320" height="60" rx="8" fill="#EBF3FA" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="160" y="26" font-size="13" font-weight="bold" fill="#1A365D" text-anchor="middle">SCR-09 | 카페 B2B 장바구니</text>
+    <text x="160" y="46" font-size="11" fill="#64748B" text-anchor="middle">수량별 20~35% 도매 할인 자동 연산</text>
+  </g>
+
+  <path d="M 720 700 L 720 735" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 5: B2B 주문서 작성 및 사업자 결제 -->
+  <g transform="translate(560, 735)" filter="url(#flow-shadow)">
+    <rect width="320" height="60" rx="8" fill="#FAF7F2" stroke="#C47A5A" stroke-width="2"/>
+    <text x="160" y="26" font-size="13" font-weight="bold" fill="#232527" text-anchor="middle">SCR-10 | B2B 주문 및 사업자 결제</text>
+    <text x="160" y="46" font-size="11" fill="#64748B" text-anchor="middle">사업자번호 인증 &amp; 세금계산서 신청</text>
+  </g>
+
+  <path d="M 720 795 L 720 830" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 6: 세금계산서 및 PG 결제 승인 (Subroutine) -->
+  <g transform="translate(540, 830)" filter="url(#flow-shadow)">
+    <rect width="360" height="56" rx="4" fill="#F0FDF4" stroke="#16A34A" stroke-width="2"/>
+    <line x1="552" y1="830" x2="552" y2="886" stroke="#16A34A" stroke-width="1.5"/>
+    <line x1="888" y1="830" x2="888" y2="886" stroke="#16A34A" stroke-width="1.5"/>
+    <text x="180" y="25" font-size="12" font-weight="bold" fill="#14532D" text-anchor="middle">시스템: 국세청 세금계산서 API 자동 승인</text>
+    <text x="180" y="43" font-size="11" fill="#16A34A" text-anchor="middle">법인카드 / 가상계좌 실시간 승인</text>
+  </g>
+
+  <path d="M 720 886 L 720 920" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 7: 발주 완료 -->
+  <g transform="translate(540, 920)" filter="url(#flow-shadow)">
+    <rect width="360" height="64" rx="8" fill="#FFFFFF" stroke="#16A34A" stroke-width="2"/>
+    <text x="180" y="26" font-size="13" font-weight="bold" fill="#14532D" text-anchor="middle">SCR-11 | 발주 완료 &amp; B2B 납품 확약서</text>
+    <text x="180" y="44" font-size="11" fill="#64748B" text-anchor="middle">D-Day 확약서 PDF + 과탄산 세척 매뉴얼</text>
+  </g>
+
+  <path d="M 720 984 L 720 1020" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 8: END NODE -->
+  <g transform="translate(560, 1020)" filter="url(#flow-shadow)">
+    <rect width="320" height="46" rx="23" fill="#2A3B30"/>
+    <text x="160" y="28" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">🎉 종료: D-Day 안심 카페 린넨 납품 완료</text>
+  </g>
+</svg>

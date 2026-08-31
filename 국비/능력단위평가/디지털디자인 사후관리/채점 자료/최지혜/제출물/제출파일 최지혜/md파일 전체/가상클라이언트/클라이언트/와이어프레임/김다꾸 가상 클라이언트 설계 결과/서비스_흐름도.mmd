@@ -1,0 +1,67 @@
+flowchart TD
+  classDef startEnd fill:#232527,color:#FFFFFF,stroke:#232527,stroke-width:2px;
+  classDef action fill:#FAF7F2,color:#232527,stroke:#C47A5A,stroke-width:2px;
+  classDef system fill:#F4F8F5,color:#232527,stroke:#7E8D7F,stroke-width:2px;
+  classDef decision fill:#FFF9F5,color:#C47A5A,stroke:#C47A5A,stroke-width:2px;
+
+  START(["🚀 사이트 진입 (광고 / 검색 / QR)"]) :::startEnd
+
+  P01["P-01: 메인페이지 진입<br>(4차 정련 뱃지 & 수채화 Canvas)"] :::action
+  P04["P-04: 전체 상품 카탈로그<br>(2/3/4겹 용도 필터링)"] :::action
+  P05["P-05: 상품 상세 페이지<br>(수축 Slider & 컬러 스와치)"] :::action
+
+  DEC_CUSTOM{"자수 커스텀<br>옵션을 추가하는가?"} :::decision
+  M03["M-03: 실시간 자수 프리뷰 모달<br>(Canvas 폰트/실색상 렌더링)"] :::action
+  CHK_TEXT{"자수 입력 유효성<br>(8자 이내 / 특수문자)"} :::decision
+  ERR_TEXT["⚠️ 경고 메시지 출력<br>('8자 이내 한글/영문만 가능')"] :::system
+
+  DEC_GIFT{"선물 포장 옵션을<br>선택하는가?"} :::decision
+  M01_GIFT["M-01: 선물 포장 미리보기 모달<br>(박스/쇼핑백/메시지카드)"] :::action
+
+  CALC_DATE["⚙️ 자수 제작(D+2) 반영<br>배송 예정일 자동 연산"] :::system
+
+  P11["P-11: 장바구니 & 결제<br>(N Pay / 카카오 1초 결제)"] :::action
+  DEC_AUTH{"로그인 유무 확인"} :::decision
+  NPAY_EXEC["N Pay 1초 간편 결제 승인"] :::system
+
+  P12["P-12: 마이페이지 & 주문완료<br>(교체주기 알림 자동등록)"] :::action
+  END_BUY(["🎉 주문 완료 (카카오 알림톡 발송)"]) :::startEnd
+
+  %% 팝업 대안 흐름
+  P08["P-08: 성수 팝업스토어"] :::action
+  M01_POP["M-01: 팝업 사전예약 모달"] :::action
+  CHK_SLOT{"14:00 타임슬롯<br>잔여석 존재 여부"} :::decision
+  SLOT_FULL["⚠️ 14:00 마감 (disabled)<br>16:00 타임슬롯 추천"] :::system
+  END_POP(["🎟️ 팝업 예약 완료 알림톡"]) :::startEnd
+
+  %% 흐름 연결
+  START --> P01
+  P01 --> P04
+  P04 --> P05
+  P05 --> DEC_CUSTOM
+
+  DEC_CUSTOM -- "예" --> M03
+  DEC_CUSTOM -- "아니오" --> DEC_GIFT
+
+  M03 --> CHK_TEXT
+  CHK_TEXT -- "오류" --> ERR_TEXT
+  ERR_TEXT --> M03
+  CHK_TEXT -- "정상" --> DEC_GIFT
+
+  DEC_GIFT -- "예" --> M01_GIFT
+  DEC_GIFT -- "아니오" --> CALC_DATE
+  M01_GIFT --> CALC_DATE
+
+  CALC_DATE --> P11
+  P11 --> DEC_AUTH
+  DEC_AUTH -- "회원/비회원" --> NPAY_EXEC
+  NPAY_EXEC --> P12
+  P12 --> END_BUY
+
+  %% 팝업 흐름
+  P01 --> P08
+  P08 --> M01_POP
+  M01_POP --> CHK_SLOT
+  CHK_SLOT -- "마감" --> SLOT_FULL
+  SLOT_FULL --> M01_POP
+  CHK_SLOT -- "여유" --> END_POP

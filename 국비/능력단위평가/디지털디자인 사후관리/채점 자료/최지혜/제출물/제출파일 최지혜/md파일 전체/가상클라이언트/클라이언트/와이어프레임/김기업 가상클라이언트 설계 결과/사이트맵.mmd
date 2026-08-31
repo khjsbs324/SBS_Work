@@ -1,0 +1,50 @@
+flowchart TD
+  %% 루트
+  ROOT(["플로뜰리에 (Flottelier) - B2B ENTERPRISE Edition"])
+
+  %% 1차 메뉴 (GNB)
+  ROOT --> MAIN["P-01 B2B 기업 메인페이지"]
+  ROOT --> BUDGET["02. 예산별 기프트 팩"]
+  ROOT --> EMBROIDERY["03. 기업 로고 자수 & 패키징"]
+  ROOT --> DELIVERY["04. 엑셀 일괄 배송 & 납기"]
+  ROOT --> QUOTE["05. 견적 · 회계 · ESG 실증"]
+
+  %% 2차/3차 서브페이지
+  BUDGET --> P02["P-02 3만원대 실속 베이직 팩"]
+  BUDGET --> P03["P-03 5만원대 프리미엄 팩"]
+  BUDGET --> P04["P-04 10만원대 VIP 프레스티지 팩"]
+
+  EMBROIDERY --> P05["P-05 기업 로고 자수 센터"]
+  EMBROIDERY --> P06["P-06 맞춤 슬리브 & CEO 감사 카드"]
+
+  DELIVERY --> P07["P-07 엑셀 일괄 배송 센터"]
+  DELIVERY --> P08["P-08 납기일 엄수 보증관"]
+  DELIVERY --> P09["P-09 실시간 배송 트래킹 대시보드"]
+
+  QUOTE --> P10["P-10 실시간 견적 & 세금계산서"]
+  QUOTE --> P11["P-11 ESG 탄소/플라스틱 리포트관"]
+  QUOTE --> P12["P-12 기업 무료 샘플 키트 신청관"]
+
+  %% 레이어드 모달 연동
+  P07 -.-> M01["M-01 주소록 엑셀 1초 일괄 파서 모달"]
+  P11 -.-> M02["M-02 KC 4無/100회 세탁 성적서 확대 모달"]
+  P05 -.-> M03["M-03 Canvas 실시간 로고 자수기 모달"]
+  P03 -.-> M03
+  P10 -.-> M04["M-04 직인 견적서 PDF 1초 출력 모달"]
+  P01 -.-> M04
+
+  %% 예외 페이지 [가정]
+  P07 -.-> EX01["EX-01 엑셀 형식 오류 피드백 (가정)"]
+  P08 -.-> EX02["EX-02 1,000세트 생산 조율 안내 (가정)"]
+  ROOT -.-> EX03["EX-03 404 Not Found (가정)"]
+
+  %% 스타일 클래스
+  classDef primary fill:#E8F3F1,stroke:#4A7C72,stroke-width:2px,color:#1A3B34;
+  classDef b2b fill:#EBF3FA,stroke:#2B6CB0,stroke-width:2px,color:#1A365D;
+  classDef modal fill:#FFF6ED,stroke:#D97706,stroke-width:1.5px,color:#92400E;
+  classDef exception fill:#FEE2E2,stroke:#EF4444,stroke-width:1.5px,stroke-dasharray: 4 4,color:#991B1B;
+  
+  class ROOT,MAIN,BUDGET,EMBROIDERY,DELIVERY,P02,P03,P04,P05,P06,P07,P08,P09 primary;
+  class QUOTE,P10,P11,P12 b2b;
+  class M01,M02,M03,M04 modal;
+  class EX01,EX02,EX03 exception;

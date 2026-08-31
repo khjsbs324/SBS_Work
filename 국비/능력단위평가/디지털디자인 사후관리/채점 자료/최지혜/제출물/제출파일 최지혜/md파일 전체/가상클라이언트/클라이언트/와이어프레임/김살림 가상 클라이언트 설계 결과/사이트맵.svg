@@ -1,0 +1,310 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1020" width="100%" height="100%" style="background-color: #FAFDFD; font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.04"/>
+    </filter>
+    <linearGradient id="grad-root" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#232527"/>
+      <stop offset="100%" stop-color="#3A3F45"/>
+    </linearGradient>
+    <linearGradient id="grad-depth1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7E8D7F"/>
+      <stop offset="100%" stop-color="#657566"/>
+    </linearGradient>
+    <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C47A5A"/>
+      <stop offset="100%" stop-color="#AA6344"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title & Meta Header -->
+  <g transform="translate(60, 40)">
+    <rect width="1320" height="70" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow-sm)"/>
+    <text x="30" y="38" font-size="20" font-weight="700" fill="#232527">🗺️ 플로뜰리에 (Flottelier) 스마트 살림 &amp; 수건 전체 교체 마스터 사이트맵</text>
+    <text x="30" y="58" font-size="13" fill="#64748B">페르소나: 김살림(이현정) | 3배 빠른 건조 · 1/3 슬림 수납 · 10장 올체인지 번들 &amp; 정기구독 | IA Version 1.0 (UTF-8)</text>
+    <rect x="1170" y="20" width="120" height="30" rx="15" fill="#E8F5E9"/>
+    <text x="1230" y="40" font-size="12" font-weight="700" fill="#2E7D32" text-anchor="middle">✓ WCAG 2.1 AA</text>
+  </g>
+
+  <!-- Root Node -->
+  <g transform="translate(480, 135)" filter="url(#shadow)">
+    <rect width="480" height="56" rx="28" fill="url(#grad-root)"/>
+    <text x="240" y="28" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">플로뜰리에 (Flottelier) 플랫폼 마스터 IA</text>
+    <text x="240" y="46" font-size="12" fill="#E2E8F0" text-anchor="middle">스마트 미니멀 살림 · 10장 번들 팩 · 건조/수납 실증 · 간편 세탁</text>
+  </g>
+
+  <!-- Connector Lines from Root to Depth 1 Columns -->
+  <path d="M 720 191 L 720 225 M 190 225 L 1250 225" stroke="#CBD5E1" stroke-width="2" fill="none"/>
+  <path d="M 190 225 L 190 250" stroke="#CBD5E1" stroke-width="2" fill="none"/>
+  <path d="M 455 225 L 455 250" stroke="#CBD5E1" stroke-width="2" fill="none"/>
+  <path d="M 720 225 L 720 250" stroke="#CBD5E1" stroke-width="2" fill="none"/>
+  <path d="M 985 225 L 985 250" stroke="#CBD5E1" stroke-width="2" fill="none"/>
+  <path d="M 1250 225 L 1250 250" stroke="#CBD5E1" stroke-width="2" fill="none"/>
+
+  <!-- ==================== COLUMN 1: BUNDLE & SUBSCRIPTION ==================== -->
+  <g transform="translate(60, 250)">
+    <!-- Header -->
+    <rect width="260" height="48" rx="8" fill="url(#grad-depth1)" filter="url(#shadow-sm)"/>
+    <text x="130" y="25" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">01. BUNDLE &amp; SUBSCRIPTION</text>
+    <text x="130" y="40" font-size="11" fill="#E2E8F0" text-anchor="middle">대용량 교체 &amp; 정기구독</text>
+
+    <!-- Cards -->
+    <!-- Card 1 -->
+    <g transform="translate(0, 60)" filter="url(#shadow-sm)">
+      <rect width="260" height="90" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="20" rx="4" fill="#FEF3C7"/>
+      <text x="42" y="24" font-size="11" font-weight="700" fill="#D97706" text-anchor="middle">SCR-02</text>
+      <text x="80" y="25" font-size="13" font-weight="700" fill="#1E293B">10장 올체인지 데일리 팩</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 10장 세트 장당 9,900원 (26,000원↓)</text>
+      <text x="12" y="66" font-size="11" fill="#64748B">• 순면 걸이용 루프(고리) 선택</text>
+      <text x="12" y="82" font-size="10" font-weight="600" fill="#C47A5A">➔ MODAL-01 실시간 단가계산기</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(0, 160)" filter="url(#shadow-sm)">
+      <rect width="260" height="65" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="12" y="25" font-size="13" font-weight="700" fill="#1E293B">20장 패밀리 풀하우스 팩</text>
+      <text x="12" y="45" font-size="11" fill="#64748B">• 4인 가구 35% 최대 할인</text>
+      <text x="12" y="58" font-size="11" fill="#64748B">• 페이스 15장 + 바스 5장 구성</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0, 235)" filter="url(#shadow-sm)">
+      <rect width="260" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="20" rx="4" fill="#E0E7FF"/>
+      <text x="42" y="24" font-size="11" font-weight="700" fill="#4338CA" text-anchor="middle">SCR-05</text>
+      <text x="80" y="25" font-size="13" font-weight="700" fill="#1E293B">정기배송 구독 센터</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 6개월 / 12개월 교체주기 자동발송</text>
+      <text x="12" y="64" font-size="11" fill="#64748B">• 정기배송 10% 추가할인</text>
+      <text x="12" y="78" font-size="10" font-weight="600" fill="#C47A5A">➔ MODAL-03 카카오 알림톡 설정</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 2: SMART CARE & PROOFS ==================== -->
+  <g transform="translate(330, 250)">
+    <!-- Header -->
+    <rect width="260" height="48" rx="8" fill="url(#grad-depth1)" filter="url(#shadow-sm)"/>
+    <text x="130" y="25" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">02. SMART CARE &amp; PROOFS</text>
+    <text x="130" y="40" font-size="11" fill="#E2E8F0" text-anchor="middle">위생 &amp; 실증 데이터</text>
+
+    <!-- Cards -->
+    <!-- Card 1 -->
+    <g transform="translate(0, 60)" filter="url(#shadow-sm)">
+      <rect width="260" height="90" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="20" rx="4" fill="#FEF3C7"/>
+      <text x="42" y="24" font-size="11" font-weight="700" fill="#D97706" text-anchor="middle">SCR-03</text>
+      <text x="80" y="25" font-size="13" font-weight="700" fill="#1E293B">3배 빠른 건조 실험실</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 1시간 자연건조 비교 그래프 (vs 4h)</text>
+      <text x="12" y="66" font-size="11" fill="#64748B">• 모락셀라균 99.9% 억제 성적서</text>
+      <text x="12" y="82" font-size="10" font-weight="600" fill="#2E7D32">✓ KATRI 공인 시험 검증</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(0, 160)" filter="url(#shadow-sm)">
+      <rect width="260" height="75" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="12" y="25" font-size="13" font-weight="700" fill="#1E293B">욕실 상부장 1/3 수납 갤러리</text>
+      <text x="12" y="45" font-size="11" fill="#64748B">• 일반 수건 vs 소창 수건 적재 비교</text>
+      <text x="12" y="62" font-size="11" fill="#64748B">• 비포/애프터 인터랙티브 슬라이더</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0, 245)" filter="url(#shadow-sm)">
+      <rect width="260" height="75" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="12" y="10" width="70" height="20" rx="4" fill="#FEE2E2"/>
+      <text x="47" y="24" font-size="11" font-weight="700" fill="#DC2626" text-anchor="middle">MODAL-02</text>
+      <text x="90" y="25" font-size="13" font-weight="700" fill="#1E293B">세탁 타임라인 엠보싱</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 1회, 10회, 30회, 50회 질감 컷</text>
+      <text x="12" y="64" font-size="11" fill="#64748B">• 세탁할수록 부드러워지는 원리</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 3: LAUNDRY GUIDE ==================== -->
+  <g transform="translate(600, 250)">
+    <!-- Header -->
+    <rect width="260" height="48" rx="8" fill="url(#grad-depth1)" filter="url(#shadow-sm)"/>
+    <text x="130" y="25" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">03. LAUNDRY GUIDE</text>
+    <text x="130" y="40" font-size="11" fill="#E2E8F0" text-anchor="middle">세탁기 &amp; 건조기 간편 관리</text>
+
+    <!-- Cards -->
+    <!-- Card 1 -->
+    <g transform="translate(0, 60)" filter="url(#shadow-sm)">
+      <rect width="260" height="90" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="20" rx="4" fill="#FEF3C7"/>
+      <text x="42" y="24" font-size="11" font-weight="700" fill="#D97706" text-anchor="middle">SCR-04</text>
+      <text x="80" y="25" font-size="13" font-weight="700" fill="#1E293B">세탁기 간편 세탁 O/X 표</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 삶기 불필요 4차 정련 완료 보증</text>
+      <text x="12" y="66" font-size="11" fill="#64748B">• 표준/울코스 세탁기 사용 가이드</text>
+      <text x="12" y="82" font-size="10" font-weight="600" fill="#4338CA">➔ 관리 지침서 PDF 즉시 다운로드</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(0, 160)" filter="url(#shadow-sm)">
+      <rect width="260" height="70" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="12" y="25" font-size="13" font-weight="700" fill="#1E293B">건조기 저온 사용 가이드</text>
+      <text x="12" y="45" font-size="11" fill="#64748B">• 저온 코스 권장 &amp; 수축률 안내</text>
+      <text x="12" y="60" font-size="11" fill="#64748B">• 섬유유연제 무첨가 권장 팁</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0, 240)" filter="url(#shadow-sm)">
+      <rect width="260" height="80" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="12" y="25" font-size="13" font-weight="700" fill="#1E293B">호텔식 롤 접기 &amp; 업사이클</text>
+      <text x="12" y="46" font-size="11" fill="#64748B">• 3단 호텔식 수건 접기 팁 영상</text>
+      <text x="12" y="62" font-size="11" fill="#64748B">• 3년 사용 후 청소용 걸레 재활용</text>
+      <text x="12" y="75" font-size="10" font-weight="600" fill="#2E7D32">🌱 100% 흙 생분해 에코 살림</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 4: HOME LINEUP & TRIAL ==================== -->
+  <g transform="translate(870, 250)">
+    <!-- Header -->
+    <rect width="260" height="48" rx="8" fill="url(#grad-depth1)" filter="url(#shadow-sm)"/>
+    <text x="130" y="25" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">04. HOME LINEUP &amp; TRIAL</text>
+    <text x="130" y="40" font-size="11" fill="#E2E8F0" text-anchor="middle">살림 풀 라인업 &amp; 1장 체험팩</text>
+
+    <!-- Cards -->
+    <!-- Card 1 -->
+    <g transform="translate(0, 60)" filter="url(#shadow-sm)">
+      <rect width="260" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="12" y="25" font-size="13" font-weight="700" fill="#1E293B">미니멀 살림 풀 라인업</text>
+      <text x="12" y="46" font-size="11" fill="#64748B">• 3겹 데일리 페이스타월 (표준)</text>
+      <text x="12" y="62" font-size="11" fill="#64748B">• 4겹 바스타월 &amp; 롱타월 (헤어/바스)</text>
+      <text x="12" y="76" font-size="11" fill="#64748B">• 2겹 주방 행주 &amp; 키친와입스</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(0, 155)" filter="url(#shadow-sm)">
+      <rect width="260" height="90" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="20" rx="4" fill="#FEF3C7"/>
+      <text x="42" y="24" font-size="11" font-weight="700" fill="#D97706" text-anchor="middle">SCR-06</text>
+      <text x="80" y="25" font-size="13" font-weight="700" fill="#1E293B">1장 안심 체험팩 신청</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 3,000원에 먼저 1장 써보기</text>
+      <text x="12" y="66" font-size="11" fill="#64748B">• 10장 세트 구매 시 100% 전액 환급</text>
+      <text x="12" y="82" font-size="10" font-weight="600" fill="#C47A5A">✓ 구매 장벽 제로 안심 정책</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0, 255)" filter="url(#shadow-sm)">
+      <rect width="260" height="65" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="12" y="25" font-size="13" font-weight="700" fill="#1E293B">미니멀 자연 컬러 스와치</text>
+      <text x="12" y="45" font-size="11" fill="#64748B">• 내추럴 아이보리 / 오가닉 세이지</text>
+      <text x="12" y="58" font-size="11" fill="#64748B">• 오트밀 베이지 3색 미니멀 톤</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 5: ORDER & EXCEPTIONS ==================== -->
+  <g transform="translate(1140, 250)">
+    <!-- Header -->
+    <rect width="240" height="48" rx="8" fill="url(#grad-depth1)" filter="url(#shadow-sm)"/>
+    <text x="120" y="25" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">05. ORDER &amp; SUPPORT</text>
+    <text x="120" y="40" font-size="11" fill="#E2E8F0" text-anchor="middle">주문 결제 &amp; 예외 처리</text>
+
+    <!-- Cards -->
+    <!-- Card 1 -->
+    <g transform="translate(0, 60)" filter="url(#shadow-sm)">
+      <rect width="240" height="75" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="20" rx="4" fill="#FEF3C7"/>
+      <text x="42" y="24" font-size="11" font-weight="700" fill="#D97706" text-anchor="middle">SCR-07</text>
+      <text x="80" y="25" font-size="13" font-weight="700" fill="#1E293B">장바구니 &amp; 결제</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 네이버페이 / 카카오페이 1초</text>
+      <text x="12" y="64" font-size="11" fill="#64748B">• 100% 무비닐 종이 포장</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(0, 145)" filter="url(#shadow-sm)">
+      <rect width="240" height="75" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="20" rx="4" fill="#FEF3C7"/>
+      <text x="42" y="24" font-size="11" font-weight="700" fill="#D97706" text-anchor="middle">SCR-08</text>
+      <text x="80" y="25" font-size="13" font-weight="700" fill="#1E293B">주문/구독 완료</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 배송일 &amp; 알림톡 발송</text>
+      <text x="12" y="64" font-size="11" fill="#64748B">• 받자마자 쓰는 1분 가이드</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0, 230)" filter="url(#shadow-sm)">
+      <rect width="240" height="90" rx="8" fill="#FFF5F5" stroke="#FECACA" stroke-width="1.5"/>
+      <rect x="12" y="10" width="70" height="20" rx="4" fill="#FEE2E2"/>
+      <text x="47" y="24" font-size="11" font-weight="700" fill="#DC2626" text-anchor="middle">SCR-EX01</text>
+      <text x="90" y="25" font-size="13" font-weight="700" fill="#991B1B">예외 처리 페이지</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 검색 결과 없음 / 품절 (가정)</text>
+      <text x="12" y="64" font-size="11" fill="#64748B">• 404 Not Found 안내 (가정)</text>
+      <text x="12" y="78" font-size="10" font-weight="600" fill="#DC2626">➔ 베스트 10장 세트 복귀</text>
+    </g>
+  </g>
+
+  <!-- Global Shared Bottom Navigation & Summary Bar -->
+  <g transform="translate(60, 620)">
+    <rect width="1320" height="340" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow-sm)"/>
+    
+    <!-- Section Title -->
+    <text x="30" y="35" font-size="16" font-weight="700" fill="#232527">🧭 전역 내비게이션 &amp; 사용자 흐름 연계 구조 (Navigation &amp; Journey Matrix)</text>
+    <line x1="30" y1="50" x2="1290" y2="50" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <!-- Row 1: GNB & Sticky Items -->
+    <g transform="translate(30, 70)">
+      <rect width="390" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="20" y="25" font-size="13" font-weight="700" fill="#1E293B">상단 공지 띠배너 &amp; GNB</text>
+      <text x="20" y="48" font-size="11" fill="#64748B">• [받아서 바로 쓰는 4차 정련 완료 100% 보장]</text>
+      <text x="20" y="68" font-size="11" fill="#64748B">• [1장 3,000원 체험팩 - 본품 구매 시 100% 환급]</text>
+      <text x="20" y="88" font-size="11" fill="#64748B">• GNB: 10장 교체팩 / 건조·수납 실험실 / 세탁기 가이드 / 정기구독</text>
+    </g>
+
+    <g transform="translate(450, 70)">
+      <rect width="400" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="20" y="25" font-size="13" font-weight="700" fill="#1E293B">LNB &amp; 스티키 인터랙션 바</text>
+      <text x="20" y="48" font-size="11" fill="#64748B">• LNB 탭: [10장 번들 팩] ➔ [건조&amp;수납 데이터] ➔ [세탁기 O/X 표]</text>
+      <text x="20" y="68" font-size="11" fill="#64748B">• 플로팅 CTA: [10장 세트 특가 담기 (장당 9,900원)]</text>
+      <text x="20" y="88" font-size="11" fill="#64748B">• 브레드크럼: 홈 &gt; COLLECTION &gt; 10장 수건 교체 팩</text>
+    </g>
+
+    <g transform="translate(880, 70)">
+      <rect width="410" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="20" y="25" font-size="13" font-weight="700" fill="#1E293B">푸터 &amp; 고객 신뢰 보증</text>
+      <text x="20" y="48" font-size="11" fill="#64748B">• 4차 정련 100% 무화학 보증 선언 &amp; KATRI 성적서 번호</text>
+      <text x="20" y="68" font-size="11" fill="#64748B">• 세탁 및 관리 지침서 PDF 즉시 다운로드 링크</text>
+      <text x="20" y="88" font-size="11" fill="#64748B">• CS 센터 (1588-0000) &amp; 정기구독 배송주기 변경 안내</text>
+    </g>
+
+    <!-- Row 2: Journey Flow -->
+    <g transform="translate(30, 200)">
+      <rect width="1260" height="115" rx="8" fill="#F0FDF4" stroke="#BBF7D0"/>
+      <text x="20" y="25" font-size="13" font-weight="700" fill="#166534">🎯 김살림 핵심 사용자 여정 (Primary User Journey Flow)</text>
+      
+      <!-- Step 1 -->
+      <rect x="20" y="42" width="220" height="55" rx="6" fill="#FFFFFF" stroke="#86EFAC"/>
+      <text x="30" y="62" font-size="12" font-weight="700" fill="#166534">1. 메인 / 띠배너 진입</text>
+      <text x="30" y="80" font-size="10" fill="#4B5563">3배 빠른 건조 &amp; 10장 특가 확인</text>
+      
+      <text x="250" y="73" font-size="14" fill="#166534" font-weight="700">➔</text>
+
+      <!-- Step 2 -->
+      <rect x="270" y="42" width="220" height="55" rx="6" fill="#FFFFFF" stroke="#86EFAC"/>
+      <text x="280" y="62" font-size="12" font-weight="700" fill="#166534">2. 10장 번들 &amp; 단가 확인</text>
+      <text x="280" y="80" font-size="10" fill="#4B5563">실시간 장당 9,900원 혜택 계산</text>
+
+      <text x="500" y="73" font-size="14" fill="#166534" font-weight="700">➔</text>
+
+      <!-- Step 3 -->
+      <rect x="520" y="42" width="220" height="55" rx="6" fill="#FFFFFF" stroke="#86EFAC"/>
+      <text x="530" y="62" font-size="12" font-weight="700" fill="#166534">3. 건조/수납 데이터 검증</text>
+      <text x="530" y="80" font-size="10" fill="#4B5563">상부장 1/3 슬라이더 &amp; 쉰내 억제</text>
+
+      <text x="750" y="73" font-size="14" fill="#166534" font-weight="700">➔</text>
+
+      <!-- Step 4 -->
+      <rect x="770" y="42" width="220" height="55" rx="6" fill="#FFFFFF" stroke="#86EFAC"/>
+      <text x="780" y="62" font-size="12" font-weight="700" fill="#166534">4. 세탁기 O/X 표 확인</text>
+      <text x="780" y="80" font-size="10" fill="#4B5563">삶기 불필요 &amp; 세탁기 안심 사용</text>
+
+      <text x="1000" y="73" font-size="14" fill="#166534" font-weight="700">➔</text>
+
+      <!-- Step 5 -->
+      <rect x="1020" y="42" width="220" height="55" rx="6" fill="#FFFFFF" stroke="#86EFAC"/>
+      <text x="1030" y="62" font-size="12" font-weight="700" fill="#166534">5. 주문 / 정기배송 완료</text>
+      <text x="1030" y="80" font-size="10" fill="#4B5563">고리 옵션 선택 후 N-Pay 1초 결제</text>
+    </g>
+  </g>
+</svg>

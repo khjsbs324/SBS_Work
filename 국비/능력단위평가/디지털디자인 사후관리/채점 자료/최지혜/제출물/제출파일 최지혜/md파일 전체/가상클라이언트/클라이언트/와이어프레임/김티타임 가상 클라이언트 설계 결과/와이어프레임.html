@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 (Flottelier) TEA & COFFEE - 김티타임(고은서) 페르소나 와이어프레임 뷰어</title>
+  <style>
+    :root {
+      --bg-app: #FAFDFD;
+      --bg-sidebar: #16201B;
+      --bg-card: #FFFFFF;
+      --text-main: #1E2522;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+      --border-color: #E2E8F0;
+      --accent-tea: #2A3B30;
+      --accent-tea-light: #EDF5F1;
+      --accent-matcha: #4A6B53;
+      --accent-gold: #C59B27;
+      --accent-gold-light: #FFFBEB;
+      --accent-oatmeal: #F4EBE1;
+      --accent-blue: #1E3A8A;
+      --accent-blue-light: #EFF6FF;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #0F172A;
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    #sidebar {
+      width: 320px;
+      background-color: var(--bg-sidebar);
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      z-index: 100;
+      border-right: 1px solid #24352D;
+    }
+
+    .sidebar-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid #24352D;
+    }
+
+    .sidebar-header h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-header p {
+      font-size: 11px;
+      color: #94A3B8;
+      margin-top: 4px;
+    }
+
+    .sidebar-menu {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .menu-group-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #64748B;
+      padding: 10px 10px 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      margin-bottom: 2px;
+    }
+
+    .nav-item:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+    }
+
+    .nav-item.active {
+      background-color: var(--accent-matcha);
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .nav-item .badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #E2E8F0;
+      font-family: monospace;
+      margin-right: 4px;
+    }
+
+    .sidebar-footer {
+      padding: 14px 18px;
+      border-top: 1px solid #24352D;
+      font-size: 11px;
+      color: #64748B;
+      background-color: #0E1512;
+    }
+
+    /* Main Workspace Container */
+    #workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #1E293B;
+      overflow: hidden;
+    }
+
+    /* Top Control Bar */
+    #control-bar {
+      height: 52px;
+      background-color: #0F172A;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      color: #F8FAFC;
+    }
+
+    .screen-title-indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .screen-title-indicator .badge-active {
+      background-color: var(--accent-matcha);
+      color: #FFFFFF;
+      font-weight: bold;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .viewport-switchers {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #1E293B;
+      padding: 3px;
+      border-radius: 8px;
+    }
+
+    .viewport-btn {
+      background: none;
+      border: none;
+      color: #94A3B8;
+      padding: 5px 12px;
+      font-size: 11px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+
+    .viewport-btn:hover {
+      color: #FFFFFF;
+    }
+
+    .viewport-btn.active {
+      background-color: #334155;
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+
+    /* Device Preview Stage */
+    #preview-stage {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+      background-color: #0F172A;
+    }
+
+    #device-frame {
+      background-color: var(--bg-app);
+      width: 100%;
+      max-width: 1160px;
+      min-height: 800px;
+      border-radius: 12px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      transition: max-width 0.25s ease;
+      position: relative;
+    }
+
+    #device-frame.tablet {
+      max-width: 768px;
+    }
+
+    #device-frame.mobile {
+      max-width: 390px;
+    }
+
+    /* Screen Component Containers */
+    .screen-view {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .screen-view.active {
+      display: flex;
+    }
+
+    /* Common Header & Banner */
+    .top-notice-bar {
+      background-color: #2A3B30;
+      color: #FFFFFF;
+      padding: 7px 16px;
+      font-size: 11px;
+      text-align: center;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-notice-bar a {
+      color: #FCD34D;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .app-header {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #1E2522;
+      cursor: pointer;
+    }
+
+    .brand-logo span {
+      color: var(--accent-matcha);
+    }
+
+    .app-gnb {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .gnb-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+
+    .gnb-link:hover, .gnb-link.active {
+      color: var(--accent-matcha);
+    }
+
+    .header-utils {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cart-btn {
+      position: relative;
+      background-color: var(--accent-tea-light);
+      color: var(--accent-matcha);
+      border: 1px solid var(--accent-matcha);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cart-badge {
+      background-color: var(--accent-matcha);
+      color: #FFFFFF;
+      font-size: 10px;
+      border-radius: 50%;
+      padding: 1px 5px;
+    }
+
+    /* Main Content Area */
+    .screen-content {
+      padding: 24px;
+      flex: 1;
+    }
+
+    /* Hero Section */
+    .hero-banner {
+      background: linear-gradient(135deg, #FAF7F2 0%, #F1EDE4 100%);
+      border: 1px solid #E2D9CC;
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1E2522;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 13px;
+      color: #585D62;
+      margin-bottom: 18px;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tag-pill {
+      background-color: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      color: #475569;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .btn-tea {
+      background-color: var(--accent-matcha);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .btn-tea:hover {
+      background-color: #38523F;
+    }
+
+    .btn-outline {
+      background-color: #FFFFFF;
+      color: #334155;
+      border: 1px solid #CBD5E1;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      background-color: #F8FAFC;
+    }
+
+    /* Product Grid */
+    .section-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1E293B;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .product-card {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-img-holder {
+      background-color: #F1F5F9;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94A3B8;
+      font-size: 12px;
+      font-weight: 600;
+      border-bottom: 1px solid #F1F5F9;
+      position: relative;
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: var(--accent-matcha);
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1E293B;
+      margin-bottom: 6px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: #64748B;
+      margin-bottom: 12px;
+    }
+
+    .card-price {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 12px;
+    }
+
+    .card-price span {
+      font-size: 11px;
+      color: #2563EB;
+      margin-left: 4px;
+    }
+
+    /* Widgets */
+    .widget-box {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .b2b-calc-box {
+      background: linear-gradient(135deg, #FAF7F2 0%, #F4EBE1 100%);
+      border: 1px solid #E2D9CC;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-bottom: 24px;
+    }
+
+    .calc-display {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 18px 0;
+      text-align: center;
+    }
+
+    /* Live Canvas Atelier */
+    .atelier-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .atelier-layout {
+        grid-template-columns: 1fr;
+      }
+      .app-gnb {
+        display: none;
+      }
+    }
+
+    .canvas-preview-box {
+      background-color: #F4EBE1;
+      border: 2px dashed #CBD5E1;
+      border-radius: var(--radius-md);
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .embroidery-render {
+      font-family: 'Georgia', serif;
+      font-size: 26px;
+      font-weight: bold;
+      color: #C59B27;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #CBD5E1;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+    }
+
+    .color-picker {
+      display: flex;
+      gap: 8px;
+    }
+
+    .color-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 0 0 1px #CBD5E1;
+    }
+
+    .color-dot.active {
+      box-shadow: 0 0 0 2px var(--accent-matcha);
+    }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      max-width: 520px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #F1F5F9;
+      padding-bottom: 10px;
+    }
+
+    .modal-header h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1E293B;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: #94A3B8;
+    }
+
+    /* Global Footer */
+    .app-footer {
+      background-color: #16201B;
+      color: #94A3B8;
+      padding: 24px;
+      font-size: 11px;
+      margin-top: auto;
+      border-top: 1px solid #24352D;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Left Sidebar Navigation -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h1>☕ 플로뜰리에 TEA</h1>
+      <p>김티타임 (고은서) 페르소나 와이어프레임 뷰어</p>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="menu-group-title">1. 메인 및 홈</div>
+      <div class="nav-item active" onclick="switchScreen('SCR-01')">
+        <span class="badge">SCR-01</span> 메인 홈
+      </div>
+
+      <div class="menu-group-title">2. 카페 린넨 &amp; 패브릭</div>
+      <div class="nav-item" onclick="switchScreen('SCR-02')">
+        <span class="badge">SCR-02</span> Zero-Lint 글라스 티 타월
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-03')">
+        <span class="badge">SCR-03</span> 바리스타 스팀완드 와입스
+      </div>
+
+      <div class="menu-group-title">3. 카페 브랜딩 &amp; 도매</div>
+      <div class="nav-item" onclick="switchScreen('SCR-04')">
+        <span class="badge">SCR-04</span> 카페 로고 자수 아틀리에
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-05')">
+        <span class="badge">SCR-05</span> 카페 B2B 도매 발주 센터
+      </div>
+
+      <div class="menu-group-title">4. 식품 위생 &amp; 관리 팁</div>
+      <div class="nav-item" onclick="switchScreen('SCR-06')">
+        <span class="badge">SCR-06</span> 식품 위생 &amp; 100회 세탁 검증실
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-07')">
+        <span class="badge">SCR-07</span> 티 리추얼 &amp; 과탄산 세척 가이드
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-08')">
+        <span class="badge">SCR-08</span> 바리스타 1장 체험팩 (3,000원)
+      </div>
+
+      <div class="menu-group-title">5. B2B 주문 결제 여정</div>
+      <div class="nav-item" onclick="switchScreen('SCR-09')">
+        <span class="badge">SCR-09</span> 카페 B2B 장바구니
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-10')">
+        <span class="badge">SCR-10</span> B2B 주문 및 사업자 결제
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-11')">
+        <span class="badge">SCR-11</span> 발주 완료 &amp; 납품 확약서
+      </div>
+
+      <div class="menu-group-title">6. 오너 후기 &amp; 모달</div>
+      <div class="nav-item" onclick="switchScreen('SCR-12')">
+        <span class="badge">SCR-12</span> 전국 카페/티룸 오너 후기
+      </div>
+      <div class="nav-item" onclick="openModal('MODAL-01')">
+        <span class="badge">MODAL-01</span> 글라스 닦임성 비교 뷰어
+      </div>
+      <div class="nav-item" onclick="openModal('MODAL-02')">
+        <span class="badge">MODAL-02</span> 카페 로고 시안 확정
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div>플로뜰리에 TEA Wireframe v1.0.0</div>
+      <div>스페셜티 카페 &amp; 감성 티룸 패브릭</div>
+    </div>
+  </aside>
+
+  <!-- 2. Main Workspace -->
+  <main id="workspace">
+    <!-- Top Control Bar -->
+    <div id="control-bar">
+      <div class="screen-title-indicator">
+        <span id="current-screen-badge" class="badge-active">SCR-01</span>
+        <span id="current-screen-name" style="font-weight: 700;">플로뜰리에 TEA 메인</span>
+      </div>
+
+      <div class="viewport-switchers">
+        <button class="viewport-btn active" onclick="setViewport('desktop')">💻 Desktop (1160px)</button>
+        <button class="viewport-btn" onclick="setViewport('tablet')">📱 Tablet (768px)</button>
+        <button class="viewport-btn" onclick="setViewport('mobile')">📲 Mobile (390px)</button>
+      </div>
+    </div>
+
+    <!-- Preview Stage -->
+    <div id="preview-stage">
+      <div id="device-frame">
+
+        <!-- Top Notice Bar -->
+        <div class="top-notice-bar">
+          <span>☕ 카페 B2B 20장 이상 발주 시 카페 로고 무료 자수 &amp; 세금계산서 100% 즉시 발행</span>
+          <a onclick="switchScreen('SCR-08')">3,000원 체험팩 신청 &rarr;</a>
+        </div>
+
+        <!-- Global Header -->
+        <header class="app-header">
+          <div class="brand-logo" onclick="switchScreen('SCR-01')">
+            ☕ Flottelier <span>TEA &amp; COFFEE</span>
+          </div>
+
+          <nav class="app-gnb">
+            <span class="gnb-link" onclick="switchScreen('SCR-02')">글라스 티 타월</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-03')">스팀완드 와입스</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-04')">로고 자수</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-05')">B2B 도매센터</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-06')">식품위생 검증</span>
+            <span class="gnb-link" onclick="switchScreen('SCR-12')">오너 후기</span>
+          </nav>
+
+          <div class="header-utils">
+            <button class="cart-btn" onclick="switchScreen('SCR-09')">
+              📑 B2B 견적함 <span class="cart-badge" id="cart-count">50</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- ==================== SCREENS ==================== -->
+
+        <!-- [SCR-01] 메인 홈 -->
+        <div id="SCR-01" class="screen-view active">
+          <div class="screen-content">
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+              <div class="hero-text">
+                <div class="hero-tags">
+                  <span class="tag-pill">보풀·물자국 제로</span>
+                  <span class="tag-pill">100℃ 고온 스팀 내열</span>
+                  <span class="tag-pill">KTR 식품용 기구 안전 인증</span>
+                </div>
+                <h2>찻잔과 글라스웨어의 광택을 완성하는 마지막 1초,<br>먼지 없는 순면 소창 티 타월</h2>
+                <p>소창의 무보풀(Zero-Lint) 평직 구조로 와인잔과 찻잔을 닦을 때 미세 섬유 먼지가 전혀 남지 않습니다.</p>
+                <div style="display:flex; gap:10px;">
+                  <button class="btn-tea" onclick="switchScreen('SCR-05')">카페 B2B 도매 발주 센터</button>
+                  <button class="btn-outline" onclick="openModal('MODAL-01')">✨ 글라스 닦임성 비교 뷰어</button>
+                </div>
+              </div>
+              <div style="background:#F4EBE1; width:220px; height:180px; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#4A6B53; font-weight:bold; font-size:13px; text-align:center;">
+                [스페셜티 카페 바<br>와인잔 &amp; 찻잔 광택 컷<br>오트밀 베이지]
+              </div>
+            </div>
+
+            <!-- Best Cafe Linen Lineup -->
+            <div class="section-title">
+              <span>🍵 카페 &amp; 티룸 필수 패브릭 라인업</span>
+              <span style="font-size:12px; color:var(--text-muted); cursor:pointer;" onclick="switchScreen('SCR-05')">B2B 대량 도매 단가표 &rarr;</span>
+            </div>
+
+            <div class="grid-3">
+              <div class="product-card">
+                <div class="card-img-holder">
+                  <span class="card-badge">인기 1위</span>
+                  [Zero-Lint 글라스 티 타월 40x60cm]
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Zero-Lint 글라스 티 타월</div>
+                  <div class="card-desc">와인잔/찻잔 전용 / 보풀 및 물자국 0% 검출</div>
+                  <div class="card-price">18,000원 <span>[도매가 11,700원~]</span></div>
+                  <button class="btn-tea" onclick="switchScreen('SCR-02')">상세보기 &amp; 자수추가</button>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="card-img-holder">
+                  <span class="card-badge">고온 내열</span>
+                  [바리스타 스팀완드 와입스 5장]
+                </div>
+                <div class="card-body">
+                  <div class="card-title">바리스타 스팀완드 와입스 5장 세트</div>
+                  <div class="card-desc">100℃ 머신 스팀 노즐 관리 / 4중 엠보싱</div>
+                  <div class="card-price">28,000원 <span>[5장 세트]</span></div>
+                  <button class="btn-tea" onclick="switchScreen('SCR-03')">상세보기 &amp; 담기</button>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="card-img-holder">
+                  <span class="card-badge">B2B 특판</span>
+                  [50장 카페 대량 패키지]
+                </div>
+                <div class="card-body">
+                  <div class="card-title">카페 B2B 50장 도매 패키지</div>
+                  <div class="card-desc">카페 로고 무료 자수 + 전자세금계산서 즉시 발행</div>
+                  <div class="card-price">648,000원 <span>[28% 할인]</span></div>
+                  <button class="btn-tea" onclick="switchScreen('SCR-05')">도매 발주 센터</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-02] 글라스 티 타월 상세 -->
+        <div id="SCR-02" class="screen-view">
+          <div class="screen-content">
+            <div class="atelier-layout">
+              <div style="background:#F4EBE1; border-radius:var(--radius-md); height:380px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#4A6B53;">
+                <div style="font-size:16px; font-weight:bold; margin-bottom:8px;">[40x60cm 글라스 티 타월 갤러리]</div>
+                <div style="font-size:12px; color:#64748B;">와인잔 래핑 / 500% HD 무보풀 평직 표면 줌</div>
+                <button class="btn-outline" style="margin-top:18px; color:#1E2522;" onclick="openModal('MODAL-01')">✨ 글라스 닦임성 비교 뷰어</button>
+              </div>
+
+              <div>
+                <div class="tag-pill" style="display:inline-block; margin-bottom:8px;">와인잔·찻잔 무먼지 드라잉</div>
+                <h2 style="font-size:20px; font-weight:800; color:#1E293B; margin-bottom:8px;">Zero-Lint 순면 소창 글라스 티 타월 (40x60cm)</h2>
+                <div style="font-size:22px; font-weight:900; color:#4A6B53; margin-bottom:16px;">18,000원 <span style="font-size:12px; color:#64748B; font-weight:normal;">(B2B 도매가 11,700원~)</span></div>
+
+                <div class="widget-box" style="padding:14px; margin-bottom:16px; font-size:12px; line-height:1.6;">
+                  <div>✔️ <strong>Zero-Lint 무보풀</strong>: 와인잔을 닦아도 미세 먼지/보풀이 전혀 남지 않음</div>
+                  <div>✔️ <strong>KTR 식품용 기구 안전</strong>: 형광증백제, 포름알데히드 불검출 인증</div>
+                  <div>✔️ <strong>초고속 자연 건조</strong>: 면 대비 3배 빠른 건조로 세균 번식 억제</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">톤다운 컬러 선택</label>
+                  <div class="color-picker">
+                    <div class="color-dot active" style="background-color:#F4EBE1;" title="오트밀 베이지"></div>
+                    <div class="color-dot" style="background-color:#4A6B53;" title="말차 그린"></div>
+                    <div class="color-dot" style="background-color:#6B4E3D;" title="모카 브라운"></div>
+                  </div>
+                </div>
+
+                <div class="form-group" style="background:#EDF5F1; padding:12px; border-radius:6px; border:1px solid #C2DBD0;">
+                  <label style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:bold; cursor:pointer;">
+                    <input type="checkbox" id="add-cafe-jasu" checked>
+                    <span>🧵 카페 / 티룸 로고 톤온톤 자수 추가</span>
+                  </label>
+                  <div style="font-size:11px; color:#4A7C6D; margin-top:4px; margin-left:22px;">카페 BI 업로드 시 톤온톤 실크 자수 시안 생성 (20장 이상 무료)</div>
+                </div>
+
+                <div style="display:flex; gap:10px; margin-top:20px;">
+                  <button class="btn-outline" style="flex:1;" onclick="switchScreen('SCR-04')">로고 자수 아틀리에</button>
+                  <button class="btn-tea" style="flex:2;" onclick="switchScreen('SCR-05')">B2B 도매 발주 센터</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-03] 스팀완드 와입스 상세 -->
+        <div id="SCR-03" class="screen-view">
+          <div class="screen-content">
+            <div class="atelier-layout">
+              <div style="background:#F1F5F9; border-radius:var(--radius-md); height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#64748B;">
+                <div style="font-size:16px; font-weight:bold; color:#1E293B;">[바리스타 스팀완드 와입스 5장]</div>
+                <div style="font-size:12px; margin-top:6px;">100℃ 고온 머신 스팀 노즐 4중 엠보싱 시연</div>
+              </div>
+
+              <div>
+                <span class="tag-pill">100℃ 스팀 내열</span>
+                <h2 style="font-size:18px; font-weight:800; margin:8px 0;">바리스타 스팀완드 와입스 5장 세트</h2>
+                <div style="font-size:20px; font-weight:900; color:#4A6B53; margin-bottom:14px;">28,000원</div>
+
+                <p style="font-size:12px; color:#585D62; margin-bottom:14px;">고온 스팀 노즐을 감싸 닦을 때 손에 열이 전달되지 않는 4중 엠보싱 두께로 바리스타의 안전과 머신 위생을 지킵니다.</p>
+
+                <div style="display:flex; gap:10px;">
+                  <button class="btn-tea" style="flex:1;" onclick="switchScreen('SCR-09')">견적함 담기</button>
+                  <button class="btn-outline" onclick="switchScreen('SCR-05')">B2B 도매 단가표</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-04] 카페 로고 자수 아틀리에 -->
+        <div id="SCR-04" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>🧵 카페 로고 실시간 Canvas 자수 아틀리에</span>
+              <span style="font-size:12px; color:var(--text-muted);">0.05초 실시간 렌더링</span>
+            </div>
+
+            <div class="atelier-layout">
+              <!-- Preview Box -->
+              <div>
+                <div class="canvas-preview-box">
+                  <div style="position:absolute; top:12px; left:16px; font-size:11px; color:#8E949A;">오트밀 린넨 패브릭 자수 프리뷰</div>
+                  <div class="embroidery-render" id="cafe-live-preview">
+                    <span id="cafe-preview-text">CAFE BOTANIC</span>
+                  </div>
+                  <div style="position:absolute; bottom:12px; font-size:11px; color:#C59B27;">4차 정련 소창 위 톤온톤 골드 각인 시안</div>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <div>
+                <div class="form-group">
+                  <label class="form-label">카페명 / 브랜드명 입력 (영문 최대 12자 / 한글 최대 8자)</label>
+                  <input type="text" id="cafe-name-input" class="form-input" value="CAFE BOTANIC" maxlength="12" oninput="updateCafePreview()">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">카페 BI 로고 파일 업로드 (AI, PNG)</label>
+                  <input type="file" class="form-input" style="padding:6px;">
+                  <div style="font-size:11px; color:#64748B; margin-top:4px;">* 20장 이상 발주 시 디자이너 1:1 무료 벡터 보정 지원</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">자수 실 색상</label>
+                  <div class="color-picker">
+                    <div class="color-dot active" style="background-color:#C59B27;" onclick="selectCafeColor('#C59B27', this)" title="샴페인골드"></div>
+                    <div class="color-dot" style="background-color:#6B4E3D;" onclick="selectCafeColor('#6B4E3D', this)" title="모카브라운"></div>
+                    <div class="color-dot" style="background-color:#4A6B53;" onclick="selectCafeColor('#4A6B53', this)" title="말차그린"></div>
+                    <div class="color-dot" style="background-color:#232527;" onclick="selectCafeColor('#232527', this)" title="딥차콜"></div>
+                  </div>
+                </div>
+
+                <button class="btn-tea" style="width:100%; margin-top:10px;" onclick="openModal('MODAL-02')">✨ 자수 시안 확정 &amp; B2B 견적함 담기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-05] 카페 B2B 도매 발주 센터 -->
+        <div id="SCR-05" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>🏢 카페 B2B 도매 발주 센터 (대량 할인 단가표)</span>
+            </div>
+
+            <div class="widget-box">
+              <div class="form-group">
+                <label class="form-label">발주 수량 선택 (슬라이더)</label>
+                <input type="range" min="20" max="100" step="10" value="50" style="width:100%;" oninput="updateCafeB2BQuote(this.value)">
+                <div style="display:flex; justify-content:space-between; font-size:11px; color:#64748B; margin-top:4px;">
+                  <span>20장 (20% 할인)</span>
+                  <span>50장 (28% 할인)</span>
+                  <span>100장 (35% 할인)</span>
+                </div>
+              </div>
+
+              <div style="background:#FAF7F2; padding:18px; border-radius:8px; border:1px solid #E2D9CC; margin-top:16px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #E2D9CC; padding-bottom:12px;">
+                  <div>
+                    <div style="font-weight:bold; font-size:15px;" id="cafe-b2b-qty-text">Zero-Lint 글라스 티 타월 50장 번들</div>
+                    <div style="font-size:12px; color:#4A6B53;">✔️ 카페 로고 무료 자수 + 전자세금계산서 즉시 발행</div>
+                  </div>
+                  <div style="text-align:right;">
+                    <div style="font-size:12px; color:#94A3B8; text-decoration:line-through;">900,000원</div>
+                    <div style="font-size:22px; font-weight:900; color:#4A6B53;" id="cafe-b2b-price-text">648,000원</div>
+                    <div style="font-size:11px; color:#2563EB;">(장당 12,960원 / 28% 절감)</div>
+                  </div>
+                </div>
+
+                <div style="display:flex; gap:10px; margin-top:16px;">
+                  <button class="btn-outline" style="flex:1;" onclick="alert('법인 직인 날인 공식 견적서 PDF가 다운로드되었습니다.')">📄 공식 견적서 PDF 출력</button>
+                  <button class="btn-tea" style="flex:2;" onclick="switchScreen('SCR-10')">B2B 주문 및 결제하기 &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-06] 식품 위생 검증실 -->
+        <div id="SCR-06" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>🔬 식품 위생 &amp; 100회 세탁 검증실</span>
+            </div>
+
+            <div class="grid-3">
+              <div class="widget-box">
+                <div style="font-weight:bold; color:#1E293B; font-size:14px; margin-bottom:8px;">KTR 식품용 기구 안전성</div>
+                <div style="font-size:12px; color:#64748B; line-height:1.6;">
+                  식기 및 음식에 직접 닿는 패브릭으로서 형광증백제, 포름알데히드 등 유해물질 0.00 불검출 시험성적서 원본을 제공합니다.
+                </div>
+              </div>
+
+              <div class="widget-box">
+                <div style="font-weight:bold; color:#1E293B; font-size:14px; margin-bottom:8px;">KATRI 무보풀(Zero-Lint)</div>
+                <div style="font-size:12px; color:#64748B; line-height:1.6;">
+                  고밀도 평직 소창 구조로 와인잔 표면에 잔여 섬유 먼지가 전혀 남지 않는 100% 무보풀 성능을 공인 인증받았습니다.
+                </div>
+              </div>
+
+              <div class="widget-box">
+                <div style="font-weight:bold; color:#1E293B; font-size:14px; margin-bottom:8px;">100회 세탁 품질 보증</div>
+                <div style="font-size:12px; color:#64748B; line-height:1.6;">
+                  100℃ 고온 삶음 및 일 5회 세탁에도 원단의 변형과 헤짐 없이 부드러운 직조 상태가 유지됩니다.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-07] 세척 가이드 -->
+        <div id="SCR-07" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>🍵 티 리추얼 &amp; 천연 과탄산 세척 가이드</span>
+            </div>
+
+            <div class="widget-box">
+              <h3 style="font-size:14px; font-weight:bold; margin-bottom:10px;">차/커피 얼룩 3단계 완벽 제거법</h3>
+              <div style="font-size:12px; line-height:1.8; color:#475569;">
+                1단계: 40~50℃ 온수에 천연 과탄산소다를 풀고 30분간 침지<br>
+                2단계: 끓는 물에 15분간 삶아 살균 및 착색 얼룩 분해<br>
+                3단계: 맑은 물에 헹군 후 자연 바람과 햇빛에 자연 건조 (소창 광택 회복)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-08] 1장 체험팩 -->
+        <div id="SCR-08" class="screen-view">
+          <div class="screen-content">
+            <div class="widget-box" style="text-align:center; padding:36px 20px; background:#FAF7F2;">
+              <span class="tag-pill">바리스타 전용 체험</span>
+              <h2 style="font-size:20px; font-weight:800; margin:10px 0;">바리스타 1장 안심 체험팩 (3,000원)</h2>
+              <p style="font-size:13px; color:#64748B; max-width:480px; margin:0 auto 20px;">
+                배송비 3,000원만 결제하고 카페 글라스웨어에서 무보풀 광택력을 직접 테스트하세요.<br>
+                B2B 도매 발주 시 사용 가능한 <strong>100% 전액 환급 쿠폰</strong>을 드립니다.
+              </p>
+              <button class="btn-tea" onclick="switchScreen('SCR-10')">3,000원 체험팩 신청하기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-09] B2B 장바구니 -->
+        <div id="SCR-09" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>📑 카페 B2B 장바구니</span>
+            </div>
+
+            <div class="widget-box">
+              <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #E2E8F0; padding-bottom:14px; margin-bottom:14px;">
+                <div>
+                  <div style="font-weight:bold; font-size:14px;">Zero-Lint 글라스 티 타월 (50장 번들)</div>
+                  <div style="font-size:12px; color:#4A6B53;">🧵 카페 로고 자수: <strong id="cart-cafe-name">CAFE BOTANIC</strong> (샴페인골드 무료각인)</div>
+                </div>
+                <div style="font-size:16px; font-weight:bold;">648,000원</div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; font-size:16px; font-weight:800; margin-top:20px;">
+                <div>총 결제 예정 금액 (부가세 포함 / 세금계산서 발행)</div>
+                <div style="color:#4A6B53; font-size:22px;">648,000원</div>
+              </div>
+
+              <button class="btn-tea" style="width:100%; margin-top:20px;" onclick="switchScreen('SCR-10')">B2B 발주서 작성 및 결제하기 &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-10] B2B 결제 -->
+        <div id="SCR-10" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>💳 B2B 주문 및 사업자 결제</span>
+            </div>
+
+            <div class="widget-box">
+              <div class="form-group">
+                <label class="form-label">카페 상호명 / 대표자명</label>
+                <input type="text" class="form-input" value="카페 보타닉 성수 / 고은서">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">사업자등록번호 (국세청 실시간 인증)</label>
+                <input type="text" class="form-input" value="105-87-98765 (인증완료 ✔️)">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">전자세금계산서 수령 이메일</label>
+                <input type="text" class="form-input" value="tax@cafebotanic.com">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">결제 수단</label>
+                <div style="display:flex; gap:10px;">
+                  <button class="btn-tea" style="flex:1;">법인카드</button>
+                  <button class="btn-outline" style="flex:1;">기업 가상계좌</button>
+                  <button class="btn-outline" style="flex:1;">간편결제</button>
+                </div>
+              </div>
+
+              <button class="btn-tea" style="width:100%;" onclick="switchScreen('SCR-11')">648,000원 결제 및 세금계산서 발행 신청</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-11] 발주 완료 -->
+        <div id="SCR-11" class="screen-view">
+          <div class="screen-content">
+            <div class="widget-box" style="text-align:center; padding:36px 20px;">
+              <div style="font-size:36px; margin-bottom:10px;">🎉</div>
+              <h2 style="font-size:20px; font-weight:800; color:#1E293B; margin-bottom:8px;">카페 B2B 발주가 정상적으로 완료되었습니다!</h2>
+              <p style="font-size:12px; color:#64748B; margin-bottom:20px;">발주번호: FLOT-TEA-2026-0818 | 전자세금계산서 발행 완료</p>
+
+              <div style="background:#FAF7F2; border:1px solid #E2D9CC; border-radius:8px; padding:16px; max-width:420px; margin:0 auto 20px; text-align:left; font-size:12px;">
+                <div><strong>🧵 카페 로고 자수</strong>: <span id="complete-cafe-text">CAFE BOTANIC (샴페인골드)</span></div>
+                <div><strong>📦 패키지</strong>: Zero-Lint 글라스 티 타월 50장 번들</div>
+                <div><strong>📄 혜택</strong>: D-Day 납품 확약서 &amp; 전자세금계산서 이메일 발송</div>
+              </div>
+
+              <button class="btn-tea" onclick="switchScreen('SCR-01')">홈으로 돌아가기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- [SCR-12] 오너 후기 -->
+        <div id="SCR-12" class="screen-view">
+          <div class="screen-content">
+            <div class="section-title">
+              <span>🍵 전국 카페 &amp; 티룸 오너 실사용 후기</span>
+              <span style="font-size:12px; color:var(--text-muted);">평점 5.0 / 5.0 (100% 만족)</span>
+            </div>
+
+            <div class="grid-3">
+              <div class="widget-box">
+                <div style="font-weight:bold; font-size:13px; color:#1E293B;">"와인잔 닦는 시간이 절반으로 줄었습니다."</div>
+                <div style="font-size:11px; color:#4A6B53; margin:4px 0;">성수 티룸 오너 / 고은서 님</div>
+                <p style="font-size:12px; color:#64748B;">린넨 특유의 섬유 먼지가 와인잔에 남지 않아 손님 응대 전 잔 검수 스트레스가 사라졌습니다.</p>
+              </div>
+
+              <div class="widget-box">
+                <div style="font-weight:bold; font-size:13px; color:#1E293B;">"100℃ 머신 스팀 노즐 닦을 때 손 안 뜨거워요."</div>
+                <div style="font-size:11px; color:#4A6B53; margin:4px 0;">한남 스페셜티 바리스타 / 김지훈 님</div>
+                <p style="font-size:12px; color:#64748B;">4중 엠보싱이라 우유 찌꺼기도 한 번에 닦이고 가죽 루프 걸이로 머신에 걸어두기 좋습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Footer -->
+        <footer class="app-footer">
+          <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+            <div>
+              <div style="font-weight:bold; color:#FFFFFF; margin-bottom:4px;">플로뜰리에 TEA &amp; COFFEE (Flottelier Cafe Linen)</div>
+              <div>스페셜티 카페 &amp; 감성 티룸 B2B 패브릭 | KTR 식품위생 인증 완료</div>
+            </div>
+            <div>
+              <div>B2B 직통 상담: 1588-0000 | 세금계산서 100% 즉시 발행</div>
+              <div>사업자등록번호: 105-87-98765 | 통신판매업신고 완료</div>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- [MODAL-01] 글라스 닦임성 비교 뷰어 모달 -->
+  <div id="MODAL-01" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>✨ 글라스 닦임성 실시간 비교 뷰어</h3>
+        <button class="modal-close" onclick="closeModal('MODAL-01')">&times;</button>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
+        <div style="background:#F1F5F9; border-radius:8px; padding:16px; text-align:center;">
+          <div style="font-size:12px; font-weight:bold; color:#EF4444; margin-bottom:6px;">일반 면 행주</div>
+          <div style="font-size:11px; color:#64748B;">미세 보풀 잔여 ❌<br>물자국 얼룩 발생 ❌</div>
+        </div>
+        <div style="background:#EDF5F1; border-radius:8px; padding:16px; text-align:center; border:1px solid #C2DBD0;">
+          <div style="font-size:12px; font-weight:bold; color:#4A6B53; margin-bottom:6px;">소창 글라스 티 타월</div>
+          <div style="font-size:11px; color:#14532D;">보풀 0% 제로 ✔️<br>투명 크리스탈 광택 ✔️</div>
+        </div>
+      </div>
+
+      <button class="btn-tea" style="width:100%;" onclick="closeModal('MODAL-01'); switchScreen('SCR-05');">이 타월로 B2B 도매 발주하기</button>
+    </div>
+  </div>
+
+  <!-- [MODAL-02] 카페 로고 시안 확정 모달 -->
+  <div id="MODAL-02" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>✨ 카페 로고 자수 시안 최종 확인</h3>
+        <button class="modal-close" onclick="closeModal('MODAL-02')">&times;</button>
+      </div>
+
+      <div style="background:#F4EBE1; border:2px dashed #C59B27; border-radius:8px; padding:24px; text-align:center; margin-bottom:16px;">
+        <div class="embroidery-render" id="modal-cafe-render" style="justify-content:center;">
+          CAFE BOTANIC
+        </div>
+        <div style="font-size:11px; color:#C59B27; margin-top:8px;">자수 실: 샴페인골드 | 톤온톤 프리미엄 각인</div>
+      </div>
+
+      <div style="font-size:12px; color:#64748B; margin-bottom:16px; line-height:1.5;">
+        위 카페 로고 시안대로 1:1 맞춤 자수가 진행됩니다. B2B 견적함에 담으시겠습니까?
+      </div>
+
+      <div style="display:flex; gap:10px;">
+        <button class="btn-outline" style="flex:1;" onclick="closeModal('MODAL-02')">수정하기</button>
+        <button class="btn-tea" style="flex:2;" onclick="confirmCafeJasuAndCart()">시안 확정 &amp; 견적함 담기</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State
+    let currentCafeColor = '#C59B27';
+
+    // Screen Switching
+    function switchScreen(screenId) {
+      document.querySelectorAll('.screen-view').forEach(view => {
+        view.classList.remove('active');
+      });
+
+      const target = document.getElementById(screenId);
+      if (target) {
+        target.classList.add('active');
+      }
+
+      // Update Sidebar Active State
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('onclick') && item.getAttribute('onclick').includes(screenId)) {
+          item.classList.add('active');
+        }
+      });
+
+      // Update Header Indicator
+      const badge = document.getElementById('current-screen-badge');
+      const name = document.getElementById('current-screen-name');
+      if (badge && name) {
+        badge.innerText = screenId;
+        const navItem = document.querySelector(`.nav-item[onclick*="${screenId}"]`);
+        if (navItem) {
+          name.innerText = navItem.innerText.replace(screenId, '').trim();
+        }
+      }
+
+      const frame = document.getElementById('device-frame');
+      if (frame) frame.scrollTop = 0;
+    }
+
+    // Viewport Switcher
+    function setViewport(mode) {
+      const frame = document.getElementById('device-frame');
+      document.querySelectorAll('.viewport-btn').forEach(btn => btn.classList.remove('active'));
+      
+      frame.className = mode;
+      if (event && event.target) {
+        event.target.classList.add('active');
+      }
+    }
+
+    // Modal Handlers
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) modal.classList.add('active');
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) modal.classList.remove('active');
+    }
+
+    // Live Embroidery Functions
+    function updateCafePreview() {
+      const input = document.getElementById('cafe-name-input');
+      const previewText = document.getElementById('cafe-preview-text');
+      
+      if (input && previewText) {
+        previewText.innerText = input.value.trim() || 'CAFE NAME';
+      }
+    }
+
+    function selectCafeColor(color, dot) {
+      currentCafeColor = color;
+      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+      document.getElementById('cafe-live-preview').style.color = color;
+    }
+
+    function confirmCafeJasuAndCart() {
+      const name = document.getElementById('cafe-name-input').value || 'CAFE BOTANIC';
+      
+      const cartName = document.getElementById('cart-cafe-name');
+      const compName = document.getElementById('complete-cafe-text');
+      if (cartName) cartName.innerText = name;
+      if (compName) compName.innerText = `${name} (샴페인골드)`;
+
+      closeModal('MODAL-02');
+      switchScreen('SCR-09');
+    }
+
+    // B2B Wholesale Quantity Discount Logic
+    function updateCafeB2BQuote(qty) {
+      const qtyNum = parseInt(qty, 10);
+      let discountRate = 0.20;
+      if (qtyNum >= 100) discountRate = 0.35;
+      else if (qtyNum >= 50) discountRate = 0.28;
+
+      const regularTotal = qtyNum * 18000;
+      const discountedTotal = Math.round(regularTotal * (1 - discountRate));
+      const perUnit = Math.round(discountedTotal / qtyNum);
+
+      const qtyText = document.getElementById('cafe-b2b-qty-text');
+      const priceText = document.getElementById('cafe-b2b-price-text');
+      if (qtyText && priceText) {
+        qtyText.innerText = `Zero-Lint 글라스 티 타월 ${qtyNum}장 번들`;
+        priceText.innerText = `${discountedTotal.toLocaleString()}원`;
+        priceText.parentElement.querySelector('div:last-child').innerText = `(장당 ${perUnit.toLocaleString()}원 / ${Math.round(discountRate*100)}% 절감)`;
+      }
+    }
+  </script>
+</body>
+</html>

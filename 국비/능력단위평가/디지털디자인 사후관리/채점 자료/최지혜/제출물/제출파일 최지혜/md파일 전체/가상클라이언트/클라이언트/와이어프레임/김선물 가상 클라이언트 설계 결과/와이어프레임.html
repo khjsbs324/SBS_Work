@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 (Flottelier) - 김선물 가상 클라이언트 인터랙티브 와이어프레임</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Nanum+Myeongjo:wght@400;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-workspace: #0F172A;
+      --sidebar-bg: #1E293B;
+      --sidebar-border: #334155;
+      --sidebar-text: #E2E8F0;
+      --sidebar-muted: #94A3B8;
+      
+      --color-primary: #2B3A42;
+      --color-accent-teal: #0D9488;
+      --color-accent-terra: #C47A5A;
+      --color-accent-gold: #D97706;
+      --color-bg-warm: #FAF9F6;
+      --color-card-bg: #FFFFFF;
+      --color-border: #E2E8F0;
+      --color-text-main: #1E293B;
+      --color-text-sub: #64748B;
+      --color-text-muted: #94A3B8;
+      
+      --font-sans: 'Noto Sans KR', -apple-system, sans-serif;
+      --font-serif: 'Noto Serif KR', 'Nanum Myeongjo', serif;
+      --font-hand: 'Nanum Pen Script', cursive;
+      --font-en: 'Cormorant Garamond', serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-workspace);
+      color: var(--color-text-main);
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* ========================================================
+       1. 좌측 통합 컨트롤 사이드바 (Sidebar)
+       ======================================================== */
+    .app-sidebar {
+      width: 320px;
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--sidebar-border);
+      color: var(--sidebar-text);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      z-index: 100;
+    }
+
+    .sidebar-header {
+      padding: 20px;
+      border-bottom: 1px solid var(--sidebar-border);
+    }
+
+    .brand-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      background: var(--color-accent-teal);
+      color: #FFF;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .sidebar-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFF;
+      line-height: 1.4;
+    }
+
+    .sidebar-subtitle {
+      font-size: 12px;
+      color: var(--sidebar-muted);
+      margin-top: 4px;
+    }
+
+    .nav-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+    }
+
+    .nav-section-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sidebar-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 18px 0 8px 6px;
+    }
+    .nav-section-title:first-child { margin-top: 0; }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: 6px;
+      color: var(--sidebar-text);
+      font-size: 13px;
+      cursor: pointer;
+      margin-bottom: 4px;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .nav-item:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-item.active {
+      background: rgba(13, 148, 136, 0.18);
+      border-color: var(--color-accent-teal);
+      color: #38BDF8;
+      font-weight: 600;
+    }
+
+    .nav-item .screen-id {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.1);
+      color: #94A3B8;
+    }
+    .nav-item.active .screen-id {
+      background: var(--color-accent-teal);
+      color: #FFF;
+    }
+
+    .sidebar-footer {
+      padding: 14px 20px;
+      border-top: 1px solid var(--sidebar-border);
+      font-size: 11px;
+      color: var(--sidebar-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ========================================================
+       2. 메인 워크스페이스 & 반응형 뷰포트 토글 바
+       ======================================================== */
+    .main-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #0B1120;
+      overflow: hidden;
+    }
+
+    .viewport-topbar {
+      height: 52px;
+      background: #1E293B;
+      border-bottom: 1px solid var(--sidebar-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      color: #FFF;
+      flex-shrink: 0;
+    }
+
+    .active-screen-indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .active-id-badge {
+      background: var(--color-accent-teal);
+      color: #FFF;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .device-switcher {
+      display: flex;
+      background: #0F172A;
+      border-radius: 6px;
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .device-btn {
+      background: none;
+      border: none;
+      color: #94A3B8;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .device-btn:hover { color: #FFF; }
+    .device-btn.active {
+      background: #334155;
+      color: #38BDF8;
+      font-weight: 700;
+    }
+
+    /* 뷰포트 캔버스 영역 */
+    .viewport-canvas {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 24px;
+      background: #090E17;
+    }
+
+    .device-frame {
+      background: var(--color-bg-warm);
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      width: 1200px;
+      min-height: 800px;
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .device-frame.tablet { width: 768px; }
+    .device-frame.mobile { width: 390px; }
+
+    /* ========================================================
+       3. 공통 컴포넌트 (Notice Banner, Header, Footer)
+       ======================================================== */
+    .wf-top-notice {
+      background: var(--color-primary);
+      color: #FFF;
+      font-size: 12px;
+      padding: 8px 16px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .wf-notice-highlight {
+      color: #FBBF24;
+      font-weight: 700;
+    }
+
+    .wf-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--color-border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .wf-logo {
+      font-family: var(--font-en);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--color-primary);
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .wf-gnb {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .wf-gnb-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text-sub);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .wf-gnb-link:hover, .wf-gnb-link.active {
+      color: var(--color-accent-teal);
+      font-weight: 700;
+    }
+
+    .wf-header-icons {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 12px;
+      color: var(--color-text-sub);
+    }
+
+    .wf-btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .wf-btn-primary {
+      background: var(--color-accent-teal);
+      color: #FFF;
+    }
+    .wf-btn-primary:hover { background: #0F766E; }
+
+    .wf-btn-terra {
+      background: var(--color-accent-terra);
+      color: #FFF;
+    }
+    .wf-btn-terra:hover { background: #A0522D; }
+
+    .wf-btn-outline {
+      border-color: var(--color-border);
+      background: #FFF;
+      color: var(--color-text-main);
+    }
+    .wf-btn-outline:hover { background: #F1F5F9; }
+
+    /* 화면 컨테이너 */
+    .screen-view {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+      padding: 24px 28px;
+    }
+    .screen-view.active { display: flex; }
+
+    /* 공통 와이어프레임 카드 */
+    .wf-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .wf-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      background: #E2E8F0;
+      color: #475569;
+    }
+    .wf-badge-teal { background: #CCFBF1; color: #0F766E; }
+    .wf-badge-terra { background: #FFEDD5; color: #9A3412; }
+
+    /* ========================================================
+       4. P-GF-01: 선물 메인 & 큐레이션 허브
+       ======================================================== */
+    .hero-banner {
+      background: linear-gradient(135deg, #2B3A42 0%, #1E293B 100%);
+      color: #FFF;
+      border-radius: 10px;
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .hero-title { font-family: var(--font-serif); font-size: 26px; margin-bottom: 8px; }
+    .hero-desc { font-size: 14px; color: #CBD5E1; font-weight: 300; margin-bottom: 18px; }
+
+    .curation-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .tab-chip {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--color-border);
+      background: #FFF;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .tab-chip.active {
+      background: var(--color-primary);
+      color: #FFF;
+      border-color: var(--color-primary);
+    }
+
+    .budget-filters {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .budget-chip {
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: #F1F5F9;
+      font-size: 12px;
+      color: #475569;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .budget-chip.active {
+      background: #0D9488;
+      color: #FFF;
+      font-weight: 600;
+    }
+
+    .gift-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .gift-card {
+      background: #FFF;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .gift-card:hover {
+      border-color: var(--color-accent-teal);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+    }
+    .gift-card.best-pick {
+      border: 2px solid var(--color-accent-teal);
+      background: #F0FDF4;
+    }
+    .gift-card-img-holder {
+      height: 140px;
+      background: #F8FAFC;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #94A3B8;
+      border: 1px dashed #CBD5E1;
+      margin-bottom: 12px;
+    }
+
+    /* 30초 인포그래픽 박스 */
+    .infographic-box {
+      background: #FFF;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .info-item {
+      background: #F8FAFC;
+      padding: 12px;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .info-item-icon { font-size: 20px; margin-bottom: 4px; }
+    .info-item-title { font-size: 12px; font-weight: 700; color: var(--color-primary); }
+    .info-item-desc { font-size: 11px; color: var(--color-text-sub); margin-top: 2px; }
+
+    /* ========================================================
+       5. P-GF-02: 시그니처 4종 선물 세트 상세 (★)
+       ======================================================== */
+    .detail-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .detail-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .magnifier-preview {
+      height: 340px;
+      background: #FFF;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .magnifier-lens {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border: 2px solid var(--color-accent-teal);
+      border-radius: 50%;
+      background: rgba(13, 148, 136, 0.1);
+      pointer-events: none;
+      display: none;
+    }
+
+    .detail-spec-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .price-sale { font-size: 26px; font-weight: 700; color: #0F766E; }
+    .price-orig { font-size: 14px; text-decoration: line-through; color: #94A3B8; }
+    .price-unit { font-size: 13px; color: #64748B; background: #F1F5F9; padding: 2px 8px; border-radius: 4px; }
+
+    .custom-trigger-box {
+      background: #FFFDF8;
+      border: 1px solid #FED7AA;
+      border-radius: 8px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .custom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      background: #FFF;
+      border: 1px solid #FDBA74;
+      border-radius: 6px;
+    }
+
+    /* ========================================================
+       6. 전역 모달 시스템 (M-GF-01 ~ M-GF-04)
+       ======================================================== */
+    .wf-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .wf-modal-overlay.active { display: flex; }
+
+    .wf-modal {
+      background: #FFF;
+      border-radius: 10px;
+      width: 600px;
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-title { font-size: 16px; font-weight: 700; color: var(--color-primary); }
+    .modal-close { font-size: 20px; color: #94A3B8; cursor: pointer; border: none; background: none; }
+
+    .modal-body { padding: 20px; }
+    .modal-footer {
+      padding: 14px 20px;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    /* 자수 캔버스 프리뷰 */
+    #embroideryCanvas {
+      width: 100%;
+      height: 180px;
+      background: #FAF7F0;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    /* 메시지 카드 렌더링 */
+    .message-card-preview {
+      background: #FFFDF8;
+      border: 1px solid #E2D9C8;
+      padding: 24px;
+      border-radius: 8px;
+      min-height: 160px;
+      font-family: var(--font-hand);
+      font-size: 20px;
+      color: #332A24;
+      line-height: 1.6;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+      margin-top: 12px;
+    }
+
+    /* 3D 뷰어 시뮬레이션 박스 */
+    .viewer3d-box {
+      height: 220px;
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: grab;
+    }
+
+    /* ========================================================
+       7. P-GF-06: 선물 직배송 주문서 & 가격표 미동봉 보증
+       ======================================================== */
+    .order-form-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .form-input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--color-accent-teal);
+    }
+
+    .safe-guarantee-box {
+      background: #ECFDF5;
+      border: 1.5px solid #10B981;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 18px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .safe-check-icon {
+      font-size: 20px;
+      color: #059669;
+    }
+
+    /* 하단 푸터 */
+    .wf-footer {
+      background: #F8FAFC;
+      border-top: 1px solid var(--color-border);
+      padding: 24px 28px;
+      font-size: 11px;
+      color: #94A3B8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       좌측 제어 사이드바 (Navigation Sidebar)
+       ======================================================== -->
+  <aside class="app-sidebar">
+    <div class="sidebar-header">
+      <span class="brand-badge">김선물 페르소나 특화</span>
+      <h1 class="sidebar-title">플로뜰리에 기프트 아틀리에</h1>
+      <p class="sidebar-subtitle">4차 정련 소창 선물 &amp; 패키징 커머스</p>
+    </div>
+
+    <div class="nav-scroll">
+      <div class="nav-section-title">01. 핵심 선물 화면 (PAGES)</div>
+      <div class="nav-item active" onclick="switchScreen('P-GF-01')">
+        <span>선물 큐레이션 허브</span>
+        <span class="screen-id">P-GF-01</span>
+      </div>
+      <div class="nav-item" onclick="switchScreen('P-GF-02')">
+        <span>시그니처 4종 세트 상세 (★)</span>
+        <span class="screen-id">P-GF-02</span>
+      </div>
+      <div class="nav-item" onclick="switchScreen('P-GF-03')">
+        <span>리추얼 라이프세트 상세</span>
+        <span class="screen-id">P-GF-03</span>
+      </div>
+      <div class="nav-item" onclick="switchScreen('P-GF-04')">
+        <span>베이비 퓨어 출산 세트</span>
+        <span class="screen-id">P-GF-04</span>
+      </div>
+      <div class="nav-item" onclick="switchScreen('P-GF-05')">
+        <span>30초 소창 가이드 &amp; 겹수관</span>
+        <span class="screen-id">P-GF-05</span>
+      </div>
+      <div class="nav-item" onclick="switchScreen('P-GF-06')">
+        <span>선물 직배송 주문서 (★)</span>
+        <span class="screen-id">P-GF-06</span>
+      </div>
+      <div class="nav-item" onclick="switchScreen('P-GF-07')">
+        <span>선물 주문 완료 &amp; 리포트</span>
+        <span class="screen-id">P-GF-07</span>
+      </div>
+
+      <div class="nav-section-title">02. 전역 모달 시스템 (MODALS)</div>
+      <div class="nav-item" onclick="openModal('M-GF-01')">
+        <span>Canvas 자수 시뮬레이터</span>
+        <span class="screen-id">M-GF-01</span>
+      </div>
+      <div class="nav-item" onclick="openModal('M-GF-02')">
+        <span>친환경 패키징 3D 뷰어</span>
+        <span class="screen-id">M-GF-02</span>
+      </div>
+      <div class="nav-item" onclick="openModal('M-GF-03')">
+        <span>자필 메시지 카드 작성기</span>
+        <span class="screen-id">M-GF-03</span>
+      </div>
+      <div class="nav-item" onclick="openModal('M-GF-04')">
+        <span>1장 3,000원 안심 체험팩</span>
+        <span class="screen-id">M-GF-04</span>
+      </div>
+
+      <div class="nav-section-title">03. 예외 및 오류 처리 (EXCEPTIONS)</div>
+      <div class="nav-item" onclick="openModal('EX-GF-01')">
+        <span>자수 문구 오류 모달 [가정]</span>
+        <span class="screen-id">EX-GF-01</span>
+      </div>
+      <div class="nav-item" onclick="openModal('EX-GF-02')">
+        <span>직배송 주소 확인 모달 [가정]</span>
+        <span class="screen-id">EX-GF-02</span>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <span>Flottelier v3.0</span>
+      <span>박서윤 페르소나</span>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       메인 워크스페이스 (Device Viewport Stage)
+       ======================================================== -->
+  <main class="main-stage">
+    <!-- 상단 반응형 뷰포트 스위처 -->
+    <header class="viewport-topbar">
+      <div class="active-screen-indicator">
+        <span class="active-id-badge" id="currentScreenBadge">P-GF-01</span>
+        <span id="currentScreenTitle" style="font-weight:600;">선물 메인 &amp; 스마트 큐레이션 허브</span>
+      </div>
+
+      <div class="device-switcher">
+        <button class="device-btn active" onclick="setDevice('desktop')">💻 Desktop (1200px)</button>
+        <button class="device-btn" onclick="setDevice('tablet')">📱 Tablet (768px)</button>
+        <button class="device-btn" onclick="setDevice('mobile')">📱 Mobile (390px)</button>
+      </div>
+    </header>
+
+    <!-- 디바이스 프레임 캔버스 -->
+    <div class="viewport-canvas">
+      <div class="device-frame" id="deviceFrame">
+        
+        <!-- 상단 안심 띠배너 -->
+        <div class="wf-top-notice">
+          <span>🌿 <strong>안심 선물 보증</strong>: 직배송 시 가격표/영수증 <span class="wf-notice-highlight">100% 제외 배송</span></span>
+          <span style="font-size:11px; cursor:pointer;" onclick="openModal('M-GF-04')">1장 3,000원 체험팩 신청 ➔</span>
+        </div>
+
+        <!-- 헤더 -->
+        <header class="wf-header">
+          <div class="wf-logo" onclick="switchScreen('P-GF-01')">FLOTTELIER GIFT</div>
+          <ul class="wf-gnb">
+            <li class="wf-gnb-link active" onclick="switchScreen('P-GF-01')">선물 큐레이션</li>
+            <li class="wf-gnb-link" onclick="switchScreen('P-GF-02')">시그니처 4종</li>
+            <li class="wf-gnb-link" onclick="switchScreen('P-GF-05')">30초 소창 가이드</li>
+            <li class="wf-gnb-link" onclick="openModal('M-GF-02')">친환경 패키징</li>
+          </ul>
+          <div class="wf-header-icons">
+            <span style="cursor:pointer;" onclick="openModal('M-GF-01')">🪡 자수기</span>
+            <span style="cursor:pointer;" onclick="switchScreen('P-GF-06')">🛍️ 선물하기</span>
+          </div>
+        </header>
+
+        <!-- ========================================================
+             화면 1: P-GF-01 (선물 메인 & 큐레이션 허브)
+             ======================================================== -->
+        <section class="screen-view active" id="view-P-GF-01">
+          <div class="hero-banner">
+            <span class="wf-badge wf-badge-terra" style="margin-bottom:10px;">받자마자 바로 쓰는 4차 정련 완제품</span>
+            <h2 class="hero-title">소중한 분에게 전하는 4차 정련의 따스한 온기</h2>
+            <p class="hero-desc">삶을 필요 없이 뽀송하게, 먼지 없이 맑은 소창 에코 리추얼 기프트 세트</p>
+            <button class="wf-btn wf-btn-terra" onclick="switchScreen('P-GF-02')">취향 몰라도 실패 없는 BEST 1위 선물 ➔</button>
+          </div>
+
+          <!-- 상황별 5대 탭 -->
+          <div style="margin-bottom:16px;">
+            <div style="font-size:13px; font-weight:700; margin-bottom:8px; color:var(--color-primary);">🎁 상황별 맞춤 선물 큐레이션</div>
+            <div class="curation-tabs">
+              <button class="tab-chip active" onclick="filterCategory(this, 'housewarming')">🏠 집들이 선물</button>
+              <button class="tab-chip" onclick="filterCategory(this, 'baby')">👶 출산/베이비</button>
+              <button class="tab-chip" onclick="filterCategory(this, 'birthday')">🎂 생일 축하</button>
+              <button class="tab-chip" onclick="filterCategory(this, 'wedding')">💍 신혼/웨딩</button>
+              <button class="tab-chip" onclick="filterCategory(this, 'gratitude')">🌿 감사/명절</button>
+            </div>
+          </div>
+
+          <!-- 예산별 4대 필터 -->
+          <div class="budget-filters">
+            <span class="budget-chip active" onclick="filterBudget(this, 'all')">전체 예산</span>
+            <span class="budget-chip" onclick="filterBudget(this, '30k')">3만원대 실속</span>
+            <span class="budget-chip" onclick="filterBudget(this, '50k')">5만원대 시그니처 (선택률 1위)</span>
+            <span class="budget-chip" onclick="filterBudget(this, '70k')">7만원대 이상 프리미엄</span>
+          </div>
+
+          <!-- 선물 카드 그리드 -->
+          <div class="gift-grid">
+            <!-- 1위 시그니처 세트 -->
+            <div class="gift-card best-pick" onclick="switchScreen('P-GF-02')">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span class="wf-badge wf-badge-teal">선택률 1위 ★</span>
+                <span style="font-size:11px; color:#0F766E; font-weight:700;">집들이 BEST</span>
+              </div>
+              <div class="gift-card-img-holder">
+                <span>[대표 사진] 시그니처 4종 세트 (3겹 2장 + 2겹 2장)</span>
+              </div>
+              <div style="font-size:15px; font-weight:700; color:var(--color-primary); margin-bottom:4px;">플로뜰리에 시그니처 4종 세트</div>
+              <div style="font-size:12px; color:var(--color-text-sub); margin-bottom:10px;">취향을 몰라도 호불호 0% 실패 없는 베스트셀러</div>
+              <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:baseline;">
+                <span style="font-size:16px; font-weight:700; color:#0F766E;">48,000원</span>
+                <span style="font-size:11px; color:#94A3B8;">장당 12,000원</span>
+              </div>
+            </div>
+
+            <!-- 라이프스타일 복합 세트 -->
+            <div class="gift-card" onclick="switchScreen('P-GF-03')">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span class="wf-badge">복합 세트</span>
+                <span style="font-size:11px; color:#64748B;">감성 힐링</span>
+              </div>
+              <div class="gift-card-img-holder">
+                <span>[대표 사진] 리추얼 라이프세트 (타월 + 천연비누)</span>
+              </div>
+              <div style="font-size:15px; font-weight:700; color:var(--color-primary); margin-bottom:4px;">리추얼 라이프스타일 복합 세트</div>
+              <div style="font-size:12px; color:var(--color-text-sub); margin-bottom:10px;">3겹 소창 데일리 타월 + 천연 EM 세탁비누 + 룸미스트</div>
+              <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:baseline;">
+                <span style="font-size:16px; font-weight:700; color:#0F766E;">54,000원</span>
+                <span style="font-size:11px; color:#94A3B8;">선물 포장 포함</span>
+              </div>
+            </div>
+
+            <!-- 베이비 퓨어 출산 세트 -->
+            <div class="gift-card" onclick="switchScreen('P-GF-04')">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span class="wf-badge wf-badge-terra">출산 1위</span>
+                <span style="font-size:11px; color:#9A3412;">4無 인증</span>
+              </div>
+              <div class="gift-card-img-holder">
+                <span>[대표 사진] 베이비 퓨어 출산 세트 (가제+턱받이)</span>
+              </div>
+              <div style="font-size:15px; font-weight:700; color:var(--color-primary); margin-bottom:4px;">베이비 퓨어 오가닉 출산 세트</div>
+              <div style="font-size:12px; color:var(--color-text-sub); margin-bottom:10px;">2겹 가제 5장 + 순면 와입스 3장 + 태명 자수 턱받이</div>
+              <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:baseline;">
+                <span style="font-size:16px; font-weight:700; color:#0F766E;">62,000원</span>
+                <span style="font-size:11px; color:#94A3B8;">KC 안전인증</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 30초 소창 가치 인포그래픽 -->
+          <div class="infographic-box">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:14px; font-weight:700; color:var(--color-primary);">💡 30초 만에 이해하는 "왜 소창이 최고의 선물인가?"</span>
+              <span style="font-size:12px; color:#0D9488; cursor:pointer; font-weight:600;" onclick="switchScreen('P-GF-05')">겹수 선택 가이드 보기 ➔</span>
+            </div>
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-item-icon">✨</div>
+                <div class="info-item-title">받자마자 바로 사용</div>
+                <div class="info-item-desc">4차 정련 완제품으로 삶을 필요 없음</div>
+              </div>
+              <div class="info-item">
+                <div class="info-item-icon">💨</div>
+                <div class="info-item-title">3배 빠른 건조</div>
+                <div class="info-item-desc">세균/냄새 걱정 없이 뽀송한 위생</div>
+              </div>
+              <div class="info-item">
+                <div class="info-item-icon">🌿</div>
+                <div class="info-item-title">먼지 0% 순면</div>
+                <div class="info-item-desc">피부 자극 없는 오가닉 4無 인증</div>
+              </div>
+              <div class="info-item">
+                <div class="info-item-icon">📦</div>
+                <div class="info-item-title">100% 무비닐 포장</div>
+                <div class="info-item-desc">소창 파우치 &amp; 리추얼 카드 기본 동봉</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             화면 2: P-GF-02 (시그니처 4종 선물 세트 상세 ★)
+             ======================================================== -->
+        <section class="screen-view" id="view-P-GF-02">
+          <div class="detail-container">
+            <!-- 좌측 갤러리 -->
+            <div class="detail-gallery">
+              <div class="magnifier-preview" onmousemove="handleMagnifier(event)" onmouseleave="hideMagnifier()">
+                <span style="color:#64748B;">[500% HD 마그니파이어 인터랙션]<br>마우스를 올리면 섬세한 무라벨 봉제선이 확대됩니다.</span>
+                <div class="magnifier-lens" id="magLens"></div>
+              </div>
+              <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:8px;">
+                <div style="height:60px; background:#E2E8F0; border-radius:4px; border:2px solid #0D9488;"></div>
+                <div style="height:60px; background:#F1F5F9; border-radius:4px;"></div>
+                <div style="height:60px; background:#F1F5F9; border-radius:4px;"></div>
+                <div style="height:60px; background:#F1F5F9; border-radius:4px;"></div>
+              </div>
+            </div>
+
+            <!-- 우측 스펙 & 커스텀 발주 패널 -->
+            <div class="detail-spec-panel">
+              <div>
+                <span class="wf-badge wf-badge-teal">집들이/생일 선물 1위</span>
+                <h2 style="font-size:22px; font-weight:700; margin:6px 0; color:var(--color-primary);">플로뜰리에 시그니처 4종 소창 선물 세트</h2>
+                <p style="font-size:13px; color:var(--color-text-sub);">데일리 3겹 2장 (아이보리) + 세안 2겹 2장 (아이보리) + 패키징</p>
+              </div>
+
+              <div class="price-box">
+                <span class="price-sale">48,000원</span>
+                <span class="price-orig">58,000원</span>
+                <span class="price-unit">장당 12,000원 (17% 세트 할인)</span>
+              </div>
+
+              <!-- 4대 안심 보증 뱃지 -->
+              <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                <span class="wf-badge">✓ 4차 정련 완제품</span>
+                <span class="wf-badge">✓ 100% 무비닐 패키징</span>
+                <span class="wf-badge" style="background:#FEF3C7; color:#92400E; font-weight:700;">★ 가격표 100% 미동봉</span>
+                <span class="wf-badge">✓ 리추얼 카드 동봉</span>
+              </div>
+
+              <!-- 1:1 커스텀 아틀리에 옵션 -->
+              <div class="custom-trigger-box">
+                <div style="font-size:13px; font-weight:700; color:#9A3412;">🎁 1:1 선물 커스텀 아틀리에</div>
+                
+                <div class="custom-row">
+                  <div>
+                    <div style="font-size:13px; font-weight:600;">🪡 실시간 Canvas 자수 추가</div>
+                    <div style="font-size:11px; color:#64748B;" id="embCurrentPreview">미선택 (기본 무지 출고)</div>
+                  </div>
+                  <button class="wf-btn wf-btn-outline" style="font-size:12px; padding:4px 10px;" onclick="openModal('M-GF-01')">자수 편집</button>
+                </div>
+
+                <div class="custom-row">
+                  <div>
+                    <div style="font-size:13px; font-weight:600;">📦 100% 무비닐 패키징 확인</div>
+                    <div style="font-size:11px; color:#64748B;">재생지 박스 + 소창 파우치 360도 뷰</div>
+                  </div>
+                  <button class="wf-btn wf-btn-outline" style="font-size:12px; padding:4px 10px;" onclick="openModal('M-GF-02')">포장 보기</button>
+                </div>
+
+                <div class="custom-row">
+                  <div>
+                    <div style="font-size:13px; font-weight:600;">💌 자필 폰트 메시지 카드 작성</div>
+                    <div style="font-size:11px; color:#64748B;" id="msgCardCurrentStatus">축하 문구 작성하기 (무료 동봉)</div>
+                  </div>
+                  <button class="wf-btn wf-btn-outline" style="font-size:12px; padding:4px 10px;" onclick="openModal('M-GF-03')">카드 작성</button>
+                </div>
+              </div>
+
+              <!-- 하단 액션 버튼 -->
+              <div style="display:flex; gap:10px; margin-top:10px;">
+                <button class="wf-btn wf-btn-outline" style="flex:1; padding:12px;" onclick="alert('카카오톡 선물하기 모듈이 실행됩니다.'); switchScreen('P-GF-06');">🎁 카카오톡 선물하기</button>
+                <button class="wf-btn wf-btn-primary" style="flex:1.5; padding:12px;" onclick="switchScreen('P-GF-06')">안심 직배송 주문하기 ➔</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             화면 3: P-GF-03 (리추얼 라이프세트 상세)
+             ======================================================== -->
+        <section class="screen-view" id="view-P-GF-03">
+          <div class="wf-card">
+            <span class="wf-badge wf-badge-teal">복합 라이프스타일 선물</span>
+            <h2 style="font-size:20px; font-weight:700; margin:8px 0;">리추얼 라이프스타일 복합 선물 세트</h2>
+            <p style="font-size:13px; color:var(--color-text-sub);">3겹 소창 데일리 타월 2장 + 천연 저자극 EM 세탁비누 (시더우드) + 소창 룸미스트</p>
+            <div style="margin:16px 0; padding:16px; background:#F8FAFC; border-radius:6px;">
+              <div style="font-size:13px; font-weight:700; margin-bottom:6px;">🌿 천연 EM 비누 향 선택</div>
+              <label style="font-size:13px; margin-right:16px;"><input type="radio" name="soapFragrance" checked> 시더우드 &amp; 유칼립투스 (우디 힐링)</label>
+              <label style="font-size:13px;"><input type="radio" name="soapFragrance"> 프렌치 라벤더 (편안한 휴식)</label>
+            </div>
+            <button class="wf-btn wf-btn-primary" onclick="switchScreen('P-GF-06')">54,000원 바로 선물하기 ➔</button>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             화면 4: P-GF-04 (베이비 퓨어 출산 세트)
+             ======================================================== -->
+        <section class="screen-view" id="view-P-GF-04">
+          <div class="wf-card">
+            <span class="wf-badge wf-badge-terra">출산 축하 1위</span>
+            <h2 style="font-size:20px; font-weight:700; margin:8px 0;">베이비 퓨어 오가닉 출산 축하 세트</h2>
+            <p style="font-size:13px; color:var(--color-text-sub);">2겹 순면 가제 5장 + 오가닉 와입스 3장 + 태명 자수 턱받이</p>
+            <div style="margin:16px 0; padding:14px; background:#FFFBEB; border:1px solid #FDE68A; border-radius:6px; font-size:12px; color:#92400E;">
+              ✓ 국가 공인 KATRI KC 안전인증 유해물질 불검출 | 독일 더마테스트 Excellent 획득
+            </div>
+            <button class="wf-btn wf-btn-primary" onclick="switchScreen('P-GF-06')">62,000원 출산 선물하기 ➔</button>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             화면 5: P-GF-05 (30초 소창 가이드 & 겹수 선택관)
+             ======================================================== -->
+        <section class="screen-view" id="view-P-GF-05">
+          <div class="wf-card">
+            <h2 style="font-size:20px; font-weight:700; margin-bottom:12px; color:var(--color-primary);">🌿 30초 소창 선물 가이드 &amp; 겹수 선택 매트릭스</h2>
+            
+            <table style="width:100%; border-collapse:collapse; font-size:13px; margin:16px 0;">
+              <thead>
+                <tr style="background:#F1F5F9; text-align:left;">
+                  <th style="padding:10px; border:1px solid var(--color-border);">구분</th>
+                  <th style="padding:10px; border:1px solid var(--color-border);">2겹 소창 (가제)</th>
+                  <th style="padding:10px; border:1px solid var(--color-border); background:#CCFBF1; color:#0F766E;">3겹 소창 (데일리 표준 ★)</th>
+                  <th style="padding:10px; border:1px solid var(--color-border);">4겹 소창 (바스)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding:10px; border:1px solid var(--color-border); font-weight:600;">주요 용도</td>
+                  <td style="padding:10px; border:1px solid var(--color-border);">페이스 타월, 아기 손수건</td>
+                  <td style="padding:10px; border:1px solid var(--color-border); background:#F0FDF4; font-weight:700;">세안 &amp; 샤워 표준 타월 (선물 1위)</td>
+                  <td style="padding:10px; border:1px solid var(--color-border);">긴 머리 흡수, 넉넉한 바스 타월</td>
+                </tr>
+                <tr>
+                  <td style="padding:10px; border:1px solid var(--color-border); font-weight:600;">건조 속도</td>
+                  <td style="padding:10px; border:1px solid var(--color-border);">초고속 (1시간)</td>
+                  <td style="padding:10px; border:1px solid var(--color-border); background:#F0FDF4;">매우 빠름 (2시간 / 테리 3배)</td>
+                  <td style="padding:10px; border:1px solid var(--color-border);">빠름 (3시간)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="text-align:center; margin-top:20px;">
+              <button class="wf-btn wf-btn-primary" onclick="switchScreen('P-GF-02')">가장 인기 있는 3겹+2겹 시그니처 세트 보러가기 ➔</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             화면 6: P-GF-06 (선물 직배송 주문서 ★)
+             ======================================================== -->
+        <section class="screen-view" id="view-P-GF-06">
+          <div class="wf-card">
+            <h2 style="font-size:20px; font-weight:700; margin-bottom:16px; color:var(--color-primary);">🎁 선물 직배송 주문서</h2>
+
+            <!-- 가격표 미동봉 안심 보증 박스 -->
+            <div class="safe-guarantee-box">
+              <span class="safe-check-icon">🛡️</span>
+              <div>
+                <div style="font-size:14px; font-weight:700; color:#065F46;">[100% 보증] 가격표 및 결제 영수증 미동봉 출고</div>
+                <div style="font-size:12px; color:#047857; margin-top:2px;">선물 받으시는 분의 택배 상자에는 가격표나 결제 내역서가 일절 동봉되지 않으며, '소창 리추얼 가이드 카드'만 정성스레 동봉됩니다.</div>
+              </div>
+            </div>
+
+            <div class="order-form-grid">
+              <!-- 수령인 정보 폼 -->
+              <div>
+                <div style="font-size:14px; font-weight:700; margin-bottom:12px;">1. 받는 분 (선물 수령인) 정보</div>
+                <div class="form-group">
+                  <label class="form-label">받는 분 성함</label>
+                  <input type="text" class="form-input" id="recipientName" value="이지원 (친구)">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">받는 분 연락처</label>
+                  <input type="text" class="form-input" id="recipientPhone" value="010-9876-5432">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">배송지 주소</label>
+                  <input type="text" class="form-input" id="recipientAddr" value="서울특별시 마포구 독막로 123, 402호">
+                </div>
+              </div>
+
+              <!-- 주문 요약 및 결제 -->
+              <div style="background:#F8FAFC; padding:18px; border-radius:8px; border:1px solid var(--color-border);">
+                <div style="font-size:14px; font-weight:700; margin-bottom:12px;">2. 주문 상품 및 옵션 요약</div>
+                <div style="font-size:13px; font-weight:600; color:var(--color-primary);">플로뜰리에 시그니처 4종 세트</div>
+                <div style="font-size:12px; color:var(--color-text-sub); margin-top:4px;">· 자수 옵션: <span id="summaryEmb">SY &amp; JH (골드)</span></div>
+                <div style="font-size:12px; color:var(--color-text-sub);">· 메시지 카드: <span id="summaryCard">집들이 축하 카드 동봉</span></div>
+                <div style="font-size:12px; color:var(--color-text-sub);">· 포장: 100% 무비닐 재생지 상자</div>
+
+                <div style="border-top:1px dashed var(--color-border); margin:14px 0; padding-top:10px; display:flex; justify-content:space-between; font-size:16px; font-weight:700; color:#0F766E;">
+                  <span>최종 결제 금액</span>
+                  <span>48,000원</span>
+                </div>
+
+                <button class="wf-btn wf-btn-primary" style="width:100%; padding:12px; font-size:14px;" onclick="processPayment()">48,000원 결제하고 선물 보내기 ➔</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             화면 7: P-GF-07 (선물 주문 완료 & 리포트)
+             ======================================================== -->
+        <section class="screen-view" id="view-P-GF-07">
+          <div class="wf-card" style="text-align:center; padding:36px 20px;">
+            <div style="font-size:36px; margin-bottom:10px;">🎉</div>
+            <h2 style="font-size:22px; font-weight:700; color:var(--color-primary);">김선물(박서윤) 님의 정성 어린 선물이 접수되었습니다!</h2>
+            <p style="font-size:13px; color:var(--color-text-sub); margin:6px 0 20px;">주문번호: FLOT-20260814-GIFT9912 | 가격표 100% 제외 검수 완료</p>
+
+            <div style="max-width:500px; margin:0 auto; background:#F8FAFC; border:1px solid var(--color-border); border-radius:8px; padding:20px; text-align:left;">
+              <div style="font-size:13px; font-weight:700; margin-bottom:8px; color:#0F766E;">📋 선물 포장 완성 시뮬레이션 리포트</div>
+              <div style="font-size:12px; color:#475569; line-height:1.8;">
+                · <strong>수령인</strong>: 이지원 님 (010-9876-5432)<br>
+                · <strong>배송지</strong>: 서울특별시 마포구 독막로 123, 402호<br>
+                · <strong>자수 각인</strong>: "SY &amp; JH" (샴페인골드 실 / 4차 정련 소창)<br>
+                · <strong>동봉 안내</strong>: 수령인용 4차 정련 소창 리추얼 가이드 카드<br>
+                · <strong>알림톡 발송</strong>: 송장 등록 즉시 수령인에게 축하 알림톡 발송 예정
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:center; gap:10px; margin-top:24px;">
+              <button class="wf-btn wf-btn-outline" onclick="alert('모바일 메시지 카드가 클립보드에 복사되었습니다.');">💌 메시지 카드 열람</button>
+              <button class="wf-btn wf-btn-primary" onclick="switchScreen('P-GF-01')">선물 홈으로 이동</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 푸터 -->
+        <footer class="wf-footer">
+          <div>
+            <strong>플로뜰리에 (Flottelier)</strong> | 고객센터 1588-0000 | 100% 무비닐 에코 패키징 보증
+          </div>
+          <div>
+            <span>[가격표 미동봉 보증]</span> · <span>[이용약관]</span>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================
+       전역 모달 오버레이 시스템
+       ======================================================== -->
+  
+  <!-- M-GF-01: 실시간 Canvas 자수 시뮬레이터 -->
+  <div class="wf-modal-overlay" id="modal-M-GF-01">
+    <div class="wf-modal">
+      <div class="modal-header">
+        <div class="modal-title">🪡 실시간 Canvas 자수 각인 시뮬레이터</div>
+        <button class="modal-close" onclick="closeModal('M-GF-01')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Canvas -->
+        <canvas id="embroideryCanvas" width="560" height="180"></canvas>
+
+        <div class="form-group">
+          <label class="form-label">자수 각인 문구 (한글 8자, 영문 12자 이내)</label>
+          <input type="text" class="form-input" id="embTextInput" value="SY & JH" oninput="renderEmbroidery()">
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:14px;">
+          <div class="form-group">
+            <label class="form-label">폰트 스타일 선택</label>
+            <select class="form-input" id="embFontSelect" onchange="renderEmbroidery()">
+              <option value="Nanum Myeongjo">정갈한 명조체 (추천)</option>
+              <option value="Cormorant Garamond">영문 클래식 필기체</option>
+              <option value="Noto Sans KR">모던 산세리프</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">오가닉 실 색상</label>
+            <select class="form-input" id="embColorSelect" onchange="renderEmbroidery()">
+              <option value="#D97706">샴페인 골드 (Best)</option>
+              <option value="#0D9488">세이지 그린</option>
+              <option value="#C47A5A">테라코타 웜</option>
+              <option value="#475569">소프트 차콜</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="wf-btn wf-btn-outline" onclick="closeModal('M-GF-01')">취소</button>
+        <button class="wf-btn wf-btn-primary" onclick="applyEmbroidery()">자수 각인 적용하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- M-GF-02: 100% 무비닐 패키징 3D 뷰어 -->
+  <div class="wf-modal-overlay" id="modal-M-GF-02">
+    <div class="wf-modal">
+      <div class="modal-header">
+        <div class="modal-title">📦 100% 친환경 패키징 사전 뷰어</div>
+        <button class="modal-close" onclick="closeModal('M-GF-02')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="viewer3d-box">
+          <div style="font-size:40px; margin-bottom:8px;">🎁</div>
+          <div style="font-size:13px; font-weight:700; color:#1E293B;">FSC 인증 크라프트 재생지 박스 &amp; 순면 소창 끈 매듭</div>
+          <div style="font-size:11px; color:#64748B; margin-top:4px;">(마우스 드래그로 360도 회전 시뮬레이션)</div>
+        </div>
+        <div style="margin-top:14px; font-size:12px; color:#475569; line-height:1.6;">
+          ✓ 0% 플라스틱 비닐 테이프 배제<br>
+          ✓ 재사용 가능한 강화 순면 소창 패브릭 파우치 포함<br>
+          ✓ 수령인 전용 "4차 정련 소창 리추얼 가이드 카드" 기본 동봉
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="wf-btn wf-btn-primary" onclick="closeModal('M-GF-02')">포장 상태 확인 완료</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- M-GF-03: 자필 메시지 카드 작성기 -->
+  <div class="wf-modal-overlay" id="modal-M-GF-03">
+    <div class="wf-modal">
+      <div class="modal-header">
+        <div class="modal-title">💌 자필 폰트 감성 메시지 카드 작성기</div>
+        <button class="modal-close" onclick="closeModal('M-GF-03')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">카드 템플릿 선택</label>
+          <select class="form-input" id="cardTemplateSelect" onchange="applyCardTemplate()">
+            <option value="집들이를 진심으로 축하해! 4차 정련으로 삶을 필요 없는 뽀송한 소창 수건으로 매일 행복한 아침을 맞이하길 바라.">🏠 집들이 축하 템플릿</option>
+            <option value="세상에 온 소중한 천사를 환영해! 무형광 4차 정련 순면 소창으로 아기 피부를 안심하고 닦아주렴.">👶 출산 축하 템플릿</option>
+            <option value="항상 곁에서 따뜻한 온기가 되어주셔서 감사합니다. 맑은 소창과 함께 매일 건강하세요.">🌿 따뜻한 감사 템플릿</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">메시지 내용 (자필 폰트로 실시간 렌더링됩니다)</label>
+          <textarea class="form-input" id="cardTextInput" rows="3" oninput="renderCardPreview()">집들이를 진심으로 축하해! 4차 정련으로 삶을 필요 없는 뽀송한 소창 수건으로 매일 행복한 아침을 맞이하길 바라.</textarea>
+        </div>
+
+        <!-- 실시간 카드 미리보기 -->
+        <div class="message-card-preview" id="renderedCardBox">
+          집들이를 진심으로 축하해! 4차 정련으로 삶을 필요 없는 뽀송한 소창 수건으로 매일 행복한 아침을 맞이하길 바라.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="wf-btn wf-btn-outline" onclick="closeModal('M-GF-03')">취소</button>
+        <button class="wf-btn wf-btn-primary" onclick="saveMessageCard()">카드 저장하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- M-GF-04: 1장 안심 체험팩 -->
+  <div class="wf-modal-overlay" id="modal-M-GF-04">
+    <div class="wf-modal">
+      <div class="modal-header">
+        <div class="modal-title">🌿 1장 3,000원 기프트 안심 체험팩</div>
+        <button class="modal-close" onclick="closeModal('M-GF-04')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size:14px; font-weight:700; color:#0F766E; margin-bottom:8px;">"선물하기 전에 내가 먼저 품질을 확인해 보세요"</div>
+        <p style="font-size:13px; color:#475569; line-height:1.6;">
+          소창 수건이 처음이신가요? 3,000원에 1장을 먼저 배송받아 4차 정련의 뽀송한 첫 감촉을 경험해 보세요.<br>
+          본품 선물 세트 구매 시 <strong>3,000원 전액 환급 쿠폰</strong>이 즉시 발급됩니다.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="wf-btn wf-btn-primary" onclick="alert('체험팩 신청 완료! 3,000원 페이백 쿠폰이 발급되었습니다.'); closeModal('M-GF-04');">3,000원 체험팩 신청하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EX-GF-01: 자수 문구 오류 모달 -->
+  <div class="wf-modal-overlay" id="modal-EX-GF-01">
+    <div class="wf-modal" style="width:400px;">
+      <div class="modal-header" style="background:#FEF2F2;">
+        <div class="modal-title" style="color:#DC2626;">⚠️ 자수 문구 입력 오류</div>
+        <button class="modal-close" onclick="closeModal('EX-GF-01')">&times;</button>
+      </div>
+      <div class="modal-body" style="font-size:13px; color:#475569;">
+        자수 각인 옵션을 선택하셨으나 문구가 입력되지 않았습니다.<br>한글 8자, 영문 12자 이내로 문구를 입력해 주세요.
+      </div>
+      <div class="modal-footer">
+        <button class="wf-btn wf-btn-primary" onclick="closeModal('EX-GF-01'); openModal('M-GF-01');">자수 문구 입력하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EX-GF-02: 주소 확인 모달 -->
+  <div class="wf-modal-overlay" id="modal-EX-GF-02">
+    <div class="wf-modal" style="width:400px;">
+      <div class="modal-header" style="background:#FEF2F2;">
+        <div class="modal-title" style="color:#DC2626;">⚠️ 직배송 주소 확인 필요</div>
+        <button class="modal-close" onclick="closeModal('EX-GF-02')">&times;</button>
+      </div>
+      <div class="modal-body" style="font-size:13px; color:#475569;">
+        선물 받으실 분의 상세 주소 및 연락처를 정확히 입력해 주세요.
+      </div>
+      <div class="modal-footer">
+        <button class="wf-btn wf-btn-primary" onclick="closeModal('EX-GF-02');">주소 수정하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       JavaScript UI & 인터랙션 로직
+       ======================================================== -->
+  <script>
+    // 1. 화면 전환 라우터
+    const screenTitles = {
+      'P-GF-01': '선물 메인 & 스마트 큐레이션 허브',
+      'P-GF-02': '시그니처 4종 선물 세트 상세 (★)',
+      'P-GF-03': '리추얼 라이프세트 상세',
+      'P-GF-04': '베이비 퓨어 출산 세트',
+      'P-GF-05': '30초 소창 가이드 & 겹수관',
+      'P-GF-06': '선물 직배송 주문서 (★)',
+      'P-GF-07': '선물 주문 완료 & 리포트'
+    };
+
+    function switchScreen(screenId) {
+      document.querySelectorAll('.screen-view').forEach(el => el.classList.remove('active'));
+      const targetView = document.getElementById('view-' + screenId);
+      if (targetView) targetView.classList.add('active');
+
+      document.querySelectorAll('.app-sidebar .nav-item').forEach(el => {
+        el.classList.toggle('active', el.querySelector('.screen-id')?.innerText === screenId);
+      });
+
+      document.getElementById('currentScreenBadge').innerText = screenId;
+      document.getElementById('currentScreenTitle').innerText = screenTitles[screenId] || '';
+
+      document.querySelector('.viewport-canvas').scrollTop = 0;
+    }
+
+    // 2. 디바이스 뷰포트 전환
+    function setDevice(deviceType) {
+      const frame = document.getElementById('deviceFrame');
+      frame.className = 'device-frame ' + (deviceType === 'desktop' ? '' : deviceType);
+
+      document.querySelectorAll('.device-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.innerText.toLowerCase().includes(deviceType));
+      });
+    }
+
+    // 3. 모달 제어
+    function openModal(modalId) {
+      const modal = document.getElementById('modal-' + modalId);
+      if (modal) {
+        modal.classList.add('active');
+        if (modalId === 'M-GF-01') renderEmbroidery();
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById('modal-' + modalId);
+      if (modal) modal.classList.remove('active');
+    }
+
+    // 4. Canvas 실시간 자수 렌더링
+    function renderEmbroidery() {
+      const canvas = document.getElementById('embroideryCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const text = document.getElementById('embTextInput')?.value || 'SY & JH';
+      const font = document.getElementById('embFontSelect')?.value || 'Nanum Myeongjo';
+      const color = document.getElementById('embColorSelect')?.value || '#D97706';
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // 패브릭 배경 텍스처
+      ctx.fillStyle = '#FAF7F0';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // 격자 패브릭 라인
+      ctx.strokeStyle = 'rgba(0,0,0,0.03)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < canvas.width; i += 8) {
+        ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, canvas.height); ctx.stroke();
+      }
+      for (let j = 0; j < canvas.height; j += 8) {
+        ctx.beginPath(); ctx.moveTo(0, j); ctx.lineTo(canvas.width, j); ctx.stroke();
+      }
+
+      // 자수 텍스트 그림자
+      ctx.shadowColor = 'rgba(0,0,0,0.12)';
+      ctx.shadowBlur = 2;
+      ctx.shadowOffsetX = 1;
+      ctx.shadowOffsetY = 1;
+
+      // 자수 텍스트 렌더링
+      ctx.font = `600 32px "${font}", serif`;
+      ctx.fillStyle = color;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+      ctx.shadowColor = 'transparent';
+    }
+
+    function applyEmbroidery() {
+      const text = document.getElementById('embTextInput')?.value || 'SY & JH';
+      document.getElementById('embCurrentPreview').innerText = `각인 문구: "${text}" (적용 완료)`;
+      document.getElementById('summaryEmb').innerText = `"${text}" (샴페인골드)`;
+      closeModal('M-GF-01');
+    }
+
+    // 5. 메시지 카드 렌더링
+    function applyCardTemplate() {
+      const template = document.getElementById('cardTemplateSelect').value;
+      document.getElementById('cardTextInput').value = template;
+      renderCardPreview();
+    }
+
+    function renderCardPreview() {
+      const text = document.getElementById('cardTextInput').value;
+      document.getElementById('renderedCardBox').innerText = text;
+    }
+
+    function saveMessageCard() {
+      document.getElementById('msgCardCurrentStatus').innerText = '감성 메시지 카드 첨부 완료 ✓';
+      closeModal('M-GF-03');
+    }
+
+    // 6. 500% 마그니파이어 렌즈 효과
+    function handleMagnifier(e) {
+      const lens = document.getElementById('magLens');
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = e.clientX - rect.left - 60;
+      const y = e.clientY - rect.top - 60;
+      lens.style.display = 'block';
+      lens.style.left = x + 'px';
+      lens.style.top = y + 'px';
+    }
+
+    function hideMagnifier() {
+      document.getElementById('magLens').style.display = 'none';
+    }
+
+    // 7. 결제 처리 로직
+    function processPayment() {
+      const name = document.getElementById('recipientName').value.trim();
+      const addr = document.getElementById('recipientAddr').value.trim();
+
+      if (!name || !addr) {
+        openModal('EX-GF-02');
+        return;
+      }
+
+      switchScreen('P-GF-07');
+    }
+
+    // 8. 필터 탭
+    function filterCategory(btn, category) {
+      document.querySelectorAll('.curation-tabs .tab-chip').forEach(el => el.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function filterBudget(btn, budget) {
+      document.querySelectorAll('.budget-filters .budget-chip').forEach(el => el.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    // 초기화
+    window.addEventListener('DOMContentLoaded', () => {
+      renderEmbroidery();
+    });
+  </script>
+</body>
+</html>

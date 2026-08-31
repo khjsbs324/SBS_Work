@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%">
+  <style>
+    .bg { fill: #FAFDFD; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 26px; font-weight: bold; fill: #232527; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; fill: #585D62; }
+    
+    .box-root { fill: #FAF7F2; stroke: #232527; stroke-width: 3; rx: 8; filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.06)); }
+    .box-main { fill: #FFFFFF; stroke: #7E8D7F; stroke-width: 2; rx: 6; }
+    .box-shop { fill: #FAF7F2; stroke: #C47A5A; stroke-width: 2; rx: 6; }
+    .box-modal { fill: #FFF9F5; stroke: #C47A5A; stroke-width: 2; stroke-dasharray: 4 4; rx: 6; }
+    .box-my { fill: #F4F8F5; stroke: #2A2624; stroke-width: 2; rx: 6; }
+    
+    .node-title { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 15px; font-weight: bold; fill: #232527; text-anchor: middle; }
+    .node-code { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 11px; font-weight: bold; fill: #C47A5A; text-anchor: middle; }
+    .node-desc { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 12px; fill: #585D62; text-anchor: middle; }
+    
+    .line { stroke: #8E949A; stroke-width: 2; fill: none; }
+    .group-label { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; font-weight: bold; fill: #2A2624; }
+  </style>
+
+  <!-- Background -->
+  <rect class="bg" width="1200" height="900" />
+
+  <!-- Title Banner -->
+  <text x="600" y="45" class="title" text-anchor="middle">마미소창 (MAMI SOCHANG) 사이트맵 (Sitemap Architecture)</text>
+  <text x="600" y="72" class="subtitle" text-anchor="middle">김마미 페르소나 (KC 공인 성적서 상단 공개 · 2겹/3겹 비교 · 맘리뷰 필터 · 한 손 결제) 정보 구조</text>
+
+  <!-- ROOT NODE -->
+  <g transform="translate(470, 100)">
+    <rect class="box-root" width="260" height="60" />
+    <text x="130" y="28" class="node-title">마미소창 (MAMI SOCHANG)</text>
+    <text x="130" y="46" class="node-code">BABY ORGANIC SOCHANG</text>
+  </g>
+
+  <!-- Connectors from ROOT -->
+  <path class="line" d="M 600 160 L 600 190" />
+  <path class="line" d="M 600 190 L 170 190 L 170 230" />
+  <path class="line" d="M 600 190 L 450 190 L 450 230" />
+  <path class="line" d="M 600 190 L 750 190 L 750 230" />
+  <path class="line" d="M 600 190 L 1030 190 L 1030 230" />
+
+  <!-- GROUP 1: MAIN & SAFETY -->
+  <text x="80" y="220" class="group-label">01. 메인 &amp; 안전성 검증</text>
+  <g transform="translate(60, 235)">
+    <rect class="box-main" width="220" height="70" />
+    <text x="110" y="25" class="node-code">P-01 | DEPTH 1</text>
+    <text x="110" y="43" class="node-title">메인 페이지</text>
+    <text x="110" y="58" class="node-desc">KC 인증 뱃지 &amp; 맘큐레이션</text>
+
+    <g transform="translate(0, 95)">
+      <rect class="box-main" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-02 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">KC 성적서 원문 페이지</text>
+      <text x="110" y="58" class="node-desc">KOTITI 100% 무형광 성적서</text>
+    </g>
+
+    <g transform="translate(0, 190)">
+      <rect class="box-main" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-03 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">세탁 &amp; 건조기 가이드</text>
+      <text x="110" y="58" class="node-desc">2겹/3겹 비교표 &amp; 건조기지침</text>
+    </g>
+  </g>
+
+  <!-- GROUP 2: BABY SHOP & EXPERIENCE -->
+  <text x="360" y="220" class="group-label">02. 커머스 &amp; 안심 체험</text>
+  <g transform="translate(340, 235)">
+    <rect class="box-shop" width="220" height="70" />
+    <text x="110" y="25" class="node-code">P-04 | DEPTH 1</text>
+    <text x="110" y="43" class="node-title">전체 베이비 카탈로그</text>
+    <text x="110" y="58" class="node-desc">신생아 / 영유아 / 어린이집</text>
+
+    <g transform="translate(0, 95)">
+      <rect class="box-shop" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-05 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">상품 상세 페이지</text>
+      <text x="110" y="58" class="node-desc">장당 단가표 &amp; 맘리뷰 필터</text>
+    </g>
+
+    <g transform="translate(0, 190)">
+      <rect class="box-shop" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-06 | DEPTH 3</text>
+      <text x="110" y="43" class="node-title">3,000원 체험 키트</text>
+      <text x="110" y="58" class="node-desc">촉감 확인 원단 샘플 신청</text>
+    </g>
+
+    <g transform="translate(0, 285)">
+      <rect class="box-shop" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-07 | DEPTH 3</text>
+      <text x="110" y="43" class="node-title">아기 맞춤 수량 추천기</text>
+      <text x="110" y="58" class="node-desc">30초 아기 맞춤 수량 연산</text>
+    </g>
+  </g>
+
+  <!-- GROUP 3: POP-UP & MEDIA -->
+  <text x="660" y="220" class="group-label">03. 팝업스토어 &amp; 미디어</text>
+  <g transform="translate(640, 235)">
+    <rect class="box-main" width="220" height="70" />
+    <text x="110" y="25" class="node-code">P-08 | DEPTH 1</text>
+    <text x="110" y="43" class="node-title">성수 팝업스토어 안내</text>
+    <text x="110" y="58" class="node-desc">사전예약 M-01 / 카카오맵</text>
+
+    <g transform="translate(0, 95)">
+      <rect class="box-main" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-09 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">베이비 룩북</text>
+      <text x="110" y="58" class="node-desc">출산 준비물 가이드 컷</text>
+    </g>
+
+    <g transform="translate(0, 190)">
+      <rect class="box-main" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-10 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">SNS 언박싱 &amp; 맘리뷰</text>
+      <text x="110" y="58" class="node-desc">아기 부모 Real 실후기 필터</text>
+    </g>
+  </g>
+
+  <!-- GROUP 4: UTILITIES & REORDER -->
+  <text x="940" y="220" class="group-label">04. 마이페이지 &amp; 재구매</text>
+  <g transform="translate(920, 235)">
+    <rect class="box-my" width="220" height="70" />
+    <text x="110" y="25" class="node-code">P-11 | DEPTH 1</text>
+    <text x="110" y="43" class="node-title">장바구니 &amp; 1초 결제</text>
+    <text x="110" y="58" class="node-desc">N Pay 결제 / 한 손 결제 UX</text>
+
+    <g transform="translate(0, 95)">
+      <rect class="box-my" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-12 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">마이페이지 &amp; 재구매</text>
+      <text x="110" y="58" class="node-desc">교체주기 알림 / 1초 재주문</text>
+    </g>
+  </g>
+
+  <!-- MODAL OVERLAY SECTION -->
+  <text x="80" y="620" class="group-label">05. 레이어드 모달 시스템 (Modal Overlays)</text>
+  <g transform="translate(60, 640)">
+    <rect class="box-modal" width="340" height="75" />
+    <text x="170" y="25" class="node-code">MODAL M-01</text>
+    <text x="170" y="45" class="node-title">성수 팝업 사전예약 모달</text>
+    <text x="170" y="62" class="node-desc">타임슬롯 14:00 (3석 남음) &amp; 알림톡</text>
+
+    <g transform="translate(370, 0)">
+      <rect class="box-modal" width="340" height="75" />
+      <text x="170" y="25" class="node-code">MODAL M-02</text>
+      <text x="170" y="45" class="node-title">KC 성적서 200% 원문 모달</text>
+      <text x="170" y="62" class="node-desc">KOTITI 100% 무형광 200% HD 확대 &amp; PDF</text>
+    </g>
+
+    <g transform="translate(740, 0)">
+      <rect class="box-modal" width="340" height="75" />
+      <text x="170" y="25" class="node-code">MODAL M-03</text>
+      <text x="170" y="45" class="node-title">안심 교환/환불 보증 모달</text>
+      <text x="170" y="62" class="node-desc">아기 피부 미맞춤 시 100% 안심 교환</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+flowchart TD
+  classDef startEnd fill:#232527,color:#FFFFFF,stroke:#232527,stroke-width:2px;
+  classDef action fill:#FAF7F2,color:#232527,stroke:#C47A5A,stroke-width:2px;
+  classDef system fill:#F4F8F5,color:#232527,stroke:#7E8D7F,stroke-width:2px;
+  classDef decision fill:#FFF9F5,color:#C47A5A,stroke:#C47A5A,stroke-width:2px;
+
+  START(["🚀 사이트 진입 (맘카페 / 블로그 / QR)"]) :::startEnd
+
+  P01["P-01: 메인페이지 진입<br>(KC 인증 상단 뱃지 노출)"] :::action
+  P04["P-04: 베이비 카탈로그<br>(신생아 / 영유아 / 어린이집)"] :::action
+  P05["P-05: 상품 상세 페이지<br>(2겹/3겹 비교표 & 장당 단가)"] :::action
+
+  DEC_CERT{"KC 시험성적서<br>원문을 확인하는가?"} :::decision
+  M02["M-02: KC 성적서 원문 모달<br>(KOTITI 100% 무형광 200% HD 확대)"] :::action
+
+  DEC_SAMPLE{"본품 구매 전<br>원단 샘플을 체험하는가?"} :::decision
+  P06["P-06: 3,000원 체험 키트<br>(원단 샘플 & 환급 쿠폰)"] :::action
+
+  FILTER_REVIEW["⚙️ 아기 부모 Real 리뷰 3중 필터링<br>(연령 / 피부타입 / 세탁 횟수)"] :::system
+  CALC_PRICE["⚙️ 세트별 장당 단가<br>(장당 4,200원~) 자동 연산"] :::system
+
+  P11["P-11: 장바구니 & 결제<br>(🟢 N Pay / 카카오 1초 간편결제)"] :::action
+  NPAY_EXEC["N Pay 1초 간편 결제 승인"] :::system
+
+  P12["P-12: 마이페이지 & 주문완료<br>(6개월 수건 교체주기 알림 등록)"] :::action
+  END_BUY(["🎉 주문 완료 (카카오 알림톡 발송)"]) :::startEnd
+
+  %% 팝업 대안 흐름
+  P08["P-08: 성수 팝업스토어"] :::action
+  M01_POP["M-01: 팝업 사전예약 모달"] :::action
+  END_POP(["🎟️ 팝업 예약 완료 알림톡"]) :::startEnd
+
+  %% 흐름 연결
+  START --> P01
+  P01 --> P04
+  P04 --> P05
+  P05 --> DEC_CERT
+
+  DEC_CERT -- "예" --> M02
+  M02 --> DEC_SAMPLE
+  DEC_CERT -- "아니오" --> DEC_SAMPLE
+
+  DEC_SAMPLE -- "예" --> P06
+  P06 --> P11
+  DEC_SAMPLE -- "아니오" --> FILTER_REVIEW
+
+  FILTER_REVIEW --> CALC_PRICE
+  CALC_PRICE --> P11
+
+  P11 --> NPAY_EXEC
+  NPAY_EXEC --> P12
+  P12 --> END_BUY
+
+  %% 팝업 흐름
+  P01 --> P08
+  P08 --> M01_POP
+  M01_POP --> END_POP

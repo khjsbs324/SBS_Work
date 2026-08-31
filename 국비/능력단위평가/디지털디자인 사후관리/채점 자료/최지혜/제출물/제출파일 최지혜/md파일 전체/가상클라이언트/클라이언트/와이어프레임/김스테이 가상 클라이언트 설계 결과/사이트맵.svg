@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #FAFDFD; }
+      .title { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 700; font-size: 24px; fill: #1A3B34; }
+      .subtitle { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-size: 13px; fill: #585D62; }
+      .root-node { fill: #1A3B34; stroke: #102A24; stroke-width: 2px; rx: 8px; }
+      .root-text { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 700; font-size: 16px; fill: #FFFFFF; text-anchor: middle; }
+      .gnb-node { fill: #E8F3F1; stroke: #4A7C72; stroke-width: 2px; rx: 6px; }
+      .gnb-text { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 700; font-size: 14px; fill: #1A3B34; text-anchor: middle; }
+      .page-node { fill: #FFFFFF; stroke: #DCE1E1; stroke-width: 1.5px; rx: 5px; }
+      .page-title { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 600; font-size: 12px; fill: #232527; }
+      .page-code { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 700; font-size: 10px; fill: #C47A5A; }
+      .page-desc { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-size: 10px; fill: #7E8D7F; }
+      .modal-node { fill: #FFF6ED; stroke: #D97706; stroke-width: 1.5px; rx: 5px; stroke-dasharray: 3 3; }
+      .modal-text { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 600; font-size: 11px; fill: #92400E; }
+      .ex-node { fill: #FEE2E2; stroke: #EF4444; stroke-width: 1.5px; rx: 5px; stroke-dasharray: 3 3; }
+      .ex-text { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 600; font-size: 11px; fill: #991B1B; }
+      .line { stroke: #4A7C72; stroke-width: 1.5px; fill: none; }
+      .modal-line { stroke: #D97706; stroke-width: 1.2px; stroke-dasharray: 4 4; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" class="bg" />
+
+  <!-- Title Header -->
+  <text x="50" y="45" class="title">🗺️ 플로뜰리에 (Flottelier) - 김스테이 B2B 사이트맵 (Sitemap v3.0)</text>
+  <text x="50" y="70" class="subtitle">프리미엄 독채 스테이 &amp; 한옥 감성 숙소 호스트 맞춤 B2B 어메니티 &amp; 실시간 견적 시스템</text>
+
+  <!-- ROOT NODE -->
+  <rect x="425" y="100" width="350" height="45" class="root-node" />
+  <text x="600" y="128" class="root-text">플로뜰리에 STAY B2B 센터</text>
+
+  <!-- GNB NODES (5 Columns) -->
+  <!-- Col 1: B2B 메인 -->
+  <line x1="600" y1="145" x2="140" y2="190" class="line" />
+  <rect x="40" y="190" width="200" height="40" class="gnb-node" />
+  <text x="140" y="215" class="gnb-text">01. 메인 (P-01)</text>
+
+  <!-- Col 2: 객실 번들 -->
+  <line x1="600" y1="145" x2="370" y2="190" class="line" />
+  <rect x="270" y="190" width="200" height="40" class="gnb-node" />
+  <text x="370" y="215" class="gnb-text">02. 객실 번들 (P-02)</text>
+
+  <!-- Col 3: 로고 자수 -->
+  <line x1="600" y1="145" x2="600" y2="190" class="line" />
+  <rect x="500" y="190" width="200" height="40" class="gnb-node" />
+  <text x="600" y="215" class="gnb-text">03. 로고 자수 (P-05)</text>
+
+  <!-- Col 4: 견적 &amp; 세금계산서 -->
+  <line x1="600" y1="145" x2="830" y2="190" class="line" />
+  <rect x="730" y="190" width="200" height="40" class="gnb-node" />
+  <text x="830" y="215" class="gnb-text">04. 견적 &amp; 회계 (P-07)</text>
+
+  <!-- Col 5: 발주 &amp; 파트너 -->
+  <line x1="600" y1="145" x2="1060" y2="190" class="line" />
+  <rect x="960" y="190" width="200" height="40" class="gnb-node" />
+  <text x="1060" y="215" class="gnb-text">05. 발주 &amp; 파트너 (P-10)</text>
+
+  <!-- COLUMN 1 SUBPAGES -->
+  <line x1="140" y1="230" x2="140" y2="270" class="line" />
+  <rect x="40" y="270" width="200" height="75" class="page-node" />
+  <text x="52" y="290" class="page-code">P-01 메인</text>
+  <text x="52" y="308" class="page-title">B2B 스테이 메인 홈</text>
+  <text x="52" y="325" class="page-desc">20/50/100장 퀵 번들 &amp; 견적</text>
+
+  <line x1="140" y1="345" x2="140" y2="380" class="line" />
+  <rect x="40" y="380" width="200" height="75" class="page-node" />
+  <text x="52" y="400" class="page-code">P-09 사전 검증</text>
+  <text x="52" y="418" class="page-title">호스트 3종 샘플 키트</text>
+  <text x="52" y="435" class="page-desc">2/3/4겹 3종 샘플 (100% 환급)</text>
+
+  <!-- COLUMN 2 SUBPAGES -->
+  <line x1="370" y1="230" x2="370" y2="270" class="line" />
+  <rect x="270" y="270" width="200" height="75" class="page-node" />
+  <text x="282" y="290" class="page-code">P-02 카탈로그</text>
+  <text x="282" y="308" class="page-title">스테이 번들 카탈로그</text>
+  <text x="282" y="325" class="page-desc">독채/부티크/호텔 규모별 팩</text>
+
+  <line x1="370" y1="345" x2="370" y2="380" class="line" />
+  <rect x="270" y="380" width="200" height="75" class="page-node" />
+  <text x="282" y="400" class="page-code">P-03 상품 상세</text>
+  <text x="282" y="418" class="page-title">번들 상세 &amp; 단가 계산</text>
+  <text x="282" y="435" class="page-desc">3배 빠른 건조 &amp; 루프(고리) 옵션</text>
+
+  <line x1="370" y1="455" x2="370" y2="490" class="line" />
+  <rect x="270" y="490" width="200" height="75" class="page-node" />
+  <text x="282" y="510" class="page-code">P-04 풀 패키지</text>
+  <text x="282" y="528" class="page-title">객실 풀 어메니티 패키지</text>
+  <text x="282" y="545" class="page-desc">바스타월+세안+발매트+티코스터</text>
+
+  <!-- COLUMN 3 SUBPAGES -->
+  <line x1="600" y1="230" x2="600" y2="270" class="line" />
+  <rect x="500" y="270" width="200" height="75" class="page-node" />
+  <text x="512" y="290" class="page-code">P-05 자수 센터</text>
+  <text x="512" y="308" class="page-title">숙소 로고 자수 스튜디오</text>
+  <text x="512" y="325" class="page-desc">AI/PNG 업로드 &amp; 1:1 시안 확인</text>
+
+  <line x1="600" y1="345" x2="600" y2="380" class="line" />
+  <rect x="500" y="380" width="200" height="75" class="page-node" />
+  <text x="512" y="400" class="page-code">P-06 투숙객 가이드</text>
+  <text x="512" y="418" class="page-title">국/영문 리추얼 안내 카드</text>
+  <text x="512" y="435" class="page-desc">객실 바구니 비치용 (무료 동봉)</text>
+
+  <!-- COLUMN 4 SUBPAGES -->
+  <line x1="830" y1="230" x2="830" y2="270" class="line" />
+  <rect x="730" y="270" width="200" height="75" class="page-node" />
+  <text x="742" y="290" class="page-code">P-07 견적 &amp; 세무</text>
+  <text x="742" y="308" class="page-title">실시간 견적 &amp; 세금계산서</text>
+  <text x="742" y="325" class="page-desc">도장 날인 공식 견적서 PDF 출력</text>
+
+  <line x1="830" y1="345" x2="830" y2="380" class="line" />
+  <rect x="730" y="380" width="200" height="75" class="page-node" />
+  <text x="742" y="400" class="page-code">P-08 내구성 검증</text>
+  <text x="742" y="418" class="page-title">100회 세탁 내구성관</text>
+  <text x="742" y="435" class="page-desc">KATRI 시험성적서 200% 확대</text>
+
+  <!-- COLUMN 5 SUBPAGES -->
+  <line x1="1060" y1="230" x2="1060" y2="270" class="line" />
+  <rect x="960" y="270" width="200" height="75" class="page-node" />
+  <text x="972" y="290" class="page-code">P-10 주문 결제</text>
+  <text x="972" y="308" class="page-title">B2B 장바구니 &amp; 결제</text>
+  <text x="972" y="325" class="page-desc">법인결제 &amp; 무비닐 벌크 포장</text>
+
+  <line x1="1060" y1="345" x2="1060" y2="380" class="line" />
+  <rect x="960" y="380" width="200" height="75" class="page-node" />
+  <text x="972" y="400" class="page-code">P-11 파트너십</text>
+  <text x="972" y="418" class="page-title">정기납품 &amp; 에코 엠블럼</text>
+  <text x="972" y="435" class="page-desc">3~6개월 자동 보충 &amp; 제휴 QR</text>
+
+  <!-- MODALS SECTION -->
+  <rect x="40" y="600" width="1120" height="130" fill="#FFFDF8" stroke="#E2D9CC" rx="8" />
+  <text x="60" y="630" font-family="'Noto Sans KR', sans-serif" font-weight="700" font-size="14px" fill="#92400E">💡 3대 레이어드 모달 연동 (Modal Overlays)</text>
+
+  <rect x="60" y="648" width="340" height="65" class="modal-node" />
+  <text x="75" y="670" class="modal-text">MODAL M-03 : 실시간 Canvas 자수기</text>
+  <text x="75" y="692" font-family="'Noto Sans KR', sans-serif" font-size="11px" fill="#585D62">로고 업로드 시 실사 자수 합성 렌더링</text>
+
+  <rect x="430" y="648" width="340" height="65" class="modal-node" />
+  <text x="445" y="670" class="modal-text">MODAL M-04 : 실시간 견적서 PDF 1초 출력</text>
+  <text x="445" y="692" font-family="'Noto Sans KR', sans-serif" font-size="11px" fill="#585D62">도장 날인 공식 B2B 견적서 1초 다운로드</text>
+
+  <rect x="800" y="648" width="340" height="65" class="modal-node" />
+  <text x="815" y="670" class="modal-text">MODAL M-02 : KC 4無 성적서 200% 확대</text>
+  <text x="815" y="692" font-family="'Noto Sans KR', sans-serif" font-size="11px" fill="#585D62">100회 세탁 KATRI 무형광 성적서 뷰어</text>
+
+  <!-- EXCEPTION SECTION -->
+  <rect x="40" y="750" width="1120" height="100" fill="#FFF8F8" stroke="#F8D7DA" rx="8" />
+  <text x="60" y="775" font-family="'Noto Sans KR', sans-serif" font-weight="700" font-size="13px" fill="#991B1B">⚠️ 예외 처리 페이지 (Exception Pages - 가정)</text>
+
+  <rect x="60" y="790" width="340" height="45" class="ex-node" />
+  <text x="75" y="817" class="ex-text">EX-01 : 로고 파일 형식/용량 오류 안내</text>
+
+  <rect x="430" y="790" width="340" height="45" class="ex-node" />
+  <text x="445" y="817" class="ex-text">EX-02 : 대량 재고 부족/납기 조율 안내</text>
+
+  <rect x="800" y="790" width="340" height="45" class="ex-node" />
+  <text x="815" y="817" class="ex-text">EX-03 : 404 Not Found 복구 페이지</text>
+
+</svg>

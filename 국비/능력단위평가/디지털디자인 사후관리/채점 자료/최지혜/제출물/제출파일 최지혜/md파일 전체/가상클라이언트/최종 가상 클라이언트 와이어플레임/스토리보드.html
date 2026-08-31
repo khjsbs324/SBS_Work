@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 (Flottelier) - 종합 마스터 스토리보드 뷰어</title>
+  <style>
+    :root {
+      --fl-deep-green: #1F3327;
+      --fl-earth-brown: #5A4232;
+      --fl-pure-ecru: #F7F4EE;
+      --fl-petal-pink: #E8B4A2;
+      --fl-sage-green: #7E8D7F;
+      --fl-terra-cotta: #C47A5A;
+      --wf-dark: #232527;
+      --wf-border: #D1D9D4;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif;
+      background: #F4F6F5;
+      color: var(--wf-dark);
+      line-height: 1.6;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      background: var(--fl-deep-green);
+      color: #FFFFFF;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .badge-sb {
+      background: var(--fl-terra-cotta);
+      color: #FFF;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .layout-container {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 54px);
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      width: 260px;
+      background: #FFFFFF;
+      border-right: 1px solid var(--wf-border);
+      padding: 16px 12px;
+      overflow-y: auto;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .group-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--fl-sage-green);
+      text-transform: uppercase;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      padding-left: 6px;
+    }
+
+    .sb-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      background: transparent;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s;
+    }
+
+    .sb-btn:hover { background: var(--fl-pure-ecru); color: var(--fl-deep-green); }
+    .sb-btn.active { background: #EBF4EE; color: var(--fl-deep-green); border-color: #2E6945; font-weight: 700; }
+
+    .sb-code {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--fl-terra-cotta);
+      background: #FFF5F0;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Main Storyboard Content Area */
+    .content-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 30px;
+      background: #FAF7F2;
+    }
+
+    .sb-card {
+      background: #FFFFFF;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      border: 1px solid var(--wf-border);
+      padding: 24px;
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sb-card.active { display: flex; }
+
+    .sb-head {
+      border-bottom: 2px solid var(--fl-deep-green);
+      padding-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sb-head h2 { font-size: 20px; color: var(--fl-deep-green); font-weight: 800; }
+    .sb-category { font-size: 13px; color: var(--fl-earth-brown); font-weight: 600; }
+
+    /* Specification Table */
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .spec-table th, .spec-table td {
+      border: 1px solid var(--wf-border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .spec-table th {
+      background: #FAF7F2;
+      width: 160px;
+      font-weight: 700;
+      color: var(--fl-deep-green);
+    }
+
+    .ascii-box {
+      background: #232527;
+      color: #E5E7EB;
+      font-family: monospace;
+      padding: 14px;
+      border-radius: 6px;
+      font-size: 11px;
+      line-height: 1.4;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-title">
+      <span>🎬 플로뜰리에 (Flottelier) 상세 스토리보드 Master Viewer</span>
+      <span class="badge-sb">12대 화면 · 3대 모달 완비</span>
+    </div>
+    <div style="font-size: 12px; color: #E8B4A2;">
+      주식회사 이든그라운드 | 초민감성(김예민) 안심 검증 플랫폼
+    </div>
+  </header>
+
+  <div class="layout-container">
+    <aside class="sidebar">
+      <div class="group-label">01. 메인 & 룩북</div>
+      <button class="sb-btn active" onclick="showStory('P-01')">
+        <span>메인페이지</span><span class="sb-code">P-01</span>
+      </button>
+      <button class="sb-btn" onclick="showStory('P-09')">
+        <span>4대 리추얼 룩북</span><span class="sb-code">P-09</span>
+      </button>
+
+      <div class="group-label">02. 공인 검증 & 연구소</div>
+      <button class="sb-btn" onclick="showStory('P-02')">
+        <span>시험성적서 랩</span><span class="sb-code">P-02</span>
+      </button>
+      <button class="sb-btn" onclick="showStory('P-03')">
+        <span>봉제선 & 세탁 비교</span><span class="sb-code">P-03</span>
+      </button>
+
+      <div class="group-label">03. 커머스 & 체험팩</div>
+      <button class="sb-btn" onclick="showStory('P-04')">
+        <span>제품 카탈로그</span><span class="sb-code">P-04</span>
+      </button>
+      <button class="sb-btn" onclick="showStory('P-05')">
+        <span>상품 상세 페이지</span><span class="sb-code">P-05</span>
+      </button>
+      <button class="sb-btn" onclick="showStory('P-06')">
+        <span>1장 안심 체험팩</span><span class="sb-code">P-06</span>
+      </button>
+      <button class="sb-btn" onclick="showStory('P-07')">
+        <span>30초 안심 큐레이터</span><span class="sb-code">P-07</span>
+      </button>
+
+      <div class="group-label">04. 감성 기프트 & 꽃말</div>
+      <button class="sb-btn" onclick="showStory('P-08')">
+        <span>6가지 꽃말 위로 서재</span><span class="sb-code">P-08</span>
+      </button>
+
+      <div class="group-label">05. 리뷰 & 안심 보증</div>
+      <button class="sb-btn" onclick="showStory('P-10')">
+        <span>민감성 Real 리뷰</span><span class="sb-code">P-10</span>
+      </button>
+
+      <div class="group-label">06. 결제 & 평생 단골</div>
+      <button class="sb-btn" onclick="showStory('P-11')">
+        <span>장바구니 & 1초 결제</span><span class="sb-code">P-11</span>
+      </button>
+      <button class="sb-btn" onclick="showStory('P-12')">
+        <span>마이페이지 & 재주문</span><span class="sb-code">P-12</span>
+      </button>
+
+      <div class="group-label">07. 레이어드 모달</div>
+      <button class="sb-btn" onclick="showStory('M-01')">
+        <span>성적서 HD 확대</span><span class="sb-code">M-01</span>
+      </button>
+      <button class="sb-btn" onclick="showStory('M-02')">
+        <span>6종 꽃말 카드 선택</span><span class="sb-code">M-02</span>
+      </button>
+      <button class="sb-btn" onclick="showStory('M-03')">
+        <span>100% 안심 환불 신청</span><span class="sb-code">M-03</span>
+      </button>
+    </aside>
+
+    <main class="content-area">
+
+      <!-- P-01 Storyboard -->
+      <div id="sb-P-01" class="sb-card active">
+        <div class="sb-head">
+          <h2>[P-01] 메인페이지 (Main Editorial & Brand Home)</h2>
+          <span class="sb-category">01. 메인 & 룩북</span>
+        </div>
+        <table class="spec-table">
+          <tr>
+            <th>화면 목적</th>
+            <td>브랜드 철학 전달, 더마테스트 엑설런트 인증 및 KOTITI 100% 무형광 성적서 유효기간 고지로 그린워싱 불신 해소 및 1장 체험팩 신청 유도.</td>
+          </tr>
+          <tr>
+            <th>주요 콘텐츠</th>
+            <td>수채화 몽환 톤 히어로, 4대 일상 리추얼(세안/홈스파/육아/명상) 서클 탭, 공인 인증 팩트 시트, 초민감성 베스트 3종 라인업 그리드.</td>
+          </tr>
+          <tr>
+            <th>인터페이스 요소</th>
+            <td>상단 인증 띠배너, Sticky GNB (5대 메뉴 + [★ 1장 체험팩]), 4대 리추얼 서클 탭 버튼, `[성적서 1초 확인 (M-01)]` 버튼.</td>
+          </tr>
+          <tr>
+            <th>레이아웃 구조</th>
+            <td>
+              <div class="ascii-box">
++------------------------------------------------------------------------+
+| [상단 띠배너] 독일 더마테스트 Excellent & 4無 인증 유효기간 공개 (체험팩 100% 페이백) |
++------------------------------------------------------------------------+
+| [GNB] Flottelier | BRAND STORY | SHOP | PROOF & LAB | GIFT | REVIEWS | [★체험팩] |
++------------------------------------------------------------------------+
+| [Hero] The Art of Slow Ritual (캔버스 수채화 무드 & 공방 4차 정련 선언문)  |
+|        [1장 안심 체험팩 신청 (P-06)]   [공인 성적서 1초 확인 (M-01)]        |
++------------------------------------------------------------------------+
+| [4대 리추얼 탭] (🧖아침 세안)  (🛁저녁 홈스파)  (🍼안심 육아)  (☕가사 명상)    |
++------------------------------------------------------------------------+
+| [Best Lineup] 4차정련 세안타올 3P | 베이비 와입스 5P | 제로살림 기프트 세트 |
++------------------------------------------------------------------------+
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>작동 방식</th>
+            <td>배경 수채화 그라디언트 블러 인터랙션, [공인 성적서 확인] 클릭 시 M-01 모달 호출, [1장 체험팩] 클릭 시 P-06 이동.</td>
+          </tr>
+          <tr>
+            <th>연결 화면</th>
+            <td>P-02, P-04, P-05, P-06, P-08, P-09, M-01</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- P-05 Storyboard -->
+      <div id="sb-P-05" class="sb-card">
+        <div class="sb-head">
+          <h2>[P-05] 상품 상세 페이지 (Product Detail Page)</h2>
+          <span class="sb-category">03. 커머스 & 체험팩</span>
+        </div>
+        <table class="spec-table">
+          <tr>
+            <th>화면 목적</th>
+            <td>봉제선 500% HD 줌 검증, 공방 4차 완전 정련 배송 옵션 지정, 무향 밀봉 개별 포장 보증 확인 및 1초 결제 전환.</td>
+          </tr>
+          <tr>
+            <th>주요 콘텐츠</th>
+            <td>봉제선 500% HD 마그니파이어 줌 뷰어, 4차 완전 정련 vs DIY 선택 라디오, 무라벨 선택기, 무향 밀봉 포장 보증 체크박스.</td>
+          </tr>
+          <tr>
+            <th>인터페이스 요소</th>
+            <td>500% HD 돋보기 조작 뷰어, `[성적서 원본 200% 확대 (M-01)]`, `[100% 안심 환불 규정 (M-03)]`, `[🟢 N Pay 1초 결제 (P-11)]`.</td>
+          </tr>
+          <tr>
+            <th>연결 화면</th>
+            <td>P-04, P-06, P-10, P-11, M-01, M-02, M-03</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- M-01 Storyboard -->
+      <div id="sb-M-01" class="sb-card">
+        <div class="sb-head">
+          <h2>[M-01] 성적서 고해상도 팝업 모달 (Cert HD Modal)</h2>
+          <span class="sb-category">07. 레이어드 모달</span>
+        </div>
+        <table class="spec-table">
+          <tr>
+            <th>화면 목적</th>
+            <td>KOTITI 100% 무형광 성적서 및 더마테스트 엑설런트 원본을 200% HD 돋보기로 선명하게 확대 확인.</td>
+          </tr>
+          <tr>
+            <th>주요 콘텐츠</th>
+            <td>형광증백제 0.0% ND 불검출 수치 및 시험연구원 직인, 유효기간(2027-12-31), PDF 다운로드 버튼.</td>
+          </tr>
+          <tr>
+            <th>작동 방식</th>
+            <td>모달 오버레이 슬라이드 인, ESC 키 및 닫기 버튼 지원, PDF 다운로드 즉시 실행.</td>
+          </tr>
+          <tr>
+            <th>연결 화면</th>
+            <td>P-01, P-02, P-05</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- M-02 Storyboard -->
+      <div id="sb-M-02" class="sb-card">
+        <div class="sb-head">
+          <h2>[M-02] 6종 꽃말 위로 카드 선택 모달</h2>
+          <span class="sb-category">07. 레이어드 모달</span>
+        </div>
+        <table class="spec-table">
+          <tr>
+            <th>화면 목적</th>
+            <td>선물 받는 사람의 상황에 맞춘 꽃말 카드를 선택하고 마음 메시지를 자필 폰트로 작성.</td>
+          </tr>
+          <tr>
+            <th>주요 콘텐츠</th>
+            <td>프리지아(응원), 목화(사랑), 라벤더(쉼) 등 6종 꽃말 카드 선택기, 100자 메시지 텍스트에어리어.</td>
+          </tr>
+          <tr>
+            <th>연결 화면</th>
+            <td>P-05, P-08, P-11</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- M-03 Storyboard -->
+      <div id="sb-M-03" class="sb-card">
+        <div class="sb-head">
+          <h2>[M-03] 100% 안심 환불 보장제 신청 모달</h2>
+          <span class="sb-category">07. 레이어드 모달</span>
+        </div>
+        <table class="spec-table">
+          <tr>
+            <th>화면 목적</th>
+            <td>피부 트러블 발생 시 14일 이내 이유 불문 100% 무료 수거 및 전액 환불 접수.</td>
+          </tr>
+          <tr>
+            <th>주요 콘텐츠</th>
+            <td>안심 환불 보장 규정 안내, 주문번호 선택, 반품 수거지 입력 폼, 즉시 접수 버튼.</td>
+          </tr>
+          <tr>
+            <th>연결 화면</th>
+            <td>P-05, P-10</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- General Fallback for Other Screens -->
+      <div id="sb-OTHER" class="sb-card">
+        <div class="sb-head">
+          <h2 id="otherTitle">화면 상세 스토리보드</h2>
+          <span class="sb-category" id="otherCategory">명세서</span>
+        </div>
+        <table class="spec-table">
+          <tr>
+            <th>화면 상세 내용</th>
+            <td id="otherContent">스토리보드 세부 명세가 표시됩니다.</td>
+          </tr>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    const screenData = {
+      'P-02': { title: '[P-02] 공인 시험성적서 랩', cat: '02. 공인 검증 & 랩', content: '더마테스트 엑설런트 및 KOTITI 100% 무형광 성적서 원본과 유효기간을 객관적으로 입증. 성적서 200% HD 돋보기 확대(M-01) 및 PDF 다운로드 기능 제공.' },
+      'P-03': { title: '[P-03] 봉제선 & 세탁 비교 가이드', cat: '02. 공인 검증 & 랩', content: '봉제선 500% HD 줌과 세탁 50회 촉감 비교표를 통해 마감 자극 불안감 해소. 3중 초미세 말아박기 접사 인터랙션 렌즈 가동.' },
+      'P-04': { title: '[P-04] 제품 카탈로그', cat: '03. 커머스 & 체험팩', content: '4차 정련 소창 페이스타올, 베이비 와입스, 기프트 세트 탐색 및 피부타입별 퀵 필터링. 장당 단가 투명 고지.' },
+      'P-06': { title: '[P-06] 1장 안심 체험팩', cat: '03. 커머스 & 체험팩', content: '구매 실패 위험 없는 1장 소량 체험 신청. 체험비 3,000원 결제 시 본품 100% 페이백 쿠폰 계정 즉시 지급.' },
+      'P-07': { title: '[P-07] 30초 안심 큐레이터', cat: '03. 커머스 & 체험팩', content: '피부 타입(초민감/아토피/신생아) 및 사용 목적 3단계 퀴즈를 통해 최적의 겹수를 30초 만에 추천.' },
+      'P-08': { title: '[P-08] 6가지 꽃말 위로 서재', cat: '04. 감성 기프트 & 꽃말', content: '사탕수수 생분해 지함 패키지 3D 언박싱 뷰어와 6종 꽃말 일러스트 카드 큐레이션 제공.' },
+      'P-09': { title: '[P-09] 4대 일상 리추얼 룩북', cat: '01. 메인 & 룩북', content: '아침 세안, 저녁 홈스파, 안심 육아, 가사 명상의 슬로우 리추얼 라이프스타일 갤러리 및 착장 제품 태그 쇼핑.' },
+      'P-10': { title: '[P-10] 민감성 피부 Real 리뷰', cat: '05. 리뷰 & 안심 보증', content: '초민감성/아토피 피부타입 필터 및 세탁 50회 장기 실사용 사진으로 입증하는 100% 실구매자 포토 리뷰.' },
+      'P-11': { title: '[P-11] 장바구니 & 1초 결제', cat: '06. 결제 & 평생 단골', content: '무향 밀봉 개별 포장 보증 체크박스, 100% 페이백 쿠폰 자동 적용, N Pay / 카카오페이 1초 간편 결제.' },
+      'P-12': { title: '[P-12] 마이페이지 & 평생 재주문', cat: '06. 결제 & 평생 단골', content: '피부에 맞았던 동일 원단 스펙 1-Click 재구매 및 헌 소창 에코 루프 수거 신청 (5,000원 적립 쿠폰 리워드).' }
+    };
+
+    function showStory(id) {
+      document.querySelectorAll('.sb-btn').forEach(b => {
+        b.classList.remove('active');
+        if (b.textContent.includes(id)) b.classList.add('active');
+      });
+
+      document.querySelectorAll('.sb-card').forEach(c => c.classList.remove('active'));
+
+      const dedicated = document.getElementById('sb-' + id);
+      if (dedicated) {
+        dedicated.classList.add('active');
+      } else if (screenData[id]) {
+        const other = document.getElementById('sb-OTHER');
+        document.getElementById('otherTitle').textContent = screenData[id].title;
+        document.getElementById('otherCategory').textContent = screenData[id].cat;
+        document.getElementById('otherContent').textContent = screenData[id].content;
+        other.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

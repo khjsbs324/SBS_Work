@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 1260" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Malgun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 24px; font-weight: bold; fill: #1E293B; }
+      .subtitle { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 13px; fill: #64748B; }
+      .flow-title { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 13.5px; font-weight: bold; fill: #0F172A; }
+      .flow-code { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 10px; font-weight: bold; letter-spacing: 0.5px; }
+      .flow-desc { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11.5px; fill: #475569; }
+      .branch-label { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11.5px; font-weight: bold; fill: #0F766E; }
+      .branch-err { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11.5px; font-weight: bold; fill: #DC2626; }
+      .legend-title { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 13px; font-weight: bold; fill: #1E293B; }
+      .legend-label { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 12px; fill: #334155; }
+      .step-badge { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11px; font-weight: bold; fill: #FFFFFF; }
+    </style>
+    
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <filter id="shadow-main" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#2B3A42" flood-opacity="0.18"/>
+    </filter>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+    <marker id="arrow-terra" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#C47A5A"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#DC2626"/>
+    </marker>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="100%" height="100%" fill="#F8FAFC"/>
+
+  <!-- 헤더 -->
+  <g transform="translate(40, 35)">
+    <text class="title" x="0" y="0">🔄 플로뜰리에 (Flottelier) - 김선물 서비스 흐름도 (Service User Flow)</text>
+    <text class="subtitle" x="0" y="24">상황·예산 탐색 ➔ 시그니처 4종 선택 ➔ 실시간 자수 &amp; 3D 패키징 ➔ 가격표 100% 미동봉 안심 직배송 ➔ 주문 완료 리포트</text>
+  </g>
+
+  <!-- ==================== 1. 시작 노드 ==================== -->
+  <g transform="translate(500, 80)" filter="url(#shadow-main)">
+    <rect width="340" height="46" rx="23" fill="#2B3A42"/>
+    <text class="step-badge" x="170" y="28" text-anchor="middle" font-size="14px">🎁 시작: 선물 메인 (P-GF-01) 진입</text>
+  </g>
+
+  <line x1="670" y1="126" x2="670" y2="156" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== 2. P-GF-01: 메인 큐레이션 ==================== -->
+  <g transform="translate(480, 156)" filter="url(#shadow)">
+    <rect width="380" height="72" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.5"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#2B3A42"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">P-GF-01</text>
+    <text class="flow-title" x="84" y="24">선물 메인 &amp; 스마트 큐레이션 허브</text>
+    <text class="flow-desc" x="12" y="48">· [🏠 집들이] 탭 &amp; [5만원대] 예산 필터 클릭</text>
+    <text class="flow-desc" x="12" y="64" fill="#0D9488">· "취향 몰라도 실패 없는 BEST 1위" 픽 추천 확인</text>
+  </g>
+
+  <!-- 1장 체험팩 분기 (왼쪽 서브 플로우) -->
+  <path d="M 480 192 L 180 192 L 180 240" stroke="#C47A5A" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-terra)" fill="none"/>
+  <text class="flow-code" x="220" y="184" fill="#C47A5A">선물 전 직접 사용해보기</text>
+
+  <g transform="translate(40, 240)" filter="url(#shadow)">
+    <rect width="280" height="74" rx="6" fill="#FFFDF8" stroke="#C47A5A" stroke-width="1.5"/>
+    <rect x="12" y="10" width="60" height="18" rx="3" fill="#C47A5A"/>
+    <text class="step-badge" x="42" y="23" text-anchor="middle" font-size="10px">M-GF-04</text>
+    <text class="flow-title" x="80" y="24" fill="#9A3412">1장 3,000원 안심 체험팩</text>
+    <text class="flow-desc" x="12" y="46">· 4차 정련 뽀송함 직접 체험</text>
+    <text class="flow-desc" x="12" y="62">· 선물 세트 본품 구매 시 100% 환급</text>
+  </g>
+  <path d="M 180 314 L 180 340 L 480 340" stroke="#C47A5A" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-terra)" fill="none"/>
+
+  <line x1="670" y1="228" x2="670" y2="260" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== 3. 판단 분기: 상황 및 상품 선택 ==================== -->
+  <g transform="translate(560, 260)" filter="url(#shadow)">
+    <polygon points="110,0 220,44 110,88 0,44" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5"/>
+    <text class="flow-title" x="110" y="40" text-anchor="middle" font-size="12px">상황 &amp; 세트 선택</text>
+    <text class="flow-code" x="110" y="56" text-anchor="middle" fill="#1E293B">BEST 1위 vs 기타</text>
+  </g>
+
+  <!-- 정상 경로 (아래로) -->
+  <line x1="670" y1="348" x2="670" y2="385" stroke="#0D9488" stroke-width="2" marker-end="url(#arrow-teal)"/>
+  <text class="branch-label" x="680" y="370">BEST 1위 시그니처 세트 선택</text>
+
+  <!-- 기타 상품 분기 (오른쪽: 라이프세트 P-03 / 출산세트 P-04) -->
+  <path d="M 780 304 L 1040 304 L 1040 345" stroke="#64748B" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)" fill="none"/>
+  <text class="flow-desc" x="840" y="296">출산/라이프세트 선택</text>
+
+  <g transform="translate(900, 345)" filter="url(#shadow)">
+    <rect width="280" height="74" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/>
+    <text class="flow-code" x="12" y="20" fill="#475569">P-GF-03 / P-GF-04</text>
+    <text class="flow-title" x="12" y="38">라이프세트 / 출산세트 상세</text>
+    <text class="flow-desc" x="12" y="58">· 천연 EM 비누 / 2겹 가제+턱받이 구성</text>
+  </g>
+  <path d="M 1040 419 L 1040 460 L 860 460" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- ==================== 4. P-GF-02: 시그니처 4종 세트 상세 ==================== -->
+  <g transform="translate(480, 385)" filter="url(#shadow)">
+    <rect width="380" height="84" rx="6" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#0D9488"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">P-GF-02</text>
+    <text class="flow-title" x="84" y="24" fill="#0F766E">시그니처 4종 세트 상세 (★)</text>
+    <text class="flow-desc" x="12" y="48">· 3겹 데일리 2장 + 2겹 세안 2장 (500% HD 줌)</text>
+    <text class="flow-desc" x="12" y="66" fill="#0F766E">· [실시간 자수 각인 &amp; 메시지 카드] 옵션 선택</text>
+  </g>
+
+  <line x1="670" y1="469" x2="670" y2="500" stroke="#0D9488" stroke-width="2" marker-end="url(#arrow-teal)"/>
+
+  <!-- ==================== 5. 모달 3연속 인터랙션 그룹 ==================== -->
+  <g transform="translate(430, 500)" filter="url(#shadow)">
+    <rect width="480" height="190" rx="8" fill="#FFFDF8" stroke="#C47A5A" stroke-width="1.5"/>
+    <text class="flow-code" x="16" y="22" fill="#9A3412">MODAL GROUP : 1:1 아틀리에 커스텀 &amp; 패키징 뷰어</text>
+
+    <!-- M-01 -->
+    <g transform="translate(16, 32)">
+      <rect width="448" height="42" rx="4" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text class="flow-code" x="10" y="18" fill="#C47A5A">Step 1 (M-GF-01)</text>
+      <text class="flow-title" x="120" y="18" font-size="12px">Canvas 실시간 자수 프리뷰</text>
+      <text class="flow-desc" x="10" y="34">친구 이니셜 문구 입력 ➔ 폰트 4종 &amp; 샴페인골드 실 색상 0.05초 실시간 합성</text>
+    </g>
+
+    <!-- M-02 -->
+    <g transform="translate(16, 82)">
+      <rect width="448" height="42" rx="4" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text class="flow-code" x="10" y="18" fill="#C47A5A">Step 2 (M-GF-02)</text>
+      <text class="flow-title" x="120" y="18" font-size="12px">100% 친환경 패키징 3D 뷰어</text>
+      <text class="flow-desc" x="10" y="34">무비닐 재생지 상자 &amp; 소창 파우치 360도 회전 + '리추얼 가이드 카드' 동봉 확인</text>
+    </g>
+
+    <!-- M-03 -->
+    <g transform="translate(16, 132)">
+      <rect width="448" height="42" rx="4" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text class="flow-code" x="10" y="18" fill="#C47A5A">Step 3 (M-GF-03)</text>
+      <text class="flow-title" x="120" y="18" font-size="12px">자필 감성 메시지 카드 작성기</text>
+      <text class="flow-desc" x="10" y="34">집들이 축하 템플릿 선택 ➔ 자필 손글씨 폰트로 축하 메시지 80자 실시간 렌더링</text>
+    </g>
+  </g>
+
+  <line x1="670" y1="690" x2="670" y2="725" stroke="#0D9488" stroke-width="2" marker-end="url(#arrow-teal)"/>
+
+  <!-- ==================== 6. P-GF-06: 직배송 주문서 ==================== -->
+  <g transform="translate(480, 725)" filter="url(#shadow)">
+    <rect width="380" height="92" rx="6" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#0D9488"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">P-GF-06</text>
+    <text class="flow-title" x="84" y="24" fill="#0F766E">선물 직배송 주문서 작성 (★)</text>
+    <text class="flow-desc" x="12" y="48">· 수령인(친구) 이름, 연락처, 주소 입력</text>
+    <text class="flow-desc" x="12" y="66" fill="#0F766E" font-weight="bold">· [가격표 및 영수증 100% 제외 배송] 안심 체크</text>
+    <text class="flow-desc" x="12" y="84">· 자수 문구 &amp; 메시지 카드 최종 검수</text>
+  </g>
+
+  <line x1="670" y1="817" x2="670" y2="850" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== 7. 판단 분기: 입력 유효성 검사 ==================== -->
+  <g transform="translate(560, 850)" filter="url(#shadow)">
+    <polygon points="110,0 220,44 110,88 0,44" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+    <text class="flow-title" x="110" y="40" text-anchor="middle" font-size="12px">주소 &amp; 자수 유효성</text>
+    <text class="flow-code" x="110" y="56" text-anchor="middle" fill="#92400E">누락 여부 검증</text>
+  </g>
+
+  <!-- 유효성 오류 분기 (왼쪽: EX-GF-01/02) -->
+  <path d="M 560 894 L 220 894 L 220 935" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-red)" fill="none"/>
+  <text class="branch-err" x="320" y="886">자수 문구 누락 / 주소 불완전</text>
+
+  <g transform="translate(80, 935)" filter="url(#shadow)">
+    <rect width="280" height="74" rx="6" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5"/>
+    <text class="flow-code" x="12" y="20" fill="#DC2626">EX-GF-01 / EX-GF-02 오류 모달 [가정]</text>
+    <text class="flow-desc" x="12" y="42">· 누락 필드 붉은색 하이라이트 표시</text>
+    <text class="flow-desc" x="12" y="60">· 1초 인라인 수정 후 재확인</text>
+  </g>
+  <path d="M 220 1009 L 220 1030 L 480 1030 L 480 790" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- 정상 결제 진행 (아래로) -->
+  <line x1="670" y1="938" x2="670" y2="975" stroke="#16A34A" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="branch-label" x="680" y="960">검증 완료 ➔ 간편결제 승인</text>
+
+  <!-- ==================== 8. 시스템 처리: 암호화 승인 & 영수증 미동봉 플래그 ==================== -->
+  <g transform="translate(480, 975)" filter="url(#shadow)">
+    <rect width="380" height="60" rx="6" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+    <text class="flow-code" x="12" y="20" fill="#166534">SYSTEM PROCESS (1초 결제 승인 &amp; 플래그 DB 바인딩)</text>
+    <text class="flow-desc" x="12" y="40">네이버페이/카카오페이 승인 ➔ "가격표 100% 제외" 물류 지시서 자동 생성</text>
+  </g>
+
+  <line x1="670" y1="1035" x2="670" y2="1065" stroke="#16A34A" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== 9. P-GF-07: 주문 완료 ==================== -->
+  <g transform="translate(480, 1065)" filter="url(#shadow)">
+    <rect width="380" height="74" rx="6" fill="#FFFFFF" stroke="#16A34A" stroke-width="2"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#16A34A"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">P-GF-07</text>
+    <text class="flow-title" x="84" y="24" fill="#166534">선물 주문 완료 &amp; 포장 리포트</text>
+    <text class="flow-desc" x="12" y="48">· 선물 포장 완성 상태 실시간 시뮬레이션 리포트</text>
+    <text class="flow-desc" x="12" y="64">· 친구 카카오톡 알림톡(송장번호) 발송 예약 완료</text>
+  </g>
+
+  <line x1="670" y1="1139" x2="670" y2="1170" stroke="#16A34A" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== 10. 종료 노드 ==================== -->
+  <g transform="translate(480, 1170)" filter="url(#shadow-main)">
+    <rect width="380" height="46" rx="23" fill="#166534"/>
+    <text class="step-badge" x="190" y="28" text-anchor="middle" font-size="14px">🎉 종료: 감동적인 4차 정련 소창 선물 전달 완료</text>
+  </g>
+
+</svg>

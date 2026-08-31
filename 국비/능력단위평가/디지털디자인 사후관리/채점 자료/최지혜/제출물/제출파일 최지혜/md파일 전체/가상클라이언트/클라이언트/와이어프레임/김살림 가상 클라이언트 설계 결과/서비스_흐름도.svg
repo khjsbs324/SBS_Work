@@ -1,0 +1,298 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1120" width="100%" height="100%" style="background-color: #FAFDFD; font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;">
+  <defs>
+    <filter id="flow-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <filter id="flow-shadow-sm" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.04"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#16A34A"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#DC2626"/>
+    </marker>
+  </defs>
+
+  <!-- Title & Meta Header -->
+  <g transform="translate(60, 35)">
+    <rect width="1320" height="65" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#flow-shadow-sm)"/>
+    <text x="30" y="36" font-size="19" font-weight="700" fill="#232527">🔄 플로뜰리에 (Flottelier) 스마트 살림 서비스 흐름도 (Service Flow Diagram)</text>
+    <text x="30" y="54" font-size="12" fill="#64748B">페르소나: 김살림(이현정) | 탐색 ➔ 선택 ➔ 상세 검증 ➔ 주문/구독 ➔ 결과 확인 5단계 여정</text>
+    
+    <!-- Legend -->
+    <g transform="translate(820, 18)">
+      <rect x="0" y="4" width="70" height="22" rx="11" fill="#232527"/>
+      <text x="35" y="19" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">시작/종료</text>
+      
+      <rect x="80" y="4" width="80" height="22" rx="4" fill="#FFFFFF" stroke="#7E8D7F" stroke-width="1.5"/>
+      <text x="120" y="19" font-size="10" font-weight="700" fill="#232527" text-anchor="middle">화면/행동</text>
+
+      <rect x="170" y="4" width="70" height="22" rx="4" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+      <text x="205" y="19" font-size="10" font-weight="700" fill="#92400E" text-anchor="middle">판단 분기</text>
+
+      <rect x="250" y="4" width="70" height="22" rx="4" fill="#FFF9E6" stroke="#C47A5A" stroke-width="1.5"/>
+      <text x="285" y="19" font-size="10" font-weight="700" fill="#C47A5A" text-anchor="middle">모달/계산</text>
+
+      <rect x="330" y="4" width="70" height="22" rx="4" fill="#FFF0F0" stroke="#DC2626" stroke-width="1.5"/>
+      <text x="365" y="19" font-size="10" font-weight="700" fill="#DC2626" text-anchor="middle">예외/오류</text>
+    </g>
+  </g>
+
+  <!-- ==================== STAGE 1: 탐색 & 진입 (EXPLORE) ==================== -->
+  <g transform="translate(60, 120)">
+    <!-- Stage Area Box -->
+    <rect width="1320" height="150" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="20" y="12" width="130" height="24" rx="4" fill="#E2E8F0"/>
+    <text x="85" y="28" font-size="11" font-weight="700" fill="#334155" text-anchor="middle">STEP 01. 탐색 &amp; 진입</text>
+
+    <!-- Start Node -->
+    <g transform="translate(180, 45)" filter="url(#flow-shadow)">
+      <rect width="240" height="46" rx="23" fill="#232527"/>
+      <text x="120" y="28" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">🟢 시작: 사이트 진입 / 검색</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="420" y1="68" x2="480" y2="68" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Screen 1: Main Home -->
+    <g transform="translate(490, 30)" filter="url(#flow-shadow)">
+      <rect width="320" height="76" rx="8" fill="#FFFFFF" stroke="#7E8D7F" stroke-width="1.5"/>
+      <rect x="12" y="10" width="55" height="18" rx="3" fill="#FEF3C7"/>
+      <text x="39" y="23" font-size="10" font-weight="700" fill="#D97706" text-anchor="middle">SCR-01</text>
+      <text x="75" y="24" font-size="13" font-weight="700" fill="#1E293B">메인페이지 (스마트 살림 Hero)</text>
+      <text x="12" y="45" font-size="11" fill="#64748B">• 3배 빠른 건조 &amp; 1/3 수납 비주얼</text>
+      <text x="12" y="62" font-size="11" fill="#64748B">• 받자마자 쓰는 4차 정련 완제품 뱃지</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="810" y1="68" x2="880" y2="68" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Decision 1: Entry Path -->
+    <g transform="translate(890, 25)" filter="url(#flow-shadow)">
+      <polygon points="120,0 240,43 120,86 0,43" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+      <text x="120" y="38" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">진입 목적 판단</text>
+      <text x="120" y="54" font-size="10" fill="#B45309" text-anchor="middle">10장 전면교체 vs 1장 체험</text>
+    </g>
+
+    <!-- Arrow down to Stage 2 -->
+    <line x1="1010" y1="111" x2="1010" y2="170" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="1020" y="145" font-size="11" font-weight="700" fill="#D97706">10장 전면 교체 선택</text>
+  </g>
+
+  <!-- ==================== STAGE 2: 선택 & 상세 검증 (SELECT & VALIDATE) ==================== -->
+  <g transform="translate(60, 290)">
+    <rect width="1320" height="240" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="20" y="12" width="160" height="24" rx="4" fill="#E2E8F0"/>
+    <text x="100" y="28" font-size="11" font-weight="700" fill="#334155" text-anchor="middle">STEP 02. 선택 &amp; 상세 검증</text>
+
+    <!-- Screen 2: 10장 번들 상세 -->
+    <g transform="translate(40, 50)" filter="url(#flow-shadow)">
+      <rect width="330" height="90" rx="8" fill="#FFFFFF" stroke="#7E8D7F" stroke-width="2"/>
+      <rect x="12" y="10" width="55" height="18" rx="3" fill="#FEF3C7"/>
+      <text x="39" y="23" font-size="10" font-weight="700" fill="#D97706" text-anchor="middle">SCR-02</text>
+      <text x="75" y="24" font-size="13" font-weight="700" fill="#1E293B">10장 올체인지 데일리 팩 상세</text>
+      <text x="12" y="48" font-size="11" fill="#64748B">• 10장 구매 시 장당 9,900원 (26,000원↓)</text>
+      <text x="12" y="66" font-size="11" fill="#64748B">• 순면 걸이용 루프(고리) 유무 선택</text>
+      <text x="12" y="82" font-size="10" font-weight="600" fill="#C47A5A">✓ 살림 최적화 베스트셀러</text>
+    </g>
+
+    <!-- Connectors to Validation Modules -->
+    <path d="M 370 95 L 430 95" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Proof 1: 단가 계산기 -->
+    <g transform="translate(440, 45)" filter="url(#flow-shadow)">
+      <rect width="250" height="70" rx="8" fill="#FFF9E6" stroke="#C47A5A" stroke-width="1.5"/>
+      <rect x="10" y="8" width="65" height="18" rx="3" fill="#FEE2E2"/>
+      <text x="42" y="21" font-size="10" font-weight="700" fill="#DC2626" text-anchor="middle">MODAL-01</text>
+      <text x="80" y="22" font-size="12" font-weight="700" fill="#1E293B">실시간 단가 계산기</text>
+      <text x="10" y="44" font-size="10" fill="#64748B">• 수량 슬라이더 조작 시</text>
+      <text x="10" y="58" font-size="10" fill="#64748B">• 장당 9,900원 / 절감액 자동계산</text>
+    </g>
+
+    <!-- Proof 2: 건조/수납 실험실 -->
+    <g transform="translate(720, 45)" filter="url(#flow-shadow)">
+      <rect width="280" height="70" rx="8" fill="#FFFFFF" stroke="#7E8D7F" stroke-width="1.5"/>
+      <rect x="10" y="8" width="55" height="18" rx="3" fill="#FEF3C7"/>
+      <text x="37" y="21" font-size="10" font-weight="700" fill="#D97706" text-anchor="middle">SCR-03</text>
+      <text x="70" y="22" font-size="12" font-weight="700" fill="#1E293B">건조 &amp; 수납 실험실</text>
+      <text x="10" y="44" font-size="10" fill="#64748B">• 1시간 초고속 건조 vs 테리 4시간</text>
+      <text x="10" y="58" font-size="10" fill="#64748B">• 상부장 1/3 수납 비포/애프터 슬라이더</text>
+    </g>
+
+    <!-- Proof 3: 세탁기 가이드 -->
+    <g transform="translate(1030, 45)" filter="url(#flow-shadow)">
+      <rect width="260" height="70" rx="8" fill="#FFFFFF" stroke="#7E8D7F" stroke-width="1.5"/>
+      <rect x="10" y="8" width="55" height="18" rx="3" fill="#FEF3C7"/>
+      <text x="37" y="21" font-size="10" font-weight="700" fill="#D97706" text-anchor="middle">SCR-04</text>
+      <text x="70" y="22" font-size="12" font-weight="700" fill="#1E293B">세탁기 간편 관리 가이드</text>
+      <text x="10" y="44" font-size="10" fill="#64748B">• 삶기 불필요 세탁기 울/표준 O/X</text>
+      <text x="10" y="58" font-size="10" fill="#64748B">• 저온 건조 가이드 &amp; 지침 PDF</text>
+    </g>
+
+    <!-- Flow back to Selection Confirmation -->
+    <path d="M 565 115 L 565 170 L 205 170 L 205 140" stroke="#64748B" stroke-width="1.5" stroke-dasharray="4" fill="none"/>
+    <path d="M 860 115 L 860 185 L 205 185" stroke="#64748B" stroke-width="1.5" stroke-dasharray="4" fill="none"/>
+    <path d="M 1160 115 L 1160 200 L 205 200" stroke="#64748B" stroke-width="1.5" stroke-dasharray="4" fill="none"/>
+
+    <!-- Alternative Branch: 1장 체험팩 신청 -->
+    <g transform="translate(440, 140)" filter="url(#flow-shadow)">
+      <rect width="360" height="75" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+      <rect x="10" y="8" width="55" height="18" rx="3" fill="#FEF3C7"/>
+      <text x="37" y="21" font-size="10" font-weight="700" fill="#D97706" text-anchor="middle">SCR-06</text>
+      <text x="70" y="22" font-size="12" font-weight="700" fill="#166534">1장 안심 체험팩 신청 (3,000원)</text>
+      <text x="10" y="44" font-size="10" fill="#4B5563">• 3,000원에 먼저 써보기 ➔ 10장 세트 구매 시 100% 환급 쿠폰</text>
+      <text x="10" y="60" font-size="10" font-weight="700" fill="#15803D">✓ 구매 장벽 해소 후 10장 번들 재진입</text>
+    </g>
+  </g>
+
+  <!-- ==================== STAGE 3: 옵션 및 구매 결정 (DECIDE & BUY) ==================== -->
+  <g transform="translate(60, 550)">
+    <rect width="1320" height="200" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="20" y="12" width="160" height="24" rx="4" fill="#E2E8F0"/>
+    <text x="100" y="28" font-size="11" font-weight="700" fill="#334155" text-anchor="middle">STEP 03. 옵션 및 구매 방식</text>
+
+    <!-- Option Selection Box -->
+    <g transform="translate(40, 55)" filter="url(#flow-shadow)">
+      <rect width="280" height="90" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="15" y="26" font-size="13" font-weight="700" fill="#1E293B">옵션 확정</text>
+      <text x="15" y="48" font-size="11" fill="#64748B">• 색상: 내추럴 아이보리 / 세이지</text>
+      <text x="15" y="66" font-size="11" fill="#64748B">• 순면 루프(고리): 고리형 (+0원)</text>
+      <text x="15" y="84" font-size="11" fill="#64748B">• 수량: 10장 올체인지 데일리 팩</text>
+    </g>
+
+    <line x1="320" y1="100" x2="380" y2="100" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Decision 2: One-time vs Subscription -->
+    <g transform="translate(390, 55)" filter="url(#flow-shadow)">
+      <polygon points="110,0 220,45 110,90 0,45" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+      <text x="110" y="40" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">구매 형태 결정</text>
+      <text x="110" y="56" font-size="10" fill="#B45309" text-anchor="middle">단건 구매 vs 정기구독</text>
+    </g>
+
+    <!-- Branch A: One-time Direct -->
+    <line x1="610" y1="100" x2="680" y2="100" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="620" y="90" font-size="11" font-weight="700" fill="#64748B">일반 단건</text>
+
+    <!-- Branch B: Subscription -->
+    <path d="M 500 145 L 500 170 L 680 170" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <text x="510" y="165" font-size="11" font-weight="700" fill="#4338CA">정기구독 신청</text>
+
+    <!-- Screen 5: Subscription Center -->
+    <g transform="translate(690, 125)" filter="url(#flow-shadow)">
+      <rect width="280" height="65" rx="8" fill="#EEF2FF" stroke="#818CF8" stroke-width="1.5"/>
+      <rect x="10" y="8" width="55" height="18" rx="3" fill="#E0E7FF"/>
+      <text x="37" y="21" font-size="10" font-weight="700" fill="#4338CA" text-anchor="middle">SCR-05</text>
+      <text x="70" y="22" font-size="12" font-weight="700" fill="#1E293B">정기배송 구독 센터</text>
+      <text x="10" y="44" font-size="10" fill="#64748B">• 6/12개월 주기 &amp; 10% 추가할인</text>
+      <text x="10" y="56" font-size="10" font-weight="600" fill="#4338CA">➔ MODAL-03 알림톡 연동</text>
+    </g>
+
+    <!-- Screen 7: Cart & Checkout -->
+    <g transform="translate(690, 45)" filter="url(#flow-shadow)">
+      <rect width="280" height="70" rx="8" fill="#FFFFFF" stroke="#7E8D7F" stroke-width="2"/>
+      <rect x="10" y="8" width="55" height="18" rx="3" fill="#FEF3C7"/>
+      <text x="37" y="21" font-size="10" font-weight="700" fill="#D97706" text-anchor="middle">SCR-07</text>
+      <text x="70" y="22" font-size="12" font-weight="700" fill="#1E293B">장바구니 &amp; 간편결제</text>
+      <text x="10" y="44" font-size="10" fill="#64748B">• 총 99,000원 (장당 9,900원 확인)</text>
+      <text x="10" y="58" font-size="10" fill="#16A34A">• 1장 체험팩 3,000원 환급쿠폰 적용</text>
+    </g>
+
+    <!-- Arrow from Cart to Validation -->
+    <line x1="970" y1="80" x2="1040" y2="80" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 970 160 L 1005 160 L 1005 80 L 1040 80" stroke="#64748B" stroke-width="2" fill="none"/>
+
+    <!-- Payment Validation -->
+    <g transform="translate(1050, 40)" filter="url(#flow-shadow)">
+      <polygon points="100,0 200,40 100,80 0,40" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+      <text x="100" y="36" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">결제 승인 검증</text>
+      <text x="100" y="52" font-size="10" fill="#B45309" text-anchor="middle">N-Pay / 카카오페이</text>
+    </g>
+
+    <!-- Error Handler -->
+    <g transform="translate(1050, 135)" filter="url(#flow-shadow)">
+      <rect width="200" height="50" rx="6" fill="#FFF5F5" stroke="#FECACA" stroke-width="1.5"/>
+      <text x="100" y="22" font-size="11" font-weight="700" fill="#DC2626" text-anchor="middle">결제 실패 / 한도 초과</text>
+      <text x="100" y="38" font-size="10" fill="#991B1B" text-anchor="middle">토스트 안내 &amp; 결제수단 재선택</text>
+    </g>
+    <line x1="1150" y1="120" x2="1150" y2="135" stroke="#DC2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+    <path d="M 1050 160 L 970 160 L 970 95 L 970 80" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="3" fill="none"/>
+  </g>
+
+  <!-- ==================== STAGE 4: 완료 & 사후 케어 (CONFIRM & CARE) ==================== -->
+  <g transform="translate(60, 770)">
+    <rect width="1320" height="150" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="20" y="12" width="160" height="24" rx="4" fill="#E2E8F0"/>
+    <text x="100" y="28" font-size="11" font-weight="700" fill="#334155" text-anchor="middle">STEP 04. 완료 &amp; 사후 케어</text>
+
+    <!-- Screen 8: Order Confirmation -->
+    <g transform="translate(180, 45)" filter="url(#flow-shadow)">
+      <rect width="320" height="75" rx="8" fill="#FFFFFF" stroke="#16A34A" stroke-width="2"/>
+      <rect x="12" y="10" width="55" height="18" rx="3" fill="#DCFCE7"/>
+      <text x="39" y="23" font-size="10" font-weight="700" fill="#16A34A" text-anchor="middle">SCR-08</text>
+      <text x="75" y="24" font-size="13" font-weight="700" fill="#1E293B">주문 및 정기구독 완료</text>
+      <text x="12" y="46" font-size="11" fill="#64748B">• 주문번호 생성 &amp; 배송 D-Day 안내</text>
+      <text x="12" y="62" font-size="11" fill="#16A34A">✓ 세탁 가이드 PDF 다운로드 링크</text>
+    </g>
+
+    <line x1="500" y1="82" x2="560" y2="82" stroke="#16A34A" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+    <!-- Post-Care Notification -->
+    <g transform="translate(570, 45)" filter="url(#flow-shadow)">
+      <rect width="280" height="75" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+      <text x="15" y="25" font-size="12" font-weight="700" fill="#166534">카카오 알림톡 자동 발송</text>
+      <text x="15" y="46" font-size="11" fill="#4B5563">• 주문서 및 결제 영수증 전송</text>
+      <text x="15" y="62" font-size="11" fill="#4B5563">• 6개월 후 교체 알림톡 자동 예약</text>
+    </g>
+
+    <line x1="850" y1="82" x2="910" y2="82" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Screen 9: My Page -->
+    <g transform="translate(920, 45)" filter="url(#flow-shadow)">
+      <rect width="220" height="75" rx="8" fill="#FFFFFF" stroke="#7E8D7F" stroke-width="1.5"/>
+      <rect x="10" y="8" width="55" height="18" rx="3" fill="#FEF3C7"/>
+      <text x="37" y="21" font-size="10" font-weight="700" fill="#D97706" text-anchor="middle">SCR-09</text>
+      <text x="70" y="22" font-size="12" font-weight="700" fill="#1E293B">마이페이지 / 구독</text>
+      <text x="10" y="44" font-size="10" fill="#64748B">• 배송주기 변경 / 즉시발송</text>
+      <text x="10" y="58" font-size="10" fill="#64748B">• 1-Click 동일옵션 재주문</text>
+    </g>
+
+    <line x1="1140" y1="82" x2="1190" y2="82" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- End Node -->
+    <g transform="translate(1200, 58)" filter="url(#flow-shadow)">
+      <rect width="90" height="48" rx="24" fill="#232527"/>
+      <text x="45" y="29" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">🔴 종료</text>
+    </g>
+  </g>
+
+  <!-- Bottom Summary Info -->
+  <g transform="translate(60, 940)">
+    <rect width="1320" height="140" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#flow-shadow-sm)"/>
+    <text x="25" y="30" font-size="14" font-weight="700" fill="#232527">💡 김살림(이현정) 서비스 흐름 설계 핵심 특징 요약</text>
+    
+    <g transform="translate(25, 45)">
+      <rect width="410" height="75" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="24" font-size="12" font-weight="700" fill="#1E293B">1. 3대 구매 장애물 선제 제거</text>
+      <text x="15" y="44" font-size="11" fill="#64748B">• "삶아야 하나요?" ➔ 세탁기 O/X 표로 삶기 불필요 확인</text>
+      <text x="15" y="62" font-size="11" fill="#64748B">• "건조기 쓰면 망가지나요?" ➔ 저온 코스 가이드 제시</text>
+    </g>
+
+    <g transform="translate(455, 45)">
+      <rect width="410" height="75" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="24" font-size="12" font-weight="700" fill="#1E293B">2. 체감 가격 혜택 극대화</text>
+      <text x="15" y="44" font-size="11" fill="#64748B">• 10장 세트 선택 시 장당 9,900원(26,000원 할인) 자동 계산</text>
+      <text x="15" y="62" font-size="11" fill="#64748B">• 1장 3,000원 체험 후 본품 구매 시 100% 환급 쿠폰 제공</text>
+    </g>
+
+    <g transform="translate(885, 45)">
+      <rect width="410" height="75" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="24" font-size="12" font-weight="700" fill="#1E293B">3. 가사 노동 피로도 제로화</text>
+      <text x="15" y="44" font-size="11" fill="#64748B">• 6개월/12개월 주기 자동 발송 정기구독 시스템</text>
+      <text x="15" y="62" font-size="11" fill="#64748B">• 카카오 알림톡 교체 주기 리마인더 &amp; 1-Click 재주문</text>
+    </g>
+  </g>
+</svg>

@@ -1,6 +1,6 @@
 ---
 name: notion-syncer
-description: 정리된 캘린더 이벤트를 Notion 데이터소스에 생성/갱신(upsert)할 때 사용한다.
+description: 정리된 이벤트를 Notion 데이터소스에 생성/갱신(upsert)할 때 사용한다.
 tools: Bash, Read
 model: sonnet
 skills:
@@ -8,7 +8,7 @@ skills:
 ---
 
 # Role
-캘린더 이벤트를 Notion 프로젝트 데이터소스에 반영하는 담당자다.
+이벤트를 Notion 프로젝트 데이터소스에 반영하는 담당자다.
 
 # Responsibilities
 1. `.state/calendar-snapshot-latest.json`(없으면 샘플)을 읽는다.

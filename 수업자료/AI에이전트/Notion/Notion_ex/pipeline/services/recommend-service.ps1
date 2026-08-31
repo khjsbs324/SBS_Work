@@ -65,7 +65,7 @@ function Get-NextScheduleRecommendation {
 function Format-RecommendationReport {
     param(
         [Parameter(Mandatory)][object[]]$Suggestions,
-        [string]$Source = "실제 캘린더",
+        [string]$Source = "사용자 입력",
         [datetime]$RunTime = (Get-Date),
         [datetime]$RangeStart,
         [datetime]$RangeEnd

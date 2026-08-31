@@ -1,0 +1,49 @@
+flowchart TD
+  START(["진입: SCR-01 (메인) / SCR-12 (검색)"]) --> STEP1["SCR-01 메인 탐색"]
+
+  %% 탐색 및 선택 분기
+  STEP1 -->|마그네틱 타월 클릭| STEP2["SCR-02 마그네틱 타월 상세"]
+  STEP1 -->|클럽/볼 와입스 클릭| STEP3["SCR-03 클럽/볼 와입스 상세"]
+  STEP1 -->|홀인원 답례품 클릭| STEP5["SCR-05 홀인원 답례품 상세"]
+  STEP1 -->|1장 체험팩 클릭| STEP7["SCR-07 1장 안심 체험팩"]
+
+  %% 상세 확인 및 인터랙션
+  STEP2 -->|자석 원리 확인| MODAL1["MODAL-01 마그네틱 3D 뷰어"]
+  MODAL1 -->|옵션 추가| STEP2
+  STEP2 -->|1초 흡수/내구성 확인| STEP6["SCR-06 필드 케어 & 검증실"]
+  STEP6 -->|기어 구매 복귀| STEP2
+
+  %% 자수 커스텀 분기
+  STEP2 -->|자수 커스텀 선택| STEP4["SCR-04 골프 자수 아틀리에"]
+  STEP4 -->|텍스트/엠블럼 입력| VALID_JASU{"자수 유효성 검사"}
+  VALID_JASU -- 글자수 초과 --> ERROR_JASU["오류: 글자수 초과 경고"] --> STEP4
+  VALID_JASU -- 유효성 통과 --> APPLY_JASU["자수 시안 확정 & 장바구니 저장"] --> STEP8["SCR-08 장바구니"]
+
+  STEP2 -->|자수 없이 바로 구매| STEP8
+  STEP3 -->|장바구니 담기| STEP8
+  STEP7 -->|3,000원 체험 신청| STEP9["SCR-09 주문 및 결제"]
+
+  %% 홀인원 답례품 & 대량 발주 분기
+  STEP5 --> CALC_GROUP["단체 견적 자동 계산기"]
+  CALC_GROUP -->|PDF 견적서 다운로드| PDF_OUT["공식 직인 PDF 견적서 출력"]
+  CALC_GROUP -->|단체 발주 진행| STEP9
+
+  %% 주문 및 결제 분기
+  STEP8 -->|주문서 작성 클릭| STEP9
+  STEP9 --> CHECK_DELIV{"배송지 유형 선택"}
+  CHECK_DELIV -- 단일 배송 --> PAY_EXEC["결제 수단 선택 (N-Pay/카드)"]
+  CHECK_DELIV -- 다중 배송 (답례품) --> STEP11["SCR-11 엑셀 다중 배송지 등록"]
+  STEP11 --> PARSE_EXCEL{"엑셀 주소 유효성 검사"}
+  PARSE_EXCEL -- 오류 검출 --> ERROR_EXCEL["오류 행 인라인 수정"] --> STEP11
+  PARSE_EXCEL -- 검증 완료 --> PAY_EXEC
+
+  %% 결제 처리
+  PAY_EXEC --> PAY_PROCESS{"결제 승인 처리"}
+  PAY_PROCESS -- 실패/취소 --> RETRY_PAY["오류: 결제 재시도 안내"] --> STEP9
+  PAY_PROCESS -- 성공 --> STEP10["SCR-10 주문 완료"]
+
+  %% 주문 완료 후속 처리
+  STEP10 --> POST1["최종 자수 확인증 발급"]
+  STEP10 --> POST2["D-Day 납품 확약서 발급"]
+  STEP10 --> POST3["카카오 알림톡 발송"]
+  STEP10 --> END_NODE(["종료: 라운딩 D-Day 안심 배송"])

@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1020" width="100%" height="100%">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1F3327" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="root-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F3327"/>
+      <stop offset="100%" stop-color="#2D4D3A"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#7E8D7F"/>
+    </marker>
+  </defs>
+
+  <style>
+    .bg { fill: #FBF9F5; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 28px; font-weight: 800; fill: #1F3327; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; fill: #5A4232; }
+    
+    .box-root { fill: url(#root-grad); stroke: #1F3327; stroke-width: 2; rx: 8; filter: url(#card-shadow); }
+    .box-main { fill: #FFFFFF; stroke: #1F3327; stroke-width: 1.5; rx: 6; filter: url(#card-shadow); }
+    .box-proof { fill: #F4FAF6; stroke: #2E6945; stroke-width: 1.5; rx: 6; filter: url(#card-shadow); }
+    .box-shop { fill: #FDF9F6; stroke: #C47A5A; stroke-width: 1.5; rx: 6; filter: url(#card-shadow); }
+    .box-gift { fill: #FFFBF5; stroke: #D9822B; stroke-width: 1.5; rx: 6; filter: url(#card-shadow); }
+    .box-review { fill: #F5F9FC; stroke: #4A6B82; stroke-width: 1.5; rx: 6; filter: url(#card-shadow); }
+    .box-my { fill: #FAFAFA; stroke: #5A4232; stroke-width: 1.5; rx: 6; filter: url(#card-shadow); }
+    .box-modal { fill: #FFFDF9; stroke: #C47A5A; stroke-width: 1.5; stroke-dasharray: 4 4; rx: 6; }
+    
+    .root-title { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 18px; font-weight: bold; fill: #FFFFFF; text-anchor: middle; }
+    .root-sub { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 12px; fill: #E8B4A2; text-anchor: middle; }
+    
+    .node-code { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 11px; font-weight: 800; text-anchor: middle; }
+    .code-main { fill: #1F3327; }
+    .code-proof { fill: #2E6945; }
+    .code-shop { fill: #C47A5A; }
+    .code-gift { fill: #D9822B; }
+    .code-review { fill: #4A6B82; }
+    .code-my { fill: #5A4232; }
+    .code-modal { fill: #A85A3C; }
+    
+    .node-title { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; font-weight: bold; fill: #232527; text-anchor: middle; }
+    .node-desc { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 11px; fill: #6B7280; text-anchor: middle; }
+    
+    .group-label { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; font-weight: bold; fill: #1F3327; }
+    .group-border { fill: none; stroke: #D8D2C4; stroke-dasharray: 6 6; stroke-width: 1.5; rx: 12; }
+    .line { stroke: #94A3B8; stroke-width: 1.5; fill: none; }
+  </style>
+
+  <!-- Background -->
+  <rect class="bg" width="1400" height="1020" />
+
+  <!-- Title Section -->
+  <text x="700" y="45" class="title" text-anchor="middle">플로뜰리에 (Flottelier) 사이트맵 (Sitemap Architecture)</text>
+  <text x="700" y="72" class="subtitle" text-anchor="middle">주식회사 이든그라운드 · 초민감성(김예민) 안심 검증 &amp; 슬로우 리추얼 소창 커머스 정보 구조</text>
+
+  <!-- ROOT NODE -->
+  <g transform="translate(530, 95)">
+    <rect class="box-root" width="340" height="64" />
+    <text x="170" y="28" class="root-title">플로뜰리에 (Flottelier)</text>
+    <text x="170" y="48" class="root-sub">The Art of Slow Ritual — 저자극 안심 커머스</text>
+  </g>
+
+  <!-- Connectors from ROOT -->
+  <path class="line" d="M 700 160 L 700 190" />
+  <path class="line" d="M 700 190 L 135 190 L 135 220" />
+  <path class="line" d="M 700 190 L 360 190 L 360 220" />
+  <path class="line" d="M 700 190 L 585 190 L 585 220" />
+  <path class="line" d="M 700 190 L 815 190 L 815 220" />
+  <path class="line" d="M 700 190 L 1040 190 L 1040 220" />
+  <path class="line" d="M 700 190 L 1265 190 L 1265 220" />
+
+  <!-- ==================== COLUMN 1: MAIN & LOOKBOOK ==================== -->
+  <rect x="30" y="210" width="210" height="420" class="group-border" />
+  <text x="45" y="235" class="group-label">01. 메인 &amp; 룩북</text>
+
+  <g transform="translate(45, 250)">
+    <rect class="box-main" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-main">P-01 | DEPTH 1</text>
+    <text x="90" y="40" class="node-title">메인페이지</text>
+    <text x="90" y="56" class="node-desc">더마테스트 뱃지 · 4대 리추얼</text>
+  </g>
+
+  <g transform="translate(45, 335)">
+    <rect class="box-main" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-main">P-09 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">4대 리추얼 룩북</text>
+    <text x="90" y="56" class="node-desc">세안/홈스파/육아/명상</text>
+  </g>
+
+  <!-- ==================== COLUMN 2: PROOF & LAB ==================== -->
+  <rect x="255" y="210" width="210" height="420" class="group-border" />
+  <text x="270" y="235" class="group-label">02. 공인 검증 &amp; 랩</text>
+
+  <g transform="translate(270, 250)">
+    <rect class="box-proof" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-proof">P-02 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">시험성적서 랩</text>
+    <text x="90" y="56" class="node-desc">더마테스트 · KOTITI 무형광</text>
+  </g>
+
+  <g transform="translate(270, 335)">
+    <rect class="box-proof" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-proof">P-03 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">봉제선/세탁 비교</text>
+    <text x="90" y="56" class="node-desc">500% 줌 · 세탁 50회 차트</text>
+  </g>
+
+  <!-- ==================== COLUMN 3: SHOP & EXPERIENCE ==================== -->
+  <rect x="480" y="210" width="210" height="420" class="group-border" />
+  <text x="495" y="235" class="group-label">03. 커머스 &amp; 체험팩</text>
+
+  <g transform="translate(495, 250)">
+    <rect class="box-shop" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-shop">P-04 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">제품 카탈로그</text>
+    <text x="90" y="56" class="node-desc">4차정련 세안/바스/와입스</text>
+  </g>
+
+  <g transform="translate(495, 335)">
+    <rect class="box-shop" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-shop">P-05 | DEPTH 3</text>
+    <text x="90" y="40" class="node-title">상품 상세 페이지</text>
+    <text x="90" y="56" class="node-desc">봉제선 줌 · 무향 밀봉 포장</text>
+  </g>
+
+  <g transform="translate(495, 420)">
+    <rect class="box-shop" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-shop">P-06 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">1장 안심 체험팩</text>
+    <text x="90" y="56" class="node-desc">100% 페이백 쿠폰 발급</text>
+  </g>
+
+  <g transform="translate(495, 505)">
+    <rect class="box-shop" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-shop">P-07 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">30초 안심 큐레이터</text>
+    <text x="90" y="56" class="node-desc">피부타입 맞춤 추천 퀴즈</text>
+  </g>
+
+  <!-- ==================== COLUMN 4: GIFT & CARDS ==================== -->
+  <rect x="710" y="210" width="210" height="420" class="group-border" />
+  <text x="725" y="235" class="group-label">04. 기프트 &amp; 꽃말</text>
+
+  <g transform="translate(725, 250)">
+    <rect class="box-gift" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-gift">P-08 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">6가지 꽃말 서재</text>
+    <text x="90" y="56" class="node-desc">생분해 지함 3D · 6종 카드</text>
+  </g>
+
+  <!-- ==================== COLUMN 5: REVIEWS & TRUST ==================== -->
+  <rect x="935" y="210" width="210" height="420" class="group-border" />
+  <text x="950" y="235" class="group-label">05. 리뷰 &amp; 안심 보증</text>
+
+  <g transform="translate(950, 250)">
+    <rect class="box-review" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-review">P-10 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">민감성 Real 리뷰</text>
+    <text x="90" y="56" class="node-desc">피부타입 필터 · 세탁후기</text>
+  </g>
+
+  <!-- ==================== COLUMN 6: CHECKOUT & MYPAGE ==================== -->
+  <rect x="1160" y="210" width="210" height="420" class="group-border" />
+  <text x="1175" y="235" class="group-label">06. 결제 &amp; 평생 단골</text>
+
+  <g transform="translate(1175, 250)">
+    <rect class="box-my" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-my">P-11 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">장바구니 &amp; 1초 결제</text>
+    <text x="90" y="56" class="node-desc">무향 밀봉 체크 · N Pay</text>
+  </g>
+
+  <g transform="translate(1175, 335)">
+    <rect class="box-my" width="180" height="68" />
+    <text x="90" y="22" class="node-code code-my">P-12 | DEPTH 2</text>
+    <text x="90" y="40" class="node-title">마이페이지 &amp; 재구매</text>
+    <text x="90" y="56" class="node-desc">1-Click 재주문 · 에코 루프</text>
+  </g>
+
+  <!-- ==================== MODALS & EXCEPTIONS LAYER ==================== -->
+  <rect x="30" y="660" width="1340" height="310" class="group-border" />
+  <text x="50" y="690" class="group-label">07. 레이어드 모달 시스템 &amp; 예외 처리 화면</text>
+
+  <g transform="translate(70, 720)">
+    <rect class="box-modal" width="270" height="85" />
+    <text x="135" y="25" class="node-code code-modal">M-01 | POPUP MODAL</text>
+    <text x="135" y="47" class="node-title">성적서 200% HD 확대 모달</text>
+    <text x="135" y="68" class="node-desc">더마테스트 &amp; KOTITI 원본 돋보기 뷰어</text>
+  </g>
+
+  <g transform="translate(380, 720)">
+    <rect class="box-modal" width="270" height="85" />
+    <text x="135" y="25" class="node-code code-modal">M-02 | SELECT MODAL</text>
+    <text x="135" y="47" class="node-title">6종 꽃말 위로 카드 모달</text>
+    <text x="135" y="68" class="node-desc">꽃말 선택 &amp; 자필 폰트 감성 메시지 작성</text>
+  </g>
+
+  <g transform="translate(690, 720)">
+    <rect class="box-modal" width="270" height="85" />
+    <text x="135" y="25" class="node-code code-modal">M-03 | POLICY MODAL</text>
+    <text x="135" y="47" class="node-title">100% 안심 환불 신청 모달</text>
+    <text x="135" y="68" class="node-desc">피부 미맞춤 시 14일 이내 무료 환불/교환</text>
+  </g>
+
+  <g transform="translate(1000, 720)">
+    <rect class="box-my" width="160" height="85" />
+    <text x="80" y="25" class="node-code code-my">EX-01 | EXCEPTION</text>
+    <text x="80" y="47" class="node-title">검색/품절 예외</text>
+    <text x="80" y="68" class="node-desc">대안 상품 &amp; 재입고 알림</text>
+  </g>
+
+  <g transform="translate(1180, 720)">
+    <rect class="box-my" width="160" height="85" />
+    <text x="80" y="25" class="node-code code-my">EX-02 | EXCEPTION</text>
+    <text x="80" y="47" class="node-title">404 Not Found</text>
+    <text x="80" y="68" class="node-desc">메인 바로가기 안내</text>
+  </g>
+</svg>

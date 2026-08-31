@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 (Flottelier) GOLF - 김골프(배진혁) 페르소나 와이어프레임 뷰어</title>
+  <style>
+    :root {
+      --bg-app: #F8FAF9;
+      --bg-sidebar: #1E2923;
+      --bg-card: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+      --border-color: #E2E8F0;
+      --accent-brand: #2D5A46;
+      --accent-brand-light: #EBF3EE;
+      --accent-gold: #C59B27;
+      --accent-gold-light: #FFFBEB;
+      --accent-navy: #1E3A8A;
+      --accent-green: #16A34A;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-app);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    #sidebar {
+      width: 320px;
+      background-color: var(--bg-sidebar);
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      z-index: 100;
+      border-right: 1px solid #2A3B32;
+    }
+
+    .sidebar-header {
+      padding: 20px;
+      border-bottom: 1px solid #2A3B32;
+    }
+
+    .sidebar-header h1 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-header p {
+      font-size: 12px;
+      color: #94A3B8;
+      margin-top: 4px;
+    }
+
+    .sidebar-menu {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+    }
+
+    .menu-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #64748B;
+      padding: 12px 10px 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-bottom: 3px;
+    }
+
+    .nav-item:hover {
+      background-color: rgba(255,255,255,0.08);
+      color: #FFFFFF;
+    }
+
+    .nav-item.active {
+      background-color: var(--accent-brand);
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .nav-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background-color: rgba(255,255,255,0.15);
+    }
+
+    /* Main Preview Container */
+    #main-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Top Toolbar */
+    #toolbar {
+      height: 60px;
+      background-color: #FFFFFF;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      flex-shrink: 0;
+    }
+
+    .screen-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .screen-badge {
+      background-color: var(--accent-brand-light);
+      color: var(--accent-brand);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .screen-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .device-controls {
+      display: flex;
+      background-color: #F1F5F9;
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .device-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .device-btn.active {
+      background-color: #FFFFFF;
+      color: var(--accent-brand);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Viewport Area */
+    #viewport-container {
+      flex: 1;
+      overflow: auto;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      background-color: #F1F5F9;
+    }
+
+    #viewport {
+      width: 100%;
+      max-width: 1200px;
+      background-color: #FFFFFF;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      min-height: 800px;
+      transition: max-width 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #viewport.tablet { max-width: 768px; }
+    #viewport.mobile { max-width: 390px; }
+
+    /* Wireframe Components */
+    .wf-topbar {
+      background-color: #1E293B;
+      color: #F8FAFC;
+      padding: 8px 16px;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .wf-gnb {
+      border-bottom: 1px solid var(--border-color);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #FFFFFF;
+    }
+
+    .wf-logo {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--accent-brand);
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .wf-nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .wf-nav-link {
+      cursor: pointer;
+      color: var(--text-main);
+      transition: color 0.2s;
+    }
+    .wf-nav-link:hover { color: var(--accent-brand); }
+
+    .wf-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .wf-btn-primary { background-color: var(--accent-brand); color: #FFFFFF; }
+    .wf-btn-primary:hover { background-color: #234636; }
+    .wf-btn-gold { background-color: var(--accent-gold); color: #FFFFFF; }
+    .wf-btn-gold:hover { background-color: #A68019; }
+    .wf-btn-outline { background-color: #FFFFFF; border: 1px solid var(--border-color); color: var(--text-main); }
+    .wf-btn-outline:hover { background-color: #F8FAFC; }
+
+    .screen-content { display: none; padding: 24px; flex: 1; }
+    .screen-content.active { display: block; }
+
+    /* Wireframe Content Grids & Modules */
+    .hero-box {
+      background: linear-gradient(135deg, #1E3A2F 0%, #2D5A46 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+
+    .card-box {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      background-color: #FFFFFF;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .placeholder-img {
+      background-color: #F1F5F9;
+      border: 2px dashed #CBD5E1;
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: var(--text-muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* Custom Atelier Canvas Simulation */
+    .canvas-preview {
+      background-color: #2D5A46;
+      border-radius: var(--radius-md);
+      height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #C59B27;
+      border: 4px double rgba(197, 155, 39, 0.6);
+      position: relative;
+    }
+
+    .canvas-text {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .canvas-sub {
+      font-size: 14px;
+      margin-top: 6px;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      width: 90%;
+      max-width: 560px;
+      padding: 30px;
+      box-shadow: var(--shadow-lg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h1>⛳ 플로뜰리에 GOLF</h1>
+      <p>김골프(배진혁) 페르소나 화면 설계 뷰어</p>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="menu-group-title">1.0 메인 및 기어 샵</div>
+      <div class="nav-item active" onclick="switchScreen('SCR-01')">
+        <span class="nav-badge">01</span> 메인페이지
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-02')">
+        <span class="nav-badge">02</span> 마그네틱 골프 타월 상세
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-03')">
+        <span class="nav-badge">03</span> 클럽 & 볼 와입스 상세
+      </div>
+
+      <div class="menu-group-title">2.0 자수 및 답례품</div>
+      <div class="nav-item" onclick="switchScreen('SCR-04')">
+        <span class="nav-badge">04</span> 골프 자수 아틀리에
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-05')">
+        <span class="nav-badge">05</span> 홀인원/이글 답례품 (B2B)
+      </div>
+
+      <div class="menu-group-title">3.0 검증 및 체험팩</div>
+      <div class="nav-item" onclick="switchScreen('SCR-06')">
+        <span class="nav-badge">06</span> 필드 케어 & 검증실
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-07')">
+        <span class="nav-badge">07</span> 1장 안심 체험팩
+      </div>
+
+      <div class="menu-group-title">4.0 주문 및 결제</div>
+      <div class="nav-item" onclick="switchScreen('SCR-08')">
+        <span class="nav-badge">08</span> 장바구니
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-09')">
+        <span class="nav-badge">09</span> 주문 및 결제
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-10')">
+        <span class="nav-badge">10</span> 주문 완료 (확인증)
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-11')">
+        <span class="nav-badge">11</span> 엑셀 다중 배송지 등록
+      </div>
+
+      <div class="menu-group-title">5.0 공통 및 모달</div>
+      <div class="nav-item" onclick="switchScreen('SCR-12')">
+        <span class="nav-badge">12</span> 통합 검색 결과
+      </div>
+      <div class="nav-item" onclick="openModal('MODAL-01')">
+        <span class="nav-badge" style="background:#C59B27;">M1</span> 마그네틱 3D 모달
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN WORKSPACE ==================== -->
+  <main id="main-container">
+    <!-- Toolbar -->
+    <header id="toolbar">
+      <div class="screen-info">
+        <span class="screen-badge" id="current-badge">SCR-01</span>
+        <span class="screen-title" id="current-title">메인페이지 (Home)</span>
+      </div>
+
+      <div class="device-controls">
+        <button class="device-btn active" onclick="setDevice('desktop')">🖥️ Desktop</button>
+        <button class="device-btn" onclick="setDevice('tablet')">📱 Tablet</button>
+        <button class="device-btn" onclick="setDevice('mobile')">📲 Mobile</button>
+      </div>
+    </header>
+
+    <!-- Viewport -->
+    <div id="viewport-container">
+      <div id="viewport">
+        <!-- Common Topbar -->
+        <div class="wf-topbar">
+          <span>⛳ [런칭특가] 18홀 땀흡수 마그네틱 골프 타월 10% OFF · 홀인원 답례품 무료 각인</span>
+          <span>1588-0000 | 동호회 대량 상담</span>
+        </div>
+
+        <!-- Common GNB -->
+        <div class="wf-gnb">
+          <div class="wf-logo" onclick="switchScreen('SCR-01')">
+            🌿 FLOTTELLIER <span style="font-size:12px; background:var(--accent-brand); color:#FFF; padding:2px 6px; border-radius:4px;">GOLF</span>
+          </div>
+          <div class="wf-nav-links">
+            <span class="wf-nav-link" onclick="switchScreen('SCR-02')">GOLF GEAR</span>
+            <span class="wf-nav-link" onclick="switchScreen('SCR-04')">자수 아틀리에</span>
+            <span class="wf-nav-link" onclick="switchScreen('SCR-05')">홀인원 답례품</span>
+            <span class="wf-nav-link" onclick="switchScreen('SCR-06')">필드 검증실</span>
+            <span class="wf-nav-link" onclick="switchScreen('SCR-07')">체험팩</span>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button class="wf-btn wf-btn-outline" style="padding:6px 12px;" onclick="switchScreen('SCR-12')">🔍 검색</button>
+            <button class="wf-btn wf-btn-primary" style="padding:6px 12px;" onclick="switchScreen('SCR-08')">🛒 장바구니 <span id="cart-count">(0)</span></button>
+          </div>
+        </div>
+
+        <!-- ==================== SCREEN 01: MAIN ==================== -->
+        <section id="SCR-01" class="screen-content active">
+          <div class="hero-box">
+            <div>
+              <span style="background:var(--accent-gold); font-size:11px; font-weight:700; padding:4px 8px; border-radius:4px; text-transform:uppercase;">New Field Gear</span>
+              <h2 style="font-size:26px; font-weight:800; margin:10px 0;">18홀 라운딩의 품격을 높이는 필드 기어<br>1초 땀흡수 & 마그네틱 소창 골프 타월</h2>
+              <p style="font-size:13px; color:#E2E8F0; margin-bottom:20px;">합성 극세사의 끈적임 Zero! 캐디백에 찰칵 결착되는 100% 천연 순면 골프 패브릭</p>
+              <div style="display:flex; gap:10px;">
+                <button class="wf-btn wf-btn-gold" onclick="switchScreen('SCR-02')">⛳ 마그네틱 타월 바로보기</button>
+                <button class="wf-btn wf-btn-outline" style="color:#FFF; border-color:#FFF; background:transparent;" onclick="switchScreen('SCR-04')">✏️ 나만의 자수 만들기</button>
+              </div>
+            </div>
+            <div class="placeholder-img" style="width:240px; height:180px; background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3); color:#FFF;">
+              📷 [캐디백 거치 컷]<br>포레스트 그린 + 마그네틱 클립
+            </div>
+          </div>
+
+          <h3 style="font-size:18px; font-weight:700; margin-bottom:16px;">⛳ 베스트 골프 기어 컬렉션</h3>
+          <div class="grid-3">
+            <div class="card-box" style="cursor:pointer;" onclick="switchScreen('SCR-02')">
+              <div class="placeholder-img" style="height:140px; margin-bottom:12px;">📷 마그네틱 롱 슬림 타월 (25x100cm)</div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:700;">마그네틱 롱타월</span>
+                <span style="color:var(--accent-brand); font-weight:700;">38,000원</span>
+              </div>
+              <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">18홀 내내 뽀송한 땀 흡수 + 자석 클립</p>
+            </div>
+
+            <div class="card-box" style="cursor:pointer;" onclick="switchScreen('SCR-03')">
+              <div class="placeholder-img" style="height:140px; margin-bottom:12px;">📷 클럽 & 볼 와입스 3장 세트</div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:700;">클럽/볼 순면 와입스</span>
+                <span style="color:var(--accent-brand); font-weight:700;">24,900원</span>
+              </div>
+              <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">스크래치 제로 클럽 페이스 케어</p>
+            </div>
+
+            <div class="card-box" style="cursor:pointer; border-color:var(--accent-gold);" onclick="switchScreen('SCR-05')">
+              <div class="placeholder-img" style="height:140px; margin-bottom:12px; background:var(--accent-gold-light);">🎁 홀인원/이글 답례 세트 (10세트~)</div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:700; color:var(--accent-gold);">홀인원 기념 답례품</span>
+                <span style="color:var(--accent-gold); font-weight:700;">최대 30% OFF</span>
+              </div>
+              <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">고급 한지 지함 포장 + 동반자 감사 카드</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 02: PRODUCT DETAIL ==================== -->
+        <section id="SCR-02" class="screen-content">
+          <div class="grid-2">
+            <div>
+              <div class="placeholder-img" style="height:320px; margin-bottom:12px;">
+                📷 [캐디백 장착 고화질 연출 컷]<br>25x100cm 롱 슬림 규격
+              </div>
+              <button class="wf-btn wf-btn-outline" style="width:100%;" onclick="openModal('MODAL-01')">
+                🧲 마그네틱 자석 클립 3D 결착 원리 확인하기 (MODAL-01)
+              </button>
+            </div>
+
+            <div>
+              <span style="background:var(--accent-brand-light); color:var(--accent-brand); font-size:11px; font-weight:700; padding:3px 6px; border-radius:4px;">Bestseller 01</span>
+              <h2 style="font-size:22px; font-weight:800; margin:8px 0;">플로뜰리에 마그네틱 롱 슬림 골프 타월</h2>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:16px;">캐디백과 카트에 원터치 탈부착! 18홀 라운딩 땀을 즉각 흡수하는 천연 소창 기어</p>
+              
+              <div style="font-size:24px; font-weight:800; color:var(--accent-brand); margin-bottom:16px;">
+                38,000원 <span style="font-size:13px; color:var(--text-muted); text-decoration:line-through;">45,000원</span>
+              </div>
+
+              <div class="card-box" style="margin-bottom:16px;">
+                <label style="font-size:12px; font-weight:700; display:block; margin-bottom:8px;">🎨 컬러 선택</label>
+                <div style="display:flex; gap:8px;">
+                  <button class="wf-btn wf-btn-primary" style="padding:6px 12px;">포레스트 딥그린</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px 12px;">클래식 네이비</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px 12px;">샌드 아이보리</button>
+                </div>
+              </div>
+
+              <div class="card-box" style="margin-bottom:20px; background:#F8FAFC;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-weight:700; font-size:13px;">✏️ 나만의 골퍼 자수 추가</span>
+                  <span style="color:var(--accent-gold); font-weight:700; font-size:12px;">무료 프로모션</span>
+                </div>
+                <p style="font-size:12px; color:var(--text-muted); margin:6px 0 10px;">영문 이니셜, 핸디캡, 골프 엠블럼을 각인해 드립니다.</p>
+                <button class="wf-btn wf-btn-gold" style="width:100%;" onclick="switchScreen('SCR-04')">🎨 자수 디자인 커스텀하기 (SCR-04)</button>
+              </div>
+
+              <div style="display:flex; gap:10px;">
+                <button class="wf-btn wf-btn-outline" style="flex:1;" onclick="addToCart('마그네틱 롱타월 (포레스트그린)', 38000)">🛒 장바구니 담기</button>
+                <button class="wf-btn wf-btn-primary" style="flex:1;" onclick="switchScreen('SCR-09')">⚡ N-Pay 1초 결제</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 03: CLUB & BALL WIPES ==================== -->
+        <section id="SCR-03" class="screen-content">
+          <div class="grid-2">
+            <div class="placeholder-img" style="height:320px;">
+              📷 [클럽 페이스 케어 컷]<br>20x20cm 순면 포켓 와입스 3장 세트
+            </div>
+            <div>
+              <span style="background:var(--accent-brand-light); color:var(--accent-brand); font-size:11px; font-weight:700; padding:3px 6px; border-radius:4px;">Gear 02</span>
+              <h2 style="font-size:22px; font-weight:800; margin:8px 0;">클럽 & 볼 케어 순면 포켓 와입스 (3장 세트)</h2>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:16px;">바지 뒷주머니에 쏙! 소중한 드라이버/퍼터 페이스에 스크래치 없이 흙먼지 제거</p>
+              <div style="font-size:24px; font-weight:800; color:var(--accent-brand); margin-bottom:20px;">24,900원</div>
+              <button class="wf-btn wf-btn-primary" style="width:100%; margin-bottom:10px;" onclick="addToCart('클럽/볼 와입스 3장 세트', 24900)">🛒 장바구니 담기</button>
+              <button class="wf-btn wf-btn-outline" style="width:100%;" onclick="switchScreen('SCR-02')">⛳ 롱타월과 함께 기어 풀세트 구성하기</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 04: CUSTOM ATELIER ==================== -->
+        <section id="SCR-04" class="screen-content">
+          <div class="grid-2">
+            <!-- Canvas Preview -->
+            <div>
+              <div class="canvas-preview" id="embroidery-canvas">
+                <div style="font-size:32px; margin-bottom:8px;" id="canvas-icon">🦅</div>
+                <div class="canvas-text" id="canvas-text-render">J.H. BAE</div>
+                <div class="canvas-sub" id="canvas-sub-render">HDCP 7 · No. 18</div>
+              </div>
+              <p style="font-size:12px; color:var(--text-muted); text-align:center; margin-top:8px;">* 실제 최고급 오가닉 골드 자수사로 정밀 직조 각인됩니다.</p>
+            </div>
+
+            <!-- Controller -->
+            <div class="card-box">
+              <h3 style="font-size:16px; font-weight:800; margin-bottom:16px;">✏️ 골프 자수 실시간 시뮬레이터</h3>
+
+              <div style="margin-bottom:14px;">
+                <label style="font-size:12px; font-weight:700; display:block; margin-bottom:6px;">1. 골퍼 영문 이니셜 / 한글 네임</label>
+                <input type="text" id="input-name" value="J.H. BAE" oninput="updateCanvas()" style="width:100%; padding:8px 12px; border:1px solid var(--border-color); border-radius:4px; font-size:13px;">
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <label style="font-size:12px; font-weight:700; display:block; margin-bottom:6px;">2. 핸디캡 & 라운딩 백넘버</label>
+                <input type="text" id="input-sub" value="HDCP 7 · No. 18" oninput="updateCanvas()" style="width:100%; padding:8px 12px; border:1px solid var(--border-color); border-radius:4px; font-size:13px;">
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <label style="font-size:12px; font-weight:700; display:block; margin-bottom:6px;">3. 골프 엠블럼 심볼 선택</label>
+                <div style="display:grid; grid-template-columns:repeat(6, 1fr); gap:6px;">
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('🦅')">🦅</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('⛳')">⛳</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('🏌️')">🏌️</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('🏆')">🏆</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('👑')">👑</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('⭐')">⭐</button>
+                </div>
+              </div>
+
+              <button class="wf-btn wf-btn-gold" style="width:100%; padding:12px;" onclick="applyEmbroideryAndCart()">
+                ✓ 이 자수 시안으로 적용하고 장바구니 담기 (SCR-08)
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 05: HOLE IN ONE GIFT ==================== -->
+        <section id="SCR-05" class="screen-content">
+          <div class="hero-box" style="background:linear-gradient(135deg, #78350F 0%, #B45309 100%);">
+            <div>
+              <span style="background:#FFF; color:#78350F; font-size:11px; font-weight:700; padding:3px 6px; border-radius:4px;">B2B & VIP Gift</span>
+              <h2 style="font-size:24px; font-weight:800; margin:8px 0;">홀인원 · 이글 기념 단체 답례품 패키지</h2>
+              <p style="font-size:13px; color:#FEF3C7;">동반자들에게 평생 잊지 못할 감동을 선물하세요 (한지 지함 + 보자기 포장 + 단체 자수 무료)</p>
+            </div>
+            <button class="wf-btn wf-btn-outline" style="color:#FFF; border-color:#FFF; background:transparent;" onclick="switchScreen('SCR-11')">
+              📑 엑셀 다중 배송지 등록 (SCR-11)
+            </button>
+          </div>
+
+          <div class="grid-2">
+            <div class="card-box">
+              <h3 style="font-size:16px; font-weight:800; margin-bottom:12px;">📊 실시간 단체 견적 계산기</h3>
+              <div style="margin-bottom:12px;">
+                <label style="font-size:12px; font-weight:700; display:block; margin-bottom:6px;">발주 수량 선택</label>
+                <select id="bulk-qty" onchange="calcBulkPrice()" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px;">
+                  <option value="10">10세트 (10% 할인 - 세트당 34,200원)</option>
+                  <option value="20" selected>20세트 (15% 할인 - 세트당 32,300원)</option>
+                  <option value="30">30세트 (20% 할인 - 세트당 30,400원)</option>
+                  <option value="50">50세트 (30% 할인 - 세트당 26,600원)</option>
+                </select>
+              </div>
+
+              <div style="background:#FFFBEB; padding:16px; border-radius:8px; margin-bottom:16px;">
+                <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;">
+                  <span>기본 정상가:</span>
+                  <span id="bulk-origin" style="text-decoration:line-through;">760,000원</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:13px; color:#B45309; font-weight:700; margin-bottom:6px;">
+                  <span>단체 할인 금액:</span>
+                  <span id="bulk-discount">-114,000원</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:16px; font-weight:800; border-top:1px solid #FDE68A; padding-top:8px;">
+                  <span>최종 견적 금액:</span>
+                  <span id="bulk-total" style="color:#B45309;">646,000원</span>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:8px;">
+                <button class="wf-btn wf-btn-outline" style="flex:1;" onclick="alert('공식 직인 날인 PDF 견적서가 다운로드되었습니다.')">📄 PDF 견적서 다운로드</button>
+                <button class="wf-btn wf-btn-gold" style="flex:1;" onclick="switchScreen('SCR-09')">⚡ 단체 발주하기 (SCR-09)</button>
+              </div>
+            </div>
+
+            <div class="card-box">
+              <h3 style="font-size:16px; font-weight:800; margin-bottom:12px;">💌 동반자 감사 메시지 카드 대필</h3>
+              <div style="margin-bottom:10px;">
+                <input type="text" placeholder="홀인원 일자 / 골프장명 (예: 2026.08.15 안양CC 7번홀)" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px; margin-bottom:8px;">
+                <textarea rows="4" placeholder="동반자분들께 전할 감사 메시지를 적어주세요. 고급 캘리그래피 카드로 인쇄되어 동봉됩니다." style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px;"></textarea>
+              </div>
+              <p style="font-size:11px; color:var(--text-muted);">* 가격표 미동봉 보증 & 100% 무비닐 친환경 한지 포장</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 06: PROOFS LAB ==================== -->
+        <section id="SCR-06" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:16px;">🔬 필드 케어 & 공인 검증실</h2>
+          <div class="grid-2">
+            <div class="card-box">
+              <h3 style="font-size:14px; font-weight:700; margin-bottom:8px;">1. 1초 땀흡수 타임랩스 실험</h3>
+              <div class="placeholder-img" style="height:160px; margin-bottom:10px;">
+                🎬 [타임랩스 비교 비디오]<br>일반 극세사 15초 vs 플로뜰리에 소창 1초 완벽 흡수
+              </div>
+              <p style="font-size:12px; color:var(--text-muted);">미세 공기층 구조로 땀에 젖어도 끈적이지 않고 즉시 쾌적함을 되찾아줍니다.</p>
+            </div>
+
+            <div class="card-box">
+              <h3 style="font-size:14px; font-weight:700; margin-bottom:8px;">2. 3.5kgf 마그네틱 인장력 성적서</h3>
+              <div class="placeholder-img" style="height:160px; margin-bottom:10px;">
+                📜 [KTR 공인 시험성적서]<br>카트 주행 진동 충격 테스트 통과
+              </div>
+              <p style="font-size:12px; color:var(--text-muted);">강력한 네오디뮴 자석과 순면 웨빙으로 카트 주행 중 분실 위험이 0%입니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 07: TRIAL PACK ==================== -->
+        <section id="SCR-07" class="screen-content">
+          <div class="card-box" style="max-width:600px; margin:0 auto; text-align:center; padding:40px;">
+            <span style="background:#ECFDF5; color:#065F46; font-size:11px; font-weight:700; padding:4px 8px; border-radius:4px;">100% Refund Trial</span>
+            <h2 style="font-size:22px; font-weight:800; margin:12px 0;">골퍼 안심 1장 체험팩 (3,000원)</h2>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:20px;">
+              필드에서 먼저 1장 써보고 결정하세요!<br>
+              체험팩 구매 시 <strong>본품 구매용 3,000원 환급 쿠폰</strong>을 즉시 돌려드립니다.
+            </p>
+            <button class="wf-btn wf-btn-primary" style="padding:12px 30px;" onclick="switchScreen('SCR-09')">
+              ⚡ 3,000원 체험팩 신청하고 100% 환급 쿠폰 받기
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 08: CART ==================== -->
+        <section id="SCR-08" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:16px;">🛒 장바구니 (Cart)</h2>
+          <div class="card-box" id="cart-item-box" style="margin-bottom:20px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:12px; margin-bottom:12px;">
+              <div>
+                <span style="font-weight:700; font-size:14px;" id="cart-item-name">마그네틱 롱 슬림 골프 타월 (자수 커스텀 포함)</span>
+                <p style="font-size:12px; color:var(--text-muted);" id="cart-item-emb">자수: [🦅 J.H. BAE · HDCP 7]</p>
+              </div>
+              <span style="font-weight:800; font-size:16px; color:var(--accent-brand);" id="cart-item-price">38,000원</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:14px; font-weight:700;">
+              <span>총 결제 예상 금액:</span>
+              <span style="color:var(--accent-brand); font-size:18px;" id="cart-total-price">38,000원 (무료배송)</span>
+            </div>
+          </div>
+          <button class="wf-btn wf-btn-primary" style="width:100%; padding:14px; font-size:15px;" onclick="switchScreen('SCR-09')">
+            💳 주문서 작성 및 결제하기 (SCR-09)
+          </button>
+        </section>
+
+        <!-- ==================== SCREEN 09: CHECKOUT ==================== -->
+        <section id="SCR-09" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:16px;">💳 주문 및 결제 (Checkout)</h2>
+          <div class="grid-2">
+            <div>
+              <div class="card-box" style="margin-bottom:16px;">
+                <h3 style="font-size:14px; font-weight:700; margin-bottom:10px;">1. 주문자 정보</h3>
+                <input type="text" value="배진혁" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px; margin-bottom:6px;">
+                <input type="text" value="010-9876-5432" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px;">
+              </div>
+
+              <div class="card-box">
+                <h3 style="font-size:14px; font-weight:700; margin-bottom:10px;">2. 배송지 선택</h3>
+                <button class="wf-btn wf-btn-primary" style="padding:6px 12px; margin-bottom:8px;">단일 기본 배송지</button>
+                <button class="wf-btn wf-btn-outline" style="padding:6px 12px; margin-bottom:8px;" onclick="switchScreen('SCR-11')">📂 엑셀 다중 배송지 업로드 (SCR-11)</button>
+                <input type="text" value="서울시 강남구 테헤란로 152 강남타워 12층" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px;">
+              </div>
+            </div>
+
+            <div>
+              <div class="card-box" style="margin-bottom:16px;">
+                <h3 style="font-size:14px; font-weight:700; margin-bottom:10px;">3. 결제 수단</h3>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px;">
+                  <button class="wf-btn wf-btn-primary" style="padding:8px;">⚡ N-Pay 1초 결제</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:8px;">🟡 카카오페이</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:8px;">💳 법인/신용카드</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:8px;">🏦 세금계산서 가상계좌</button>
+                </div>
+                <label style="font-size:12px; display:flex; align-items:center; gap:6px;">
+                  <input type="checkbox" checked> 법인 세금계산서 즉시 발행 신청
+                </label>
+              </div>
+
+              <button class="wf-btn wf-btn-gold" style="width:100%; padding:14px; font-size:15px;" onclick="switchScreen('SCR-10')">
+                🔒 38,000원 결제 완료하기 (SCR-10)
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 10: ORDER COMPLETE ==================== -->
+        <section id="SCR-10" class="screen-content">
+          <div class="card-box" style="max-width:600px; margin:0 auto; text-align:center; padding:40px;">
+            <div style="font-size:40px; margin-bottom:10px;">🏆</div>
+            <h2 style="font-size:22px; font-weight:800; color:var(--accent-brand);">주문이 성공적으로 완료되었습니다!</h2>
+            <p style="font-size:13px; color:var(--text-muted); margin:8px 0 20px;">주문번호: <strong>FLOT-20260818-GOLF</strong></p>
+
+            <div style="background:#F8FAFC; border:1px solid var(--border-color); border-radius:8px; padding:16px; margin-bottom:20px; text-align:left;">
+              <h4 style="font-size:13px; font-weight:700; margin-bottom:6px;">📜 최종 자수 디지털 확인증</h4>
+              <p style="font-size:12px; color:#334155;">각인 문구: <strong>[🦅 J.H. BAE · HDCP 7 · No. 18]</strong></p>
+              <p style="font-size:12px; color:#334155;">자수 색상: <strong>오가닉 골드 (Gold)</strong></p>
+              <div style="background:#DCFCE7; color:#166534; padding:6px 10px; border-radius:4px; font-size:11px; font-weight:700; margin-top:8px;">
+                ✓ 라운딩 D-Day 납품 확약 완료 (2일 내 안심 출고)
+              </div>
+            </div>
+
+            <button class="wf-btn wf-btn-primary" onclick="switchScreen('SCR-01')">🏠 메인 홈으로 이동하기</button>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 11: EXCEL BULK ==================== -->
+        <section id="SCR-11" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:16px;">📂 홀인원 답례품 엑셀 다중 배송지 등록</h2>
+          <div class="card-box" style="margin-bottom:20px;">
+            <div class="placeholder-img" style="padding:40px; margin-bottom:16px;">
+              📁 [동반자_배송지_양식.xlsx 파일 드래그앤드롭 업로드]<br>
+              <span style="font-size:11px; color:#64748B;">최대 100명 주소 일괄 파싱 및 도로명 주소 자동 유효성 검증</span>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <button class="wf-btn wf-btn-outline" onclick="alert('표준 엑셀 양식이 다운로드되었습니다.')">📥 표준 엑셀 템플릿 받기</button>
+              <button class="wf-btn wf-btn-primary" onclick="switchScreen('SCR-09')">✓ 주소 검증 완료 후 결제로 복귀 (SCR-09)</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 12: SEARCH ==================== -->
+        <section id="SCR-12" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:16px;">🔍 통합 검색 결과: '마그네틱'</h2>
+          <div class="grid-3">
+            <div class="card-box" onclick="switchScreen('SCR-02')">
+              <div class="placeholder-img" style="height:120px; margin-bottom:8px;">📷 마그네틱 롱타월</div>
+              <h4 style="font-size:14px; font-weight:700;">마그네틱 롱타월 (38,000원)</h4>
+            </div>
+            <div class="card-box" onclick="switchScreen('SCR-03')">
+              <div class="placeholder-img" style="height:120px; margin-bottom:8px;">📷 클럽/볼 와입스</div>
+              <h4 style="font-size:14px; font-weight:700;">클럽 와입스 3장 세트 (24,900원)</h4>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== MODAL-01: 3D MAGNETIC VIEW ==================== -->
+  <div id="MODAL-01" class="modal-overlay" onclick="closeModal('MODAL-01')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 style="font-size:18px; font-weight:800; color:var(--accent-brand);">🧲 네오디뮴 마그네틱 클립 원터치 결착 3D 뷰어</h3>
+        <button class="wf-btn wf-btn-outline" style="padding:4px 8px;" onclick="closeModal('MODAL-01')">✕</button>
+      </div>
+      <div class="placeholder-img" style="height:220px; background:#1E3A2F; color:#FFF; margin-bottom:16px;">
+        🧲 [3D 인터랙션 애니메이션]<br>
+        캐디백 링 및 골프 카트 프레임에 찰칵! 달라붙는 3.5kgf 강력 자력 시연
+      </div>
+      <p style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">* 카트 주행 충격이나 바람에도 떨어지지 않으며, 한 손으로 당기면 부드럽게 분리됩니다.</p>
+      <button class="wf-btn wf-btn-primary" style="width:100%;" onclick="closeModal('MODAL-01')">✓ 확인 완료 (옵션 유지)</button>
+    </div>
+  </div>
+
+  <script>
+    // Screen Navigator
+    const screenTitles = {
+      'SCR-01': '메인페이지 (Home)',
+      'SCR-02': '마그네틱 골프 타월 상세 (Detail)',
+      'SCR-03': '클럽 & 볼 와입스 상세 (Wipes)',
+      'SCR-04': '골프 자수 아틀리에 (Custom Atelier)',
+      'SCR-05': '홀인원/이글 답례품 (Hole-in-One Gift)',
+      'SCR-06': '필드 케어 & 검증실 (Proofs Lab)',
+      'SCR-07': '1장 안심 체험팩 (Trial Pack)',
+      'SCR-08': '장바구니 (Cart)',
+      'SCR-09': '주문 및 결제 (Checkout)',
+      'SCR-10': '주문 완료 (Order Completed)',
+      'SCR-11': '엑셀 다중 배송지 등록 (Bulk Delivery)',
+      'SCR-12': '통합 검색 결과 (Search Results)'
+    };
+
+    function switchScreen(screenId) {
+      document.querySelectorAll('.screen-content').forEach(el => el.classList.remove('active'));
+      const target = document.getElementById(screenId);
+      if (target) target.classList.add('active');
+
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+      const activeNav = Array.from(document.querySelectorAll('.nav-item')).find(el => el.getAttribute('onclick') && el.getAttribute('onclick').includes(screenId));
+      if (activeNav) activeNav.classList.add('active');
+
+      document.getElementById('current-badge').innerText = screenId;
+      document.getElementById('current-title').innerText = screenTitles[screenId] || '화면';
+      document.getElementById('viewport-container').scrollTop = 0;
+    }
+
+    function setDevice(device) {
+      document.querySelectorAll('.device-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      const viewport = document.getElementById('viewport');
+      viewport.className = '';
+      if (device !== 'desktop') viewport.classList.add(device);
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+
+    // Canvas Simulator
+    let currentEmblem = '🦅';
+    function updateCanvas() {
+      const name = document.getElementById('input-name').value || 'J.H. BAE';
+      const sub = document.getElementById('input-sub').value || 'HDCP 7 · No. 18';
+      document.getElementById('canvas-text-render').innerText = name.toUpperCase();
+      document.getElementById('canvas-sub-render').innerText = sub;
+      document.getElementById('canvas-icon').innerText = currentEmblem;
+    }
+
+    function setEmblem(emblem) {
+      currentEmblem = emblem;
+      updateCanvas();
+    }
+
+    function applyEmbroideryAndCart() {
+      const name = document.getElementById('input-name').value;
+      const sub = document.getElementById('input-sub').value;
+      document.getElementById('cart-item-emb').innerText = `자수: [${currentEmblem} ${name} · ${sub}]`;
+      addToCart('마그네틱 롱타월 (자수 커스텀)', 38000);
+      switchScreen('SCR-08');
+    }
+
+    function addToCart(name, price) {
+      document.getElementById('cart-item-name').innerText = name;
+      document.getElementById('cart-item-price').innerText = price.toLocaleString() + '원';
+      document.getElementById('cart-total-price').innerText = price.toLocaleString() + '원 (무료배송)';
+      document.getElementById('cart-count').innerText = '(1)';
+      alert(`[${name}] 상품이 장바구니에 담겼습니다.`);
+    }
+
+    // Bulk Calculator
+    function calcBulkPrice() {
+      const qty = parseInt(document.getElementById('bulk-qty').value);
+      const originPrice = 38000 * qty;
+      let discountRate = 0.1;
+      if (qty >= 50) discountRate = 0.3;
+      else if (qty >= 30) discountRate = 0.2;
+      else if (qty >= 20) discountRate = 0.15;
+
+      const discountPrice = originPrice * discountRate;
+      const totalPrice = originPrice - discountPrice;
+
+      document.getElementById('bulk-origin').innerText = originPrice.toLocaleString() + '원';
+      document.getElementById('bulk-discount').innerText = '-' + discountPrice.toLocaleString() + '원 (' + (discountRate * 100) + '%)';
+      document.getElementById('bulk-total').innerText = totalPrice.toLocaleString() + '원';
+    }
+  </script>
+</body>
+</html>

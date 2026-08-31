@@ -1,0 +1,53 @@
+flowchart TD
+  classDef startEnd fill:#232527,color:#FFFFFF,stroke:#232527,stroke-width:2px;
+  classDef action fill:#FAF7F2,color:#232527,stroke:#C47A5A,stroke-width:2px;
+  classDef system fill:#F4F8F5,color:#232527,stroke:#7E8D7F,stroke-width:2px;
+  classDef decision fill:#FFF9F5,color:#C47A5A,stroke:#C47A5A,stroke-width:2px;
+
+  START(["🚀 사이트 진입 (환경 인증 검색 / QR)"]) :::startEnd
+
+  P01["P-01: 메인페이지 진입<br>(국가 공인 환경표지 상단 뱃지)"] :::action
+  P04["P-04: 전체 에코 카탈로그<br>(무비닐 / 오가닉 소창타월)"] :::action
+  P05["P-05: 상품 상세 페이지<br>(친환경 정보표 & 무비닐포장 폼)"] :::action
+
+  DEC_CERT{"국가 공인 인증서<br>원본을 조회하는가?"} :::decision
+  M02["M-02: 공인 인증서 200% HD 모달<br>(성적서 원문 & 공식 조회 링크)"] :::action
+
+  DEC_INFO{"친환경 정보표로<br>환경지표를 비교하는가?"} :::decision
+  P06["P-06: 친환경 정보표 한눈 비교<br>(탄소/물 절감 데이터 비교)"] :::action
+
+  P11["P-11: 장바구니 & 결제<br>(🟢 N Pay / 무비닐0% / 합배송)"] :::action
+  NPAY_EXEC["N Pay 1초 간편 결제 승인"] :::system
+
+  P12["P-12: 마이페이지 & 자원 회수<br>(수건/포장재 무료 수거 신청)"] :::action
+  M03["M-03: 자원 회수 무료 수거 모달<br>(택배 수거 접수 완료)"] :::action
+  END_BUY(["🎉 주문 완료 (카카오 알림톡 발송)"]) :::startEnd
+
+  %% 팝업 대안 흐름
+  P08["P-08: 성수 팝업스토어"] :::action
+  M01_POP["M-01: 팝업 사전예약 모달"] :::action
+  END_POP(["🎟️ 팝업 예약 완료 알림톡"]) :::startEnd
+
+  %% 흐름 연결
+  START --> P01
+  P01 --> P04
+  P04 --> P05
+  P05 --> DEC_CERT
+
+  DEC_CERT -- "예" --> M02
+  M02 --> DEC_INFO
+  DEC_CERT -- "아니오" --> DEC_INFO
+
+  DEC_INFO -- "예" --> P06
+  P06 --> P11
+  DEC_INFO -- "아니오" --> P11
+
+  P11 --> NPAY_EXEC
+  NPAY_EXEC --> P12
+  P12 --> M03
+  M03 --> END_BUY
+
+  %% 팝업 흐름
+  P01 --> P08
+  P08 --> M01_POP
+  M01_POP --> END_POP

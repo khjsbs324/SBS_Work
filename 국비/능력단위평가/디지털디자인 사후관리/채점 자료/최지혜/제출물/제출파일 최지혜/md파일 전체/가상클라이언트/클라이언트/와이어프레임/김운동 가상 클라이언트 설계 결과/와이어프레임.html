@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 오하운 스포츠 센터 - 저충실도 인터랙티브 와이어프레임 (Wireframe v1.0)</title>
+  
+  <style>
+    :root {
+      --color-primary: #1E3A8A;
+      --color-primary-light: #EFF6FF;
+      --color-accent: #2563EB;
+      --color-gold: #D97706;
+      --color-gold-bg: #FEF3C7;
+      --color-bg-app: #F1F5F9;
+      --color-bg-canvas: #FFFFFF;
+      --color-border: #CBD5E1;
+      --color-border-dark: #94A3B8;
+      --color-text-main: #0F172A;
+      --color-text-sub: #475569;
+      --color-text-muted: #94A3B8;
+      --wireframe-placeholder: #E2E8F0;
+      --wireframe-accent: #3B82F6;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--color-bg-app);
+      color: var(--color-text-main);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Left Navigation Sidebar */
+    .sidebar {
+      width: 320px;
+      background-color: #FFFFFF;
+      border-right: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+
+    .sidebar-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--color-border);
+      background-color: #FAFAFA;
+    }
+
+    .sidebar-header h1 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sidebar-header p {
+      font-size: 11px;
+      color: var(--color-text-sub);
+      margin-top: 4px;
+    }
+
+    .screen-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+    }
+
+    .screen-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      margin: 12px 6px 6px 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 9px 12px;
+      margin-bottom: 4px;
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-text-main);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: var(--color-primary-light);
+      color: var(--color-accent);
+    }
+
+    .nav-btn.active {
+      background-color: var(--color-primary-light);
+      border-color: var(--color-accent);
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    .nav-btn .badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background-color: #E2E8F0;
+      color: #475569;
+      font-family: monospace;
+    }
+
+    .nav-btn.active .badge {
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+
+    /* Main Content Area */
+    .main-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Top Stage Bar */
+    .stage-bar {
+      height: 56px;
+      background-color: #FFFFFF;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+
+    .current-screen-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .current-id {
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 700;
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .current-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-text-main);
+    }
+
+    .viewport-switch {
+      display: flex;
+      background-color: var(--color-bg-app);
+      padding: 3px;
+      border-radius: 6px;
+      gap: 4px;
+    }
+
+    .vp-btn {
+      padding: 4px 10px;
+      border: none;
+      background: none;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-text-sub);
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.15s;
+    }
+
+    .vp-btn.active {
+      background-color: #FFFFFF;
+      color: var(--color-primary);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* Canvas Frame Viewer */
+    .stage-canvas {
+      flex: 1;
+      overflow: auto;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: #E2E8F0;
+    }
+
+    .device-frame {
+      background-color: #FFFFFF;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 1024px;
+      min-height: 800px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .device-frame.tablet {
+      width: 768px;
+    }
+
+    .device-frame.mobile {
+      width: 375px;
+    }
+
+    /* Wireframe Screen Container */
+    .wf-screen {
+      display: none;
+      padding: 24px;
+      flex: 1;
+    }
+
+    .wf-screen.active {
+      display: block;
+    }
+
+    /* Wireframe Components */
+    .wf-header {
+      border-bottom: 2px solid var(--color-border);
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+
+    .wf-topbar {
+      background-color: #1E293B;
+      color: #FFFFFF;
+      font-size: 11px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .wf-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .wf-logo {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--color-primary);
+      letter-spacing: -0.5px;
+    }
+
+    .wf-menu {
+      display: flex;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-text-sub);
+    }
+
+    .wf-menu a {
+      color: inherit;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    .wf-menu a:hover, .wf-menu a.active {
+      background-color: var(--color-primary-light);
+      color: var(--color-primary);
+    }
+
+    .wf-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* UI Helper Blocks */
+    .wf-box {
+      border: 1px dashed var(--color-border-dark);
+      background-color: #F8FAFC;
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .wf-placeholder {
+      background-color: var(--wireframe-placeholder);
+      border: 1px dashed var(--color-border-dark);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-sub);
+      font-size: 12px;
+      font-weight: 600;
+      min-height: 120px;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .wf-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .wf-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .device-frame.mobile .wf-grid-3,
+    .device-frame.mobile .wf-grid-2 {
+      grid-template-columns: 1fr;
+    }
+
+    .wf-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 16px;
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .wf-card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-text-main);
+    }
+
+    .wf-card-desc {
+      font-size: 12px;
+      color: var(--color-text-sub);
+      line-height: 1.5;
+    }
+
+    .wf-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary);
+    }
+
+    .wf-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .wf-btn:hover {
+      opacity: 0.9;
+    }
+
+    .wf-btn-secondary {
+      background-color: #FFFFFF;
+      color: var(--color-text-main);
+      border: 1px solid var(--color-border-dark);
+    }
+
+    .wf-btn-gold {
+      background-color: var(--color-gold);
+      color: #FFFFFF;
+    }
+
+    .wf-btn-sm {
+      padding: 4px 10px;
+      font-size: 11px;
+    }
+
+    /* Interactive Embroidery Canvas */
+    .canvas-preview-box {
+      width: 100%;
+      height: 180px;
+      border-radius: 6px;
+      background-color: #2D3748;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #liveEmbroideryCanvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Modal Layer Simulation */
+    .wf-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(3px);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wf-modal-overlay.active {
+      display: flex;
+    }
+
+    .wf-modal-box {
+      background: #FFFFFF;
+      width: 520px;
+      max-width: 90vw;
+      border-radius: 12px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+    }
+
+    .wf-modal-header {
+      padding: 16px 20px;
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .wf-modal-header h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .wf-modal-body {
+      padding: 20px;
+      max-height: 70vh;
+      overflow-y: auto;
+      font-size: 13px;
+    }
+
+    .wf-modal-footer {
+      padding: 14px 20px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h1>🏃 플로뜰리에 오하운 센터</h1>
+      <p>김운동 페르소나 저충실도 와이어프레임 (v1.0)</p>
+    </div>
+    
+    <div class="screen-list">
+      <div class="screen-group-title">01. SPORT &amp; LINEUP</div>
+      <button class="nav-btn active" onclick="showScreen('SCR-01')">
+        <span>SCR-01: 스포츠 메인 홈</span>
+        <span class="badge">D2</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-02')">
+        <span>SCR-02: 전체 카탈로그</span>
+        <span class="badge">D2</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-03')">
+        <span>SCR-03: 오하운 스타터 팩</span>
+        <span class="badge">D3</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-04')">
+        <span>SCR-04: 스포츠 롱타월 단품</span>
+        <span class="badge">D3</span>
+      </button>
+
+      <div class="screen-group-title">02. PERFORMANCE LAB</div>
+      <button class="nav-btn" onclick="showScreen('SCR-05')">
+        <span>SCR-05: 1초 땀 흡수 챌린지</span>
+        <span class="badge">D2</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-06')">
+        <span>SCR-06: 땀 냄새 제로 랩</span>
+        <span class="badge">D2</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-07')">
+        <span>SCR-07: 40% 경량 &amp; 1시간 건조</span>
+        <span class="badge">D2</span>
+      </button>
+
+      <div class="screen-group-title">03. CUSTOM STUDIO</div>
+      <button class="nav-btn" onclick="showScreen('SCR-08')">
+        <span>SCR-08: 슬로건 자수 스튜디오</span>
+        <span class="badge">D2</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-09')">
+        <span>SCR-09: 크루 단체 자수/발주</span>
+        <span class="badge">D2</span>
+      </button>
+
+      <div class="screen-group-title">04. SPORT GUIDE</div>
+      <button class="nav-btn" onclick="showScreen('SCR-10')">
+        <span>SCR-10: 종목별 겹수 가이드</span>
+        <span class="badge">D2</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-11')">
+        <span>SCR-11: 세탁기 간편 관리서</span>
+        <span class="badge">D2</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-12')">
+        <span>SCR-12: 미세플라스틱 0% 4無</span>
+        <span class="badge">D2</span>
+      </button>
+
+      <div class="screen-group-title">05. MY &amp; CONCIERGE</div>
+      <button class="nav-btn" onclick="showScreen('SCR-13')">
+        <span>SCR-13: 1장 안심 체험팩</span>
+        <span class="badge">D2</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-14')">
+        <span>SCR-14: 장바구니 &amp; 1초 결제</span>
+        <span class="badge">D2</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-15')">
+        <span>SCR-15: 마이페이지 &amp; 재주문</span>
+        <span class="badge">D2</span>
+      </button>
+
+      <div class="screen-group-title">00. EXCEPTION</div>
+      <button class="nav-btn" onclick="showScreen('SCR-EX01')">
+        <span>SCR-EX01: 검색 없음 / 품절</span>
+        <span class="badge">EX</span>
+      </button>
+      <button class="nav-btn" onclick="showScreen('SCR-EX02')">
+        <span>SCR-EX02: 404 Not Found</span>
+        <span class="badge">EX</span>
+      </button>
+
+      <div class="screen-group-title">LAYERED MODALS</div>
+      <button class="nav-btn" onclick="openModal('MOD-01')">
+        <span>MOD-01: 슬로건 자수 모달</span>
+        <span class="badge">MOD</span>
+      </button>
+      <button class="nav-btn" onclick="openModal('MOD-02')">
+        <span>MOD-02: 스냅 스트랩 3D 뷰어</span>
+        <span class="badge">MOD</span>
+      </button>
+      <button class="nav-btn" onclick="openModal('MOD-03')">
+        <span>MOD-03: 1장 체험팩 100% 환급</span>
+        <span class="badge">MOD</span>
+      </button>
+      <button class="nav-btn" onclick="openModal('MOD-04')">
+        <span>MOD-04: 크루 견적서 PDF 출력</span>
+        <span class="badge">MOD</span>
+      </button>
+      <button class="nav-btn" onclick="openModal('MOD-05')">
+        <span>MOD-05: KATRI 성적서 확대</span>
+        <span class="badge">MOD</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Viewport Stage -->
+  <main class="main-stage">
+    <header class="stage-bar">
+      <div class="current-screen-info">
+        <span class="current-id" id="topScreenId">SCR-01</span>
+        <span class="current-title" id="topScreenName">스포츠 메인 홈</span>
+      </div>
+
+      <div class="viewport-switch">
+        <button class="vp-btn active" onclick="setViewport('desktop', this)">🖥️ 데스크톱 (1024px)</button>
+        <button class="vp-btn" onclick="setViewport('tablet', this)">📱 태블릿 (768px)</button>
+        <button class="vp-btn" onclick="setViewport('mobile', this)">📱 모바일 (375px)</button>
+      </div>
+    </header>
+
+    <div class="stage-canvas">
+      <div class="device-frame" id="deviceFrame">
+        
+        <!-- ================= [SCR-01] 메인 홈 ================= -->
+        <section class="wf-screen active" id="SCR-01">
+          <div class="wf-header">
+            <div class="wf-topbar">
+              <span>[가방 속 땀 냄새 제로 - 3배 빠른 건조 소창 스포츠 타월]</span>
+              <span>1장 3,000원 안심 체험팩 (본품 구매 시 100% 환급)</span>
+            </div>
+            <div class="wf-nav">
+              <div class="wf-logo">FLOTTELIER SPORT</div>
+              <div class="wf-menu">
+                <a href="javascript:void(0)" class="active" onclick="showScreen('SCR-01')">SPORT HOME</a>
+                <a href="javascript:void(0)" onclick="showScreen('SCR-02')">LINEUP</a>
+                <a href="javascript:void(0)" onclick="showScreen('SCR-05')">PERFORMANCE LAB</a>
+                <a href="javascript:void(0)" onclick="showScreen('SCR-08')">CUSTOM</a>
+                <a href="javascript:void(0)" onclick="showScreen('SCR-10')">GUIDE</a>
+              </div>
+              <div class="wf-actions">
+                <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-14')">장바구니 (0)</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-box" style="background-color: #1E3A8A; color: #FFFFFF; border: none;">
+            <span class="wf-tag" style="background-color: #3B82F6; color: #FFFFFF;">4차 정련 소창 스포츠 롱타월</span>
+            <h2 style="font-size: 20px; margin: 8px 0 6px 0;">땀 흘리는 순간에도 뽀송하게, 1초 땀 흡수 &amp; 냄새 제로</h2>
+            <p style="font-size: 12px; color: #CBD5E1; margin-bottom: 14px;">30x90cm 목 거치 슬림 규격 • 일반 수건 대비 40% 경량 95g • 1시간 초고속 건조</p>
+            <div style="display: flex; gap: 8px;">
+              <button class="wf-btn wf-btn-gold" onclick="openModal('MOD-03')">1장 3,000원에 먼저 써보기 (100% 환급)</button>
+              <button class="wf-btn wf-btn-secondary" onclick="showScreen('SCR-03')">오하운 스타터 팩 보러가기</button>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 8px; margin-bottom: 16px; overflow-x: auto; padding-bottom: 4px;">
+            <button class="wf-btn wf-btn-sm" style="background-color: #2563EB;">🏃 김운동 (오하운/러닝/헬스)</button>
+            <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="alert('전체 13인 통합 사이트맵에서 김마미(육아) 뷰로 전환됩니다.')">👶 김마미 (4無안전)</button>
+            <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="alert('김예민(민감피부) 뷰로 전환됩니다.')">🌿 김예민 (봉제선500%줌)</button>
+            <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-09')">🏢 김스테이/크루 (B2B견적)</button>
+          </div>
+
+          <div class="wf-grid-3">
+            <div class="wf-card">
+              <div class="wf-tag">PERFORMANCE 01</div>
+              <div class="wf-card-title">1초 초고속 땀 흡수</div>
+              <div class="wf-card-desc">극세사 타월 대비 3배 빠른 수분 침투 및 피부 끈적임 잔여율 0%</div>
+              <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-05')">실험 영상 보기 &rarr;</button>
+            </div>
+            <div class="wf-card">
+              <div class="wf-tag">PERFORMANCE 02</div>
+              <div class="wf-card-title">땀 냄새 99.8% 억제</div>
+              <div class="wf-card-desc">KATRI 공인 모락셀라균 탈취 성적서 및 3중 격자 통기성 구조</div>
+              <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-06')">성적서 200% 줌 &rarr;</button>
+            </div>
+            <div class="wf-card">
+              <div class="wf-card-title">40% 초경량 95g</div>
+              <div class="wf-tag">PERFORMANCE 03</div>
+              <div class="wf-card-desc">일반 수건 180g vs 소창 95g. 락커룸 1시간 자연 건조 완료</div>
+              <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-07')">저울 비교 &rarr;</button>
+            </div>
+          </div>
+
+          <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 12px;">🏆 오하운 베스트 스포츠 패키지</h3>
+          <div class="wf-grid-2">
+            <div class="wf-card">
+              <div class="wf-placeholder" style="height: 140px;">[롱타월 1장 + 와입스 3장 + 통풍 메쉬 파우치 패키지 컷]</div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="wf-tag">15% 세트 할인</span>
+                <span style="font-weight: 800; color: #D97706;">38,000원</span>
+              </div>
+              <div class="wf-card-title">오하운 스포츠 스타터 팩</div>
+              <div class="wf-card-desc">러닝 및 헬스 시 필요한 모든 라인업 올인원 구성 (스냅 스트랩 옵션)</div>
+              <button class="wf-btn" onclick="showScreen('SCR-03')">상세보기 및 자수 커스텀</button>
+            </div>
+            <div class="wf-card">
+              <div class="wf-placeholder" style="height: 140px;">[30x90cm 스포츠 롱타월 단품 목 거치 핏]</div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="wf-tag">베스트 단품</span>
+                <span style="font-weight: 800;">16,000원</span>
+              </div>
+              <div class="wf-card-title">4겹 슬림 스포츠 롱타월 (30x90cm)</div>
+              <div class="wf-card-desc">목에 걸치고 기구에 거치하기 가장 이상적인 슬림 규격</div>
+              <button class="wf-btn" onclick="showScreen('SCR-04')">단품 상세 및 단가 계산기</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= [SCR-02] 전체 카탈로그 ================= -->
+        <section class="wf-screen" id="SCR-02">
+          <div class="wf-header">
+            <div class="wf-nav">
+              <div class="wf-logo">FLOTTELIER SPORT</div>
+              <div class="wf-menu">
+                <a href="javascript:void(0)" onclick="showScreen('SCR-01')">HOME</a>
+                <a href="javascript:void(0)" class="active">LINEUP</a>
+                <a href="javascript:void(0)" onclick="showScreen('SCR-05')">PERFORMANCE LAB</a>
+                <a href="javascript:void(0)" onclick="showScreen('SCR-08')">CUSTOM</a>
+              </div>
+              <div class="wf-actions">
+                <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-14')">장바구니</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <h2 style="font-size: 18px; font-weight: 800;">전체 스포츠 라인업 카탈로그</h2>
+            <p style="font-size: 12px; color: var(--color-text-sub);">겹수별 두께와 운동 종목에 맞춘 4차 정련 소창 스포츠 타월</p>
+          </div>
+
+          <div class="wf-box" style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 8px; align-items: center; font-size: 12px;">
+              <strong style="width: 80px;">겹수 선택:</strong>
+              <button class="wf-btn wf-btn-sm">전체</button>
+              <button class="wf-btn wf-btn-sm wf-btn-secondary">2겹 (포켓 와입스)</button>
+              <button class="wf-btn wf-btn-sm wf-btn-secondary">3겹 (하드 트레이닝)</button>
+              <button class="wf-btn wf-btn-sm wf-btn-secondary">4겹 (슬림 롱타월)</button>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center; font-size: 12px;">
+              <strong style="width: 80px;">종목 태그:</strong>
+              <span class="wf-tag">#러닝</span>
+              <span class="wf-tag">#웨이트/헬스</span>
+              <span class="wf-tag">#크로스핏</span>
+              <span class="wf-tag">#아웃도어</span>
+            </div>
+          </div>
+
+          <div class="wf-grid-3">
+            <div class="wf-card">
+              <div class="wf-placeholder" style="height: 110px;">[오하운 스타터 팩]</div>
+              <div class="wf-tag">세트 15% 할인</div>
+              <div class="wf-card-title">오하운 스타터 팩</div>
+              <div style="font-weight: 700;">38,000원</div>
+              <button class="wf-btn wf-btn-sm" onclick="showScreen('SCR-03')">상세보기</button>
+            </div>
+            <div class="wf-card">
+              <div class="wf-placeholder" style="height: 110px;">[4겹 슬림 롱타월]</div>
+              <div class="wf-tag">러닝/헬스 전용</div>
+              <div class="wf-card-title">4겹 슬림 롱타월 (30x90cm)</div>
+              <div style="font-weight: 700;">16,000원</div>
+              <button class="wf-btn wf-btn-sm" onclick="showScreen('SCR-04')">상세보기</button>
+            </div>
+            <div class="wf-card">
+              <div class="wf-placeholder" style="height: 110px;">[2겹 포켓 와입스 5장]</div>
+              <div class="wf-tag">초경량 휴대</div>
+              <div class="wf-card-title">2겹 포켓 미니 와입스 (25x25cm)</div>
+              <div style="font-weight: 700;">15,000원</div>
+              <button class="wf-btn wf-btn-sm" onclick="alert('포켓 와입스 상세로 이동합니다.')">상세보기</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= [SCR-03] 오하운 스타터 팩 상세 ================= -->
+        <section class="wf-screen" id="SCR-03">
+          <div class="wf-header">
+            <div class="wf-nav">
+              <div class="wf-logo">FLOTTELIER SPORT</div>
+              <div class="wf-actions">
+                <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-02')">&larr; 카탈로그</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-grid-2">
+            <div>
+              <div class="wf-placeholder" style="height: 280px; margin-bottom: 8px;">
+                [스타터 팩 360도 뷰어 &amp; 순면 메쉬 파우치 수납 핏]
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="openModal('MOD-02')">🔍 스냅 스트랩 3D 뷰어</button>
+                <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="openModal('MOD-05')">📄 KATRI 성적서 원본</button>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <span class="wf-tag" style="width: fit-content;">올인원 스포츠 패키지</span>
+              <h2 style="font-size: 18px; font-weight: 800;">오하운 스포츠 스타터 팩</h2>
+              <p style="font-size: 12px; color: var(--color-text-sub);">4겹 롱타월 1장 + 2겹 포켓 와입스 3장 + 순면 통풍 메쉬 파우치</p>
+              
+              <div style="padding: 12px; background: #FEF3C7; border-radius: 6px;">
+                <span style="font-size: 11px; color: #92400E; font-weight: 700;">세트 특별 15% 할인</span>
+                <div style="font-size: 20px; font-weight: 900; color: #D97706;">38,000원 <span style="font-size: 12px; text-decoration: line-through; color: #94A3B8;">45,000원</span></div>
+              </div>
+
+              <div style="font-size: 12px; display: flex; flex-direction: column; gap: 8px;">
+                <div>
+                  <strong>애슬레저 컬러 선택:</strong>
+                  <div style="display: flex; gap: 6px; margin-top: 4px;">
+                    <button class="wf-btn wf-btn-sm" style="background:#334155;">딥 차콜</button>
+                    <button class="wf-btn wf-btn-sm wf-btn-secondary">올리브 세이지</button>
+                    <button class="wf-btn wf-btn-sm wf-btn-secondary">오트밀 베이지</button>
+                  </div>
+                </div>
+
+                <div>
+                  <label><input type="checkbox" checked> <strong>스냅 단추형 스트랩 추가 (+1,500원)</strong></label>
+                </div>
+
+                <div class="wf-box" style="margin: 4px 0; padding: 10px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-weight: 700;">크루/슬로건 자수 각인</span>
+                    <button class="wf-btn wf-btn-sm wf-btn-gold" onclick="openModal('MOD-01')">Canvas 자수 시뮬레이터 열기</button>
+                  </div>
+                  <div style="font-size: 11px; color: #64748B; margin-top: 4px;">현재 문구: <span id="starterEmbText" style="font-weight:700; color:#1E3A8A;">'RUN FREE' (딥 골드)</span></div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 8px; margin-top: 8px;">
+                <button class="wf-btn" style="flex:1;" onclick="showScreen('SCR-14')">장바구니 담기</button>
+                <button class="wf-btn wf-btn-gold" style="flex:1;" onclick="showScreen('SCR-14')">N Pay 1초 바로구매</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= [SCR-08] 슬로건 Canvas 자수 스튜디오 ================= -->
+        <section class="wf-screen" id="SCR-08">
+          <div class="wf-header">
+            <div class="wf-nav">
+              <div class="wf-logo">FLOTTELIER SPORT</div>
+              <div class="wf-actions">
+                <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-03')">&larr; 상품 상세로 복귀</button>
+              </div>
+            </div>
+          </div>
+
+          <h2 style="font-size: 18px; font-weight: 800; margin-bottom: 6px;">나만의 스포츠 슬로건 Canvas 실시간 자수 스튜디오</h2>
+          <p style="font-size: 12px; color: var(--color-text-sub); margin-bottom: 16px;">0.05초 실시간 패브릭 합성 렌더링 (영문 최대 12자 / 한글 8자)</p>
+
+          <div class="wf-grid-2">
+            <div>
+              <div class="canvas-preview-box">
+                <canvas id="liveEmbroideryCanvas" width="400" height="200"></canvas>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 11px; color: #64748B; margin-top: 6px;">
+                <span>* 4차 정련 소창 원단 텍스처 1:1 합성</span>
+                <span>실시간 렌더링 완료 (0.04s)</span>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 12px; font-size: 12px;">
+              <div>
+                <strong>슬로건 문구 입력:</strong>
+                <input type="text" id="embInput" value="NEVER STOP" maxlength="12" style="width: 100%; padding: 8px; border: 1px solid var(--color-border-dark); border-radius: 6px; margin-top: 4px;" oninput="updateEmbroideryCanvas()">
+                <div id="embErr" style="color: #EF4444; font-size: 10px; margin-top: 2px; display: none;">영문 최대 12자까지 가능합니다.</div>
+              </div>
+
+              <div>
+                <strong>실 컬러 선택:</strong>
+                <div style="display: flex; gap: 8px; margin-top: 4px;">
+                  <button class="wf-btn wf-btn-sm" style="background-color: #D97706;" onclick="changeEmbColor('#D97706', '딥 골드')">딥 골드</button>
+                  <button class="wf-btn wf-btn-sm" style="background-color: #10B981;" onclick="changeEmbColor('#10B981', '세이지 그린')">세이지</button>
+                  <button class="wf-btn wf-btn-sm" style="background-color: #F97316;" onclick="changeEmbColor('#F97316', '네온 오렌지')">오렌지</button>
+                  <button class="wf-btn wf-btn-sm" style="background-color: #F8FAFC; color: #0F172A; border: 1px solid #CBD5E1;" onclick="changeEmbColor('#FFFFFF', '실버 화이트')">화이트</button>
+                </div>
+              </div>
+
+              <div>
+                <strong>자수 위치:</strong>
+                <select style="width: 100%; padding: 8px; border: 1px solid var(--color-border-dark); border-radius: 6px; margin-top: 4px;">
+                  <option>스냅 단추형 스트랩 상단 (추천)</option>
+                  <option>타월 우측 하단 모서리</option>
+                  <option>순면 메쉬 파우치 전면 태그</option>
+                </select>
+              </div>
+
+              <button class="wf-btn wf-btn-gold" style="margin-top: 8px;" onclick="applyEmbroideryAndGoCart()">이 시안으로 장바구니 담기</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= [SCR-14] 장바구니 & 1초 결제 ================= -->
+        <section class="wf-screen" id="SCR-14">
+          <div class="wf-header">
+            <div class="wf-nav">
+              <div class="wf-logo">FLOTTELIER SPORT</div>
+              <div class="wf-actions">
+                <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-01')">홈으로</button>
+              </div>
+            </div>
+          </div>
+
+          <h2 style="font-size: 18px; font-weight: 800; margin-bottom: 16px;">장바구니 &amp; 1초 간편 결제</h2>
+
+          <div class="wf-grid-2">
+            <div class="wf-box">
+              <h3 style="font-size: 14px; margin-bottom: 12px;">선택 상품 (1개)</h3>
+              
+              <div style="display: flex; gap: 12px; border-bottom: 1px solid #E2E8F0; padding-bottom: 12px; margin-bottom: 12px;">
+                <div class="wf-placeholder" style="width: 70px; height: 70px; min-height: 70px; font-size: 10px;">스타터 팩</div>
+                <div style="flex: 1; font-size: 12px;">
+                  <strong>오하운 스포츠 스타터 팩</strong>
+                  <div style="color: #64748B;">옵션: 딥 차콜 / 스냅 스트랩 포함 (+1,500원)</div>
+                  <div style="color: var(--color-primary); font-weight: 700;">자수 문구: <span id="cartEmbVal">'RUN FREE'</span> (딥 골드)</div>
+                  <div style="font-weight: 800; margin-top: 4px;">39,500원</div>
+                </div>
+              </div>
+
+              <div style="font-size: 12px; display: flex; flex-direction: column; gap: 6px;">
+                <label><input type="checkbox" checked> <strong>[+4,000원] 오가닉 순면 메쉬 파우치 1개 추가</strong></label>
+                <label><input type="checkbox" checked> <strong>100% 무비닐 제로웨이스트 포장으로 받기 (무료)</strong></label>
+              </div>
+            </div>
+
+            <div class="wf-card">
+              <h3 style="font-size: 14px; margin-bottom: 8px;">최종 결제 금액</h3>
+              
+              <div style="font-size: 12px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #E2E8F0; padding-bottom: 10px;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span>상품 주문 금액:</span>
+                  <span>43,500원</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; color: #10B981;">
+                  <span>1장 안심 체험팩 100% 환급 쿠폰:</span>
+                  <span>-3,000원</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span>배송비 (3만원 이상 무료):</span>
+                  <span>0원</span>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 900; color: #1E3A8A; margin-top: 4px;">
+                <span>총 결제금액:</span>
+                <span>40,500원</span>
+              </div>
+
+              <button class="wf-btn" style="background-color: #03C75A; margin-top: 12px;" onclick="showScreen('SCR-15')">
+                N Pay 1초 원클릭 결제하기
+              </button>
+              <button class="wf-btn wf-btn-gold" onclick="showScreen('SCR-15')">
+                카카오페이 1초 간편 결제
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= [SCR-15] 마이페이지 & 재구매 ================= -->
+        <section class="wf-screen" id="SCR-15">
+          <div class="wf-header">
+            <div class="wf-nav">
+              <div class="wf-logo">FLOTTELIER SPORT</div>
+              <div class="wf-actions">
+                <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-01')">홈으로</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 16px; background: #EFF6FF; border-radius: 8px; margin-bottom: 16px; text-align: center;">
+            <span style="font-size: 24px;">🎉</span>
+            <h2 style="font-size: 16px; font-weight: 800; color: #1E3A8A; margin-top: 4px;">주문이 정상적으로 완료되었습니다!</h2>
+            <p style="font-size: 12px; color: #475569;">카카오 알림톡으로 실시간 배송 및 세탁 가이드 PDF가 발송되었습니다.</p>
+          </div>
+
+          <div class="wf-grid-2">
+            <div class="wf-card">
+              <div class="wf-card-title">💾 나의 슬로건 자수 템플릿 보관함</div>
+              <div class="wf-card-desc">지난 주문 시 제작한 자수 시안이 자동 저장되었습니다.</div>
+              <div style="padding: 10px; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 6px; font-size: 12px; font-weight: 700; color: #1E3A8A;">
+                문구: 'RUN FREE' (딥 골드) / 스냅 스트랩 옵션
+              </div>
+              <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="alert('직전 옵션 그대로 1-Click 재주문이 진행됩니다.')">1-Click 동일 옵션 재주문</button>
+            </div>
+
+            <div class="wf-card">
+              <div class="wf-card-title">⏰ 6개월 위생 교체 주기 리마인더</div>
+              <div class="wf-card-desc">땀 흡수력 유지를 위해 6개월 후 알림톡을 발송해 드립니다.</div>
+              <div style="font-size: 12px; display: flex; align-items: center; justify-content: space-between;">
+                <span>알림톡 수신: <strong>활성화 (ON)</strong></span>
+                <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="showScreen('SCR-11')">세탁 가이드 보기</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stubs (SCR-04, 05, 06, 07, 09, 10, 11, 12, 13, EX01, EX02) -->
+        <section class="wf-screen" id="SCR-04">
+          <div class="wf-header"><h3>SCR-04: 스포츠 슬림 롱타월 상세 (30x90cm)</h3></div>
+          <div class="wf-placeholder" style="height: 280px;">[30x90cm 목 거치 슬림 규격 뷰어 &amp; 500% 봉제선 줌]</div>
+          <div style="margin-top: 14px; display: flex; gap: 8px;">
+            <button class="wf-btn" onclick="openModal('MOD-01')">자수 커스텀</button>
+            <button class="wf-btn wf-btn-secondary" onclick="openModal('MOD-02')">스냅 스트랩 3D 뷰어</button>
+          </div>
+        </section>
+
+        <section class="wf-screen" id="SCR-05">
+          <div class="wf-header"><h3>SCR-05: 1초 땀 흡수 챌린지 랩</h3></div>
+          <div class="wf-placeholder" style="height: 280px;">[극세사 타월 vs 소창 1초 흡수 반응형 비교 비디오 &amp; 수분 침투 그래프 0.8초]</div>
+          <div style="margin-top: 14px;"><button class="wf-btn" onclick="openModal('MOD-03')">1장 안심 체험팩 신청하기</button></div>
+        </section>
+
+        <section class="wf-screen" id="SCR-06">
+          <div class="wf-header"><h3>SCR-06: 땀 냄새 제로 99.8% 탈취 실험실</h3></div>
+          <div class="wf-placeholder" style="height: 280px;">[3중 통기성 격자 구조 3D 분해도 &amp; KATRI 모락셀라균 탈취 99.8% 성적서]</div>
+          <div style="margin-top: 14px;"><button class="wf-btn" onclick="openModal('MOD-05')">성적서 200% 확대 모달 열기</button></div>
+        </section>
+
+        <section class="wf-screen" id="SCR-07">
+          <div class="wf-header"><h3>SCR-07: 40% 초경량 &amp; 1시간 퀵 드라이 랩</h3></div>
+          <div class="wf-placeholder" style="height: 280px;">[일반 타월 180g vs 소창 95g 저울 비교 인터랙션 &amp; 1시간 자연 건조 타임라인]</div>
+          <div style="margin-top: 14px;"><button class="wf-btn" onclick="showScreen('SCR-03')">스타터 팩 보러가기</button></div>
+        </section>
+
+        <section class="wf-screen" id="SCR-09">
+          <div class="wf-header"><h3>SCR-09: 러닝 크루 단체 자수 &amp; 대량 발주</h3></div>
+          <div class="wf-placeholder" style="height: 280px;">[20~100장 수량별 할인율표 (10~25%) &amp; 크루 로고 AI 업로드 툴]</div>
+          <div style="margin-top: 14px;"><button class="wf-btn wf-btn-gold" onclick="openModal('MOD-04')">직인 견적서 PDF 1초 출력 모달</button></div>
+        </section>
+
+        <section class="wf-screen" id="SCR-10">
+          <div class="wf-header"><h3>SCR-10: 운동 종목별 겹수 맞춤 가이드</h3></div>
+          <div class="wf-placeholder" style="height: 280px;">[러닝(2+4겹) / 웨이트(4겹 롱) / 크로스핏(3겹 하드) 매칭 툴]</div>
+          <div style="margin-top: 14px;"><button class="wf-btn" onclick="showScreen('SCR-03')">추천 스타터 팩 선택</button></div>
+        </section>
+
+        <section class="wf-screen" id="SCR-11">
+          <div class="wf-header"><h3>SCR-11: 세탁기 간편 관리 지침서 (삶기 불필요)</h3></div>
+          <div class="wf-placeholder" style="height: 280px;">[세탁기/건조기 O/X 표 &amp; 세탁 지침 PDF 다운로드]</div>
+          <div style="margin-top: 14px;"><button class="wf-btn wf-btn-secondary" onclick="alert('세탁 지침서 PDF가 다운로드됩니다.')">PDF 지침서 다운로드</button></div>
+        </section>
+
+        <section class="wf-screen" id="SCR-12">
+          <div class="wf-header"><h3>SCR-12: 미세플라스틱 0% 4無 안심 인증</h3></div>
+          <div class="wf-placeholder" style="height: 280px;">[더마테스트 Excellent 무자극 성적서 &amp; 4無 성분표]</div>
+          <div style="margin-top: 14px;"><button class="wf-btn" onclick="openModal('MOD-03')">1장 체험팩 신청</button></div>
+        </section>
+
+        <section class="wf-screen" id="SCR-13">
+          <div class="wf-header"><h3>SCR-13: 1장 3,000원 스포츠 안심 체험팩</h3></div>
+          <div class="wf-box" style="padding: 24px; text-align: center;">
+            <h3>3,000원에 먼저 1장을 체험해보세요</h3>
+            <p style="font-size: 12px; color: #64748B; margin: 8px 0 16px 0;">본품 구매 시 사용할 수 있는 3,000원 100% 환급 쿠폰을 즉시 지급합니다.</p>
+            <button class="wf-btn wf-btn-gold" onclick="openModal('MOD-03')">체험팩 신청 모달 열기</button>
+          </div>
+        </section>
+
+        <section class="wf-screen" id="SCR-EX01">
+          <div class="wf-header"><h3>SCR-EX01: 검색 결과 없음 / 품절 안내</h3></div>
+          <div class="wf-box" style="text-align: center; padding: 30px;">
+            <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
+            <h4>일치하는 검색 결과가 없습니다.</h4>
+            <p style="font-size: 12px; color: #64748B; margin-bottom: 12px;">추천 검색어: <strong>#롱타월, #스냅스트랩, #스타터팩</strong></p>
+            <button class="wf-btn" onclick="showScreen('SCR-03')">오하운 베스트 스타터 팩 바로가기</button>
+          </div>
+        </section>
+
+        <section class="wf-screen" id="SCR-EX02">
+          <div class="wf-header"><h3>SCR-EX02: 404 Not Found</h3></div>
+          <div class="wf-box" style="text-align: center; padding: 30px;">
+            <h4>페이지를 찾을 수 없습니다.</h4>
+            <p style="font-size: 12px; color: #64748B; margin-bottom: 12px;">입력하신 주소가 잘못되었거나 삭제된 페이지입니다.</p>
+            <button class="wf-btn" onclick="showScreen('SCR-01')">메인 홈으로 복귀</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Layered Modals -->
+  <div class="wf-modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="wf-modal-box" onclick="event.stopPropagation()">
+      <div class="wf-modal-header">
+        <h3 id="modalTitle">모달 제목</h3>
+        <button class="wf-btn wf-btn-sm wf-btn-secondary" onclick="closeModal()">✕</button>
+      </div>
+      <div class="wf-modal-body" id="modalBody">
+      </div>
+      <div class="wf-modal-footer">
+        <button class="wf-btn wf-btn-secondary" onclick="closeModal()">닫기</button>
+        <button class="wf-btn" id="modalActionBtn" onclick="closeModal()">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const screens = {
+      'SCR-01': '스포츠 메인 홈',
+      'SCR-02': '전체 스포츠 카탈로그',
+      'SCR-03': '오하운 스타터 팩 상세',
+      'SCR-04': '스포츠 슬림 롱타월 상세',
+      'SCR-05': '1초 땀 흡수 챌린지',
+      'SCR-06': '땀 냄새 제로 탈취 실험실',
+      'SCR-07': '40% 초경량 & 1시간 퀵 드라이 랩',
+      'SCR-08': '슬로건 Canvas 자수 스튜디오',
+      'SCR-09': '러닝 크루 단체 자수 & 발주',
+      'SCR-10': '운동 종목별 겹수 맞춤 가이드',
+      'SCR-11': '세탁기 간편 관리 지침서',
+      'SCR-12': '미세플라스틱 0% 4無 안심 인증',
+      'SCR-13': '1장 3,000원 스포츠 안심 체험팩',
+      'SCR-14': '장바구니 & 1초 간편결제',
+      'SCR-15': '마이페이지 & 1-Click 재구매',
+      'SCR-EX01': '검색 없음 / 품절 안내',
+      'SCR-EX02': '404 Not Found'
+    };
+
+    function showScreen(screenId) {
+      document.querySelectorAll('.wf-screen').forEach(el => el.classList.remove('active'));
+      const target = document.getElementById(screenId);
+      if (target) target.classList.add('active');
+
+      document.getElementById('topScreenId').innerText = screenId;
+      document.getElementById('topScreenName').innerText = screens[screenId] || screenId;
+
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        if (btn.innerText.includes(screenId)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      if (screenId === 'SCR-08') {
+        setTimeout(updateEmbroideryCanvas, 50);
+      }
+    }
+
+    function setViewport(size, btn) {
+      document.querySelectorAll('.vp-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const frame = document.getElementById('deviceFrame');
+      frame.className = 'device-frame ' + (size === 'desktop' ? '' : size);
+    }
+
+    let embColor = '#D97706';
+    let embColorName = '딥 골드';
+
+    function updateEmbroideryCanvas() {
+      const canvas = document.getElementById('liveEmbroideryCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const text = document.getElementById('embInput').value.trim() || 'RUN FREE';
+
+      ctx.fillStyle = '#1E293B';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < canvas.width; i += 6) {
+        ctx.beginPath();
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, canvas.height);
+        ctx.stroke();
+      }
+      for (let j = 0; j < canvas.height; j += 6) {
+        ctx.beginPath();
+        ctx.moveTo(0, j);
+        ctx.lineTo(canvas.width, j);
+        ctx.stroke();
+      }
+
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+      ctx.roundRect(40, 40, 320, 120, 8);
+      ctx.fill();
+      ctx.strokeStyle = '#64748B';
+      ctx.stroke();
+
+      ctx.font = 'bold 24px -apple-system, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+      ctx.fillText(text.toUpperCase(), 201, 101);
+
+      ctx.fillStyle = embColor;
+      ctx.fillText(text.toUpperCase(), 200, 100);
+
+      ctx.strokeStyle = embColor;
+      ctx.setLineDash([2, 4]);
+      ctx.strokeRect(55, 55, 290, 90);
+      ctx.setLineDash([]);
+    }
+
+    function changeEmbColor(color, name) {
+      embColor = color;
+      embColorName = name;
+      updateEmbroideryCanvas();
+    }
+
+    function applyEmbroideryAndGoCart() {
+      const text = document.getElementById('embInput').value.trim() || 'RUN FREE';
+      document.getElementById('starterEmbText').innerText = `'${text}' (${embColorName})`;
+      document.getElementById('cartEmbVal').innerText = `'${text}'`;
+      showScreen('SCR-14');
+    }
+
+    function openModal(modalId) {
+      const overlay = document.getElementById('modalOverlay');
+      const title = document.getElementById('modalTitle');
+      const body = document.getElementById('modalBody');
+      const btn = document.getElementById('modalActionBtn');
+
+      if (modalId === 'MOD-01') {
+        title.innerText = 'MOD-01: 실시간 Canvas 슬로건 자수 모달';
+        body.innerHTML = `
+          <p style="margin-bottom:12px;">원하시는 슬로건 문구를 입력하시면 패브릭 위에 0.05초 실시간으로 자수가 합성됩니다.</p>
+          <input type="text" value="RUN FREE" id="modalEmbText" style="width:100%; padding:8px; border:1px solid #CBD5E1; border-radius:6px; margin-bottom:8px;">
+          <div style="display:flex; gap:6px;">
+            <span class="wf-tag">딥 골드</span>
+            <span class="wf-tag">세이지 그린</span>
+            <span class="wf-tag">네온 오렌지</span>
+          </div>
+        `;
+        btn.innerText = '자수 시안 적용';
+      } else if (modalId === 'MOD-02') {
+        title.innerText = 'MOD-02: 스냅 단추 스트랩 3D 뷰어';
+        body.innerHTML = `
+          <div class="wf-placeholder" style="height:180px;">[스냅 단추형 스트랩 360도 3D 인터랙션 회전 뷰어]</div>
+          <p style="margin-top:10px; font-size:12px; color:#475569;">헬스 기구 거치 및 락커룸 고리에 원터치로 체결할 수 있는 프리미엄 스냅 단추 마감입니다.</p>
+        `;
+        btn.innerText = '옵션 선택 완료';
+      } else if (modalId === 'MOD-03') {
+        title.innerText = 'MOD-03: 1장 3,000원 안심 체험팩 (100% 환급)';
+        body.innerHTML = `
+          <p style="font-weight:700; color:#1E3A8A; margin-bottom:8px;">3,000원에 먼저 1장을 사용해보세요!</p>
+          <p style="font-size:12px; color:#475569; margin-bottom:12px;">본품 세트 구매 시 즉시 사용할 수 있는 100% 환급(3,000원) 쿠폰 코드가 카카오 알림톡으로 즉시 발급됩니다.</p>
+          <input type="text" placeholder="받으실 분 이름" style="width:100%; padding:8px; border:1px solid #CBD5E1; border-radius:6px; margin-bottom:6px;">
+          <input type="text" placeholder="휴대폰 번호 (010-XXXX-XXXX)" style="width:100%; padding:8px; border:1px solid #CBD5E1; border-radius:6px;">
+        `;
+        btn.innerText = '3,000원 결제하고 쿠폰 받기';
+      } else if (modalId === 'MOD-04') {
+        title.innerText = 'MOD-04: 러닝 크루 단체 직인 견적서 PDF 1초 출력';
+        body.innerHTML = `
+          <div class="wf-placeholder" style="height:160px;">[플로뜰리에 법인 직인 날인 공식 견적서 PDF 미리보기]</div>
+          <p style="margin-top:8px; font-size:12px;">선택 수량: <strong>50장 (15% 크루 단체 할인 적용)</strong> • 예상 납품일: 3영업일 이내</p>
+        `;
+        btn.innerText = '견적서 PDF 즉시 다운로드';
+      } else if (modalId === 'MOD-05') {
+        title.innerText = 'MOD-05: KATRI 모락셀라균 탈취율 99.8% 성적서 200% 확대';
+        body.innerHTML = `
+          <div class="wf-placeholder" style="height:200px;">[KATRI 국가공인 시험연구원 탈취 성적서 원본 200% 확대]</div>
+          <p style="margin-top:8px; font-size:12px;">시험 항목: 땀 냄새 원인균(모락셀라균) 탈취율 99.8% 감소 검증 완료</p>
+        `;
+        btn.innerText = '성적서 PDF 다운로드';
+      }
+
+      overlay.classList.add('active');
+    }
+
+    function closeModal(e) {
+      const overlay = document.getElementById('modalOverlay');
+      overlay.classList.remove('active');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      updateEmbroideryCanvas();
+    });
+  </script>
+</body>
+</html>

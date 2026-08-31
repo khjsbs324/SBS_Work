@@ -1,0 +1,4588 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SOAPHE · 오래 남는 온기 (웹디자인 최종본)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+<style>
+/* ==========================================================================
+   SOAPHE 웹디자인 최종본 - 디자인/설계 오류(FIX-01~03) 완벽 개선 완료본
+   [반영 레퍼런스 분석 사항]
+   1. yorien.com:
+      - 반투명 글래스모피즘 상단바 (히어로 배경 비침 & 개방감)
+      - 전 섹션 통일감 있는 흐린 반투명 박스 (Frosted Glass Container)
+      - 컬러 믹스 및 다각도 360° 비누/트레이 인터랙티브 커스텀 뷰어
+      - 마우스 인터랙티브 물결/워터 리플 플루이드 효과 (Hero / Product)
+   2. mansionbridge.com:
+      - 스크롤 시 상단바 로고 전환: [심볼+워드마크] → [정갈한 심볼 로고]
+      - 방 소개(IN YOUR ROOM) 섹션: 시그니처 고정 아치형 프레임 & 내부 슬라이드 전환
+   3. 247series.co.kr:
+      - 제품 소개 투명 View More 버튼 (타이포그래피 일체감)
+   4. gong-cha.co.kr:
+      - 탭/버튼 클릭 시 부드러운 펄/조약돌 형태로 모핑되는 인터랙션
+      - 푸터 섹션 마우스 반응형 유기적 펄/버블 파티클 플로팅 효과
+   5. 조선팔도자연담:
+      - 섹션별 톤온톤(Tone-on-Tone) 자연 배경 분할 (Ivory, White, Sage, Oat, Sand, Charcoal)
+      - 글씨체(Serif + Sans)와 굵기(300, 500, 700) 대비를 통한 핵심 메시지 시각적 강조
+   6. daehye.com:
+      - View More 텍스트와 화살표(→) 아이콘을 독립 분리 배치한 정갈한 에디토리얼 버튼
+   ========================================================================== */
+
+:root {
+  /* [정식 디자인 토큰 - 톤온톤 내추럴 팔레트] */
+  --bg-main: #FAF6EE;       /* 버터 크림 / 웜 아이보리 */
+  --bg-alt: #F3EDE2;        /* 소프트 웜 베이지 */
+  --bg-white: #FFFFFF;      /* 퓨어 린넨 화이트 */
+  --bg-sage: #F4F7F2;       /* 보태니컬 세이지 포그 */
+  --bg-oat: #F4EFE6;        /* 텍스처 오트 베이지 */
+  --bg-ember: #F9F4EE;      /* 웜 앰버 틴트 */
+  --bg-taupe: #EFE8DC;      /* 웜 뉴트럴 토프 */
+  --bg-card: #FAF6EE;
+  --bg-card-alt: #F3EDE2;
+  --bg-dark: #2D2B28;       /* 딥 차콜 나이트 */
+  --bg-dark-card: #3D3934;
+  
+  --brand-primary: #283618; /* 딥 올리브 */
+  --brand-sage: #74B49B;    /* 세이지 민트 */
+  --brand-sage-light: #A8D5C8;
+  --accent-warmth: #EB7826; /* 웜 앰버 오렌지 포인트 */
+  --accent-hover: #D96520;  
+  --accent-fill-hover: #EB7826;
+  
+  --text-main: #22201D;     /* 소프트 차콜 블랙 */
+  --text-muted: #5C5851;    /* 서브 텍스트 */
+  --text-sub: #7A746B;      /* 캡션 및 메타 */
+  --text-white: #FAF6EE;
+  --text-white-muted: #D5CEBF;
+  
+  --line-light: #ECE5D8;
+  --line-main: #E2DACD;     /* 1px 헤어라인 */
+  --line-control: #8B8277;  
+  --line-heavy: #22201D;
+  --line-dark: #283618;
+
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-border: rgba(226, 218, 205, 0.85);
+  --glass-shadow: 0 8px 32px rgba(45, 43, 40, 0.04);
+  
+  --radius-control: 2px;
+  --radius-panel: 6px;
+  --radius-pill: 999px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-arch: 220px 220px 16px 16px;
+  
+  --shadow-soft: 0 4px 20px rgba(45, 43, 40, 0.04);
+  --shadow-hover: 0 10px 30px rgba(45, 43, 40, 0.08);
+  --shadow-glass: 0 12px 36px rgba(45, 43, 40, 0.06);
+  
+  --serif: 'Cormorant Garamond', "Newsreader", Georgia, serif;
+  --sans: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", monospace;
+  --max-width: 1280px;
+  --gutter-desktop: clamp(24px, 4.5vw, 64px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font: 15px/1.7 var(--sans);
+  overflow-x: clip;
+}
+
+button, a, input, select, textarea { font: inherit; color: inherit; }
+button, a { cursor: pointer; }
+
+.skip { position: absolute; left: -9999px; }
+.skip:focus {
+  left: 16px;
+  top: 16px;
+  z-index: 999;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 18px;
+  border: 2px solid #000000;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   00. 통일감 있는 반투명 글래스모피즘 박스 (yorien.com #2)
+   ========================================================================== */
+.frosted-box {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--glass-shadow);
+}
+
+/* ==========================================================================
+   00. 에디토리얼 버튼 시스템 & View More 분리 구조 (247series / daehye.com)
+   ========================================================================== */
+.plain {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--line-control);
+  background: transparent;
+  color: var(--text-main);
+  padding: 10px 20px;
+  border-radius: var(--radius-control);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13.5px;
+  transition: all .25s ease;
+  min-height: 44px;
+  box-sizing: border-box;
+  max-width: 100%;
+  word-break: keep-all;
+  text-align: left;
+}
+.plain:hover, .plain:focus-visible {
+  background: rgba(235, 120, 38, 0.08);
+  border-color: var(--accent-hover);
+  color: var(--text-main);
+}
+.plain.primary {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  border-color: var(--bg-dark);
+  border-radius: var(--radius-control);
+  font-weight: 600;
+}
+.plain.primary:hover, .plain.primary:focus-visible {
+  background: var(--accent-fill-hover);
+  border-color: var(--accent-fill-hover);
+  color: #ffffff;
+}
+
+/* 투명 View More 버튼 (247series) + 화살표 독립 분리 (daehye.com) */
+.view-more-trans {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: transparent;
+  border: 1px solid var(--line-heavy);
+  color: var(--text-main);
+  padding: 8px 18px;
+  border-radius: var(--radius-control);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all .25s ease;
+  box-sizing: border-box;
+}
+.view-more-trans .btn-text {
+  flex: 1;
+}
+.view-more-trans .btn-arrow {
+  font-family: var(--sans);
+  font-size: 15px;
+  transition: transform .25s ease;
+  display: inline-block;
+}
+.view-more-trans:hover {
+  background: var(--bg-dark);
+  color: #ffffff;
+  border-color: var(--bg-dark);
+}
+.view-more-trans:hover .btn-arrow {
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+/* 펄/조약돌 모핑 탭 (gong-cha.co.kr #1) */
+.pearl-tab {
+  border-radius: var(--radius-pill);
+  transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+.pearl-tab.active {
+  animation: pearlPop .35s ease forwards;
+}
+@keyframes pearlPop {
+  0% { transform: scale(0.96); }
+  60% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+/* ==========================================================================
+   00. 타이포그래피 & 굵기 대비 시스템 (조선팔도자연담 #2)
+   ========================================================================== */
+.display {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -.02em;
+  line-height: 1.15;
+}
+.display-bold {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+.eyebrow {
+  font-size: 11.5px;
+  letter-spacing: .16em;
+  font-weight: 700;
+  color: var(--text-sub);
+  text-transform: uppercase;
+  display: block;
+}
+.typo-emphasis {
+  font-weight: 700;
+  color: var(--text-main);
+}
+.typo-italic {
+  font-family: var(--serif);
+  font-style: italic;
+}
+.mono-spec {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+
+/* ==========================================================================
+   HEADER & GNB: [FIX-01] 단일 통합 캡슐 바 & 스크롤 심볼 로고 모핑 (yorien & mansionbridge)
+   ========================================================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 0 var(--gutter-desktop);
+  height: 70px;
+  background: rgba(250, 246, 238, 0.78);
+  border-bottom: 1px solid var(--line-main);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: 0 4px 24px rgba(45, 43, 40, 0.03);
+  transition: height .3s ease, background-color .3s ease, box-shadow .3s ease;
+}
+
+header.header-scrolled {
+  height: 58px;
+  background: rgba(250, 246, 238, 0.94);
+  box-shadow: 0 6px 28px rgba(45, 43, 40, 0.06);
+}
+
+/* FIX-01: 데스크톱 GNB 정갈한 단일 통합 캡슐 바 */
+.header-left-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 4px;
+  background: rgba(243, 237, 226, 0.75);
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(10px);
+  width: fit-content;
+}
+.header-left-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 12px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  transition: all .2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.header-left-nav a:hover {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-main);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+.header-left-nav a.active {
+  background: #ffffff;
+  color: var(--text-main);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.header-right-actions .header-action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-main);
+  background: var(--bg-alt);
+  border: 1px solid rgba(226, 218, 205, 0.8);
+  border-radius: var(--radius-pill);
+  transition: all .2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.header-right-actions .header-action-link:hover {
+  background: #ffffff;
+  border-color: var(--accent-hover);
+  color: var(--accent-warmth);
+  box-shadow: 0 2px 8px rgba(235, 120, 38, 0.12);
+}
+
+/* 중앙 로고: 스크롤 시 심볼+워드마크 ➔ 심볼 로고로 매끄럽게 전환 (mansionbridge) */
+.header-center-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-wrap {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.logo-full-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.logo-full-brand .logo-wordmark {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: .22em;
+  font-size: 1.55rem;
+  color: var(--text-main);
+  text-indent: .22em;
+  line-height: 1;
+}
+.logo-full-brand .logo-tagline {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-sub);
+  letter-spacing: 0.05em;
+  display: inline-block;
+  padding-left: 6px;
+  border-left: 1px solid var(--line-control);
+}
+
+.logo-symbol-only {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  top: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.arch-symbol-icon {
+  width: 24px;
+  height: 24px;
+  border: 1.8px solid var(--text-main);
+  border-radius: 12px 12px 2px 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.arch-symbol-icon::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--accent-warmth);
+  border-radius: 50%;
+}
+.symbol-text {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: .18em;
+  color: var(--text-main);
+}
+
+/* 스크롤 시 심볼 로고 활성화 */
+header.header-scrolled .logo-full-brand {
+  opacity: 0;
+  transform: scale(0.85);
+  pointer-events: none;
+}
+header.header-scrolled .logo-symbol-only {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
+
+.header-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.header-quiz-btn {
+  height: 34px;
+  padding: 0 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-main);
+  border: 1.2px solid var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+  text-decoration: none;
+}
+.header-quiz-btn:hover {
+  background: var(--bg-dark);
+  border-color: var(--bg-dark);
+  color: var(--text-white);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.quiz-cta-mobile { display: none; }
+.quiz-cta-full { display: inline; }
+
+/* ==========================================================================
+   01. HERO: 전폭 인트로 + 보조 분할 탐색 + 워터 리플 캔버스 (yorien #4)
+   ========================================================================== */
+.hero-viewport {
+  position: relative;
+  min-height: calc(92vh - 70px);
+  background: radial-gradient(circle at 50% 45%, #FAF6EE 0%, #F3EDE2 60%, #E9E1D2 100%);
+  border-bottom: 1px solid var(--line-main);
+  overflow: hidden;
+}
+
+/* 마우스 물결/워터 리플 인터랙티브 캔버스 (yorien.com #4) */
+#heroRippleCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.6;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .7s ease, visibility .7s ease;
+  z-index: 1;
+}
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* 1번 슬라이드: 전체 1개 전폭 인트로 */
+.hero-slide-full {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 48px var(--gutter-desktop) 44px;
+  background: transparent;
+  gap: 16px;
+}
+
+.hero-left-bottom-brand {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 10px;
+  z-index: 10;
+}
+
+.hero-image-specimen-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 560px;
+  padding: 26px 30px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-panel);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-glass);
+  text-align: center;
+}
+
+.storyboard-annotation-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-sub);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: .05em;
+}
+
+/* 2~4번 슬라이드: 좌우 5:5 2단 분할 */
+.hero-slide-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+.hero-split-pane {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 44px 36px 44px;
+  box-sizing: border-box;
+}
+.hero-split-pane.left-pane {
+  border-right: 1px solid var(--line-main);
+  background: radial-gradient(circle at 50% 45%, #fdfbf7 0%, #F5EFE4 60%, #E9E1D2 100%);
+}
+.hero-split-pane.right-pane {
+  background: radial-gradient(circle at 50% 45%, #ffffff 0%, #FAF6EE 60%, #EFE7D8 100%);
+}
+
+.pane-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  margin-bottom: 8px;
+}
+
+.pane-media-placeholder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 24px;
+  margin: 12px 0 16px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-panel);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  z-index: 5;
+}
+
+.pane-bottom-group {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 520px;
+}
+
+.media-top-chip {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-main);
+  border: 1px solid var(--line-main);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+
+.video-live-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent-warmth);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(235, 120, 38, 0.3);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(235, 120, 38, 0.08);
+}
+
+/* 우측 하단 에디토리얼 슬라이드 컨트롤러 */
+.hero-compact-controls {
+  position: absolute;
+  bottom: 28px;
+  right: var(--gutter-desktop);
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line-main);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(0,0,0,.04);
+}
+
+.hero-slide-counter {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--text-main);
+  user-select: none;
+  min-width: 48px;
+  text-align: center;
+}
+
+.hero-ctrl-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  opacity: .6;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.hero-ctrl-btn:hover {
+  opacity: 1;
+  background: rgba(0,0,0,.05);
+  transform: scale(1.15);
+}
+
+/* ==========================================================================
+   02. FULL-BLEED ATMOSPHERE TRIO (Linen White 톤온톤 배경)
+   ========================================================================== */
+.atmosphere-section {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--line-main);
+}
+.atmosphere-intro {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 6vw var(--gutter-desktop) 4vw;
+}
+
+.atmosphere-full-split {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  min-height: 72vh;
+  border-top: 1px solid var(--line-main);
+}
+.atmosphere-col {
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  border-right: 1px solid var(--line-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3vw 2.5vw;
+}
+.atmosphere-col:last-child { border-right: none; }
+
+.col-bg-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  z-index: 1;
+  transition: transform .5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.atmosphere-col:hover .col-bg-media {
+  transform: scale(1.03);
+}
+
+.col-bg-media.media-01 {
+  background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(244,240,232,0.95) 100%), #EBE4D5;
+}
+.col-bg-media.media-02 {
+  background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(240,243,238,0.95) 100%), #DEE6DE;
+}
+.col-bg-media.media-03 {
+  background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(245,241,235,0.95) 100%), #E5DFD3;
+}
+
+.col-top-badge {
+  position: relative;
+  z-index: 10;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--text-sub);
+}
+.col-bottom-content {
+  position: relative;
+  z-index: 10;
+  color: var(--text-main);
+}
+
+/* 02 하단 대표 세트 3종 퀵 연결 바 */
+.atmosphere-sets-bar {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--line-main);
+  padding: 48px var(--gutter-desktop);
+}
+.atmosphere-sets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border: 1px solid var(--line-main);
+  background: #ffffff;
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,.03);
+}
+.atmosphere-set-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 28px;
+  min-height: 96px;
+  border-right: 1px solid var(--line-main);
+  background: #ffffff;
+  transition: all .25s ease;
+}
+.atmosphere-set-item:last-child { border-right: none; }
+.atmosphere-set-item:hover {
+  background: #FDFBF7;
+}
+.atmosphere-set-item .set-num-badge {
+  font-family: var(--serif);
+  font-size: 24px;
+  color: var(--text-sub);
+  font-style: italic;
+  line-height: 1;
+  min-width: 32px;
+  flex-shrink: 0;
+}
+.atmosphere-set-item .set-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.atmosphere-set-item .set-card-content span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+.atmosphere-set-item .set-card-content b {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+.set-arrow-only {
+  font-size: 22px;
+  color: var(--text-sub);
+  text-decoration: none;
+  min-width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  transition: all .25s ease;
+}
+.atmosphere-set-item:hover .set-arrow-only {
+  color: #ffffff;
+  background: var(--bg-dark);
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   03. TOUCH & BREATHE: 360° 비누 뷰어 & 컬러 믹스 & 4대 조향 (yorien #3)
+   ========================================================================== */
+.scents-editorial-section {
+  background: var(--bg-sage);
+  padding: clamp(72px, 8.5vw, 130px) 0;
+  width: 100%;
+  position: relative;
+}
+
+.scents-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter-desktop);
+  box-sizing: border-box;
+}
+
+.scents-section-header {
+  margin-bottom: clamp(36px, 4.5vw, 52px);
+  text-align: left;
+}
+
+.scents-stage-grid {
+  display: grid;
+  grid-template-columns: 1.32fr 1fr;
+  gap: clamp(32px, 4.5vw, 64px);
+  align-items: stretch;
+}
+
+/* 좌측 360° 비누 캔버스 & 컬러 믹스 인터랙션 */
+.scents-cinematic-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stage-ambient-canvas {
+  width: 100%;
+  min-height: 540px;
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-panel);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-glass);
+  cursor: grab;
+  touch-action: pan-y; /* FIX-02: 수직 스크롤 통과 */
+}
+.stage-ambient-canvas:active { cursor: grabbing; }
+
+.mobile-touch-guide {
+  display: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-sub);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  margin: 6px auto 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.ambient-bg-layer {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(116, 180, 155, 0.18) 0%, rgba(243, 237, 226, 0.6) 70%, #ffffff 100%);
+  transition: background .5s ease;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.ambient-visual-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.94);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-main);
+  backdrop-filter: blur(8px);
+}
+
+.pebble-soap-stage {
+  position: relative;
+  z-index: 2;
+  perspective: 900px;
+  user-select: none;
+}
+
+.pebble-soap-3d {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: transform 0.08s linear;
+}
+
+.pebble-body {
+  width: 172px;
+  height: 156px;
+  background: #e4ece6;
+  border-radius: 46% 54% 52% 48% / 48% 52% 48% 52%;
+  border: 1px solid rgba(226, 218, 205, 0.8);
+  box-shadow: 0 20px 42px rgba(45, 43, 40, 0.12), inset 0 2px 8px rgba(255, 255, 255, 0.85), inset 0 -4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background .4s ease;
+}
+
+.pebble-engrave {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: rgba(34, 32, 29, 0.65);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.pebble-sub-text {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: rgba(34, 32, 29, 0.45);
+  margin-top: 4px;
+}
+
+.pebble-reflection {
+  position: absolute;
+  top: 18px;
+  left: 26px;
+  width: 56px;
+  height: 28px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 50%;
+  transform: rotate(-25deg);
+  pointer-events: none;
+}
+
+/* 컬러 믹스 및 다각도 뷰 컨트롤 바 (yorien.com #3) */
+.orbit-custom-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-panel);
+  padding: 10px 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.color-swatch-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.swatch-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-sub);
+}
+.color-swatch-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px var(--line-main);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.color-swatch-dot:hover {
+  transform: scale(1.15);
+}
+.color-swatch-dot.active {
+  box-shadow: 0 0 0 2px var(--brand-primary);
+  transform: scale(1.15);
+}
+
+.angle-presets-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.angle-btn {
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-pill);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-sub);
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.angle-btn:hover, .angle-btn.active {
+  background: var(--bg-dark);
+  color: #ffffff;
+  border-color: var(--bg-dark);
+}
+
+.stage-hud-spec {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-sub);
+  letter-spacing: 0.05em;
+  padding: 0 12px;
+}
+
+/* 우측 조향 패널 */
+.scents-editorial-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.scent-tabs-row {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--line-main);
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.scent-tab-btn {
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  padding: 8px 16px;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-main);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all .25s ease;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.scent-tab-btn:hover {
+  background: rgba(235, 120, 38, 0.08);
+  border-color: var(--accent-hover);
+  color: var(--text-main);
+}
+.scent-tab-btn.active {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.scent-narrative-flow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 14px;
+  transition: opacity .25s ease;
+}
+
+.scent-code-label {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-sub);
+  letter-spacing: 0.1em;
+  display: block;
+}
+
+.scent-title-serif {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.6vw, 28px);
+  color: var(--text-main);
+  font-weight: 600;
+  margin: 2px 0 6px;
+}
+
+.scent-poem-text {
+  font-family: var(--serif);
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.narrative-divider {
+  height: 1px;
+  background: rgba(226, 218, 205, 0.75);
+}
+
+.narrative-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.narrative-row-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-sub);
+  letter-spacing: 0.06em;
+}
+.narrative-row-value {
+  font-size: 13.5px;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.intensity-gauge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gauge-dots {
+  font-size: 14px;
+  color: var(--accent-warmth);
+  letter-spacing: 2px;
+}
+.gauge-text {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.scent-notes-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 14px;
+  background: var(--glass-bg);
+  border-radius: var(--radius-panel);
+  border: 1px solid var(--line-light);
+}
+.note-line {
+  font-size: 12px;
+  color: var(--text-main);
+  display: flex;
+  gap: 8px;
+}
+.note-line b {
+  color: var(--text-sub);
+  min-width: 44px;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.narrative-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.scent-price-group {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.price-val {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+.price-sub {
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+/* ==========================================================================
+   04. MATERIAL MAGAZINE SPREAD (Oat Beige 톤온톤 배경)
+   ========================================================================== */
+.magazine-section {
+  background: var(--bg-oat);
+  border-top: 1px solid var(--line-main);
+}
+.magazine-intro {
+  padding: 6vw var(--gutter-desktop) 3vw;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.magazine-article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 68vh;
+  border-top: 1px solid var(--line-main);
+  align-items: stretch;
+}
+.magazine-article.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.magazine-media {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.magazine-article:first-of-type .magazine-media {
+  border-right: 1px solid var(--line-main);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(230,226,218,0.96) 100%), #E5DFD3;
+}
+.magazine-article.reverse .magazine-media {
+  border-left: 1px solid var(--line-main);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(238,241,236,0.96) 100%), #DEE6DE;
+}
+.magazine-article:last-of-type .magazine-media {
+  border-right: 1px solid var(--line-main);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(235,238,242,0.96) 100%), #E2E7ED;
+}
+
+.magazine-content {
+  padding: 6vw 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+}
+
+.material-spec-table {
+  margin-top: 24px;
+  border-top: 1px solid var(--line-main);
+  padding-top: 16px;
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+}
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--line-light);
+  padding-bottom: 6px;
+}
+.spec-row span { color: var(--text-sub); }
+.spec-row b { color: var(--text-main); font-weight: 600; }
+
+/* ==========================================================================
+   05. IN YOUR ROOM: 고정 아치형 프레임 & 시네마틱 룩북 (mansionbridge #2)
+   ========================================================================== */
+.in-your-room-section {
+  background: var(--bg-white);
+  padding: clamp(80px, 9vw, 140px) 0;
+  position: relative;
+  border-top: 1px solid var(--line-main);
+}
+
+.lookbook-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter-desktop);
+}
+
+.lookbook-header {
+  text-align: center;
+  margin-bottom: clamp(36px, 4.5vw, 56px);
+}
+
+/* 시그니처 고정 아치형 프레임 (mansionbridge.com #2) */
+.arch-stage-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 580px;
+  background: #ffffff;
+  border: 1.5px solid var(--line-heavy);
+  border-radius: var(--radius-arch);
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(45, 43, 40, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .4s ease;
+}
+
+.arch-visual-canvas {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 28px 44px;
+  background: radial-gradient(circle at 50% 40%, rgba(250, 246, 238, 0.75) 0%, #ffffff 85%);
+  min-height: 480px;
+  transition: background .4s ease, opacity .25s ease;
+}
+
+.lookbook-ambient-badge {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-sub);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 6px 14px;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(8px);
+}
+
+.lookbook-space-art {
+  text-align: center;
+  max-width: 620px;
+  z-index: 2;
+  position: relative;
+}
+.lookbook-space-desc {
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.9vw, 20px);
+  color: var(--text-main);
+  line-height: 1.75;
+  margin: 0;
+  font-weight: 500;
+  word-break: keep-all;
+}
+
+/* 핫스팟 (+) 핀 및 팝업창 */
+.lookbook-hotspot-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+.hotspot-pin-wrap {
+  position: absolute;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 60;
+  top: 68%;
+  left: 50%;
+}
+.hotspot-dot {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1.5px solid var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  transition: all .25s ease;
+  position: relative;
+}
+.hotspot-dot::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-main);
+  opacity: .45;
+  animation: hotspotPulse 2.2s infinite ease-out;
+}
+@keyframes hotspotPulse {
+  0% { transform: scale(0.85); opacity: 0.85; }
+  100% { transform: scale(1.65); opacity: 0; }
+}
+.hotspot-pin-wrap:hover .hotspot-dot,
+.hotspot-pin-wrap.is-active .hotspot-dot {
+  background: var(--text-main);
+  color: #ffffff;
+  transform: scale(1.12);
+}
+
+/* FIX-03: 핫스팟(+) 팝업창 짤림 완전 방지 (캔버스 중앙 정렬 및 여백 클램핑) */
+.hotspot-pin-wrap {
+  position: absolute;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 60;
+  top: 68%;
+  left: 50%;
+  transition: top .4s ease, left .4s ease;
+}
+
+.hotspot-tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.92);
+  background: rgba(255, 255, 255, 0.98);
+  border: 1.5px solid var(--text-main);
+  padding: 24px 26px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(45, 43, 40, 0.22);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .25s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 100;
+  width: 380px;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+  text-align: left;
+}
+.hotspot-tooltip.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.hotspot-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.tooltip-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brand-primary);
+  letter-spacing: .12em;
+  display: block;
+  margin-bottom: 6px;
+}
+.tooltip-title {
+  font-family: var(--serif);
+  font-size: 19.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 14px;
+}
+.tooltip-spec-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--line-main);
+  border-bottom: 1px solid var(--line-main);
+  padding: 12px 0;
+  margin-bottom: 14px;
+}
+.tooltip-modal-link {
+  width: 100%;
+  height: 42px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--bg-dark);
+  border: 1px solid var(--bg-dark);
+  border-radius: var(--radius-xs);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+}
+.tooltip-modal-link:hover {
+  background: var(--accent-warmth);
+  border-color: var(--accent-warmth);
+}
+
+/* 아치 프레임 하단 1줄 탭/액션 바 */
+.arch-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--line-main);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.lookbook-curation-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.lookbook-nav-btn {
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  padding: 8px 18px;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-main);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.lookbook-nav-btn:hover {
+  background: rgba(235, 120, 38, 0.08);
+  border-color: var(--accent-hover);
+  color: var(--text-main);
+}
+.lookbook-nav-btn.active {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+.lookbook-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   06. LIVING & SECOND LIFE (Warm Sand 톤온톤 배경)
+   ========================================================================== */
+.living-section {
+  background: var(--bg-main);
+  border-top: 1px solid var(--line-main);
+}
+.living-intro {
+  padding: 6vw var(--gutter-desktop) 3vw;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.phase-trio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  min-height: 56vh;
+  border-top: 1px solid var(--line-main);
+  border-bottom: 1px solid var(--line-main);
+}
+.phase-col {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  border-right: 1px solid var(--line-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 24px;
+}
+.phase-col:last-child { border-right: none; }
+
+.phase-bg-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  z-index: 1;
+}
+.phase-bg-media.phase-01 { background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(235,238,242,0.95) 100%), #DEE2E6; }
+.phase-bg-media.phase-02 { background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(240,242,245,0.95) 100%), #E9ECEF; }
+.phase-bg-media.phase-03 { background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(230,234,240,0.95) 100%), #CED4DA; }
+
+/* UGC 무한 롤링 티커 */
+.ugc-moodboard-section {
+  padding: 5vw 0 4vw;
+  width: 100%;
+  overflow: hidden;
+}
+.ugc-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 32px 0 0;
+  padding: 12px 0 16px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+.ugc-marquee-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: ugcMarqueeScroll 45s linear infinite;
+}
+.ugc-marquee-track:hover { animation-play-state: paused; }
+@keyframes ugcMarqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 12px)); }
+}
+
+.ugc-card {
+  width: 320px;
+  min-width: 320px;
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all .25s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,.03);
+}
+.ugc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--line-heavy);
+}
+.ugc-media-box {
+  height: 200px;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line-main);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.ugc-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.ugc-quote {
+  font-family: var(--serif);
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-main);
+  margin: 0 0 12px;
+  word-break: keep-all;
+}
+.ugc-meta {
+  font-size: 12px;
+  color: var(--text-sub);
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed var(--line-light);
+  padding-top: 10px;
+}
+
+/* ==========================================================================
+   07. GIFT ARCHIVE (Warm Ember 톤온톤 배경)
+   ========================================================================== */
+.gift-archive-section {
+  padding: 6vw var(--gutter-desktop);
+  background: var(--bg-ember);
+  border-top: 1px solid var(--line-main);
+}
+.gift-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.gift-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.gift-theme-nav-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.gift-theme-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gift-theme-btn {
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  padding: 9px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.gift-theme-btn:hover {
+  background: rgba(235, 120, 38, 0.08);
+  border-color: var(--accent-hover);
+}
+.gift-theme-btn.active {
+  background: var(--brand-primary);
+  color: #ffffff;
+  border-color: var(--brand-primary);
+  font-weight: 600;
+}
+
+.gift-stage-frame {
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+  box-shadow: var(--shadow-glass);
+  display: flex;
+  flex-direction: column;
+}
+.gift-visual-canvas {
+  position: relative;
+  padding: 44px 36px 36px;
+  background: radial-gradient(circle at 50% 40%, rgba(250, 246, 238, 0.75) 0%, #ffffff 85%);
+  transition: all .35s ease;
+}
+.gift-ambient-badge {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-light);
+}
+
+.gift-canvas-split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(24px, 3.5vw, 48px);
+  align-items: center;
+  margin-top: 18px;
+}
+.gift-mockup-frame {
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  border-radius: 12px;
+  padding: 36px 24px;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+.gift-box-visual {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+.gift-package-tag {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-sub);
+  background: var(--bg-alt);
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--line-light);
+}
+.gift-craft-seal {
+  font-size: 11.5px;
+  font-weight: 700;
+  background: var(--bg-dark);
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.gift-product-name {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 22px);
+  color: var(--text-main);
+  font-weight: 600;
+}
+.gift-product-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.gift-package-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-sub);
+  padding: 8px 4px 0;
+}
+.gift-package-caption b { font-size: 16px; color: var(--text-main); }
+
+/* 실시간 한지 엽서 스튜디오 */
+.gift-letter-studio {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.gift-hanji-card {
+  background: #FDFBF7;
+  border: 1px solid rgba(210, 204, 192, 0.8);
+  border-radius: 8px;
+  padding: 24px 28px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(45, 43, 40, 0.05), inset 0 0 40px rgba(240, 234, 220, 0.4);
+}
+.hanji-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed rgba(210, 204, 192, 0.6);
+  padding-bottom: 8px;
+}
+.hanji-label {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-sub);
+}
+.hanji-live-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent-warmth);
+  background: rgba(235, 120, 38, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.hanji-quote-text {
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.8vw, 19px);
+  color: var(--text-main);
+  font-weight: 600;
+  line-height: 1.65;
+  margin: 16px 0;
+  word-break: keep-all;
+  text-align: center;
+}
+.hanji-watermark {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+.gift-letter-input-box {
+  background: var(--bg-alt);
+  border: 1px solid var(--line-main);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.letter-input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.letter-input-label { font-size: 12px; font-weight: 700; color: var(--text-main); }
+.letter-input-counter { font-size: 12px; color: var(--text-muted); font-family: var(--mono); }
+.letter-text-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--radius-xs);
+  background: #ffffff;
+  color: var(--text-main);
+  box-sizing: border-box;
+}
+.letter-text-input:focus { outline: none; border-color: var(--text-main); }
+
+.gift-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--line-main);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.gift-bottom-spec {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.gift-spec-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-sub);
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   08. QUICK FINDER (Stone Sand 톤온톤 배경)
+   ========================================================================== */
+#finder {
+  background: var(--bg-taupe);
+  border-top: 1px solid var(--line-main);
+}
+.wrap { max-width: 1240px; margin: auto; padding: 7vw var(--gutter-desktop); }
+.wrap-wide { max-width: 1360px; margin: auto; padding: 7vw var(--gutter-desktop); }
+
+.finder-split-grid,
+.preview-split-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(36px, 4.5vw, 64px);
+  align-items: start;
+}
+.finder-text-col,
+.preview-text-col {
+  grid-column: span 5;
+}
+.finder-form-col,
+.preview-form-col {
+  grid-column: span 7;
+}
+
+.quiz-progress-wrap { margin-bottom: 20px; }
+.quiz-progress-track {
+  width: 100%;
+  height: 4px;
+  background: var(--line-light);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.quiz-progress-bar {
+  height: 100%;
+  background: var(--bg-dark);
+  border-radius: 999px;
+  transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.quiz-option {
+  width: 100%;
+  text-align: left;
+  padding: 14px 18px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+  background: #ffffff;
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-panel);
+  cursor: pointer;
+  transition: all .2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.quiz-option:hover, .quiz-option:focus-visible {
+  background: rgba(235, 120, 38, 0.08);
+  border-color: var(--accent-hover);
+  color: var(--text-main);
+  transform: translateX(4px);
+}
+.quiz-option[aria-pressed="true"] {
+  background: var(--brand-primary);
+  color: #ffffff;
+  border-color: var(--brand-primary);
+  font-weight: 600;
+}
+
+.quiz-summary-box {
+  background: var(--bg-card);
+  border: 1px solid var(--line-light);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.quiz-result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.quiz-result-card {
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-panel);
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all .2s ease;
+}
+.quiz-result-card.best-match {
+  border: 1.5px solid var(--text-main);
+  background: linear-gradient(180deg, #ffffff 0%, rgba(250, 246, 238, 0.5) 100%);
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(45, 43, 40, 0.08);
+}
+.quiz-best-match-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--bg-dark);
+  padding: 4px 10px;
+  border-radius: 4px;
+  width: max-content;
+}
+.quiz-alt-match-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-sub);
+  background: var(--bg-alt);
+  border: 1px solid var(--line-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.quiz-rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-dark);
+  color: var(--text-white);
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   09. PRIVATE PREVIEW & SHOWROOM FORM (Pure Atelier White)
+   ========================================================================== */
+#preview {
+  border-top: 1px solid var(--line-main);
+  background: var(--bg-white);
+}
+.form {
+  display: grid;
+  gap: 12px;
+  background: var(--bg-card);
+  padding: 24px;
+  border-radius: var(--radius-panel);
+  border: 1px solid var(--line-main);
+}
+.form label { display: block; font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+.form input, .form select {
+  width: 100%;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid var(--line-control);
+  border-radius: var(--radius-panel);
+  min-height: 48px;
+  font-family: var(--sans);
+  font-size: 14.5px;
+  color: var(--text-main);
+  box-sizing: border-box;
+}
+.field-error { min-height: 18px; font-size: 12px; font-weight: 700; color: #000000; text-decoration: underline; display: block; }
+.error { border: 2px solid var(--line-heavy); padding: 16px; background: var(--bg-card); border-radius: 8px; margin-bottom: 14px; }
+.hidden { display: none !important; }
+.success {
+  border: 2px solid var(--line-heavy);
+  padding: 28px;
+  background: var(--bg-main);
+  border-radius: var(--radius-panel);
+  text-align: center;
+}
+
+/* ==========================================================================
+   10. FAQ SECTION (Warm Neutral Taupe 톤온톤 배경)
+   ========================================================================== */
+.faq-section {
+  padding: 7vw var(--gutter-desktop);
+  background: var(--bg-taupe);
+  border-top: 1px solid var(--line-main);
+}
+.faq-container {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.faq-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.faq-title {
+  font-size: clamp(32px, 4.5vw, 50px);
+  margin: 8px 0 12px;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+.faq-subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0 auto;
+  max-width: 560px;
+  word-break: keep-all;
+}
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line-main);
+}
+.faq-item {
+  border-bottom: 1px solid var(--line-main);
+  transition: background-color .2s ease;
+}
+.faq-item[open] {
+  background: rgba(255, 255, 255, 0.45);
+}
+.faq-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  list-style: none;
+}
+.faq-summary::-webkit-details-marker { display: none; }
+.faq-summary:hover {
+  background: rgba(235, 120, 38, 0.05);
+}
+.faq-icon {
+  font-family: var(--mono);
+  font-size: 18px;
+  color: var(--text-muted);
+  transition: transform .25s ease;
+}
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+  color: var(--text-main);
+}
+.faq-content {
+  padding: 0 10px 24px;
+}
+.faq-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   FOOTER: 마우스 반응형 펄/비누 거품 파티클 캔버스 (gong-cha.co.kr #2)
+   ========================================================================== */
+footer.dark {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 푸터 마우스 인터랙티브 펄/버블 캔버스 (gong-cha.co.kr #2) */
+#footerPebbleCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.45;
+}
+
+footer .wrap-wide {
+  position: relative;
+  z-index: 2;
+}
+
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+.span5 { grid-column: span 5; }
+.span7 { grid-column: span 7; }
+
+/* 모달 */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  z-index: 999;
+  padding: 6vh 5vw;
+}
+.modal.open { display: grid; place-items: center; }
+.dialog {
+  max-width: 640px;
+  width: 100%;
+  margin: auto;
+  background: var(--bg-main);
+  color: var(--text-main);
+  border: 1.5px solid var(--line-heavy);
+  border-radius: 16px;
+  padding: 32px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* 모바일 하단 네비게이션 */
+.mobilebar { display: none; }
+
+@media (max-width: 820px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 58px;
+    padding: 0 16px;
+  }
+  header nav, .header-right-actions a.header-action-link { display: none; }
+  .logo-full-brand .logo-tagline { display: none; }
+  .quiz-cta-full { display: none; }
+  .quiz-cta-mobile { display: inline; }
+  
+  .hero-slide-split {
+    grid-template-columns: 1fr;
+  }
+  .atmosphere-full-split {
+    grid-template-columns: 1fr;
+  }
+  .atmosphere-sets-grid {
+    grid-template-columns: 1fr;
+  }
+  .atmosphere-set-item {
+    border-right: none;
+    border-bottom: 1px solid var(--line-main);
+  }
+  .scents-stage-grid {
+    grid-template-columns: 1fr;
+  }
+  .magazine-article, .magazine-article.reverse {
+    grid-template-columns: 1fr;
+  }
+  .arch-stage-frame {
+    border-radius: 120px 120px 12px 12px;
+  }
+  .phase-trio-grid {
+    grid-template-columns: 1fr;
+  }
+  .gift-canvas-split {
+    grid-template-columns: 1fr;
+  }
+  .finder-split-grid, .preview-split-grid {
+    grid-template-columns: 1fr;
+  }
+  .finder-text-col, .preview-text-col, .finder-form-col, .preview-form-col {
+    grid-column: span 1;
+  }
+  .grid { display: block; }
+  .span5, .span7 { width: 100%; margin-bottom: 24px; }
+  
+  .mobilebar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    background: rgba(250, 246, 238, 0.95);
+    border-top: 1px solid var(--line-main);
+    z-index: 80;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  .mobilebar a {
+    text-decoration: none;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding: 6px 8px;
+  }
+  .mobilebar a.active {
+    color: var(--brand-primary);
+    font-weight: 800;
+  }
+  body { padding-bottom: 56px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<!-- ==========================================================================
+     GNB (반투명 배경 + 스크롤 시 심볼 로고 모핑 전환 - yorien #1 & mansionbridge #1)
+     ========================================================================== -->
+<header id="siteHeader">
+  <!-- [좌측 메뉴]: 비누 소개, 받침대 소재, 공간 연출, 선물 포장 -->
+  <nav class="header-left-nav" aria-label="제품 및 리추얼 탐색">
+    <a href="#scents" data-section="scents" class="pearl-tab">비누 소개</a>
+    <a href="#materials" data-section="materials" class="pearl-tab">받침대 소재</a>
+    <a href="#rooms" data-section="rooms" class="pearl-tab">공간 연출</a>
+    <a href="#gift" data-section="gift" class="pearl-tab">선물 포장</a>
+  </nav>
+
+  <!-- [중앙 로고]: 상단에선 심볼+워드마크, 스크롤 내리면 심볼 로고로 매끄럽게 전환 -->
+  <div class="header-center-logo">
+    <a class="logo-wrap" href="#hero" aria-label="SOAPHE 메인으로 이동">
+      <!-- 1. 기본 전체 로고 (상단 위치 시) -->
+      <div class="logo-full-brand">
+        <span class="logo-wordmark">SOAPHE</span>
+        <span class="logo-tagline">오래 남는 온기</span>
+      </div>
+      <!-- 2. 심볼 로고 (스크롤 다운 시 등장) -->
+      <div class="logo-symbol-only" aria-hidden="true">
+        <div class="arch-symbol-icon"></div>
+        <span class="symbol-text">SOAPHE</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- [우측 메뉴]: 브랜드 소개, 전체 제품, 1분 맞춤 퀴즈 -->
+  <div class="header-right-actions">
+    <a class="header-action-link pearl-tab" href="브랜드소개페이지_스토리보드.html">브랜드 소개</a>
+    <a class="header-action-link pearl-tab" href="카테고리 페이지.html">전체 제품</a>
+    <a class="header-quiz-btn pearl-tab" href="#finder" aria-label="1분 맞춤 추천 퀴즈로 나만의 제품 찾기">
+      <span class="quiz-cta-full">1분 맞춤 퀴즈</span>
+      <span class="quiz-cta-mobile">맞춤 퀴즈</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ==========================================================================
+       01. HERO: [1번 전폭 풀스크린 메인 + 2~4번 보조 분할 탐색] + 워터 리플 효과 (yorien #4)
+       ========================================================================== -->
+  <section id="hero" class="hero-viewport" aria-roledescription="carousel" aria-label="SOAPHE 대표 제품 및 브랜드 에디토리얼 슬라이더">
+    <!-- 마우스 물결 / 워터 리플 캔버스 레이어 (yorien.com #4) -->
+    <canvas id="heroRippleCanvas"></canvas>
+
+    <!-- 우측 하단 에디토리얼 슬라이드 컨트롤러 (넘버링 + 화살표) -->
+    <div class="hero-compact-controls" role="toolbar" aria-label="슬라이드 이동 컨트롤러">
+      <button id="splitPrevBtn" class="hero-ctrl-btn" type="button" aria-label="이전 슬라이드 (키보드 ←)" title="이전 (←)">‹</button>
+      <span id="heroSlideCounter" class="hero-slide-counter" aria-live="polite">01 / 04</span>
+      <button id="splitNextBtn" class="hero-ctrl-btn" type="button" aria-label="다음 슬라이드 (키보드 →)" title="다음 (→)">›</button>
+    </div>
+
+    <!-- 01. 대표 메인 화면: 브랜드 인상 인트로 -->
+    <div class="hero-slide hero-slide-full active" data-slide="1" role="group" aria-roledescription="slide" aria-label="1 of 4: SOAPHE 브랜드 인트로">
+      <!-- RIGHT: 대표 정물 화보 플레이스홀더 (통일감 있는 흐린 배경 박스 - yorien #2) -->
+      <div class="hero-image-specimen-box frosted-box" role="img" aria-label="SOAPHE 대표 정물 화보 플레이스홀더">
+        <span class="storyboard-annotation-badge">[기획 가이드: 대표 정물 화보]</span>
+        <b style="font-family: var(--serif); font-size: clamp(16px, 1.4vw, 18px); color: var(--text-main); display: block; margin: 6px 0 2px;">
+          SOAPHE 대표 비누 + 오브제 세트 (FORM S-01)
+        </b>
+        <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5; word-break: keep-all;">
+          천연 화강석 트레이와 4주 저온 숙성 무향 비누 큐브 정물
+        </p>
+      </div>
+
+      <!-- LEFT: 브랜드 대표 메시지 (글씨체/굵기 강조 대비 - 조선팔도자연담 #2) -->
+      <div class="hero-left-bottom-brand">
+        <h1 class="display" style="font-size: clamp(28px, 3.8vw, 48px); margin: 0 0 8px; line-height: 1.2; color: var(--text-main); word-break: keep-all;">
+          <span class="typo-italic">쓰임은 사라져도,</span><br>
+          <span class="display-bold">온기는 오래 남도록.</span>
+        </h1>
+        <p style="font-size: clamp(14px, 1.2vw, 16px); color: var(--text-muted); margin: 0 0 16px; line-height: 1.6; max-width: 540px; word-break: keep-all;">
+          일상에 머무는 비누와 오브제, <strong class="typo-emphasis">SOAPHE</strong>
+        </p>
+        <div>
+          <!-- 투명 View More 버튼 & 화살표 독립 분리 (247series & daehye.com) -->
+          <a class="view-more-trans" href="카테고리 페이지.html">
+            <span class="btn-text">전체 제품 만나보기</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02. 보조 탐색 화면: 비누 — 만드는 방식 → 사용하는 감각 -->
+    <div class="hero-slide hero-slide-split" data-slide="2" role="group" aria-roledescription="slide" aria-label="2 of 4: 저온 숙성 비누 탐색">
+      <!-- LEFT: Making (만드는 방식 / 콜드 프로세스) -->
+      <div class="hero-split-pane left-pane">
+        <div class="pane-top-header">
+          <span class="media-top-chip">COLD PROCESS SOAP · 만드는 방식</span>
+        </div>
+        <div class="pane-media-placeholder frosted-box" role="img" aria-label="비누 표본 플레이스홀더">
+          <span class="storyboard-annotation-badge">[기획 가이드: 4주 숙성 비누 표본 컷]</span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">저온 숙성 비누 단면 질감 및 천연 글리세린 텍스처</span>
+        </div>
+        <div class="pane-bottom-group">
+          <h2 class="display" style="font-size: clamp(22px, 2.6vw, 36px); margin: 0 0 6px; line-height: 1.2; color: var(--text-main); word-break: keep-all;">
+            피부에 닿는 순간까지 <span class="typo-italic">천천히.</span>
+          </h2>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; word-break: keep-all;">
+            열을 가하지 않고 4주간 숙성해 자연 글리세린을 그대로 품은 비누
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: Sense (사용하는 감각 / 보태니컬 조향) -->
+      <div class="hero-split-pane right-pane">
+        <div class="pane-top-header">
+          <span class="media-top-chip">BOTANICAL SCENT · 사용하는 감각</span>
+          <span class="video-live-tag">실시간 거품 모션</span>
+        </div>
+        <div class="pane-media-placeholder frosted-box" role="img" aria-label="조향 모션 플레이스홀더">
+          <span class="storyboard-annotation-badge">[기획 가이드: 편백 오일 & 거품 모션 컷]</span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">국내산 편백 오일 추출 & 풍성하고 부드러운 거품 텍스처</span>
+        </div>
+        <div class="pane-bottom-group">
+          <h3 style="font-family: var(--serif); font-size: clamp(18px, 1.8vw, 22px); margin: 0 0 4px; color: var(--text-main); font-weight: 600;">
+            편백 숲 향의 호흡
+          </h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0 0 10px; line-height: 1.6; word-break: keep-all;">
+            화학 향료를 배제하고 자연에서 길어 올린 보태니컬 향
+          </p>
+          <div>
+            <a class="view-more-trans" href="#scents">
+              <span class="btn-text">비누 컬렉션 둘러보기</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03. 보조 탐색 화면: 욕실 — 사용 경험 -->
+    <div class="hero-slide hero-slide-split" data-slide="3" role="group" aria-roledescription="slide" aria-label="3 of 4: 단정한 욕실 공간 연출 탐색">
+      <!-- LEFT: Product & Structure (구조 설계) -->
+      <div class="hero-split-pane left-pane">
+        <div class="pane-top-header">
+          <span class="media-top-chip">PRODUCT &amp; STRUCTURE · 구조 설계</span>
+        </div>
+        <div class="pane-media-placeholder frosted-box" role="img" aria-label="구조 렌더 플레이스홀더">
+          <span class="storyboard-annotation-badge">[기획 가이드: 곡면 배수 트레이 렌더 컷]</span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">곡면 자연 배수 구조로 물 고임 없이 건조되는 비례 렌더</span>
+        </div>
+        <div class="pane-bottom-group">
+          <h3 style="font-family: var(--serif); font-size: clamp(18px, 1.8vw, 22px); margin: 0 0 4px; color: var(--text-main); font-weight: 600;">
+            FORM S-01 시그니처 아치
+          </h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; word-break: keep-all;">
+            곡면 자연 배수 구조로 물때 없이 쾌적한 건조
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: Experience & Space (공간 경험) -->
+      <div class="hero-split-pane right-pane">
+        <div class="pane-top-header">
+          <span class="media-top-chip">03 BATHROOM · 공간 경험</span>
+          <span class="video-live-tag">실시간 물빠짐 모션</span>
+        </div>
+        <div class="pane-media-placeholder frosted-box" role="img" aria-label="공간 화보 플레이스홀더">
+          <span class="storyboard-annotation-badge">[기획 가이드: 세면대 타일 매칭 화보 컷]</span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">화강석 · 백자 · 강화유리 세면대 타일 톤 매칭 연출</span>
+        </div>
+        <div class="pane-bottom-group">
+          <h2 class="display" style="font-size: clamp(22px, 2.6vw, 36px); margin: 0 0 6px; line-height: 1.2; color: var(--text-main); word-break: keep-all;">
+            욕실의 시각적 스트레스를 <span class="typo-italic">비우다.</span>
+          </h2>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0 0 8px; line-height: 1.6; word-break: keep-all;">
+            녹아내린 받침대 대신 단정한 오브제 하나로 완성하는 욕실
+          </p>
+          <div>
+            <a class="view-more-trans" href="#materials">
+              <span class="btn-text">3대 공간 소재 비교하기</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04. 보조 탐색 화면: 오브제 — 두 번째 쓰임 -->
+    <div class="hero-slide hero-slide-split" data-slide="4" role="group" aria-roledescription="slide" aria-label="4 of 4: 일상 활용 두 번째 쓰임 탐색">
+      <!-- LEFT: USE 1 · SOAP (비누를 사용하는 동안) -->
+      <div class="hero-split-pane left-pane">
+        <div class="pane-top-header">
+          <span class="media-top-chip">USE 1 · 비누를 사용하는 동안</span>
+        </div>
+        <div class="pane-media-placeholder frosted-box" role="img" aria-label="사용 씬 1 플레이스홀더">
+          <span class="storyboard-annotation-badge">[기획 가이드: 욕실 세면대 거치 정물 컷]</span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">욕실 세면대 위에서 비누를 정갈하게 받치고 건조시키는 본연의 쓰임</span>
+        </div>
+        <div class="pane-bottom-group">
+          <h3 style="font-family: var(--serif); font-size: clamp(18px, 1.8vw, 22px); margin: 0 0 4px; color: var(--text-main); font-weight: 600;">
+            욕실 세면대 비누 받침대
+          </h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; word-break: keep-all;">
+            매일의 세안 시간 동안 물때 없이 깨끗한 거치
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: USE 2 · OBJECT (비누가 사라진 이후) -->
+      <div class="hero-split-pane right-pane">
+        <div class="pane-top-header">
+          <span class="media-top-chip">USE 2 · 비누가 사라진 이후</span>
+          <span class="video-live-tag">실시간 소품 거치 모션</span>
+        </div>
+        <div class="pane-media-placeholder frosted-box" role="img" aria-label="사용 씬 2 플레이스홀더">
+          <span class="storyboard-annotation-badge">[기획 가이드: 서재 데스크 소품 거치 컷]</span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">서재 책상 및 거실 테이블 위 차 키, 시계, 주얼리 트레이 활용</span>
+        </div>
+        <div class="pane-bottom-group">
+          <h2 class="display" style="font-size: clamp(22px, 2.6vw, 36px); margin: 0 0 6px; line-height: 1.2; color: var(--text-main); word-break: keep-all;">
+            쓰임이 끝난 자리에서 <span class="typo-italic">다시 시작되도록.</span>
+          </h2>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0 0 8px; line-height: 1.6; word-break: keep-all;">
+            비누가 비워진 후에도 서재와 일상에 영구히 남는 라이프스타일 트레이
+          </p>
+          <div>
+            <a class="view-more-trans" href="#living">
+              <span class="btn-text">오브제 두 번째 쓰임 보기</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       02. FULL-BLEED ATMOSPHERE TRIO (Linen White 톤온톤 배경)
+       ========================================================================== -->
+  <section class="atmosphere-section" aria-label="SOAPHE 3대 감각 정물 화보 스프레드">
+    <div class="atmosphere-intro">
+      <span class="eyebrow">01 브랜드 이야기 · BRAND PHILOSOPHY</span>
+      <h2 class="display" style="font-size: clamp(34px, 4.5vw, 60px); margin: 16px 0 14px; color: var(--text-main);">
+        사라지는 비누와<br>
+        <span class="typo-italic">오래 남는 온기 사이.</span>
+      </h2>
+      <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin: 0 auto; max-width: 640px;">
+        매일 아침 세안할 때 나를 위로해 주는 따뜻한 비누와,<br>
+        그 비누를 소중히 품어주는 감성 공예 오브제가 당신의 일상 공간에 평온함을 더합니다.
+      </p>
+    </div>
+
+    <div class="atmosphere-full-split">
+      <article class="atmosphere-col">
+        <div class="col-bg-media media-01" role="img" aria-label="물에 깎인 자연석의 부드러운 곡면 풀스크린 화보">
+          <div class="frosted-box" style="max-width: 320px; padding: 20px; margin-bottom: 40px;">
+            <b style="font-family: var(--serif); font-size: 20px; color: var(--text-main); display: block; line-height: 1.3;">
+              01 ORGANIC SILHOUETTE
+            </b>
+            <span style="font-size: 13px; color: var(--text-muted); display: block; margin-top: 6px;">
+              물에 둥글게 마모된 조약돌의 유기적 곡선과 그림자
+            </span>
+          </div>
+        </div>
+        <div class="col-top-badge">01 NATURE &amp; CURVE</div>
+        <div class="col-bottom-content">
+          <h3 style="font-family: var(--serif); font-size: 20px; margin: 0 0 8px; color: var(--text-main);">자연에서 빌려온 부드러운 선</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            인공적인 직선을 덜어내고, 파도와 물결에 깎인 자연석의 완만한 굴곡으로 비누와 손끝을 부드럽게 맞이합니다.
+          </p>
+        </div>
+      </article>
+
+      <article class="atmosphere-col">
+        <div class="col-bg-media media-02" role="img" aria-label="손으로 빚은 도자기의 따뜻한 흙 질감 풀스크린 화보">
+          <div class="frosted-box" style="max-width: 320px; padding: 20px; margin-bottom: 40px;">
+            <b style="font-family: var(--serif); font-size: 20px; color: var(--text-main); display: block; line-height: 1.3;">
+              02 TACTILE WARMTH
+            </b>
+            <span style="font-size: 13px; color: var(--text-muted); display: block; margin-top: 6px;">
+              고온에서 구워낸 백자 도자기의 부드러운 흙 질감
+            </span>
+          </div>
+        </div>
+        <div class="col-top-badge">02 CRAFT &amp; PURITY</div>
+        <div class="col-bottom-content">
+          <h3 style="font-family: var(--serif); font-size: 20px; margin: 0 0 8px; color: var(--text-main);">천연 글리세린이 빚은 보습막</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            열을 가하지 않고 4주간 서서히 굳힌 순수 식물성 오일 포뮬러. 피부 당김 없이 조밀하고 미세한 거품을 선사합니다.
+          </p>
+        </div>
+      </article>
+
+      <article class="atmosphere-col">
+        <div class="col-bg-media media-03" role="img" aria-label="아침 햇살이 스며드는 정돈된 욕실 세면대 풀스크린 화보">
+          <div class="frosted-box" style="max-width: 320px; padding: 20px; margin-bottom: 40px;">
+            <b style="font-family: var(--serif); font-size: 20px; color: var(--text-main); display: block; line-height: 1.3;">
+              03 SPATIAL CALM RITUAL
+            </b>
+            <span style="font-size: 13px; color: var(--text-muted); display: block; margin-top: 6px;">
+              아침 햇살이 스며드는 단정한 세면대의 고요한 쉼
+            </span>
+          </div>
+        </div>
+        <div class="col-top-badge">03 SPACE &amp; RITUAL</div>
+        <div class="col-bottom-content">
+          <h3 style="font-family: var(--serif); font-size: 20px; margin: 0 0 8px; color: var(--text-main);">공간의 시각적 소란을 비우는 시간</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            녹아내린 받침대의 시각적 스트레스를 없애고, 작은 오브제 하나로 하루의 시작과 끝을 정갈한 쉼으로 바꿉니다.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- 02 하단: 감각을 완성하는 3대 대표 세트 퀵 연결 바 -->
+    <div class="atmosphere-sets-bar">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="eyebrow">SIGNATURE LINEUP</span>
+        <h3 style="font-family: var(--serif); font-size: clamp(20px, 2.5vw, 26px); margin: 6px 0 0; color: var(--text-main); font-weight: 600;">
+          감각을 완성하는 3대 대표 세트
+        </h3>
+      </div>
+      <div class="atmosphere-sets-grid">
+        <div class="atmosphere-set-item">
+          <span class="set-num-badge">01</span>
+          <div class="set-card-content">
+            <span>화강석 &amp; 무향 비누</span>
+            <b>FORM S-01 시그니처 아치 세트</b>
+          </div>
+          <a class="set-arrow-only" href="javascript:void(0)" onclick="openProductModalDirect('FORM S-01')" aria-label="FORM S-01 시그니처 아치 세트 자세히 보기" title="FORM S-01 자세히 보기">→</a>
+        </div>
+        
+        <div class="atmosphere-set-item">
+          <span class="set-num-badge">02</span>
+          <div class="set-card-content">
+            <span>백자 도자기 &amp; 편백 비누</span>
+            <b>FORM S-02 백자 폴드 세트</b>
+          </div>
+          <a class="set-arrow-only" href="javascript:void(0)" onclick="openProductModalDirect('FORM S-02')" aria-label="FORM S-02 백자 폴드 세트 자세히 보기" title="FORM S-02 자세히 보기">→</a>
+        </div>
+        
+        <div class="atmosphere-set-item">
+          <span class="set-num-badge">03</span>
+          <div class="set-card-content">
+            <span>강화유리 &amp; 유자 비누</span>
+            <b>FORM S-03 플루티드 헤일로 세트</b>
+          </div>
+          <a class="set-arrow-only" href="javascript:void(0)" onclick="openProductModalDirect('FORM S-03')" aria-label="FORM S-03 플루티드 헤일로 세트 자세히 보기" title="FORM S-03 자세히 보기">→</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       03. BOTANICAL SCENTS & 360° CINEMATIC STAGE (Herbal Sage Fog 톤온톤 배경)
+       + 컬러 믹스 & 다각도 프리셋 뷰어 (yorien.com #3)
+       ========================================================================== -->
+  <section id="scents" class="scents-editorial-section" aria-label="SOAPHE 4대 식물 조향 및 360도 비누 조형 스테이지">
+    <div class="scents-container">
+      <!-- 헤더 소개부 -->
+      <div class="scents-section-header">
+        <span class="eyebrow">02 제품과 4대 조향 · SOAP &amp; 4 BOTANICAL SCENTS</span>
+        <h2 class="display" style="font-size: clamp(32px, 4.5vw, 54px); margin: 8px 0 12px; color: var(--text-main);">
+          TOUCH &amp; BREATHE.
+        </h2>
+        <p style="font-size: 15px; color: var(--text-muted); margin: 0; max-width: 720px; line-height: 1.7; word-break: keep-all;">
+          단단한 <strong class="typo-emphasis">70mm 조약돌 비누 오브제</strong>가 4가지 식물 향의 옷을 입고 일상의 순간에 머뭅니다.<br>
+          자연에서 빚은 유기적 곡면과 순수한 에센셜 오일의 고요한 잔향을 경험해 보세요.
+        </p>
+      </div>
+
+      <!-- 메인 비대칭 에디토리얼 그리드 (1.32fr : 1fr) -->
+      <div class="scents-stage-grid">
+        <!-- [좌측]: 360° 비정형 조약돌 비누 시네마틱 캔버스 + 다각도/컬러 믹스 툴바 -->
+        <div class="scents-cinematic-stage">
+          <div class="stage-ambient-canvas" id="scentStageCanvas" title="마우스로 드래그하여 360도 회전해 보세요">
+            <!-- 은은한 향 무드 배경 레이어 -->
+            <div class="ambient-bg-layer" id="scentAmbientBg">
+              <span class="ambient-visual-tag" id="ambientVisualTag">[배경 이미지/영상 삽입 예정: 편백 숲의 새벽 안개와 빛]</span>
+            </div>
+
+            <!-- 전면: 360도 드래그 & 회전 가능한 비정형 조약돌 비누 -->
+            <div class="pebble-soap-stage" aria-label="360도 회전 및 인터랙티브 감상이 가능한 비정형 조약돌 비누">
+              <div class="pebble-soap-3d" id="pebbleSoap3D">
+                <div class="pebble-body" id="pebbleBody">
+                  <div class="pebble-engrave">S O A P H E</div>
+                  <div class="pebble-sub-text">COLD PROCESS</div>
+                  <div class="pebble-reflection"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 하단 HUD 정밀 실측 스펙 라인 -->
+            <div class="stage-hud-spec">
+              <span class="hud-item">|← 70mm →|</span>
+              <span class="hud-dot">·</span>
+              <span class="hud-item">100g SOLID</span>
+              <span class="hud-dot">·</span>
+              <span class="hud-item">4 WEEKS AGED</span>
+              <span class="hud-dot">·</span>
+              <span class="hud-item">R 2~6mm PEBBLE</span>
+            </div>
+          </div>
+
+          <!-- 컬러 믹스 스와치 & 다각도 뷰어 툴바 (yorien.com #3) -->
+          <div class="orbit-custom-toolbar">
+            <!-- 컬러 믹스 스와치 -->
+            <div class="color-swatch-group">
+              <span class="swatch-label">컬러 믹스:</span>
+              <button type="button" class="color-swatch-dot active" style="background:#74B49B;" title="01 편백 그린" onclick="switchScent('cypress')"></button>
+              <button type="button" class="color-swatch-dot" style="background:#EB7826;" title="02 웜 앰버" onclick="switchScent('amber')"></button>
+              <button type="button" class="color-swatch-dot" style="background:#F3C623;" title="03 맑은 유자" onclick="switchScent('yuja')"></button>
+              <button type="button" class="color-swatch-dot" style="background:#D8D2C6;" title="04 순수 무향" onclick="switchScent('unscented')"></button>
+            </div>
+
+            <!-- 다각도 앵글 프리셋 -->
+            <div class="angle-presets-group">
+              <button type="button" class="angle-btn active" onclick="setOrbitAngle(0)">정면 0°</button>
+              <button type="button" class="angle-btn" onclick="setOrbitAngle(45)">입체 45°</button>
+              <button type="button" class="angle-btn" onclick="setOrbitAngle(90)">측면 90°</button>
+              <button type="button" class="angle-btn" id="orbitAutoBtnToggle" onclick="toggleAutoOrbit()">360° 자전 ↻</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- [우측]: 에디토리얼 향 스토리텔링 패널 -->
+        <div class="scents-editorial-panel">
+          <!-- 4대 향 셀렉터 탭 (펄 모핑 적용 - gong-cha #1) -->
+          <div class="scent-tabs-row" role="tablist" aria-label="4대 조향 선택">
+            <button class="scent-tab-btn pearl-tab active" role="tab" aria-selected="true" data-scent="cypress" onclick="switchScent('cypress')">01 편백 &amp; 이끼</button>
+            <button class="scent-tab-btn pearl-tab" role="tab" aria-selected="false" data-scent="amber" onclick="switchScent('amber')">02 웜 앰버</button>
+            <button class="scent-tab-btn pearl-tab" role="tab" aria-selected="false" data-scent="yuja" onclick="switchScent('yuja')">03 맑은 유자</button>
+            <button class="scent-tab-btn pearl-tab" role="tab" aria-selected="false" data-scent="unscented" onclick="switchScent('unscented')">04 순수 무향</button>
+          </div>
+
+          <!-- 동적 텍스트 스토리텔링 컨테이너 -->
+          <div class="scent-narrative-flow" id="scentNarrativeFlow">
+            <div class="narrative-top-group">
+              <span class="scent-code-label" id="scentCodeLabel">FORM 01 · CYPRESS &amp; MOSS</span>
+              <h3 class="scent-title-serif" id="scentTitle">01 편백 &amp; 이끼</h3>
+              <p class="scent-poem-text" id="scentPoem">
+                “비 온 뒤 축축한 숲길을 걷는 듯한 서늘하고 깊은 고요함.<br>
+                일상의 소란을 잠재우고 하루의 시작과 끝을 정갈하게 가라앉힙니다.”
+              </p>
+            </div>
+
+            <div class="narrative-divider"></div>
+
+            <!-- 어울리는 일상의 순간 -->
+            <div class="narrative-row">
+              <span class="narrative-row-label">어울리는 일상의 순간</span>
+              <p class="narrative-row-value" id="scentMoment">
+                이른 아침 첫 세안으로 밤사이 쌓인 유분을 씻어내고 맑은 호흡으로 하루를 깨울 때
+              </p>
+            </div>
+
+            <!-- 향 세기 게이지 -->
+            <div class="narrative-row">
+              <span class="narrative-row-label">향 세기 (Intensity)</span>
+              <div class="intensity-gauge-wrap">
+                <span class="gauge-dots" id="scentGaugeDots">● ● ● ○ ○</span>
+                <span class="gauge-text" id="scentGaugeText">은은하고 차분한 숲의 잔향</span>
+              </div>
+            </div>
+
+            <!-- 올팩터리 3단 노트 피라미드 -->
+            <div class="narrative-row">
+              <span class="narrative-row-label">올팩터리 3단 노트</span>
+              <div class="scent-notes-stack frosted-box" id="scentNotesStack">
+                <div class="note-line"><b>TOP</b><span>편백 잎 · 야생 솔잎 · 유칼립투스</span></div>
+                <div class="note-line"><b>HEART</b><span>젖은 이끼 · 국내산 편백 오일 · 시더우드</span></div>
+                <div class="note-line"><b>BASE</b><span>샌달우드 · 축축한 흙내음 (8시간 잔향)</span></div>
+              </div>
+            </div>
+
+            <!-- 추천 피부 & 거품 -->
+            <div class="narrative-row">
+              <span class="narrative-row-label">추천 피부 &amp; 거품</span>
+              <p class="narrative-row-value" id="scentSkin">
+                지복합성 · 모공 피지 정돈 / 4주 저온숙성이 빚은 조밀하고 미세한 보습 거품
+              </p>
+            </div>
+
+            <div class="narrative-divider"></div>
+
+            <!-- 가격 및 투명 액션 버튼 (247series & daehye) -->
+            <div class="narrative-action-bar">
+              <div class="scent-price-group">
+                <span class="price-val" id="scentPrice">₩18,000</span>
+                <span class="price-sub">/ 100g (정품 조약돌 비누)</span>
+              </div>
+              <button class="view-more-trans" id="scentAddBtn" type="button" onclick="openProductModalDirect('FORM 01')">
+                <span class="btn-text">이 비누 선택하기</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       04. MATERIAL MAGAZINE SPREAD (Oat Beige 톤온톤 배경)
+       ========================================================================== -->
+  <section id="materials" class="magazine-section" aria-label="3대 자연 소재 매거진 에디토리얼">
+    <div class="magazine-intro">
+      <span class="eyebrow">01 자연 소재 연구 · MATERIAL STUDY</span>
+      <h2 class="display" style="font-size: clamp(34px, 4.5vw, 56px); margin: 12px 0 14px; color: var(--text-main);">
+        TACTILE NATURE.<br>
+        <span class="typo-italic">자연의 결이 만든 단단한 형태.</span>
+      </h2>
+      <p style="font-size: 15px; color: var(--text-muted); margin: 0; max-width: 760px; line-height: 1.7;">
+        쉽게 미끄러지고 버려지는 플라스틱 대신, 자연에서 온 돌·흙·유리가 지닌 고유한 무게감과 질감을 공간에 놓아둡니다.<br>
+        소재 본연의 물성이 비누를 소중히 받치고, 일상에 단단한 고요함을 선사합니다.
+      </p>
+    </div>
+
+    <!-- 01 NATURAL GRANITE -->
+    <article class="magazine-article">
+      <div class="magazine-media" role="img" aria-label="천연 화강석 조약돌 오브제의 거친 돌결과 물방울 매크로 고화질 화보">
+        <span class="media-top-chip">SPECIMEN 01 · STONE</span>
+        <div class="frosted-box" style="max-width: 440px; padding: 24px; margin-top: 14px;">
+          <b style="font-family: var(--serif); font-size: clamp(20px, 2.5vw, 28px); display: block; line-height: 1.3; color: var(--text-main);">
+            01 NATURAL GRANITE
+          </b>
+          <span style="font-size: 13.5px; color: var(--text-muted); display: block; margin-top: 8px;">
+            천연 화강석의 미세한 슬레이트 돌결과 물기 어린 세면대 위 420g의 안정감
+          </span>
+        </div>
+      </div>
+      <div class="magazine-content">
+        <span class="eyebrow">01 · 묵직한 고요함</span>
+        <h3 class="display" style="font-size: clamp(26px, 3.2vw, 38px); margin: 8px 0 14px; color: var(--text-main);">
+          흔들리지 않는 <span class="typo-emphasis">420g의 안정감.</span>
+        </h3>
+        <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin: 0 0 16px;">
+          비누를 집어 들고 내려놓을 때 받침대가 미끄러지지 않도록, 천연 화강석 본연의 묵직한 하중을 그대로 살렸습니다.
+          물결과 세월에 깎인 자연스러운 돌결은 습기가 많은 세면대 위에서도 차분한 중심을 잡습니다.
+        </p>
+        <div class="material-spec-table">
+          <div class="spec-row">
+            <span>대표 공예 오브제</span>
+            <b>01 SIGNATURE ARCH (시그니처 아치)</b>
+          </div>
+          <div class="spec-row">
+            <span>소재 물성</span>
+            <b>천연 화강석 (Granite) · 중량 420g</b>
+          </div>
+          <div class="spec-row">
+            <span>표면 처리</span>
+            <b>미세 슬레이트 연마 (무광 자연석 질감)</b>
+          </div>
+        </div>
+        <div style="margin-top: 16px;">
+          <a class="view-more-trans" href="javascript:void(0)" onclick="openProductModalDirect('FORM S-01')">
+            <span class="btn-text">FORM S-01 시그니처 아치 세트 보기</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02 WHITE PORCELAIN (Reverse) -->
+    <article class="magazine-article reverse">
+      <div class="magazine-content">
+        <span class="eyebrow">02 · 매끄러운 온기</span>
+        <h3 class="display" style="font-size: clamp(26px, 3.2vw, 38px); margin: 8px 0 14px; color: var(--text-main);">
+          1250°C 흙과 유약이 빚은 <span class="typo-italic">곡면.</span>
+        </h3>
+        <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin: 0 0 16px;">
+          손으로 빚어 고온 소성한 백자의 부드러운 곡면은 물방울을 매끄럽게 흘려보내며 오염을 방지합니다.
+          욕실에서는 완벽한 방수성을, 서재 책상 위에서는 차 키와 만년필을 품어주는 따뜻한 소품 트레이가 됩니다.
+        </p>
+        <div class="material-spec-table">
+          <div class="spec-row">
+            <span>대표 공예 오브제</span>
+            <b>02 FOLD OBJECT (폴드 오브제)</b>
+          </div>
+          <div class="spec-row">
+            <span>소재 물성</span>
+            <b>백자토 고온 소성 (White Porcelain) · 1250°C</b>
+          </div>
+          <div class="spec-row">
+            <span>표면 처리</span>
+            <b>매트 새틴 유약 마감 (비누 물때 방지)</b>
+          </div>
+        </div>
+        <div style="margin-top: 16px;">
+          <a class="view-more-trans" href="javascript:void(0)" onclick="openProductModalDirect('FORM S-02')">
+            <span class="btn-text">FORM S-02 백자 폴드 세트 보기</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="magazine-media" role="img" aria-label="백자 도자기 표면 유약 광택과 물방울이 흘러내리는 슬로우 모션 영상 화보">
+        <span class="media-top-chip">SPECIMEN 02 · CERAMIC</span>
+        <div class="frosted-box" style="max-width: 440px; padding: 24px; margin-top: 14px;">
+          <b style="font-family: var(--serif); font-size: clamp(20px, 2.5vw, 28px); display: block; line-height: 1.3; color: var(--text-main);">
+            02 WHITE PORCELAIN
+          </b>
+          <span style="font-size: 13.5px; color: var(--text-muted); display: block; margin-top: 8px;">
+            1250°C 백자 유약면 위로 매끄럽게 흘러내리는 물방울의 슬로우 모션
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03 FLUTED GLASS -->
+    <article class="magazine-article">
+      <div class="magazine-media" role="img" aria-label="플루티드 강화유리의 세로 줄무늬를 투과하여 바닥에 맺히는 투명한 빛 그림자 화보">
+        <span class="media-top-chip">SPECIMEN 03 · GLASS</span>
+        <div class="frosted-box" style="max-width: 440px; padding: 24px; margin-top: 14px;">
+          <b style="font-family: var(--serif); font-size: clamp(20px, 2.5vw, 28px); display: block; line-height: 1.3; color: var(--text-main);">
+            03 FLUTED GLASS
+          </b>
+          <span style="font-size: 13.5px; color: var(--text-muted); display: block; margin-top: 8px;">
+            블로잉 강화유리의 세로 결을 따라 빛이 산란하며 바닥에 드리우는 투명한 그림자
+          </span>
+        </div>
+      </div>
+      <div class="magazine-content">
+        <span class="eyebrow">03 · 투명한 청량감</span>
+        <h3 class="display" style="font-size: clamp(26px, 3.2vw, 38px); margin: 8px 0 14px; color: var(--text-main);">
+          빛을 투과하는 <span class="typo-italic">맑은 파동.</span>
+        </h3>
+        <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin: 0 0 16px;">
+          세로 홈이 새겨진 플루티드 강화유리는 빛과 물을 투과시키며 욕실 바닥에 잔잔한 물결 그림자를 만듭니다.
+          투명한 청량감으로 공간의 답답함을 덜어내고, 언제나 물로 가볍게 헹궈 맑은 상태를 유지할 수 있습니다.
+        </p>
+        <div class="material-spec-table">
+          <div class="spec-row">
+            <span>대표 공예 오브제</span>
+            <b>03 HALO SET (헤일로 세트)</b>
+          </div>
+          <div class="spec-row">
+            <span>소재 물성</span>
+            <b>블로잉 강화유리 (Fluted Glass)</b>
+          </div>
+          <div class="spec-row">
+            <span>표면 처리</span>
+            <b>세로 플루티드 광학 굴절 및 투명 연마</b>
+          </div>
+        </div>
+        <div style="margin-top: 16px;">
+          <a class="view-more-trans" href="javascript:void(0)" onclick="openProductModalDirect('FORM S-03')">
+            <span class="btn-text">FORM S-03 플루티드 헤일로 세트 보기</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ==========================================================================
+       05. IN YOUR ROOM: 고정 아치형 프레임 룩북 & 핫스팟 (mansionbridge #2)
+       ========================================================================== -->
+  <section id="rooms" class="in-your-room-section" aria-label="SOAPHE 4대 공간 시네마틱 룩북">
+    <div class="lookbook-container">
+      <div class="lookbook-header">
+        <span class="eyebrow">03 공간 연출 · IN YOUR ROOM</span>
+        <h2 class="display" style="font-size: clamp(32px, 4.5vw, 54px); margin: 8px 0 12px; color: var(--text-main);">
+          공간의 결을 바꾸는 <span class="typo-italic">단 하나의 오브제.</span>
+        </h2>
+        <p style="font-size: 15px; color: var(--text-muted); margin: 0 auto; max-width: 720px; line-height: 1.7; word-break: keep-all;">
+          자연광이 머무는 세면대부터 고요한 밤의 욕실까지, SOAPHE가 스며드는 4가지 공간의 공기감을 느껴보세요.
+        </p>
+      </div>
+
+      <!-- 시그니처 고정 아치형 프레임 (mansionbridge.com #2) -->
+      <div class="arch-stage-frame" id="lookbookStageFrame">
+        <div class="arch-visual-canvas" id="lookbookVisualCanvas">
+          <!-- 상단 공간 화보 뱃지 -->
+          <div class="lookbook-ambient-badge" id="lookbookAmbientBadge">
+            [공간 화보 01: 자연광이 쏟아지는 아침의 화이트 타일 세면대]
+          </div>
+
+          <!-- 중앙 시적 공간 스토리텔링 -->
+          <div class="lookbook-space-art">
+            <p class="lookbook-space-desc" id="lookbookSpaceDesc">
+              “빛을 머금은 천연 화강석의 단단한 무게감이 세면대의 중심을 정갈하게 잡습니다.<br>
+              물결과 세월이 깎아낸 미세 슬레이트 돌결 위로 아침 햇살이 투명하게 내려앉습니다.”
+            </p>
+          </div>
+
+          <!-- 인터랙티브 핫스팟 (+) 핀 & 팝업창 (짤림 방지 레이어 분리) -->
+          <div class="lookbook-hotspot-layer">
+            <div class="hotspot-pin-wrap" id="roomHotspotPin" tabindex="0" role="button" aria-label="공간 속 SOAPHE 오브제 실측 및 상세 정보 보기" onclick="toggleHotspotPin(event)">
+              <div class="hotspot-dot">＋</div>
+            </div>
+
+            <!-- 팝업 카드: 캔버스 전체 기준 안전 영역에 완벽 배치되어 상하좌우 절대 잘리지 않음 -->
+            <div class="hotspot-tooltip" id="roomHotspotTooltip" role="dialog" aria-modal="true" aria-labelledby="hotspotTitle">
+              <button type="button" class="hotspot-close-btn" aria-label="팝업 닫기" onclick="closeHotspotPin(event)">✕</button>
+              <span class="tooltip-eyebrow" id="hotspotEyebrow">MATCHING SIGNATURE SET</span>
+              <h4 class="tooltip-title" id="hotspotTitle">FORM S-01 시그니처 아치 세트</h4>
+              
+              <div class="tooltip-spec-table">
+                <div class="spec-row">
+                  <span class="spec-label">오브제 트레이 실측</span>
+                  <span class="spec-val" id="hotspotObjectSpec">W 140 × D 95 × H 28 mm (420g)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-label">조약돌 비누 실측</span>
+                  <span class="spec-val" id="hotspotSoapSpec">W 70 × D 70 × H 30 mm (100g)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-label">소재 및 향</span>
+                  <span class="spec-val" id="hotspotMaterialSpec">천연 화강석 · 순수 무향</span>
+                </div>
+              </div>
+
+              <a class="tooltip-modal-link" id="tooltipModalLink" href="javascript:void(0)" onclick="openProductModalDirect('FORM S-01')">
+                제품 상세 보기 →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 1줄 일체형 탭 & 액션 바 -->
+        <div class="arch-bottom-bar">
+          <nav class="lookbook-curation-nav" aria-label="4대 공간 룩북 선택">
+            <button class="lookbook-nav-btn pearl-tab active" type="button" data-room="white" onclick="switchRoomLookbook('white')">01 화이트 타일</button>
+            <button class="lookbook-nav-btn pearl-tab" type="button" data-room="wood" onclick="switchRoomLookbook('wood')">02 우드 &amp; 베이지</button>
+            <button class="lookbook-nav-btn pearl-tab" type="button" data-room="charcoal" onclick="switchRoomLookbook('charcoal')">03 차콜 스톤</button>
+            <button class="lookbook-nav-btn pearl-tab" type="button" data-room="compact" onclick="switchRoomLookbook('compact')">04 콤팩트 욕실</button>
+          </nav>
+          <div class="lookbook-actions-group">
+            <a class="view-more-trans" id="lookbookActionLink" href="javascript:void(0)" onclick="openProductModalDirect('FORM S-01')">
+              <span class="btn-text">추천 세트 보기</span>
+              <span class="btn-arrow">→</span>
+            </a>
+            <a class="view-more-trans" href="상품후기_스토리보드.html" target="_blank">
+              <span class="btn-text">실사용 후기</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       06. LIVING & SECOND LIFE (Warm Sand 톤온톤 배경)
+       ========================================================================== -->
+  <section id="living" class="living-section" aria-label="SOAPHE 공간 아카이브 및 두 번째 쓰임">
+    <div class="living-intro">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <span class="eyebrow">03 일상 쓰임과 후기 · SPATIAL LIVING</span>
+          <h2 class="display" style="font-size: clamp(34px, 4.5vw, 56px); margin: 12px 0 14px; color: var(--text-main);">
+            BATH TO DESK.<br>
+            <span class="typo-italic">공간 속에서 이어지는 세 번의 쓰임.</span>
+          </h2>
+          <p style="font-size: 15px; color: var(--text-muted); margin: 0; max-width: 720px; line-height: 1.7;">
+            비누가 사라진 뒤에도 단단한 형태는 버려지지 않습니다.<br>
+            욕실의 비누받침에서 현관의 키 트레이로, 서재의 공예 오브제로 일상의 자리를 이동하며 영구한 온기를 이어갑니다.
+          </p>
+        </div>
+        <div>
+          <span class="mono-spec" style="font-weight: 700; color: var(--text-sub);">
+            COMMUNITY ARCHIVE · #SOAPHE_STAYS
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3단계 라이프스타일 페이즈 그리드 -->
+    <div class="phase-trio-grid">
+      <div class="phase-col">
+        <div class="phase-bg-media phase-01" role="img" aria-label="욕실 세면대에서 비누 거품과 물방울을 품은 정물 화보">
+          <div class="frosted-box" style="max-width: 320px; padding: 20px;">
+            <b style="font-family: var(--serif); font-size: 20px; color: var(--text-main); display: block; line-height: 1.3;">
+              PHASE 01 · BATHROOM
+            </b>
+            <span style="font-size: 13px; color: var(--text-muted); display: block; margin-top: 6px;">
+              물방울을 매끄럽게 흘려보내는 아침 세면대 리츄얼
+            </span>
+          </div>
+        </div>
+        <div class="col-top-badge">01 BATH RITUAL</div>
+        <div class="col-bottom-content">
+          <h3 style="font-family: var(--serif); font-size: 18px; margin: 0 0 6px; color: var(--text-main); font-weight: 600;">아침 세안의 고요한 시작</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            비누를 공중에 띄워 무르지 않게 지키고, 물때 없는 정갈한 세면대 풍경을 만듭니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="phase-col">
+        <div class="phase-bg-media phase-02" role="img" aria-label="현관 원목 선반 위 차 키와 안경을 놓아둔 정물 화보">
+          <div class="frosted-box" style="max-width: 320px; padding: 20px;">
+            <b style="font-family: var(--serif); font-size: 20px; color: var(--text-main); display: block; line-height: 1.3;">
+              PHASE 02 · ENTRYWAY
+            </b>
+            <span style="font-size: 13px; color: var(--text-muted); display: block; margin-top: 6px;">
+              귀가 후 주머니를 비우며 맞이하는 현관의 쉼표
+            </span>
+          </div>
+        </div>
+        <div class="col-top-badge">02 ENTRYWAY PLINTH</div>
+        <div class="col-bottom-content">
+          <h3 style="font-family: var(--serif); font-size: 18px; margin: 0 0 6px; color: var(--text-main); font-weight: 600;">퇴근 후 주머니를 비우는 쉼</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            비누 소진 후 물세척하여 현관으로 이동. 차 키와 안경을 단정하게 정돈하는 트레이가 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="phase-col">
+        <div class="phase-bg-media phase-03" role="img" aria-label="서재 원목 데스크 위 만년필과 인센스를 품은 정물 화보">
+          <div class="frosted-box" style="max-width: 320px; padding: 20px;">
+            <b style="font-family: var(--serif); font-size: 20px; color: var(--text-main); display: block; line-height: 1.3;">
+              PHASE 03 · DESK OBJECT
+            </b>
+            <span style="font-size: 13px; color: var(--text-muted); display: block; margin-top: 6px;">
+              원목 책상 위 만년필과 인센스를 품어주는 공예품
+            </span>
+          </div>
+        </div>
+        <div class="col-top-badge">03 STUDY DESK</div>
+        <div class="col-bottom-content">
+          <h3 style="font-family: var(--serif); font-size: 18px; margin: 0 0 6px; color: var(--text-main); font-weight: 600;">책상 위의 영구한 공예 오브제</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            묵직한 하중감으로 데스크 중심을 잡고, 시간이 흘러도 변치 않는 생활 오브제로 남습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- UGC 무한 롤링 티커 -->
+    <div class="ugc-moodboard-section">
+      <div style="text-align: center; max-width: 640px; margin: 0 auto 24px; padding: 0 20px;">
+        <span class="eyebrow">IN REAL SPACES · #SOAPHE_STAYS</span>
+        <h3 class="display" style="font-size: clamp(24px, 3vw, 36px); margin: 8px 0 10px; color: var(--text-main);">
+          실제 공간에서 머무는 이야기.
+        </h3>
+        <p style="font-size: 14px; color: var(--text-muted); margin: 0; word-break: keep-all;">
+          비누가 소진된 후, 사용자들이 각자의 일상 공간에서 트레이를 활용하는 생생한 기록입니다.
+        </p>
+      </div>
+
+      <div class="ugc-marquee-wrapper" aria-label="실제 공간 실사용 이야기 롤링 갤러리">
+        <div class="ugc-marquee-track">
+          <!-- 카드 세트 1 (6개 원본) -->
+          <article class="ugc-card">
+            <div class="ugc-media-box" role="img" aria-label="고객 류*혁 님의 현관 차 키 & 안경 트레이 실제 공간 컷">
+              <span class="media-top-chip">ENTRYWAY · 한남동</span>
+              <b style="font-family: var(--serif); font-size: 14px; color: var(--text-main); margin-top: 8px;">[01 KEY &amp; GLASSES TRAY]</b>
+            </div>
+            <div class="ugc-body">
+              <p class="ugc-quote">“퇴근 후 문을 열고 주머니의 차 키와 안경을 내려놓는 순간, 하루의 피로가 정갈하게 비워집니다.”</p>
+              <div class="ugc-meta">
+                <span>류*혁 님 (화강석 아치 세트)</span>
+                <b>#현관트레이</b>
+              </div>
+            </div>
+          </article>
+
+          <article class="ugc-card">
+            <div class="ugc-media-box" role="img" aria-label="고객 이*주 님의 서재 만년필 & 인센스 트레이 실제 공간 컷">
+              <span class="media-top-chip">STUDY · 성수동</span>
+              <b style="font-family: var(--serif); font-size: 14px; color: var(--text-main); margin-top: 8px;">[02 DESK INCENSE PLINTH]</b>
+            </div>
+            <div class="ugc-body">
+              <p class="ugc-quote">“원목 책상 위에 놓아두었는데 묵직한 돌의 무게감 덕분에 책상 전체의 분위기가 차분하게 정돈됩니다.”</p>
+              <div class="ugc-meta">
+                <span>이*주 님 (화강석 플린스)</span>
+                <b>#서재오브제</b>
+              </div>
+            </div>
+          </article>
+
+          <article class="ugc-card">
+            <div class="ugc-media-box" role="img" aria-label="고객 정*은 님의 파우더룸 데일리 주얼리 트레이 실제 공간 컷">
+              <span class="media-top-chip">POWDER ROOM · 판교</span>
+              <b style="font-family: var(--serif); font-size: 14px; color: var(--text-main); margin-top: 8px;">[03 DAILY JEWELRY TRAY]</b>
+            </div>
+            <div class="ugc-body">
+              <p class="ugc-quote">“외출 전후로 반지와 목걸이를 단정하게 올려두어요. 도자기 곡면이 주얼리를 부드럽게 감싸줍니다.”</p>
+              <div class="ugc-meta">
+                <span>정*은 님 (백자 도자기 폴드)</span>
+                <b>#주얼리트레이</b>
+              </div>
+            </div>
+          </article>
+
+          <article class="ugc-card">
+            <div class="ugc-media-box" role="img" aria-label="고객 송*원 님의 거실 선반 캔들 받침 실제 공간 컷">
+              <span class="media-top-chip">LIVING SHELF · 서초동</span>
+              <b style="font-family: var(--serif); font-size: 14px; color: var(--text-main); margin-top: 8px;">[04 OBJECT CANDLE BASE]</b>
+            </div>
+            <div class="ugc-body">
+              <p class="ugc-quote">“저녁에 간접 조명을 켜면 유리의 세로 결을 따라 벽에 투명한 빛이 번져 마치 작은 갤러리 같아요.”</p>
+              <div class="ugc-meta">
+                <span>송*원 님 (플루티드 헤일로)</span>
+                <b>#선반오브제</b>
+              </div>
+            </div>
+          </article>
+
+          <article class="ugc-card">
+            <div class="ugc-media-box" role="img" aria-label="고객 최*진 님의 홈카페 티백 트레이 실제 공간 컷">
+              <span class="media-top-chip">TEA CORNER · 연남동</span>
+              <b style="font-family: var(--serif); font-size: 14px; color: var(--text-main); margin-top: 8px;">[05 TEAWARE TRAY]</b>
+            </div>
+            <div class="ugc-body">
+              <p class="ugc-quote">“차를 마실 때 인퓨저와 티백을 올려두는 용도로 씁니다. 유약 마감이라 물티슈로 슥 닦으면 관리가 쉬워요.”</p>
+              <div class="ugc-meta">
+                <span>최*진 님 (백자 도자기 폴드)</span>
+                <b>#티웨어트레이</b>
+              </div>
+            </div>
+          </article>
+
+          <article class="ugc-card">
+            <div class="ugc-media-box" role="img" aria-label="고객 한*진 님의 욕실 두 번째 비누 받침 실제 공간 컷">
+              <span class="media-top-chip">BATHROOM · 분당</span>
+              <b style="font-family: var(--serif); font-size: 14px; color: var(--text-main); margin-top: 8px;">[06 BASIN ESSENTIAL]</b>
+            </div>
+            <div class="ugc-body">
+              <p class="ugc-quote">“첫 비누를 다 쓰고 다른 페이셜 바를 올려 사용 중인데, 물 빠짐 구조가 탁월해 비누가 절대 무르지 않네요.”</p>
+              <div class="ugc-meta">
+                <span>한*진 님 (화강석 아치 세트)</span>
+                <b>#세면대리츄얼</b>
+              </div>
+            </div>
+          </article>
+
+          <!-- 루프용 복제 카드 세트 (aria-hidden) -->
+          <article class="ugc-card" aria-hidden="true">
+            <div class="ugc-media-box" role="img">
+              <span class="media-top-chip">ENTRYWAY · 한남동</span>
+              <b style="font-family: var(--serif); font-size: 14px; color: var(--text-main); margin-top: 8px;">[01 KEY &amp; GLASSES TRAY]</b>
+            </div>
+            <div class="ugc-body">
+              <p class="ugc-quote">“퇴근 후 문을 열고 주머니의 차 키와 안경을 내려놓는 순간, 하루의 피로가 정갈하게 비워집니다.”</p>
+              <div class="ugc-meta"><span>류*혁 님</span><b>#현관트레이</b></div>
+            </div>
+          </article>
+          <article class="ugc-card" aria-hidden="true">
+            <div class="ugc-media-box" role="img">
+              <span class="media-top-chip">STUDY · 성수동</span>
+              <b style="font-family: var(--serif); font-size: 14px; color: var(--text-main); margin-top: 8px;">[02 DESK INCENSE PLINTH]</b>
+            </div>
+            <div class="ugc-body">
+              <p class="ugc-quote">“원목 책상 위에 놓아두었는데 묵직한 돌의 무게감 덕분에 책상 전체의 분위기가 차분하게 정돈됩니다.”</p>
+              <div class="ugc-meta"><span>이*주 님</span><b>#서재오브제</b></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div style="margin-top: 36px; text-align: center;">
+        <button class="view-more-trans" type="button" onclick="alert('인스타그램 태그 [#SOAPHE_STAYS] 또는 공식 커뮤니티 업로드 기능으로 연결됩니다.')">
+          <span class="btn-text">나만의 트레이 공간 기록 공유하기 (#SOAPHE_STAYS)</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       07. GIFT ARCHIVE: 커스텀 패키징 & 라이브 한지 레터링 스튜디오 (Warm Ember 톤온톤)
+       ========================================================================== -->
+  <section id="gift" class="gift-archive-section" aria-label="SOAPHE 선물 큐레이션 및 커스텀 패키징">
+    <div class="gift-container">
+      <div class="gift-header">
+        <span class="eyebrow">04 선물 큐레이션 · GIFT ARCHIVE</span>
+        <h2 class="display" style="font-size: clamp(32px, 4.5vw, 54px); margin: 8px 0 12px; color: var(--text-main);">
+          비누가 사라진 뒤에도, <span class="typo-italic">오래 남는 마음.</span>
+        </h2>
+        <p style="font-size: 15px; color: var(--text-muted); margin: 0 auto 24px; max-width: 720px; line-height: 1.7; word-break: keep-all;">
+          받는 이의 공간과 취향을 떠올리며 오래 곁에 둘 형태를 골라보세요.<br>
+          지속 가능한 친환경 코튼 띠지 패키징과 30자 맞춤 한지 메시지 카드를 정성스레 동봉해 드립니다.
+        </p>
+
+        <!-- 3대 테마 탭 바 (펄 모핑 적용 - gong-cha #1) -->
+        <div class="gift-theme-nav-bar">
+          <nav class="gift-theme-nav" aria-label="3대 선물 테마 선택">
+            <button class="gift-theme-btn pearl-tab active" type="button" data-theme="warmth" onclick="switchGiftTheme('warmth')">01 담백한 온기</button>
+            <button class="gift-theme-btn pearl-tab" type="button" data-theme="rest" onclick="switchGiftTheme('rest')">02 포근한 쉼</button>
+            <button class="gift-theme-btn pearl-tab" type="button" data-theme="fresh" onclick="switchGiftTheme('fresh')">03 산뜻한 시작</button>
+          </nav>
+        </div>
+      </div>
+
+      <div class="gift-stage-frame frosted-box" id="giftStageFrame">
+        <div class="gift-visual-canvas" id="giftVisualCanvas">
+          <div class="gift-ambient-badge" id="giftAmbientBadge">
+            [공예 선물 화보 01: 코튼 띠지 포장 &amp; 천연 화강석 아치 세트]
+          </div>
+
+          <div class="gift-canvas-split">
+            <!-- [좌측]: 실물 선물 패키지 화보 쇼케이스 -->
+            <div class="gift-package-showcase">
+              <div class="gift-mockup-frame">
+                <div class="gift-box-visual">
+                  <div class="gift-package-tag">COTTON BELLY BAND · WAX SEALING</div>
+                  <div class="gift-package-center">
+                    <span class="gift-craft-seal">[SOAPHE CRAFT SEAL]</span>
+                    <b class="gift-product-name" id="giftVisualTitle">FORM S-01 시그니처 아치 세트</b>
+                    <span class="gift-product-sub" id="giftVisualSpecs">천연 화강석 아치 트레이 + 01 순수 무향 비누 100g</span>
+                  </div>
+                </div>
+              </div>
+              <div class="gift-package-caption">
+                <span>100% 친환경 코튼 패브릭 띠지 · 핸드메이드 왁스 실링</span>
+                <b id="giftVisualPrice">₩38,000</b>
+              </div>
+            </div>
+
+            <!-- [우측]: 실시간 라이브 한지 메시지 엽서 스튜디오 -->
+            <div class="gift-letter-studio">
+              <div class="gift-hanji-card">
+                <div class="hanji-card-top">
+                  <span class="hanji-label">HANDMADE MESSAGE LETTER</span>
+                  <span class="hanji-live-badge">실시간 프리뷰</span>
+                </div>
+                
+                <div class="hanji-card-body">
+                  <p class="hanji-quote-text" id="giftCardLiveText">
+                    “공간에 오래 머무는 담백한 온기를 전합니다.”
+                  </p>
+                </div>
+
+                <div class="hanji-card-bottom" style="text-align: right;">
+                  <span class="hanji-watermark">SOAPHE BESPOKE</span>
+                </div>
+              </div>
+
+              <!-- 엽서 입력 폼 -->
+              <div class="gift-letter-input-box">
+                <div class="letter-input-header">
+                  <label for="customLetterInput" class="letter-input-label">메시지 카드 문구 직접 입력</label>
+                  <span id="letterCount" class="letter-input-counter">24 / 30자</span>
+                </div>
+                <input id="customLetterInput" type="text" maxlength="30" value="공간에 오래 머무는 담백한 온기를 전합니다." placeholder="전하고 싶은 한 문장을 입력하세요 (최대 30자)" class="letter-text-input">
+                <small style="font-size: 11.5px; color: var(--text-muted);">* 작성하신 문구가 패키지 동봉 한지 엽서에 정성스럽게 인쇄됩니다.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 1줄 스펙 및 예약 액션 바 -->
+        <div class="gift-bottom-bar">
+          <div class="gift-bottom-spec">
+            <span style="font-size: 13px; color: var(--text-muted);">선택 구성:</span>
+            <b style="font-size: 14px; color: var(--text-main);" id="giftBottomSpecName">FORM S-01 시그니처 아치 세트 (₩38,000)</b>
+            <span class="gift-spec-badge">코튼 띠지 패키징 &amp; 각인 엽서 무료</span>
+          </div>
+          <div>
+            <button id="reserveGiftBtn" type="button" class="view-more-trans" onclick="reserveSelectedGift()" style="background: var(--bg-dark); color: #ffffff;">
+              <span class="btn-text">이 선물 세트로 예약하기</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       08. QUICK FINDER: 1:1 맞춤 퀴즈 (Stone Sand 톤온톤 배경)
+       ========================================================================== -->
+  <section id="finder">
+    <div class="wrap finder-split-grid">
+      <div class="finder-text-col">
+        <span class="eyebrow">04 1:1 맞춤 추천 · QUICK FINDER</span>
+        <h2 class="display" style="font-size: clamp(36px, 5vw, 56px); margin: 8px 0 14px;">FIND<br><span class="typo-italic">YOURS.</span></h2>
+        <p style="font-size: 15px; color: var(--text-main); line-height: 1.7; margin: 0 0 16px; word-break: keep-all;">
+          상황과 취향에 관한 네 가지 질문에 답하면 당신의 일상에 가장 조화로운 SOAPHE 세트를 추천해 드립니다.
+        </p>
+        <p style="color: var(--text-muted); font-size: 13px; line-height: 1.65; border-left: 2px solid var(--line-heavy); padding-left: 12px; margin: 18px 0 0; word-break: keep-all;">
+          * 25종 마스터 카탈로그 데이터를 기반으로 고객님의 공간과 루틴에 최적화된 조합을 매칭합니다.
+        </p>
+      </div>
+
+      <div class="finder-form-col">
+        <div class="frosted-box" style="background: var(--bg-main); padding: 28px;">
+          <!-- 4단계 프로그레스 게이지 -->
+          <div class="quiz-progress-wrap">
+            <div id="quizProgress" class="eyebrow" style="color: var(--text-main); margin-bottom: 0;" aria-live="polite"></div>
+            <div class="quiz-progress-track" aria-hidden="true">
+              <div class="quiz-progress-bar" id="quizProgressBar" style="width: 25%;"></div>
+            </div>
+          </div>
+
+          <div id="quizQuestion" aria-live="polite"></div>
+          
+          <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button id="quizBack" class="view-more-trans" type="button"><span class="btn-text">이전 질문</span></button>
+            <button id="quizReset" class="view-more-trans" type="button"><span class="btn-text">처음부터 다시 선택</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       09. PRIVATE PREVIEW: 쇼룸 방문 예약 폼 (Pure Atelier White)
+       ========================================================================== -->
+  <section id="preview">
+    <div class="wrap preview-split-grid">
+      <div class="preview-text-col">
+        <span class="eyebrow">05 쇼룸 방문 예약 · PRIVATE PREVIEW</span>
+        <h2 class="display" style="font-size: clamp(36px, 5vw, 56px); margin: 8px 0 14px;">SEE IT<br><span class="typo-italic">BEFORE.</span></h2>
+        <p style="font-size: 15px; color: var(--text-main); line-height: 1.7; margin: 0 0 16px; word-break: keep-all;">
+          궁금한 형태를 선택하고 실제 공간에서 살펴볼 시간을 예약해 보세요.
+        </p>
+        <p style="color: var(--text-muted); font-size: 13px; line-height: 1.65; border-left: 2px solid var(--line-heavy); padding-left: 12px; margin: 18px 0 0; word-break: keep-all;">
+          * 100% 프라이빗 사전 예약제로 운영되며 전문 도슨트와 웰컴 티 리추얼이 함께 제공됩니다.
+        </p>
+      </div>
+
+      <div class="preview-form-col">
+        <div id="errors" class="error hidden" tabindex="-1" role="alert">
+          <b>입력 내용을 확인해 주세요.</b>
+          <ul id="errorList" style="margin: 8px 0 0; padding-left: 20px;"></ul>
+        </div>
+        
+        <form id="form" class="form frosted-box" novalidate>
+          <div>
+            <label for="product">살펴볼 제품</label>
+            <select id="product" required aria-describedby="productError">
+              <option value="">제품 선택</option>
+            </select>
+            <span class="field-error" id="productError"></span>
+          </div>
+          <div>
+            <label for="reserveSpace">사용할 공간</label>
+            <select id="reserveSpace" required aria-describedby="spaceError">
+              <option value="">공간 선택</option>
+              <option>화이트·미니멀 욕실</option>
+              <option>베이지·내추럴 욕실</option>
+              <option>차콜·모던 욕실</option>
+              <option>컴팩트 욕실</option>
+            </select>
+            <span class="field-error" id="spaceError"></span>
+          </div>
+          <div>
+            <label for="reserveDate">희망 날짜</label>
+            <input id="reserveDate" type="date" required aria-describedby="dateError">
+            <span class="field-error" id="dateError"></span>
+          </div>
+          <div>
+            <label for="reserveEmail">안내받을 이메일</label>
+            <input id="reserveEmail" type="email" required aria-describedby="emailError" placeholder="name@example.com">
+            <span class="field-error" id="emailError"></span>
+          </div>
+          <button class="view-more-trans" type="submit" style="width: 100%; min-height: 48px; font-size: 15px; font-weight: 600; margin-top: 12px; background: var(--bg-dark); color: var(--text-white); justify-content: center;">
+            <span class="btn-text">미리보기 예약하기</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+
+        <div id="done" class="success hidden" tabindex="-1">
+          <b>예약 요청이 접수되었습니다.</b>
+          <p id="summary" style="margin: 12px 0 20px; color: var(--text-muted);"></p>
+          <div style="display: flex; gap: 10px; justify-content: center;">
+            <a class="view-more-trans" href="#hero"><span class="btn-text">처음으로</span></a>
+            <a class="view-more-trans" href="카테고리 페이지.html"><span class="btn-text">전체 컬렉션 보기</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. FAQ SECTION (Warm Neutral Taupe 톤온톤 배경)
+       ========================================================================== -->
+  <section id="faq" class="faq-section">
+    <div class="faq-container">
+      <div class="faq-header">
+        <span class="eyebrow">06 자주 묻는 질문 · FAQ</span>
+        <h2 class="display faq-title">NEED TO <span class="typo-italic">KNOW.</span></h2>
+        <p class="faq-subtitle">
+          제품을 선택하고 사용하기 전에 많이 궁금해하시는 내용을 먼저 확인해 보세요.
+        </p>
+      </div>
+
+      <div class="faq-accordion-list">
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>제품은 어떻게 관리하나요?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="faq-content">
+            <p>제품별 표면과 사용 환경에 맞는 관리 방법을 준비하고 있습니다. 상세 기준이 확정되면 제품 상세 페이지에서 함께 안내합니다.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>제품을 직접 볼 수 있나요?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="faq-content">
+            <p>오프라인 쇼룸과 프라이빗 미리보기 운영을 준비하고 있습니다. 위치와 운영 일정은 확정 후 공지사항을 통해 안내합니다.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>배송과 교환·반품은 어떻게 진행되나요?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="faq-content">
+            <p>안전한 완충재 포장으로 전 제품 정성스레 배송됩니다. 배송 일정과 비용, 교환·반품 정책은 최종 확정 후 공식 가이드로 안내합니다.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>선물 패키징과 각인 서비스는 어떻게 신청하나요?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="faq-content">
+            <p>상단 '선물 포장' 섹션 또는 제품 주문 시 30자 이내의 맞춤 메시지를 입력하시면, 한지 엽서에 정성스럽게 인쇄하여 코튼 띠지와 함께 동봉해 드립니다.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==========================================================================
+     FOOTER: 마우스 반응형 유기적 펄/버블 파티클 플로팅 효과 (gong-cha.co.kr #2)
+     ========================================================================== -->
+<footer class="dark">
+  <!-- 마우스 반응형 펄/버블 인터랙티브 캔버스 -->
+  <canvas id="footerPebbleCanvas"></canvas>
+
+  <div class="wrap-wide">
+    <div class="grid" style="align-items: center; padding-bottom: 40px; border-bottom: 1px solid var(--text-white-muted);">
+      <div class="span5">
+        <span class="eyebrow" style="color: var(--text-white-muted);">SOAPHE</span>
+        <h2 style="font-family: var(--serif); font-size: clamp(26px, 3vw, 36px); margin: 10px 0;">사용이 끝난 뒤에도<br><span class="typo-italic">공간에 남는 온기.</span></h2>
+        <p style="color: var(--text-white-muted);">비누가 놓이는 방식부터 그 이후의 쓰임까지 함께 생각합니다.</p>
+        <p style="margin-top: 16px;">
+          <a class="view-more-trans" href="브랜드소개페이지_스토리보드.html" style="border-color: var(--text-white-muted); color: var(--text-white);">
+            <span class="btn-text">브랜드 이야기 보기</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </p>
+      </div>
+      <div class="span7">
+        <h3 style="font-family: var(--serif); font-size: 20px; margin-bottom: 12px;">새로운 형태와 브랜드 기록을 받아보세요.</h3>
+        <form style="display: grid; grid-template-columns: 1fr auto; gap: 8px;" onsubmit="event.preventDefault();this.querySelector('output').textContent='구독 신청 기능은 준비 중입니다.'">
+          <label for="footerEmail" style="position: absolute; left: -9999px;">이메일</label>
+          <input id="footerEmail" type="email" required placeholder="이메일 주소" style="min-width: 0; padding: 11px; border: 1px solid var(--text-white-muted); background: var(--bg-dark-card); color: var(--text-white); border-radius: var(--radius-panel); height: 44px;">
+          <button class="view-more-trans" type="submit" style="background: #ffffff; color: var(--bg-dark); border-color: #ffffff;">
+            <span class="btn-text">구독하기</span>
+            <span class="btn-arrow">→</span>
+          </button>
+          <output style="grid-column: 1/-1; font-size: 13px; color: var(--text-white-muted);" aria-live="polite"></output>
+        </form>
+      </div>
+    </div>
+    <div style="margin-top: 30px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 13px; color: var(--text-white-muted);">
+      <span>© SOAPHE · 레퍼런스 분석 통합 웹디자인 초안</span>
+      <a class="view-more-trans" href="#hero" style="border-color: var(--text-white-muted); color: var(--text-white); padding: 4px 12px; font-size: 12px;">
+        <span class="btn-text">페이지 맨 위로 ↑</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- 모바일 빠른 메뉴 바 -->
+<nav class="mobilebar" aria-label="모바일 빠른 메뉴">
+  <a href="#scents" data-section="scents">비누</a>
+  <a href="#materials" data-section="materials">받침대</a>
+  <a href="#rooms" data-section="rooms">공간연출</a>
+  <a href="#gift" data-section="gift">선물포장</a>
+  <a href="카테고리 페이지.html">전체제품</a>
+</nav>
+
+<!-- 상세 모달 -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="dialog">
+    <span class="eyebrow" id="modalCategory">PRODUCT STORY</span>
+    <h2 id="modalTitle" class="display" style="font-size: 28px; margin: 10px 0;"></h2>
+    <p id="modalDesc" style="color: var(--text-muted); line-height: 1.6;"></p>
+    <div style="display: flex; gap: 10px; margin-top: 24px; justify-content: flex-end;">
+      <button id="reserve" class="view-more-trans" style="background: var(--bg-dark); color: #ffffff;">
+        <span class="btn-text">이 제품 미리보기 예약</span>
+        <span class="btn-arrow">→</span>
+      </button>
+      <button id="close" class="view-more-trans">
+        <span class="btn-text">닫기</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     JAVASCRIPT: 전체 인터랙션 및 레퍼런스 애니메이션 로직
+     ========================================================================== -->
+<script>
+// 1. 헤더 스크롤 효과 & 로고 전환 (mansionbridge.com #1)
+const siteHeader = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  const isScrolled = window.scrollY > 40;
+  siteHeader.classList.toggle('header-scrolled', isScrolled);
+}, { passive: true });
+
+// 2. HERO SLIDER (넘버링 컨트롤러 및 키보드 화살표 연동)
+let heroSlideIdx = 0;
+const heroSlides = document.querySelectorAll('.hero-slide');
+const splitPrevBtn = document.querySelector('#splitPrevBtn');
+const splitNextBtn = document.querySelector('#splitNextBtn');
+const heroSlideCounter = document.querySelector('#heroSlideCounter');
+
+function setHeroSlide(idx) {
+  heroSlideIdx = (idx + heroSlides.length) % heroSlides.length;
+  heroSlides.forEach((el, i) => el.classList.toggle('active', i === heroSlideIdx));
+  if (heroSlideCounter) {
+    heroSlideCounter.textContent = `0${heroSlideIdx + 1} / 0${heroSlides.length}`;
+  }
+}
+function nextHeroSlide() { setHeroSlide(heroSlideIdx + 1); }
+function prevHeroSlide() { setHeroSlide(heroSlideIdx - 1); }
+
+if (splitPrevBtn && splitNextBtn) {
+  splitPrevBtn.onclick = prevHeroSlide;
+  splitNextBtn.onclick = nextHeroSlide;
+
+  window.addEventListener('keydown', e => {
+    if (document.activeElement && ['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+    if (e.key === 'ArrowLeft') prevHeroSlide();
+    else if (e.key === 'ArrowRight') nextHeroSlide();
+  });
+}
+
+// 3. 히어로 마우스 워터 리플 / 유체 물결 효과 (yorien.com #4)
+(function initHeroRipple() {
+  const canvas = document.getElementById('heroRippleCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let ripples = [];
+
+  function resize() {
+    width = canvas.width = canvas.parentElement.offsetWidth;
+    height = canvas.height = canvas.parentElement.offsetHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  canvas.parentElement.addEventListener('mousemove', e => {
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    if (Math.random() > 0.3) {
+      ripples.push({ x, y, radius: 2, maxRadius: 48 + Math.random() * 32, alpha: 0.45 });
+    }
+  });
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    for (let i = ripples.length - 1; i >= 0; i--) {
+      const r = ripples[i];
+      r.radius += 1.2;
+      r.alpha *= 0.96;
+      ctx.beginPath();
+      ctx.arc(r.x, r.y, r.radius, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(235, 120, 38, ${r.alpha * 0.4})`;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(r.x, r.y, r.radius * 0.6, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(255, 255, 255, ${r.alpha * 0.6})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      if (r.alpha < 0.01 || r.radius >= r.maxRadius) {
+        ripples.splice(i, 1);
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+// 4. 360° 비누 회전 및 조향 데이터 스위처 (yorien.com #3)
+const pebbleSoap3D = document.getElementById('pebbleSoap3D');
+const scentStageCanvas = document.getElementById('scentStageCanvas');
+let rotY = 0, rotX = 8;
+let isDragging = false, startX = 0, startRotY = 0;
+let isAutoOrbiting = false, autoOrbitTimer = null;
+
+function renderSoapOrbit() {
+  if (pebbleSoap3D) {
+    pebbleSoap3D.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+  }
+}
+
+if (scentStageCanvas && pebbleSoap3D) {
+  scentStageCanvas.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX = e.clientX;
+    startRotY = rotY;
+    if (isAutoOrbiting) stopAutoOrbit();
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    const deltaX = e.clientX - startX;
+    rotY = startRotY + deltaX * 0.8;
+    renderSoapOrbit();
+  });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+
+  // FIX-02: 모바일 터치 스크롤 트랩(Scroll-Trap) 완전 해제 로직
+  let touchStartX = 0, touchStartY = 0;
+  let isTouchHorizontal = false;
+
+  scentStageCanvas.addEventListener('touchstart', e => {
+    if (e.touches.length === 1) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+      startRotY = rotY;
+      isDragging = true;
+      isTouchHorizontal = false;
+      if (isAutoOrbiting) stopAutoOrbit();
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchmove', e => {
+    if (!isDragging || e.touches.length !== 1) return;
+    const currentX = e.touches[0].clientX;
+    const currentY = e.touches[0].clientY;
+    const deltaX = currentX - touchStartX;
+    const deltaY = currentY - touchStartY;
+
+    // X축 이동량이 Y축보다 뚜렷할 때만 비누를 회전하고, Y축 이동 시에는 브라우저 수직 스크롤 허용
+    if (!isTouchHorizontal) {
+      if (Math.abs(deltaX) > 10 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        isTouchHorizontal = true;
+      } else if (Math.abs(deltaY) > 10) {
+        isDragging = false;
+        return;
+      }
+    }
+
+    if (isTouchHorizontal) {
+      if (e.cancelable) e.preventDefault();
+      rotY = startRotY + deltaX * 0.8;
+      renderSoapOrbit();
+    }
+  }, { passive: false });
+
+  window.addEventListener('touchend', () => {
+    isDragging = false;
+    isTouchHorizontal = false;
+  });
+}
+
+function setOrbitAngle(angle) {
+  if (isAutoOrbiting) stopAutoOrbit();
+  rotY = angle;
+  rotX = angle === 45 ? 14 : 8;
+  renderSoapOrbit();
+  document.querySelectorAll('.angle-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent.includes(`${angle}°`));
+  });
+}
+
+function toggleAutoOrbit() {
+  if (isAutoOrbiting) stopAutoOrbit();
+  else startAutoOrbit();
+}
+function startAutoOrbit() {
+  isAutoOrbiting = true;
+  const btn = document.getElementById('orbitAutoBtnToggle');
+  if (btn) { btn.textContent = '회전 정지 ⏸'; btn.classList.add('active'); }
+  autoOrbitTimer = setInterval(() => {
+    rotY = (rotY + 1) % 360;
+    renderSoapOrbit();
+  }, 25);
+}
+function stopAutoOrbit() {
+  isAutoOrbiting = false;
+  const btn = document.getElementById('orbitAutoBtnToggle');
+  if (btn) { btn.textContent = '360° 자전 ↻'; btn.classList.remove('active'); }
+  if (autoOrbitTimer) clearInterval(autoOrbitTimer);
+}
+
+const scentDataStore = {
+  cypress: {
+    code: 'FORM 01 · CYPRESS & MOSS',
+    title: '01 편백 & 이끼',
+    poem: '“비 온 뒤 축축한 숲길을 걷는 듯한 서늘하고 깊은 고요함.<br>일상의 소란을 잠재우고 하루의 시작과 끝을 정갈하게 가라앉힙니다.”',
+    moment: '이른 아침 첫 세안으로 밤사이 쌓인 유분을 씻어내고 맑은 호흡으로 하루를 깨울 때',
+    gaugeDots: '● ● ● ○ ○',
+    gaugeText: '은은하고 차분한 숲의 잔향',
+    notes: [
+      { type: 'TOP', desc: '편백 잎 · 야생 솔잎 · 유칼립투스' },
+      { type: 'HEART', desc: '젖은 이끼 · 국내산 편백 오일 · 시더우드' },
+      { type: 'BASE', desc: '샌달우드 · 축축한 흙내음 (8시간 잔향)' }
+    ],
+    skin: '지복합성 · 모공 피지 정돈 / 4주 저온숙성이 빚은 조밀하고 미세한 보습 거품',
+    price: '₩18,000',
+    bgTag: '[배경 이미지/영상 삽입 예정: 편백 숲의 새벽 안개와 빛]',
+    bgColor: 'radial-gradient(circle at center, rgba(116, 180, 155, 0.22) 0%, rgba(243, 237, 226, 0.65) 70%, #ffffff 100%)',
+    pebbleColor: '#e4ece6',
+    productId: 'FORM 01'
+  },
+  amber: {
+    code: 'FORM 02 · WARM EMBER',
+    title: '02 웜 앰버',
+    poem: '“노을빛 흙과 마른 리넨 섬유의 포근한 결에서 피어나는 깊은 온기.<br>지친 하루를 감싸 안아주는 따뜻한 쉼표를 선사합니다.”',
+    moment: '하루의 피로를 녹이며 맞이하는 깊은 밤 따뜻한 온수 샤워 리츄얼',
+    gaugeDots: '● ● ● ● ○',
+    gaugeText: '묵직하고 포근한 잔향',
+    notes: [
+      { type: 'TOP', desc: '스위트 오렌지 · 시나몬 바크' },
+      { type: 'HEART', desc: '일랑일랑 · 시더우드 · 앰버 레진' },
+      { type: 'BASE', desc: '파출리 · 통카빈 · 샌달우드 (10시간 잔향)' }
+    ],
+    skin: '건성 · 속당김 완화 / 풍부한 시어버터가 피부 장벽을 감싸는 리치 보습',
+    price: '₩18,000',
+    bgTag: '[배경 이미지/영상 삽입 예정: 따뜻한 벽난로 장작과 노을빛]',
+    bgColor: 'radial-gradient(circle at center, rgba(235, 120, 38, 0.18) 0%, rgba(243, 237, 226, 0.65) 70%, #ffffff 100%)',
+    pebbleColor: '#ebd9cb',
+    productId: 'FORM 02'
+  },
+  yuja: {
+    code: 'FORM 03 · FRESH YUJA',
+    title: '03 맑은 유자',
+    poem: '“갓 수확한 유자 껍질에서 터져 나오는 노란 과즙의 투명한 빛.<br>무기력했던 아침의 감각을 경쾌하고 단정하게 깨워줍니다.”',
+    moment: '나른한 오후 기분 전환이 필요할 때, 맑은 에너지로 감각을 리프레시할 때',
+    gaugeDots: '● ● ○ ○ ○',
+    gaugeText: '산뜻하고 경쾌한 시트러스',
+    notes: [
+      { type: 'TOP', desc: '남해 생유자 껍질 · 베르가못' },
+      { type: 'HEART', desc: '레몬그라스 · 자몽 블로섬' },
+      { type: 'BASE', desc: '화이트 머스크 · 맑은 앰버 (6시간 잔향)' }
+    ],
+    skin: '모든 피부 · 칙칙한 피부 톤업 / 비타민 C 유자 오일의 생기 클렌징',
+    price: '₩18,000',
+    bgTag: '[배경 이미지/영상 삽입 예정: 새벽 햇살을 머금은 노란 유자밭]',
+    bgColor: 'radial-gradient(circle at center, rgba(243, 198, 35, 0.2) 0%, rgba(243, 237, 226, 0.65) 70%, #ffffff 100%)',
+    pebbleColor: '#f1ebd5',
+    productId: 'FORM 03'
+  },
+  unscented: {
+    code: 'FORM 04 · PURE SILENCE',
+    title: '04 순수 무향',
+    poem: '“인공의 향도 억지스러운 장식도 비워낸 가장 순수한 자연의 여백.<br>오직 물과 비누 본연의 거품만이 피부를 고요하게 감쌉니다.”',
+    moment: '자극에 취약한 아침 세안, 영유아 및 향에 민감한 일상의 순간',
+    gaugeDots: '○ ○ ○ ○ ○',
+    gaugeText: '자극 없는 순수 무향',
+    notes: [
+      { type: 'TOP', desc: '순수 식물성 원료 무첨가' },
+      { type: 'HEART', desc: '식물성 글리세린 100% 보습 거품' },
+      { type: 'BASE', desc: '엑스트라 버진 올리브 오일 보습막' }
+    ],
+    skin: '극민감성 · 아토피 취약 피부 / 무자극 천연 글리세린 순수 보습막',
+    price: '₩18,000',
+    bgTag: '[배경 이미지/영상 삽입 예정: 순수한 올리브 오일의 고요한 물결]',
+    bgColor: 'radial-gradient(circle at center, rgba(142, 137, 129, 0.16) 0%, rgba(243, 237, 226, 0.65) 70%, #ffffff 100%)',
+    pebbleColor: '#f3efe8',
+    productId: 'FORM 04'
+  }
+};
+
+function switchScent(scentKey) {
+  const d = scentDataStore[scentKey];
+  if (!d) return;
+
+  document.querySelectorAll('.scent-tab-btn').forEach(btn => {
+    const isTarget = btn.getAttribute('data-scent') === scentKey;
+    btn.classList.toggle('active', isTarget);
+    btn.setAttribute('aria-selected', isTarget ? 'true' : 'false');
+  });
+
+  const swatches = document.querySelectorAll('.color-swatch-dot');
+  swatches.forEach(sw => {
+    const fn = sw.getAttribute('onclick');
+    sw.classList.toggle('active', fn && fn.includes(scentKey));
+  });
+
+  const narrative = document.getElementById('scentNarrativeFlow');
+  if (narrative) narrative.style.opacity = '0.35';
+
+  setTimeout(() => {
+    document.getElementById('scentCodeLabel').textContent = d.code;
+    document.getElementById('scentTitle').textContent = d.title;
+    document.getElementById('scentPoem').innerHTML = d.poem;
+    document.getElementById('scentMoment').textContent = d.moment;
+    document.getElementById('scentGaugeDots').textContent = d.gaugeDots;
+    document.getElementById('scentGaugeText').textContent = d.gaugeText;
+    document.getElementById('scentSkin').textContent = d.skin;
+    document.getElementById('scentPrice').textContent = d.price;
+
+    const notesWrap = document.getElementById('scentNotesStack');
+    if (notesWrap) {
+      notesWrap.innerHTML = d.notes.map(n => `<div class="note-line"><b>${n.type}</b><span>${n.desc}</span></div>`).join('');
+    }
+
+    const ambientBg = document.getElementById('scentAmbientBg');
+    if (ambientBg) ambientBg.style.background = d.bgColor;
+    
+    const ambientTag = document.getElementById('ambientVisualTag');
+    if (ambientTag) ambientTag.textContent = d.bgTag;
+
+    const pebble = document.getElementById('pebbleBody');
+    if (pebble) pebble.style.background = d.pebbleColor;
+
+    const addBtn = document.getElementById('scentAddBtn');
+    if (addBtn) addBtn.setAttribute('onclick', `openProductModalDirect('${d.productId}')`);
+
+    if (narrative) narrative.style.opacity = '1';
+  }, 120);
+}
+
+// 5. IN YOUR ROOM: 룩북 스위처 & 핫스팟 (mansionbridge.com #2)
+// FIX-03: 4대 공간별 오브제 실제 배치 좌표(top, left) 및 상세 데이터 매핑
+const roomLookbookStore = {
+  white: {
+    badge: '[공간 화보 01: 자연광이 쏟아지는 아침의 화이트 타일 세면대]',
+    desc: '“빛을 머금은 천연 화강석의 단단한 무게감이 세면대의 중심을 정갈하게 잡습니다.<br>물결과 세월이 깎아낸 미세 슬레이트 돌결 위로 아침 햇살이 투명하게 내려앉습니다.”',
+    bg: 'radial-gradient(circle at 50% 40%, rgba(250, 246, 238, 0.75) 0%, #ffffff 85%)',
+    eyebrow: 'MATCHING SIGNATURE SET',
+    set: 'FORM S-01 시그니처 아치 세트',
+    objectSpec: 'W 140 × D 95 × H 28 mm (420g)',
+    soapSpec: 'W 70 × D 70 × H 30 mm (100g)',
+    materialSpec: '천연 화강석 · 순수 무향',
+    productId: 'FORM S-01',
+    pinTop: '68%',
+    pinLeft: '50%'
+  },
+  wood: {
+    badge: '[공간 화보 02: 부드러운 햇살과 따뜻한 오크 우드 선반]',
+    desc: '“고온에서 구워낸 백자 도자기의 부드러운 유백색 온기가 나무의 결 위에 스며듭니다.<br>비 온 뒤 편백 숲의 고요한 잔향이 나무 선반의 온기와 조화롭게 어우러집니다.”',
+    bg: 'radial-gradient(circle at 50% 40%, rgba(243, 237, 226, 0.85) 0%, #ffffff 85%)',
+    eyebrow: 'MATCHING SIGNATURE SET',
+    set: 'FORM S-02 백자 폴드 세트',
+    objectSpec: 'W 140 × D 95 × H 30 mm (380g)',
+    soapSpec: 'W 70 × D 70 × H 30 mm (100g)',
+    materialSpec: '백자 도자기 · 편백 & 이끼',
+    productId: 'FORM S-02',
+    pinTop: '64%',
+    pinLeft: '44%'
+  },
+  charcoal: {
+    badge: '[공간 화보 03: 은은한 간접 조명이 흐르는 차콜 스톤 욕실]',
+    desc: '“빛을 은은하게 굴절시키는 플루티드 강화유리가 깊은 어둠 속 투명한 쉼표가 됩니다.<br>달콤한 앰버의 묵직한 온기가 하루의 피로를 부드럽게 감싸 안아줍니다.”',
+    bg: 'radial-gradient(circle at 50% 40%, rgba(45, 43, 40, 0.09) 0%, #ffffff 85%)',
+    eyebrow: 'MATCHING SIGNATURE SET',
+    set: 'FORM S-03 플루티드 헤일로 세트',
+    objectSpec: 'W 140 × D 95 × H 26 mm (450g)',
+    soapSpec: 'W 70 × D 70 × H 30 mm (100g)',
+    materialSpec: '블로잉 강화유리 · 웜 앰버',
+    productId: 'FORM S-03',
+    pinTop: '70%',
+    pinLeft: '56%'
+  },
+  compact: {
+    badge: '[공간 화보 04: 작은 공간에서도 단정한 비례를 이루는 콤팩트 세면대]',
+    desc: '“140mm의 정밀한 황금비율로 작은 공간에서도 흔들림 없는 평온함을 선사합니다.<br>어떠한 욕실 구조에서도 비누와 받침대가 단정하고 아름다운 오브제가 됩니다.”',
+    bg: 'radial-gradient(circle at 50% 40%, rgba(250, 246, 238, 0.6) 0%, #ffffff 85%)',
+    eyebrow: 'MATCHING SIGNATURE SET',
+    set: 'FORM S-01 시그니처 아치 세트',
+    objectSpec: 'W 140 × D 95 × H 28 mm (420g)',
+    soapSpec: 'W 70 × D 70 × H 30 mm (100g)',
+    materialSpec: '천연 화강석 · 순수 무향',
+    productId: 'FORM S-01',
+    pinTop: '66%',
+    pinLeft: '50%'
+  }
+};
+
+function switchRoomLookbook(roomKey) {
+  const d = roomLookbookStore[roomKey];
+  if (!d) return;
+
+  document.querySelectorAll('.lookbook-nav-btn').forEach(btn => {
+    const isTarget = btn.getAttribute('data-room') === roomKey;
+    btn.classList.toggle('active', isTarget);
+  });
+
+  const canvas = document.getElementById('lookbookVisualCanvas');
+  if (canvas) canvas.style.opacity = '0.35';
+
+  // FIX-03: 핫스팟 핀 위치 동적 좌표 트랜지션
+  const pin = document.getElementById('roomHotspotPin');
+  if (pin && d.pinTop && d.pinLeft) {
+    pin.style.top = d.pinTop;
+    pin.style.left = d.pinLeft;
+  }
+
+  setTimeout(() => {
+    document.getElementById('lookbookAmbientBadge').textContent = d.badge;
+    document.getElementById('lookbookSpaceDesc').innerHTML = d.desc;
+    document.getElementById('hotspotEyebrow').textContent = d.eyebrow;
+    document.getElementById('hotspotTitle').textContent = d.set;
+    document.getElementById('hotspotObjectSpec').textContent = d.objectSpec;
+    document.getElementById('hotspotSoapSpec').textContent = d.soapSpec;
+    document.getElementById('hotspotMaterialSpec').textContent = d.materialSpec;
+
+    if (canvas) {
+      canvas.style.background = d.bg;
+      canvas.style.opacity = '1';
+    }
+
+    const actionLink = document.getElementById('lookbookActionLink');
+    if (actionLink) actionLink.setAttribute('onclick', `openProductModalDirect('${d.productId}')`);
+
+    const tooltipModalLink = document.getElementById('tooltipModalLink');
+    if (tooltipModalLink) tooltipModalLink.setAttribute('onclick', `openProductModalDirect('${d.productId}')`);
+  }, 130);
+}
+
+function toggleHotspotPin(event) {
+  if (event) event.stopPropagation();
+  const pin = document.getElementById('roomHotspotPin');
+  const tooltip = document.getElementById('roomHotspotTooltip');
+  if (pin) pin.classList.toggle('is-active');
+  if (tooltip) tooltip.classList.toggle('is-active');
+}
+function closeHotspotPin(event) {
+  if (event) event.stopPropagation();
+  const pin = document.getElementById('roomHotspotPin');
+  const tooltip = document.getElementById('roomHotspotTooltip');
+  if (pin) pin.classList.remove('is-active');
+  if (tooltip) tooltip.classList.remove('is-active');
+}
+document.addEventListener('click', e => {
+  const pin = document.getElementById('roomHotspotPin');
+  const tooltip = document.getElementById('roomHotspotTooltip');
+  if (tooltip && pin && !pin.contains(e.target) && !tooltip.contains(e.target)) {
+    pin.classList.remove('is-active');
+    tooltip.classList.remove('is-active');
+  }
+});
+
+// 6. GIFT ARCHIVE & 라이브 레터링
+const giftDataStore = {
+  warmth: {
+    productTitle: 'FORM S-01 시그니처 아치 세트',
+    productPrice: '₩38,000',
+    productSpecs: '천연 화강석 아치 트레이 + 01 순수 무향 비누 100g',
+    badge: '[공예 선물 화보 01: 코튼 띠지 포장 & 천연 화강석 아치 세트]',
+    defaultMsg: '공간에 오래 머무는 담백한 온기를 전합니다.',
+    bg: 'radial-gradient(circle at 50% 40%, rgba(250, 246, 238, 0.75) 0%, #ffffff 85%)',
+    targetProduct: '시그니처 아치 세트 (네추럴 다크)'
+  },
+  rest: {
+    productTitle: 'FORM S-02 백자 폴드 세트',
+    productPrice: '₩42,000',
+    productSpecs: '백자 도자기 폴드 트레이 + 02 편백 숲 비누 100g',
+    badge: '[공예 선물 화보 02: 코튼 띠지 포장 & 백자 도자기 폴드 세트]',
+    defaultMsg: '포근하고 편안한 쉼이 당신의 곁에 깃들기를.',
+    bg: 'radial-gradient(circle at 50% 40%, rgba(243, 237, 226, 0.85) 0%, #ffffff 85%)',
+    targetProduct: '백자 폴드 세트 (매트 화이트)'
+  },
+  fresh: {
+    productTitle: 'FORM S-03 플루티드 헤일로 세트',
+    productPrice: '₩45,000',
+    productSpecs: '블로잉 강화유리 헤일로 트레이 + 03 시트러스 던 비누 100g',
+    badge: '[공예 선물 화보 03: 코튼 띠지 포장 & 강화유리 헤일로 세트]',
+    defaultMsg: '맑고 산뜻한 빛의 순간을 선물합니다.',
+    bg: 'radial-gradient(circle at 50% 40%, rgba(240, 245, 248, 0.8) 0%, #ffffff 85%)',
+    targetProduct: '플루티드 헤일로 세트 (클리어)'
+  }
+};
+
+let currentGiftThemeKey = 'warmth';
+
+function switchGiftTheme(themeKey) {
+  const data = giftDataStore[themeKey];
+  if (!data) return;
+  currentGiftThemeKey = themeKey;
+
+  document.querySelectorAll('.gift-theme-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-theme') === themeKey);
+  });
+
+  const canvas = document.getElementById('giftVisualCanvas');
+  if (canvas) canvas.style.opacity = '0.35';
+
+  setTimeout(() => {
+    document.getElementById('giftAmbientBadge').textContent = data.badge;
+    document.getElementById('giftVisualTitle').textContent = data.productTitle;
+    document.getElementById('giftVisualSpecs').textContent = data.productSpecs;
+    document.getElementById('giftVisualPrice').textContent = data.productPrice;
+    document.getElementById('giftBottomSpecName').textContent = `${data.productTitle} (${data.productPrice})`;
+
+    const letterInput = document.getElementById('customLetterInput');
+    const letterCountEl = document.getElementById('letterCount');
+    const cardTextEl = document.getElementById('giftCardLiveText');
+
+    if (letterInput) {
+      letterInput.value = data.defaultMsg;
+      if (letterCountEl) letterCountEl.textContent = `${data.defaultMsg.length} / 30자`;
+    }
+    if (cardTextEl) cardTextEl.textContent = `“${data.defaultMsg}”`;
+    if (canvas) {
+      canvas.style.background = data.bg;
+      canvas.style.opacity = '1';
+    }
+  }, 120);
+}
+
+const giftLetterInputEl = document.querySelector('#customLetterInput');
+const giftLetterCountEl = document.querySelector('#letterCount');
+const giftCardLiveTextEl = document.querySelector('#giftCardLiveText');
+
+if (giftLetterInputEl && giftCardLiveTextEl && giftLetterCountEl) {
+  giftLetterInputEl.addEventListener('input', () => {
+    const txt = giftLetterInputEl.value.trim();
+    giftLetterCountEl.textContent = `${giftLetterInputEl.value.length} / 30자`;
+    giftCardLiveTextEl.textContent = txt ? `“${txt}”` : '“공간에 오래 머무는 마음을 전합니다.”';
+  });
+}
+
+function reserveSelectedGift() {
+  const data = giftDataStore[currentGiftThemeKey] || giftDataStore.warmth;
+  const selEl = document.querySelector('#product');
+  if (selEl) {
+    selEl.value = data.targetProduct;
+    sessionStorage.setItem('soapheSelectedProduct', data.targetProduct);
+  }
+  const inputEl = document.querySelector('#customLetterInput');
+  if (inputEl && inputEl.value) {
+    sessionStorage.setItem('soapheGiftMessage', inputEl.value);
+  }
+  location.hash = 'preview';
+  if (selEl) selEl.focus();
+}
+
+// 7. 25종 마스터 카탈로그 데이터 및 모달
+const catalogData = [
+  { category: 'set', catLabel: 'RITUAL SET · 비누+오브제 세트', code: 'FORM S-01', name: '시그니처 아치 세트 (네추럴 다크)', spec: '천연 화강석 420g + 01 순수 무향 비누 100g', space: '욕실 세면대용', reason: 'SOAPHE의 대표 형태와 천연석 접점 구조를 가장 완벽하게 경험할 수 있는 시그니처 세트입니다.', defaultMedia: '[STILL LIFE · 화강석 아치 + 100g 큐브 세트 정물]', hoverMedia: '[SPATIAL · 자연광 욕실 세면대 위 실제 거치 장면]' },
+  { category: 'set', catLabel: 'RITUAL SET · 비누+오브제 세트', code: 'FORM S-02', name: '백자 폴드 세트 (매트 화이트)', spec: '백자 도자기 1250°C 380g + 02 편백 숲 비누 100g', space: '욕실 & 서재 겸용', reason: '부드러운 백자 곡면과 청량한 편백 숲 향의 조화로, 욕실 이후 서재 트레이로 이어지는 쓰임이 분명합니다.', defaultMedia: '[STILL LIFE · 백자 폴드 + 편백 비누 세트 정물]', hoverMedia: '[SPATIAL · 서재 원목 데스크 위 실제 거치 장면]' },
+  { category: 'set', catLabel: 'RITUAL SET · 비누+오브제 세트', code: 'FORM S-03', name: '플루티드 헤일로 세트 (클리어)', spec: '블로잉 강화유리 350g + 04 맑은 유자 비누 100g', space: '파우더룸 & 선반용', reason: '빛이 통과하는 유리의 투명한 세로 결 그림자와 상큼한 유자 향이 아침 감각을 맑게 깨워줍니다.', defaultMedia: '[STILL LIFE · 강화유리 헤일로 + 유자 비누 세트 정물]', hoverMedia: '[SPATIAL · 거실 조명 선반 위 실제 거치 장면]' },
+  { category: 'set', catLabel: 'RITUAL SET · 비누+오브제 세트', code: 'FORM S-01L', name: '시그니처 아치 세트 (페일 그레이)', spec: '밝은 화강석 420g + 03 웜 앰버 비누 100g', space: '베이지·내추럴 욕실용', reason: '온화하고 밝은 톤의 자연석과 포근한 앰버 향의 조화로 편안한 공간 분위기를 연출합니다.', defaultMedia: '[STILL LIFE · 페일 그레이 화강석 + 앰버 비누 세트]', hoverMedia: '[SPATIAL · 웜톤 베이지 욕실 선반 위 거치 장면]' },
+  { category: 'set', catLabel: 'RITUAL SET · 비누+오브제 세트', code: 'FORM S-02G', name: '백자 폴드 세트 (클리어 글레이즈)', spec: '유광 백자 도자기 380g + 04 맑은 유자 비누 100g', space: '파우더룸 & 세면대용', reason: '매끄러운 유약 광택으로 물방울을 매끄럽게 흘려보내며 상큼한 유자 거품과 함께 경쾌한 생기를 더합니다.', defaultMedia: '[STILL LIFE · 유광 백자 폴드 + 유자 비누 세트]', hoverMedia: '[SPATIAL · 밝은 파우더룸 거울 앞 거치 장면]' },
+  { category: 'set', catLabel: 'RITUAL SET · 비누+오브제 세트', code: 'FORM S-03F', name: '플루티드 헤일로 세트 (프로스트)', spec: '반투명 서리 강화유리 350g + 01 순수 무향 비누 100g', space: '모던 차콜 & 샤워 부스용', reason: '은은한 안개 낀 서리유리 마감으로 조명을 부드럽게 산란시키며 담백한 무향 비누를 품어줍니다.', defaultMedia: '[STILL LIFE · 프로스트 헤일로 + 무향 비누 세트]', hoverMedia: '[SPATIAL · 간접조명 차콜 선반 위 빛 산란 장면]' },
+  { category: 'set', catLabel: 'RITUAL SET · 비누+오브제 세트', code: 'FORM S-04', name: '더블 큐브 기프트 세트', spec: '화강석 아치 + 비누 2종(편백+앰버) + 리넨 코튼 파우치', space: '소중한 분을 위한 선물용', reason: '낮과 밤의 무드를 모두 담은 2종 비누와 영구 화강석 오브제로 구성된 프리미엄 선물 에디션입니다.', defaultMedia: '[STILL LIFE · 코튼 띠지 박스 & 더블 비누 기프트]', hoverMedia: '[SPATIAL · 기프트 패키지 언박싱 연출 장면]' },
+  { category: 'set', catLabel: 'RITUAL SET · 비누+오브제 세트', code: 'FORM S-05', name: '마스터 하우스 에디션', spec: '3대 오브제 전종 + 4대 비누 전종 마스터 패키지', space: '하우스 풀 컬렉션', reason: '화강석, 백자, 강화유리 3대 공예 오브제와 4대 시그니처 향 비누를 모두 소장할 수 있는 마스터 세트입니다.', defaultMedia: '[STILL LIFE · 3대 오브제 & 4대 비누 마스터 풀 세트]', hoverMedia: '[SPATIAL · 갤러리 쇼룸 풀 디스플레이 장면]' },
+  { category: 'soap', catLabel: 'CP SOAP · 4주 저온숙성 비누', code: 'FORM B-01', name: '01 순수 무향 비누 (100g)', spec: '올리브 & 시어버터 100% · 자극 0%', space: '자극 없는 아침 세안용', reason: '인공 향료를 전혀 넣지 않은 순수 포뮬러로 영유아 및 민감성 피부에 담백한 보습을 선사합니다.', defaultMedia: '[STILL LIFE · 음각 로고 100g 큐브 단독 정물]', hoverMedia: '[TEXTURE · 따뜻한 물에 일어나는 조밀한 미세 거품]' },
+  { category: 'soap', catLabel: 'CP SOAP · 4주 저온숙성 비누', code: 'FORM B-02', name: '02 편백 숲 비누 (100g)', spec: '국내산 편백 오일 · 파인 & 샌달우드', space: '지친 저녁 릴랙스 세안용', reason: '비 온 뒤 축축한 편백 숲의 깊은 호흡을 담아 하루의 긴장을 고요하게 이완시켜 줍니다.', defaultMedia: '[STILL LIFE · 편백 나뭇가지와 큐브 비누 정물]', hoverMedia: '[TEXTURE · 이슬 맺힌 침엽수 추출 보태니컬 텍스처]' },
+  { category: 'soap', catLabel: 'CP SOAP · 4주 저온숙성 비누', code: 'FORM B-03', name: '03 웜 앰버 비누 (100g)', spec: '노을빛 흙 & 마른 리넨 앰버 포뮬러', space: '포근한 위로가 필요한 순간', reason: '햇볕에 잘 마른 두터운 리넨 섬유의 포근한 온기를 손끝에 은은한 잔향으로 남깁니다.', defaultMedia: '[STILL LIFE · 마른 리넨과 앰버 큐브 비누 정물]', hoverMedia: '[TEXTURE · 따뜻한 흙빛 보습 거품 클로즈업]' },
+  { category: 'soap', catLabel: 'CP SOAP · 4주 저온숙성 비누', code: 'FORM B-04', name: '04 맑은 유자 비누 (100g)', spec: '국내산 유자 과즙 & 베르가못 오일', space: '활기찬 이른 아침 세안용', reason: '투명하게 터지는 생유자의 맑은 에너지가 무기력했던 아침의 감각을 경쾌하게 깨워줍니다.', defaultMedia: '[STILL LIFE · 노란 유자 원물과 큐브 비누 정물]', hoverMedia: '[TEXTURE · 산뜻하게 퍼지는 상큼한 거품 텍스처]' },
+  { category: 'soap', catLabel: 'CP SOAP · 4주 저온숙성 비누', code: 'FORM B-05', name: '05 차콜 솔트 딥클렌징 비누 (100g)', spec: '대나무 숯 파우더 & 신안 천일염 100g', space: '모공 정돈 및 바디 각질 케어용', reason: '미세 다공성 숯 입자가 모공 속 노폐물을 흡착하고 미네랄 소금이 피부 결을 부드럽게 정돈합니다.', defaultMedia: '[STILL LIFE · 차콜 블랙 큐브와 거친 천일염 정물]', hoverMedia: '[TEXTURE · 짙은 차콜빛의 미세 흡착 거품]' },
+  { category: 'soap', catLabel: 'CP SOAP · 4주 저온숙성 비누', code: 'FORM B-06', name: '보태니컬 리필 듀오 팩 (100g × 2)', spec: '편백 숲 100g + 웜 앰버 100g 듀오 리필', space: '기존 트레이 사용자 리필용', reason: 'SOAPHE 트레이를 영구적으로 사용하시는 분들을 위한 친환경 종이 포장 리필 2종 세트입니다.', defaultMedia: '[STILL LIFE · 친환경 크라프트 리필 듀오 패키지]', hoverMedia: '[SPATIAL · 세면대 위 비누 교체 리필 장면]' },
+  { category: 'soap', catLabel: 'CP SOAP · 4주 저온숙성 비누', code: 'FORM B-07', name: '데이 & 나이트 듀오 팩 (100g × 2)', spec: '순수 무향(아침) + 편백 숲(저녁) 100g × 2', space: '시간대별 데일리 리츄얼용', reason: '아침의 순수한 시작과 저녁의 깊은 이완을 책임지는 하루 완성형 듀오 팩입니다.', defaultMedia: '[STILL LIFE · 데이 & 나이트 2구 린넨 파우치 정물]', hoverMedia: '[SPATIAL · 욕실 선반 위 나란히 놓인 2종 큐브]' },
+  { category: 'soap', catLabel: 'CP SOAP · 4주 저온숙성 비누', code: 'FORM B-08', name: '트래블 미니 큐브 4종 컬렉션 키트', spec: '4대 향 각 40g 미니 큐브 × 4개 + 알루미늄 케이스', space: '여행 & 출장 및 샘플러용', reason: '4대 시그니처 향을 모두 컴팩트하게 경험해볼 수 있는 이동형 미니 큐브 키트입니다.', defaultMedia: '[STILL LIFE · 4종 미니 큐브와 슬림 알루미늄 케이스]', hoverMedia: '[SPATIAL · 호텔 세면대 위 컴팩트 거치 장면]' },
+  { category: 'soap', catLabel: 'CP SOAP · 4주 저온숙성 비누', code: 'FORM B-09', name: '그랜드 CP 바 (220g 대용량)', spec: '순수 무향 엑스트라 버진 220g 대용량 커팅 바', space: '온 가족 패밀리 바스용', reason: '두툼한 두께감으로 오랜 기간 무르지 않고 풍성하게 사용할 수 있는 대용량 프리미엄 바입니다.', defaultMedia: '[STILL LIFE · 220g 롱 블록 내추럴 커팅 정물]', hoverMedia: '[TEXTURE · 손안에 가득 차는 묵직한 거품감]' },
+  { category: 'object', catLabel: 'CRAFT OBJECT · 공예 오브제 단품', code: 'FORM O-01', name: '천연 화강석 시그니처 아치', spec: '천연 화강석 (Granite) · 중량 420g', space: '욕실 세면대 & 현관 키 트레이', reason: '흔들림 없는 420g의 하중감과 자연석의 유기적 곡면으로 공간의 중심을 잡는 영구 오브제입니다.', defaultMedia: '[STILL LIFE · 화강석 시그니처 아치 단독 정물]', hoverMedia: '[SPATIAL · 현관 선반 위 차 키와 안경 수납 장면]' },
+  { category: 'object', catLabel: 'CRAFT OBJECT · 공예 오브제 단품', code: 'FORM O-01L', name: '천연 화강석 시그니처 아치 (페일 그레이)', spec: '밝은 천연 화강석 · 중량 420g', space: '베이지 인테리어 & 파우더룸', reason: '미세하게 반짝이는 천연 석영 결감이 화사하고 따뜻한 공간 톤을 완성해 줍니다.', defaultMedia: '[STILL LIFE · 페일 그레이 화강석 아치 단독 정물]', hoverMedia: '[SPATIAL · 베이지 타일 세면대 위 거치 장면]' },
+  { category: 'object', catLabel: 'CRAFT OBJECT · 공예 오브제 단품', code: 'FORM O-02', name: '백자 도자기 폴드 오브제', spec: '1250°C 백자토 고온 소성 · 방수 유약 380g', space: '서재 데스크 & 파우더룸 주얼리', reason: '흙과 유약이 빚은 매끄러운 곡면으로 서재에서 만년필이나 주얼리를 품어주는 공예 트레이입니다.', defaultMedia: '[STILL LIFE · 백자 폴드 오브제 단독 정물]', hoverMedia: '[SPATIAL · 원목 데스크 위 만년필과 인센스 거치 장면]' },
+  { category: 'object', catLabel: 'CRAFT OBJECT · 공예 오브제 단품', code: 'FORM O-02G', name: '백자 도자기 폴드 오브제 (클리어 글레이즈)', spec: '1250°C 백자토 고온 소성 · 투명 유광 방수 유약 380g', space: '홈카페 티웨어 & 세면대', reason: '완벽한 방수 유리질 표면으로 물때가 스며들지 않아 세척이 매우 용이한 공예 트레이입니다.', defaultMedia: '[STILL LIFE · 유광 백자 폴드 오브제 단독 정물]', hoverMedia: '[SPATIAL · 홈카페 테이블 위 티백 트레이 거치 장면]' },
+  { category: 'object', catLabel: 'CRAFT OBJECT · 공예 오브제 단품', code: 'FORM O-03', name: '플루티드 강화유리 헤일로', spec: '블로잉 강화유리 · 광학 굴절 연마 350g', space: '욕실 선반 & 거실 캔들 트레이', reason: '세로 결을 따라 빛을 산란시키며 투명한 그림자를 남겨 공간에 시각적 청량감을 더합니다.', defaultMedia: '[STILL LIFE · 플루티드 유리 헤일로 단독 정물]', hoverMedia: '[SPATIAL · 조명 아래 캔들을 올려둔 빛 산란 장면]' },
+  { category: 'object', catLabel: 'CRAFT OBJECT · 공예 오브제 단품', code: 'FORM O-03F', name: '블로잉 강화유리 헤일로 오브제 (프로스트)', spec: '서리 에칭 강화유리 350g', space: '차콜 모던 욕실 & 침실 협탁', reason: '안개처럼 부드러운 반투명 표면이 조명을 소프트하게 확산시켜 몽환적인 분위기를 냅니다.', defaultMedia: '[STILL LIFE · 반투명 프로스트 유리 헤일로 단독 정물]', hoverMedia: '[SPATIAL · 침실 협탁 위 무드등 곁 거치 장면]' },
+  { category: 'object', catLabel: 'CRAFT OBJECT · 공예 오브제 단품', code: 'FORM O-04', name: '천연 화강석 미니 인센스 & 링 트레이', spec: '천연 화강석 · 중량 190g · 황동 홀더 내장', space: '서재 & 명상 룸 & 침실', reason: '인센스 재를 깔끔하게 받아내며 외출 후 반지를 올려둘 수 있는 컴팩트 스톤 트레이입니다.', defaultMedia: '[STILL LIFE · 화강석 미니 트레이 & 황동 인센스 홀더]', hoverMedia: '[SPATIAL · 서재 책장 위 인센스 연기 피어오르는 장면]' },
+  { category: 'object', catLabel: 'CRAFT OBJECT · 공예 오브제 단품', code: 'FORM O-05', name: '백자 오벌 오브제 플레이트', spec: '1250°C 백자토 타원형 플레이트 · 중량 280g', space: '파우더룸 & 문구류 수납', reason: '길쭉한 타원형 비례로 메이크업 브러쉬, 안경, 만년필을 안정감 있게 정돈해 줍니다.', defaultMedia: '[STILL LIFE · 백자 타원형 플레이트 단독 정물]', hoverMedia: '[SPATIAL · 파우더룸 화장대 위 브러쉬 정돈 장면]' }
+];
+
+const sel = document.querySelector('#product');
+function populateProductSelect() {
+  if (!sel) return;
+  sel.innerHTML = '<option value="">제품 선택</option>';
+  catalogData.forEach(item => {
+    sel.insertAdjacentHTML('beforeend', `<option value="${item.name}">${item.code} · ${item.name}</option>`);
+  });
+  const saved = sessionStorage.getItem('soapheSelectedProduct');
+  if (saved) sel.value = saved;
+}
+populateProductSelect();
+
+// 모달
+const modal = document.querySelector('#modal');
+const close = document.querySelector('#close');
+let opener, choice;
+
+function openProductModalDirect(codeOrName) {
+  const match = catalogData.find(item => item.code === codeOrName || item.name.includes(codeOrName));
+  if (!match) return;
+  opener = document.activeElement;
+  choice = match.name;
+  sessionStorage.setItem('soapheSelectedProduct', choice);
+  document.querySelector('#modalTitle').textContent = `${match.code} · ${match.name}`;
+  document.querySelector('#modalCategory').textContent = match.catLabel;
+  document.querySelector('#modalDesc').innerHTML = `
+    <b>[규격 &amp; 주요 스펙]</b><br>${match.spec} · ${match.space}<br><br>
+    <b>[디자인 &amp; 공예 철학]</b><br>${match.reason}<br><br>
+    <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-top: 8px;">
+      <span style="display:block; font-weight:600; margin-bottom:4px;">정물 화보: ${match.defaultMedia}</span>
+      <span style="color:var(--text-sub);">공간 연출: ${match.hoverMedia}</span>
+    </div>
+  `;
+  modal.classList.add('open');
+  close.focus();
+}
+
+function shutModal() {
+  modal.classList.remove('open');
+  if (opener) opener.focus();
+}
+close.onclick = shutModal;
+document.onkeydown = e => { if (e.key === 'Escape') shutModal(); };
+
+document.querySelector('#reserve').onclick = () => {
+  if (sel) sel.value = choice;
+  sessionStorage.setItem('soapheSelectedProduct', choice);
+  shutModal();
+  location.hash = 'preview';
+};
+if (sel) {
+  sel.addEventListener('change', () => {
+    if (sel.value) sessionStorage.setItem('soapheSelectedProduct', sel.value);
+  });
+}
+
+// 8. 4단계 맞춤 퀴즈
+const quizQuestions = [
+  { key: 'situation', title: '어떤 상황을 위한 제품인가요?', options: [['self', '나의 일상에서 사용하기 위해'], ['birthday', '생일을 축하하기 위해'], ['housewarming', '집들이 선물로'], ['thanks', '고마운 마음을 전하기 위해'], ['newstart', '새로운 시작을 응원하기 위해'], ['justbecause', '특별한 날이 아니어도 마음을 전하기 위해']] },
+  { key: 'material', title: '어떤 소재의 느낌이 마음에 드나요?', options: [['stone', '자연스러운 돌의 결'], ['ceramic', '따뜻하고 부드러운 도자 표면'], ['glass', '빛이 통과하는 맑은 유리'], ['any', '소재는 상관없어요'], ['preview', '직접 보고 결정하고 싶어요']] },
+  { key: 'scent', title: '어떤 향이 마음에 드나요?', options: [['unscented', '향이 없는 제품 (순수 무향)'], ['woody', '포근한 우디 향 (편백 숲)'], ['amber', '포근한 앰버 향 (웜 앰버)'], ['citrus', '산뜻한 시트러스 향 (맑은 유자)'], ['unknown', '잘 모르겠어요']] },
+  { key: 'strength', title: '어느 정도의 향을 원하나요?', options: [['none', '향이 거의 느껴지지 않게'], ['subtle', '가까이에서 은은하게'], ['soft', '공간에 부드럽게 퍼지게'], ['strong', '향이 분명하게 느껴지게'], ['unknown', '잘 모르겠어요']] }
+];
+
+const quizState = {};
+let quizStep = 0;
+const quizProgress = document.querySelector('#quizProgress');
+const quizQuestion = document.querySelector('#quizQuestion');
+const quizBack = document.querySelector('#quizBack');
+const quizReset = document.querySelector('#quizReset');
+const quizProgressBar = document.querySelector('#quizProgressBar');
+const labelFor = (key, value) => quizQuestions.find(q => q.key === key)?.options.find(opt => opt[0] === value)?.[1] || value;
+
+function showQuizQuestion() {
+  const question = quizQuestions[quizStep];
+  if (quizProgress) quizProgress.textContent = `질문 0${quizStep + 1} / 0${quizQuestions.length}`;
+  if (quizProgressBar) quizProgressBar.style.width = `${((quizStep + 1) / quizQuestions.length) * 100}%`;
+
+  quizQuestion.innerHTML = `
+    <h3 style="margin: 0 0 16px; font-size: 18px; color: var(--text-main); font-weight: 600;">${question.title}</h3>
+    <div style="display: grid; gap: 8px;">
+      ${question.options.map(option => `
+        <button class="quiz-option pearl-tab" type="button" data-value="${option[0]}" aria-pressed="${quizState[question.key] === option[0] ? 'true' : 'false'}">
+          <span>${option[1]}</span>
+          <span style="font-size: 13px; opacity: ${quizState[question.key] === option[0] ? '1' : '0'};">✓</span>
+        </button>
+      `).join('')}
+    </div>
+  `;
+  quizBack.hidden = quizStep === 0;
+  quizReset.hidden = quizStep === 0 && !Object.keys(quizState).length;
+}
+
+function showQuizResult() {
+  const sets = catalogData.filter(i => i.category === 'set');
+  let sortedSets = [...sets].sort((a, b) => {
+    let scoreA = 0, scoreB = 0;
+    const mat = quizState.material;
+    const sct = quizState.scent;
+    if (mat === 'stone' && a.code.includes('S-01')) scoreA += 3;
+    if (mat === 'stone' && b.code.includes('S-01')) scoreB += 3;
+    if (mat === 'ceramic' && a.code.includes('S-02')) scoreA += 3;
+    if (mat === 'ceramic' && b.code.includes('S-02')) scoreB += 3;
+    if (mat === 'glass' && a.code.includes('S-03')) scoreA += 3;
+    if (mat === 'glass' && b.code.includes('S-03')) scoreB += 3;
+
+    if (sct === 'unscented' && a.spec.includes('무향')) scoreA += 2;
+    if (sct === 'unscented' && b.spec.includes('무향')) scoreB += 2;
+    if (sct === 'woody' && a.spec.includes('편백')) scoreA += 2;
+    if (sct === 'woody' && b.spec.includes('편백')) scoreB += 2;
+    if (sct === 'amber' && a.spec.includes('앰버')) scoreA += 2;
+    if (sct === 'amber' && b.spec.includes('앰버')) scoreB += 2;
+    if (sct === 'citrus' && a.spec.includes('유자')) scoreA += 2;
+    if (sct === 'citrus' && b.spec.includes('유자')) scoreB += 2;
+    return scoreB - scoreA;
+  });
+
+  if (quizProgress) quizProgress.textContent = '1:1 맞춤 추천 결과 · FIND YOUR RITUAL';
+  if (quizProgressBar) quizProgressBar.style.width = '100%';
+
+  quizQuestion.innerHTML = `
+    <h3 style="margin: 0 0 8px; font-size: 19px; color: var(--text-main); font-weight: 600;">당신의 취향에 꼭 맞는 시작 세트</h3>
+    <div class="quiz-summary-box">
+      <strong style="color: var(--text-main);">선택 요약:</strong> ${labelFor('situation', quizState.situation)} · ${labelFor('material', quizState.material)} · ${labelFor('scent', quizState.scent)} · ${labelFor('strength', quizState.strength)}
+    </div>
+    <div class="quiz-result-list">
+      ${sortedSets.slice(0, 3).map((item, rank) => {
+        const isBest = rank === 0;
+        return `
+          <article class="quiz-result-card ${isBest ? 'best-match' : 'alt-match'}">
+            ${isBest ? `<div class="quiz-best-match-badge">👑 YOUR BEST MATCH · 최적 추천 1순위</div>` : `<div style="display: flex; gap: 6px;"><span class="quiz-alt-match-badge">대안 추천 0${rank + 1}</span></div>`}
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span class="quiz-rank-badge">0${rank + 1}</span>
+                <b style="font-family: var(--serif); font-size: ${isBest ? '18px' : '15.5px'}; color: var(--text-main);">${item.code} · ${item.name}</b>
+              </div>
+              <span class="mono-spec" style="background: var(--bg-card); padding: 3px 8px; border-radius: 4px;">${item.catLabel}</span>
+            </div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--text-sub); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <span>${item.spec}</span>
+              <span style="opacity: 0.4;">·</span>
+              <span>${item.space}</span>
+            </div>
+            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0;">${item.reason}</p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px;">
+              <button class="view-more-trans detail" type="button" data-product="${item.name}"><span class="btn-text">제품 이야기 보기</span><span class="btn-arrow">→</span></button>
+              <button class="view-more-trans primary quick-reserve-btn" type="button" style="background: var(--bg-dark); color: #ffffff;" data-product="${item.name}">
+                <span class="btn-text">${isBest ? '이 최적 추천 세트 예약 담기' : '이 세트 예약 담기'}</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('')}
+    </div>
+  `;
+  quizStep = quizQuestions.length;
+  quizBack.hidden = false;
+  quizReset.hidden = false;
+  sessionStorage.setItem('soapheQuiz', JSON.stringify(quizState));
+}
+
+quizQuestion.addEventListener('click', event => {
+  const option = event.target.closest('.quiz-option');
+  if (option) {
+    quizState[quizQuestions[quizStep].key] = option.dataset.value;
+    if (quizStep < quizQuestions.length - 1) {
+      quizStep += 1;
+      showQuizQuestion();
+    } else {
+      showQuizResult();
+    }
+    return;
+  }
+  const detailBtn = event.target.closest('.detail');
+  if (detailBtn) {
+    openProductModalDirect(detailBtn.dataset.product);
+    return;
+  }
+  const reserveBtn = event.target.closest('.quick-reserve-btn');
+  if (reserveBtn) {
+    if (sel) sel.value = reserveBtn.dataset.product;
+    sessionStorage.setItem('soapheSelectedProduct', reserveBtn.dataset.product);
+    location.hash = 'preview';
+    if (sel) sel.focus();
+  }
+});
+
+quizBack.addEventListener('click', () => { if (quizStep > 0) { quizStep -= 1; showQuizQuestion(); } });
+quizReset.addEventListener('click', () => { Object.keys(quizState).forEach(k => delete quizState[k]); quizStep = 0; sessionStorage.removeItem('soapheQuiz'); showQuizQuestion(); });
+showQuizQuestion();
+
+// 9. 예약 폼 검증
+const form = document.querySelector('#form');
+const errorBox = document.querySelector('#errors');
+const errorList = document.querySelector('#errorList');
+const dateInput = document.querySelector('#reserveDate');
+if (dateInput) dateInput.min = new Date().toISOString().slice(0, 10);
+
+const fields = [
+  { el: sel, error: 'productError', empty: '제품을 선택해 주세요.' },
+  { el: document.querySelector('#reserveSpace'), error: 'spaceError', empty: '공간을 선택해 주세요.' },
+  { el: dateInput, error: 'dateError', empty: '희망일을 선택해 주세요.' },
+  { el: document.querySelector('#reserveEmail'), error: 'emailError', empty: '이메일을 입력해 주세요.', invalid: '이메일 형식을 확인해 주세요.' }
+].filter(f => f.el);
+
+function messageFor(field) {
+  if (!field.el.value) return field.empty;
+  if (field.el.validity && field.el.validity.typeMismatch) return field.invalid || '입력 형식을 확인해 주세요.';
+  if (field.el === dateInput && field.el.value < field.el.min) return '오늘 이후 날짜를 선택해 주세요.';
+  return '';
+}
+
+function validate(showSummary = false) {
+  const failures = [];
+  fields.forEach(field => {
+    const message = messageFor(field);
+    const out = document.querySelector('#' + field.error);
+    if (out) out.textContent = message;
+    field.el.setAttribute('aria-invalid', message ? 'true' : 'false');
+    if (message) failures.push({ field, message });
+  });
+  if (showSummary && errorList && errorBox) {
+    errorList.innerHTML = failures.map(x => `<li><a href="#${x.field.el.id}" style="font-weight:700; color:#000;">${x.message}</a></li>`).join('');
+    errorBox.classList.toggle('hidden', !failures.length);
+  }
+  return failures;
+}
+
+fields.forEach(field => field.el.addEventListener('input', () => validate(false)));
+if (form) {
+  form.onsubmit = e => {
+    e.preventDefault();
+    const failures = validate(true);
+    if (failures.length) {
+      errorBox.focus();
+      return;
+    }
+    errorBox.classList.add('hidden');
+    form.classList.add('hidden');
+    const done = document.querySelector('#done');
+    const giftMsg = sessionStorage.getItem('soapheGiftMessage');
+    const msgNote = giftMsg ? ` (각인 메시지: “${giftMsg}”)` : '';
+    document.querySelector('#summary').textContent = `${sel.value} · ${document.querySelector('#reserveSpace').value} · ${dateInput.value}${msgNote} 선택이 성공적으로 접수되었습니다.`;
+    done.classList.remove('hidden');
+    done.focus();
+  };
+}
+
+// 10. 푸터 마우스 반응형 유기적 펄/버블 인터랙티브 효과 (gong-cha.co.kr #2)
+(function initFooterPebbles() {
+  const canvas = document.getElementById('footerPebbleCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let pebbles = [];
+  let mouse = { x: -999, y: -999 };
+
+  function resize() {
+    width = canvas.width = canvas.parentElement.offsetWidth;
+    height = canvas.height = canvas.parentElement.offsetHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  // 18개의 은은한 펄/버블 파티클 생성
+  for (let i = 0; i < 22; i++) {
+    pebbles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: 6 + Math.random() * 16,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: -0.2 - Math.random() * 0.4,
+      alpha: 0.15 + Math.random() * 0.25,
+      color: Math.random() > 0.4 ? '235, 120, 38' : '250, 246, 238'
+    });
+  }
+
+  canvas.parentElement.addEventListener('mousemove', e => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+  canvas.parentElement.addEventListener('mouseleave', () => {
+    mouse.x = -999;
+    mouse.y = -999;
+  });
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    pebbles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // 마우스 반발/인력 물리 반응 (gong-cha #2)
+      const dx = mouse.x - p.x;
+      const dy = mouse.y - p.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 120) {
+        const force = (120 - dist) / 120;
+        p.x -= (dx / dist) * force * 2.5;
+        p.y -= (dy / dist) * force * 2.5;
+      }
+
+      if (p.y < -30) {
+        p.y = height + 20;
+        p.x = Math.random() * width;
+      }
+      if (p.x < -30) p.x = width + 20;
+      if (p.x > width + 30) p.x = -20;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(p.x - p.radius * 0.3, p.y - p.radius * 0.3, p.radius * 0.25, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha * 1.4})`;
+      ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+// 11. 정밀 스크롤 스파이 (GNB 및 모바일 바 동기화)
+function updateScrollSpy() {
+  const sections = [
+    { id: 'scents', el: document.querySelector('#scents') },
+    { id: 'materials', el: document.querySelector('#materials') },
+    { id: 'rooms', el: document.querySelector('#rooms') },
+    { id: 'living', el: document.querySelector('#living') },
+    { id: 'gift', el: document.querySelector('#gift') },
+    { id: 'finder', el: document.querySelector('#finder') },
+    { id: 'faq', el: document.querySelector('#faq') }
+  ].filter(s => s.el);
+
+  const scrollY = window.scrollY || window.pageYOffset;
+  const triggerPoint = scrollY + 160;
+
+  let activeId = '';
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const sec = sections[i];
+    if (triggerPoint >= sec.el.offsetTop) {
+      activeId = sec.id;
+      break;
+    }
+  }
+  if (scrollY < 280) activeId = '';
+
+  document.querySelectorAll('header nav a[data-section]').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === `#${activeId}`);
+  });
+  document.querySelectorAll('.mobilebar a[data-section]').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === `#${activeId}`);
+  });
+}
+window.addEventListener('scroll', updateScrollSpy, { passive: true });
+updateScrollSpy();
+</script>
+</body>
+</html>

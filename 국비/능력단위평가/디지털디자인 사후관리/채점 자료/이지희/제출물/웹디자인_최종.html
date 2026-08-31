@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WICKETA 웹디자인 최종본 | 2030 캄테크 웰니스 믹솔로지 마스터</title>
+    
+    <!-- 🔤 Global Unified Webfont: Pretendard Variable -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    
+    <style>
+        /* ==========================================================================
+           1. CSS CUSTOM PROPERTIES & DESIGN TOKENS (No !important Architecture)
+           ========================================================================== */
+        :root {
+            --font-main: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            --bg-body: #F8F9FA;
+            --bg-card: #FFFFFF;
+            --bg-glass: rgba(255, 255, 255, 0.92);
+            --bg-tertiary: #F1F3F5;
+            --bg-dark: #121212;
+            --text-primary: #111111;
+            --text-secondary: #495057;
+            --text-muted: #868E96;
+            --text-light: #F8F9FA;
+            --border-light: rgba(0, 0, 0, 0.08);
+            --border-medium: #CED4DA;
+            --border-dark: #212529;
+            --accent-black: #000000;
+            --accent-coral: #E64980;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.14);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+            --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --section-spacing: 96px;
+            --container-max: 1280px;
+        }
+
+        /* 👓 이지뷰 & 고대비 모드 */
+        body.easy-view {
+            --text-primary: #000000;
+            --text-secondary: #212529;
+            font-size: 18px;
+        }
+        body.easy-view .sub-label { font-size: 15px; }
+        body.easy-view .headline { font-size: 40px; }
+        body.easy-view .body-desc { font-size: 19px; }
+
+        /* ==========================================================================
+           2. GLOBAL RESET & BASE STYLES
+           ========================================================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            font-size: 15px;
+            color: var(--text-primary);
+            background-color: var(--bg-body);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        button {
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            border: 1px solid var(--border-medium);
+            background: #FFFFFF;
+            color: var(--text-primary);
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition-smooth);
+        }
+
+        button:hover {
+            background: var(--text-primary);
+            color: #FFFFFF;
+            border-color: var(--text-primary);
+        }
+
+        .btn-primary {
+            background: var(--accent-black);
+            color: #FFFFFF;
+            border-color: var(--accent-black);
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: #2B2B2B;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* 3단 텍스트 위계 시스템 (Kevin's Room 벤치마크) */
+        .txt-tier {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sub-label {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-label::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--text-primary);
+            border-radius: 50%;
+        }
+
+        .headline {
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1.3;
+            letter-spacing: -0.6px;
+            color: var(--text-primary);
+        }
+
+        .body-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ==========================================================================
+           3. GNB HEADER (3대 대분류 카테고리 & 중앙 와이드 검색바)
+           ========================================================================== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg-glass);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-light);
+            transition: var(--transition-smooth);
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow-sm);
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 74px;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .logo-badge {
+            font-size: 11px;
+            font-weight: 700;
+            background: var(--bg-tertiary);
+            padding: 3px 8px;
+            border-radius: var(--radius-full);
+            color: var(--text-secondary);
+        }
+
+        /* 3대 스마트 대분류 카테고리 네비게이션 */
+        .gnb-nav {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .gnb-nav a {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            padding: 8px 14px;
+            border-radius: var(--radius-full);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .gnb-nav a:hover, .gnb-nav a.active {
+            color: var(--text-primary);
+            background: var(--bg-tertiary);
+        }
+
+        /* 🔍 [중앙 상시 와이드 검색바] 440px 넉넉한 공간 확보 */
+        .gnb-search-wrap {
+            position: relative;
+            flex: 1;
+            max-width: 440px;
+            min-width: 220px;
+        }
+
+        .gnb-search-input {
+            width: 100%;
+            padding: 10px 38px 10px 42px;
+            font-size: 13.5px;
+            font-weight: 600;
+            border: 1.5px solid var(--border-medium);
+            border-radius: var(--radius-full);
+            background: rgba(255, 255, 255, 0.95);
+            outline: none;
+            transition: var(--transition-smooth);
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .gnb-search-input:focus {
+            border-color: var(--accent-black);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+            background: #FFFFFF;
+        }
+
+        .gnb-search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 15px;
+            color: var(--text-secondary);
+            pointer-events: none;
+        }
+
+        .gnb-search-clear {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: none;
+            background: none;
+            border: none;
+            padding: 2px 4px;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .wishlist-header-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 14px;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-medium);
+            background: #FFFFFF;
+        }
+
+        .wishlist-header-btn.active {
+            background: #FFF0F6;
+            border-color: var(--accent-coral);
+            color: var(--accent-coral);
+        }
+
+        .cart-badge-bounce {
+            display: inline-block;
+            transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* ==========================================================================
+           4. TOAST NOTIFICATION SYSTEM (FIX-01: 1.5초 토스트 알림)
+           ========================================================================== */
+        .toast-container {
+            position: fixed;
+            top: 84px;
+            right: 24px;
+            z-index: 3000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            pointer-events: none;
+        }
+
+        .toast-item {
+            background: rgba(18, 18, 18, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: #FFFFFF;
+            padding: 14px 22px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            animation: toastSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            pointer-events: auto;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .toast-item.fade-out {
+            animation: toastSlideOut 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes toastSlideIn {
+            from { transform: translateY(-20px) scale(0.95); opacity: 0; }
+            to { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+        @keyframes toastSlideOut {
+            from { transform: translateY(0) scale(1); opacity: 1; }
+            to { transform: translateY(-20px) scale(0.95); opacity: 0; }
+        }
+
+        /* ==========================================================================
+           5. TOP FLOATING BUTTON (FIX-04: 우측 하단 상시 고정)
+           ========================================================================== */
+        .floating-top-btn {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 1500;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--bg-dark);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 900;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: var(--transition-smooth);
+        }
+
+        .floating-top-btn.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .floating-top-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            background: #000000;
+        }
+
+        /* ==========================================================================
+           6. GLASSMORHPISM CUSTOM MODAL SYSTEM (FIX-05: alert() 100% 모달화)
+           ========================================================================== */
+        .custom-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 2500;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .custom-modal-overlay.active {
+            display: flex;
+        }
+
+        .custom-modal-box {
+            background: #FFFFFF;
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 540px;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 32px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid var(--border-light);
+        }
+
+        @keyframes modalPop {
+            from { transform: scale(0.92); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: none;
+            background: var(--bg-tertiary);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 0;
+        }
+
+        .modal-close-btn:hover {
+            background: var(--accent-black);
+            color: #FFFFFF;
+        }
+
+        /* ==========================================================================
+           7. HERO & SECTIONS
+           ========================================================================== */
+        .hero-section {
+            padding: 40px 0 var(--section-spacing) 0;
+        }
+
+        .hero-asymmetric-grid {
+            display: grid;
+            grid-template-columns: 58% 42%;
+            gap: 40px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            box-shadow: var(--shadow-md);
+            align-items: center;
+        }
+
+        .hero-canvas-box {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-md);
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            text-align: center;
+        }
+
+        .aurora-shader-canvas {
+            width: 100%;
+            height: 280px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, #4A4A4A, #2B2B2B);
+            box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            transition: background 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aurora-shader-canvas::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+            animation: rotateAurora 12s linear infinite;
+        }
+
+        @keyframes rotateAurora {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .slider-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            padding: 18px 22px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            accent-color: var(--accent-black);
+            border-radius: 3px;
+        }
+
+        .spec-grid-2x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            background: var(--bg-tertiary);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+        }
+
+        /* 롤링 브랜드 티커 (Peach Beach 벤치마크) */
+        .brand-ticker-wrap {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            background: var(--bg-dark);
+            color: #FFFFFF;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 16px 0;
+            margin-bottom: var(--section-spacing);
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .ticker-content span {
+            margin: 0 28px;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ==========================================================================
+           8. SIGNATURE & CRAFT & RITUAL (화보 컬렉션 100% 와이드 풀프레임 복원)
+           ========================================================================== */
+        .signature-section {
+            margin-bottom: var(--section-spacing);
+        }
+
+        .signature-split-grid {
+            display: grid;
+            grid-template-columns: 48% 52%;
+            gap: 48px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            box-shadow: var(--shadow-md);
+            align-items: stretch;
+        }
+
+        /* 🖼️ [시그니처 비주얼 화보] 좌측 48% 공간을 100% 꽉 채우는 럭셔리 쇼케이스 캔버스 */
+        .lookbook-frame {
+            width: 100%;
+            min-height: 480px;
+            background: linear-gradient(145deg, #212529, #121212);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 28px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lookbook-frame::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230, 73, 128, 0.22) 0%, rgba(34, 139, 230, 0.15) 45%, transparent 70%);
+            animation: rotateAurora 16s linear infinite;
+        }
+
+        .craft-section {
+            margin-bottom: var(--section-spacing);
+        }
+
+        .process-steps-6 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 14px;
+            margin: 32px 0 28px 0;
+        }
+
+        .process-step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 20px 14px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+        }
+
+        .process-step-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-dark);
+        }
+
+        .step-index {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .ktr-stats-banner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            background: var(--bg-dark);
+            color: #FFFFFF;
+            border-radius: var(--radius-md);
+            padding: 32px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .stat-val {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 4px;
+            color: #FFFFFF;
+        }
+
+        .ritual-section {
+            margin-bottom: var(--section-spacing);
+        }
+
+        .bento-grid-2x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .bento-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-dark);
+        }
+
+        .timer-circular-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            gap: 16px;
+        }
+
+        .timer-time {
+            font-size: 52px;
+            font-weight: 900;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 2px;
+        }
+
+        /* ==========================================================================
+           9. STEP 7: 5-IN-1 감각 스튜디오 콘솔 (FIX-05: 5개 독립 워크스테이션)
+           ========================================================================== */
+        .studio-section {
+            margin-bottom: var(--section-spacing);
+        }
+
+        .studio-console-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .studio-nav-tabs {
+            display: flex;
+            gap: 10px;
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 16px;
+            margin-bottom: 32px;
+            overflow-x: auto;
+        }
+
+        .studio-tab-btn {
+            font-size: 14px;
+            font-weight: 700;
+            border: none;
+            background: none;
+            padding: 10px 18px;
+            border-radius: var(--radius-full);
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .studio-tab-btn.active {
+            background: var(--accent-black);
+            color: #FFFFFF;
+        }
+
+        .panel-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==========================================================================
+           10. STEP 9: CATALOG & SOCIAL PROOF CARDS (FIX-02, FIX-03)
+           ========================================================================== */
+        .catalog-section {
+            margin-bottom: var(--section-spacing);
+        }
+
+        .catalog-filter-bar {
+            display: flex;
+            gap: 10px;
+            margin: 24px 0 32px 0;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cat-tab-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .cat-tab-btn {
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-full);
+            background: #FFFFFF;
+        }
+
+        .cat-tab-btn.active {
+            background: var(--accent-black);
+            color: #FFFFFF;
+            border-color: var(--accent-black);
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+            gap: 14px;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-dark);
+        }
+
+        .product-visual-box {
+            aspect-ratio: 1 / 1;
+            background: var(--bg-tertiary);
+            border: 1px dashed var(--border-medium);
+            border-radius: var(--radius-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-wish-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--border-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: var(--text-muted);
+            padding: 0;
+            transition: var(--transition-smooth);
+            z-index: 10;
+        }
+
+        .card-wish-btn.active {
+            color: #E64980;
+            border-color: #E64980;
+            background: #FFF0F6;
+        }
+
+        .card-rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #F59F00;
+            background: #FFF9DB;
+            padding: 2px 8px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            margin-top: 6px;
+            transition: var(--transition-smooth);
+        }
+
+        .card-rating-badge:hover {
+            background: #FFE066;
+        }
+
+        /* ==========================================================================
+           11. SLIDE-OUT 3-IN-1 SMART DRAWER (FIX-06: B2B/1588 전화 폼 분기)
+           ========================================================================== */
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            display: none;
+        }
+
+        .drawer-overlay.active {
+            display: block;
+        }
+
+        .smart-drawer {
+            position: fixed;
+            top: 0;
+            right: -480px;
+            width: 460px;
+            height: 100vh;
+            background: #FFFFFF;
+            box-shadow: var(--shadow-lg);
+            z-index: 2001;
+            transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+        }
+
+        .smart-drawer.active {
+            right: 0;
+        }
+
+        .drawer-mode-tabs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            background: var(--bg-tertiary);
+            padding: 4px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .mode-tab-btn {
+            font-size: 12px;
+            font-weight: 700;
+            border: none;
+            background: transparent;
+            padding: 8px 0;
+            border-radius: 4px;
+        }
+
+        .mode-tab-btn.active {
+            background: #FFFFFF;
+            box-shadow: var(--shadow-sm);
+            color: var(--text-primary);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-secondary);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 10px 12px;
+            font-size: 13px;
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-sm);
+            background: #FFFFFF;
+            font-family: inherit;
+        }
+
+        /* ==========================================================================
+           12. FOOTER & MOBILE STICKY BAR
+           ========================================================================== */
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 64px 0 48px 0;
+            font-size: 13px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .mobile-sticky-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--border-light);
+            padding: 12px 20px;
+            z-index: 1200;
+            box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .gnb-nav { display: none; }
+            .gnb-search-wrap { max-width: 280px; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-asymmetric-grid { grid-template-columns: 1fr; padding: 24px; }
+            .signature-split-grid { grid-template-columns: 1fr; padding: 24px; }
+            .lookbook-frame { min-height: 380px; }
+            .process-steps-6 { grid-template-columns: repeat(2, 1fr); }
+            .ktr-stats-banner { grid-template-columns: repeat(2, 1fr); padding: 20px; }
+            .bento-grid-2x2 { grid-template-columns: 1fr; }
+            .bento-card[style*="span 2"] { grid-column: span 1 !important; }
+            .panel-container { grid-template-columns: 1fr; }
+            .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .gnb-search-wrap { max-width: 180px; min-width: 140px; }
+            .smart-drawer { width: 100vw; right: -100vw; }
+            .mobile-sticky-bar { display: flex; }
+            body { padding-bottom: 72px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       TOAST NOTIFICATION CONTAINER (FIX-01)
+       ========================================================================== -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ==========================================================================
+       TOP FLOATING BUTTON (FIX-04)
+       ========================================================================== -->
+    <button class="floating-top-btn" id="floatingTopBtn" onclick="scrollToTop()" title="맨 위로 가기">
+        ▲<br/>TOP
+    </button>
+
+    <!-- ==========================================================================
+       GNB HEADER (3대 대분류 카테고리 & 중앙 와이드 검색바 탑재)
+       ========================================================================== -->
+    <header id="mainHeader">
+        <div class="container header-inner">
+            <div class="logo">
+                WICKETA
+                <span class="logo-badge">최종완성본 v2.1</span>
+            </div>
+
+            <!-- 🌿 3대 스마트 대분류 카테고리 네비게이션 -->
+            <nav class="gnb-nav">
+                <a href="#hero" class="active">🌿 브랜드 스토리</a>
+                <a href="#studio">🧪 감각 스튜디오</a>
+                <a href="#catalog">🍵 티 도감 (32)</a>
+                <a href="#showroom">🏛️ 성수 쇼룸</a>
+            </nav>
+
+            <!-- 🔍 [중앙 와이드 검색창] 넉넉한 440px 공간에서 실시간 키워드 검색 -->
+            <div class="gnb-search-wrap">
+                <span class="gnb-search-icon">🔍</span>
+                <input type="search" class="gnb-search-input" id="gnbSearchInput" 
+                       placeholder="원하는 원료·티 검색 (라벤더, GABA, 오로라...)" 
+                       oninput="searchCatalog(this.value)">
+                <button class="gnb-search-clear" id="gnbSearchClearBtn" onclick="clearGnbSearch()">✕</button>
+            </div>
+
+            <div class="header-controls">
+                <!-- 위시리스트 토글 뷰 버튼 -->
+                <button class="wishlist-header-btn" id="wishlistHeaderBtn" onclick="toggleWishlistFilter()">
+                    ♡ 찜 (<span id="wishlistHeaderCount">0</span>)
+                </button>
+                <button onclick="toggleEasyView()" id="easyViewToggleBtn" title="고대비 이지뷰 모드">👓 이지뷰</button>
+                <button class="btn-primary" onclick="openDrawer('d2c')">
+                    🛒 카트 (<span id="cartBadge" class="cart-badge-bounce">1</span>)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ==========================================================================
+           STEP 1-2: 58:42 ASYMMETRIC EDITORIAL HERO (FIX-07: 감성 카피 순화)
+           ========================================================================== -->
+        <section id="hero" class="hero-section">
+            <div class="hero-asymmetric-grid">
+                
+                <!-- 좌측 58%: 실시간 pH 산도 조색 셰이더 캔버스 -->
+                <div class="hero-canvas-box">
+                    <div class="aurora-shader-canvas" id="heroAuroraCanvas">
+                        <div style="font-size: 15px; font-weight: 800; z-index: 2;" id="canvasStateLabel">
+                            ✨ 상태: 1단계 미드나잇 퍼플 (pH 3.2 맑은 산미)
+                        </div>
+                        <div style="font-size: 13px; opacity: 0.9; z-index: 2; margin-top: 6px;">
+                            천연 안토시아닌이 빚어내는 영롱한 오로라 빛 굴절
+                        </div>
+                    </div>
+
+                    <div class="slider-wrapper">
+                        <div class="slider-header">
+                            <span>산도(pH) 슬라이더 조절</span>
+                            <span id="sliderPhDisplay">pH 3.2</span>
+                        </div>
+                        <input type="range" id="phRangeInput" min="2.5" max="7.5" step="0.1" value="3.2" oninput="handlePhSlider(this.value)">
+                        <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted);">
+                            <span>🟣 보라 (pH 3.0)</span>
+                            <span>🌺 마젠타 (pH 4.8)</span>
+                            <span>🟠 앰버 (pH 6.5)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 우측 42%: 3단 정보 위계 브랜드 선언 (Kevin's Room) -->
+                <div class="txt-tier">
+                    <div class="sub-label">브랜드 매니페스토 · 180초 안식처</div>
+                    <h1 class="headline">"Drink Me,<br/>Escape Reality"</h1>
+                    <p class="body-desc">
+                        문을 열고 들어오는 순간 마주하는 180초의 감각 안식처.<br/>
+                        인공 색소 없이 천연 원료의 빛 굴절로 완성되는 WICKETA No.1 오로라 시그니처 믹솔로지를 경험하세요.
+                    </p>
+
+                    <div class="spec-grid-2x2">
+                        <div><strong>용출 속도:</strong> 0.1초 즉각 융해</div>
+                        <div><strong>추출 공정:</strong> 30일 초저온 침출</div>
+                        <div><strong>KTR 검증:</strong> 3無 (당/카페인/색소)</div>
+                        <div><strong>추천 순간:</strong> 하루의 온전한 몰입</div>
+                    </div>
+
+                    <div style="display: flex; gap: 12px; margin-top: 8px;">
+                        <button class="btn-primary" onclick="addSingleProduct('SEC-01', '⭐ [No.1 시그니처] 오로라 믹솔로지 3단 변색 티', 38000)">
+                            1초 안식 리추얼 시작하기 (38,000원)
+                        </button>
+                        <button onclick="scrollToAnchor('catalog')">32종 전체 비교</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 롤링 브랜드 티커 (Peach Beach 벤치마크) -->
+    <div class="brand-ticker-wrap">
+        <div class="ticker-content">
+            <span>• 30-DAY COLD BREW HERITAGE</span>
+            <span>• KTR 3-FREE CERTIFIED 0.00%</span>
+            <span>• 100% RECYCLABLE ALUMINUM ECO REFILL</span>
+            <span>• 24H EMOTION RITUAL MATRIX</span>
+            <span>• 5-IN-1 SENSORY MIXOLOGY STUDIO</span>
+            <span>• SEONGSU ATELIER PRIVATE SHOWROOM</span>
+        </div>
+        <div class="ticker-content">
+            <span>• 30-DAY COLD BREW HERITAGE</span>
+            <span>• KTR 3-FREE CERTIFIED 0.00%</span>
+            <span>• 100% RECYCLABLE ALUMINUM ECO REFILL</span>
+            <span>• 24H EMOTION RITUAL MATRIX</span>
+            <span>• 5-IN-1 SENSORY MIXOLOGY STUDIO</span>
+            <span>• SEONGSU ATELIER PRIVATE SHOWROOM</span>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!-- ==========================================================================
+           STEP 3: 1위 시그니처 대표 상품 쇼케이스 (시원하고 웅장한 100% 풀프레임 화보)
+           ========================================================================== -->
+        <section id="signature" class="signature-section">
+            <div class="signature-split-grid">
+                
+                <!-- 🖼️ 좌측 48%: 시원하게 꽉 차는 럭셔리 시그니처 화보 캔버스 -->
+                <div class="lookbook-frame">
+                    <div style="font-size: 13px; font-weight: 800; letter-spacing: 2px; color: #CED4DA; margin-bottom: 12px; z-index: 2; text-transform: uppercase;">
+                        ✨ SIGNATURE VISUAL COLLECTION
+                    </div>
+                    <div style="font-size: 68px; margin: 20px 0; filter: drop-shadow(0 12px 24px rgba(0,0,0,0.4)); z-index: 2;">
+                        🍸 🔮 ✨
+                    </div>
+                    <div style="font-size: 22px; font-weight: 900; color: #FFFFFF; z-index: 2;">오로라 믹솔로지 No.1 에디션</div>
+                    <div style="font-size: 14px; font-weight: 700; color: #ADB5BD; margin-top: 8px; z-index: 2;">[3단 변색 수색 캔버스 & 0.1초 즉각 융해]</div>
+                    <div class="card-rating-badge" onclick="openReviewModal('SEC-01')" style="margin-top: 24px; padding: 6px 16px; font-size: 13px; z-index: 2;">
+                        ⭐ 4.9 (1,248건의 실구매자 검증 후기)
+                    </div>
+                </div>
+
+                <!-- 우측 52%: 3단 정보 위계 스토리텔링 & 즉시 주문 -->
+                <div class="txt-tier">
+                    <div class="sub-label">시그니처 쇼케이스 · Step 3</div>
+                    <h2 class="headline">Zero-Labor 3min,<br/>단 1포로 완성되는 오로라</h2>
+                    <p class="body-desc">
+                        복잡한 도구 없이 차가운 탄산수에 가볍게 저어주면 보라에서 마젠타, 황금 앰버로 이어지는 3단 수색 그라데이션이 펼쳐집니다.
+                    </p>
+
+                    <div style="background: var(--bg-tertiary); padding: 22px; border-radius: var(--radius-sm); font-size: 13.5px; line-height: 1.85;">
+                        • <strong>테이스팅 노트:</strong> 와일드 베리, 프렌치 라벤더, 스모키 앰버 피니시<br/>
+                        • <strong>농도 밸런스:</strong> 맑고 부드러운 황금 농도 (140 ppm)<br/>
+                        • <strong>패키지 구성:</strong> 스틱 10포 + 틴케이스 + 홀로그램 더블월 잔 옵션
+                    </div>
+
+                    <div style="display: flex; gap: 12px; margin-top: 6px;">
+                        <button class="btn-primary" onclick="addSingleProduct('SEC-01', '⭐ [No.1 시그니처] 오로라 믹솔로지 3단 변색 티', 38000)">
+                            시그니처 주문하기 (38,000원)
+                        </button>
+                        <button onclick="openReviewModal('SEC-01')">💬 고객 후기 보기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           STEP 4-5: 6단계 공정 & KTR 3無 과학적 신뢰
+           ========================================================================== -->
+        <section id="craft" class="craft-section">
+            <div class="txt-tier" style="margin-bottom: 24px;">
+                <div class="sub-label">장인 공정 & 과학적 신뢰 · Step 4 & 5</div>
+                <h2 class="headline">6단계 초저온 공정 & KTR 3無 공인 성적서</h2>
+                <p class="body-desc">30일간 4℃ 초저온에서 침출하여 열에 약한 천연 향기 분자를 100% 보존합니다.</p>
+            </div>
+
+            <div class="process-steps-6">
+                <div class="process-step-card">
+                    <div class="step-index">01</div>
+                    <strong>원물 선별</strong><br/><span style="font-size: 12px; color: var(--text-muted);">지리산 야생 허브</span>
+                </div>
+                <div class="process-step-card">
+                    <div class="step-index">02</div>
+                    <strong>30일 콜드브루</strong><br/><span style="font-size: 12px; color: var(--text-muted);">4℃ 초저온 침출</span>
+                </div>
+                <div class="process-step-card">
+                    <div class="step-index">03</div>
+                    <strong>감압 농축</strong><br/><span style="font-size: 12px; color: var(--text-muted);">향기 분자 보존</span>
+                </div>
+                <div class="process-step-card">
+                    <div class="step-index">04</div>
+                    <strong>동결 건조</strong><br/><span style="font-size: 12px; color: var(--text-muted);">-40℃ 급속 동결</span>
+                </div>
+                <div class="process-step-card">
+                    <div class="step-index">05</div>
+                    <strong>KTR 공인</strong><br/><span style="font-size: 12px; color: var(--text-muted);">3無 성적서 발급</span>
+                </div>
+                <div class="process-step-card">
+                    <div class="step-index">06</div>
+                    <strong>에코 실링</strong><br/><span style="font-size: 12px; color: var(--text-muted);">100% 알루미늄</span>
+                </div>
+            </div>
+
+            <div class="ktr-stats-banner">
+                <div>
+                    <div class="stat-val">0.00g</div>
+                    <div style="font-size: 13px; opacity: 0.85;">당류 (Sugar Free)</div>
+                </div>
+                <div>
+                    <div class="stat-val">0.00%</div>
+                    <div style="font-size: 13px; opacity: 0.85;">카페인 (Caffeine Free)</div>
+                </div>
+                <div>
+                    <div class="stat-val">NEGATIVE</div>
+                    <div style="font-size: 13px; opacity: 0.85;">타르색소 (No Artificials)</div>
+                </div>
+                <div>
+                    <div class="stat-val">100%</div>
+                    <div style="font-size: 13px; opacity: 0.85;">알루미늄 에코 순환</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           STEP 6: 24H 하루 감정 리추얼 & 벤토 그리드
+           ========================================================================== -->
+        <section id="ritual" class="ritual-section">
+            <div class="txt-tier">
+                <div class="sub-label">생체 리듬 케어 & 타이머 · Step 6</div>
+                <h2 class="headline">24H 데일리 티 처방 & 180초 앰비언트 타이머</h2>
+                <p class="body-desc">시간대별 생체 리듬에 맞춘 시간별 티 처방과 3분간의 감각 휴식 공간.</p>
+            </div>
+
+            <div class="bento-grid-2x2">
+                <div class="bento-card">
+                    <div>
+                        <div style="font-size: 13px; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px;">AM 08:00 · 각성 & 활력</div>
+                        <h3 style="font-size: 20px; font-weight: 800;">비타민 C 시트러스 선라이즈</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary); margin-top: 8px;">자몽과 오렌지의 상큼한 유기산으로 뇌의 활성도를 깨웁니다.</p>
+                    </div>
+                    <button style="margin-top: 20px;" onclick="addSingleProduct('SEC-08', '비타민 C 시트러스 선라이즈', 28000)">모닝 티 담기 (28,000원)</button>
+                </div>
+
+                <div class="bento-card">
+                    <div>
+                        <div style="font-size: 13px; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px;">PM 23:00 · 이완 & 숙면</div>
+                        <h3 style="font-size: 20px; font-weight: 800;">비건 GABA 슬립 포뮬러</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary); margin-top: 8px;">식물성 GABA 150mg과 라벤더로 수면 진입 시간을 단축합니다.</p>
+                    </div>
+                    <button style="margin-top: 20px;" onclick="addSingleProduct('SEC-07', '비건 GABA 슬립 포뮬러', 34000)">나이트 티 담기 (34,000원)</button>
+                </div>
+
+                <div class="bento-card" style="grid-column: span 2;">
+                    <div class="timer-circular-wrap">
+                        <div style="font-size: 14px; font-weight: 700;">180초 앰비언트 수색 타이머</div>
+                        <div class="timer-time" id="countdownDigits">03:00</div>
+                        <div style="font-size: 13px; color: var(--text-secondary);">🎧 물안개 & 크리스탈 사운드 재생 중</div>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn-primary" id="timerActionBtn" onclick="toggleMainTimer()">▶ 안식 타이머 시작</button>
+                            <button onclick="resetMainTimer()">↺ 리셋</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           STEP 7: 5-IN-1 감각 스튜디오 콘솔 (FIX-05: 5개 독립 워크스테이션)
+           ========================================================================== -->
+        <section id="studio" class="studio-section">
+            <div class="txt-tier" style="margin-bottom: 24px;">
+                <div class="sub-label">5-in-1 Sensory Lab · Step 7</div>
+                <h2 class="headline">5-in-1 인터랙티브 감각 스튜디오 콘솔</h2>
+                <p class="body-desc">조색, 각인, 사운드, 원가계산, 감정처방 5개 독립 워크스테이션을 조작해 보세요.</p>
+            </div>
+
+            <div class="studio-console-box">
+                <div class="studio-nav-tabs">
+                    <button class="studio-tab-btn active" onclick="setStudioTab(0)">🧪 Studio 1: 조색 실험실</button>
+                    <button class="studio-tab-btn" onclick="setStudioTab(1)">📦 Studio 2: 3D 각인실</button>
+                    <button class="studio-tab-btn" onclick="setStudioTab(2)">🧘 Studio 3: 사운드 힐링</button>
+                    <button class="studio-tab-btn" onclick="setStudioTab(3)">🏢 Studio 4: B2B 원가 계산</button>
+                    <button class="studio-tab-btn" onclick="setStudioTab(4)">🎭 Studio 5: 감정 처방실</button>
+                </div>
+
+                <div class="panel-container" id="studioPanelBody">
+                    <!-- Panel 0 기본 노출 (JS에서 동적 교체) -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           STEP 9: 32종 단일 메타데이터 비교 도감 (FIX-02, FIX-03)
+           ========================================================================== -->
+        <section id="catalog" class="catalog-section">
+            <div class="txt-tier">
+                <div class="sub-label">전체 라인업 비교 도감 · Step 9</div>
+                <h2 class="headline">전체 32종 단일 메타데이터 비교 도감</h2>
+                <p class="body-desc">맛, 밸런스 농도, 음용 TPO, 가격 및 실구매자 리뷰를 투명하게 비교합니다.</p>
+            </div>
+
+            <div class="catalog-filter-bar">
+                <div class="cat-tab-group" id="catTabGroup">
+                    <button class="cat-tab-btn active" onclick="filterCatalogCards('all')">전체 도감 (32)</button>
+                    <button class="cat-tab-btn" onclick="filterCatalogCards('sig')">✨ 시그니처 (4)</button>
+                    <button class="cat-tab-btn" onclick="filterCatalogCards('cln')">🌿 클린티 (8)</button>
+                    <button class="cat-tab-btn" onclick="filterCatalogCards('b2b')">🏢 B2B 벌크 (6)</button>
+                    <button class="cat-tab-btn" onclick="filterCatalogCards('gear')">🏺 다기·도구 (6)</button>
+                    <button class="cat-tab-btn" onclick="filterCatalogCards('gift')">🎁 선물·구독 (8)</button>
+                </div>
+            </div>
+
+            <div class="catalog-grid" id="mainCatalogGrid">
+                <!-- 32종 카드 JS 렌더링 -->
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           STEP 8: 성수 WICKETA 아틀리에 쇼룸 예약
+           ========================================================================== -->
+        <section id="showroom" style="margin-bottom: var(--section-spacing);">
+            <div class="txt-tier" style="margin-bottom: 24px;">
+                <div class="sub-label">오프라인 감각 공간 · Step 8</div>
+                <h2 class="headline">성수 WICKETA 아틀리에 프라이빗 쇼룸 예약</h2>
+                <p class="body-desc">온라인 서사에서 오프라인 4인 프라이빗 도슨트 테이스팅 세션으로 이어집니다.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-md);">
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    <h3 style="font-size: 20px; font-weight: 800;">빛의 굴절과 물안개가 머무는 성수 아틀리에</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary);">
+                        • 위치: 서울특별시 성동구 성수이로 88 WICKETA 아틀리에<br/>
+                        • 운영: 화~일 11:00 ~ 21:00 (월요일 휴관)<br/>
+                        • 프로그램: 90분 도슨트 티 코스 & 웰컴 기프트 증정
+                    </p>
+                    <div style="aspect-ratio: 16/9; background: var(--bg-tertiary); border: 1px dashed var(--border-medium); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--text-muted);">
+                        🖼️ [성수 아틀리에 1층 티 바 & 3층 리추얼 룸 전경]
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <div>
+                        <label style="font-size: 13px; font-weight: 700;">예약 일자 선택</label>
+                        <input type="date" id="showroomDateInput" value="2026-08-30" style="width: 100%; padding: 10px; border: 1px solid var(--border-medium); border-radius: 4px; margin-top: 4px;">
+                    </div>
+                    <div>
+                        <label style="font-size: 13px; font-weight: 700;">타임슬롯 선택</label>
+                        <select id="showroomSlotSelect" style="width: 100%; padding: 10px; border: 1px solid var(--border-medium); border-radius: 4px; margin-top: 4px;">
+                            <option>14:00 (프라이빗 4인 티 코스 - 잔여 2석)</option>
+                            <option>16:30 (오로라 믹솔로지 세션 - 잔여 4석)</option>
+                            <option>19:00 (나이트 카밍 도슨트 - 잔여 1석)</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 8px;" onclick="handleShowroomBooking()">
+                        프라이빗 티 코스 예약 확정하기 (80,000원 / 4인)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+       SLIDE-OUT 3-IN-1 SMART DRAWER (FIX-06: B2B/1588 전화 폼 완전 분기)
+       ========================================================================== -->
+    <div class="drawer-overlay" id="smartDrawerOverlay" onclick="closeSmartDrawer()"></div>
+    <div class="smart-drawer" id="smartDrawer">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); padding-bottom: 16px;">
+            <h3 style="font-size: 18px; font-weight: 900;">🛒 3-in-1 스마트 체크아웃</h3>
+            <button onclick="closeSmartDrawer()" style="padding: 4px 8px;">✕</button>
+        </div>
+
+        <div class="drawer-mode-tabs">
+            <button class="mode-tab-btn active" onclick="switchDrawerMode('d2c')">D2C 일반</button>
+            <button class="mode-tab-btn" onclick="switchDrawerMode('b2b')">B2B 기업</button>
+            <button class="mode-tab-btn" onclick="switchDrawerMode('phone')">☎️ 1588 전화</button>
+        </div>
+
+        <div style="flex: 1; overflow-y: auto;" id="drawerDynamicBody">
+            <!-- JS 동적 모드 렌더링 -->
+        </div>
+
+        <div id="drawerFooterArea" style="border-top: 1px solid var(--border-light); padding-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--text-secondary);">
+                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                    <input type="checkbox" id="giftWrapCheckbox" onchange="toggleGiftWrap()">
+                    🎁 프리미엄 보자기 & 쇼핑백 포장 (+1,000원)
+                </label>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-weight: 900; font-size: 17px;">
+                <span>총 결제 금액</span>
+                <span id="drawerTotalPrice">38,000원</span>
+            </div>
+            <button class="btn-primary" style="padding: 14px 0;" onclick="executeCheckout()">
+                1-Click Fast 결제 승인하기
+            </button>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       CUSTOM UI MODAL (FIX-05: alert() 100% 모달화)
+       ========================================================================== -->
+    <div class="custom-modal-overlay" id="customModalOverlay" onclick="closeCustomModal()">
+        <div class="custom-modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closeCustomModal()">✕</button>
+            <div id="customModalContent">
+                <!-- 동적 모달 컨텐츠 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       MOBILE STICKY BAR (FIX-07: 모바일 하단 고정 구매 바)
+       ========================================================================== -->
+    <div class="mobile-sticky-bar" id="mobileStickyBar">
+        <div>
+            <div style="font-size: 11px; color: var(--text-muted);">장바구니 총액</div>
+            <div style="font-size: 16px; font-weight: 900;" id="mobileStickyPrice">38,000원</div>
+        </div>
+        <button class="btn-primary" style="padding: 10px 18px; font-size: 13px;" onclick="openDrawer('d2c')">
+            🛒 주문하기 (<span id="mobileStickyCount">1</span>)
+        </button>
+    </div>
+
+    <!-- ==========================================================================
+       GLOBAL MASTER FOOTER
+       ========================================================================== -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h4 style="font-size: 16px; font-weight: 900; margin-bottom: 12px;">(주)위케타 WONDERSCAPE</h4>
+                <p>수석 디자인 감사 디렉터: 민예원 | 작업자: 이지희</p>
+                <p>주소: 서울특별시 성동구 성수이로 88 WICKETA 성수 아틀리에 1-3F</p>
+                <p>VIP 컨시어지 데스크: ☎️ 1588-1111 | audit@wicketa.com</p>
+            </div>
+            <div>
+                <h5 style="font-weight: 700; margin-bottom: 12px;">서사 앵커</h5>
+                <p>• 브랜드 매니페스토</p>
+                <p>• 6단계 공정 & 신뢰</p>
+                <p>• 24H 일상 리추얼</p>
+            </div>
+            <div>
+                <h5 style="font-weight: 700; margin-bottom: 12px;">스튜디오 & 도감</h5>
+                <p>• 5-in-1 감각 스튜디오</p>
+                <p>• 32종 비교 매트릭스</p>
+                <p>• 성수 쇼룸 도슨트</p>
+            </div>
+            <div>
+                <h5 style="font-weight: 700; margin-bottom: 12px;">공인 인증</h5>
+                <p>• KTR 3無 시험성적서</p>
+                <p>• 100% 알루미늄 에코 순환</p>
+                <p>• 개인정보처리방침</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div>© 2026 WICKETA Inc. All rights reserved. Sensory Narrative Architecture.</div>
+            <div>Validated by Design Auditor Min Ye-won & Publisher Lee Ji-hee | Production Final v2.1</div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       MASTER JAVASCRIPT ENGINE (No Syntax Errors / All 7 Fixes Implemented)
+       ========================================================================== -->
+    <script>
+        // 32종 SSOT 데이터베이스
+        const catalogDatabase = [
+            { id: 'SEC-01', code: 'sig', name: '⭐ [No.1 시그니처] 오로라 믹솔로지 3단 변색 티', cat: '시그니처', price: 38000, rating: 4.9, reviews: 1248, reviewSnippet: '"영롱한 수색 변화에 반했어요. 퇴근 후 한 잔 마시면 하루 피로가 풀립니다."', spec: '과실·플로럴 | 140ppm 황금 밸런스 | 각성·몰입 | 10포' },
+            { id: 'SEC-02', code: 'sig', name: '30일 콜드브루잉 앰버 인퓨전 원액', cat: '시그니처', price: 42000, rating: 4.8, reviews: 890, reviewSnippet: '"은은한 오크 우드 향이 깊고 진해요. 홈텐딩 베이스로 최고입니다."', spec: '우디·스모키 | 180ppm 진한 풍미 | 저녁 사색 | 500ml' },
+            { id: 'SEC-03', code: 'sig', name: '미드나잇 라벤더 카밍 스틱', cat: '시그니처', price: 35000, rating: 4.9, reviews: 934, reviewSnippet: '"자기 30분 전에 따뜻하게 마시는데 불면증에 큰 도움이 됩니다."', spec: '라벤더·카모마일 | 110ppm 편안한 농도 | 23시 수면 | 10포' },
+            { id: 'SEC-04', code: 'sig', name: '스모키 우드 & 블랙티 블렌드', cat: '시그니처', price: 36000, rating: 4.7, reviews: 620, reviewSnippet: '"밀크티로 만들어 마셔도 향이 묻히지 않고 고급스러워요."', spec: '스모키·다크우드 | 160ppm 깊은 바디감 | 깊은 휴식 | 10포' },
+            { id: 'SEC-05', code: 'cln', name: '0kcal 수색 인퓨전 클린티 스틱', cat: '클린티', price: 32000, rating: 4.9, reviews: 1102, reviewSnippet: '"칼로리와 당류가 0이라 다이어트 중에 물 대신 마시기 좋아요."', spec: '상큼 시트러스 | 90ppm 깔끔한 맛 | 식후 클린 | 0.00g' },
+            { id: 'SEC-06', code: 'cln', name: '0.00% 무카페인 허브 릴랙스 팩', cat: '클린티', price: 29000, rating: 4.8, reviews: 780, reviewSnippet: '"임산부 친구에게 선물했는데 카페인이 전혀 없어 안심하고 마신대요."', spec: '페퍼민트·레몬밤 | 100ppm 마일드 | 심신 안정 | KTR 인증' },
+            { id: 'SEC-07', code: 'cln', name: '비건 GABA 슬립 포뮬러 앰플', cat: '클린티', price: 34000, rating: 4.9, reviews: 1450, reviewSnippet: '"식물성 GABA 성분 덕분인지 아침에 일어날 때 머리가 맑아요."', spec: '베리·바닐라 | 120ppm 나이트 밸런스 | 숙면 유도 | GABA 150mg' },
+            { id: 'SEC-08', code: 'cln', name: '비타민 C 시트러스 선라이즈', cat: '클린티', price: 28000, rating: 4.8, reviews: 840, reviewSnippet: '"아침에 탄산수에 타 마시면 눈이 번쩍 뜨이는 상큼함입니다."', spec: '자몽·오렌지 | 130ppm 모닝 활력 | 뇌 활성화 | 비타민 500mg' },
+            { id: 'SEC-09', code: 'cln', name: '딥 하이드레이션 알로에 그린티', cat: '클린티', price: 31000, rating: 4.7, reviews: 520, reviewSnippet: '"운동 후 땀 흘리고 마시면 갈증이 즉시 해소됩니다."', spec: '녹차·알로에 | 95ppm 청량감 | 수분 충전 | 전해질 보충' },
+            { id: 'SEC-10', code: 'cln', name: '데일리 디톡스 페퍼민트 블렌드', cat: '클린티', price: 30000, rating: 4.8, reviews: 670, reviewSnippet: '"점심 먹고 나른할 때 마시면 입안이 상쾌해지고 집중력이 올라가요."', spec: '민트·로즈마리 | 105ppm 상쾌한 피니시 | 집중력 강화 | 무색소' },
+            { id: 'SEC-11', code: 'cln', name: '항산화 베리 콤부차 인퓨전', cat: '클린티', price: 33000, rating: 4.9, reviews: 980, reviewSnippet: '"콤부차 특유의 시큼함 없이 달콤상큼해서 온 가족이 좋아합니다."', spec: '새콤달콤 베리 | 150ppm 활력 농도 | 리프레시 | 생유산균 10억' },
+            { id: 'SEC-12', code: 'cln', name: '로즈힙 & 히비스커스 뷰티 티', cat: '클린티', price: 32000, rating: 4.8, reviews: 750, reviewSnippet: '"루비빛 수색이 너무 예쁘고 피부가 맑아지는 기분이에요."', spec: '루비 히비스커스 | 125ppm 화사한 맛 | 이너뷰티 | 안토시아닌' },
+            { id: 'SEC-13', code: 'b2b', name: '오피스 탕비실 120포 패밀리 벌크 팩', cat: 'B2B', price: 88000, rating: 4.9, reviews: 310, reviewSnippet: '"사내 탕비실에 두니 직원들 반응이 폭발적입니다. 재구매 3회차예요."', spec: '4종 각 30포 | 130ppm 오피스 밸런스 | 사내 복지 | 개별포장' },
+            { id: 'SEC-14', code: 'b2b', name: '호텔 & 라운지 180포 VIP 세트', cat: 'B2B', price: 135000, rating: 5.0, reviews: 180, reviewSnippet: '"호텔 스위트룸 어메니티로 비치 중인데 고객 만족도가 최상입니다."', spec: '6종 각 30포 | 140ppm VIP 블렌드 | VIP 접객 | 고급 틴케이스' },
+            { id: 'SEC-15', code: 'b2b', name: 'F&B 업소용 300포 대용량 인퓨전 팩', cat: 'B2B', price: 210000, rating: 4.9, reviews: 140, reviewSnippet: '"카페 시그니처 믹솔로지 메뉴로 도입하여 원가 절감 효과 톡톡히 봅니다."', spec: '코디얼 300포 | 180ppm 농축액 | 카페 메뉴 | 원가 40% 절감' },
+            { id: 'SEC-16', code: 'b2b', name: '4단 투명 아크릴 디스펜서 스테이션', cat: 'B2B', price: 45000, rating: 4.8, reviews: 95, reviewSnippet: '"깔끔하게 정리되고 인테리어 효과까지 훌륭합니다."', spec: '고투명 아크릴 | 수용량 120포 | 0원 렌탈 프로모션' },
+            { id: 'SEC-17', code: 'b2b', name: '대용량 콜드브루 전용 2L 글래스 서버', cat: 'B2B', price: 38000, rating: 4.9, reviews: 112, reviewSnippet: '"내열유리라 안전하고 세척이 간편해서 매일 사용합니다."', spec: '붕규산 유리 | 2,000ml | 스테인리스 정밀 필터' },
+            { id: 'SEC-18', code: 'b2b', name: '기업 맞춤 로고 인쇄 틴케이스 세트', cat: 'B2B', price: 150000, rating: 5.0, reviews: 88, reviewSnippet: '"창립 기념 VIP 선물로 제작했는데 레이저 각인 퀄리티가 예술입니다."', spec: 'CI/BI 레이저 각인 | 최소 10세트 | VIP 맞춤 패키징' },
+            { id: 'SEC-19', code: 'gear', name: '오로라 홀로그램 더블월 글래스 (350ml)', cat: '다기·도구', price: 26000, rating: 4.9, reviews: 620, reviewSnippet: '"얼음을 넣어도 겉에 결로가 안 생기고 오로라 빛이 환상적입니다."', spec: '이중 내열 유리 | 결로 방지 | 빛 굴절 캔버스' },
+            { id: 'SEC-20', code: 'gear', name: '빛 굴절 프리즘 크리스탈 머들러', cat: '다기·도구', price: 18000, rating: 4.8, reviews: 430, reviewSnippet: '"저을 때마다 유리잔 안에서 무지개 빛이 반사되어 힐링돼요."', spec: 'K9 크리스탈 | 길이 19cm | 핸드메이드 정밀 컷팅' },
+            { id: 'SEC-21', code: 'gear', name: '문경 전통 백자 80℃ 온수 숙우', cat: '다기·도구', price: 58000, rating: 4.9, reviews: 210, reviewSnippet: '"물의 온도를 알맞게 식혀주어 차 본연의 단맛을 극대화해줍니다."', spec: '백자토 | 250ml | 80℃ 황금 온도 보온 | 문경 장인 수제' },
+            { id: 'SEC-22', code: 'gear', name: '손물레 분청 찻사발 & 대나무 차선', cat: '다기·도구', price: 48000, rating: 4.8, reviews: 165, reviewSnippet: '"거품이 곱게 일어나고 손에 착 감기는 묵직함이 좋습니다."', spec: '분청 도자기 + 대나무 차선 | 다도 명상 2종 세트' },
+            { id: 'SEC-23', code: 'gear', name: '초정밀 0.1g 디지털 티 스케일', cat: '다기·도구', price: 32000, rating: 4.9, reviews: 340, reviewSnippet: '"0.1g 단위로 정확히 계량할 수 있어 황금 레시피 구현에 필수입니다."', spec: '정밀도 0.1g | 타이머 일체형 | USB-C 충전' },
+            { id: 'SEC-24', code: 'gear', name: '180초 모래시계 & 앰비언트 스탠드', cat: '다기·도구', price: 24000, rating: 4.8, reviews: 280, reviewSnippet: '"보라색 모래가 떨어지는 걸 보고 있으면 마음이 차분해집니다."', spec: '정확 180초 | 펄 바이올렛 모래 | 3분 안식 인테리어' },
+            { id: 'SEC-25', code: 'gift', name: '100% 알루미늄 에코 리필 30일 구독', cat: '선물·구독', price: 28000, rating: 4.9, reviews: 890, reviewSnippet: '"매달 신선한 티가 알아서 오고 할인까지 받아 경제적이에요."', spec: '30일 정기배송 | 15% 구독 할인 | 에코 리필 30포' },
+            { id: 'SEC-26', code: 'gift', name: '3D 레이저 각인 커스텀 틴케이스 세트', cat: '선물·구독', price: 65000, rating: 5.0, reviews: 540, reviewSnippet: '"원하는 이니셜을 새겨서 선물했더니 받는 분이 감동하셨습니다."', spec: '스틱 20포 + 맞춤 각인 틴케이스 + 기프트 카드' },
+            { id: 'SEC-27', code: 'gift', name: '24H 감정 리추얼 4종 스타터 키트', cat: '선물·구독', price: 49000, rating: 4.9, reviews: 710, reviewSnippet: '"아침부터 밤까지 골라마실 수 있어 첫 구매자에게 강력 추천합니다."', spec: '4종 각 5포 + 더블월 잔 1P | 고급 선물 포장' },
+            { id: 'SEC-28', code: 'gift', name: '전통 오동나무 함 & 실크 보자기 VIP 선물', cat: '선물·구독', price: 120000, rating: 5.0, reviews: 320, reviewSnippet: '"명절 은사님 선물로 드렸는데 품격 있고 정성스러워 대만족입니다."', spec: '발효티 2종 + 문경 찻잔 2P + 전통 한지 편지' },
+            { id: 'SEC-29', code: 'gift', name: '5개 스튜디오 올인원 익스플로러 박스', cat: '선물·구독', price: 78000, rating: 4.9, reviews: 410, reviewSnippet: '"5가지 믹솔로지 티를 전부 체험해볼 수 있는 완벽한 키트입니다."', spec: '스튜디오 티 5종 + TDS 저널 + 프리즘 머들러' },
+            { id: 'SEC-30', code: 'gift', name: '계절 한정 시즌 블렌드 60일 정기배송', cat: '선물·구독', price: 54000, rating: 4.8, reviews: 290, reviewSnippet: '"계절마다 새로운 티가 도착하는 설렘이 있어요."', spec: '60일 주기 배송 | 시즌 한정 티 40포 + 웰컴 굿즈' },
+            { id: 'SEC-31', code: 'gift', name: '성수 아틀리에 프라이빗 4인 티 코스 티켓', cat: '선물·구독', price: 80000, rating: 5.0, reviews: 260, reviewSnippet: '"친구들과 잊지 못할 특별한 주말 도슨트 티 세션을 즐겼습니다."', spec: '90분 도슨트 티 코스 + 4인 프라이빗 입장권' },
+            { id: 'SEC-32', code: 'gift', name: '홈카페 믹솔로지 풀패키지 세트', cat: '선물·구독', price: 92000, rating: 4.9, reviews: 680, reviewSnippet: '"탄산수와 전용 잔까지 한 세트로 들어있어 선물용으로 최고예요."', spec: '오로라 티 20포 + 프리미엄 탄산 4캔 + 전용 잔 2P' }
+        ];
+
+        let liveCart = [
+            { id: 'SEC-01', name: '⭐ [No.1 시그니처] 오로라 믹솔로지 3단 변색 티', price: 38000, qty: 1, giftWrap: false }
+        ];
+
+        let wishlistSet = new Set(['SEC-01', 'SEC-07', 'SEC-19']);
+        let currentFilter = 'all';
+        let isWishlistFilterOnly = false;
+        let giftWrapAdded = false;
+
+        // 1. 초기 렌더링
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCatalogGrid('all');
+            renderDrawerModeBody('d2c');
+            initScrollHeaderAndTopBtn();
+            setStudioTab(0);
+            updateWishlistBadgeCount();
+        });
+
+        // 2. 스크롤 헤더 & Top 플로팅 버튼 (FIX-04)
+        function initScrollHeaderAndTopBtn() {
+            window.addEventListener('scroll', () => {
+                const header = document.getElementById('mainHeader');
+                const topBtn = document.getElementById('floatingTopBtn');
+                
+                if (window.scrollY > 40) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+
+                if (window.scrollY > 300) topBtn.classList.add('visible');
+                else topBtn.classList.remove('visible');
+            });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToAnchor(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 3. TOAST NOTIFICATION ENGINE (FIX-01)
+        function showToastAlert(message) {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = 'toast-item';
+            toast.innerHTML = `<span>✨</span><span>${message}</span>`;
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('fade-out');
+                setTimeout(() => {
+                    if (toast.parentNode) toast.parentNode.removeChild(toast);
+                }, 350);
+            }, 1800);
+        }
+
+        // 4. 상품 담기 인터랙션 (FIX-01: 강제 드로어 오픈 폐지 ➔ 토스트 알림 전환)
+        function addSingleProduct(id, name, price) {
+            const item = liveCart.find(i => i.id === id);
+            if (item) item.qty++;
+            else liveCart.push({ id, name, price, qty: 1, giftWrap: false });
+
+            updateCartBadgeUI();
+            showToastAlert(`장바구니에 [${name.substring(0, 16)}...] 담겼습니다!`);
+        }
+
+        function updateCartBadgeUI() {
+            const count = liveCart.reduce((acc, cur) => acc + cur.qty, 0);
+            const badge = document.getElementById('cartBadge');
+            const mobileCount = document.getElementById('mobileStickyCount');
+            
+            badge.innerText = count;
+            if (mobileCount) mobileCount.innerText = count;
+
+            // 바운스 애니메이션
+            badge.style.transform = 'scale(1.4)';
+            setTimeout(() => { badge.style.transform = 'scale(1)'; }, 250);
+
+            // 드로어 열려있을 때 동기화
+            renderDrawerItems();
+        }
+
+        // 5. 카탈로그 그리드 렌더링 & 실시간 검색 & 위시리스트 (FIX-02, FIX-03)
+        function renderCatalogGrid(filter, keyword = '') {
+            const grid = document.getElementById('mainCatalogGrid');
+            grid.innerHTML = '';
+
+            let list = catalogDatabase;
+
+            if (filter !== 'all') {
+                list = list.filter(item => item.code === filter);
+            }
+
+            if (keyword.trim() !== '') {
+                const kw = keyword.toLowerCase().trim();
+                list = list.filter(item => 
+                    item.name.toLowerCase().includes(kw) || 
+                    item.spec.toLowerCase().includes(kw) ||
+                    item.cat.toLowerCase().includes(kw)
+                );
+            }
+
+            if (isWishlistFilterOnly) {
+                list = list.filter(item => wishlistSet.has(item.id));
+            }
+
+            if (list.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1 / -1; padding: 60px 20px; text-align: center; background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+                        <div style="font-size: 32px; margin-bottom: 12px;">🔍</div>
+                        <h3 style="font-size: 18px; font-weight: 800;">일치하는 상품이 없습니다</h3>
+                        <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">다른 검색어를 입력하시거나 카테고리 필터를 초기화해 보세요.</p>
+                        <button class="btn-primary" style="margin-top: 16px;" onclick="resetCatalogFilters()">전체 상품 보기</button>
+                    </div>
+                `;
+                return;
+            }
+
+            list.forEach(item => {
+                const isWished = wishlistSet.has(item.id);
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div>
+                        <div class="product-visual-box">
+                            <button class="card-wish-btn ${isWished ? 'active' : ''}" onclick="toggleWishlist('${item.id}', this)" title="찜하기">
+                                ${isWished ? '♥' : '♡'}
+                            </button>
+                            <span style="font-size: 28px; margin-bottom: 6px;">🍸</span>
+                            <span style="font-size: 11px; font-weight: 700; opacity: 0.8;">[0.1초 즉각 융해 캔버스]</span>
+                        </div>
+                        <div style="margin-top: 12px;">
+                            <span style="font-size: 11px; font-weight: 700; background: var(--bg-tertiary); padding: 2px 6px; border-radius: 3px;">${item.cat}</span>
+                            <div class="card-rating-badge" onclick="openReviewModal('${item.id}')">
+                                ⭐ ${item.rating} (${item.reviews.toLocaleString()})
+                            </div>
+                            <h4 style="font-size: 15px; font-weight: 800; margin-top: 6px;">${item.name}</h4>
+                            <p style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">${item.spec}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: 17px; font-weight: 900; margin-bottom: 8px;">${item.price.toLocaleString()}원</div>
+                        <div style="display: flex; gap: 6px;">
+                            <button class="btn-primary" style="flex: 1; padding: 8px 0; font-size: 13px;" onclick="addSingleProduct('${item.id}', '${item.name}', ${item.price})">담기</button>
+                            <button style="padding: 8px 12px; font-size: 12px;" onclick="openProductSpecModal('${item.id}')">스펙</button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterCatalogCards(filter) {
+            currentFilter = filter;
+            isWishlistFilterOnly = false;
+            document.getElementById('wishlistHeaderBtn').classList.remove('active');
+            document.querySelectorAll('.cat-tab-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            const searchVal = document.getElementById('gnbSearchInput').value;
+            renderCatalogGrid(filter, searchVal);
+        }
+
+        function searchCatalog(keyword) {
+            const clearBtn = document.getElementById('gnbSearchClearBtn');
+            if (clearBtn) clearBtn.style.display = keyword.trim().length > 0 ? 'block' : 'none';
+            renderCatalogGrid(currentFilter, keyword);
+        }
+
+        function clearGnbSearch() {
+            const input = document.getElementById('gnbSearchInput');
+            input.value = '';
+            searchCatalog('');
+        }
+
+        function toggleWishlist(id, btnEl) {
+            if (wishlistSet.has(id)) {
+                wishlistSet.delete(id);
+                btnEl.classList.remove('active');
+                btnEl.innerText = '♡';
+                showToastAlert('찜 목록에서 제거되었습니다.');
+            } else {
+                wishlistSet.add(id);
+                btnEl.classList.add('active');
+                btnEl.innerText = '♥';
+                showToastAlert('💖 찜 목록에 추가되었습니다!');
+            }
+            updateWishlistBadgeCount();
+            if (isWishlistFilterOnly) renderCatalogGrid(currentFilter);
+        }
+
+        function updateWishlistBadgeCount() {
+            document.getElementById('wishlistHeaderCount').innerText = wishlistSet.size;
+        }
+
+        function toggleWishlistFilter() {
+            isWishlistFilterOnly = !isWishlistFilterOnly;
+            const btn = document.getElementById('wishlistHeaderBtn');
+            if (isWishlistFilterOnly) {
+                btn.classList.add('active');
+                showToastAlert(`찜한 상품 (${wishlistSet.size}개)만 필터링합니다.`);
+            } else {
+                btn.classList.remove('active');
+            }
+            renderCatalogGrid(currentFilter, document.getElementById('gnbSearchInput').value);
+        }
+
+        function resetCatalogFilters() {
+            currentFilter = 'all';
+            isWishlistFilterOnly = false;
+            document.getElementById('gnbSearchInput').value = '';
+            document.getElementById('wishlistHeaderBtn').classList.remove('active');
+            document.querySelectorAll('.cat-tab-btn').forEach((b, i) => {
+                if (i === 0) b.classList.add('active');
+                else b.classList.remove('active');
+            });
+            renderCatalogGrid('all');
+        }
+
+        // 6. CUSTOM MODAL POPUP ENGINE (FIX-05: alert() 100% 모달화)
+        function openCustomModal(titleHtml, bodyHtml) {
+            const overlay = document.getElementById('customModalOverlay');
+            const content = document.getElementById('customModalContent');
+            content.innerHTML = `
+                <div style="border-bottom: 1px solid var(--border-light); padding-bottom: 14px; margin-bottom: 18px;">
+                    <h3 style="font-size: 19px; font-weight: 900;">${titleHtml}</h3>
+                </div>
+                <div>${bodyHtml}</div>
+            `;
+            overlay.classList.add('active');
+        }
+
+        function closeCustomModal() {
+            document.getElementById('customModalOverlay').classList.remove('active');
+        }
+
+        function openProductSpecModal(id) {
+            const item = catalogDatabase.find(i => i.id === id);
+            if (!item) return;
+
+            openCustomModal(
+                `📋 [표준 4단 스펙] ${item.name}`,
+                `
+                <div style="display: flex; flex-direction: column; gap: 14px; font-size: 14px;">
+                    <div style="background: var(--bg-tertiary); padding: 16px; border-radius: var(--radius-sm);">
+                        <div><strong>상품 고유 ID:</strong> <code>${item.id}</code></div>
+                        <div style="margin-top: 4px;"><strong>카테고리:</strong> ${item.cat}</div>
+                        <div style="margin-top: 4px;"><strong>판매 가격:</strong> ${item.price.toLocaleString()}원</div>
+                        <div style="margin-top: 4px;"><strong>평점 및 후기:</strong> ⭐ ${item.rating} (${item.reviews.toLocaleString()}건)</div>
+                    </div>
+                    <div style="border-left: 3px solid var(--accent-black); padding-left: 12px; line-height: 1.7;">
+                        <strong>상세 스펙:</strong> ${item.spec}<br/>
+                        <strong>KTR 공인:</strong> 당류 0.00g / 무카페인 0.00% / 무타르색소 공인 검증 완료
+                    </div>
+                    <div style="display: flex; gap: 8px; margin-top: 10px;">
+                        <button class="btn-primary" style="flex: 1;" onclick="addSingleProduct('${item.id}', '${item.name}', ${item.price}); closeCustomModal();">이 상품 담기</button>
+                        <button onclick="openReviewModal('${item.id}')">후기 모아보기</button>
+                    </div>
+                </div>
+                `
+            );
+        }
+
+        function openReviewModal(id) {
+            const item = catalogDatabase.find(i => i.id === id);
+            if (!item) return;
+
+            openCustomModal(
+                `💬 실구매자 포토 리뷰 | ${item.name}`,
+                `
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <div style="background: #FFF9DB; padding: 16px; border-radius: var(--radius-sm); display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <div style="font-size: 24px; font-weight: 900; color: #F59F00;">⭐ ${item.rating} / 5.0</div>
+                            <div style="font-size: 12px; color: var(--text-secondary);">총 ${item.reviews.toLocaleString()}건의 검증된 리뷰</div>
+                        </div>
+                        <div style="font-size: 12px; text-align: right; color: var(--text-secondary);">
+                            98%의 고객이<br/><strong>"지인 추천 의향 있음"</strong> 응답
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 13px;">
+                        <div style="border: 1px solid var(--border-light); padding: 14px; border-radius: var(--radius-sm); background: var(--bg-tertiary);">
+                            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+                                <span>김*연 (웰니스 쇼퍼)</span>
+                                <span style="color: #F59F00;">⭐⭐⭐⭐⭐ 5.0</span>
+                            </div>
+                            <p style="margin-top: 6px; color: var(--text-primary);">${item.reviewSnippet}</p>
+                        </div>
+                        <div style="border: 1px solid var(--border-light); padding: 14px; border-radius: var(--radius-sm); background: var(--bg-tertiary);">
+                            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+                                <span>박*영 (데이터 엔지니어)</span>
+                                <span style="color: #F59F00;">⭐⭐⭐⭐⭐ 5.0</span>
+                            </div>
+                            <p style="margin-top: 6px; color: var(--text-primary);">"수색 변화가 과학적으로 설계되어 마시는 재미가 있습니다. 야근할 때 커피 대신 최적입니다."</p>
+                        </div>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 8px;" onclick="addSingleProduct('${item.id}', '${item.name}', ${item.price}); closeCustomModal();">
+                        이 리뷰의 상품 담기 (${item.price.toLocaleString()}원)
+                    </button>
+                </div>
+                `
+            );
+        }
+
+        // 7. 5-IN-1 감각 스튜디오 콘솔 (FIX-05: 5개 독립 워크스테이션 JS 전환)
+        const studioPanelsData = [
+            // Panel 0: 조색 실험실
+            `
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <h3 style="font-size: 20px; font-weight: 800;">실시간 TDS 농도 & 배합 시뮬레이터</h3>
+                <p style="font-size: 14px; color: var(--text-secondary);">
+                    탄산수와 티 코디얼 비율을 조절하여 120~180ppm 황금 밸런스를 달성하세요.
+                </p>
+                <div>
+                    <label style="font-size: 12px; font-weight: 700;">코디얼 투입량 (ml)</label>
+                    <input type="range" min="10" max="60" value="30" oninput="updateStudioTds(this.value)" style="margin-top: 6px;">
+                </div>
+                <div style="background: var(--bg-tertiary); padding: 14px; border-radius: var(--radius-sm); font-size: 13px;">
+                    <strong>현재 농도:</strong> <span id="studioTdsVal">144 ppm</span><br/>
+                    <strong>판정:</strong> <span id="studioTdsStatus" style="font-weight: 800;">✨ 황금 밸런스 달성 (120~180ppm)</span>
+                </div>
+                <button class="btn-primary" onclick="addSingleProduct('SEC-32', '홈카페 믹솔로지 풀패키지 세트', 92000)">이 레시피로 키트 담기 (92,000원)</button>
+            </div>
+            <div style="background: var(--bg-tertiary); border-radius: var(--radius-md); padding: 36px; text-align: center;">
+                <div style="font-size: 36px; margin-bottom: 12px;">🧪 ⚗️ 🫧</div>
+                <div style="font-size: 16px; font-weight: 800;">TDS 144 ppm OPTIMAL MIX</div>
+                <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">[실시간 분자 용출 시뮬레이션]</div>
+            </div>
+            `,
+            // Panel 1: 3D 각인실
+            `
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <h3 style="font-size: 20px; font-weight: 800;">3D 레이저 맞춤 각인 스튜디오</h3>
+                <p style="font-size: 14px; color: var(--text-secondary);">
+                    틴케이스 전면에 영문 이니셜 또는 메시지를 레이저로 정밀 각인합니다.
+                </p>
+                <div>
+                    <label style="font-size: 12px; font-weight: 700;">각인 메시지 입력 (영문 최대 20자)</label>
+                    <input type="text" id="engraveInput" value="ESCAPE REALITY" oninput="updateEngravePreview(this.value)" 
+                           style="width: 100%; padding: 10px; border: 1px solid var(--border-medium); border-radius: 4px; margin-top: 6px; font-weight: 700;">
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button style="flex: 1; padding: 6px; font-size: 12px;" onclick="setEngraveFont('Pretendard')">모던 고딕</button>
+                    <button style="flex: 1; padding: 6px; font-size: 12px;" onclick="setEngraveFont('serif')">클래식 세리프</button>
+                </div>
+                <button class="btn-primary" onclick="addSingleProduct('SEC-26', '3D 레이저 각인 커스텀 틴케이스 세트', 65000)">맞춤 각인 세트 담기 (65,000원)</button>
+            </div>
+            <div style="background: #212529; color: #FFFFFF; border-radius: var(--radius-md); padding: 36px; text-align: center; box-shadow: inset 0 0 20px rgba(0,0,0,0.5);">
+                <div style="font-size: 11px; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 12px;">3D LASER ENGRAVING PREVIEW</div>
+                <div id="engravePreviewBox" style="font-size: 22px; font-weight: 900; letter-spacing: 4px; color: #E9ECEF; border: 2px dashed rgba(255,255,255,0.3); padding: 24px; border-radius: 8px;">
+                    ESCAPE REALITY
+                </div>
+                <div style="font-size: 11px; color: var(--text-muted); margin-top: 12px;">0.05mm 초정밀 파이버 레이저 각인 공정</div>
+            </div>
+            `,
+            // Panel 2: 사운드 힐링
+            `
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <h3 style="font-size: 20px; font-weight: 800;">180초 주파수 사운드 힐링 룸</h3>
+                <p style="font-size: 14px; color: var(--text-secondary);">
+                    티가 우러나는 3분 동안 432Hz 뇌파 안정 크리스탈 싱잉볼 사운드를 청취하세요.
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <button class="btn-primary" onclick="setSoundTrack('지리산 물안개 물소리')">🌊 지리산 물소리</button>
+                    <button onclick="setSoundTrack('432Hz 크리스탈 싱잉볼')">🥣 432Hz 싱잉볼</button>
+                    <button onclick="setSoundTrack('새벽 숲속 앰비언트')">🌲 새벽 숲 앰비언트</button>
+                    <button onclick="setSoundTrack('백색소음 빗소리')">🌧️ 따뜻한 빗소리</button>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: 14px; border-radius: var(--radius-sm); font-size: 13px;">
+                    <strong>현재 트랙:</strong> <span id="currentSoundTrack">🌊 지리산 물안개 물소리</span><br/>
+                    <strong>상태:</strong> 🎧 180초 캄테크 바이노럴 비트 재생 중
+                </div>
+                <button class="btn-primary" onclick="addSingleProduct('SEC-24', '180초 모래시계 & 앰비언트 스탠드', 24000)">사운드 힐링 키트 담기 (24,000원)</button>
+            </div>
+            <div style="background: var(--bg-tertiary); border-radius: var(--radius-md); padding: 36px; text-align: center;">
+                <div style="font-size: 40px; margin-bottom: 12px;">🎵 〰️ 🧘</div>
+                <div style="font-size: 16px; font-weight: 800;">432Hz ALPHA WAVE RESONANCE</div>
+                <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">[180초 뇌파 안정 시뮬레이션]</div>
+            </div>
+            `,
+            // Panel 3: B2B 원가 계산기
+            `
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <h3 style="font-size: 20px; font-weight: 800;">B2B 사내 복지 & 원가 절감 시뮬레이터</h3>
+                <p style="font-size: 14px; color: var(--text-secondary);">
+                    사내 임직원 수 또는 매장 월간 티 소비량을 입력하여 절감액을 계산하세요.
+                </p>
+                <div>
+                    <label style="font-size: 12px; font-weight: 700;">월간 음용 인원수 (명)</label>
+                    <input type="range" min="10" max="300" value="50" oninput="calculateB2bSavings(this.value)" style="margin-top: 6px;">
+                </div>
+                <div style="background: var(--bg-tertiary); padding: 14px; border-radius: var(--radius-sm); font-size: 13px;">
+                    <strong>대상 인원:</strong> <span id="b2bHeadCount">50명</span><br/>
+                    <strong>카페 외주 대비 월간 절감액:</strong> <span id="b2bMonthlySavings" style="color: #2B8A3E; font-weight: 900;">1,450,000원</span><br/>
+                    <strong>연간 예상 절감액:</strong> <span id="b2bAnnualSavings" style="font-weight: 900;">17,400,000원</span>
+                </div>
+                <button class="btn-primary" onclick="openDrawer('b2b')">B2B 기업 맞춤 견적서 신청하기</button>
+            </div>
+            <div style="background: var(--bg-dark); color: #FFFFFF; border-radius: var(--radius-md); padding: 36px; text-align: center;">
+                <div style="font-size: 12px; color: #868E96; letter-spacing: 2px; margin-bottom: 8px;">B2B COST REDUCTION MATRIX</div>
+                <div style="font-size: 32px; font-weight: 900; color: #51CF66; margin-bottom: 8px;">-48.5%</div>
+                <div style="font-size: 13px; opacity: 0.85;">사내 탕비실 0원 렌탈 디스펜서 지원</div>
+            </div>
+            `,
+            // Panel 4: 감정 처방실
+            `
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <h3 style="font-size: 20px; font-weight: 800;">24H 감정 진단 맞춤 티 처방 다이얼</h3>
+                <p style="font-size: 14px; color: var(--text-secondary);">
+                    지금 느끼시는 가장 큰 감정 상태를 선택하시면 1:1 티 솔루션을 처방합니다.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                    <button class="btn-primary" onclick="prescribeEmotionTea('불안·긴장', 'SEC-03', '미드나잇 라벤더 카밍 스틱', 35000)">⚡ 불안 & 긴장</button>
+                    <button onclick="prescribeEmotionTea('피로·방전', 'SEC-08', '비타민 C 시트러스 선라이즈', 28000)">🔋 만성 피로 & 방전</button>
+                    <button onclick="prescribeEmotionTea('집중력 저하', 'SEC-10', '데일리 디톡스 페퍼민트 블렌드', 30000)">🎯 집중력 저하</button>
+                    <button onclick="prescribeEmotionTea('수면 장애', 'SEC-07', '비건 GABA 슬립 포뮬러', 34000)">🌙 불면 & 수면 장애</button>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: 14px; border-radius: var(--radius-sm); font-size: 13px;" id="prescriptionResultBox">
+                    <strong>선택 감정:</strong> 불안 & 긴장<br/>
+                    <strong>처방 티:</strong> 미드나잇 라벤더 카밍 스틱 (라벤더·카모마일 110ppm)
+                </div>
+                <button class="btn-primary" id="prescriptionAddBtn" onclick="addSingleProduct('SEC-03', '미드나잇 라벤더 카밍 스틱', 35000)">처방된 티 즉시 담기 (35,000원)</button>
+            </div>
+            <div style="background: var(--bg-tertiary); border-radius: var(--radius-md); padding: 36px; text-align: center;">
+                <div style="font-size: 40px; margin-bottom: 12px;">🎭 🧬 ☕</div>
+                <div style="font-size: 16px; font-weight: 800;">1:1 SENSORY PRESCRIPTION</div>
+                <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">[개인 맞춤 생체 리듬 처방]</div>
+            </div>
+            `
+        ];
+
+        function setStudioTab(idx) {
+            document.querySelectorAll('.studio-tab-btn').forEach((b, i) => {
+                if (i === idx) b.classList.add('active');
+                else b.classList.remove('active');
+            });
+            document.getElementById('studioPanelBody').innerHTML = studioPanelsData[idx];
+        }
+
+        function updateStudioTds(val) {
+            const ml = parseInt(val);
+            const total = Math.round(90 + (ml * 1.8));
+            document.getElementById('studioTdsVal').innerText = `${total} ppm`;
+            const status = document.getElementById('studioTdsStatus');
+            if (total >= 120 && total <= 180) {
+                status.innerText = '✨ 황금 밸런스 달성 (120~180ppm)';
+            } else if (total < 120) {
+                status.innerText = '💧 연한 농도 (청량한 음용감)';
+            } else {
+                status.innerText = '🍇 진한 농도 (칵테일 베이스)';
+            }
+        }
+
+        function updateEngravePreview(text) {
+            document.getElementById('engravePreviewBox').innerText = text.toUpperCase() || 'YOUR MESSAGE';
+        }
+
+        function setEngraveFont(font) {
+            document.getElementById('engravePreviewBox').style.fontFamily = font;
+        }
+
+        function setSoundTrack(name) {
+            document.getElementById('currentSoundTrack').innerText = name;
+            showToastAlert(`🎵 [${name}] 트랙으로 전환되었습니다.`);
+        }
+
+        function calculateB2bSavings(count) {
+            const num = parseInt(count);
+            document.getElementById('b2bHeadCount').innerText = `${num}명`;
+            const monthly = num * 29000;
+            const annual = monthly * 12;
+            document.getElementById('b2bMonthlySavings').innerText = `${monthly.toLocaleString()}원`;
+            document.getElementById('b2bAnnualSavings').innerText = `${annual.toLocaleString()}원`;
+        }
+
+        function prescribeEmotionTea(emotion, id, name, price) {
+            document.getElementById('prescriptionResultBox').innerHTML = `
+                <strong>선택 감정:</strong> ${emotion}<br/>
+                <strong>처방 티:</strong> ${name}
+            `;
+            const btn = document.getElementById('prescriptionAddBtn');
+            btn.innerText = `처방된 티 즉시 담기 (${price.toLocaleString()}원)`;
+            btn.onclick = () => addSingleProduct(id, name, price);
+            showToastAlert(`🎭 [${emotion}] 감정에 맞춘 [${name}] 처방 완료!`);
+        }
+
+        // 8. 3-IN-1 SMART DRAWER ENGINE (FIX-06: D2C / B2B / 1588 전화 폼 분기)
+        function openDrawer(mode) {
+            document.getElementById('smartDrawer').classList.add('active');
+            document.getElementById('smartDrawerOverlay').classList.add('active');
+            if (mode) switchDrawerMode(mode);
+        }
+
+        function closeSmartDrawer() {
+            document.getElementById('smartDrawer').classList.remove('active');
+            document.getElementById('smartDrawerOverlay').classList.remove('active');
+        }
+
+        function switchDrawerMode(mode) {
+            document.querySelectorAll('.mode-tab-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            renderDrawerModeBody(mode);
+        }
+
+        function renderDrawerModeBody(mode) {
+            const container = document.getElementById('drawerDynamicBody');
+            const footerArea = document.getElementById('drawerFooterArea');
+
+            if (mode === 'd2c') {
+                footerArea.style.display = 'flex';
+                renderDrawerItems();
+            } else if (mode === 'b2b') {
+                footerArea.style.display = 'none';
+                container.innerHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 10px;">
+                        <div style="background: var(--bg-tertiary); padding: 14px; border-radius: var(--radius-sm); font-size: 13px;">
+                            🏢 <strong>B2B 기업 대량 발주 및 전자세금계산서 청구</strong><br/>
+                            사내 복지 탕비실, 호텔 라운지 100포 이상 대량 주문 시 최대 45% 할인 단가가 적용됩니다.
+                        </div>
+                        <div class="form-group">
+                            <label>법인 상호명 / 기관명</label>
+                            <input type="text" id="b2bCorpName" placeholder="(주)위케타">
+                        </div>
+                        <div class="form-group">
+                            <label>사업자등록번호 (10자리)</label>
+                            <input type="text" id="b2bBizNumber" placeholder="120-88-13013">
+                        </div>
+                        <div class="form-group">
+                            <label>전자세금계산서 수신 이메일</label>
+                            <input type="email" id="b2bTaxEmail" placeholder="finance@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label>희망 발주 수량</label>
+                            <select id="b2bOrderQty">
+                                <option>120포 패밀리 벌크 (88,000원)</option>
+                                <option>180포 VIP 세트 (135,000원)</option>
+                                <option>300포 대용량 인퓨전 팩 (210,000원)</option>
+                                <option>1,000포 이상 맞춤 대량 견적 요청</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary" style="padding: 14px 0; margin-top: 8px;" onclick="submitB2bOrder()">
+                            B2B 견적서 수령 및 세금계산서 신청
+                        </button>
+                    </div>
+                `;
+            } else if (mode === 'phone') {
+                footerArea.style.display = 'none';
+                container.innerHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 16px; padding-top: 10px;">
+                        <div style="background: #EBFBEE; border: 1px solid #B2F2BB; padding: 18px; border-radius: var(--radius-sm); text-align: center;">
+                            <div style="font-size: 13px; color: #2B8A3E; font-weight: 700;">VIP 컨시어지 직통 주문 데스크</div>
+                            <div style="font-size: 26px; font-weight: 900; color: #2B8A3E; margin: 8px 0;">☎️ 1588-1111</div>
+                            <div style="font-size: 12px; color: var(--text-secondary);">평일 09:00 ~ 18:00 (점심 12:00 ~ 13:00)</div>
+                        </div>
+                        <div style="font-size: 13px; font-weight: 700; margin-top: 6px;">전문 매니저 전화상담 예약 접수</div>
+                        <div class="form-group">
+                            <label>고객 성함</label>
+                            <input type="text" id="phoneClientName" placeholder="홍길동">
+                        </div>
+                        <div class="form-group">
+                            <label>연락처</label>
+                            <input type="tel" id="phoneClientTel" placeholder="010-1234-5678">
+                        </div>
+                        <div class="form-group">
+                            <label>상담 희망 시간대</label>
+                            <select id="phoneClientTime">
+                                <option>10:00 ~ 12:00 (오전)</option>
+                                <option>14:00 ~ 16:00 (오후)</option>
+                                <option>16:00 ~ 18:00 (마감 전)</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary" style="padding: 14px 0;" onclick="submitPhoneConsult()">
+                            전화상담 예약 접수하기
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        function renderDrawerItems() {
+            const container = document.getElementById('drawerDynamicBody');
+            let total = 0;
+            let count = 0;
+
+            let html = '<div id="drawerCartList" style="display: flex; flex-direction: column; gap: 12px;">';
+
+            if (liveCart.length === 0) {
+                html += `
+                    <div style="padding: 60px 20px; text-align: center; color: var(--text-muted);">
+                        <div style="font-size: 32px; margin-bottom: 8px;">🛒</div>
+                        <p>장바구니가 비어 있습니다.</p>
+                        <button class="btn-primary" style="margin-top: 14px; font-size: 12px;" onclick="closeSmartDrawer(); scrollToAnchor('catalog');">32종 상품 둘러보기</button>
+                    </div>
+                `;
+            } else {
+                liveCart.forEach(item => {
+                    total += item.price * item.qty;
+                    count += item.qty;
+                    html += `
+                        <div style="border: 1px solid var(--border-light); padding: 14px; border-radius: 6px; background: var(--bg-tertiary);">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div style="font-size: 14px; font-weight: 800;">${item.name}</div>
+                                <button onclick="removeCartItem('${item.id}')" style="border: none; background: none; color: var(--text-muted); padding: 0 4px; font-size: 14px;">✕</button>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-size: 13px;">
+                                <span style="font-weight: 700;">${item.price.toLocaleString()}원</span>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <button style="padding: 3px 10px; font-weight: 700;" onclick="alterCartQty('${item.id}', -1)">-</button>
+                                    <span style="font-weight: 800;">${item.qty}</span>
+                                    <button style="padding: 3px 10px; font-weight: 700;" onclick="alterCartQty('${item.id}', 1)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            html += '</div>';
+            container.innerHTML = html;
+
+            if (giftWrapAdded) total += 1000;
+
+            document.getElementById('drawerTotalPrice').innerText = `${total.toLocaleString()}원`;
+            const stickyPrice = document.getElementById('mobileStickyPrice');
+            if (stickyPrice) stickyPrice.innerText = `${total.toLocaleString()}원`;
+            document.getElementById('cartBadge').innerText = count;
+        }
+
+        function toggleGiftWrap() {
+            giftWrapAdded = document.getElementById('giftWrapCheckbox').checked;
+            renderDrawerItems();
+            showToastAlert(giftWrapAdded ? '🎁 프리미엄 보자기 포장 옵션이 추가되었습니다 (+1,000원)' : '포장 옵션이 해제되었습니다.');
+        }
+
+        function alterCartQty(id, delta) {
+            const item = liveCart.find(i => i.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) liveCart = liveCart.filter(i => i.id !== id);
+            }
+            updateCartBadgeUI();
+        }
+
+        function removeCartItem(id) {
+            liveCart = liveCart.filter(i => i.id !== id);
+            updateCartBadgeUI();
+            showToastAlert('상품이 장바구니에서 삭제되었습니다.');
+        }
+
+        function executeCheckout() {
+            if (liveCart.length === 0) {
+                openCustomModal('⚠️ 장바구니 알림', '<p>장바구니에 담긴 상품이 없습니다. 32종 도감에서 상품을 먼저 담아주세요.</p>');
+                return;
+            }
+
+            const total = document.getElementById('drawerTotalPrice').innerText;
+            openCustomModal(
+                '🎉 1-Click 주문 승인 완료',
+                `
+                <div style="display: flex; flex-direction: column; gap: 14px; text-align: center; padding: 10px 0;">
+                    <div style="font-size: 40px;">📦 ✨ 🍸</div>
+                    <h4 style="font-size: 18px; font-weight: 900;">총 결제 금액: ${total}</h4>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+                        주문이 성공적으로 접수되었습니다!<br/>
+                        • 디지털 오로라 안식 보증서가 발급되었습니다.<br/>
+                        • 180초 앰비언트 음향 링크가 카카오 알림톡으로 전송됩니다.
+                    </p>
+                    <button class="btn-primary" style="margin-top: 10px;" onclick="closeCustomModal(); closeSmartDrawer();">확인</button>
+                </div>
+                `
+            );
+            liveCart = [];
+            updateCartBadgeUI();
+        }
+
+        function submitB2bOrder() {
+            const corp = document.getElementById('b2bCorpName').value.trim();
+            const biz = document.getElementById('b2bBizNumber').value.trim();
+            const email = document.getElementById('b2bTaxEmail').value.trim();
+
+            if (!corp || !biz || !email) {
+                openCustomModal('⚠️ B2B 입력 확인', '<p>법인 상호명, 사업자번호, 세금계산서 수신 이메일을 모두 입력해 주세요.</p>');
+                return;
+            }
+
+            openCustomModal(
+                '🏢 B2B 대량 발주 신청 완료',
+                `
+                <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+                    <p><strong>[${corp}]</strong> 님의 B2B 발주 및 전자세금계산서 신청이 정상 접수되었습니다.</p>
+                    <div style="background: var(--bg-tertiary); padding: 12px; border-radius: var(--radius-sm); font-size: 13px;">
+                        • 사업자번호: ${biz}<br/>
+                        • 계산서 수신처: ${email}<br/>
+                        • 담당자 확인 후 1시간 이내 공식 견적서 및 결제 품의서가 발송됩니다.
+                    </div>
+                    <button class="btn-primary" style="margin-top: 10px;" onclick="closeCustomModal(); closeSmartDrawer();">확인</button>
+                </div>
+                `
+            );
+        }
+
+        function submitPhoneConsult() {
+            const name = document.getElementById('phoneClientName').value.trim();
+            const tel = document.getElementById('phoneClientTel').value.trim();
+
+            if (!name || !tel) {
+                openCustomModal('⚠️ 상담 예약 확인', '<p>고객 성함과 연락처를 모두 입력해 주세요.</p>');
+                return;
+            }
+
+            openCustomModal(
+                '☎️ 전화상담 예약 완료',
+                `
+                <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+                    <p><strong>[${name}]</strong> 님의 전화상담 예약이 접수되었습니다.</p>
+                    <div style="background: var(--bg-tertiary); padding: 12px; border-radius: var(--radius-sm); font-size: 13px;">
+                        • 연락처: ${tel}<br/>
+                        • 지정 희망 시간대에 WICKETA 전담 매니저가 연락드리겠습니다.
+                    </div>
+                    <button class="btn-primary" style="margin-top: 10px;" onclick="closeCustomModal(); closeSmartDrawer();">확인</button>
+                </div>
+                `
+            );
+        }
+
+        function handleShowroomBooking() {
+            const date = document.getElementById('showroomDateInput').value;
+            const slot = document.getElementById('showroomSlotSelect').value;
+
+            openCustomModal(
+                '🏛️ 성수 아틀리에 쇼룸 예약 확정',
+                `
+                <div style="display: flex; flex-direction: column; gap: 14px; text-align: center; padding: 10px 0;">
+                    <div style="font-size: 36px;">🎫 🍵 ✨</div>
+                    <h4 style="font-size: 18px; font-weight: 900;">프라이빗 4인 티 코스 예약 완료</h4>
+                    <div style="background: var(--bg-tertiary); padding: 14px; border-radius: var(--radius-sm); font-size: 13px; text-align: left; line-height: 1.7;">
+                        • <strong>예약 일자:</strong> ${date}<br/>
+                        • <strong>세션 시간:</strong> ${slot}<br/>
+                        • <strong>위치:</strong> 서울 성동구 성수이로 88 WICKETA 아틀리에 1-3F<br/>
+                        • <strong>결제 금액:</strong> 80,000원 (현장 결제 / QR 모바일 패스 발송)
+                    </div>
+                    <button class="btn-primary" style="margin-top: 8px;" onclick="closeCustomModal()">모바일 입장권 확인</button>
+                </div>
+                `
+            );
+        }
+
+        // 9. pH SLIDER & TIMER
+        function handlePhSlider(val) {
+            const ph = parseFloat(val);
+            const canvas = document.getElementById('heroAuroraCanvas');
+            const disp = document.getElementById('sliderPhDisplay');
+            const label = document.getElementById('canvasStateLabel');
+
+            disp.innerText = `pH ${ph.toFixed(1)}`;
+
+            if (ph < 4.0) {
+                canvas.style.background = 'linear-gradient(135deg, #4A4A4A, #1F1F1F)';
+                label.innerText = `✨ 상태: 1단계 미드나잇 퍼플 (pH ${ph.toFixed(1)} 맑은 산미)`;
+            } else if (ph <= 5.8) {
+                canvas.style.background = 'linear-gradient(135deg, #7A7A7A, #3A3A3A)';
+                label.innerText = `✨ 상태: 2단계 마젠타 핑크 (pH ${ph.toFixed(1)} 감미로운 산도)`;
+            } else {
+                canvas.style.background = 'linear-gradient(135deg, #B5B5B5, #6B6B6B)';
+                label.innerText = `✨ 상태: 3단계 골든 앰버 (pH ${ph.toFixed(1)} 깊은 중성)`;
+            }
+        }
+
+        let timerSec = 180;
+        let timerTicker = null;
+
+        function toggleMainTimer() {
+            const btn = document.getElementById('timerActionBtn');
+            if (timerTicker) {
+                clearInterval(timerTicker);
+                timerTicker = null;
+                btn.innerText = '▶ 안식 타이머 재개';
+            } else {
+                btn.innerText = '⏸ 일시 정지';
+                timerTicker = setInterval(() => {
+                    if (timerSec > 0) {
+                        timerSec--;
+                        updateMainTimerDigits();
+                    } else {
+                        clearInterval(timerTicker);
+                        timerTicker = null;
+                        btn.innerText = '▶ 다시 시작';
+                        openCustomModal('🔔 180초 안식 완료', '<p>180초의 감각 안식이 완료되었습니다. 찻잔을 들고 천천히 티의 풍미를 음미하세요.</p>');
+                    }
+                }, 1000);
+            }
+        }
+
+        function resetMainTimer() {
+            if (timerTicker) clearInterval(timerTicker);
+            timerTicker = null;
+            timerSec = 180;
+            updateMainTimerDigits();
+            document.getElementById('timerActionBtn').innerText = '▶ 안식 타이머 시작';
+        }
+
+        function updateMainTimerDigits() {
+            const m = Math.floor(timerSec / 60).toString().padStart(2, '0');
+            const s = (timerSec % 60).toString().padStart(2, '0');
+            document.getElementById('countdownDigits').innerText = `${m}:${s}`;
+        }
+
+        // 10. 이지뷰 모드
+        function toggleEasyView() {
+            document.body.classList.toggle('easy-view');
+            const active = document.body.classList.contains('easy-view');
+            document.getElementById('easyViewToggleBtn').innerText = active ? '👓 표준 뷰' : '👓 이지뷰';
+            showToastAlert(active ? '👓 고대비 이지뷰 모드가 활성화되었습니다.' : '👓 표준 뷰 모드로 전환되었습니다.');
+        }
+    </script>
+</body>
+</html>

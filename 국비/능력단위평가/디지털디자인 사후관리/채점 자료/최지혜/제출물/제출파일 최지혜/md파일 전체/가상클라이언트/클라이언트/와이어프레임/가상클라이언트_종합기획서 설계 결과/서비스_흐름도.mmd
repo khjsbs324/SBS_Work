@@ -1,0 +1,82 @@
+flowchart TD
+  classDef startEnd fill:#1F3327,stroke:#1F3327,stroke-width:2px,color:#FFFFFF;
+  classDef process fill:#FAF4EE,stroke:#1F3327,stroke-width:1.5px,color:#1F3327;
+  classDef decision fill:#FFF8F0,stroke:#D9822B,stroke-width:2px,color:#1F3327;
+  classDef modal fill:#FFFDF9,stroke:#C47A5A,stroke-width:1.5px,stroke-dasharray: 4 4,color:#1F3327;
+  classDef success fill:#EBF4EE,stroke:#2E6945,stroke-width:2px,color:#1F3327;
+  classDef exception fill:#FDF0F0,stroke:#D9383A,stroke-width:1.5px,color:#D9383A;
+
+  START(["● 서비스 시작 (광고 / 검색 / SNS)"]) :::startEnd
+
+  STEP_P01["P-01: 메인페이지 진입<br>(더마테스트 엑설런트 뱃지 & 4대 리추얼)"] :::process
+
+  DEC_CERT{"공인 시험성적서<br>검증 여부?"} :::decision
+  MODAL_M01["M-01: 성적서 200% HD 확대 모달<br>(KOTITI 100% 무형광 & 유효기간)"] :::modal
+  PAGE_P02["P-02: 공인 시험성적서 랩"] :::process
+
+  PAGE_P04["P-04: 제품 카탈로그<br>(세안타올 / 와입스 / 기프트)"] :::process
+  PAGE_P07["P-07: 30초 안심 큐레이터<br>(피부타입 맞춤 퀴즈)"] :::process
+
+  PAGE_P05["P-05: 상품 상세 페이지<br>(봉제선 500% HD 줌 & 4차 완전 정련)"] :::process
+
+  DEC_ZOOM{"봉제선 / 라벨<br>마감 확인?"} :::decision
+  ACTION_ZOOM["500% HD 마그니파이어 줌 조작<br>(무라벨 마감 및 결 확인)"] :::process
+
+  DEC_TYPE{"구매 방식 선택?"} :::decision
+
+  PAGE_P06["P-06: 1장 안심 체험팩 신청<br>(100% 페이백 쿠폰 자동 발행)"] :::process
+
+  DEC_GIFT{"선물 포장 &<br>꽃말 카드 동봉?"} :::decision
+  MODAL_M02["M-02: 6종 꽃말 카드 모달<br>(꽃말 선택 & 자필 메시지)"] :::modal
+
+  PAGE_P11["P-11: 장바구니 & 1초 결제<br>(무향 밀봉 보증 체크 & 페이백 적용)"] :::process
+
+  STEP_PAY["🟢 N Pay / 카카오페이 1초 간편 결제"] :::process
+  STEP_DELIVERY["📦 공방 완전 정련 & 무향 밀봉 수령"] :::process
+  STEP_USE["🧖 뜯자마자 즉시 첫 세안 & 자극 테스트"] :::process
+
+  DEC_SATISFY{"피부 적합성<br>만족 여부?"} :::decision
+
+  MODAL_M03["M-03: 100% 안심 환불 모달<br>(14일 무료 수거 및 전액 환불)"] :::exception
+  PAGE_P12["P-12: 마이페이지 & 평생 재주문<br>(동일 스펙 1-Click 재구매 & 에코 루프)"] :::success
+
+  END(["★ 평생 단골 정착 & 자원순환 완료"]) :::startEnd
+
+  START --> STEP_P01
+  STEP_P01 --> DEC_CERT
+
+  DEC_CERT -- "성적서 확인" --> MODAL_M01
+  DEC_CERT -- "전체 랩 탐색" --> PAGE_P02
+  DEC_CERT -- "바로 쇼핑" --> PAGE_P04
+
+  MODAL_M01 --> PAGE_P05
+  PAGE_P02 --> PAGE_P05
+  PAGE_P01 --> PAGE_P07
+  PAGE_P07 --> PAGE_P05
+  PAGE_P04 --> PAGE_P05
+
+  PAGE_P05 --> DEC_ZOOM
+  DEC_ZOOM -- "줌 검증" --> ACTION_ZOOM
+  ACTION_ZOOM --> DEC_TYPE
+  DEC_ZOOM -- "검증 패스" --> DEC_TYPE
+
+  DEC_TYPE -- "1장 소량 체험" --> PAGE_P06
+  PAGE_P06 --> PAGE_P11
+
+  DEC_TYPE -- "선물 세트" --> DEC_GIFT
+  DEC_GIFT -- "꽃말 카드 작성" --> MODAL_M02
+  MODAL_M02 --> PAGE_P11
+  DEC_GIFT -- "기본 패키지" --> PAGE_P11
+
+  DEC_TYPE -- "본품 즉시 구매" --> PAGE_P11
+
+  PAGE_P11 --> STEP_PAY
+  STEP_PAY --> STEP_DELIVERY
+  STEP_DELIVERY --> STEP_USE
+  STEP_USE --> DEC_SATISFY
+
+  DEC_SATISFY -- "트러블 발생" --> MODAL_M03
+  MODAL_M03 --> END
+
+  DEC_SATISFY -- "자극 0% 대만족" --> PAGE_P12
+  PAGE_P12 --> END

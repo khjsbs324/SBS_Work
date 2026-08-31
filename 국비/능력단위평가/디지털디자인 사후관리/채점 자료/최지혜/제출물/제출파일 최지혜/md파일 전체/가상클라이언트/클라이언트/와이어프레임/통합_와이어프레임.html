@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 (Flottelier) - 전 클라이언트 통합 마스터 와이어프레임 (김예민 Core)</title>
+  <style>
+    :root {
+      --bg-app: #F8FAF9;
+      --bg-sidebar: #1E2B25;
+      --bg-card: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+      --border-color: #E2E8F0;
+      --accent-brand: #2D5A46;
+      --accent-brand-light: #EBF3EE;
+      --accent-gold: #C59B27;
+      --accent-gold-light: #FFFBEB;
+      --accent-rose: #E11D48;
+      --accent-rose-light: #FFE4E6;
+      --accent-blue: #2563EB;
+      --accent-blue-light: #EFF6FF;
+      --accent-green: #16A34A;
+      --accent-green-light: #ECFDF5;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--bg-app);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    #sidebar {
+      width: 320px;
+      background-color: var(--bg-sidebar);
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      z-index: 100;
+      border-right: 1px solid #2A3B32;
+    }
+
+    .sidebar-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid #2A3B32;
+    }
+
+    .sidebar-header h1 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-header p {
+      font-size: 11px;
+      color: #94A3B8;
+      margin-top: 4px;
+    }
+
+    .core-badge {
+      display: inline-block;
+      background: var(--accent-rose);
+      color: #FFF;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+
+    .sidebar-menu {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .menu-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #64748B;
+      padding: 12px 10px 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size: 12.5px;
+      cursor: pointer;
+      transition: all 0.15s;
+      margin-bottom: 2px;
+    }
+
+    .nav-item:hover {
+      background-color: rgba(255,255,255,0.08);
+      color: #FFFFFF;
+    }
+
+    .nav-item.active {
+      background-color: var(--accent-brand);
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    .nav-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background-color: rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+
+    /* Main Container */
+    #main-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Top Toolbar */
+    #toolbar {
+      height: 56px;
+      background-color: #FFFFFF;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      flex-shrink: 0;
+    }
+
+    .screen-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .screen-badge {
+      background-color: var(--accent-brand-light);
+      color: var(--accent-brand);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .screen-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .device-controls {
+      display: flex;
+      background-color: #F1F5F9;
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .device-btn {
+      border: none;
+      background: transparent;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .device-btn.active {
+      background-color: #FFFFFF;
+      color: var(--accent-brand);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Viewport Area */
+    #viewport-container {
+      flex: 1;
+      overflow: auto;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      background-color: #F1F5F9;
+    }
+
+    #viewport {
+      width: 100%;
+      max-width: 1200px;
+      background-color: #FFFFFF;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      min-height: 850px;
+      transition: max-width 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #viewport.tablet { max-width: 768px; }
+    #viewport.mobile { max-width: 390px; }
+
+    /* Wireframe Standard Components */
+    .wf-trust-banner {
+      background-color: #1E293B;
+      color: #F8FAFC;
+      padding: 8px 16px;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius: var(--radius-md);
+      border-top-right-radius: var(--radius-md);
+    }
+
+    .wf-gnb {
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #FFFFFF;
+    }
+
+    .wf-logo {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--accent-brand);
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .wf-nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+
+    .wf-nav-link {
+      cursor: pointer;
+      color: var(--text-main);
+      transition: color 0.15s;
+    }
+    .wf-nav-link:hover { color: var(--accent-brand); }
+
+    .wf-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .wf-btn-primary { background-color: var(--accent-brand); color: #FFFFFF; }
+    .wf-btn-primary:hover { background-color: #234636; }
+    .wf-btn-rose { background-color: var(--accent-rose); color: #FFFFFF; }
+    .wf-btn-rose:hover { background-color: #BE123C; }
+    .wf-btn-gold { background-color: var(--accent-gold); color: #FFFFFF; }
+    .wf-btn-gold:hover { background-color: #A68019; }
+    .wf-btn-outline { background-color: #FFFFFF; border: 1px solid var(--border-color); color: var(--text-main); }
+    .wf-btn-outline:hover { background-color: #F8FAFC; }
+
+    .screen-content { display: none; padding: 20px; flex: 1; }
+    .screen-content.active { display: block; }
+
+    /* Layout Grids */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+
+    .card-box {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      background-color: #FFFFFF;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .placeholder-img {
+      background-color: #F8FAFC;
+      border: 2px dashed #CBD5E1;
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* 500% HD Magnifier Simulation */
+    .magnifier-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      border: 2px solid var(--accent-rose);
+      background: #FFFFFF;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: crosshair;
+    }
+
+    .magnifier-circle {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border: 3px solid var(--accent-rose);
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(225, 29, 72, 0.4);
+      pointer-events: none;
+      background: #FFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-rose);
+      font-weight: 800;
+      font-size: 13px;
+      text-align: center;
+      transition: transform 0.05s ease-out;
+    }
+
+    /* Custom Atelier Canvas Simulation */
+    .canvas-preview {
+      background-color: #2D5A46;
+      border-radius: var(--radius-md);
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #C59B27;
+      border: 4px double rgba(197, 155, 39, 0.6);
+      position: relative;
+    }
+
+    .canvas-text {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .canvas-sub {
+      font-size: 13px;
+      margin-top: 4px;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      width: 90%;
+      max-width: 600px;
+      padding: 26px;
+      box-shadow: var(--shadow-lg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h1>🌿 플로뜰리에 마스터 <span class="core-badge">김예민 Core</span></h1>
+      <p>전체 12개 페르소나 통합 와이어프레임</p>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="menu-group-title">1.0 메인 & 주 클라이언트 (김예민 Core)</div>
+      <div class="nav-item active" onclick="switchScreen('SCR-01')">
+        <span class="nav-badge">01</span> 통합 메인페이지
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-02')">
+        <span class="nav-badge">02</span> 저자극 세안타월 (500%줌)
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-06')">
+        <span class="nav-badge">06</span> 안전 검증 & 성능 실험실
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-07')">
+        <span class="nav-badge">07</span> 민감성 피부 Real 리뷰
+      </div>
+      <div class="nav-item" onclick="openModal('MODAL-01')">
+        <span class="nav-badge" style="background:var(--accent-rose);">M1</span> 🔍 봉제선 500% 줌 모달
+      </div>
+
+      <div class="menu-group-title">2.0 커스텀 & 기능성 기어</div>
+      <div class="nav-item" onclick="switchScreen('SCR-03')">
+        <span class="nav-badge">03</span> 마그네틱 골프 기어 (김골프)
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-04')">
+        <span class="nav-badge">04</span> 실시간 자수 아틀리에
+      </div>
+      <div class="nav-item" onclick="openModal('MODAL-02')">
+        <span class="nav-badge" style="background:var(--accent-gold);">M2</span> 🧲 마그네틱 3D 모달
+      </div>
+
+      <div class="menu-group-title">3.0 선물 & O2O 리추얼</div>
+      <div class="nav-item" onclick="switchScreen('SCR-05')">
+        <span class="nav-badge">05</span> 선물 & 홀인원/B2B 답례품
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-08')">
+        <span class="nav-badge">08</span> 성수 팝업스토어 예약
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-09')">
+        <span class="nav-badge">09</span> 1장 안심 체험팩 (100%환급)
+      </div>
+
+      <div class="menu-group-title">4.0 주문, 결제 & 사후 관리</div>
+      <div class="nav-item" onclick="switchScreen('SCR-10')">
+        <span class="nav-badge">10</span> 장바구니
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-11')">
+        <span class="nav-badge">11</span> 주문 및 결제 (배송/세금)
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-12')">
+        <span class="nav-badge">12</span> 주문 완료 (자수/D-Day 확약)
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-13')">
+        <span class="nav-badge">13</span> 엑셀 다중 배송지 등록
+      </div>
+      <div class="nav-item" onclick="switchScreen('SCR-14')">
+        <span class="nav-badge">14</span> 1-Click 동일스펙 재주문
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN WORKSPACE ==================== -->
+  <main id="main-container">
+    <!-- Toolbar -->
+    <header id="toolbar">
+      <div class="screen-info">
+        <span class="screen-badge" id="current-badge">SCR-01</span>
+        <span class="screen-title" id="current-title">통합 메인페이지 (Home)</span>
+      </div>
+
+      <div class="device-controls">
+        <button class="device-btn active" onclick="setDevice('desktop')">🖥️ Desktop</button>
+        <button class="device-btn" onclick="setDevice('tablet')">📱 Tablet</button>
+        <button class="device-btn" onclick="setDevice('mobile')">📲 Mobile</button>
+      </div>
+    </header>
+
+    <!-- Viewport -->
+    <div id="viewport-container">
+      <div id="viewport">
+        <!-- Top Trust Notice -->
+        <div class="wf-trust-banner">
+          <span>🛡️ [김예민 안심검증] 더마테스트 엑설런트 & 4無 성적서 유효기간 100% 공개 · 피부 미맞춤 100% 환불</span>
+          <span>1장 체험팩 3,000원 (본품 100% 환급) | 1588-0000</span>
+        </div>
+
+        <!-- Global GNB -->
+        <div class="wf-gnb">
+          <div class="wf-logo" onclick="switchScreen('SCR-01')">
+            🌿 FLOTTELLIER <span style="font-size:11px; background:var(--accent-brand); color:#FFF; padding:2px 6px; border-radius:4px;">RITUAL</span>
+          </div>
+          <div class="wf-nav-links">
+            <span class="wf-nav-link" onclick="switchScreen('SCR-02')">SENSITIVE SHOP</span>
+            <span class="wf-nav-link" onclick="switchScreen('SCR-06')">SAFETY LAB</span>
+            <span class="wf-nav-link" onclick="switchScreen('SCR-04')">자수 아틀리에</span>
+            <span class="wf-nav-link" onclick="switchScreen('SCR-05')">선물 & B2B</span>
+            <span class="wf-nav-link" onclick="switchScreen('SCR-08')">성수 팝업예약</span>
+            <span class="wf-nav-link" onclick="switchScreen('SCR-09')">체험팩</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="wf-btn wf-btn-rose" style="padding:5px 10px; font-size:11.5px;" onclick="openModal('MODAL-01')">🔍 500% 줌</button>
+            <button class="wf-btn wf-btn-outline" style="padding:5px 10px; font-size:11.5px;" onclick="switchScreen('SCR-14')">🔁 1-Click 재주문</button>
+            <button class="wf-btn wf-btn-primary" style="padding:5px 10px; font-size:11.5px;" onclick="switchScreen('SCR-10')">🛒 장바구니 <span id="cart-count">(0)</span></button>
+          </div>
+        </div>
+
+        <!-- ==================== SCREEN 01: MASTER MAIN ==================== -->
+        <section id="SCR-01" class="screen-content active">
+          <!-- Hero Section (김예민 + 김살림 융합) -->
+          <div class="card-box" style="background:linear-gradient(135deg, #1E2B25 0%, #2D5A46 100%); color:#FFF; padding:36px; margin-bottom:20px; border:none;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <div style="display:flex; gap:6px; margin-bottom:10px;">
+                  <span style="background:var(--accent-rose); font-size:11px; font-weight:700; padding:3px 8px; border-radius:4px;">더마테스트 엑설런트</span>
+                  <span style="background:var(--accent-gold); font-size:11px; font-weight:700; padding:3px 8px; border-radius:4px;">4無 무화학 검증</span>
+                  <span style="background:rgba(255,255,255,0.2); font-size:11px; font-weight:700; padding:3px 8px; border-radius:4px;">3배 빠른 건조</span>
+                </div>
+                <h2 style="font-size:24px; font-weight:800; line-height:1.3; margin-bottom:10px;">
+                  초민감 피부도 안심하는 100% 무자극 순면 소창,<br>
+                  시간과 손길이 만드는 고요한 에코 리추얼
+                </h2>
+                <p style="font-size:13px; color:#E2E8F0; margin-bottom:20px;">
+                  4차 정련으로 삶을 필요 없이 첫날부터 포근하게 · 무라벨 마감으로 피부 긁힘 0%
+                </p>
+                <div style="display:flex; gap:10px;">
+                  <button class="wf-btn wf-btn-rose" onclick="switchScreen('SCR-02')">🔍 저자극 세안타월 (500% 줌 보기)</button>
+                  <button class="wf-btn wf-btn-outline" style="color:#FFF; border-color:#FFF; background:transparent;" onclick="switchScreen('SCR-06')">🔬 3대 공인 시험성적서 확인</button>
+                  <button class="wf-btn wf-btn-gold" onclick="switchScreen('SCR-09')">📦 3,000원 1장 체험팩</button>
+                </div>
+              </div>
+              <div class="placeholder-img" style="width:240px; height:180px; background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.3); color:#FFF;">
+                📷 [내추럴 아이보리 4차정련 완제품 컷]<br>
+                더마테스트 엑설런트 실링
+              </div>
+            </div>
+          </div>
+
+          <!-- 4대 카테고리 퀵 내비게이션 -->
+          <h3 style="font-size:16px; font-weight:800; margin-bottom:14px;">🌟 페르소나별 맞춤 솔루션 컬렉션</h3>
+          <div class="grid-4">
+            <div class="card-box" style="cursor:pointer; border-color:var(--accent-rose);" onclick="switchScreen('SCR-02')">
+              <span style="font-size:10px; font-weight:700; color:var(--accent-rose); background:var(--accent-rose-light); padding:2px 6px; border-radius:4px;">김예민 Pick</span>
+              <h4 style="font-size:14px; font-weight:700; margin:6px 0 2px;">저자극 세안/바스타월</h4>
+              <p style="font-size:11px; color:var(--text-muted);">무라벨 마감 + 500% HD 줌</p>
+            </div>
+
+            <div class="card-box" style="cursor:pointer; border-color:var(--accent-brand);" onclick="switchScreen('SCR-06')">
+              <span style="font-size:10px; font-weight:700; color:var(--accent-brand); background:var(--accent-brand-light); padding:2px 6px; border-radius:4px;">김살림 Pick</span>
+              <h4 style="font-size:14px; font-weight:700; margin:6px 0 2px;">10장 올체인지 번들</h4>
+              <p style="font-size:11px; color:var(--text-muted);">3배 빠른 건조 & 1/3 슬림 수납</p>
+            </div>
+
+            <div class="card-box" style="cursor:pointer; border-color:var(--accent-gold);" onclick="switchScreen('SCR-03')">
+              <span style="font-size:10px; font-weight:700; color:var(--accent-gold); background:var(--accent-gold-light); padding:2px 6px; border-radius:4px;">김골프 Pick</span>
+              <h4 style="font-size:14px; font-weight:700; margin:6px 0 2px;">마그네틱 골프 타월</h4>
+              <p style="font-size:11px; color:var(--text-muted);">원터치 자석 클립 & 1초 땀흡수</p>
+            </div>
+
+            <div class="card-box" style="cursor:pointer; border-color:var(--accent-blue);" onclick="switchScreen('SCR-05')">
+              <span style="font-size:10px; font-weight:700; color:var(--accent-blue); background:var(--accent-blue-light); padding:2px 6px; border-radius:4px;">김웨딩/선물 Pick</span>
+              <h4 style="font-size:14px; font-weight:700; margin:6px 0 2px;">홀인원/웨딩 답례품</h4>
+              <p style="font-size:11px; color:var(--text-muted);">지함 & 보자기 포장 + 단체견적</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 02: SENSITIVE DETAIL (김예민 Core) ==================== -->
+        <section id="SCR-02" class="screen-content">
+          <div class="grid-2">
+            <div>
+              <!-- 500% Magnifier Area -->
+              <div class="magnifier-container" onmousemove="moveMagnifier(event)" onmouseleave="hideMagnifier()">
+                <div class="placeholder-img" style="width:100%; height:100%; border:none; background:#FFF;">
+                  🔍 마우스를 올리면 <strong>봉제선 500% HD 줌</strong>이 작동합니다.<br>
+                  <span style="font-size:11px; color:var(--accent-rose);">[무라벨(Label-free) 부드러운 코튼 테두리 마감]</span>
+                </div>
+                <div class="magnifier-circle" id="zoom-lens" style="display:none;">
+                  500% HD ZOOM<br>
+                  <span style="font-size:10px; color:#333;">자극 없는 순면 마감</span>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:8px; margin-top:10px;">
+                <button class="wf-btn wf-btn-rose" style="flex:1;" onclick="openModal('MODAL-01')">🔍 봉제선 500% HD 모달 열기</button>
+                <button class="wf-btn wf-btn-outline" style="flex:1;" onclick="switchScreen('SCR-06')">📜 더마테스트 성적서 원문 조회</button>
+              </div>
+            </div>
+
+            <div>
+              <div style="display:flex; gap:6px; margin-bottom:8px;">
+                <span style="background:var(--accent-rose-light); color:var(--accent-rose); font-size:11px; font-weight:700; padding:2px 6px; border-radius:4px;">초민감 피부 전용</span>
+                <span style="background:var(--accent-green-light); color:var(--accent-green); font-size:11px; font-weight:700; padding:2px 6px; border-radius:4px;">4차 정련 완제품</span>
+              </div>
+              <h2 style="font-size:22px; font-weight:800; margin-bottom:6px;">플로뜰리에 저자극 무라벨 4차 정련 소창 세안타월</h2>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">피부 마찰 자극 0% · 형광·표백·염색·향료 4無 안심 공정</p>
+
+              <div style="font-size:24px; font-weight:800; color:var(--accent-brand); margin-bottom:16px;">
+                32,000원 <span style="font-size:13px; color:var(--text-muted); font-weight:400;">(3장 데일리 세트)</span>
+              </div>
+
+              <!-- Options -->
+              <div class="card-box" style="margin-bottom:14px; background:#F8FAFC;">
+                <label style="font-size:12px; font-weight:700; display:block; margin-bottom:6px;">🛡️ 위생 포장 & 안심 옵션 선택</label>
+                <label style="font-size:12px; display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                  <input type="checkbox" checked> 100% 무향 밀봉 개별 위생 포장 (외부 먼지/향 오염 차단)
+                </label>
+                <label style="font-size:12px; display:flex; align-items:center; gap:6px;">
+                  <input type="checkbox" checked> 피부 미맞춤 시 100% 안심 교환/환불 보증 적용
+                </label>
+              </div>
+
+              <div style="display:flex; gap:10px;">
+                <button class="wf-btn wf-btn-outline" style="flex:1;" onclick="addToCart('저자극 무라벨 세안타월 (3장)', 32000)">🛒 장바구니 담기</button>
+                <button class="wf-btn wf-btn-primary" style="flex:1;" onclick="switchScreen('SCR-11')">⚡ N-Pay 1초 결제</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 03: GOLF GEAR DETAIL (김골프) ==================== -->
+        <section id="SCR-03" class="screen-content">
+          <div class="grid-2">
+            <div>
+              <div class="placeholder-img" style="height:280px; margin-bottom:10px;">
+                📷 [캐디백 장착 연출 컷]<br>25x100cm 롱 슬림 땀 타월
+              </div>
+              <button class="wf-btn wf-btn-gold" style="width:100%;" onclick="openModal('MODAL-02')">
+                🧲 마그네틱 자석 클립 3D 결착 원리 확인 (MODAL-02)
+              </button>
+            </div>
+            <div>
+              <span style="background:var(--accent-gold-light); color:var(--accent-gold); font-size:11px; font-weight:700; padding:2px 6px; border-radius:4px;">Field Gear</span>
+              <h2 style="font-size:22px; font-weight:800; margin:6px 0;">마그네틱 롱 슬림 골프 타월 (1초 땀흡수)</h2>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">캐디백과 카트에 찰칵 결착! 18홀 라운딩 내내 뽀송한 땀 케어</p>
+              <div style="font-size:24px; font-weight:800; color:var(--accent-brand); margin-bottom:16px;">38,000원</div>
+              <button class="wf-btn wf-btn-gold" style="width:100%; margin-bottom:8px;" onclick="switchScreen('SCR-04')">✏️ 골퍼 이니셜/엠블럼 자수 커스텀 (SCR-04)</button>
+              <button class="wf-btn wf-btn-primary" style="width:100%;" onclick="addToCart('마그네틱 골프 타월', 38000)">🛒 장바구니 담기</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 04: CUSTOM ATELIER ==================== -->
+        <section id="SCR-04" class="screen-content">
+          <div class="grid-2">
+            <div>
+              <div class="canvas-preview" id="embroidery-canvas">
+                <div style="font-size:30px; margin-bottom:6px;" id="canvas-icon">🦅</div>
+                <div class="canvas-text" id="canvas-text-render">J.H. BAE</div>
+                <div class="canvas-sub" id="canvas-sub-render">HDCP 7 · No. 18</div>
+              </div>
+              <p style="font-size:11px; color:var(--text-muted); text-align:center; margin-top:6px;">* 영문 이니셜, 웨딩 문구, 골프 엠블럼, 기업 로고 실시간 Canvas 렌더링</p>
+            </div>
+
+            <div class="card-box">
+              <h3 style="font-size:15px; font-weight:800; margin-bottom:12px;">🎨 실시간 자수 아틀리에</h3>
+              <div style="margin-bottom:10px;">
+                <label style="font-size:11px; font-weight:700; display:block; margin-bottom:4px;">1. 이니셜 / 이름 / 문구</label>
+                <input type="text" id="input-name" value="J.H. BAE" oninput="updateCanvas()" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px;">
+              </div>
+              <div style="margin-bottom:10px;">
+                <label style="font-size:11px; font-weight:700; display:block; margin-bottom:4px;">2. 서브 문구 (핸디캡 / 기념일)</label>
+                <input type="text" id="input-sub" value="HDCP 7 · No. 18" oninput="updateCanvas()" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px;">
+              </div>
+              <div style="margin-bottom:12px;">
+                <label style="font-size:11px; font-weight:700; display:block; margin-bottom:4px;">3. 엠블럼 심볼 선택</label>
+                <div style="display:grid; grid-template-columns:repeat(6, 1fr); gap:4px;">
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('🦅')">🦅</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('⛳')">⛳</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('💍')">💍</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('🌿')">🌿</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('🏆')">🏆</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:6px;" onclick="setEmblem('🏢')">🏢</button>
+                </div>
+              </div>
+              <button class="wf-btn wf-btn-gold" style="width:100%; padding:10px;" onclick="applyEmbroideryAndCart()">
+                ✓ 이 자수 시안으로 적용하고 장바구니 담기 (SCR-10)
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 05: GIFT & B2B ==================== -->
+        <section id="SCR-05" class="screen-content">
+          <div class="grid-2">
+            <div class="card-box">
+              <h3 style="font-size:16px; font-weight:800; margin-bottom:10px;">🎁 홀인원 · 웨딩 · 기업 단체 견적 계산기</h3>
+              <div style="margin-bottom:10px;">
+                <label style="font-size:11px; font-weight:700; display:block; margin-bottom:4px;">발주 수량 선택</label>
+                <select id="bulk-qty" onchange="calcBulkPrice()" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px;">
+                  <option value="10">10세트 (10% 할인)</option>
+                  <option value="20" selected>20세트 (15% 할인)</option>
+                  <option value="30">30세트 (20% 할인)</option>
+                  <option value="50">50세트 (30% 할인)</option>
+                </select>
+              </div>
+
+              <div style="background:#FFFBEB; padding:14px; border-radius:8px; margin-bottom:14px;">
+                <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:4px;">
+                  <span>정상가:</span> <span id="bulk-origin" style="text-decoration:line-through;">760,000원</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:12px; color:#B45309; font-weight:700; margin-bottom:4px;">
+                  <span>단체 할인:</span> <span id="bulk-discount">-114,000원 (15%)</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:15px; font-weight:800; border-top:1px solid #FDE68A; padding-top:6px;">
+                  <span>최종 견적:</span> <span id="bulk-total" style="color:#B45309;">646,000원</span>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:8px;">
+                <button class="wf-btn wf-btn-outline" style="flex:1;" onclick="alert('공식 직인 날인 견적서 PDF가 생성되었습니다.')">📄 PDF 견적서 출력</button>
+                <button class="wf-btn wf-btn-gold" style="flex:1;" onclick="switchScreen('SCR-13')">📂 엑셀 다중배송 등록 (SCR-13)</button>
+              </div>
+            </div>
+
+            <div class="card-box">
+              <h3 style="font-size:16px; font-weight:800; margin-bottom:10px;">🎀 정성 어린 한지 지함 & 소창 보자기 포장</h3>
+              <div class="placeholder-img" style="height:150px; margin-bottom:10px;">
+                📷 [한지 지함 + 순면 보자기 포장 연출 컷]<br>
+                가격표 미동봉 보증 & 캘리그래피 감사 카드
+              </div>
+              <button class="wf-btn wf-btn-primary" style="width:100%;" onclick="switchScreen('SCR-11')">⚡ 단체 발주서 작성하기 (SCR-11)</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 06: SAFETY LAB (김예민 Core) ==================== -->
+        <section id="SCR-06" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:16px;">🔬 안전 검증 & 성능 실험실 (Safety Lab)</h2>
+          <div class="grid-3">
+            <div class="card-box">
+              <span style="background:var(--accent-rose-light); color:var(--accent-rose); font-size:10px; font-weight:700; padding:2px 6px; border-radius:4px;">더마테스트 엑설런트</span>
+              <h4 style="font-size:14px; font-weight:700; margin:6px 0;">독일 Dermatest 최고등급</h4>
+              <p style="font-size:11px; color:var(--text-muted); margin-bottom:10px;">민감성 피부 무자극 인증 완료 (유효기간: 2027.12)</p>
+              <button class="wf-btn wf-btn-outline" style="width:100%; font-size:11px;" onclick="alert('더마테스트 공인 성적서 원본이 열렸습니다.')">📜 성적서 원문 조회</button>
+            </div>
+
+            <div class="card-box">
+              <span style="background:var(--accent-brand-light); color:var(--accent-brand); font-size:10px; font-weight:700; padding:2px 6px; border-radius:4px;">KATRI 공인인증</span>
+              <h4 style="font-size:14px; font-weight:700; margin:6px 0;">4無 무화학 안심 성적서</h4>
+              <p style="font-size:11px; color:var(--text-muted); margin-bottom:10px;">형광·표백·염색·향료 0% 불검출 적합 판정</p>
+              <button class="wf-btn wf-btn-outline" style="width:100%; font-size:11px;" onclick="alert('KATRI 유해물질 불검출 성적서가 열렸습니다.')">📜 성적서 원문 조회</button>
+            </div>
+
+            <div class="card-box">
+              <span style="background:var(--accent-gold-light); color:var(--accent-gold); font-size:10px; font-weight:700; padding:2px 6px; border-radius:4px;">스마트 살림 실증</span>
+              <h4 style="font-size:14px; font-weight:700; margin:6px 0;">3배 빠른 건조 & 1/3 수납</h4>
+              <p style="font-size:11px; color:var(--text-muted); margin-bottom:10px;">자연 건조 1시간 완건조 / 상부장 수납 부피 68% 절감</p>
+              <button class="wf-btn wf-btn-primary" style="width:100%; font-size:11px;" onclick="switchScreen('SCR-02')">🧺 10장 번들 보러가기</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 07: REVIEWS ==================== -->
+        <section id="SCR-07" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:14px;">💬 민감성 피부 Real 리뷰 & 50회 세탁 장기 후기</h2>
+          <div style="display:flex; gap:6px; margin-bottom:16px;">
+            <button class="wf-btn wf-btn-primary" style="padding:6px 12px; font-size:11.5px;">전체 (1,420)</button>
+            <button class="wf-btn wf-btn-outline" style="padding:6px 12px; font-size:11.5px;">초민감/홍조 (612)</button>
+            <button class="wf-btn wf-btn-outline" style="padding:6px 12px; font-size:11.5px;">아토피/알레르기 (380)</button>
+            <button class="wf-btn wf-btn-outline" style="padding:6px 12px; font-size:11.5px;">세탁 50회 이상 장기후기 (245)</button>
+          </div>
+
+          <div class="card-box" style="margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+              <span style="font-weight:700; font-size:13px;">김*민 님 (초민감성 피부 / 6개월 사용) ⭐⭐⭐⭐⭐</span>
+              <span style="font-size:11px; color:var(--text-muted);">2026.08.12</span>
+            </div>
+            <p style="font-size:12px; color:#334155;">
+              "얼굴에 닿을 때 라벨 긁힘이 전혀 없고, 일반 수건 쓸 때 나던 붉은기가 완전히 사라졌어요. 50번 넘게 빨았는데도 올 풀림 없이 구름처럼 부드럽습니다."
+            </p>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 08: POPUP RESERVATION ==================== -->
+        <section id="SCR-08" class="screen-content">
+          <div class="hero-box" style="background:linear-gradient(135deg, #2A3B32 0%, #1E2923 100%);">
+            <div>
+              <span style="background:var(--accent-gold); font-size:11px; font-weight:700; padding:3px 6px; border-radius:4px;">성수 팝업스토어</span>
+              <h2 style="font-size:22px; font-weight:800; margin:8px 0;">시간을 짓는 공간 (성동구 연무장길 45)</h2>
+              <p style="font-size:13px; color:#E2E8F0;">4차 정련 소창의 촉감을 직접 만져보고 티 리추얼을 경험하는 오프라인 팝업</p>
+            </div>
+            <button class="wf-btn wf-btn-gold" onclick="alert('성수 팝업스토어 타임슬롯 예약이 완료되었습니다. (미니 와입스 증정 쿠폰 발급)')">
+              🎟️ 타임슬롯 사전예약
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 09: TRIAL PACK ==================== -->
+        <section id="SCR-09" class="screen-content">
+          <div class="card-box" style="max-width:560px; margin:0 auto; text-align:center; padding:36px;">
+            <span style="background:var(--accent-green-light); color:var(--accent-green); font-size:11px; font-weight:700; padding:4px 8px; border-radius:4px;">100% Refund Trial</span>
+            <h2 style="font-size:22px; font-weight:800; margin:12px 0;">1장 안심 체험팩 (3,000원)</h2>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:20px;">
+              피부에 먼저 1장 닿아보고 결정하세요!<br>
+              본품 구매 시 사용 가능한 <strong>3,000원 전액 환급 쿠폰</strong>을 즉시 지급해 드립니다.
+            </p>
+            <button class="wf-btn wf-btn-primary" style="padding:12px 28px;" onclick="switchScreen('SCR-11')">
+              ⚡ 3,000원 체험팩 신청하기 (무료배송)
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 10: CART ==================== -->
+        <section id="SCR-10" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:16px;">🛒 장바구니 (Cart)</h2>
+          <div class="card-box" id="cart-item-box" style="margin-bottom:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:10px; margin-bottom:10px;">
+              <div>
+                <span style="font-weight:700; font-size:14px;" id="cart-item-name">저자극 무라벨 소창 세안타월 (자수 포함)</span>
+                <p style="font-size:11px; color:var(--text-muted);" id="cart-item-emb">옵션: [무향 밀봉 개별포장 · 🦅 J.H. BAE]</p>
+              </div>
+              <span style="font-weight:800; font-size:15px; color:var(--accent-brand);" id="cart-item-price">32,000원</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:14px; font-weight:700;">
+              <span>총 결제 금액:</span>
+              <span style="color:var(--accent-brand); font-size:17px;" id="cart-total-price">32,000원 (무료배송)</span>
+            </div>
+          </div>
+          <button class="wf-btn wf-btn-primary" style="width:100%; padding:12px;" onclick="switchScreen('SCR-11')">
+            💳 주문서 작성 및 결제하기 (SCR-11)
+          </button>
+        </section>
+
+        <!-- ==================== SCREEN 11: CHECKOUT ==================== -->
+        <section id="SCR-11" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:14px;">💳 주문 및 결제 (Checkout)</h2>
+          <div class="grid-2">
+            <div>
+              <div class="card-box" style="margin-bottom:14px;">
+                <h4 style="font-size:13px; font-weight:700; margin-bottom:8px;">1. 주문자 정보</h4>
+                <input type="text" value="김예민" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px; margin-bottom:6px;">
+                <input type="text" value="010-1234-5678" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px;">
+              </div>
+              <div class="card-box">
+                <h4 style="font-size:13px; font-weight:700; margin-bottom:8px;">2. 배송지 선택</h4>
+                <button class="wf-btn wf-btn-primary" style="padding:5px 10px; font-size:11px; margin-bottom:6px;">단일 기본 배송지</button>
+                <button class="wf-btn wf-btn-outline" style="padding:5px 10px; font-size:11px; margin-bottom:6px;" onclick="switchScreen('SCR-13')">📂 엑셀 다중 배송지 업로드 (SCR-13)</button>
+                <input type="text" value="서울시 마포구 독막로 210 센트럴뷰 802호" style="width:100%; padding:8px; border:1px solid var(--border-color); border-radius:4px; font-size:12px;">
+              </div>
+            </div>
+
+            <div>
+              <div class="card-box" style="margin-bottom:14px;">
+                <h4 style="font-size:13px; font-weight:700; margin-bottom:8px;">3. 결제 수단</h4>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:10px;">
+                  <button class="wf-btn wf-btn-primary" style="padding:7px; font-size:11.5px;">⚡ N-Pay 1초 결제</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:7px; font-size:11.5px;">🟡 카카오페이</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:7px; font-size:11.5px;">💳 법인/신용카드</button>
+                  <button class="wf-btn wf-btn-outline" style="padding:7px; font-size:11.5px;">🏦 세금계산서 가상계좌</button>
+                </div>
+                <label style="font-size:11.5px; display:flex; align-items:center; gap:6px;">
+                  <input type="checkbox" checked> 법인 세금계산서 즉시 발행 신청
+                </label>
+              </div>
+
+              <button class="wf-btn wf-btn-gold" style="width:100%; padding:12px; font-size:14px;" onclick="switchScreen('SCR-12')">
+                🔒 32,000원 결제 완료하기 (SCR-12)
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 12: ORDER COMPLETE ==================== -->
+        <section id="SCR-12" class="screen-content">
+          <div class="card-box" style="max-width:560px; margin:0 auto; text-align:center; padding:36px;">
+            <div style="font-size:36px; margin-bottom:8px;">🌿</div>
+            <h2 style="font-size:22px; font-weight:800; color:var(--accent-brand);">주문이 성공적으로 접수되었습니다!</h2>
+            <p style="font-size:12px; color:var(--text-muted); margin:6px 0 16px;">주문번호: <strong>FLOT-20260818-YEMIN</strong></p>
+
+            <div style="background:#F8FAFC; border:1px solid var(--border-color); border-radius:8px; padding:14px; margin-bottom:16px; text-align:left;">
+              <h4 style="font-size:12.5px; font-weight:700; margin-bottom:4px;">📜 안심 출고 및 자수 보증서</h4>
+              <p style="font-size:11.5px; color:#334155;">✓ 무향 밀봉 개별 포장 완료</p>
+              <p style="font-size:11.5px; color:#334155;">✓ 피부 미맞춤 시 100% 환불 보증 활성화</p>
+              <p style="font-size:11.5px; color:#334155;">✓ 각인: <strong>[🦅 J.H. BAE]</strong> (D-Day 안심 출고)</p>
+            </div>
+
+            <button class="wf-btn wf-btn-primary" onclick="switchScreen('SCR-01')">🏠 메인 홈으로 이동</button>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 13: EXCEL BULK ==================== -->
+        <section id="SCR-13" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:14px;">📂 동반자/임직원 엑셀 다중 배송지 등록</h2>
+          <div class="card-box" style="margin-bottom:16px;">
+            <div class="placeholder-img" style="padding:36px; margin-bottom:14px;">
+              📁 [동반자_배송지_양식.xlsx 드래그앤드롭 업로드]<br>
+              <span style="font-size:11px; color:#64748B;">최대 100명 주소 일괄 파싱 및 도로명 주소 유효성 자동 검증</span>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <button class="wf-btn wf-btn-outline" onclick="alert('표준 엑셀 템플릿이 다운로드되었습니다.')">📥 표준 엑셀 템플릿 받기</button>
+              <button class="wf-btn wf-btn-primary" onclick="switchScreen('SCR-11')">✓ 주소 검증 완료 후 결제로 이동 (SCR-11)</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 14: 1-CLICK REORDER ==================== -->
+        <section id="SCR-14" class="screen-content">
+          <h2 style="font-size:20px; font-weight:800; margin-bottom:14px;">🔁 1-Click 동일 스펙 재주문 & 리뉴얼 대조표</h2>
+          <div class="card-box" style="margin-bottom:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <span style="font-weight:700; font-size:13px;">최근 주문: 저자극 무라벨 소창 세안타월 (3장)</span>
+              <span style="color:var(--accent-green); font-weight:700; font-size:12px;">✓ 원단·공정 100% 동일 보증</span>
+            </div>
+            <p style="font-size:11.5px; color:var(--text-muted); margin-bottom:12px;">
+              * 플로뜰리에는 원단이나 공정 리뉴얼 시 변경점을 사전에 100% 투명 고지합니다.
+            </p>
+            <button class="wf-btn wf-btn-rose" style="width:100%; padding:10px;" onclick="addToCart('저자극 무라벨 세안타월 1-Click 재주문', 32000)">
+              ⚡ 지난번 동일 스펙으로 1-Click 즉시 재주문하기
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== MODAL-01: 500% HD ZOOM (김예민 Core) ==================== -->
+  <div id="MODAL-01" class="modal-overlay" onclick="closeModal('MODAL-01')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="font-size:17px; font-weight:800; color:var(--accent-rose);">🔍 봉제선 500% HD 마그니파이어 줌 뷰어</h3>
+        <button class="wf-btn wf-btn-outline" style="padding:3px 7px;" onclick="closeModal('MODAL-01')">✕</button>
+      </div>
+      <div class="placeholder-img" style="height:220px; background:#FFF; border:2px solid var(--accent-rose); margin-bottom:14px;">
+        🔍 [500% 초정밀 확대 컷]<br>
+        <strong>1. 무라벨(Label-free) 부드러운 코튼 테두리 마감</strong><br>
+        <strong>2. 목과 턱선을 긁지 않는 초미세 봉제 공법</strong><br>
+        <strong>3. 세탁 50회 후에도 올 풀림 0% 고밀도 격자</strong>
+      </div>
+      <p style="font-size:11.5px; color:var(--text-muted); margin-bottom:14px;">
+        * 직조 라벨을 제거하고 100% 순면 바이어스로 마감하여 초민감 피부에도 스크래치가 없습니다.
+      </p>
+      <button class="wf-btn wf-btn-rose" style="width:100%;" onclick="closeModal('MODAL-01')">✓ 확인 완료</button>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL-02: 3D MAGNETIC VIEW (김골프) ==================== -->
+  <div id="MODAL-02" class="modal-overlay" onclick="closeModal('MODAL-02')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="font-size:17px; font-weight:800; color:var(--accent-brand);">🧲 네오디뮴 마그네틱 자석 클립 3D 뷰어</h3>
+        <button class="wf-btn wf-btn-outline" style="padding:3px 7px;" onclick="closeModal('MODAL-02')">✕</button>
+      </div>
+      <div class="placeholder-img" style="height:200px; background:#1E3A2F; color:#FFF; margin-bottom:14px;">
+        🧲 [3D 인터랙션 애니메이션]<br>
+        캐디백 링 및 골프 카트 프레임에 찰칵! 3.5kgf 강력 자력 결착 시연
+      </div>
+      <p style="font-size:11.5px; color:var(--text-muted); margin-bottom:14px;">
+        * 카트 주행 충격에도 떨어지지 않으며, 한 손으로 당기면 부드럽게 분리됩니다.
+      </p>
+      <button class="wf-btn wf-btn-primary" style="width:100%;" onclick="closeModal('MODAL-02')">✓ 확인 완료</button>
+    </div>
+  </div>
+
+  <script>
+    const screenTitles = {
+      'SCR-01': '통합 메인페이지 (Home)',
+      'SCR-02': '저자극 세안타월 상세 (500% 줌)',
+      'SCR-03': '마그네틱 골프 기어 상세 (김골프)',
+      'SCR-04': '실시간 자수 아틀리에 (Canvas)',
+      'SCR-05': '선물 & 홀인원/B2B 답례품',
+      'SCR-06': '안전 검증 & 성능 실험실 (Safety Lab)',
+      'SCR-07': '민감성 피부 Real 리뷰',
+      'SCR-08': '성수 팝업스토어 사전예약',
+      'SCR-09': '1장 안심 체험팩 (100% 환급)',
+      'SCR-10': '장바구니 (Cart)',
+      'SCR-11': '주문 및 결제 (Checkout)',
+      'SCR-12': '주문 완료 (확인증 발급)',
+      'SCR-13': '엑셀 다중 배송지 등록',
+      'SCR-14': '1-Click 동일스펙 재주문'
+    };
+
+    function switchScreen(screenId) {
+      document.querySelectorAll('.screen-content').forEach(el => el.classList.remove('active'));
+      const target = document.getElementById(screenId);
+      if (target) target.classList.add('active');
+
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+      const activeNav = Array.from(document.querySelectorAll('.nav-item')).find(el => el.getAttribute('onclick') && el.getAttribute('onclick').includes(screenId));
+      if (activeNav) activeNav.classList.add('active');
+
+      document.getElementById('current-badge').innerText = screenId;
+      document.getElementById('current-title').innerText = screenTitles[screenId] || '화면';
+      document.getElementById('viewport-container').scrollTop = 0;
+    }
+
+    function setDevice(device) {
+      document.querySelectorAll('.device-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      const viewport = document.getElementById('viewport');
+      viewport.className = '';
+      if (device !== 'desktop') viewport.classList.add(device);
+    }
+
+    function openModal(id) { document.getElementById(id).classList.add('active'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+
+    // 500% Magnifier
+    function moveMagnifier(e) {
+      const lens = document.getElementById('zoom-lens');
+      lens.style.display = 'flex';
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = e.clientX - rect.left - 70;
+      const y = e.clientY - rect.top - 70;
+      lens.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    function hideMagnifier() {
+      document.getElementById('zoom-lens').style.display = 'none';
+    }
+
+    // Canvas Simulator
+    let currentEmblem = '🦅';
+    function updateCanvas() {
+      const name = document.getElementById('input-name').value || 'J.H. BAE';
+      const sub = document.getElementById('input-sub').value || 'HDCP 7 · No. 18';
+      document.getElementById('canvas-text-render').innerText = name.toUpperCase();
+      document.getElementById('canvas-sub-render').innerText = sub;
+      document.getElementById('canvas-icon').innerText = currentEmblem;
+    }
+
+    function setEmblem(emblem) {
+      currentEmblem = emblem;
+      updateCanvas();
+    }
+
+    function applyEmbroideryAndCart() {
+      const name = document.getElementById('input-name').value;
+      const sub = document.getElementById('input-sub').value;
+      document.getElementById('cart-item-emb').innerText = `옵션: [무향 밀봉 · ${currentEmblem} ${name} · ${sub}]`;
+      addToCart('자수 커스텀 소창 타월', 38000);
+      switchScreen('SCR-10');
+    }
+
+    function addToCart(name, price) {
+      document.getElementById('cart-item-name').innerText = name;
+      document.getElementById('cart-item-price').innerText = price.toLocaleString() + '원';
+      document.getElementById('cart-total-price').innerText = price.toLocaleString() + '원 (무료배송)';
+      document.getElementById('cart-count').innerText = '(1)';
+      alert(`[${name}] 상품이 장바구니에 담겼습니다.`);
+    }
+
+    // Bulk Calculator
+    function calcBulkPrice() {
+      const qty = parseInt(document.getElementById('bulk-qty').value);
+      const originPrice = 38000 * qty;
+      let discountRate = 0.1;
+      if (qty >= 50) discountRate = 0.3;
+      else if (qty >= 30) discountRate = 0.2;
+      else if (qty >= 20) discountRate = 0.15;
+
+      const discountPrice = originPrice * discountRate;
+      const totalPrice = originPrice - discountPrice;
+
+      document.getElementById('bulk-origin').innerText = originPrice.toLocaleString() + '원';
+      document.getElementById('bulk-discount').innerText = '-' + discountPrice.toLocaleString() + '원 (' + (discountRate * 100) + '%)';
+      document.getElementById('bulk-total').innerText = totalPrice.toLocaleString() + '원';
+    }
+  </script>
+</body>
+</html>

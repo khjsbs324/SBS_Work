@@ -1,0 +1,47 @@
+flowchart TD
+  classDef startEnd fill:#232527,color:#FFFFFF,stroke:#232527,stroke-width:2px;
+  classDef action fill:#FAF7F2,color:#232527,stroke:#C47A5A,stroke-width:2px;
+  classDef system fill:#F4F8F5,color:#232527,stroke:#7E8D7F,stroke-width:2px;
+  classDef decision fill:#FFF9F5,color:#C47A5A,stroke:#C47A5A,stroke-width:2px;
+
+  START(["🚀 사이트 진입 (디렉터 아티클 / QR)"]) :::startEnd
+
+  P01["P-01: 메인페이지 진입<br>(수채화 잉크 Canvas & 4차 정련 뱃지)"] :::action
+  P09["P-09: 에디토리얼 룩북<br>(1-Click 장바구니 연동)"] :::action
+  P05["P-05: 상품 상세 페이지<br>(수축 Slider & 실시간 옵션가 계산)"] :::action
+
+  DEC_CUSTOM{"자수 커스텀<br>옵션을 추가하는가?"} :::decision
+  M03["M-03: 실시간 자수 프리뷰 모달<br>(Canvas 폰트/실색상 렌더링)"] :::action
+
+  CALC_DATE["⚙️ 자수 제작(D+2) 반영<br>도착 예정일 자동 연산"] :::system
+
+  P11["P-11: 장바구니 & 결제<br>(🟢 N Pay / 무비닐 eco 배송)"] :::action
+  NPAY_EXEC["N Pay 1초 간편 결제 승인"] :::system
+
+  P12["P-12: 마이페이지 & 주문완료<br>(교체주기 알림 자동등록)"] :::action
+  END_BUY(["🎉 주문 완료 (카카오 알림톡 발송)"]) :::startEnd
+
+  %% 팝업 대안 흐름
+  P08["P-08: 성수 팝업스토어"] :::action
+  M01_POP["M-01: 팝업 사전예약 모달"] :::action
+  END_POP(["🎟️ 팝업 예약 완료 알림톡"]) :::startEnd
+
+  %% 흐름 연결
+  START --> P01
+  P01 --> P09
+  P09 --> P05
+  P05 --> DEC_CUSTOM
+
+  DEC_CUSTOM -- "예" --> M03
+  M03 --> CALC_DATE
+  DEC_CUSTOM -- "아니오" --> CALC_DATE
+
+  CALC_DATE --> P11
+  P11 --> NPAY_EXEC
+  NPAY_EXEC --> P12
+  P12 --> END_BUY
+
+  %% 팝업 흐름
+  P01 --> P08
+  P08 --> M01_POP
+  M01_POP --> END_POP

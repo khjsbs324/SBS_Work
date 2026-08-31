@@ -1,0 +1,42 @@
+flowchart TD
+  %% 루트
+  ROOT(["플로뜰리에 (Flottelier) - STAY B2B Edition"])
+
+  %% 1차 메뉴 (GNB)
+  ROOT --> MAIN["P-01 B2B 메인페이지"]
+  ROOT --> BUNDLE["P-02 스테이 번들 카탈로그"]
+  ROOT --> ATELIER["P-05 숙소 로고 자수 센터"]
+  ROOT --> QUOTE["P-07 실시간 견적 & 세금계산서"]
+  ROOT --> SAMPLE["P-09 호스트 샘플 키트 신청"]
+  ROOT --> ORDER["P-10 B2B 장바구니 & 결제"]
+
+  %% 2차/3차 페이지 연결
+  BUNDLE --> P03["P-03 번들 상품 상세 페이지"]
+  BUNDLE --> P04["P-04 객실 풀 어메니티 패키지"]
+  
+  ATELIER --> P06["P-06 국/영문 리추얼 카드관"]
+  
+  QUOTE --> P08["P-08 100회 세탁 내구성관"]
+  ORDER --> P11["P-11 정기납품 & 엠블럼관"]
+
+  %% 레이어드 모달 연동
+  P05 -.-> M03["M-03 Canvas 자수 시뮬레이터 모달"]
+  P03 -.-> M03
+  P07 -.-> M04["M-04 직인 견적서 PDF 1초 출력 모달"]
+  P01 -.-> M04
+  P08 -.-> M02["M-02 KC 4無 성적서 200% 확대 모달"]
+
+  %% 예외 페이지 [가정]
+  P05 -.-> EX01["EX-01 로고 파일 오류 안내 (가정)"]
+  QUOTE -.-> EX02["EX-02 대량 납기 조율 안내 (가정)"]
+  ROOT -.-> EX03["EX-03 404 Not Found (가정)"]
+
+  %% 스타일 클래스
+  classDef primary fill:#E8F3F1,stroke:#4A7C72,stroke-width:2px,color:#1A3B34;
+  classDef b2b fill:#EBF3FA,stroke:#2B6CB0,stroke-width:2px,color:#1A365D;
+  classDef modal fill:#FFF6ED,stroke:#D97706,stroke-width:1.5px,color:#92400E;
+  classDef exception fill:#FEE2E2,stroke:#EF4444,stroke-width:1.5px,stroke-dasharray: 4 4,color:#991B1B;
+  
+  class ROOT,MAIN,BUNDLE,ATELIER,QUOTE,SAMPLE,ORDER,P03,P04,P06,P08,P11 primary;
+  class M02,M03,M04 modal;
+  class EX01,EX02,EX03 exception;

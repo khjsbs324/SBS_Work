@@ -13,15 +13,15 @@ $config = Get-PipelineConfig -ConfigPath (Join-Path $root "pipeline\config\pipel
 $statePath = Join-Path $root ".state"
 if (-not (Test-Path $statePath)) { New-Item -ItemType Directory -Path $statePath -Force | Out-Null }
 
-$snapshotPath = Join-Path $root $config.googleCalendar.snapshotPath
+$snapshotPath = Join-Path $root $config.scheduleInput.snapshotPath
 if ($UseSample -or -not (Test-Path $snapshotPath)) {
     $samplePath = Join-Path $root "pipeline\samples\sample-calendar-events.json"
     Copy-Item $samplePath $snapshotPath -Force
-    Write-Host "[run-pipeline] 캘린더 스냅샷이 없어 샘플 데이터로 드라이런합니다: $samplePath"
+    Write-Host "[run-pipeline] 일정 스냅샷이 없어 샘플 데이터로 드라이런합니다: $samplePath"
 }
 
 $snapshot = Get-Content $snapshotPath -Raw -Encoding UTF8 | ConvertFrom-Json
-$sourceLabel = if ($snapshot.source -eq "sample") { "샘플 데이터" } else { "실제 캘린더" }
+$sourceLabel = if ($snapshot.source -eq "sample") { "샘플 데이터" } else { "사용자 입력" }
 
 # 1) Notion 등록
 Write-Host "[run-pipeline] 2/4 Notion 등록 중..."

@@ -1,0 +1,48 @@
+flowchart TD
+    %% 메인 홈
+    ROOT["HOME: 플로뜰리에 HAIR (SCR-01)"]
+
+    %% 1차 메뉴 그룹
+    ROOT --> G_GEAR["1. SALON GEAR (살롱 패브릭)"]
+    ROOT --> G_ATELIER["2. SALON ATELIER (로고 자수)"]
+    ROOT --> G_B2B["3. B2B WHOLESALE (도매 발주)"]
+    ROOT --> G_LAB["4. SCIENCE & LAB (안전/성능 검증)"]
+    ROOT --> G_RITUAL["5. HAIR RITUAL (프로 팁)"]
+    ROOT --> G_TRIAL["6. TRIAL (1장 안심 체험팩)"]
+    ROOT --> G_REVIEW["7. REVIEWS (원장님 후기)"]
+
+    %% 2차 상세 페이지 연결
+    G_GEAR --> P_TURBAN["SCR-02: 루프 단추 헤어 터번 (40x100cm)"]
+    G_GEAR --> P_NECK["SCR-03: 샴푸 넥 가드 수분 타월"]
+    P_TURBAN -.-> M_GUIDE["MODAL-01: 3초 착용법 가이드 모달"]
+
+    G_ATELIER --> P_JASU["SCR-04: 살롱 로고 자수 아틀리에"]
+    P_JASU -.-> M_JASU["MODAL-02: 로고 자수 시안 모달"]
+
+    G_B2B --> P_B2B_CTR["SCR-05: 살롱 B2B 도매 발주 센터"]
+    G_LAB --> P_LAB_PG["SCR-06: 과학적 성능 & 200회 검증실"]
+    G_RITUAL --> P_RITUAL_PG["SCR-07: 프로 살롱 타월 드라이 가이드"]
+    G_TRIAL --> P_TRIAL_PG["SCR-08: 디자이너 1장 안심 체험팩 (3,000원)"]
+    G_REVIEW --> P_REV_PG["SCR-12: 전국 살롱 원장 후기"]
+
+    %% 주문 및 결제 여정
+    P_TURBAN --> P_CART["SCR-09: 살롱 B2B 장바구니"]
+    P_NECK --> P_CART
+    P_JASU --> P_CART
+    P_B2B_CTR --> P_CART
+    P_TRIAL_PG --> P_PAY["SCR-10: B2B 주문 및 결제"]
+    P_CART --> P_PAY
+    P_PAY --> P_COMPLETE["SCR-11: 발주 완료 & B2B 납품 확약서"]
+
+    %% 스타일링
+    classDef rootStyle fill:#1E2522,stroke:#0F172A,stroke-width:2px,color:#FFFFFF,font-weight:bold;
+    classDef groupStyle fill:#FAF7F2,stroke:#C47A5A,stroke-width:2px,color:#232527,font-weight:bold;
+    classDef pageStyle fill:#FFFFFF,stroke:#8E949A,stroke-width:1.5px,color:#232527;
+    classDef orderStyle fill:#EBF3FA,stroke:#2B6CB0,stroke-width:1.5px,color:#1A365D,font-weight:bold;
+    classDef modalStyle fill:#FFFBEB,stroke:#D97706,stroke-width:1.5px,stroke-dasharray: 3 3,color:#78350F;
+
+    class ROOT rootStyle;
+    class G_GEAR,G_ATELIER,G_B2B,G_LAB,G_RITUAL,G_TRIAL,G_REVIEW groupStyle;
+    class P_TURBAN,P_NECK,P_JASU,P_B2B_CTR,P_LAB_PG,P_RITUAL_PG,P_TRIAL_PG,P_REV_PG pageStyle;
+    class P_CART,P_PAY,P_COMPLETE orderStyle;
+    class M_GUIDE,M_JASU modalStyle;

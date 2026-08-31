@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1100" width="100%" height="100%" style="background-color: #F8FAF9; font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;">
+  <defs>
+    <filter id="flow-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <linearGradient id="flow-start" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="flow-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="flow-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Title Header -->
+  <g transform="translate(60, 35)">
+    <rect width="1320" height="65" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" filter="url(#flow-shadow)"/>
+    <text x="25" y="36" font-size="18" font-weight="700" fill="#1E293B">🔄 플로뜰리에 NOMAD 서비스 흐름도 (End-to-End User Journey Flow)</text>
+    <text x="25" y="54" font-size="12" fill="#64748B">페르소나: 김노마드(장서진) | 탐색 ➔ 키트 선택 ➔ 패킹 계산 &amp; 3D 검증 ➔ 글로벌 자수 ➔ 당일 특급 결제 ➔ 주문 완료</text>
+  </g>
+
+  <!-- Flow Steps Layout -->
+
+  <!-- STEP 0: START (Pill Shape) -->
+  <g transform="translate(560, 120)" filter="url(#flow-shadow)">
+    <rect width="320" height="46" rx="23" fill="url(#flow-start)"/>
+    <text x="160" y="28" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">🏁 시작: SCR-01 메인 / SCR-12 검색</text>
+  </g>
+
+  <path d="M 720 166 L 720 195" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 1: 탐색 & 4대 진입 분기 -->
+  <g transform="translate(100, 195)">
+    <!-- Branch 1: SCR-02 -->
+    <g transform="translate(0, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+      <text x="140" y="26" font-size="12" font-weight="700" fill="#1E40AF" text-anchor="middle">SCR-02 | 트래블 2종 키트 상세</text>
+      <text x="140" y="46" font-size="11" fill="#475569" text-anchor="middle">롱 바스타월 + 페이셜 와입스</text>
+    </g>
+
+    <!-- Branch 2: SCR-03 -->
+    <g transform="translate(320, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+      <text x="140" y="26" font-size="12" font-weight="700" fill="#1E293B" text-anchor="middle">SCR-03 | 항균 방수 파우치</text>
+      <text x="140" y="46" font-size="11" fill="#475569" text-anchor="middle">젖은 타월 통풍 냄새 차단</text>
+    </g>
+
+    <!-- Branch 3: SCR-05 -->
+    <g transform="translate(640, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+      <text x="140" y="26" font-size="12" font-weight="700" fill="#065F46" text-anchor="middle">SCR-05 | 캐리어 패킹 계산기</text>
+      <text x="140" y="46" font-size="11" fill="#047857" text-anchor="middle">캐리어 부피 70% 공간 절감</text>
+    </g>
+
+    <!-- Branch 4: SCR-07 -->
+    <g transform="translate(960, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.2"/>
+      <text x="140" y="26" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">SCR-07 | 1장 안심 체험팩</text>
+      <text x="140" y="46" font-size="11" fill="#1E40AF" text-anchor="middle">3,000원 체험 / 100% 환급</text>
+    </g>
+  </g>
+
+  <!-- Connectors from Root to 4 Branches -->
+  <path d="M 720 166 L 720 180 M 240 180 L 1200 180" stroke="#94A3B8" stroke-width="1.5" fill="none"/>
+  <path d="M 240 180 L 240 195 M 560 180 L 560 195 M 880 180 L 880 195 M 1200 180 L 1200 195" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 2: 상세 확인 & 검증 인터랙션 -->
+  <g transform="translate(100, 300)">
+    <!-- MODAL-01 -->
+    <g transform="translate(0, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="60" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.2"/>
+      <text x="140" y="25" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">MODAL-01 | 롤업 패킹 3D 뷰어</text>
+      <text x="140" y="43" font-size="11" fill="#1E40AF" text-anchor="middle">여권 크기 롤업 인터랙션 &amp; 무게 85g</text>
+    </g>
+
+    <!-- SCR-06 -->
+    <g transform="translate(320, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+      <text x="140" y="25" font-size="12" font-weight="700" fill="#334155" text-anchor="middle">SCR-06 | 랩 &amp; 속건 검증실</text>
+      <text x="140" y="43" font-size="11" fill="#64748B" text-anchor="middle">호텔 룸 3시간 완건조 타임랩스</text>
+    </g>
+
+    <!-- SCR-11 -->
+    <g transform="translate(640, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+      <text x="140" y="25" font-size="12" font-weight="700" fill="#334155" text-anchor="middle">SCR-11 | 기내 수분 진정 팁</text>
+      <text x="140" y="43" font-size="11" fill="#64748B" text-anchor="middle">10시간 비행 케어 &amp; 손빨래 팁</text>
+    </g>
+  </g>
+
+  <!-- Connectors Step 1 to Step 2 -->
+  <path d="M 240 259 L 240 300" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 560 259 L 560 300" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 880 259 L 880 300" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 3: 글로벌 자수 커스텀 (SCR-04) & 유효성 검사 (Diamond) -->
+  <g transform="translate(100, 400)">
+    <!-- SCR-04 Action Node -->
+    <g transform="translate(0, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+      <text x="140" y="26" font-size="12" font-weight="700" fill="#1E40AF" text-anchor="middle">SCR-04 | 글로벌 자수 아틀리에</text>
+      <text x="140" y="46" font-size="11" fill="#475569" text-anchor="middle">영문 이니셜 &amp; IATA 코드 실시간 렌더링</text>
+    </g>
+
+    <!-- Decision Diamond (Decision Shape) -->
+    <g transform="translate(380, -8)" filter="url(#flow-shadow)">
+      <polygon points="80,0 160,40 80,80 0,40" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="80" y="36" font-size="11" font-weight="700" fill="#92400E" text-anchor="middle">자수 유효성</text>
+      <text x="80" y="52" font-size="11" font-weight="700" fill="#92400E" text-anchor="middle">검사</text>
+    </g>
+
+    <!-- Error State Box -->
+    <g transform="translate(380, 100)" filter="url(#flow-shadow)">
+      <rect width="160" height="44" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.2"/>
+      <text x="80" y="26" font-size="11" font-weight="700" fill="#B91C1C" text-anchor="middle">영문 10자 초과 경고</text>
+    </g>
+
+    <!-- Success Output Node -->
+    <g transform="translate(640, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="1.2"/>
+      <text x="140" y="26" font-size="12" font-weight="700" fill="#065F46" text-anchor="middle">자수 스트랩 시안 확정</text>
+      <text x="140" y="46" font-size="11" fill="#047857" text-anchor="middle">장바구니 세션 자동 연동</text>
+    </g>
+  </g>
+
+  <!-- Connectors Step 2 to Step 3 -->
+  <path d="M 240 360 L 240 400" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 380 432 L 460 432" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 540 432 L 640 432" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <text x="590" y="424" font-size="11" fill="#047857" font-weight="700">통과</text>
+  <path d="M 460 472 L 460 500" stroke="#EF4444" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <text x="470" y="490" font-size="11" fill="#B91C1C" font-weight="700">초과</text>
+  <path d="M 380 522 L 240 522 L 240 464" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 4: 장바구니 & 당일 특급 배송 분기 -->
+  <g transform="translate(100, 580)">
+    <!-- SCR-08 장바구니 -->
+    <g transform="translate(0, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="140" y="26" font-size="12" font-weight="700" fill="#1E293B" text-anchor="middle">SCR-08 | 장바구니</text>
+      <text x="140" y="46" font-size="11" fill="#475569" text-anchor="middle">기어 세트 &amp; 자수 스트랩 썸네일 검토</text>
+    </g>
+
+    <!-- SCR-09 주문/결제 -->
+    <g transform="translate(380, 0)" filter="url(#flow-shadow)">
+      <rect width="280" height="64" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+      <text x="140" y="26" font-size="12" font-weight="700" fill="#1E40AF" text-anchor="middle">SCR-09 | 주문 및 결제</text>
+      <text x="140" y="46" font-size="11" fill="#475569" text-anchor="middle">당일 특급 출고 / 항공 픽업 선택</text>
+    </g>
+
+    <!-- Decision Diamond (출국 D-Day) -->
+    <g transform="translate(760, -8)" filter="url(#flow-shadow)">
+      <polygon points="80,0 160,40 80,80 0,40" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="80" y="36" font-size="11" font-weight="700" fill="#92400E" text-anchor="middle">출국 D-Day</text>
+      <text x="80" y="52" font-size="11" font-weight="700" fill="#92400E" text-anchor="middle">일정 확인</text>
+    </g>
+
+    <!-- Express Shipping Box -->
+    <g transform="translate(1000, 0)" filter="url(#flow-shadow)">
+      <rect width="240" height="64" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.2"/>
+      <text x="120" y="26" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">⚡ 당일 특급 출고 확약</text>
+      <text x="120" y="46" font-size="11" fill="#1E40AF" text-anchor="middle">평일 15시 이전 주문 건</text>
+    </g>
+  </g>
+
+  <!-- Connectors Step 3 to Step 4 -->
+  <path d="M 780 464 L 780 540 L 240 540 L 240 580" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 380 612 L 480 612" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 660 612 L 760 612" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 920 612 L 1000 612" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <text x="945" y="604" font-size="11" fill="#047857" font-weight="700">3일 이내</text>
+
+  <!-- STEP 5: 결제 승인 & 주문 완료 (SCR-10) -->
+  <g transform="translate(200, 720)">
+    <!-- Decision Diamond (결제 처리) -->
+    <g transform="translate(0, 0)" filter="url(#flow-shadow)">
+      <polygon points="80,0 160,40 80,80 0,40" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="80" y="36" font-size="11" font-weight="700" fill="#92400E" text-anchor="middle">결제 승인</text>
+      <text x="80" y="52" font-size="11" font-weight="700" fill="#92400E" text-anchor="middle">처리</text>
+    </g>
+
+    <!-- Error / Retry Box -->
+    <g transform="translate(0, 110)" filter="url(#flow-shadow)">
+      <rect width="160" height="44" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.2"/>
+      <text x="80" y="26" font-size="11" font-weight="700" fill="#B91C1C" text-anchor="middle">결제 실패 / 재시도 안내</text>
+    </g>
+
+    <!-- SCR-10 주문 완료 -->
+    <g transform="translate(280, 8)" filter="url(#flow-shadow)">
+      <rect width="320" height="64" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+      <text x="160" y="26" font-size="13" font-weight="700" fill="#065F46" text-anchor="middle">SCR-10 | 주문 완료</text>
+      <text x="160" y="46" font-size="11" fill="#047857" text-anchor="middle">당일 송장 번호 &amp; 자수 확인증 발급</text>
+    </g>
+
+    <!-- Post Action: PDF Download -->
+    <g transform="translate(680, 8)" filter="url(#flow-shadow)">
+      <rect width="320" height="64" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+      <text x="160" y="26" font-size="12" font-weight="700" fill="#1E293B" text-anchor="middle">노마드 패킹 체크리스트 PDF</text>
+      <text x="160" y="46" font-size="11" fill="#64748B" text-anchor="middle">해외 출장 필수 아이템 1초 다운로드</text>
+    </g>
+  </g>
+
+  <!-- Connectors Step 4 to Step 5 -->
+  <path d="M 1120 644 L 1120 680 L 280 680 L 280 720" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 360 760 L 480 760" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <text x="400" y="750" font-size="11" fill="#047857" font-weight="700">성공</text>
+  <path d="M 280 800 L 280 830" stroke="#EF4444" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+  <text x="290" y="820" font-size="11" fill="#B91C1C" font-weight="700">실패</text>
+  <path d="M 800 760 L 880 760" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- STEP 6: END (Pill Shape) -->
+  <g transform="translate(560, 930)" filter="url(#flow-shadow)">
+    <rect width="320" height="50" rx="25" fill="url(#flow-green)"/>
+    <text x="160" y="30" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">🎉 종료: 출국 전 뽀송한 트래블 기어 수령</text>
+  </g>
+
+  <path d="M 720 832 L 720 930" stroke="#10B981" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- Legend -->
+  <g transform="translate(60, 1010)">
+    <rect width="1320" height="44" rx="8" fill="#F1F5F9"/>
+    <text x="20" y="27" font-size="12" font-weight="700" fill="#334155">도형 범례:</text>
+    <rect x="100" y="14" width="30" height="16" rx="8" fill="#1E293B"/>
+    <text x="135" y="27" font-size="11" fill="#334155">시작/종료 (Pill)</text>
+    <rect x="250" y="14" width="20" height="16" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="275" y="27" font-size="11" fill="#334155">사용자 행동/화면 (Rect)</text>
+    <polygon points="430,14 445,22 430,30 415,22" fill="#FEF3C7" stroke="#F59E0B"/>
+    <text x="450" y="27" font-size="11" fill="#334155">판단 분기 (Diamond)</text>
+    <rect x="580" y="14" width="20" height="16" rx="4" fill="#ECFDF5" stroke="#10B981"/>
+    <text x="605" y="27" font-size="11" fill="#334155">시스템 처리/완료</text>
+    <rect x="740" y="14" width="20" height="16" rx="4" fill="#FEE2E2" stroke="#EF4444"/>
+    <text x="765" y="27" font-size="11" fill="#334155">오류/경고</text>
+  </g>
+</svg>

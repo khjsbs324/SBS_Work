@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1020" width="100%" height="100%" style="background-color: #F8FAF9; font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.04"/>
+    </filter>
+    <linearGradient id="grad-root" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="grad-depth1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title & Meta Header -->
+  <g transform="translate(60, 40)">
+    <rect width="1320" height="70" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow-sm)"/>
+    <text x="30" y="38" font-size="20" font-weight="700" fill="#1E293B">🗺️ 플로뜰리에 노마드 (Flottelier NOMAD) 마스터 사이트맵</text>
+    <text x="30" y="58" font-size="13" fill="#64748B">페르소나: 김노마드(장서진) | 캐리어 여권 크기 압축 · 호텔 3시간 속건 · 글로벌 자수 아틀리에 | IA Version 1.0 (UTF-8)</text>
+    <rect x="1170" y="20" width="120" height="30" rx="15" fill="#EFF6FF"/>
+    <text x="1230" y="40" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">✓ WCAG 2.1 AA</text>
+  </g>
+
+  <!-- Root Node -->
+  <g transform="translate(480, 135)" filter="url(#shadow)">
+    <rect width="480" height="56" rx="28" fill="url(#grad-root)"/>
+    <text x="240" y="28" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">플로뜰리에 NOMAD 플랫폼 마스터 IA</text>
+    <text x="240" y="46" font-size="12" fill="#CBD5E1" text-anchor="middle">트래블 2종 키트 · 방수 파우치 · 글로벌 자수 · 캐리어 패킹 계산기</text>
+  </g>
+
+  <!-- Connector Lines from Root to Depth 1 Columns -->
+  <path d="M 720 191 L 720 225 M 190 225 L 1250 225" stroke="#CBD5E1" stroke-width="2" fill="none"/>
+  <path d="M 190 225 L 190 250 M 455 225 L 455 250 M 720 225 L 720 250 M 985 225 L 985 250 M 1250 225 L 1250 250" stroke="#CBD5E1" stroke-width="2" fill="none"/>
+
+  <!-- ==================== COLUMN 1: TRAVEL GEAR SHOP (SCR-02/03) ==================== -->
+  <g transform="translate(70, 250)">
+    <!-- Depth 1 Header -->
+    <rect width="240" height="44" rx="8" fill="url(#grad-depth1)" filter="url(#shadow-sm)"/>
+    <text x="120" y="27" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1.0 TRAVEL GEAR 샵</text>
+    
+    <!-- Depth 2 Node: SCR-02 -->
+    <g transform="translate(0, 58)">
+      <rect width="240" height="84" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#F1F5F9"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#1E3A8A">SCR-02 | 트래블 2종 키트 상세</text>
+      <text x="10" y="42" font-size="11" fill="#334155">• 롱 바스타월 + 페이셜 와입스</text>
+      <text x="10" y="58" font-size="11" fill="#334155">• 스냅 단추형 트래블 행잉 스트랩</text>
+      <text x="10" y="74" font-size="11" fill="#64748B">• 샌드베이지/그레이/올리브 스와치</text>
+    </g>
+
+    <!-- Depth 2 Node: SCR-03 -->
+    <g transform="translate(0, 154)">
+      <rect width="240" height="74" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#F1F5F9"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#1E3A8A">SCR-03 | 항균 방수 파우치</text>
+      <text x="10" y="42" font-size="11" fill="#334155">• 멤브레인 통풍 젖은 타월 보관</text>
+      <text x="10" y="58" font-size="11" fill="#334155">• 냄새 차단 &amp; 카라비너 결착형</text>
+    </g>
+
+    <!-- Depth 2 Node: MODAL-01 -->
+    <g transform="translate(0, 240)">
+      <rect width="240" height="64" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <text x="10" y="20" font-size="11" font-weight="700" fill="#1D4ED8">MODAL-01 | 롤업 패킹 3D 뷰어</text>
+      <text x="10" y="38" font-size="11" fill="#1E40AF">• 여권 크기 압축 360도 인터랙션</text>
+      <text x="10" y="52" font-size="11" fill="#1E40AF">• 무게 85g 체감 비교 뷰어</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 2: NOMAD ATELIER (SCR-04) ==================== -->
+  <g transform="translate(335, 250)">
+    <!-- Depth 1 Header -->
+    <rect width="240" height="44" rx="8" fill="url(#grad-depth1)" filter="url(#shadow-sm)"/>
+    <text x="120" y="27" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2.0 노마드 자수 아틀리에</text>
+    
+    <!-- Depth 2 Node: SCR-04 -->
+    <g transform="translate(0, 58)">
+      <rect width="240" height="150" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#F1F5F9"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#1E3A8A">SCR-04 | 글로벌 자수 아틀리에</text>
+      <text x="10" y="42" font-size="11" fill="#334155">• 영문 네임 / 이니셜 각인</text>
+      <text x="10" y="60" font-size="11" fill="#334155">• IATA 공항/국가 코드 20종 프리셋</text>
+      <text x="10" y="78" font-size="11" fill="#334155">• 트래블 엠블럼 6종 (비행기, 여권 등)</text>
+      <text x="10" y="96" font-size="11" fill="#334155">• 골드/네이비/화이트 자수사</text>
+      <text x="10" y="114" font-size="11" fill="#334155">• 실시간 Canvas 스트랩 렌더러</text>
+      <text x="10" y="132" font-size="11" fill="#64748B">• [자수 적용하고 바로 주문]</text>
+    </g>
+
+    <!-- Sub Features -->
+    <g transform="translate(0, 220)">
+      <rect width="240" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="10" y="20" font-size="11" font-weight="700" fill="#475569">📌 글로벌 IATA 프리셋</text>
+      <text x="10" y="38" font-size="10" fill="#64748B">ICN(서울) · SFO(샌프란시스코)</text>
+      <text x="10" y="54" font-size="10" fill="#64748B">NRT(도쿄) · CDG(파리) · LHR(런던)</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 3: PACKING SIMULATOR (SCR-05) ==================== -->
+  <g transform="translate(600, 250)">
+    <!-- Depth 1 Header -->
+    <rect width="240" height="44" rx="8" fill="url(#grad-accent)" filter="url(#shadow-sm)"/>
+    <text x="120" y="27" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3.0 패킹 시뮬레이터</text>
+    
+    <!-- Depth 2 Node: SCR-05 -->
+    <g transform="translate(0, 58)">
+      <rect width="240" height="150" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#D1FAE5"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#065F46">SCR-05 | 캐리어 패킹 계산기</text>
+      <text x="10" y="42" font-size="11" fill="#334155">• 20인치/24인치 캐리어 부피 시뮬레이션</text>
+      <text x="10" y="60" font-size="11" fill="#334155">• 일반 수건 대비 70% 공간 절감</text>
+      <text x="10" y="78" font-size="11" fill="#334155">• 85g vs 350g 무게 비교 게이지</text>
+      <text x="10" y="96" font-size="11" fill="#334155">• 여권 크기 롤업 비교 컷</text>
+      <text x="10" y="114" font-size="11" fill="#334155">• [최적 트래블 세트 담기]</text>
+      <text x="10" y="132" font-size="11" fill="#64748B">• 출장 기간별(2박3일/1주) 패킹 추천</text>
+    </g>
+
+    <!-- Depth 2 Node: SCR-11 -->
+    <g transform="translate(0, 220)">
+      <rect width="240" height="74" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#F1F5F9"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#1E3A8A">SCR-11 | 기내 수분 진정 팁</text>
+      <text x="10" y="42" font-size="11" fill="#334155">• 10시간 비행 피부 진정 와입스 팁</text>
+      <text x="10" y="58" font-size="11" fill="#334155">• 호텔 세면대 1분 손빨래 매뉴얼</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 4: LAB & PROOFS (SCR-06/07) ==================== -->
+  <g transform="translate(865, 250)">
+    <!-- Depth 1 Header -->
+    <rect width="240" height="44" rx="8" fill="url(#grad-depth1)" filter="url(#shadow-sm)"/>
+    <text x="120" y="27" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4.0 랩 &amp; 검증실</text>
+    
+    <!-- Depth 2 Node: SCR-06 -->
+    <g transform="translate(0, 58)">
+      <rect width="240" height="120" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#F1F5F9"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#1E3A8A">SCR-06 | 랩 &amp; 속건 검증실</text>
+      <text x="10" y="42" font-size="11" fill="#334155">• 호텔 실내 3시간 속건 타임랩스</text>
+      <text x="10" y="60" font-size="11" fill="#334155">• KATRI 속건성/인장강도 성적서</text>
+      <text x="10" y="78" font-size="11" fill="#334155">• 손빨래 100회 무먼지 품질 보증</text>
+      <text x="10" y="96" font-size="11" fill="#334155">• 4無 무화학 피부 안전성 인증</text>
+    </g>
+
+    <!-- Depth 2 Node: SCR-07 -->
+    <g transform="translate(0, 190)">
+      <rect width="240" height="84" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#D1FAE5"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#065F46">SCR-07 | 1장 안심 체험팩</text>
+      <text x="10" y="42" font-size="11" fill="#065F46">• 1장 3,000원에 원단 경량성 확인</text>
+      <text x="10" y="58" font-size="11" fill="#065F46">• 본품 구매 시 100% 전액 환급</text>
+      <text x="10" y="74" font-size="11" fill="#047857">• 노마드 실사용 포토 리뷰 모음</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 5: ORDER & CHECKOUT (SCR-08/09/10) ==================== -->
+  <g transform="translate(1130, 250)">
+    <!-- Depth 1 Header -->
+    <rect width="240" height="44" rx="8" fill="url(#grad-depth1)" filter="url(#shadow-sm)"/>
+    <text x="120" y="27" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">5.0 주문 &amp; 특급 배송</text>
+    
+    <!-- Depth 2 Node: SCR-08 -->
+    <g transform="translate(0, 58)">
+      <rect width="240" height="64" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#F1F5F9"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#1E3A8A">SCR-08 | 장바구니</text>
+      <text x="10" y="42" font-size="11" fill="#334155">• 선택 키트 &amp; 자수 스트랩 썸네일</text>
+      <text x="10" y="56" font-size="11" fill="#64748B">• 출국 D-Day 특급 배송비 계산</text>
+    </g>
+
+    <!-- Depth 2 Node: SCR-09 -->
+    <g transform="translate(0, 134)">
+      <rect width="240" height="74" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#F1F5F9"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#1E3A8A">SCR-09 | 주문 및 결제</text>
+      <text x="10" y="42" font-size="11" fill="#334155">• 당일 특급 출고 / 항공 수령 선택</text>
+      <text x="10" y="58" font-size="11" fill="#334155">• N-Pay / 카카오 1초 간편결제</text>
+    </g>
+
+    <!-- Depth 2 Node: SCR-10 -->
+    <g transform="translate(0, 220)">
+      <rect width="240" height="74" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+      <rect x="0" y="0" width="240" height="24" rx="8" fill="#F1F5F9"/>
+      <text x="10" y="16" font-size="11" font-weight="700" fill="#1E3A8A">SCR-10 | 주문 완료</text>
+      <text x="10" y="42" font-size="11" fill="#334155">• 출장 D-Day 송장 번호 확인</text>
+      <text x="10" y="58" font-size="11" fill="#334155">• 노마드 패킹 체크리스트 PDF</text>
+    </g>
+  </g>
+
+  <!-- Bottom Common Bar -->
+  <g transform="translate(70, 730)">
+    <rect width="1300" height="60" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#shadow-sm)"/>
+    <text x="20" y="35" font-size="13" font-weight="700" fill="#1E293B">공통 영역 (Common)</text>
+    <text x="170" y="35" font-size="12" fill="#64748B">SCR-12 통합 검색 결과 | 글로벌 헤더 GNB | 플로팅 퀵 자수 시뮬레이터 | 당일 특급 발송 조회 | 푸터 속건성 성적서 번호</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(70, 810)">
+    <rect width="1300" height="50" rx="8" fill="#F1F5F9"/>
+    <text x="20" y="30" font-size="12" font-weight="700" fill="#334155">범례 (Legend):</text>
+    <rect x="120" y="18" width="16" height="16" rx="4" fill="url(#grad-depth1)"/>
+    <text x="145" y="31" font-size="12" fill="#334155">트래블 기어 / 자수 / 배송</text>
+    <rect x="330" y="18" width="16" height="16" rx="4" fill="url(#grad-accent)"/>
+    <text x="355" y="31" font-size="12" fill="#334155">캐리어 패킹 시뮬레이터</text>
+    <rect x="550" y="18" width="16" height="16" rx="4" fill="#D1FAE5" stroke="#10B981"/>
+    <text x="575" y="31" font-size="12" fill="#334155">체험팩 (100% 환급)</text>
+    <rect x="740" y="18" width="16" height="16" rx="4" fill="#EFF6FF" stroke="#3B82F6"/>
+    <text x="765" y="31" font-size="12" fill="#334155">3D 롤업 인터랙션</text>
+  </g>
+</svg>

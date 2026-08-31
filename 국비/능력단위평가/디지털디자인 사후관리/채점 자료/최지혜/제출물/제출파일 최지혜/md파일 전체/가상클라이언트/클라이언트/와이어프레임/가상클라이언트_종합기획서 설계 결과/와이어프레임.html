@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에(Flottelier) - 가상클라이언트 종합 인터랙티브 와이어프레임 뷰어</title>
+  
+  <style>
+    /* ==========================================================================
+       Flottelier Wireframe UI System
+       ========================================================================== */
+    :root {
+      --fl-deep-green: #1F3327;
+      --fl-earth-brown: #5A4232;
+      --fl-pure-ecru: #F7F4EE;
+      --fl-petal-pink: #E8B4A2;
+      --fl-sage-green: #7E8D7F;
+      --fl-terra-cotta: #C47A5A;
+      
+      --wf-bg: #F4F6F5;
+      --wf-card: #FFFFFF;
+      --wf-border: #D1D9D4;
+      --wf-dark: #232527;
+      --wf-muted: #6B7280;
+      
+      --font-main: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif;
+      --font-serif: "Noto Serif KR", "Batang", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--wf-bg);
+      color: var(--wf-dark);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Top Control Bar */
+    .wf-top-bar {
+      background: var(--fl-deep-green);
+      color: #FFFFFF;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      z-index: 1000;
+      flex-shrink: 0;
+    }
+
+    .wf-brand-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .wf-tag {
+      background: var(--fl-terra-cotta);
+      color: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .wf-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .wf-device-toggle {
+      display: flex;
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .wf-device-btn {
+      background: transparent;
+      border: none;
+      color: #FFFFFF;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .wf-device-btn.active {
+      background: #FFFFFF;
+      color: var(--fl-deep-green);
+      font-weight: 700;
+    }
+
+    .wf-screen-select {
+      padding: 6px 12px;
+      font-size: 13px;
+      border-radius: 6px;
+      border: 1px solid var(--wf-border);
+      background: #FFFFFF;
+      color: var(--wf-dark);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Layout Split */
+    .wf-main-layout {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 54px);
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    .wf-sidebar {
+      width: 280px;
+      background: #FFFFFF;
+      border-right: 1px solid var(--wf-border);
+      padding: 16px 12px;
+      overflow-y: auto;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .wf-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--fl-sage-green);
+      text-transform: uppercase;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      padding-left: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .wf-menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--wf-dark);
+      background: transparent;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s;
+    }
+
+    .wf-menu-item:hover {
+      background: var(--fl-pure-ecru);
+      color: var(--fl-deep-green);
+    }
+
+    .wf-menu-item.active {
+      background: #EBF4EE;
+      color: var(--fl-deep-green);
+      border-color: #2E6945;
+      font-weight: 700;
+    }
+
+    .wf-item-code {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--fl-terra-cotta);
+      background: #FFF5F0;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Content Canvas */
+    .wf-canvas-container {
+      flex: 1;
+      background: var(--wf-bg);
+      overflow-y: auto;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .wf-viewport-frame {
+      background: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border: 1px solid var(--wf-border);
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 100%;
+      max-width: 1200px;
+      min-height: 800px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wf-viewport-frame.tablet { max-width: 768px; }
+    .wf-viewport-frame.mobile { max-width: 375px; }
+
+    /* Screen Frame UI Components */
+    .screen-header-info {
+      background: #FAF7F2;
+      border-bottom: 2px solid var(--fl-terra-cotta);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .screen-id-badge {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--fl-deep-green);
+    }
+
+    .screen-meta-desc {
+      font-size: 12px;
+      color: var(--fl-earth-brown);
+    }
+
+    /* Global Navigation Bar Component */
+    .gnb-banner {
+      background: var(--fl-deep-green);
+      color: #FFFFFF;
+      font-size: 12px;
+      padding: 6px 16px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .gnb-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E5E7EB;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .gnb-logo {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--fl-deep-green);
+      cursor: pointer;
+    }
+
+    .gnb-nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .gnb-nav-links a {
+      color: var(--wf-dark);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .gnb-nav-links a:hover { color: var(--fl-terra-cotta); }
+
+    .gnb-cta-btn {
+      background: var(--fl-terra-cotta);
+      color: #FFFFFF;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Screen Body Sections */
+    .screen-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .wf-hero-box {
+      background: linear-gradient(135deg, #FBF8F3 0%, #F5ECE3 100%);
+      border: 1px dashed var(--fl-sage-green);
+      border-radius: 8px;
+      padding: 36px 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .wf-hero-title {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--fl-deep-green);
+      margin-bottom: 8px;
+    }
+
+    .wf-hero-sub {
+      font-size: 14px;
+      color: var(--fl-earth-brown);
+      margin-bottom: 18px;
+    }
+
+    .wf-btn-primary {
+      background: var(--fl-deep-green);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .wf-btn-accent {
+      background: var(--fl-terra-cotta);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .wf-btn-outline {
+      background: #FFFFFF;
+      color: var(--fl-deep-green);
+      border: 1px solid var(--fl-deep-green);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Grid & Cards */
+    .wf-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .wf-card-item {
+      background: #FFFFFF;
+      border: 1px solid var(--wf-border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .wf-img-placeholder {
+      background: #EFEFEF;
+      border: 1px dashed #CBD5E1;
+      height: 160px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #64748B;
+      font-size: 12px;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Interactive HD Magnifier Zoom Mock */
+    .zoom-mock-container {
+      position: relative;
+      cursor: crosshair;
+      border: 2px solid var(--fl-terra-cotta);
+      border-radius: 6px;
+      height: 220px;
+      background: #FDF9F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .zoom-lens {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 2px solid var(--fl-deep-green);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      pointer-events: none;
+      display: none;
+    }
+
+    /* Table Component */
+    .wf-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .wf-table th, .wf-table td {
+      border: 1px solid var(--wf-border);
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    .wf-table th {
+      background: #F9FAFB;
+      font-weight: 700;
+      color: var(--fl-deep-green);
+    }
+
+    /* Modals Overlay */
+    .wf-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(31, 51, 39, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    .wf-modal-box {
+      background: #FFFFFF;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 580px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+      border: 2px solid var(--fl-terra-cotta);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wf-modal-head {
+      background: #FAF7F2;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--wf-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .wf-modal-head h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--fl-deep-green);
+    }
+
+    .wf-modal-close {
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #64748B;
+    }
+
+    .wf-modal-body {
+      padding: 20px;
+      max-height: 70vh;
+      overflow-y: auto;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Footer */
+    .screen-footer {
+      background: #232527;
+      color: #9CA3AF;
+      padding: 24px;
+      font-size: 12px;
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Global Controls -->
+  <header class="wf-top-bar">
+    <div class="wf-brand-badge">
+      <span>🌿 플로뜰리에 (Flottelier) 와이어프레임 뷰어</span>
+      <span class="wf-tag">종합 기획서 기반</span>
+    </div>
+
+    <div class="wf-controls">
+      <!-- Device Viewport Toggle -->
+      <div class="wf-device-toggle">
+        <button class="wf-device-btn active" onclick="setDevice('desktop', this)">🖥️ PC (1200px)</button>
+        <button class="wf-device-btn" onclick="setDevice('tablet', this)">📱 Tablet (768px)</button>
+        <button class="wf-device-btn" onclick="setDevice('mobile', this)">📱 Mobile (375px)</button>
+      </div>
+
+      <!-- Quick Screen Jump Selector -->
+      <select class="wf-screen-select" id="screenSelector" onchange="switchScreen(this.value)">
+        <optgroup label="01. 메인 & 룩북">
+          <option value="P-01">P-01: 메인페이지</option>
+          <option value="P-09">P-09: 4대 일상 리추얼 룩북</option>
+        </optgroup>
+        <optgroup label="02. 공인 검증 & 연구소">
+          <option value="P-02">P-02: 공인 시험성적서 랩</option>
+          <option value="P-03">P-03: 봉제선 & 세탁 비교 가이드</option>
+        </optgroup>
+        <optgroup label="03. 커머스 & 안심 체험팩">
+          <option value="P-04">P-04: 제품 카탈로그</option>
+          <option value="P-05">P-05: 상품 상세 페이지</option>
+          <option value="P-06">P-06: 1장 안심 체험팩</option>
+          <option value="P-07">P-07: 30초 안심 큐레이터</option>
+        </optgroup>
+        <optgroup label="04. 감성 기프트 & 꽃말">
+          <option value="P-08">P-08: 6가지 꽃말 위로 서재</option>
+        </optgroup>
+        <optgroup label="05. 리뷰 & 안심 보증">
+          <option value="P-10">P-10: 민감성 Real 리뷰</option>
+        </optgroup>
+        <optgroup label="06. 결제 & 평생 단골">
+          <option value="P-11">P-11: 장바구니 & 1초 결제</option>
+          <option value="P-12">P-12: 마이페이지 & 평생 재주문</option>
+        </optgroup>
+        <optgroup label="07. 레이어드 모달">
+          <option value="M-01">M-01: 성적서 200% HD 확대 모달</option>
+          <option value="M-02">M-02: 6종 꽃말 위로 카드 모달</option>
+          <option value="M-03">M-03: 100% 안심 환불 신청 모달</option>
+        </optgroup>
+      </select>
+    </div>
+  </header>
+
+  <div class="wf-main-layout">
+    <!-- Left Navigation Sidebar -->
+    <aside class="wf-sidebar">
+      <div class="wf-group-title">01. 메인 & 룩북</div>
+      <button class="wf-menu-item active" onclick="switchScreen('P-01')">
+        <span>메인페이지</span>
+        <span class="wf-item-code">P-01</span>
+      </button>
+      <button class="wf-menu-item" onclick="switchScreen('P-09')">
+        <span>4대 리추얼 룩북</span>
+        <span class="wf-item-code">P-09</span>
+      </button>
+
+      <div class="wf-group-title">02. 공인 검증 & 연구소</div>
+      <button class="wf-menu-item" onclick="switchScreen('P-02')">
+        <span>시험성적서 랩</span>
+        <span class="wf-item-code">P-02</span>
+      </button>
+      <button class="wf-menu-item" onclick="switchScreen('P-03')">
+        <span>봉제선 & 세탁 비교</span>
+        <span class="wf-item-code">P-03</span>
+      </button>
+
+      <div class="wf-group-title">03. 커머스 & 체험팩</div>
+      <button class="wf-menu-item" onclick="switchScreen('P-04')">
+        <span>제품 카탈로그</span>
+        <span class="wf-item-code">P-04</span>
+      </button>
+      <button class="wf-menu-item" onclick="switchScreen('P-05')">
+        <span>상품 상세 페이지</span>
+        <span class="wf-item-code">P-05</span>
+      </button>
+      <button class="wf-menu-item" onclick="switchScreen('P-06')">
+        <span>1장 안심 체험팩</span>
+        <span class="wf-item-code">P-06</span>
+      </button>
+      <button class="wf-menu-item" onclick="switchScreen('P-07')">
+        <span>30초 안심 큐레이터</span>
+        <span class="wf-item-code">P-07</span>
+      </button>
+
+      <div class="wf-group-title">04. 감성 기프트 & 꽃말</div>
+      <button class="wf-menu-item" onclick="switchScreen('P-08')">
+        <span>6가지 꽃말 위로 서재</span>
+        <span class="wf-item-code">P-08</span>
+      </button>
+
+      <div class="wf-group-title">05. 리뷰 & 안심 보증</div>
+      <button class="wf-menu-item" onclick="switchScreen('P-10')">
+        <span>민감성 Real 리뷰</span>
+        <span class="wf-item-code">P-10</span>
+      </button>
+
+      <div class="wf-group-title">06. 결제 & 평생 단골</div>
+      <button class="wf-menu-item" onclick="switchScreen('P-11')">
+        <span>장바구니 & 1초 결제</span>
+        <span class="wf-item-code">P-11</span>
+      </button>
+      <button class="wf-menu-item" onclick="switchScreen('P-12')">
+        <span>마이페이지 & 재주문</span>
+        <span class="wf-item-code">P-12</span>
+      </button>
+
+      <div class="wf-group-title">07. 인터랙티브 모달</div>
+      <button class="wf-menu-item" onclick="openModal('M-01')">
+        <span>성적서 HD 확대</span>
+        <span class="wf-item-code">M-01</span>
+      </button>
+      <button class="wf-menu-item" onclick="openModal('M-02')">
+        <span>6종 꽃말 카드 선택</span>
+        <span class="wf-item-code">M-02</span>
+      </button>
+      <button class="wf-menu-item" onclick="openModal('M-03')">
+        <span>100% 안심 환불 신청</span>
+        <span class="wf-item-code">M-03</span>
+      </button>
+    </aside>
+
+    <!-- Main Viewport Canvas -->
+    <main class="wf-canvas-container">
+      <div class="wf-viewport-frame" id="viewportFrame">
+
+        <!-- ==================== P-01: MAIN PAGE ==================== -->
+        <div id="screen-P-01" class="wf-screen-view">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-01: 메인페이지 (Main Page)</span>
+            <span class="screen-meta-desc">더마테스트 엑설런트 뱃지 · 4대 일상 리추얼 서클 탭 · 1장 체험팩 진입</span>
+          </div>
+
+          <div class="gnb-banner">
+            [독일 더마테스트 Excellent & 4無 인증 성적서 유효기간 공개] 1장 소량 체험팩 신청 시 본품 100% 페이백!
+          </div>
+
+          <div class="gnb-header">
+            <div class="gnb-logo" onclick="switchScreen('P-01')">Flottelier</div>
+            <nav class="gnb-nav-links">
+              <a onclick="switchScreen('P-09')">BRAND STORY</a>
+              <a onclick="switchScreen('P-04')">SHOP</a>
+              <a onclick="switchScreen('P-02')">PROOF & LAB</a>
+              <a onclick="switchScreen('P-08')">GIFT & CARDS</a>
+              <a onclick="switchScreen('P-10')">REVIEWS</a>
+            </nav>
+            <button class="gnb-cta-btn" onclick="switchScreen('P-06')">★ 1장 체험팩</button>
+          </div>
+
+          <div class="screen-content">
+            <!-- Hero Section -->
+            <div class="wf-hero-box">
+              <div class="wf-hero-title">The Art of Slow Ritual</div>
+              <div class="wf-hero-sub">초민감성 피부를 위한 100% 저자극 검증 &amp; 공방 4차 완전 정련 프리미엄 소창</div>
+              <div style="display: flex; gap: 10px; justify-content: center;">
+                <button class="wf-btn-accent" onclick="switchScreen('P-06')">1장 안심 체험팩 신청 (100% 페이백)</button>
+                <button class="wf-btn-outline" onclick="openModal('M-01')">공인 성적서 1초 확인</button>
+              </div>
+            </div>
+
+            <!-- 4대 리추얼 탭 -->
+            <div style="background: #FFFFFF; border: 1px solid var(--wf-border); border-radius: 8px; padding: 20px;">
+              <h3 style="font-size: 15px; color: var(--fl-deep-green); margin-bottom: 12px;">🌿 4대 일상 안심 리추얼 (Ritual Tabs)</h3>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="wf-btn-outline" onclick="switchScreen('P-04')">🧖 아침 첫 세안 (무자극 페이스타올)</button>
+                <button class="wf-btn-outline" onclick="switchScreen('P-04')">🛁 저녁 홈스파 (4겹 바스타올)</button>
+                <button class="wf-btn-outline" onclick="switchScreen('P-04')">🍼 안심 육아 (무형광 베이비 와입스)</button>
+                <button class="wf-btn-outline" onclick="switchScreen('P-04')">☕ 가사 명상 (제로살림 키친)</button>
+              </div>
+            </div>
+
+            <!-- Product Grid -->
+            <h3 style="font-size: 15px; color: var(--fl-deep-green); margin-top: 10px;">★ 초민감성 베스트 라인업</h3>
+            <div class="wf-grid-3">
+              <div class="wf-card-item">
+                <div class="wf-img-placeholder">[4차 정련 소창 페이스타올 3P]<br><small>더마테스트 엑설런트 / 무라벨</small></div>
+                <div style="font-weight: 700; font-size: 14px;">시그니처 4차 정련 세안타올</div>
+                <div style="color: var(--fl-terra-cotta); font-weight: 800;">28,000원</div>
+                <button class="wf-btn-primary" onclick="switchScreen('P-05')">상세보기 &amp; 봉제선 500% 줌</button>
+              </div>
+
+              <div class="wf-card-item">
+                <div class="wf-img-placeholder">[안심케어 베이비 와입스 5P]<br><small>100% 무형광 성적서 / 먼지 제로</small></div>
+                <div style="font-weight: 700; font-size: 14px;">안심케어 베이비 소창 와입스</div>
+                <div style="color: var(--fl-terra-cotta); font-weight: 800;">24,000원</div>
+                <button class="wf-btn-primary" onclick="switchScreen('P-05')">상세보기 &amp; 정련옵션 확인</button>
+              </div>
+
+              <div class="wf-card-item">
+                <div class="wf-img-placeholder">[제로살림 기프트 세트]<br><small>생분해 지함 + 6종 꽃말 카드</small></div>
+                <div style="font-weight: 700; font-size: 14px;">프리미엄 올인원 기프트 세트</div>
+                <div style="color: var(--fl-terra-cotta); font-weight: 800;">45,000원</div>
+                <button class="wf-btn-primary" onclick="switchScreen('P-08')">꽃말 카드 서재 보기</button>
+              </div>
+            </div>
+          </div>
+
+          <footer class="screen-footer">
+            <div>주식회사 이든그라운드 (Idenground Inc.) | 대표 브랜드: 플로뜰리에 (Flottelier)</div>
+            <div>공인 시험기관: KOTITI 시험연구원 (성적서 제2026-KT-00812호) | 독일 Dermatest GmbH 엑설런트 인증</div>
+            <div>소재지: 대전광역시 서구 도산로 41 (도마동) 2동 102호 아틀리에</div>
+          </footer>
+        </div>
+
+        <!-- ==================== P-02: PROOF & LAB ==================== -->
+        <div id="screen-P-02" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-02: 공인 시험성적서 랩 (Proof & Lab)</span>
+            <span class="screen-meta-desc">더마테스트 엑설런트 · KOTITI 100% 무형광 성적서 원본 및 유효기간 상시 고지</span>
+          </div>
+
+          <div class="screen-content">
+            <h2 style="color: var(--fl-deep-green);">🔬 100% 데이터로 증명하는 저자극 팩트 시트</h2>
+            
+            <table class="wf-table">
+              <thead>
+                <tr>
+                  <th>공인 인증 항목</th>
+                  <th>검증 기관</th>
+                  <th>시험 결과 및 수치</th>
+                  <th>유효기간 / 성적서 확인</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>독일 더마테스트</b></td>
+                  <td>Dermatest GmbH</td>
+                  <td><b>최고 등급 EXCELLENT 획득 (자극 0.00)</b></td>
+                  <td>상시 유효 <button class="wf-btn-outline" style="padding: 2px 8px; font-size: 11px;" onclick="openModal('M-01')">원본 돋보기</button></td>
+                </tr>
+                <tr>
+                  <td><b>형광증백제 불검출</b></td>
+                  <td>KOTITI 시험연구원</td>
+                  <td><b>0.0% (ND 불검출 판정)</b></td>
+                  <td>2027-12-31까지</td>
+                </tr>
+                <tr>
+                  <td><b>포름알데히드 &amp; 잔류농약</b></td>
+                  <td>KOTITI 시험연구원</td>
+                  <td><b>완전 불검출 (ND)</b></td>
+                  <td>2027-12-31까지</td>
+                </tr>
+                <tr>
+                  <td><b>피부 최적 pH 밸런스</b></td>
+                  <td>KOTITI 시험연구원</td>
+                  <td><b>pH 6.4 (약산성~중성 순수 목화)</b></td>
+                  <td>2027-12-31까지</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+              <button class="wf-btn-primary" onclick="openModal('M-01')">📄 성적서 원본 200% HD 확대 모달 열기</button>
+              <button class="wf-btn-outline" onclick="switchScreen('P-03')">봉제선 500% HD 줌 가이드 보기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== P-03: CRAFT & WASH GUIDE ==================== -->
+        <div id="screen-P-03" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-03: 봉제선 &amp; 세탁 비교 가이드 (Craft &amp; Wash Guide)</span>
+            <span class="screen-meta-desc">봉제선 500% HD 마그니파이어 줌 뷰어 · 세탁 50회 촉감 곡선 데이터</span>
+          </div>
+
+          <div class="screen-content">
+            <h2 style="color: var(--fl-deep-green);">🔍 봉제선 500% HD 마그니파이어 줌 뷰어</h2>
+            
+            <div class="zoom-mock-container" id="zoomArea" onmousemove="handleZoom(event)" onmouseleave="hideZoom()">
+              <div id="zoomText" style="text-align: center;">
+                <b style="color: var(--fl-deep-green); font-size: 15px;">[3중 초미세 말아박기 봉제선 접사 영역]</b><br>
+                <span style="font-size: 12px; color: var(--fl-terra-cotta);">마우스를 올리면 500% HD 돋보기 렌즈가 활성화됩니다.</span>
+              </div>
+              <div class="zoom-lens" id="zoomLens"></div>
+            </div>
+
+            <h3 style="color: var(--fl-deep-green); margin-top: 10px;">📊 세탁 50회 장기 촉감 변화 &amp; 수축률 비교표</h3>
+            <table class="wf-table">
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>수령 즉시 (1회차)</th>
+                  <th>10회 세탁 후</th>
+                  <th>30회 세탁 후</th>
+                  <th>50회 세탁 후</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>소창 섬유 촉감</b></td>
+                  <td>단정하고 정돈된 터치</td>
+                  <td>포근하게 길들여짐</td>
+                  <td>극세사급 부드러움</td>
+                  <td><b>살결에 녹아드는 최상위 촉감</b></td>
+                </tr>
+                <tr>
+                  <td><b>수축률 (%)</b></td>
+                  <td>0.0% (완전정련 완료)</td>
+                  <td>1.2% 안정화</td>
+                  <td>1.5% 불변</td>
+                  <td><b>변형 없는 견고한 누빔</b></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button class="wf-btn-primary" onclick="switchScreen('P-05')">상품 상세페이지에서 옵션 선택하기</button>
+          </div>
+        </div>
+
+        <!-- ==================== P-04: PRODUCT CATALOG ==================== -->
+        <div id="screen-P-04" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-04: 제품 카탈로그 (Ritual Shop)</span>
+            <span class="screen-meta-desc">4차 정련 세안타올 · 4겹 바스타올 · 베이비 와입스 · 제로살림 기프트</span>
+          </div>
+
+          <div class="screen-content">
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+              <button class="wf-btn-primary" style="padding: 6px 12px; font-size: 12px;">전체 보기</button>
+              <button class="wf-btn-outline" style="padding: 6px 12px; font-size: 12px;">4차 정련 세안타올</button>
+              <button class="wf-btn-outline" style="padding: 6px 12px; font-size: 12px;">4겹 바스타올</button>
+              <button class="wf-btn-outline" style="padding: 6px 12px; font-size: 12px;">베이비 와입스</button>
+              <button class="wf-btn-outline" style="padding: 6px 12px; font-size: 12px;">기프트 세트</button>
+            </div>
+
+            <div class="wf-grid-3">
+              <div class="wf-card-item">
+                <div class="wf-img-placeholder">[시그니처 페이스타올 3P]<br><small>28,000원 (장당 9,330원)</small></div>
+                <div style="font-weight: 700;">4차 정련 소창 페이스타올 3P</div>
+                <button class="wf-btn-primary" onclick="switchScreen('P-05')">상세보기</button>
+              </div>
+              <div class="wf-card-item">
+                <div class="wf-img-placeholder">[4겹 프리미엄 바스타올 2P]<br><small>38,000원 (장당 19,000원)</small></div>
+                <div style="font-weight: 700;">4겹 저자극 바스타올 2P</div>
+                <button class="wf-btn-primary" onclick="switchScreen('P-05')">상세보기</button>
+              </div>
+              <div class="wf-card-item">
+                <div class="wf-img-placeholder">[1장 안심 체험팩]<br><small>3,000원 (100% 페이백)</small></div>
+                <div style="font-weight: 700;">1장 소량 체험팩</div>
+                <button class="wf-btn-accent" onclick="switchScreen('P-06')">체험 신청</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== P-05: PRODUCT DETAIL ==================== -->
+        <div id="screen-P-05" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-05: 상품 상세 페이지 (Product Detail)</span>
+            <span class="screen-meta-desc">봉제선 500% HD 줌 · 4차 정련 배송 옵션 · 무향 밀봉 개별 포장 보증</span>
+          </div>
+
+          <div class="screen-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <!-- Left Visual & Zoom -->
+            <div>
+              <div class="wf-img-placeholder" style="height: 280px;">
+                <b>시그니처 4차 정련 소창 페이스타올 (3P)</b><br>
+                <small>독일 더마테스트 Excellent 뱃지 부착</small>
+              </div>
+              <div style="margin-top: 10px; display: flex; gap: 8px;">
+                <button class="wf-btn-outline" style="flex: 1;" onclick="openModal('M-01')">📄 성적서 원본 200% 확대</button>
+                <button class="wf-btn-outline" style="flex: 1;" onclick="openModal('M-03')">🛡️ 100% 안심 환불 규정</button>
+              </div>
+            </div>
+
+            <!-- Right Options Panel -->
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <h2 style="font-size: 20px; color: var(--fl-deep-green);">시그니처 4차 정련 소창 페이스타올 3P</h2>
+              <div style="font-size: 18px; font-weight: 800; color: var(--fl-terra-cotta);">28,000원 <small style="color:#888; font-weight: normal;">(장당 9,330원)</small></div>
+
+              <!-- Options -->
+              <div style="background: #FAF7F2; padding: 14px; border-radius: 6px; display: flex; flex-direction: column; gap: 8px;">
+                <div><b>정련 옵션</b>:</div>
+                <label><input type="radio" name="refine" checked> ● 공방 4차 완전 정련 배송 (받자마자 즉시 사용)</label>
+                <label><input type="radio" name="refine"> ○ DIY 자가 정련 키트</label>
+
+                <div style="margin-top: 6px;"><b>라벨 옵션</b>:</div>
+                <label><input type="radio" name="label" checked> ● 무라벨 (Label-Free - 피부 까글림 0%)</label>
+                <label><input type="radio" name="label"> ○ 오가닉 코튼 라벨</label>
+
+                <div style="margin-top: 6px;"><b>포장 보증</b>:</div>
+                <label><input type="checkbox" checked> ✔ 냄새·먼지 100% 차단 무향(Fragrance-Free) 위생 개별 밀봉 배송</label>
+              </div>
+
+              <!-- Action Buttons -->
+              <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px;">
+                <button class="wf-btn-accent" onclick="switchScreen('P-11')">🟢 N Pay / 카카오페이 1초 간편 결제</button>
+                <div style="display: flex; gap: 8px;">
+                  <button class="wf-btn-outline" style="flex: 1;" onclick="switchScreen('P-06')">1장 체험팩 먼저 신청</button>
+                  <button class="wf-btn-outline" style="flex: 1;" onclick="openModal('M-02')">선물포장+꽃말카드</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== P-06: 1-PIECE PACK ==================== -->
+        <div id="screen-P-06" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-06: 1장 안심 체험팩 (100% Payback Pack)</span>
+            <span class="screen-meta-desc">구매 실패 위험 없는 1장 소량 체험 · 본품 구매 시 체험비 100% 환급 쿠폰 지급</span>
+          </div>
+
+          <div class="screen-content" style="max-width: 600px; margin: 0 auto;">
+            <div class="wf-hero-box" style="padding: 24px;">
+              <h2 style="font-size: 20px; color: var(--fl-deep-green); margin-bottom: 6px;">1장 안심 체험팩 신청</h2>
+              <p style="font-size: 13px; color: var(--fl-earth-brown);">체험비 3,000원은 본품 주문 시 100% 페이백 쿠폰으로 돌려드립니다.</p>
+            </div>
+
+            <div style="background: #FFFFFF; border: 1px solid var(--wf-border); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+              <div>
+                <label style="font-weight: 700; font-size: 13px;">신청자 성함</label>
+                <input type="text" value="김예민" style="width: 100%; padding: 8px; border: 1px solid var(--wf-border); border-radius: 4px; margin-top: 4px;">
+              </div>
+              <div>
+                <label style="font-weight: 700; font-size: 13px;">휴대폰 번호 (쿠폰 수신용)</label>
+                <input type="text" value="010-9876-5432" style="width: 100%; padding: 8px; border: 1px solid var(--wf-border); border-radius: 4px; margin-top: 4px;">
+              </div>
+              <div>
+                <label style="font-weight: 700; font-size: 13px;">배송지 주소</label>
+                <input type="text" value="서울특별시 마포구 월드컵북로 120 (위생 안심 배송)" style="width: 100%; padding: 8px; border: 1px solid var(--wf-border); border-radius: 4px; margin-top: 4px;">
+              </div>
+
+              <div style="background: #F4FAF6; border: 1px solid #2E6945; border-radius: 6px; padding: 12px; font-size: 12px; color: #1F3327;">
+                🎁 <b>지급 혜택</b>: 신청 즉시 계정에 <b>[본품 3,000원 100% 페이백 쿠폰]</b>이 자동 등록됩니다.
+              </div>
+
+              <button class="wf-btn-accent" style="padding: 12px;" onclick="simulateExperienceOrder()">체험팩 3,000원 결제 및 쿠폰 받기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== P-07: 30S CURATOR ==================== -->
+        <div id="screen-P-07" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-07: 30초 안심 큐레이터 (Curator Quiz)</span>
+            <span class="screen-meta-desc">피부 타입 및 사용 맥락별 최적 겹수 30초 큐레이션</span>
+          </div>
+
+          <div class="screen-content" style="max-width: 600px; margin: 0 auto;">
+            <h2 style="color: var(--fl-deep-green); text-align: center;">🌿 나에게 꼭 맞는 소창 찾기</h2>
+            
+            <div style="background: #FFFFFF; border: 1px solid var(--wf-border); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 14px;">
+              <div><b>Q1. 고객님의 피부 타입은 어떤가요?</b></div>
+              <label><input type="radio" name="q1" checked> 초민감성 / 아토피 / 붉어짐 소인 (★ 김예민 픽)</label>
+              <label><input type="radio" name="q1"> 신생아 / 아기 살결 케어 (박서연 픽)</label>
+              <label><input type="radio" name="q1"> 일반 세안 및 힐링 리추얼 (이지은 픽)</label>
+
+              <div style="margin-top: 8px;"><b>Q2. 가장 중요한 사용 목적은 무엇인가요?</b></div>
+              <label><input type="radio" name="q2" checked> 아침 저녁 순수 무자극 세안</label>
+              <label><input type="radio" name="q2"> 소중한 사람을 위한 위로 선물</label>
+
+              <div style="background: #FAF7F2; padding: 14px; border-radius: 6px; text-align: center;">
+                <div style="font-size: 13px; color: var(--fl-sage-green);">분석 결과 추천 상품</div>
+                <div style="font-size: 16px; font-weight: 800; color: var(--fl-deep-green); margin-top: 4px;">4차 정련 3겹 무라벨 세안타올 (3P)</div>
+              </div>
+
+              <button class="wf-btn-primary" style="padding: 10px;" onclick="switchScreen('P-05')">추천 상품 상세보기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== P-08: GIFT & FLOWER CARDS ==================== -->
+        <div id="screen-P-08" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-08: 6가지 꽃말 위로 서재 (Gift Archive)</span>
+            <span class="screen-meta-desc">사탕수수 생분해 지함 패키지 3D 뷰어 · 6종 꽃말 일러스트 카드 아카이브</span>
+          </div>
+
+          <div class="screen-content">
+            <h2 style="color: var(--fl-deep-green);">🎁 마음을 전하는 6가지 꽃말 위로 카드</h2>
+            
+            <div class="wf-grid-3">
+              <div class="wf-card-item" style="text-align: center;">
+                <div class="wf-img-placeholder" style="height: 120px;">[프리지아 일러스트]</div>
+                <b>프리지아 (Freesia)</b>
+                <p style="font-size: 12px; color: #666;">"당신의 새로운 시작을 응원합니다."</p>
+                <button class="wf-btn-outline" style="padding: 4px 10px; font-size: 12px;" onclick="openModal('M-02')">이 카드로 선물하기</button>
+              </div>
+
+              <div class="wf-card-item" style="text-align: center;">
+                <div class="wf-img-placeholder" style="height: 120px;">[목화 일러스트]</div>
+                <b>목화 (Cotton)</b>
+                <p style="font-size: 12px; color: #666;">"어머니의 포근한 사랑과 온기."</p>
+                <button class="wf-btn-outline" style="padding: 4px 10px; font-size: 12px;" onclick="openModal('M-02')">이 카드로 선물하기</button>
+              </div>
+
+              <div class="wf-card-item" style="text-align: center;">
+                <div class="wf-img-placeholder" style="height: 120px;">[라벤더 일러스트]</div>
+                <b>라벤더 (Lavender)</b>
+                <p style="font-size: 12px; color: #666;">"지친 하루를 감싸는 쉼과 평온."</p>
+                <button class="wf-btn-outline" style="padding: 4px 10px; font-size: 12px;" onclick="openModal('M-02')">이 카드로 선물하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== P-09: RITUAL LOOKBOOK ==================== -->
+        <div id="screen-P-09" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-09: 4대 일상 리추얼 룩북 (Ritual Lookbook)</span>
+            <span class="screen-meta-desc">아침 세안 · 저녁 홈스파 · 안심 육아 · 가사 명상 라이프스타일 갤러리</span>
+          </div>
+
+          <div class="screen-content">
+            <h2 style="color: var(--fl-deep-green);">🌿 The Art of Slow Ritual 룩북</h2>
+            <div class="wf-grid-3">
+              <div class="wf-card-item">
+                <div class="wf-img-placeholder" style="height: 200px;">[Look 01. 아침 세안 룩]</div>
+                <b>01. 아침 세안 리추얼</b>
+                <p style="font-size: 12px; color: #666;">피부에 닿는 3초의 다정한 위로</p>
+                <button class="wf-btn-outline" onclick="switchScreen('P-05')">착장 타올 보기</button>
+              </div>
+              <div class="wf-card-item">
+                <div class="wf-img-placeholder" style="height: 200px;">[Look 02. 저녁 홈스파 룩]</div>
+                <b>02. 저녁 홈스파 리추얼</b>
+                <p style="font-size: 12px; color: #666;">하루의 긴장을 녹이는 4겹의 포근함</p>
+                <button class="wf-btn-outline" onclick="switchScreen('P-05')">착장 타올 보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== P-10: REVIEWS ==================== -->
+        <div id="screen-P-10" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-10: 민감성 Real 리뷰 (Sensitive Reviews)</span>
+            <span class="screen-meta-desc">초민감성 피부 필터 · 세탁 50회 장기 실사용 포토 리뷰</span>
+          </div>
+
+          <div class="screen-content">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h2 style="color: var(--fl-deep-green);">💬 실구매자 저자극 후기 (만족도 99.4%)</h2>
+              <button class="wf-btn-outline" onclick="openModal('M-03')">🛡️ 100% 안심 환불 보장제 안내</button>
+            </div>
+
+            <div class="wf-card-item">
+              <div style="display: flex; justify-content: space-between;">
+                <b>김예민 (바이오 연구원 / 초민감성)</b>
+                <span style="color: #F59E0B;">★★★★★</span>
+              </div>
+              <div style="font-size: 12px; color: var(--fl-terra-cotta);">[초민감성 피부 필터 인증] [세탁 50회 후기]</div>
+              <p style="font-size: 13px; margin-top: 6px;">
+                "조금만 까끌거려도 얼굴이 붉어지는 피부인데 봉제선 HD 줌으로 확인하고 1장 체험팩 써본 뒤 본품 5세트 재구매했습니다. 50번 빨았는데도 올 풀림 없고 보들보들해요. 평생 단골입니다."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== P-11: CHECKOUT ==================== -->
+        <div id="screen-P-11" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-11: 장바구니 &amp; 1초 결제 (Checkout)</span>
+            <span class="screen-meta-desc">무향 밀봉 개별 포장 보증 체크 · 100% 페이백 쿠폰 적용 · 간편 결제</span>
+          </div>
+
+          <div class="screen-content" style="max-width: 650px; margin: 0 auto;">
+            <h2 style="color: var(--fl-deep-green);">🛒 주문 및 결제</h2>
+            
+            <div style="background: #FFFFFF; border: 1px solid var(--wf-border); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #EEE; padding-bottom: 10px;">
+                <div>
+                  <b>시그니처 4차 정련 소창 페이스타올 3P</b>
+                  <div style="font-size: 12px; color: #888;">옵션: 4차 완전 정련 / 무라벨</div>
+                </div>
+                <div style="font-weight: 700;">28,000원</div>
+              </div>
+
+              <!-- Coupon Box -->
+              <div style="background: #FAF7F2; padding: 12px; border-radius: 6px;">
+                <label style="font-weight: 700; font-size: 13px;">쿠폰 적용</label>
+                <select id="checkoutCouponSelect" style="width: 100%; padding: 8px; border: 1px solid var(--wf-border); border-radius: 4px; margin-top: 4px;" onchange="updateTotal()">
+                  <option value="3000">[보유] 1장 체험팩 100% 페이백 쿠폰 (-3,000원)</option>
+                  <option value="0">쿠폰 적용 안 함</option>
+                </select>
+              </div>
+
+              <!-- Safety Guarantee Checkbox -->
+              <div style="background: #F4FAF6; padding: 12px; border-radius: 6px; border: 1px solid #2E6945;">
+                <label style="font-size: 12px; font-weight: 700; color: #1F3327;">
+                  <input type="checkbox" checked disabled> ✔ 무향(Fragrance-Free) 위생 밀봉 개별 포장 보증 적용됨
+                </label>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 800; border-top: 2px solid var(--fl-deep-green); padding-top: 10px;">
+                <span>최종 결제 금액</span>
+                <span style="color: var(--fl-terra-cotta);" id="finalTotal">25,000원</span>
+              </div>
+
+              <button class="wf-btn-accent" style="padding: 14px; font-size: 15px;" onclick="completeOrder()">🟢 N Pay / 카카오페이 1초 간편 결제</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== P-12: MY RE-ORDER ==================== -->
+        <div id="screen-P-12" class="wf-screen-view" style="display: none;">
+          <div class="screen-header-info">
+            <span class="screen-id-badge">P-12: 마이페이지 &amp; 평생 재주문 (My Re-Order &amp; Eco-Loop)</span>
+            <span class="screen-meta-desc">동일 스펙 1-Click 재구매 · 에코 루프 헌 소창 수거 신청</span>
+          </div>
+
+          <div class="screen-content">
+            <div style="background: #FAF7F2; padding: 18px; border-radius: 8px; border-left: 4px solid var(--fl-deep-green);">
+              <h3 style="font-size: 16px; color: var(--fl-deep-green);">★ 김예민 님의 피부 맞춤 동일 스펙 1-Click 재주문</h3>
+              <p style="font-size: 13px; color: #555; margin: 6px 0 12px;">지난번 주문하신 [4차 정련 3겹 페이스타올 무라벨 3P] 스펙 그대로 1초 만에 재주문합니다.</p>
+              <button class="wf-btn-primary" onclick="alert('동일 스펙 1-Click 재주문이 완료되었습니다!')">⚡ 동일 스펙 1-Click 재주문하기</button>
+            </div>
+
+            <!-- Eco-Loop Box -->
+            <div style="background: #F4FAF6; border: 1px solid #2E6945; border-radius: 8px; padding: 18px; margin-top: 10px;">
+              <h3 style="font-size: 16px; color: #1F3327;">🌱 에코 루프 (Eco-Loop) 헌 소창 자원순환 신청</h3>
+              <p style="font-size: 13px; color: #444; margin: 6px 0 12px;">수명이 다한 낡은 소창 수건을 보내주시면 자연 퇴비화하고 5,000원 적립 쿠폰을 드립니다.</p>
+              <button class="wf-btn-outline" onclick="alert('헌 소창 무료 방문 수거가 접수되었습니다. 5,000원 쿠폰이 지급되었습니다!')">헌 소창 무료 수거 신청 (5,000원 리워드)</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ==================== MODAL OVERLAYS ==================== -->
+  <!-- M-01: Cert HD Zoom Modal -->
+  <div class="wf-modal-overlay" id="modal-M-01" onclick="closeModalOnOverlay(event, 'M-01')">
+    <div class="wf-modal-box">
+      <div class="wf-modal-head">
+        <h3>M-01: 공인 시험성적서 200% HD 확대 뷰어</h3>
+        <button class="wf-modal-close" onclick="closeModal('M-01')">✕</button>
+      </div>
+      <div class="wf-modal-body">
+        <div class="wf-img-placeholder" style="height: 240px; background: #FFF; border: 2px solid #2E6945;">
+          <b>[KOTITI 공인 시험성적서 원본 고해상도 이미지]</b><br>
+          <span style="color: #2E6945;">형광증백제 0.0% (ND) / 유효기간: 2027-12-31</span>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="wf-btn-primary" style="flex: 1;" onclick="alert('PDF 원본이 다운로드되었습니다.')">PDF 원본 다운로드</button>
+          <button class="wf-btn-outline" style="flex: 1;" onclick="closeModal('M-01')">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M-02: Flower Cards Modal -->
+  <div class="wf-modal-overlay" id="modal-M-02" onclick="closeModalOnOverlay(event, 'M-02')">
+    <div class="wf-modal-box">
+      <div class="wf-modal-head">
+        <h3>M-02: 6종 꽃말 위로 카드 선택 &amp; 메시지 작성</h3>
+        <button class="wf-modal-close" onclick="closeModal('M-02')">✕</button>
+      </div>
+      <div class="wf-modal-body">
+        <div><b>꽃말 카드 선택:</b></div>
+        <select style="width: 100%; padding: 8px; border: 1px solid var(--wf-border); border-radius: 4px;">
+          <option>프리지아 (새로운 시작 응원)</option>
+          <option>목화 (어머니의 포근한 사랑)</option>
+          <option>라벤더 (지친 하루의 쉼과 평온)</option>
+          <option>안개꽃 (맑고 순수한 마음)</option>
+        </select>
+        <div><b>전할 마음 메시지 (최대 100자):</b></div>
+        <textarea style="width: 100%; height: 80px; padding: 8px; border: 1px solid var(--wf-border); border-radius: 4px;">항상 고마운 너에게, 매일의 세안이 다정한 위로가 되길 바라며.</textarea>
+        <button class="wf-btn-accent" onclick="saveGiftOption()">선물 옵션 저장 후 결제하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- M-03: Safety Refund Modal -->
+  <div class="wf-modal-overlay" id="modal-M-03" onclick="closeModalOnOverlay(event, 'M-03')">
+    <div class="wf-modal-box">
+      <div class="wf-modal-head">
+        <h3 style="color: #D9383A;">M-03: 100% 안심 환불 보장제 간편 접수</h3>
+        <button class="wf-modal-close" onclick="closeModal('M-03')">✕</button>
+      </div>
+      <div class="wf-modal-body">
+        <p style="font-size: 13px; color: #555;">
+          수령 후 14일 이내 피부 트러블이 발생하셨다면 이유 불문 100% 무료 수거 및 전액 환불해 드립니다.
+        </p>
+        <div>
+          <label style="font-weight: 700;">주문번호</label>
+          <input type="text" value="FLOT-2026-88319" style="width: 100%; padding: 8px; border: 1px solid var(--wf-border); border-radius: 4px; margin-top: 4px;">
+        </div>
+        <div>
+          <label style="font-weight: 700;">반품 수거 주소</label>
+          <input type="text" value="서울특별시 마포구 월드컵북로 120" style="width: 100%; padding: 8px; border: 1px solid var(--wf-border); border-radius: 4px; margin-top: 4px;">
+        </div>
+        <button class="wf-btn-primary" style="background: #D9383A;" onclick="alert('안심 환불이 접수되었습니다. 지정 택배기사님이 무료 방문 수거합니다.')">100% 안심 무료 환불 접수</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Screen Navigation Logic
+    function switchScreen(screenId) {
+      document.querySelectorAll('.wf-screen-view').forEach(el => el.style.display = 'none');
+      const target = document.getElementById('screen-' + screenId);
+      if (target) {
+        target.style.display = 'block';
+      }
+
+      // Update active sidebar item
+      document.querySelectorAll('.wf-menu-item').forEach(el => {
+        el.classList.remove('active');
+        if (el.textContent.includes(screenId)) {
+          el.classList.add('active');
+        }
+      });
+
+      // Update selector
+      document.getElementById('screenSelector').value = screenId;
+    }
+
+    // Viewport Toggle Logic
+    function setDevice(device, btn) {
+      const frame = document.getElementById('viewportFrame');
+      frame.className = 'wf-viewport-frame ' + (device === 'desktop' ? '' : device);
+      document.querySelectorAll('.wf-device-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    // Modal Logic
+    function openModal(modalId) {
+      const modal = document.getElementById('modal-' + modalId);
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById('modal-' + modalId);
+      if (modal) modal.style.display = 'none';
+    }
+
+    function closeModalOnOverlay(e, modalId) {
+      if (e.target.id === 'modal-' + modalId) {
+        closeModal(modalId);
+      }
+    }
+
+    // Interactive Zoom Simulation
+    function handleZoom(e) {
+      const area = document.getElementById('zoomArea');
+      const lens = document.getElementById('zoomLens');
+      const rect = area.getBoundingClientRect();
+      const x = e.clientX - rect.left - 50;
+      const y = e.clientY - rect.top - 50;
+      lens.style.display = 'block';
+      lens.style.left = x + 'px';
+      lens.style.top = y + 'px';
+    }
+
+    function hideZoom() {
+      document.getElementById('zoomLens').style.display = 'none';
+    }
+
+    // Cart & Experience Simulation
+    function simulateExperienceOrder() {
+      alert('1장 체험팩 신청이 완료되었습니다! 본품 3,000원 100% 페이백 쿠폰이 발급되었습니다.');
+      switchScreen('P-11');
+    }
+
+    function saveGiftOption() {
+      closeModal('M-02');
+      alert('꽃말 카드 및 선물 포장 옵션이 저장되었습니다.');
+      switchScreen('P-11');
+    }
+
+    function updateTotal() {
+      const val = parseInt(document.getElementById('checkoutCouponSelect').value);
+      const total = 28000 - val;
+      document.getElementById('finalTotal').textContent = total.toLocaleString() + '원';
+    }
+
+    function completeOrder() {
+      alert('결제가 완료되었습니다! [마이페이지 & 평생 재주문] 페이지로 이동합니다.');
+      switchScreen('P-12');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+flowchart TD
+  classDef startEnd fill:#232527,color:#FFFFFF,stroke:#232527,stroke-width:2px;
+  classDef action fill:#FAF7F2,color:#232527,stroke:#C47A5A,stroke-width:2px;
+  classDef system fill:#F4F8F5,color:#232527,stroke:#7E8D7F,stroke-width:2px;
+  classDef decision fill:#FFF9F5,color:#C47A5A,stroke:#C47A5A,stroke-width:2px;
+
+  START(["🚀 사이트 진입 (피부과 / 커뮤니티 / QR)"]) :::startEnd
+
+  P01["P-01: 메인페이지 진입<br>(더마테스트 엑설런트 상단 뱃지)"] :::action
+  P04["P-04: 전체 저자극 카탈로그<br>(무라벨 / 세안 / 바스타월)"] :::action
+  P05["P-05: 상품 상세 페이지<br>(봉제선 500% HD 줌 & 무향포장)"] :::action
+
+  DEC_CERT{"더마테스트/4無 성적서<br>유효기간 확인하는가?"} :::decision
+  M02["M-02: 성적서 200% HD 모달<br>(성적서 원문 & 유효기간 공개)"] :::action
+
+  DEC_ZOOM{"봉제선 500% HD 줌으로<br>마감을 확인하는가?"} :::decision
+  ZOOM_EXEC["⚙️ 봉제선 & 무라벨<br>500% HD 마그니파이어 오버레이"] :::system
+
+  DEC_SAMPLE{"1장 소량 체험팩으로<br>촉감을 테스트하는가?"} :::decision
+  P06["P-06: 1장 소량 체험팩<br>(100% 환급 쿠폰 지급)"] :::action
+
+  P11["P-11: 장바구니 & 결제<br>(🟢 N Pay / 무향 개별 포장)"] :::action
+  NPAY_EXEC["N Pay 1초 간편 결제 승인"] :::system
+
+  P12["P-12: 마이페이지 & 주문완료<br>(동일 스펙 1-Click 재주문 연동)"] :::action
+  END_BUY(["🎉 주문 완료 (카카오 알림톡 발송)"]) :::startEnd
+
+  %% 팝업 대안 흐름
+  P08["P-08: 성수 팝업스토어"] :::action
+  M01_POP["M-01: 팝업 사전예약 모달"] :::action
+  END_POP(["🎟️ 팝업 예약 완료 알림톡"]) :::startEnd
+
+  %% 흐름 연결
+  START --> P01
+  P01 --> P04
+  P04 --> P05
+  P05 --> DEC_CERT
+
+  DEC_CERT -- "예" --> M02
+  M02 --> DEC_ZOOM
+  DEC_CERT -- "아니오" --> DEC_ZOOM
+
+  DEC_ZOOM -- "예" --> ZOOM_EXEC
+  ZOOM_EXEC --> DEC_SAMPLE
+  DEC_ZOOM -- "아니오" --> DEC_SAMPLE
+
+  DEC_SAMPLE -- "예" --> P06
+  P06 --> P11
+  DEC_SAMPLE -- "아니오" --> P11
+
+  P11 --> NPAY_EXEC
+  NPAY_EXEC --> P12
+  P12 --> END_BUY
+
+  %% 팝업 흐름
+  P01 --> P08
+  P08 --> M01_POP
+  M01_POP --> END_POP

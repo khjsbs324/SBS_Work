@@ -1,0 +1,72 @@
+flowchart TD
+  classDef root fill:#1F3327,stroke:#1F3327,stroke-width:2px,color:#FFFFFF;
+  classDef main fill:#FAF4EE,stroke:#1F3327,stroke-width:2px,color:#1F3327;
+  classDef proof fill:#EBF4EE,stroke:#2E6945,stroke-width:2px,color:#1F3327;
+  classDef shop fill:#F7EFE9,stroke:#C47A5A,stroke-width:2px,color:#1F3327;
+  classDef gift fill:#FFF8F0,stroke:#D9822B,stroke-width:2px,color:#1F3327;
+  classDef review fill:#F0F4F8,stroke:#4A6B82,stroke-width:2px,color:#1F3327;
+  classDef my fill:#F5F5F5,stroke:#5A4232,stroke-width:2px,color:#1F3327;
+  classDef modal fill:#FFFDF9,stroke:#C47A5A,stroke-width:1px,stroke-dasharray: 4 4,color:#1F3327;
+
+  ROOT["플로뜰리에 (Flottelier)<br>The Art of Slow Ritual"] :::root
+
+  subgraph LAYER_MAIN["01. 메인 & 리추얼 룩북"]
+    P01["P-01: 메인페이지<br>(더마테스트 뱃지 / 4대 리추얼)"] :::main
+    P09["P-09: 4대 일상 리추얼 룩북<br>(세안/홈스파/육아/가사명상)"] :::main
+  end
+
+  subgraph LAYER_PROOF["02. 공인 검증 & 연구소"]
+    P02["P-02: 공인 시험성적서 랩<br>(더마테스트 / KOTITI 무형광)"] :::proof
+    P03["P-03: 봉제선 & 세탁 비교 가이드<br>(봉제선 500% 줌 / 세탁 50회)"] :::proof
+    M01["M-01: 성적서 고해상도 모달<br>(200% HD 원본 확대)"] :::modal
+  end
+
+  subgraph LAYER_SHOP["03. 커머스 & 안심 체험팩"]
+    P04["P-04: 제품 카탈로그<br>(4차정련 세안 / 바스타올 / 와입스)"] :::shop
+    P05["P-05: 상품 상세 페이지<br>(봉제선 줌 & 무향 밀봉 포장)"] :::shop
+    P06["P-06: 1장 안심 체험팩<br>(100% 페이백 쿠폰 자동 발행)"] :::shop
+    P07["P-07: 30초 안심 큐레이터<br>(피부타입 맞춤 큐레이션)"] :::shop
+  end
+
+  subgraph LAYER_GIFT["04. 감성 기프트 & 꽃말"]
+    P08["P-08: 6가지 꽃말 위로 서재<br>(생분해 지함 3D & 6종 꽃말)"] :::gift
+    M02["M-02: 6종 꽃말 카드 모달<br>(꽃말 선택 & 자필 메시지)"] :::modal
+  end
+
+  subgraph LAYER_REVIEW["05. 리뷰 & 안심 보증"]
+    P10["P-10: 민감성 Real 리뷰<br>(피부타입 필터 / 세탁 50회 후기)"] :::review
+    M03["M-03: 100% 안심 환불 모달<br>(피부 미맞춤 14일 무료 환불)"] :::modal
+  end
+
+  subgraph LAYER_MY["06. 결제 & 평생 단골"]
+    P11["P-11: 장바구니 & 1초 결제<br>(무향 밀봉 보증 & N Pay)"] :::my
+    P12["P-12: 마이페이지 & 재구매<br>(1-Click 재주문 & 에코 루프)"] :::my
+  end
+
+  ROOT --> P01
+  P01 --> P02
+  P01 --> P04
+  P01 --> P06
+  P01 --> P08
+  P01 --> P09
+  P01 --> M01
+
+  P02 --> M01
+  P02 --> P03
+
+  P04 --> P05
+  P04 --> P07
+
+  P05 --> M01
+  P05 --> M02
+  P05 --> M03
+  P05 --> P06
+  P05 --> P10
+  P05 --> P11
+
+  P06 --> P11
+  P08 --> M02
+  P08 --> P11
+
+  P10 --> M03
+  P11 --> P12

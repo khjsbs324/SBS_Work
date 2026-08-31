@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="YOVIA 메인페이지 병합 와이어프레임" name="description"/>
+<title>YOVIA 메인페이지 웹디자인 최종</title>
+
+
+
+
+
+
+
+
+
+<style data-variant="mamonde-dktechin-semie-greencar-redesign">
+:root{
+  --ink:#161a18;
+  --muted:#6e756f;
+  --line:rgba(22,26,24,.14);
+  --paper:#ffffff;
+  --cream:#fbfaf6;
+  --mint:#dcefe9;
+  --mint-2:#c9e7de;
+  --sage:#9bc8b7;
+  --lemon:#eef2a8;
+  --peach:#f8d2b6;
+  --pink:#f2ced8;
+  --blue:#d9e7f5;
+  --green:#173f34;
+  --deep:#142c26;
+  --max:1320px;
+  --shadow:0 22px 60px rgba(22,40,33,.09);
+  --radius:34px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#fff}
+body{margin:0;color:var(--ink);background:var(--paper);font-family:"Pretendard Variable",Pretendard,"Noto Sans KR",Arial,sans-serif;line-height:1.55;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+button,a{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 64px));margin:auto}
+.skip{position:fixed;left:-9999px;top:12px;z-index:1000;padding:10px 14px;background:#111;color:#fff;border-radius:8px}
+.skip:focus{left:12px}
+
+/* Header — Mamonde-like clean, centered navigation */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(22,26,24,.08)}
+.head-in{min-height:82px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:28px}
+.logo{justify-self:start;font-size:30px;font-weight:950;letter-spacing:-.085em;line-height:1}
+.logo span{display:inline-block;width:14px;height:14px;margin-left:5px;border-radius:50%;background:var(--lemon);border:4px solid var(--green);vertical-align:.08em}
+.nav{grid-column:2;display:flex;align-items:center;justify-content:center;gap:34px}
+.nav a{position:relative;padding:10px 0;font-size:14px;font-weight:750}
+.nav a::after{content:"";position:absolute;left:50%;bottom:3px;width:0;height:2px;background:var(--green);transform:translateX(-50%);transition:.25s}
+.nav a:hover::after,.nav a[aria-current=page]::after{width:100%}
+.menu{display:none;justify-self:end;width:42px;height:42px;border:0;background:transparent;font-size:0;position:relative}
+.menu::before,.menu::after{content:"";position:absolute;left:9px;width:24px;height:2px;background:var(--ink);transition:.25s}
+.menu::before{top:15px}.menu::after{top:25px}
+.menu[aria-expanded="true"]::before{top:20px;transform:rotate(45deg)}
+.menu[aria-expanded="true"]::after{top:20px;transform:rotate(-45deg)}
+.mobile-nav{display:none;padding:16px 32px 24px;border-top:1px solid var(--line);background:#fff}
+.mobile-nav.open{display:grid;gap:2px}
+.mobile-nav a{padding:12px 0;font-weight:800}
+
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:0 22px;border:1px solid var(--ink);border-radius:4px;background:var(--ink);color:#fff;font-weight:800;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.light{background:transparent;color:var(--ink)}
+.eyebrow,.state{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border:1px solid rgba(22,26,24,.35);border-radius:999px;background:rgba(255,255,255,.55);font-size:10px;font-weight:850;letter-spacing:.07em}
+.section-title{margin:18px 0 24px;font-size:clamp(48px,5.4vw,76px);line-height:.98;letter-spacing:-.064em}
+.section-copy{max-width:720px;margin:0;color:var(--muted);font-size:16px;line-height:1.75}
+section{padding:116px 0}
+
+/* Hero — large title + oversized right product, pastel slide visuals */
+.hero{--hero-bg:#dcefeb;--hero-orbit:#a7d6c8;--hero-dot:#eef2a8;position:relative;min-height:760px;padding:0;overflow:hidden;background:var(--hero-bg);transition:background .65s ease}
+.hero[data-slide="1"]{--hero-bg:#f4dfe4;--hero-orbit:#f1becc;--hero-dot:#dbeaf6}
+.hero[data-slide="2"]{--hero-bg:#f3edc7;--hero-orbit:#d9e4a5;--hero-dot:#f7cdb3}
+.hero-grid{min-height:760px;display:grid;grid-template-columns:.94fr 1.06fr;align-items:center;gap:50px;position:relative}
+.hero-grid>div:first-child{position:relative;z-index:5;padding:80px 0}
+.hero .eyebrow{background:rgba(255,255,255,.52);border-color:rgba(22,26,24,.22)}
+.hero h1{max-width:680px;margin:24px 0 28px;font-size:clamp(66px,7.3vw,112px);line-height:.88;letter-spacing:-.078em;font-weight:900}
+.hero .lead{max-width:560px;margin:0;color:#303a35;font-size:18px;line-height:1.72}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.hero-note{max-width:580px;margin:22px 0 0;color:rgba(22,26,24,.6);font-size:11px}
+.visual{position:relative;height:650px;isolation:isolate}
+.visual::before{content:"";position:absolute;right:2%;top:7%;width:550px;height:550px;border-radius:50%;background:rgba(255,255,255,.46);filter:blur(.1px)}
+.ring{position:absolute;z-index:1;width:500px;height:500px;right:-24px;top:86px;border:80px solid var(--hero-orbit);border-radius:50%;transition:border-color .6s ease,transform .6s ease}
+.circle{position:absolute;z-index:2;border-radius:50%;transition:all .6s ease}
+.circle.one{width:185px;height:185px;left:2%;bottom:60px;background:var(--hero-dot)}
+.circle.two{width:105px;height:105px;right:9%;bottom:38px;background:rgba(255,255,255,.8)}
+.pack{position:absolute;z-index:4;top:92px;right:112px;width:280px;height:455px;display:grid;place-items:center;border:1px solid rgba(22,26,24,.1);border-radius:54px 54px 92px 92px;background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(255,255,255,.78));box-shadow:0 34px 70px rgba(34,66,56,.17);font-size:37px;font-weight:950;letter-spacing:-.06em;transform:rotate(2deg);transition:transform .6s ease}
+.pack::before{content:"";position:absolute;top:28px;width:58%;height:7px;border-radius:999px;background:rgba(22,26,24,.12)}
+.pack::after{content:"PRODUCT IMAGE\A NOT VERIFIED";white-space:pre;position:absolute;bottom:42px;text-align:center;color:#8b938e;font-size:9px;line-height:1.5;letter-spacing:.09em}
+.hero[data-slide="1"] .pack{transform:rotate(-4deg) translate(-16px,8px)}
+.hero[data-slide="2"] .pack{transform:rotate(4deg) translate(12px,-5px)}
+.hero[data-slide="1"] .ring{transform:translateX(-18px) scale(.94)}
+.hero[data-slide="2"] .ring{transform:translateY(10px) scale(1.04)}
+.hero-slider-ui{position:absolute;left:50%;bottom:34px;z-index:10;width:min(var(--max),calc(100% - 64px));transform:translateX(-50%);display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+.hero-slider-controls{display:flex;align-items:center;gap:8px;pointer-events:auto}
+.hero-arrow{width:46px;height:46px;border:1px solid rgba(22,26,24,.25);border-radius:50%;background:rgba(255,255,255,.58);backdrop-filter:blur(8px);cursor:pointer;position:relative}
+.hero-arrow::before{content:"";position:absolute;left:17px;top:17px;width:9px;height:9px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
+.hero-arrow.next::before{left:15px;transform:rotate(225deg)}
+.hero-bars{display:flex;gap:7px;pointer-events:auto}
+.hero-dotbtn{width:48px;height:3px;padding:0;border:0;background:rgba(22,26,24,.22);cursor:pointer;overflow:hidden}
+.hero-dotbtn::after{content:"";display:block;width:0;height:100%;background:var(--ink);transition:width .35s}
+.hero-dotbtn.active::after{width:100%}
+
+/* Structure — centered headline + 3 visual cards, DKTechin-like */
+.structure{background:#fff;color:var(--ink)}
+.structure-grid{display:grid;grid-template-columns:1fr;gap:54px}
+.structure-grid>div:last-child{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start;order:-1}
+.structure-grid>div:last-child>.eyebrow,.structure-grid>div:last-child>.section-title,.structure-grid>div:last-child>.section-copy{grid-column:1}
+.structure-grid>div:last-child>.steps{grid-column:1/-1}
+.structure .section-title{max-width:620px}
+.orbit{display:none}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:18px}
+.step{position:relative;min-height:470px;padding:0;border:0;background:transparent;overflow:visible;display:flex;flex-direction:column}
+.step::before{content:"";display:block;height:345px;border-radius:12px;background:var(--mint);margin-bottom:22px;box-shadow:0 1px 0 rgba(22,26,24,.06) inset;position:relative}
+.step:nth-child(2)::before{background:var(--pink)}
+.step:nth-child(3)::before{background:var(--lemon)}
+.step::after{content:"";position:absolute;left:50%;top:77px;width:145px;height:210px;transform:translateX(-50%);border-radius:28px 28px 50px 50px;background:#fff;box-shadow:0 22px 46px rgba(30,55,47,.12)}
+.step:nth-child(2)::after{width:168px;height:168px;top:88px;border-radius:50%;background:radial-gradient(circle at 38% 35%,#fff 0 18%,#f0c1ce 19% 47%,#fff 48% 58%,#dda8b7 59%)}
+.step:nth-child(3)::after{width:190px;height:190px;top:78px;border-radius:50%;background:repeating-radial-gradient(circle,#fff 0 22px,#d8de82 23px 45px,#fff 46px 64px)}
+.step b{position:absolute;z-index:3;top:22px;left:22px;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#fff;font-size:12px}
+.step>div{padding:0 2px}
+.step h3{margin:0 0 8px;font-size:27px;letter-spacing:-.04em}
+.step p{margin:0;color:var(--muted);font-size:14px}
+
+/* Everyday scenes — Semie-like image + compact caption */
+.scenes{background:#faf9f6}
+.scenes .section-title{max-width:760px}
+.scene-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px}
+.scene{position:relative;min-height:430px;padding:0;overflow:hidden;border-radius:14px;background:#fff;box-shadow:none;display:flex;flex-direction:column;justify-content:flex-end}
+.scene::before{content:"";position:absolute;inset:0 0 118px;background:var(--mint);border-radius:14px}
+.scene:nth-child(2)::before{background:var(--blue)}
+.scene:nth-child(3)::before{background:var(--peach)}
+.scene:nth-child(4)::before{background:var(--pink)}
+.scene::after{content:"";position:absolute;left:50%;top:86px;width:150px;height:150px;border-radius:50%;transform:translateX(-50%);background:rgba(255,255,255,.7);box-shadow:0 0 0 34px rgba(255,255,255,.22)}
+.scene:nth-child(2)::after{border-radius:44% 56% 48% 52%/55% 42% 58% 45%;transform:translateX(-50%) rotate(15deg)}
+.scene:nth-child(3)::after{border-radius:50% 50% 12% 50%;transform:translateX(-50%) rotate(-45deg)}
+.scene:nth-child(4)::after{width:175px;height:105px;border-radius:999px;top:108px}
+.scene small,.scene h3,.scene p{position:relative;z-index:2;padding-left:3px;padding-right:3px}
+.scene small{margin-top:auto;color:#777;font-size:10px;font-weight:800;letter-spacing:.06em}
+.scene h3{margin:7px 0 5px;font-size:22px;letter-spacing:-.04em}
+.scene p{min-height:63px;margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+
+/* Builder — airy white canvas + pastel selection */
+.box-builder{background:#fff}
+.box-builder-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:72px;align-items:start}
+.box-builder-grid>div{padding-top:8px}
+.box-builder .section-title{max-width:650px}
+.builder-intro{max-width:690px;margin:0 0 44px;color:var(--muted);font-size:16px;line-height:1.75}
+.builder-group{padding:28px 0;border-top:1px solid var(--line)}
+.builder-group:last-child{border-bottom:1px solid var(--line)}
+.builder-group h3{margin:0 0 15px;font-size:15px;letter-spacing:-.02em}
+.builder-options{display:flex;flex-wrap:wrap;gap:9px}
+.builder-option{min-height:44px;display:inline-flex;align-items:center;padding:0 15px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:13px;font-weight:700}
+.builder-option.selected{position:relative;padding-right:38px;border-color:var(--green);background:var(--mint)}
+.builder-option.selected::after{content:"✓";position:absolute;right:9px;top:9px;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:var(--green);color:#fff;font-size:11px}
+.builder-summary{position:sticky;top:112px;min-height:520px;padding:44px;border-radius:18px;background:#dcefe9;box-shadow:none;overflow:hidden}
+.builder-summary::before,.builder-summary::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.builder-summary::before{width:280px;height:280px;right:-110px;top:-90px;border:58px solid rgba(255,255,255,.64)}
+.builder-summary::after{width:130px;height:130px;right:76px;bottom:-48px;background:var(--lemon)}
+.builder-summary>*{position:relative;z-index:2}
+.builder-summary h3{margin:28px 0 26px;font-size:38px;line-height:1.05;letter-spacing:-.05em}
+.builder-summary-list{margin:0 0 24px}
+.builder-summary-row{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-top:1px solid rgba(22,26,24,.15);font-size:13px}
+.builder-summary-row:last-child{border-bottom:1px solid rgba(22,26,24,.15)}
+.builder-summary-row span{color:#536059;text-align:right}
+.builder-summary .btn{width:100%;margin-top:8px}
+.builder-summary .btn.light{background:rgba(255,255,255,.6)}
+.builder-notice{margin:18px 0 0;color:#59655e;font-size:10px;line-height:1.6}
+
+/* Product system — generous 3-card imagery + concise supporting copy */
+.products{background:#faf9f6}
+.products>.wrap>header{max-width:880px;margin-bottom:62px;padding:0;background:transparent;border-radius:0}
+.products>.wrap>header>p:first-child{margin:0;color:#637069;font-size:11px;font-weight:850;letter-spacing:.08em}
+.products>.wrap>header h2{margin:16px 0 24px;font-size:clamp(52px,6vw,82px);line-height:.95;letter-spacing:-.067em}
+.products>.wrap>header p:last-child{max-width:760px;margin:0;color:var(--muted);line-height:1.75}
+.products>.wrap>h3{margin:0 0 24px;font-size:28px;letter-spacing:-.04em}
+.product-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:22px}
+.product-card{position:relative;overflow:hidden;border:0;background:#fff;border-radius:14px;box-shadow:none}
+.product-card.featured{grid-column:span 4;display:flex;flex-direction:column}
+.product-art{position:relative;height:350px;display:grid;place-items:center;background:var(--mint);overflow:hidden}
+.product-card:nth-child(2) .product-art{background:var(--pink)}
+.product-card:nth-child(3) .product-art{background:var(--lemon)}
+.product-art::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.48)}
+.product-art::after{position:absolute;left:18px;bottom:16px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.84);color:#303a35;font-size:10px;font-weight:850;letter-spacing:.04em}
+.products>.wrap>.product-grid:first-of-type .product-card:nth-child(1) .product-art::after{content:"기본 제품 구조"}
+.products>.wrap>.product-grid:first-of-type .product-card:nth-child(2) .product-art::after{content:"베이스 + 퓨레 + 토핑"}
+.products>.wrap>.product-grid:first-of-type .product-card:nth-child(3) .product-art::after{content:"첫 구성 경험"}
+.mini-pack{position:relative;z-index:2;width:138px;height:215px;display:grid;place-items:center;border:1px solid rgba(22,26,24,.12);border-radius:26px 26px 46px 46px;background:#fff;box-shadow:0 22px 44px rgba(30,55,47,.12);font-size:16px;font-weight:900}
+.product-body{display:flex;flex:1;flex-direction:column;padding:24px 2px 8px;background:#faf9f6}
+.product-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#777;font-size:11px}
+.product-body h3{margin:13px 0 10px;font-size:25px;line-height:1.15;letter-spacing:-.045em}
+.feature-spec{display:grid;gap:8px;margin:0 0 18px;padding:0;background:transparent}
+.feature-spec div{display:grid;grid-template-columns:78px 1fr;gap:12px;color:#59615c;font-size:12px;line-height:1.5}
+.feature-spec b{color:#1d2420;font-size:10px;letter-spacing:.04em}
+.product-body>.btn{align-self:flex-start;margin-top:auto;min-height:40px;padding:0 16px;font-size:12px}
+.products>.wrap>blockquote{margin:34px 0 0;padding:20px 22px;border:0;border-left:3px solid var(--green);background:#fff;color:#5c665f;font-size:13px}
+
+/* chapter dividers */
+.catalog-divider{grid-column:1/-1;position:relative;display:flex;align-items:end;justify-content:space-between;gap:30px;margin:108px 0 28px;padding:0 0 22px;border-bottom:1px solid var(--ink);background:transparent!important;color:var(--ink)!important;border-radius:0!important;overflow:visible}
+.catalog-divider::after{display:none!important}
+.catalog-divider h3{margin:10px 0 0;font-size:38px;line-height:1.03;letter-spacing:-.05em}
+.catalog-divider p{max-width:560px;margin:0;color:var(--muted)!important;font-size:13px;line-height:1.65}
+#subcategory-signature-starter .product-card{grid-column:span 6}
+#subcategory-signature-starter .product-art{height:315px}
+#subcategory-base{margin-top:0}
+.products>.wrap>section[aria-labelledby="base-choice-title"]{margin:0 0 24px;padding:28px 30px;border-radius:14px;background:var(--mint)}
+.products>.wrap>section[aria-labelledby="base-choice-title"] h3{margin:0 0 14px;font-size:20px}
+.products>.wrap>section[aria-labelledby="base-choice-title"] ul{margin:0;padding-left:20px;color:#4d5a53;font-size:13px;line-height:1.8}
+#subcategory-base+section+.product-grid .product-card{grid-column:span 4}
+#subcategory-base+section+.product-grid .product-art{height:290px}
+
+/* Compact puree/topping cards: visual tile + minimal text */
+#subcategory-puree .compact-lineup{grid-column:span 3;min-height:250px;background:var(--pink)}
+#subcategory-topping .compact-lineup{grid-column:span 4;min-height:250px;background:var(--lemon)}
+.compact-lineup{position:relative;padding-top:120px;overflow:hidden}
+.compact-lineup::before{content:"";position:absolute;top:26px;left:50%;width:80px;height:80px;transform:translateX(-50%);border-radius:50%;background:rgba(255,255,255,.78);box-shadow:0 0 0 22px rgba(255,255,255,.23)}
+#subcategory-topping .compact-lineup::before{border-radius:44% 56% 56% 44%/48% 42% 58% 52%;transform:translateX(-50%) rotate(35deg)}
+.compact-lineup .product-body{min-height:130px;padding:20px 20px 22px;background:#fff}
+.compact-lineup h3{margin:0 0 12px;font-size:19px}
+.card-fields{display:grid;gap:6px}
+.card-field{display:grid;grid-template-columns:62px 1fr;gap:8px;font-size:11px;line-height:1.45}
+.card-field b{font-size:9px;letter-spacing:.05em}
+.card-field span{color:#68716b}
+.compact-lineup .card-field:nth-child(2),.compact-lineup .card-field:nth-child(3){display:none}
+.card-state{margin-top:auto;padding-top:11px;border-top:1px solid var(--line)}
+.state{min-height:22px;padding:2px 8px;font-size:9px!important;background:#fff}
+.lineup-overview{display:none!important}
+
+/* Closing — Greencar-inspired geometric field */
+.closing{padding:120px 0 0;background:#fff}
+.closing .wrap{width:100%;max-width:none}
+.closing-panel{position:relative;min-height:510px;display:flex;flex-direction:column;justify-content:center;padding:76px max(32px,calc((100vw - var(--max))/2));overflow:hidden;border-radius:0;background:#a8dac9;color:#10251f}
+.closing-panel::before,.closing-panel::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.closing-panel::before{width:540px;height:540px;right:8%;bottom:-280px;border:94px solid #173f34;box-shadow:0 0 0 88px rgba(255,255,255,.82) inset}
+.closing-panel::after{width:330px;height:330px;right:-50px;top:-100px;border:72px solid rgba(255,255,255,.86);box-shadow:0 0 0 63px #173f34 inset}
+.closing-panel>*{position:relative;z-index:3}
+.closing-panel h2{max-width:760px;margin:0 0 30px;font-size:clamp(50px,5.7vw,78px);line-height:.98;letter-spacing:-.065em}
+.closing-panel .actions{margin-top:0}
+
+/* Footer */
+.yovia-reference-footer{padding:58px 0;background:#161a18;color:#fff}
+.yovia-reference-footer .footer-inner{width:min(var(--max),calc(100% - 64px));display:flex;justify-content:space-between;gap:40px;margin:auto}
+.yovia-reference-footer .footer-brand{font-size:28px;font-weight:900;letter-spacing:-1.6px}
+.yovia-reference-footer .footer-brand i{display:inline-block;width:14px;height:14px;margin-left:4px;border:4px solid #fff;border-radius:50%;font-style:normal}
+.yovia-reference-footer .footer-copy{margin:12px 0 0;color:#d9dfdc}
+.yovia-reference-footer .footer-info{max-width:670px;margin:0;color:#919b96;font-size:11px;line-height:1.7}
+.yovia-reference-footer .footer-links{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:12px}
+.yovia-reference-footer .footer-links a{font-weight:800}
+.to-top{position:fixed;right:22px;bottom:22px;z-index:80;width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.09);font-weight:900;opacity:0;pointer-events:none;transition:.25s}
+.to-top.show{opacity:1;pointer-events:auto}
+:focus-visible{outline:3px solid #173f34;outline-offset:3px}
+
+@media(max-width:1024px){
+  .wrap{width:min(var(--max),calc(100% - 40px))}
+  section{padding:92px 0}
+  .hero-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .hero h1{font-size:70px}
+  .pack{right:50px}
+  .steps{gap:14px}.step{min-height:430px}.step::before{height:310px}
+  .scene-grid{grid-template-columns:repeat(2,1fr)}
+  .box-builder-grid{grid-template-columns:1fr;gap:44px}.builder-summary{position:relative;top:0;min-height:420px}
+  #subcategory-puree .compact-lineup{grid-column:span 4}
+  #subcategory-topping .compact-lineup{grid-column:span 6}
+  .hero-slider-ui{width:calc(100% - 40px)}
+}
+@media(max-width:767px){
+  .wrap{width:calc(100% - 32px)}
+  section{padding:74px 0}
+  .head-in{min-height:68px;grid-template-columns:1fr auto}.nav{display:none}.menu{display:block}.logo{font-size:26px}
+  .hero{min-height:auto}.hero-grid{min-height:auto;grid-template-columns:1fr;gap:0;padding-bottom:88px}.hero-grid>div:first-child{padding:48px 0 12px}.hero h1{font-size:clamp(48px,14vw,62px);margin:20px 0 22px}.hero .lead{font-size:15px}.hero .visual{height:430px}.visual::before{width:360px;height:360px;right:-40px}.ring{width:330px;height:330px;right:-75px;top:55px;border-width:54px}.pack{width:190px;height:315px;right:48px;top:64px;border-radius:38px 38px 62px 62px;font-size:28px}.circle.one{width:135px;height:135px;left:-10px;bottom:42px}.circle.two{width:84px;height:84px;right:3px;bottom:20px}.hero-slider-ui{bottom:24px;width:calc(100% - 32px)}.hero-bars{margin-left:auto}.hero-dotbtn{width:32px}.hero-arrow{display:none}
+  .section-title{font-size:clamp(42px,12vw,58px)}
+  .structure-grid>div:last-child{display:block}.steps{grid-template-columns:1fr;gap:38px;margin-top:42px}.step{min-height:0}.step::before{height:300px}.step::after{top:65px}.step b{top:18px}
+  .scene-grid{grid-template-columns:1fr;gap:30px;margin-top:38px}.scene{min-height:410px}
+  .box-builder-grid{gap:38px}.builder-option{width:100%;justify-content:flex-start}.builder-summary{padding:32px 24px;min-height:480px}.builder-summary h3{font-size:32px}
+  .products>.wrap>header h2{font-size:48px}.product-grid{grid-template-columns:1fr;gap:30px}.product-card.featured,#subcategory-signature-starter .product-card,#subcategory-base+section+.product-grid .product-card,#subcategory-puree .compact-lineup,#subcategory-topping .compact-lineup{grid-column:1}.product-art,#subcategory-signature-starter .product-art,#subcategory-base+section+.product-grid .product-art{height:300px}.catalog-divider{align-items:flex-start;flex-direction:column;margin-top:78px}.catalog-divider h3{font-size:32px}.compact-lineup{min-height:240px}
+  .closing{padding-top:80px}.closing-panel{min-height:500px;padding:54px 24px}.closing-panel h2{font-size:48px}.closing-panel::before{width:390px;height:390px;right:-190px;bottom:-185px;border-width:68px}.closing-panel::after{width:220px;height:220px;right:-95px;top:-55px;border-width:48px}
+  .yovia-reference-footer .footer-inner{width:calc(100% - 32px);flex-direction:column}.yovia-reference-footer .footer-links{gap:12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<style data-variant="custom-builder-fix">
+.box-builder{position:relative}.builder-progress{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 34px;padding:8px;border-radius:18px;background:#f4f5f1}.builder-progress span{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:13px;color:#69726d;font-size:12px;font-weight:800}.builder-progress span::before{content:attr(data-step);width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:#fff;color:var(--green);font-size:11px}.builder-progress span.done{background:#fff;color:var(--green)}.builder-progress span.done::before{background:var(--green);color:#fff}.builder-presets{margin:0 0 34px;padding:24px;border-radius:22px;background:#f8f6ee}.builder-presets h3{margin:0 0 6px}.builder-presets p{margin:0 0 16px;color:var(--muted);font-size:13px}.preset-options{display:flex;flex-wrap:wrap;gap:8px}.preset-option{min-height:42px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-weight:800;cursor:pointer}.preset-option:hover,.preset-option:focus-visible{border-color:var(--green);background:var(--mint)}.builder-option{cursor:pointer;text-align:left}.builder-option:focus-visible,.preset-option:focus-visible,.purchase-button:focus-visible{outline:3px solid var(--green);outline-offset:3px}.builder-group h3{display:flex;align-items:center;justify-content:space-between;gap:12px}.builder-required{color:#737b76;font-size:10px;font-weight:700}.builder-summary{min-height:610px}.summary-status{display:flex;align-items:center;gap:8px;margin:0 0 18px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.58);font-size:12px;font-weight:800}.summary-status::before{content:"";width:9px;height:9px;border-radius:50%;background:#f1a469}.summary-status.ready::before{background:#2d8067}.builder-summary-row span{font-weight:800}.builder-summary-actions{display:grid;gap:8px}.builder-summary button.btn{border:0;cursor:pointer}.purchase-button[disabled]{cursor:not-allowed;opacity:.45}.purchase-result{display:none;margin-top:16px;padding:18px;border:1px solid rgba(22,26,24,.16);border-radius:16px;background:rgba(255,255,255,.7)}.purchase-result.open{display:block}.purchase-result strong{display:block;margin-bottom:6px}.purchase-result p{margin:0;color:#526059;font-size:12px;line-height:1.6}.recommended-edit{width:100%;margin-top:12px}.builder-option[aria-pressed="true"]{position:relative;padding-right:38px;border-color:var(--green);background:var(--mint)}.builder-option[aria-pressed="true"]::after{content:"\2713";position:absolute;right:9px;top:9px;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:var(--green);color:#fff;font-size:11px}.builder-option.selected{padding-right:38px}.builder-option.selected::after{content:"\2713"}@media(max-width:767px){.builder-progress{grid-template-columns:1fr}.builder-progress span{padding:8px}.builder-presets{padding:20px 16px}.preset-options{display:grid}.preset-option{width:100%;text-align:left}.builder-summary{min-height:0}}
+</style></head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="header">
+<div class="wrap head-in">
+<a aria-label="YOVIA 메인" class="logo" href="#main">YOVIA<span></span></a>
+<nav aria-label="주요 페이지" class="nav">
+<a aria-current="page" href="#main">메인</a>
+<a href="#">제품 카테고리</a>
+<a href="#">브랜드 소개</a>
+</nav>
+<button aria-expanded="false" aria-label="모바일 메뉴 열기" class="menu" type="button">☰</button>
+</div>
+<nav aria-label="모바일 메뉴" class="mobile-nav">
+<a href="#main">메인</a><a href="#">제품 카테고리</a><a href="#">브랜드 소개</a>
+</nav>
+</header>
+<main id="main">
+<section aria-labelledby="hero-title" class="hero" data-slide="0"><div class="wrap hero-grid"><div><span class="eyebrow">제품 중심 메인 · 후보 시안</span><h1 id="hero-title">바쁜 하루,<br/>한 팩에 담은<br/>세 가지 구성.</h1><p class="lead">건강한 선택의 준비가 번거롭지 않도록, 기본 팩과 생과일 퓨레, 토핑의 관계를 한 팩의 구성으로 이해할 수 있게 정리했습니다.</p><div class="actions"><a class="btn" href="#structure">제품 구성 보기</a><a class="btn light" href="#">브랜드 이야기</a></div><p class="hero-note">※ 패키지·원료·영양·판매 정보는 공식 자료 확정 범위에 따라 반영합니다.</p></div><div aria-label="원형 그래픽과 YOVIA 제품 패키지 이미지 자리" class="visual" role="img"><div class="ring"></div><div class="circle one"></div><div class="circle two"></div><div class="pack">YOVIA</div></div></div><div aria-hidden="true" class="hero-slider-ui"><div class="hero-slider-controls"><button aria-label="이전 비주얼" class="hero-arrow prev" type="button"></button><button aria-label="다음 비주얼" class="hero-arrow next" type="button"></button></div><div class="hero-bars"><button aria-label="1번째 비주얼" class="hero-dotbtn active" data-slide="0" type="button"></button><button aria-label="2번째 비주얼" class="hero-dotbtn" data-slide="1" type="button"></button><button aria-label="3번째 비주얼" class="hero-dotbtn" data-slide="2" type="button"></button></div></div></section>
+<section aria-labelledby="structure-title" class="structure" id="structure"><div class="wrap structure-grid"><div aria-label="팩, 퓨레, 토핑의 관계" class="orbit" role="img"><div class="orbit-pack">01<br/>BASE PACK</div><div class="part puree">02<br/>PUREE</div><div class="part topping">03<br/>TOPPING</div></div><div><span class="eyebrow">WHAT IT IS · 세 가지 역할</span><h2 class="section-title" id="structure-title">한 팩을 이루는<br/>세 가지 역할.</h2><p class="section-copy">이 구간은 선택 방법이 아니라 베이스·과일 풍미·견과 식감이 한 구성 안에서 맡는 역할을 설명합니다.</p><div class="steps"><article class="step"><b>01</b><div><h3>베이스 팩</h3><p>한 팩의 중심이 되는 그릭요거트 베이스.</p></div></article><article class="step"><b>02</b><div><h3>퓨레</h3><p>과일 풍미를 더하는 구성 옵션 제안.</p></div></article><article class="step"><b>03</b><div><h3>토핑</h3><p>고소함과 식감을 더하는 구성 옵션 제안.</p></div></article></div></div></div></section>
+
+<section aria-labelledby="scenes-title" class="scenes"><div class="wrap"><span class="eyebrow">EVERYDAY WITH YOVIA</span><h2 class="section-title" id="scenes-title">일상의 여러 순간에<br/>함께합니다.</h2><p class="section-copy">대표 장면인 출근·등교 전의 바쁜 아침부터 업무 사이, 캠퍼스와 활동 후까지. 준비 부담을 줄이고 취향에 맞는 한 팩을 살펴보는 순간을 보여드립니다.</p><div class="scene-grid"><article class="scene"><small>PRIMARY · MORNING</small><h3>출근·등교 전</h3><p>하루를 시작하기 전, 따로 준비할 것을 줄이고 한 팩의 구성을 빠르게 확인하는 대표 장면</p></article><article class="scene"><small>WORK</small><h3>업무 사이</h3><p>잠시 쉬며 나에게 맞는 구성을 살펴보는 시간</p></article><article class="scene"><small>CAMPUS</small><h3>캠퍼스에서</h3><p>수업 전후 간편한 구성을 확인하는 순간</p></article><article class="scene"><small>AFTER ACTIVITY</small><h3>활동을 마친 뒤</h3><p>취향에 맞는 조합을 살펴보는 시간</p></article></div></div></section>
+
+<section aria-labelledby="builder-title" class="box-builder" id="custom-builder"><div class="wrap box-builder-grid"><div><span class="eyebrow">HOW TO EXPLORE · 구성 예시</span><h2 class="section-title" id="builder-title">이번 아침은<br/>내 취향대로.</h2><p class="builder-intro">앞에서 확인한 세 가지 역할을 베이스 → 퓨레 → 토핑 순서로 살펴보는 구성 예시입니다. 실제 구매·선택 기능과 판매 단위는 확인 전입니다.</p><div aria-label="구성 선택 단계" class="builder-progress"><span class="done" data-step="1">베이스</span><span class="done" data-step="2">퓨레</span><span class="done" data-step="3">토핑</span></div><div class="builder-presets"><h3>추천 조합에서 시작</h3><p>추천 구성을 먼저 확인한 뒤 퓨레나 토핑만 바꿀 수 있습니다.</p><div class="preset-options"><button class="preset-option" data-preset="morning" type="button">7AM 갓생 팩</button><button class="preset-option" data-preset="refresh" type="button">3PM 리프레시 팩</button><button class="preset-option" data-preset="weekend" type="button">위켄드 뷰티 팩</button><button class="preset-option" data-preset="starter" type="button">스타터 팩</button></div></div><div class="builder-group" data-group="base"><h3>1. 베이스 팩 <span class="builder-required">하나 선택</span></h3><div class="builder-options"><button aria-pressed="true" class="builder-option selected" data-id="YV-001" type="button">120g 모닝 파우치</button><button aria-pressed="false" class="builder-option" data-id="YV-002" type="button">400g 홈트레이닝 팩</button><button aria-pressed="false" class="builder-option" data-id="YV-003" type="button">800g 그릭 매니아 팩</button></div></div><div class="builder-group" data-group="puree"><h3>2. 생과일 퓨레 구성 옵션 <span class="builder-required">하나 선택</span></h3><div class="builder-options"><button aria-pressed="true" class="builder-option selected" data-id="YV-004" type="button">딸기 생과일 퓨레</button><button aria-pressed="false" class="builder-option" data-id="YV-005" type="button">블루베리 생과일 퓨레</button><button aria-pressed="false" class="builder-option" data-id="YV-006" type="button">애플망고 생과일 퓨레</button><button aria-pressed="false" class="builder-option" data-id="YV-007" type="button">복숭아 생과일 퓨레</button><button aria-pressed="false" class="builder-option" data-id="YV-008" type="button">사과 생과일 퓨레</button><button aria-pressed="false" class="builder-option" data-id="YV-009" type="button">사과바나나 생과일 퓨레</button><button aria-pressed="false" class="builder-option" data-id="YV-010" type="button">사과배 생과일 퓨레</button><button aria-pressed="false" class="builder-option" data-id="YV-011" type="button">청포도 생과일 퓨레</button><button aria-pressed="false" class="builder-option" data-id="YV-012" type="button">파인애플 생과일 퓨레</button><button aria-pressed="false" class="builder-option" data-id="YV-013" type="button">감귤 생과일 퓨레</button></div></div><div class="builder-group" data-group="topping"><h3>3. 견과류 토핑 추가 구성 옵션 <span class="builder-required">하나 선택</span></h3><div class="builder-options"><button aria-pressed="true" class="builder-option selected" data-id="YV-014" type="button">아몬드 토핑</button><button aria-pressed="false" class="builder-option" data-id="YV-015" type="button">호두 토핑</button><button aria-pressed="false" class="builder-option" data-id="YV-016" type="button">캐슈넛 토핑</button><button aria-pressed="false" class="builder-option" data-id="YV-017" type="button">마카다미아 토핑</button><button aria-pressed="false" class="builder-option" data-id="YV-018" type="button">피스타치오 토핑</button></div></div></div><aside aria-label="현재 선택한 구성 요약" class="builder-summary"><span class="eyebrow">COMBINATION PREVIEW</span><h3>나의 YOVIA 구성 예시</h3><div aria-live="polite" class="summary-status ready">세 가지 구성이 모두 선택되었습니다.</div><div class="builder-summary-list"><div class="builder-summary-row"><strong>베이스 팩</strong><span data-summary="base">120g 모닝 파우치</span></div><div class="builder-summary-row"><strong>생과일 퓨레</strong><span data-summary="puree">딸기 생과일 퓨레</span></div><div class="builder-summary-row"><strong>견과류 토핑</strong><span data-summary="topping">아몬드 토핑</span></div><div class="builder-summary-row"><strong>상태</strong><span class="state">제안</span></div></div><div class="builder-summary-actions"><button class="btn purchase-button" type="button">선택한 구성으로 구매 준비</button><a class="btn light" href="#products">22개 전체 구성 확인</a></div><div aria-live="polite" class="purchase-result"><strong>선택한 구성이 저장되었습니다.</strong><p>가격·재고·판매·배송 정책이 확정되면 구매 단계로 연결합니다. 현재는 구성 확인까지 제공합니다.</p></div><p class="builder-notice">※ 현재 선택 내용은 구성 예시입니다. 정기배송은 향후 서비스 제안이며 가격·배송 주기·변경·건너뛰기·해지 정책은 확인 전입니다.</p></aside></div></section>
+
+<section aria-labelledby="products-title" class="products" id="products"><div class="wrap">
+<header><p>YOVIA PRODUCT SYSTEM · 통합 관리 항목 22개</p><h2 id="products-title">서로 다른 역할로 만나는 YOVIA.</h2><p>기본 팩 용량 변형 후보 3개, 구성 옵션 제안 15개, 추천 조합 제안 4개를 하나의 체계로 관리합니다. 대표 3종은 전체 22개 안에서 기본 구조·시그니처 조합·첫 구성 경험을 각각 설명하는 재노출 항목입니다.</p></header>
+<h3>대표 상품 3종</h3>
+<div class="product-grid">
+<article class="product-card featured"><div class="product-art"><div class="mini-pack">YV-001</div></div><div class="product-body"><div class="product-meta"><span class="state">확인 필요</span><small>기본 제품 구조 대표</small></div><h3>120g 모닝 파우치</h3><div class="feature-spec"><div><b>상품군</b><span>기본 팩 · 용량 변형 후보</span></div><div><b>용량·구성</b><span>120g 그릭요거트 베이스 · 퓨레·토핑 조합 확인 전</span></div><div><b>핵심 특징</b><span>개인 단위 기본 제품 구조를 설명하는 용량 변형 후보</span></div><div><b>대표 선정 이유</b><span>YOVIA의 기본 제품 구조를 가장 직접적으로 보여줌</span></div></div><a class="btn" href="#">전체 체계에서 보기</a></div></article>
+<article class="product-card featured"><div class="product-art"><div class="mini-pack">YV-019</div></div><div class="product-body"><div class="product-meta"><span class="state">제안</span><small>시그니처 조합 대표</small></div><h3>7AM 갓생 팩</h3><div class="feature-spec"><div><b>상품군</b><span>시그니처 팩 · 추천 조합</span></div><div><b>용량·구성</b><span>120g 베이스 + 블루베리 생과일 퓨레 + 아몬드 토핑</span></div><div><b>핵심 특징</b><span>아침 사용 상황을 보여주는 추천 조합</span></div><div><b>대표 선정 이유</b><span>베이스·퓨레·토핑의 시그니처 조합을 보여줌</span></div></div><a class="btn" href="#">전체 체계에서 보기</a></div></article>
+<article class="product-card featured"><div class="product-art"><div class="mini-pack">YV-022</div></div><div class="product-body"><div class="product-meta"><span class="state">제안</span><small>구성 확장 대표</small></div><h3>스타터 팩</h3><div class="feature-spec"><div><b>상품군</b><span>스타터 팩 · 추천 조합</span></div><div><b>용량·구성</b><span>120g 베이스 + 사과바나나 생과일 퓨레 + 아몬드 토핑</span></div><div><b>핵심 특징</b><span>세 구성 요소의 관계를 경험하는 확장형 추천 조합</span></div><div><b>대표 선정 이유</b><span>여러 구성을 처음 경험하는 확장 역할을 보여줌</span></div></div><a class="btn" href="#">전체 체계에서 보기</a></div></article>
+</div>
+<blockquote><p>위 세 항목은 YOVIA의 서로 다른 역할을 설명하기 위한 대표 재노출입니다. 전체 22개 안의 위치와 세부 비교는 아래 상품군 요약을 거쳐 카테고리에서 확인합니다.</p></blockquote>
+
+<section aria-labelledby="lineup-overview-title" class="lineup-overview"><div class="lineup-overview-head"><div><span class="eyebrow">22 MANAGED ITEMS</span><h3 id="lineup-overview-title">전체 상품·구성 체계</h3></div><p>메인에서도 22개의 번호와 이름을 모두 확인할 수 있습니다. 용량·구성·특징·상태의 자세한 비교는 카테고리에서 이어집니다.</p></div><div class="lineup-overview-grid"><article class="lineup-overview-card"><strong>03</strong><h4>기본 팩</h4><p>용량 변형 후보 · 판매 단위 확인 전</p><ul class="lineup-items"><li><code>YV-001</code>120g 모닝 파우치</li><li><code>YV-002</code>400g 홈트레이닝 팩</li><li><code>YV-003</code>800g 그릭 매니아 팩</li></ul></article><article class="lineup-overview-card"><strong>10</strong><h4>생과일 퓨레</h4><p>과일 풍미를 더하는 구성 옵션 제안</p><ul class="lineup-items"><li><code>YV-004</code>딸기 생과일 퓨레</li><li><code>YV-005</code>블루베리 생과일 퓨레</li><li><code>YV-006</code>애플망고 생과일 퓨레</li><li><code>YV-007</code>복숭아 생과일 퓨레</li><li><code>YV-008</code>사과 생과일 퓨레</li><li><code>YV-009</code>사과바나나 생과일 퓨레</li><li><code>YV-010</code>사과배 생과일 퓨레</li><li><code>YV-011</code>청포도 생과일 퓨레</li><li><code>YV-012</code>파인애플 생과일 퓨레</li><li><code>YV-013</code>감귤 생과일 퓨레</li></ul></article><article class="lineup-overview-card"><strong>05</strong><h4>견과류 토핑</h4><p>고소함과 식감을 더하는 구성 옵션 제안</p><ul class="lineup-items"><li><code>YV-014</code>아몬드 토핑</li><li><code>YV-015</code>호두 토핑</li><li><code>YV-016</code>캐슈넛 토핑</li><li><code>YV-017</code>마카다미아 토핑</li><li><code>YV-018</code>피스타치오 토핑</li></ul></article><article class="lineup-overview-card"><strong>04</strong><h4>추천 조합</h4><p>시그니처 3개와 스타터 1개 · 출시·판매 여부 확인 전</p><ul class="lineup-items"><li><code>YV-019</code>7AM 갓생 팩</li><li><code>YV-020</code>3PM 리프레시 팩</li><li><code>YV-021</code>위켄드 뷰티 팩</li><li><code>YV-022</code>스타터 팩</li></ul></article></div><div class="lineup-overview-action"><a class="btn" href="#">22개 상세 비교하기</a></div></section>
+<div class="product-grid" id="subcategory-signature-starter">
+<div class="catalog-divider signature-divider"><div><span class="eyebrow">SIGNATURE · STARTER · 4개</span><h3>시그니처·스타터 팩</h3></div><p>사용 상황과 첫 구성 경험을 기준으로 제안한 네 가지 조합입니다. 출시·판매 여부는 확인 전이며 모든 카드의 상태는 제안입니다.</p></div>
+<article class="product-card featured signature-featured"><div class="product-art"><div class="mini-pack">022</div></div><div class="product-body"><div class="product-meta"><span class="state">제안</span><small>STARTER</small></div><h3>스타터 팩</h3><p>베이스: 120g 그릭요거트 · 퓨레: 사과바나나 생과일 퓨레 · 토핑: 아몬드 토핑</p><a class="btn" href="#">카테고리에서 보기</a></div></article>
+<article class="product-card featured signature-featured"><div class="product-art"><div class="mini-pack">019</div></div><div class="product-body"><div class="product-meta"><span class="state">제안</span><small>SIGNATURE</small></div><h3>7AM 갓생 팩</h3><p>120g 그릭요거트 베이스·블루베리 퓨레·아몬드 토핑으로 구성한 아침 조합 제안</p><a class="btn" href="#">카테고리에서 보기</a></div></article>
+<article class="product-card featured signature-featured"><div class="product-art"><div class="mini-pack">020</div></div><div class="product-body"><div class="product-meta"><span class="state">제안</span><small>SIGNATURE</small></div><h3>3PM 리프레시 팩</h3><p>120g 그릭요거트 베이스·딸기 퓨레·피스타치오 토핑으로 구성한 오후 조합 제안</p><a class="btn" href="#">카테고리에서 보기</a></div></article>
+<article class="product-card featured signature-featured"><div class="product-art"><div class="mini-pack">021</div></div><div class="product-body"><div class="product-meta"><span class="state">제안</span><small>SIGNATURE</small></div><h3>위켄드 뷰티 팩</h3><p>120g 그릭요거트 베이스·애플망고 퓨레·마카다미아 토핑으로 구성한 주말 조합 제안</p><a class="btn" href="#">카테고리에서 보기</a></div></article>
+</div>
+<div class="product-grid" id="subcategory-base">
+<div class="catalog-divider general-divider"><div><span class="eyebrow">BASE PACK · 3개</span><h3>판매 단위 확인 전의 기본 팩 용량 변형 후보</h3></div><p>세 항목은 독립 판매 상품으로 확정하지 않았으며, 하나의 기본 팩 안의 용량 선택인지 확인이 필요합니다.</p></div>
+</div>
+<section aria-labelledby="base-choice-title"><h3 id="base-choice-title">기본 팩 선택 기준</h3><ul><li>120g 모닝 파우치: 개인 단위 사용을 고려한 소용량 방향</li><li>400g 홈트레이닝 팩: 가정 내 반복 사용을 고려한 중용량 방향</li><li>800g 그릭 매니아 팩: 반복 소비를 고려한 대용량 방향</li></ul></section>
+<div class="product-grid">
+<article class="product-card featured"><div class="product-art"><div class="mini-pack">001</div></div><div class="product-body"><div class="product-meta"><span class="state">확정</span><small>BASE</small></div><h3>120g 모닝 파우치</h3><div class="feature-spec"><div><b>핵심 특징</b><span>개인 단위로 구성을 확인하는 기본 팩</span></div><div><b>용량·구성</b><span>120g 그릭요거트 베이스 · 세부 퓨레·토핑 조합 확정 전</span></div></div><a class="btn" href="#">세부 구성 보기</a></div></article>
+<article class="product-card featured"><div class="product-art"><div class="mini-pack">002</div></div><div class="product-body"><div class="product-meta"><span class="state">확정</span><small>BASE</small></div><h3>400g 홈트레이닝 팩</h3><div class="feature-spec"><div><b>핵심 특징</b><span>가정 내 반복 사용 방향을 살펴보는 중용량 팩</span></div><div><b>용량·구성</b><span>400g 베이스 팩 · 세부 퓨레·토핑 조합 확정 전</span></div></div><a class="btn" href="#">세부 구성 보기</a></div></article>
+<article class="product-card featured"><div class="product-art"><div class="mini-pack">003</div></div><div class="product-body"><div class="product-meta"><span class="state">확정</span><small>BASE</small></div><h3>800g 그릭 매니아 팩</h3><div class="feature-spec"><div><b>핵심 특징</b><span>가정 내 반복 소비를 고려한 대용량 팩</span></div><div><b>용량·구성</b><span>800g 베이스 팩 · 세부 퓨레·토핑 조합 확정 전</span></div></div><a class="btn" href="#">세부 구성 보기</a></div></article>
+</div>
+<div class="product-grid" id="subcategory-puree">
+<div class="catalog-divider general-divider puree-divider"><div><span class="eyebrow">CONFIGURATION OPTION · 10개</span><h3>생과일 퓨레</h3></div><p>용량과 단독 판매 여부를 확인하기 전인 구성 옵션 제안입니다.</p></div>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 004</p><h3>딸기</h3><p>친숙한 새콤달콤함과 산뜻한 풍미.</p></div></article>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 005</p><h3>블루베리</h3><p>은은한 단맛과 진한 베리 풍미.</p></div></article>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 006</p><h3>애플망고</h3><p>진하고 부드러운 열대과일의 단맛.</p></div></article>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 007</p><h3>복숭아</h3><p>향긋하고 부드러운 달콤함.</p></div></article>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 008</p><h3>사과</h3><p>깔끔한 단맛과 상큼한 마무리.</p></div></article>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 009</p><h3>사과바나나</h3><p>상큼한 사과와 부드러운 바나나의 조화.</p></div></article>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 010</p><h3>사과배</h3><p>사과의 산뜻함과 배의 맑은 단맛.</p></div></article>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 011</p><h3>청포도</h3><p>싱그러운 향과 청량한 단맛.</p></div></article>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 012</p><h3>파인애플</h3><p>선명하고 경쾌한 새콤달콤함.</p></div></article>
+<article class="product-card compact-lineup product-puree"><div class="product-body"><small>생과일 퓨레</small><p>상품 번호 013</p><h3>감귤</h3><p>상큼한 향과 가벼운 산미.</p></div></article>
+</div>
+<div class="product-grid" id="subcategory-topping">
+<div class="catalog-divider general-divider topping-divider"><div><span class="eyebrow">ADDITIONAL OPTION · 5개</span><h3>견과류 토핑</h3></div><p>용량과 단독 판매 여부를 확인하기 전인 추가 구성 옵션 제안입니다.</p></div>
+<article class="product-card compact-lineup product-topping"><div class="product-body"><small>견과류 토핑</small><p>상품 번호 014</p><h3>아몬드</h3><p>담백한 고소함과 단단한 바삭함.</p></div></article>
+<article class="product-card compact-lineup product-topping"><div class="product-body"><small>견과류 토핑</small><p>상품 번호 015</p><h3>호두</h3><p>깊은 고소함과 오독한 식감.</p></div></article>
+<article class="product-card compact-lineup product-topping"><div class="product-body"><small>견과류 토핑</small><p>상품 번호 016</p><h3>캐슈넛</h3><p>크리미한 고소함과 부드러운 식감.</p></div></article>
+<article class="product-card compact-lineup product-topping"><div class="product-body"><small>견과류 토핑</small><p>상품 번호 017</p><h3>마카다미아</h3><p>버터처럼 부드럽고 풍부한 풍미.</p></div></article>
+<article class="product-card compact-lineup product-topping"><div class="product-body"><small>견과류 토핑</small><p>상품 번호 018</p><h3>피스타치오</h3><p>향긋한 고소함과 경쾌한 식감.</p></div></article>
+</div>
+</div></section>
+<section class="closing"><div class="wrap"><div class="closing-panel"><h2>제품 구성을 비교하거나,<br/>YOVIA의 이야기를 확인하세요.</h2><div class="actions"><a class="btn" href="#">제품 카테고리</a><a class="btn light" href="#">브랜드 소개</a></div></div></div></section>
+</main>
+
+<footer class="yovia-reference-footer"><div class="footer-inner"><div><div class="footer-brand">yovia<i aria-hidden="true"></i></div><p class="footer-copy">자리와 루틴에 맞춰, 딱 좋은 크기로.</p></div><div><nav aria-label="푸터 화면 탐색" class="footer-links"><a href="메인페이지_웹디자인_초안.html">홈</a><a href="#">제품 카테고리</a><a href="#">브랜드 소개</a></nav><p class="footer-info">YOVIA · 제품 및 고객문의 준비 중<br/>가격·판매·구매 정책과 제품의 원료·영양·패키지 정보는 공식 자료 확정 전이며 변경될 수 있습니다.</p></div></div></footer>
+<a aria-label="맨 위로 이동" class="to-top" href="#main">↑</a>
+<script>
+    const optionCards=[
+      ['YV-004','딸기 생과일 퓨레','생과일 퓨레','상큼한 딸기 풍미를 더하는 구성'],['YV-005','블루베리 생과일 퓨레','생과일 퓨레','진한 베리 풍미를 더하는 구성'],['YV-006','애플망고 생과일 퓨레','생과일 퓨레','부드러운 열대과일 풍미를 더하는 구성'],['YV-007','복숭아 생과일 퓨레','생과일 퓨레','향긋하고 부드러운 풍미를 더하는 구성'],['YV-008','사과 생과일 퓨레','생과일 퓨레','깔끔한 단맛과 상큼함을 더하는 구성'],['YV-009','사과바나나 생과일 퓨레','생과일 퓨레','상큼함과 부드러운 단맛을 더하는 구성'],['YV-010','사과배 생과일 퓨레','생과일 퓨레','산뜻함과 맑은 단맛을 더하는 구성'],['YV-011','청포도 생과일 퓨레','생과일 퓨레','싱그러운 향과 청량한 단맛을 더하는 구성'],['YV-012','파인애플 생과일 퓨레','생과일 퓨레','경쾌한 새콤달콤함을 더하는 구성'],['YV-013','감귤 생과일 퓨레','생과일 퓨레','상큼한 향과 가벼운 산미를 더하는 구성'],['YV-014','아몬드 토핑','견과류 토핑','담백한 고소함과 바삭함을 더하는 구성'],['YV-015','호두 토핑','견과류 토핑','깊은 고소함과 오독한 식감을 더하는 구성'],['YV-016','캐슈넛 토핑','견과류 토핑','부드럽고 크리미한 식감을 더하는 구성'],['YV-017','마카다미아 토핑','견과류 토핑','부드럽고 풍부한 고소함을 더하는 구성'],['YV-018','피스타치오 토핑','견과류 토핑','향긋한 고소함과 경쾌한 식감을 더하는 구성']
+    ];
+    document.querySelectorAll('.compact-lineup').forEach((card,index)=>{const item=optionCards[index];if(!item)return;card.querySelector('.product-body').innerHTML=`<h3>${item[1]}</h3><div class="card-fields"><div class="card-field"><b>번호</b><span>${item[0]}</span></div><div class="card-field"><b>상품군</b><span>${item[2]}</span></div><div class="card-field"><b>용량·구성</b><span>용량 확인 전 · 판매 단위 확인 전</span></div><div class="card-field"><b>핵심 특징</b><span>${item[3]}</span></div></div><div class="card-state"><span class="state">제안</span></div>`});
+    document.querySelectorAll('.mini-pack').forEach(label=>{if(/^\d{3}$/.test(label.textContent.trim()))label.textContent=`YV-${label.textContent.trim()}`});
+    const fullLineup=[
+      ['YV-022','스타터 팩','시그니처·스타터 팩','120g 베이스 + 사과바나나 생과일 퓨레 + 아몬드 토핑','세 구성 요소의 관계를 경험하는 확장형 추천 조합','제안'],
+      ['YV-019','7AM 갓생 팩','시그니처·스타터 팩','120g 베이스 + 블루베리 생과일 퓨레 + 아몬드 토핑','아침 사용 상황을 보여주는 추천 조합','제안'],
+      ['YV-020','3PM 리프레시 팩','시그니처·스타터 팩','120g 베이스 + 딸기 생과일 퓨레 + 피스타치오 토핑','오후 사용 상황을 보여주는 추천 조합','제안'],
+      ['YV-021','위켄드 뷰티 팩','시그니처·스타터 팩','120g 베이스 + 애플망고 생과일 퓨레 + 마카다미아 토핑','주말 사용 상황을 보여주는 추천 조합','제안'],
+      ['YV-001','120g 모닝 파우치','기본 팩','120g 그릭요거트 베이스 · 퓨레·토핑 조합 확인 전','개인 단위 기본 제품 구조를 설명하는 용량 변형 후보','확인 필요'],
+      ['YV-002','400g 홈트레이닝 팩','기본 팩','400g 그릭요거트 베이스 · 퓨레·토핑 조합 확인 전','가정 내 반복 사용 방향을 설명하는 용량 변형 후보','확인 필요'],
+      ['YV-003','800g 그릭 매니아 팩','기본 팩','800g 그릭요거트 베이스 · 퓨레·토핑 조합 확인 전','가정 내 반복 소비 방향을 설명하는 용량 변형 후보','확인 필요']
+    ];
+    const fullCards=[...document.querySelectorAll('#subcategory-signature-starter .product-card'),...document.querySelectorAll('#subcategory-base + section + .product-grid .product-card')];
+    fullCards.forEach((card,index)=>{const item=fullLineup[index];if(!card||!item)return;card.querySelector('.mini-pack').textContent=item[0];card.querySelector('.product-body').innerHTML=`<div class="product-meta"><span class="state">${item[5]}</span><small>${item[2]}</small></div><h3>${item[1]}</h3><div class="feature-spec"><div><b>상품군</b><span>${item[2]}</span></div><div><b>용량·구성</b><span>${item[3]}</span></div><div><b>핵심 특징</b><span>${item[4]}</span></div></div><a class="btn" href="#">전체 체계에서 보기</a>`});
+  </script>
+<script>
+(()=>{
+  const menu=document.querySelector('.menu');
+  const mobileNav=document.querySelector('.mobile-nav');
+  if(menu&&mobileNav){menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));mobileNav.classList.toggle('open',!open);});}
+
+  const hero=document.querySelector('.hero');
+  const dots=[...document.querySelectorAll('.hero-dotbtn')];
+  const prev=document.querySelector('.hero-arrow.prev');
+  const next=document.querySelector('.hero-arrow.next');
+  let slide=0,timer;
+  const setSlide=(n)=>{slide=(n+3)%3;hero?.setAttribute('data-slide',String(slide));dots.forEach((d,i)=>d.classList.toggle('active',i===slide));};
+  const auto=()=>{clearInterval(timer);timer=setInterval(()=>setSlide(slide+1),5200)};
+  prev?.addEventListener('click',()=>{setSlide(slide-1);auto()});
+  next?.addEventListener('click',()=>{setSlide(slide+1);auto()});
+  dots.forEach((d,i)=>d.addEventListener('click',()=>{setSlide(i);auto()}));
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) auto();
+
+  const top=document.querySelector('.to-top');
+  const syncTop=()=>top?.classList.toggle('show',window.scrollY>500);
+  syncTop();window.addEventListener('scroll',syncTop,{passive:true});
+})();
+</script>
+<script data-feature="custom-builder">
+(()=>{
+  const builder=document.querySelector('#custom-builder');
+  if(!builder)return;
+  const groups=['base','puree','topping'];
+  const selections={};
+  const getButton=(group,id)=>builder.querySelector(`[data-group="${group}"] .builder-option[data-id="${id}"]`);
+  const update=()=>{
+    groups.forEach(group=>{
+      const selected=builder.querySelector(`[data-group="${group}"] .builder-option[aria-pressed="true"]`);
+      selections[group]=selected?{id:selected.dataset.id,name:selected.textContent.trim()}:null;
+      const output=builder.querySelector(`[data-summary="${group}"]`);
+      if(output)output.textContent=selections[group]?.name||'선택 필요';
+    });
+    const ready=groups.every(group=>selections[group]);
+    const status=builder.querySelector('.summary-status');
+    const purchase=builder.querySelector('.purchase-button');
+    status.classList.toggle('ready',ready);
+    status.textContent=ready?'세 가지 구성이 모두 선택되었습니다.':'아직 선택하지 않은 구성이 있습니다.';
+    purchase.disabled=!ready;
+    builder.querySelectorAll('.builder-progress span').forEach((step,index)=>step.classList.toggle('done',Boolean(selections[groups[index]])));
+    builder.querySelector('.purchase-result').classList.remove('open');
+  };
+  const select=(group,button)=>{
+    builder.querySelectorAll(`[data-group="${group}"] .builder-option`).forEach(option=>{
+      const active=option===button;
+      option.setAttribute('aria-pressed',String(active));
+      option.classList.toggle('selected',active);
+    });
+    update();
+  };
+  builder.querySelectorAll('.builder-group').forEach(group=>{
+    group.querySelectorAll('.builder-option').forEach(button=>button.addEventListener('click',()=>select(group.dataset.group,button)));
+  });
+  const presets={
+    morning:{base:'YV-001',puree:'YV-005',topping:'YV-014'},
+    refresh:{base:'YV-001',puree:'YV-004',topping:'YV-018'},
+    weekend:{base:'YV-001',puree:'YV-006',topping:'YV-017'},
+    starter:{base:'YV-001',puree:'YV-009',topping:'YV-014'}
+  };
+  const applyPreset=key=>{
+    const preset=presets[key];
+    if(!preset)return;
+    groups.forEach(group=>{const button=getButton(group,preset[group]);if(button)select(group,button)});
+    builder.querySelector(`[data-preset="${key}"]`)?.focus();
+  };
+  builder.querySelectorAll('[data-preset]').forEach(button=>button.addEventListener('click',()=>applyPreset(button.dataset.preset)));
+  builder.querySelector('.purchase-button').addEventListener('click',()=>{
+    update();
+    if(!groups.every(group=>selections[group]))return;
+    const result=builder.querySelector('.purchase-result');
+    result.classList.add('open');
+    result.querySelector('strong').textContent=`${selections.base.name} + ${selections.puree.name} + ${selections.topping.name} 구성이 저장되었습니다.`;
+  });
+  const cardPresets=[['스타터 팩','starter'],['7AM 갓생 팩','morning'],['3PM 리프레시 팩','refresh'],['위켄드 뷰티 팩','weekend']];
+  document.querySelectorAll('#subcategory-signature-starter .product-card').forEach(card=>{
+    const name=card.querySelector('h3')?.textContent.trim();
+    const match=cardPresets.find(item=>item[0]===name);
+    const action=card.querySelector('.btn');
+    if(!match||!action)return;
+    action.textContent='이 조합에서 수정하기';
+    action.classList.add('recommended-edit');
+    action.addEventListener('click',event=>{event.preventDefault();applyPreset(match[1]);builder.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+  });
+  update();
+})();
+</script></body>
+</html>

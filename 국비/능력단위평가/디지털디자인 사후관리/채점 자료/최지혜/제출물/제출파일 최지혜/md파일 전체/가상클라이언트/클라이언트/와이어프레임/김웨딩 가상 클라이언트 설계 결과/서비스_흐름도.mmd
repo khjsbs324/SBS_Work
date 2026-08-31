@@ -1,0 +1,67 @@
+flowchart TD
+  %% 글로벌 시작
+  START(["🟢 플로뜰리에 웨딩 아틀리에 접속"]) --> ENTRY_NODE["P-WD-01: 웨딩 메인 & 큐레이션"]
+
+  %% 1단계: D-Day 사전 진단
+  ENTRY_NODE --> MODAL_DDAY["M-WD-02: 웨딩 D-Day 안심 배송 계산기"]
+  MODAL_DDAY --> COND_DDAY{"예식일까지 남은 일수"}
+  COND_DDAY -->|D-7 이상 (충분)| VIEW_PRODUCT["P-WD-02: 신혼 15장 풀 패키지 상세"]
+  COND_DDAY -->|D-3 이내 (초임박)| EX_URGENT["EX-WD-01: 긴급 퀵/본사 픽업 안내 [가정]"]
+  EX_URGENT --> VIEW_PRODUCT
+
+  %% 2단계: 상품 검증 및 자수 커스텀
+  VIEW_PRODUCT --> COND_EMB{"부부 자수 각인 여부"}
+  COND_EMB -->|자수 각인 선택| MODAL_EMB["M-WD-01: 실시간 Canvas 자수 시뮬레이터"]
+  COND_EMB -->|무지 기본 선택| DECIDE_PARENTS{"양가 예단 선물 추가 여부"}
+
+  MODAL_EMB --> COND_LEN{"입력 글자수 검증 (최대 20자)"}
+  COND_LEN -->|20자 이내 정상| EMB_APPLY["0.05초 Canvas 프리뷰 확인 & 적용"]
+  COND_LEN -->|20자 초과 오류| EMB_ERR["인라인 글자수 초과 경고 & 재입력"]
+  EMB_ERR --> MODAL_EMB
+  EMB_APPLY --> DECIDE_PARENTS
+
+  %% 3단계: 양가 예단 보자기 추가
+  DECIDE_PARENTS -->|예단 선물 추가| VIEW_PARENTS["P-WD-04: 양가 부모님 소창 보자기 예단관"]
+  DECIDE_PARENTS -->|본품만 진행| GO_CHECKOUT["P-WD-07: 2곳 분할 직배송 주문서"]
+
+  VIEW_PARENTS --> MODAL_BOJAGI["M-WD-04: 보자기 360 뷰어 & 감사 카드"]
+  MODAL_BOJAGI --> GO_CHECKOUT
+
+  %% 4단계: 분할 배송 및 유효성 검사
+  GO_CHECKOUT --> COND_SPLIT{"배송지 분할 방식"}
+  COND_SPLIT -->|2곳 분할 배송| INPUT_SPLIT["시댁 / 친정 2곳 주소지 분할 입력"]
+  COND_SPLIT -->|단일 배송| INPUT_SINGLE["신혼집 1곳 주소지 입력"]
+
+  INPUT_SPLIT --> COND_ADDR{"우편번호 및 도로명 주소 검증"}
+  INPUT_SINGLE --> COND_ADDR
+
+  COND_ADDR -->|주소 오류/누락| EX_ADDR["EX-WD-02: 2곳 주소 오류 피드백 [가정]"]
+  EX_ADDR --> INPUT_SPLIT
+
+  COND_ADDR -->|주소 검증 통과| AUTO_PRICE_TAG["가격표/영수증 100% 미동봉 보증 확약"]
+  AUTO_PRICE_TAG --> DO_PAYMENT["간편결제 실행 (N Pay / 카카오페이)"]
+
+  %% 5단계: 결제 처리 및 주문 완료
+  DO_PAYMENT --> COND_PAY{"PG 결제 승인 결과"}
+  COND_PAY -->|결제 승인 성공| ORDER_SUCCESS["P-WD-08: 주문 완료 & D-Day 현황"]
+  COND_PAY -->|결제 실패 / 중도 취소| PAY_RETRY["결제 실패 안내 & 결제수단 재선택"]
+  PAY_RETRY --> GO_CHECKOUT
+
+  %% 6단계: 사후 여정 및 위시리스트
+  ORDER_SUCCESS --> COND_NEXT{"추가 액션 선택"}
+  COND_NEXT -->|위시리스트 생성| VIEW_WISH["P-WD-06: 혼수 위시리스트 & 청첩장 공유"]
+  COND_NEXT -->|수납 가이드 확인| VIEW_GUIDE["P-WD-05: 호텔식 욕실 수납 셋업 가이드"]
+  COND_NEXT -->|쇼핑 종료| END_NODE(["🏁 여정 완료: 안심 혼수 준비 완료"])
+
+  %% 스타일 클래스 정의
+  classDef startEnd fill:#2E4036,stroke:#1C2922,stroke-width:2px,color:#FFFFFF;
+  classDef pageNode fill:#FFFFFF,stroke:#7E8D7F,stroke-width:1.5px,color:#232527;
+  classDef decisionNode fill:#D8E2DC,stroke:#9CAB9E,stroke-width:2px,color:#1C2922;
+  classDef modalNode fill:#FFF8F4,stroke:#C47A5A,stroke-width:1.5px,color:#8C4320;
+  classDef exceptionNode fill:#FDF2F2,stroke:#F87171,stroke-width:1.5px,color:#DC2626;
+
+  class START,END_NODE startEnd;
+  class ENTRY_NODE,VIEW_PRODUCT,VIEW_PARENTS,GO_CHECKOUT,ORDER_SUCCESS,VIEW_WISH,VIEW_GUIDE,INPUT_SPLIT,INPUT_SINGLE,EMB_APPLY,AUTO_PRICE_TAG pageNode;
+  class COND_DDAY,COND_EMB,COND_LEN,DECIDE_PARENTS,COND_SPLIT,COND_ADDR,COND_PAY,COND_NEXT decisionNode;
+  class MODAL_DDAY,MODAL_EMB,MODAL_BOJAGI modalNode;
+  class EX_URGENT,EMB_ERR,EX_ADDR,PAY_RETRY exceptionNode;

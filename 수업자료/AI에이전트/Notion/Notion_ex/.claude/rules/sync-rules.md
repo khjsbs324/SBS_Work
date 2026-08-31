@@ -17,6 +17,6 @@
 - 시작일/종료일 변경
 - 제목은 같지만 설명(description)이 달라진 경우(참고용, Notion에 별도 속성 없으면 리포트에만 표기)
 
-## 인증 실패 처리
-Google Calendar MCP 인증이 안 되어 있으면 즉시 실패 처리하지 않고,
+## 텍스트 미입력 처리
+사용자가 아직 일정 텍스트를 붙여넣지 않았으면 즉시 실패 처리하지 않고,
 `pipeline/samples/sample-calendar-events.json`으로 대체한 뒤 리포트에 샘플 데이터임을 명시한다.

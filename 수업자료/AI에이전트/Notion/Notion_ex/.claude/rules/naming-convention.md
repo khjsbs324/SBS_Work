@@ -11,7 +11,7 @@
 - 하루에 여러 번 실행되면 같은 파일을 덮어쓰지 않고 파일 내부에 실행 시각(HH:mm) 섹션을 추가한다.
 
 ## 상태 파일
-- 최신 캘린더 스냅샷: `.state/calendar-snapshot-latest.json`
+- 최신 일정 스냅샷: `.state/calendar-snapshot-latest.json`
 - 직전 동기화 기준선: `.state/last-sync.json`
 
 ## Notion 속성 (변경 금지, 항상 이 이름을 그대로 사용)

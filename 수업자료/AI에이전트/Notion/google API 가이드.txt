@@ -1,0 +1,17 @@
+Google Cloud 프로젝트
+        ↓
+Google Calendar API 활성화
+        ↓
+Google Auth Platform 설정
+        ↓
+OAuth 동의 화면
+        ↓
+OAuth Client ID 생성
+        ↓
+credentials.json
+        ↓
+Google 계정 로그인/권한 허용
+        ↓
+Claude CLI / Agent
+        ↓
+Google Calendar 읽기·생성·수정

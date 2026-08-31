@@ -6,7 +6,7 @@ description: 캘린더 읽기 → Notion 등록 → 수정 사항 정리 → 다
 # Run Notion Pipeline (전체 오케스트레이션)
 
 ## Procedure
-1. `read-google-calendar` 스킬 실행 → `.state/calendar-snapshot-latest.json` 생성.
+1. `read-pasted-schedule` 스킬 실행 → `.state/calendar-snapshot-latest.json` 생성.
 2. `sync-notion` 스킬 실행 → Notion에 upsert, `logs/sync-*.json` 생성.
 3. `organize-output` 스킬 실행 → `output/changes/{date}.md` 생성, `.state/last-sync.json` 갱신.
 4. `recommend-schedule` 스킬 실행 → `output/recommendations/{date}.md` 생성.
@@ -24,7 +24,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\run-pipeline.ps1 -UseSample
 - `NOTION_TOKEN`은 어떤 단계에서도 출력하지 않는다.
 
 ## Output Summary (완료 후 보고 형식)
-1. 이번 실행에서 읽은 이벤트 수 (출처: 실제/샘플)
+1. 이번 실행에서 읽은 이벤트 수 (출처: 사용자 입력/샘플)
 2. Notion 신규/갱신/동일 건수
 3. `output/changes/{date}.md` 경로
 4. `output/recommendations/{date}.md` 경로

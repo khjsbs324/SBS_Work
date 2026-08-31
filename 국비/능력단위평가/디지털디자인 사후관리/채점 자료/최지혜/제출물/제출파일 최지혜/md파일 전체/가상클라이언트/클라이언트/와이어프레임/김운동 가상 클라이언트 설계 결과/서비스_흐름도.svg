@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1100" width="100%" height="100%" style="background-color: #F8FAFC; font-family: 'Pretendard', 'Noto Sans KR', sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B" />
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#EF4444" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="700" y="45" font-size="24" font-weight="800" text-anchor="middle" fill="#0F172A">🔄 플로뜰리에 오하운 스포츠 센터 서비스 흐름도 (Service Flowchart)</text>
+  <text x="700" y="70" font-size="13" text-anchor="middle" fill="#64748B">탐색 ➔ 실증 데이터 검증 ➔ 스트랩/자수 커스텀 ➔ 1초 결제 / 1장 체험팩 ➔ 재구매 전 과정</text>
+
+  <!-- Legend -->
+  <g transform="translate(100, 90)">
+    <rect x="0" y="0" width="130" height="30" rx="15" fill="#1E3A8A" />
+    <text x="65" y="19" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">시작 / 종료</text>
+    
+    <rect x="150" y="0" width="130" height="30" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5" />
+    <text x="215" y="19" font-size="11" font-weight="700" fill="#1E40AF" text-anchor="middle">사용자 행동</text>
+
+    <polygon points="345,0 410,15 345,30 280,15" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5" />
+    <text x="345" y="19" font-size="11" font-weight="700" fill="#92400E" text-anchor="middle">판단 / 분기</text>
+
+    <rect x="430" y="0" width="130" height="30" rx="6" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="495" y="19" font-size="11" font-weight="700" fill="#1E3A8A" text-anchor="middle">시스템 처리</text>
+
+    <rect x="580" y="0" width="130" height="30" rx="6" fill="#FDF4FF" stroke="#C026D3" stroke-width="1.5" stroke-dasharray="3 3" />
+    <text x="645" y="19" font-size="11" font-weight="700" fill="#86198F" text-anchor="middle">모달 인터랙션</text>
+
+    <rect x="730" y="0" width="130" height="30" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5" />
+    <text x="795" y="19" font-size="11" font-weight="700" fill="#991B1B" text-anchor="middle">오류 / 예외</text>
+  </g>
+
+  <!-- Flow Content -->
+  <!-- 1. Start Node -->
+  <g filter="url(#shadow)">
+    <rect x="590" y="145" width="220" height="46" rx="23" fill="#1E3A8A" />
+    <text x="700" y="174" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">🏃 서비스 시작 (진입)</text>
+  </g>
+
+  <path d="M 700 191 L 700 220" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- 2. SCR-01 스포츠 메인 홈 -->
+  <g filter="url(#shadow)">
+    <rect x="580" y="220" width="240" height="56" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" />
+    <text x="700" y="244" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">SCR-01: 스포츠 메인 홈</text>
+    <text x="700" y="264" font-size="11" fill="#64748B" text-anchor="middle">1초 땀흡수 비주얼 &amp; 퀵 필터 진입</text>
+  </g>
+
+  <path d="M 700 276 L 700 310" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- 3. Decision: 사용자 핵심 의도 -->
+  <g filter="url(#shadow)">
+    <polygon points="700,310 820,350 700,390 580,350" fill="#FEF3C7" stroke="#D97706" stroke-width="2" />
+    <text x="700" y="347" font-size="13" font-weight="700" fill="#92400E" text-anchor="middle">사용자 핵심 의도</text>
+    <text x="700" y="362" font-size="10" fill="#B45309" text-anchor="middle">(탐색 경로 분기)</text>
+  </g>
+
+  <!-- Branch Left: 1장 체험팩 -->
+  <path d="M 580 350 L 220 350 L 220 390" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="360" y="342" font-size="11" font-weight="700" fill="#B45309">1장 먼저 써보기 (3천원)</text>
+
+  <g filter="url(#shadow)">
+    <rect x="110" y="390" width="220" height="60" rx="8" fill="#FDF4FF" stroke="#C026D3" stroke-width="1.5" stroke-dasharray="3 3" />
+    <text x="220" y="415" font-size="13" font-weight="700" fill="#86198F" text-anchor="middle">SCR-13: 1장 체험팩 (MOD-03)</text>
+    <text x="220" y="435" font-size="11" fill="#64748B" text-anchor="middle">3,000원 결제 ➔ 100% 환급 쿠폰</text>
+  </g>
+
+  <path d="M 220 450 L 220 490" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="110" y="490" width="220" height="50" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="220" y="513" font-size="12" font-weight="700" fill="#1E3A8A" text-anchor="middle">시스템: 100% 환급 쿠폰 발급</text>
+    <text x="220" y="530" font-size="10" fill="#64748B" text-anchor="middle">카카오 알림톡 자동 전송</text>
+  </g>
+
+  <path d="M 220 540 L 220 580" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="580" width="200" height="42" rx="21" fill="#1E3A8A" />
+    <text x="220" y="606" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">📦 체험팩 수령 및 쿠폰 적립</text>
+  </g>
+
+  <!-- Branch Center: 전체 탐색 -->
+  <path d="M 700 390 L 700 430" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="710" y="415" font-size="11" font-weight="700" fill="#1E40AF">제품 전체 탐색</text>
+
+  <g filter="url(#shadow)">
+    <rect x="580" y="430" width="240" height="56" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" />
+    <text x="700" y="454" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">SCR-02: 전체 카탈로그</text>
+    <text x="700" y="474" font-size="11" fill="#64748B" text-anchor="middle">2/3/4겹 겹수 &amp; 종목별 태그 필터</text>
+  </g>
+
+  <!-- Branch Right: 크루 단체 -->
+  <path d="M 820 350 L 1180 350 L 1180 390" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="960" y="342" font-size="11" font-weight="700" fill="#B45309">크루 단체 발주 (20장+)</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1070" y="390" width="220" height="60" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5" />
+    <text x="1180" y="415" font-size="13" font-weight="700" fill="#0F172A" text-anchor="middle">SCR-09: 크루 단체 자수/발주</text>
+    <text x="1180" y="435" font-size="11" fill="#64748B" text-anchor="middle">수량별 10~25% 할인 &amp; 로고 업로드</text>
+  </g>
+
+  <path d="M 1180 450 L 1180 490" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="1070" y="490" width="220" height="50" rx="8" fill="#FDF4FF" stroke="#C026D3" stroke-width="1.5" stroke-dasharray="3 3" />
+    <text x="1180" y="513" font-size="12" font-weight="700" fill="#86198F" text-anchor="middle">MOD-04: 직인 견적서 PDF 출력</text>
+    <text x="1180" y="530" font-size="10" fill="#64748B" text-anchor="middle">1초 즉시 다운로드 &amp; 계산서 신청</text>
+  </g>
+
+  <!-- Product Selection -->
+  <path d="M 700 486 L 700 520" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <polygon points="700,520 810,555 700,590 590,555" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5" />
+    <text x="700" y="552" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">구매 상품 선택</text>
+    <text x="700" y="567" font-size="10" fill="#B45309" text-anchor="middle">(번들 vs 단품)</text>
+  </g>
+
+  <path d="M 590 555 L 480 555 L 480 620" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="490" y="545" font-size="10" font-weight="700" fill="#1E40AF">스타터 팩</text>
+
+  <g filter="url(#shadow)">
+    <rect x="370" y="620" width="220" height="56" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5" />
+    <text x="480" y="644" font-size="13" font-weight="700" fill="#0F172A" text-anchor="middle">SCR-03: 스타터 팩 상세</text>
+    <text x="480" y="664" font-size="11" fill="#64748B" text-anchor="middle">롱타월+와입스3장+메쉬파우치</text>
+  </g>
+
+  <path d="M 810 555 L 920 555 L 920 620" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="880" y="545" font-size="10" font-weight="700" fill="#1E40AF">롱타월 단품</text>
+
+  <g filter="url(#shadow)">
+    <rect x="810" y="620" width="220" height="56" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5" />
+    <text x="920" y="644" font-size="13" font-weight="700" fill="#0F172A" text-anchor="middle">SCR-04: 스포츠 롱타월 상세</text>
+    <text x="920" y="664" font-size="11" fill="#64748B" text-anchor="middle">30x90cm &amp; 500% 봉제선 줌</text>
+  </g>
+
+  <!-- Join to Embroidery -->
+  <path d="M 480 676 L 480 710 L 690 710" stroke="#64748B" stroke-width="2" />
+  <path d="M 920 676 L 920 710 L 710 710" stroke="#64748B" stroke-width="2" />
+  <path d="M 700 710 L 700 735" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="560" y="735" width="280" height="60" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" />
+    <text x="700" y="759" font-size="13" font-weight="700" fill="#0F172A" text-anchor="middle">SCR-08: 슬로건 자수 스튜디오</text>
+    <text x="700" y="779" font-size="11" fill="#64748B" text-anchor="middle">스냅 스트랩(MOD-02) &amp; Canvas 실시간 합성</text>
+  </g>
+
+  <path d="M 700 795 L 700 825" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <polygon points="700,825 800,855 700,885 600,855" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5" />
+    <text x="700" y="852" font-size="11" font-weight="700" fill="#92400E" text-anchor="middle">자수 유효성 검사</text>
+    <text x="700" y="866" font-size="9" fill="#B45309" text-anchor="middle">(영문 최대 12자)</text>
+  </g>
+
+  <path d="M 800 855 L 890 855 L 890 765 L 840 765" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrowRed)" />
+  <text x="895" y="815" font-size="10" font-weight="700" fill="#EF4444">초과 오류</text>
+
+  <path d="M 700 885 L 700 915" stroke="#10B981" stroke-width="2" marker-end="url(#arrowGreen)" />
+  <path d="M 1180 540 L 1180 945 L 840 945" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="560" y="915" width="280" height="60" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" />
+    <text x="700" y="939" font-size="14" font-weight="700" fill="#0F172A" text-anchor="middle">SCR-14: 장바구니 &amp; 1초 결제</text>
+    <text x="700" y="959" font-size="11" fill="#64748B" text-anchor="middle">N Pay/카카오 간편결제 &amp; 환급 쿠폰 적용</text>
+  </g>
+
+  <path d="M 700 975 L 700 1005" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="470" y="1005" width="460" height="48" rx="24" fill="#1E3A8A" />
+    <text x="700" y="1035" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">🏁 주문 완료 (SCR-15) ➔ 6개월 위생 교체 알림톡 등록</text>
+  </g>
+</svg>

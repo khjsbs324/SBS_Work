@@ -1,0 +1,67 @@
+flowchart TD
+  %% 시작점
+  START([시작: 기업 담당자 B2B 플랫폼 접속 P-01]) --> STEP1[/1. 탐색: 3/5/10만원대 예산별 기프트 팩 조회 P-02~04/]
+
+  %% 탐색 및 분기
+  STEP1 --> DECISION1{경영진 대면 보고용<br>무료 샘플 필요 여부?}
+  DECISION1 -- "샘플 먼저 수령" --> SAMPLE[기업 무료 샘플 키트 신청 P-12]
+  SAMPLE --> SAMPLE_RECV[24시간 내 실물 패키지 퀵 수령 & 품의 승인]
+  SAMPLE_RECV --> STEP2
+
+  DECISION1 -- "본품 즉시 발주" --> STEP2[2. 선택: 5만원대 프리미엄 팩 수량 200개 입력 P-03]
+
+  %% 옵션 및 자수
+  STEP2 --> STEP3[3. 커스텀: 기업 로고 AI 업로드 P-05]
+  
+  STEP3 --> FILE_CHECK{로고 파일 형식<br>& 해상도 유효성?}
+  FILE_CHECK -- "비지원 포맷/저화질" --> LOGO_ERR[로고 오류 안내 & 디자이너 1:1 무료 벡터 보정]
+  LOGO_ERR --> STEP3
+
+  FILE_CHECK -- "정상 AI/PNG 파일" --> CANVAS[Canvas 실시간 금사/은사 자수 렌더링 M-03]
+  CANVAS --> STEP4[4. 메시지: CEO 감사 카드 & 맞춤 슬리브 설정 P-06]
+
+  %% 엑셀 일괄 배송
+  STEP4 --> STEP5[5. 배송 설정: 엑셀 주소록 일괄 업로드 P-07 / M-01]
+  STEP5 --> EXCEL_CHECK{엑셀 주소록<br>데이터 유효성 검증}
+
+  EXCEL_CHECK -- "우편번호/연락처 오류" --> EX01[EX-01 엑셀 오류 안내 & 화면 내 인라인 즉시 수정]
+  EX01 --> STEP5
+
+  EXCEL_CHECK -- "200명 주소 정상 파싱" --> STEP6[6. 견적 확인: 직인 날인 공식 견적서 PDF 1초 출력 P-10 / M-04]
+
+  %% 품의 및 결제
+  STEP6 --> QUOTE_CHECK{사내 품의 결재<br>즉시 진행 여부?}
+  QUOTE_CHECK -- "견적서 파일 저장 후 이탈" --> LEAVE[사내 결재 진행]
+  LEAVE --> RE_ENTRY[알림톡 링크 / 견적서 번호로 재진입]
+  RE_ENTRY --> STEP7
+
+  QUOTE_CHECK -- "즉시 발주" --> STEP7[7. 주문/결제: 사업자 세금계산서 신청 & 법인 결제 P-10]
+
+  %% 결제 및 세무 처리
+  STEP7 --> TAX_INPUT[사업자등록번호 & 담당자 이메일 입력]
+  TAX_INPUT --> SYS_TAX[시스템: 국세청 사업자 유효성 실시간 검증]
+  SYS_TAX --> PAY_METHOD{결제 수단 선택}
+  
+  PAY_METHOD -- "법인카드 분할 결제" --> PAY_INSTANT[1초 즉시 승인]
+  PAY_METHOD -- "가상계좌 / 세금계산서" --> PAY_VIRTUAL[전자세금계산서 자동 발행 예약]
+
+  PAY_INSTANT --> STEP8[8. 발주 완료: D-Day 납품 확약서 발급 P-08]
+  PAY_VIRTUAL --> STEP8
+
+  %% 사후 관리 및 ESG 리포트
+  STEP8 --> ESG_REPORT[ESG 탄소/플라스틱 절감 리포트 수령 P-11]
+  ESG_REPORT --> TRACKING[실시간 임직원 배송 트래킹 대시보드 P-09]
+  TRACKING --> END([종료: 전 임직원 100% 무비닐 ESG 선물 전달 완료])
+
+  %% 스타일 클래스
+  classDef startEnd fill:#1A365D,stroke:#0F294A,stroke-width:2px,color:#FFFFFF;
+  classDef action fill:#EBF3FA,stroke:#2B6CB0,stroke-width:1.5px,color:#1A365D;
+  classDef system fill:#E8F3F1,stroke:#4A7C72,stroke-width:1.5px,color:#1A3B34;
+  classDef branch fill:#FFF6ED,stroke:#D97706,stroke-width:1.5px,color:#92400E;
+  classDef error fill:#FEE2E2,stroke:#EF4444,stroke-width:1.5px,stroke-dasharray: 4 4,color:#991B1B;
+
+  class START,END startEnd;
+  class STEP1,STEP2,STEP3,STEP4,STEP5,STEP6,STEP7,STEP8,SAMPLE,SAMPLE_RECV,LEAVE,RE_ENTRY,TAX_INPUT,ESG_REPORT,TRACKING action;
+  class CANVAS,SYS_TAX,PAY_INSTANT,PAY_VIRTUAL system;
+  class DECISION1,FILE_CHECK,EXCEL_CHECK,QUOTE_CHECK,PAY_METHOD branch;
+  class LOGO_ERR,EX01 error;

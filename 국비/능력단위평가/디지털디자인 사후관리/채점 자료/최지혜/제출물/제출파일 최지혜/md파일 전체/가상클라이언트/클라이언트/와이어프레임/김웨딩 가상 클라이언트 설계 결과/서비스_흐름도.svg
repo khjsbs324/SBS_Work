@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 1220" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Malgun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 24px; font-weight: bold; fill: #1C2922; }
+      .subtitle { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 13px; fill: #6B7280; }
+      .flow-title { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 13px; font-weight: bold; fill: #1C2922; }
+      .flow-code { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 10px; font-weight: bold; letter-spacing: 0.5px; }
+      .flow-desc { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11px; fill: #4B5563; }
+      .branch-label { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11px; font-weight: bold; fill: #2E4036; }
+      .branch-err { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11px; font-weight: bold; fill: #DC2626; }
+      .legend-title { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 13px; font-weight: bold; fill: #1C2922; }
+      .legend-label { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 12px; fill: #374151; }
+      .step-badge { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11px; font-weight: bold; fill: #FFFFFF; }
+    </style>
+    
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <filter id="shadow-main" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#2E4036" flood-opacity="0.15"/>
+    </filter>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#7E8D7F"/>
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#C47A5A"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#DC2626"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="100%" height="100%" fill="#FAF9F6"/>
+
+  <!-- 헤더 -->
+  <g transform="translate(40, 35)">
+    <text class="title" x="0" y="0">🔄 플로뜰리에 (Flottelier) - 김웨딩 서비스 흐름도 (Service User Flow)</text>
+    <text class="subtitle" x="0" y="24">탐색 · D-Day 진단 · 15장 패키지 검증 · 실시간 Canvas 자수 · 보자기 예단 세트 · 2곳 분할 직배송 완결 여정</text>
+  </g>
+
+  <!-- 1. 시작 노드 -->
+  <g transform="translate(500, 80)" filter="url(#shadow-main)">
+    <rect width="340" height="46" rx="23" fill="#2E4036"/>
+    <text class="step-badge" x="170" y="28" text-anchor="middle" font-size="14px">🟢 시작: 플로뜰리에 웨딩 아틀리에 접속</text>
+  </g>
+
+  <line x1="670" y1="126" x2="670" y2="156" stroke="#7E8D7F" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 2. P-WD-01: 웨딩 메인 -->
+  <g transform="translate(490, 156)" filter="url(#shadow)">
+    <rect width="360" height="68" rx="6" fill="#FFFFFF" stroke="#7E8D7F" stroke-width="1.5"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#2E4036"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">P-WD-01</text>
+    <text class="flow-title" x="84" y="24">웨딩 메인 &amp; 큐레이션 허브</text>
+    <text class="flow-desc" x="12" y="46">· 4차 정련 100% 완제품 뱃지 &amp; 3종 셀렉터</text>
+    <text class="flow-desc" x="12" y="60" fill="#C47A5A">· [웨딩 D-Day 안심 배송 계산기] 클릭</text>
+  </g>
+
+  <line x1="670" y1="224" x2="670" y2="254" stroke="#7E8D7F" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 3. M-WD-02: D-Day 배송 계산기 -->
+  <g transform="translate(490, 254)" filter="url(#shadow)">
+    <rect width="360" height="68" rx="6" fill="#FFF8F4" stroke="#C47A5A" stroke-width="1.5"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#C47A5A"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">M-WD-02</text>
+    <text class="flow-title" x="84" y="24" fill="#8C4320">웨딩 D-Day 안심 배송 계산기</text>
+    <text class="flow-desc" x="12" y="46">· 예식일(Wedding Day) 캘린더 선택</text>
+    <text class="flow-desc" x="12" y="60">· 자수 제작(2일) + 택배(2일) 총 4일 소요 산출</text>
+  </g>
+
+  <line x1="670" y1="322" x2="670" y2="352" stroke="#7E8D7F" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 4. D-Day 판단 분기 (마름모형 다각형) -->
+  <g transform="translate(560, 352)" filter="url(#shadow)">
+    <polygon points="110,0 220,44 110,88 0,44" fill="#D8E2DC" stroke="#9CAB9E" stroke-width="1.5"/>
+    <text class="flow-title" x="110" y="40" text-anchor="middle" font-size="12px">예식일까지 남은 일수</text>
+    <text class="flow-code" x="110" y="56" text-anchor="middle" fill="#2E4036">D-Day 여유도 체크</text>
+  </g>
+
+  <!-- D-Day 정상 연결선 (아래로) -->
+  <line x1="670" y1="440" x2="670" y2="480" stroke="#7E8D7F" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="branch-label" x="680" y="464">D-7 이상 (정상/충분)</text>
+
+  <!-- D-Day 초임박 분기 (왼쪽으로: EX-WD-01) -->
+  <path d="M 560 396 L 220 396 L 220 440" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow-red)" fill="none"/>
+  <text class="branch-err" x="340" y="388">D-3 이내 (초임박)</text>
+
+  <g transform="translate(80, 440)" filter="url(#shadow)">
+    <rect width="280" height="74" rx="6" fill="#FDF2F2" stroke="#F87171" stroke-width="1.5"/>
+    <text class="flow-code" x="12" y="20" fill="#DC2626">EX-WD-01. 예식일 초임박 긴급 안내 [가정]</text>
+    <text class="flow-desc" x="12" y="42">· 택배 배송 마감 ➔ 당일 퀵서비스 배송 전환</text>
+    <text class="flow-desc" x="12" y="60">· 본사 쇼룸 직수령 픽업 안내 &amp; 전담 유선 상담</text>
+  </g>
+  <path d="M 220 514 L 220 540 L 490 540" stroke="#7E8D7F" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- 5. P-WD-02: 신혼 15장 풀 패키지 상세 -->
+  <g transform="translate(490, 480)" filter="url(#shadow)">
+    <rect width="360" height="88" rx="6" fill="#FFFFFF" stroke="#C47A5A" stroke-width="2"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#C47A5A"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">P-WD-02</text>
+    <text class="flow-title" x="84" y="24" fill="#C47A5A">신혼 15장 풀 패키지 상세 (★)</text>
+    <text class="flow-desc" x="12" y="48">· 15장 풀 구성 (데일리 8 + 바스 4 + 매트 1 + 와입스 2)</text>
+    <text class="flow-desc" x="12" y="66">· 500% HD 확대 뷰어 &amp; 25% 혼수 할인 견적 확인</text>
+    <text class="flow-desc" x="12" y="80" fill="#2E4036">· [부부 이니셜 &amp; 결혼기념일 자수 커스텀] 클릭</text>
+  </g>
+
+  <line x1="670" y1="568" x2="670" y2="600" stroke="#7E8D7F" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 6. M-WD-01: 실시간 Canvas 웨딩 자수 시뮬레이터 -->
+  <g transform="translate(490, 600)" filter="url(#shadow)">
+    <rect width="360" height="96" rx="6" fill="#FFF8F4" stroke="#C47A5A" stroke-width="1.5"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#C47A5A"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">M-WD-01</text>
+    <text class="flow-title" x="84" y="24" fill="#8C4320">Canvas 웨딩 자수 시뮬레이터</text>
+    <text class="flow-desc" x="12" y="48">· 영문 필기체 3종 폰트 픽커</text>
+    <text class="flow-desc" x="12" y="66">· 신랑·신부 영문명 &amp; 예식일(2026.10.24) 입력</text>
+    <text class="flow-desc" x="12" y="84" fill="#C47A5A">· 샴페인골드 실 스티치 0.05초 Canvas 실시간 합성</text>
+  </g>
+
+  <!-- 자수 글자수 초과 분기 (우측 루프) -->
+  <path d="M 850 648 L 980 648 L 980 600 L 860 600" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow-red)" fill="none"/>
+  <text class="branch-err" x="870" y="590">20자 초과 시 인라인 경고 재입력</text>
+
+  <line x1="670" y1="696" x2="670" y2="728" stroke="#7E8D7F" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 7. P-WD-04: 양가 부모님 소창 보자기 예단 선물관 -->
+  <g transform="translate(490, 728)" filter="url(#shadow)">
+    <rect width="360" height="90" rx="6" fill="#FFFFFF" stroke="#C47A5A" stroke-width="2"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#C47A5A"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">P-WD-04</text>
+    <text class="flow-title" x="84" y="24" fill="#C47A5A">양가 소창 보자기 예단관 (★)</text>
+    <text class="flow-desc" x="12" y="48">· 순면 소창 보자기 수국 매듭 360도 뷰어 (M-WD-04)</text>
+    <text class="flow-desc" x="12" y="66">· 양가 부모님 헌정 감사 웰컴 카드 문구 작성</text>
+    <text class="flow-desc" x="12" y="82" fill="#2B6CB0">· 시댁/친정 2곳 분할 직배송 플래그 활성화</text>
+  </g>
+
+  <line x1="670" y1="818" x2="670" y2="850" stroke="#7E8D7F" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 8. P-WD-07: 2곳 분할 직배송 주문서 -->
+  <g transform="translate(490, 850)" filter="url(#shadow)">
+    <rect width="360" height="106" rx="6" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="2"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#2B6CB0"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">P-WD-07</text>
+    <text class="flow-title" x="84" y="24" fill="#2B6CB0">2곳 분할 직배송 주문서 (★)</text>
+    <text class="flow-desc" x="12" y="48">· 1번(시댁) 주소 / 2번(친정) 주소 분할 입력</text>
+    <text class="flow-desc" x="12" y="66" fill="#2B6CB0">· [가격표/영수증 100% 미동봉 보증] 기본 체크</text>
+    <text class="flow-desc" x="12" y="84">· 예식 D-Day 안심 수령 확약일 자동 표기</text>
+    <text class="flow-desc" x="12" y="98">· N Pay / 카카오페이 1초 간편결제 승인</text>
+  </g>
+
+  <!-- 분할 배송 주소 오류 분기 (좌측 루프: EX-WD-02) -->
+  <path d="M 490 903 L 260 903 L 260 850 L 480 850" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow-red)" fill="none"/>
+  <text class="branch-err" x="270" y="840">EX-WD-02: 도로명 주소 오류 인라인 교정 [가정]</text>
+
+  <line x1="670" y1="956" x2="670" y2="988" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- 9. P-WD-08: 주문 완료 & D-Day 현황 -->
+  <g transform="translate(490, 988)" filter="url(#shadow)">
+    <rect width="360" height="88" rx="6" fill="#FFFFFF" stroke="#7E8D7F" stroke-width="1.5"/>
+    <rect x="12" y="10" width="62" height="18" rx="3" fill="#2E4036"/>
+    <text class="step-badge" x="43" y="23" text-anchor="middle" font-size="10px">P-WD-08</text>
+    <text class="flow-title" x="84" y="24">웨딩 주문 완료 &amp; D-Day 현황</text>
+    <text class="flow-desc" x="12" y="48">· 실시간 자수 각인(D+2) 공정 진행바 트래커</text>
+    <text class="flow-desc" x="12" y="66">· 시댁/친정 2곳 개별 송장 번호 자동 발급</text>
+    <text class="flow-desc" x="12" y="80" fill="#2E4036">· 카카오톡 알림톡 안심 모바일 주문서 전송</text>
+  </g>
+
+  <line x1="670" y1="1076" x2="670" y2="1108" stroke="#7E8D7F" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 10. 종료 노드 -->
+  <g transform="translate(500, 1108)" filter="url(#shadow-main)">
+    <rect width="340" height="46" rx="23" fill="#2E4036"/>
+    <text class="step-badge" x="170" y="28" text-anchor="middle" font-size="14px">🏁 여정 완료: 안심 혼수 준비 완료</text>
+  </g>
+
+  <!-- ==================== 좌우 보조 액션 박스 ==================== -->
+  <!-- 우측: 사후 액션 (위시리스트 & 수납 가이드) -->
+  <g transform="translate(940, 988)" filter="url(#shadow)">
+    <rect width="320" height="96" rx="6" fill="#FAF8F5" stroke="#7E8D7F" stroke-width="1.2"/>
+    <text class="flow-code" x="14" y="22" fill="#7E8D7F">사후 연계 액션 (Post-Actions)</text>
+    <text class="flow-title" x="14" y="42">P-WD-06. 혼수 위시리스트 공유</text>
+    <text class="flow-desc" x="14" y="60">· 모바일 청첩장 링크 생성 &amp; 하객 선물 펀딩</text>
+    <text class="flow-title" x="14" y="78">P-WD-05. 욕실 수납 셋업 가이드</text>
+    <text class="flow-desc" x="14" y="92">· 신혼집 상부장 롤 접기 3단계 모션 확인</text>
+  </g>
+  <path d="M 850 1032 L 930 1032" stroke="#7E8D7F" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- ==================== 범례 ==================== -->
+  <g transform="translate(40, 1108)" filter="url(#shadow)">
+    <rect width="420" height="66" rx="6" fill="#FFFFFF" stroke="#E5E7EB"/>
+    <text class="legend-title" x="12" y="20">🎨 서비스 흐름도 기호 범례 (Legend)</text>
+    <g transform="translate(12, 32)">
+      <rect width="14" height="14" rx="7" fill="#2E4036"/>
+      <text class="legend-label" x="20" y="12">시작 / 종료</text>
+
+      <rect x="90" y="0" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#7E8D7F"/>
+      <text class="legend-label" x="110" y="12">핵심 화면</text>
+
+      <rect x="180" y="0" width="14" height="14" rx="2" fill="#FFF8F4" stroke="#C47A5A"/>
+      <text class="legend-label" x="200" y="12">인터랙션 모달</text>
+
+      <rect x="300" y="0" width="14" height="14" rx="2" fill="#FDF2F2" stroke="#F87171"/>
+      <text class="legend-label" x="320" y="12">예외 / 오류 [가정]</text>
+    </g>
+  </g>
+</svg>

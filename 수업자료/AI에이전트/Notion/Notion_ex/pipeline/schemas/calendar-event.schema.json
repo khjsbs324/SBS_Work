@@ -4,7 +4,7 @@
   "type": "object",
   "required": ["id", "title", "start", "end"],
   "properties": {
-    "id": { "type": "string", "description": "캘린더 원본 이벤트 ID (샘플 데이터는 sample-<n>)" },
+    "id": { "type": "string", "description": "이벤트 ID (텍스트 입력은 text-<n>, 샘플 데이터는 sample-<n>)" },
     "title": { "type": "string", "description": "Notion 프로젝트 이름과 매핑되는 제목" },
     "start": { "type": "string", "format": "date-time" },
     "end": { "type": "string", "format": "date-time" },

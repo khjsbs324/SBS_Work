@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 980" width="100%" height="100%" style="background-color: #FAFDFD; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', 'Noto Sans KR', sans-serif;">
+  <defs>
+    <filter id="box-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <linearGradient id="grad-root-tea" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A3B30"/>
+      <stop offset="100%" stop-color="#1A261F"/>
+    </linearGradient>
+    <linearGradient id="grad-group-tea" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F2"/>
+      <stop offset="100%" stop-color="#F2ECE4"/>
+    </linearGradient>
+    <marker id="sitemap-arrow-tea" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#8E949A"/>
+    </marker>
+  </defs>
+
+  <!-- Title Header Banner -->
+  <g transform="translate(60, 30)">
+    <rect width="1320" height="70" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#box-shadow)"/>
+    <text x="30" y="38" font-size="20" font-weight="bold" fill="#2A3B30">🗺️ 플로뜰리에 TEA &amp; COFFEE 사이트맵 구조도</text>
+    <text x="30" y="58" font-size="13" fill="#64748B">페르소나: 김티타임(고은서) | Zero-Lint 글라스 타월 &amp; 바리스타 스팀완드 와입스 &amp; B2B 카페 도매 플랫폼</text>
+  </g>
+
+  <!-- Root Node (SCR-01) -->
+  <g transform="translate(520, 130)" filter="url(#box-shadow)">
+    <rect width="400" height="54" rx="27" fill="url(#grad-root-tea)" stroke="#1A261F" stroke-width="2"/>
+    <text x="200" y="33" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">☕ HOME: 플로뜰리에 TEA &amp; COFFEE (SCR-01)</text>
+  </g>
+
+  <!-- Main Trunk Line -->
+  <path d="M 720 184 L 720 220" stroke="#8E949A" stroke-width="2" fill="none"/>
+  <path d="M 160 220 L 1280 220" stroke="#8E949A" stroke-width="2" fill="none"/>
+
+  <!-- 1차 메뉴 그룹 (7대 영역) -->
+
+  <!-- Column 1: TEA & GLASS LINEN -->
+  <path d="M 160 220 L 160 250" stroke="#8E949A" stroke-width="2" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(65, 250)" filter="url(#box-shadow)">
+    <rect width="190" height="42" rx="8" fill="url(#grad-group-tea)" stroke="#C47A5A" stroke-width="2"/>
+    <text x="95" y="26" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">1. TEA &amp; GLASS LINEN</text>
+  </g>
+  <!-- SCR-02 -->
+  <path d="M 160 292 L 160 320" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(60, 320)" filter="url(#box-shadow)">
+    <rect width="200" height="68" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="24" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">SCR-02: 글라스 티 타월</text>
+    <text x="100" y="42" font-size="10" fill="#64748B" text-anchor="middle">40x60cm / 보풀 제로</text>
+    <text x="100" y="56" font-size="10" fill="#C47A5A" text-anchor="middle">+ MODAL-01 광택 비교</text>
+  </g>
+  <!-- SCR-03 -->
+  <path d="M 160 388 L 160 415" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(60, 415)" filter="url(#box-shadow)">
+    <rect width="200" height="58" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="24" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">SCR-03: 스팀완드 와입스</text>
+    <text x="100" y="42" font-size="10" fill="#64748B" text-anchor="middle">100℃ 고온 내열 5장 세트</text>
+  </g>
+
+  <!-- Column 2: CAFE ATELIER -->
+  <path d="M 345 220 L 345 250" stroke="#8E949A" stroke-width="2" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(255, 250)" filter="url(#box-shadow)">
+    <rect width="180" height="42" rx="8" fill="url(#grad-group-tea)" stroke="#C47A5A" stroke-width="2"/>
+    <text x="90" y="26" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">2. CAFE ATELIER</text>
+  </g>
+  <!-- SCR-04 -->
+  <path d="M 345 292 L 345 320" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(245, 320)" filter="url(#box-shadow)">
+    <rect width="200" height="68" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="24" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">SCR-04: 카페 로고 자수</text>
+    <text x="100" y="42" font-size="10" fill="#64748B" text-anchor="middle">카페 BI / 심볼 각인</text>
+    <text x="100" y="56" font-size="10" fill="#D97706" text-anchor="middle">+ MODAL-02 시안 확정</text>
+  </g>
+
+  <!-- Column 3: B2B WHOLESALE -->
+  <path d="M 530 220 L 530 250" stroke="#8E949A" stroke-width="2" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(440, 250)" filter="url(#box-shadow)">
+    <rect width="180" height="42" rx="8" fill="#EBF3FA" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="90" y="26" font-size="12" font-weight="bold" fill="#1A365D" text-anchor="middle">3. B2B WHOLESALE</text>
+  </g>
+  <!-- SCR-05 -->
+  <path d="M 530 292 L 530 320" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(430, 320)" filter="url(#box-shadow)">
+    <rect width="200" height="68" rx="8" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="1.5"/>
+    <text x="100" y="24" font-size="12" font-weight="bold" fill="#1A365D" text-anchor="middle">SCR-05: 도매 발주 센터</text>
+    <text x="100" y="42" font-size="10" fill="#64748B" text-anchor="middle">20/50장 번들 최대 35%</text>
+    <text x="100" y="56" font-size="10" fill="#2B6CB0" text-anchor="middle">PDF 직인 견적서 1초 생성</text>
+  </g>
+
+  <!-- Column 4: SAFETY & PROOF -->
+  <path d="M 720 220 L 720 250" stroke="#8E949A" stroke-width="2" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(630, 250)" filter="url(#box-shadow)">
+    <rect width="180" height="42" rx="8" fill="url(#grad-group-tea)" stroke="#C47A5A" stroke-width="2"/>
+    <text x="90" y="26" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">4. SAFETY &amp; PROOF</text>
+  </g>
+  <!-- SCR-06 -->
+  <path d="M 720 292 L 720 320" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(620, 320)" filter="url(#box-shadow)">
+    <rect width="200" height="68" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="24" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">SCR-06: 식품 위생 검증실</text>
+    <text x="100" y="42" font-size="10" fill="#64748B" text-anchor="middle">KTR 식품용 기구 안전성</text>
+    <text x="100" y="56" font-size="10" fill="#16A34A" text-anchor="middle">KATRI 무보풀 시험성적서</text>
+  </g>
+
+  <!-- Column 5: TEA RITUAL & CARE -->
+  <path d="M 905 220 L 905 250" stroke="#8E949A" stroke-width="2" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(815, 250)" filter="url(#box-shadow)">
+    <rect width="180" height="42" rx="8" fill="url(#grad-group-tea)" stroke="#C47A5A" stroke-width="2"/>
+    <text x="90" y="26" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">5. TEA RITUAL &amp; CARE</text>
+  </g>
+  <!-- SCR-07 -->
+  <path d="M 905 292 L 905 320" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(805, 320)" filter="url(#box-shadow)">
+    <rect width="200" height="68" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="24" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">SCR-07: 과탄산 세척 팁</text>
+    <text x="100" y="42" font-size="10" fill="#64748B" text-anchor="middle">차/커피 얼룩 완벽 제거법</text>
+    <text x="100" y="56" font-size="10" fill="#2B6CB0" text-anchor="middle">카페 위생 매뉴얼 PDF</text>
+  </g>
+
+  <!-- Column 6: TRIAL -->
+  <path d="M 1090 220 L 1090 250" stroke="#8E949A" stroke-width="2" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(1000, 250)" filter="url(#box-shadow)">
+    <rect width="180" height="42" rx="8" fill="url(#grad-group-tea)" stroke="#C47A5A" stroke-width="2"/>
+    <text x="90" y="26" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">6. TRIAL</text>
+  </g>
+  <!-- SCR-08 -->
+  <path d="M 1090 292 L 1090 320" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(990, 320)" filter="url(#box-shadow)">
+    <rect width="200" height="68" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="24" font-size="12" font-weight="bold" fill="#232527" text-anchor="middle">SCR-08: 1장 안심 체험팩</text>
+    <text x="100" y="42" font-size="10" fill="#64748B" text-anchor="middle">3,000원 배송비 체험</text>
+    <text x="100" y="56" font-size="10" fill="#16A34A" text-anchor="middle">도매 주문 시 100% 환급</text>
+  </g>
+
+  <!-- Column 7: ORDER -->
+  <path d="M 1280 220 L 1280 250" stroke="#8E949A" stroke-width="2" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(1190, 250)" filter="url(#box-shadow)">
+    <rect width="180" height="42" rx="8" fill="#EBF3FA" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="90" y="26" font-size="12" font-weight="bold" fill="#1A365D" text-anchor="middle">7. B2B ORDER</text>
+  </g>
+  <!-- SCR-09 -->
+  <path d="M 1280 292 L 1280 320" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(1180, 320)" filter="url(#box-shadow)">
+    <rect width="200" height="48" rx="8" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="1.5"/>
+    <text x="100" y="22" font-size="12" font-weight="bold" fill="#1A365D" text-anchor="middle">SCR-09: B2B 장바구니</text>
+    <text x="100" y="38" font-size="10" fill="#64748B" text-anchor="middle">도매 번들 + 로고 시안</text>
+  </g>
+  <!-- SCR-10 -->
+  <path d="M 1280 368 L 1280 395" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(1180, 395)" filter="url(#box-shadow)">
+    <rect width="200" height="48" rx="8" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="1.5"/>
+    <text x="100" y="22" font-size="12" font-weight="bold" fill="#1A365D" text-anchor="middle">SCR-10: B2B 결제</text>
+    <text x="100" y="38" font-size="10" fill="#64748B" text-anchor="middle">세금계산서 / 법인결제</text>
+  </g>
+  <!-- SCR-11 -->
+  <path d="M 1280 443 L 1280 470" stroke="#8E949A" stroke-width="1.5" marker-end="url(#sitemap-arrow-tea)" fill="none"/>
+  <g transform="translate(1180, 470)" filter="url(#box-shadow)">
+    <rect width="200" height="48" rx="8" fill="#FFFFFF" stroke="#16A34A" stroke-width="1.5"/>
+    <text x="100" y="22" font-size="12" font-weight="bold" fill="#14532D" text-anchor="middle">SCR-11: 발주 완료</text>
+    <text x="100" y="38" font-size="10" fill="#16A34A" text-anchor="middle">D-Day 납품 확약서 발급</text>
+  </g>
+
+  <!-- Bottom Global Footer Note -->
+  <g transform="translate(60, 560)">
+    <rect width="1320" height="60" rx="10" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="30" y="26" font-size="12" font-weight="bold" fill="#334155">💡 카페 B2B 특화 기능 안내</text>
+    <text x="30" y="44" font-size="11" fill="#64748B">GNB 헤더: 세금계산서 즉시 발행 띠배너, 대량 도매 계산기, 견적함 | 플로팅: B2B 도매센터(SCR-05), 카페 로고 자수(SCR-04), 3천원 체험팩(SCR-08) | 푸터: KTR 식품위생 성적서</text>
+  </g>
+</svg>

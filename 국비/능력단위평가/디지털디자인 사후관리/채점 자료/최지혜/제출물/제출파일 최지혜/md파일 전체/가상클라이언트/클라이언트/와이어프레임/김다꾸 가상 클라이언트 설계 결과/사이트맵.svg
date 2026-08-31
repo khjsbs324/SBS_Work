@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%">
+  <style>
+    .bg { fill: #FAFDFD; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 26px; font-weight: bold; fill: #232527; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; fill: #585D62; }
+    
+    .box-root { fill: #FAF7F2; stroke: #232527; stroke-width: 3; rx: 8; filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.06)); }
+    .box-main { fill: #FFFFFF; stroke: #7E8D7F; stroke-width: 2; rx: 6; }
+    .box-shop { fill: #FAF7F2; stroke: #C47A5A; stroke-width: 2; rx: 6; }
+    .box-modal { fill: #FFF9F5; stroke: #C47A5A; stroke-width: 2; stroke-dasharray: 4 4; rx: 6; }
+    .box-my { fill: #F4F8F5; stroke: #2A2624; stroke-width: 2; rx: 6; }
+    
+    .node-title { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 15px; font-weight: bold; fill: #232527; text-anchor: middle; }
+    .node-code { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 11px; font-weight: bold; fill: #C47A5A; text-anchor: middle; }
+    .node-desc { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 12px; fill: #585D62; text-anchor: middle; }
+    
+    .line { stroke: #8E949A; stroke-width: 2; fill: none; }
+    .line-active { stroke: #C47A5A; stroke-width: 2.5; fill: none; }
+    .arrow { fill: #C47A5A; }
+    .group-label { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; font-weight: bold; fill: #2A2624; }
+  </style>
+
+  <!-- Background -->
+  <rect class="bg" width="1200" height="900" />
+
+  <!-- Title Banner -->
+  <text x="600" y="45" class="title" text-anchor="middle">플로뜰리에 (Flottelier) 계층형 사이트맵 (Sitemap Architecture)</text>
+  <text x="600" y="72" class="subtitle" text-anchor="middle">김다꾸 페르소나 니즈 (4차 정련 보증 · 겹수 비교 · 자수 프리뷰 · 선물 포장) 반영 정보 구조</text>
+
+  <!-- ROOT NODE -->
+  <g transform="translate(480, 100)">
+    <rect class="box-root" width="240" height="60" />
+    <text x="120" y="28" class="node-title">플로뜰리에 (Flottelier)</text>
+    <text x="120" y="46" class="node-code">DAKKU CUSTOM COMMERCE</text>
+  </g>
+
+  <!-- Connectors from ROOT -->
+  <path class="line" d="M 600 160 L 600 190" />
+  <path class="line" d="M 600 190 L 170 190 L 170 230" />
+  <path class="line" d="M 600 190 L 450 190 L 450 230" />
+  <path class="line" d="M 600 190 L 750 190 L 750 230" />
+  <path class="line" d="M 600 190 L 1030 190 L 1030 230" />
+
+  <!-- GROUP 1: MAIN & BRAND -->
+  <text x="80" y="220" class="group-label">01. 메인 &amp; 브랜드</text>
+  <g transform="translate(60, 235)">
+    <!-- P-01 -->
+    <rect class="box-main" width="220" height="70" />
+    <text x="110" y="25" class="node-code">P-01 | DEPTH 1</text>
+    <text x="110" y="43" class="node-title">메인 페이지</text>
+    <text x="110" y="58" class="node-desc">수채화 잉크 / 4차정련 뱃지</text>
+
+    <!-- P-02 -->
+    <g transform="translate(0, 95)">
+      <rect class="box-main" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-02 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">4차 정련 스토리</text>
+      <text x="110" y="58" class="node-desc">전통 4차 삶음 / 4無 공정</text>
+    </g>
+
+    <!-- P-03 -->
+    <g transform="translate(0, 190)">
+      <rect class="box-main" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-03 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">소창 길들이기 가이드</text>
+      <text x="110" y="58" class="node-desc">세탁 전후 수축 1:1 비교</text>
+    </g>
+  </g>
+
+  <!-- GROUP 2: COMMERCE & EXPERIENCE -->
+  <text x="360" y="220" class="group-label">02. 커머스 &amp; 체험팩</text>
+  <g transform="translate(340, 235)">
+    <!-- P-04 -->
+    <rect class="box-shop" width="220" height="70" />
+    <text x="110" y="25" class="node-code">P-04 | DEPTH 1</text>
+    <text x="110" y="43" class="node-title">전체 상품 카탈로그</text>
+    <text x="110" y="58" class="node-desc">2/3/4겹 용도 필터 카탈로그</text>
+
+    <!-- P-05 -->
+    <g transform="translate(0, 95)">
+      <rect class="box-shop" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-05 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">상품 상세 페이지</text>
+      <text x="110" y="58" class="node-desc">정련뱃지 / 자수 프리뷰</text>
+    </g>
+
+    <!-- P-06 -->
+    <g transform="translate(0, 190)">
+      <rect class="box-shop" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-06 | DEPTH 3</text>
+      <text x="110" y="43" class="node-title">1장 체험팩 100% 환급</text>
+      <text x="110" y="58" class="node-desc">3,000원 체험 / 환급 쿠폰</text>
+    </g>
+
+    <!-- P-07 -->
+    <g transform="translate(0, 285)">
+      <rect class="box-shop" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-07 | DEPTH 3</text>
+      <text x="110" y="43" class="node-title">커스텀 자수 &amp; 답례품</text>
+      <text x="110" y="58" class="node-desc">Canvas 자수 / 단가 계산기</text>
+    </g>
+  </g>
+
+  <!-- GROUP 3: POP-UP & MEDIA -->
+  <text x="660" y="220" class="group-label">03. 팝업스토어 &amp; 미디어</text>
+  <g transform="translate(640, 235)">
+    <!-- P-08 -->
+    <rect class="box-main" width="220" height="70" />
+    <text x="110" y="25" class="node-code">P-08 | DEPTH 1</text>
+    <text x="110" y="43" class="node-title">성수 팝업스토어 안내</text>
+    <text x="110" y="58" class="node-desc">사전예약 M-01 / 카카오맵</text>
+
+    <!-- P-09 -->
+    <g transform="translate(0, 95)">
+      <rect class="box-main" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-09 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">에디토리얼 룩북</text>
+      <text x="110" y="58" class="node-desc">1-Click 장바구니 연출 컷</text>
+    </g>
+
+    <!-- P-10 -->
+    <g transform="translate(0, 190)">
+      <rect class="box-main" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-10 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">SNS 언박싱 &amp; 리뷰</text>
+      <text x="110" y="58" class="node-desc">100% 무비닐 포장 후기</text>
+    </g>
+  </g>
+
+  <!-- GROUP 4: UTILITIES & MY PAGE -->
+  <text x="940" y="220" class="group-label">04. 마이페이지 &amp; 재구매</text>
+  <g transform="translate(920, 235)">
+    <!-- P-11 -->
+    <rect class="box-my" width="220" height="70" />
+    <text x="110" y="25" class="node-code">P-11 | DEPTH 1</text>
+    <text x="110" y="43" class="node-title">장바구니 &amp; 1초 결제</text>
+    <text x="110" y="58" class="node-desc">N Pay 결제 / 무비닐 eco</text>
+
+    <!-- P-12 -->
+    <g transform="translate(0, 95)">
+      <rect class="box-my" width="220" height="70" />
+      <text x="110" y="25" class="node-code">P-12 | DEPTH 2</text>
+      <text x="110" y="43" class="node-title">마이페이지 &amp; 재구매</text>
+      <text x="110" y="58" class="node-desc">교체주기 알림 / 1초 재주문</text>
+    </g>
+  </g>
+
+  <!-- MODAL OVERLAY SECTION -->
+  <text x="80" y="620" class="group-label">05. 레이어드 모달 시스템 (Modal Overlays)</text>
+  <g transform="translate(60, 640)">
+    <!-- M-01 -->
+    <rect class="box-modal" width="340" height="75" />
+    <text x="170" y="25" class="node-code">MODAL M-01</text>
+    <text x="170" y="45" class="node-title">성수 팝업 사전예약 모달</text>
+    <text x="170" y="62" class="node-desc">타임슬롯 14:00 (3석 남음) &amp; 카카오 알림톡</text>
+
+    <!-- M-02 -->
+    <g transform="translate(370, 0)">
+      <rect class="box-modal" width="340" height="75" />
+      <text x="170" y="25" class="node-code">MODAL M-02</text>
+      <text x="170" y="45" class="node-title">KC 공인 성적서 원문 모달</text>
+      <text x="170" y="62" class="node-desc">KOTITI 100% 무형광 200% HD 확대 &amp; PDF</text>
+    </g>
+
+    <!-- M-03 -->
+    <g transform="translate(740, 0)">
+      <rect class="box-modal" width="340" height="75" />
+      <text x="170" y="25" class="node-code">MODAL M-03</text>
+      <text x="170" y="45" class="node-title">실시간 자수 프리뷰 모달</text>
+      <text x="170" y="62" class="node-desc">Canvas 폰트 / 실 색상 / 위치 렌더링</text>
+    </g>
+  </g>
+
+  <!-- Footer Legend -->
+  <g transform="translate(60, 770)">
+    <rect fill="#FFFFFF" stroke="#E6E1DA" width="1080" height="60" rx="6" />
+    <text x="30" y="35" class="node-desc" text-anchor="start">● 녹색 테두리: 브랜드 스토리</text>
+    <text x="300" y="35" class="node-desc" text-anchor="start">● 테라코타 테두리: 핵심 커머스</text>
+    <text x="580" y="35" class="node-desc" text-anchor="start">-- 점선 테두리: 레이어드 모달</text>
+    <text x="840" y="35" class="node-desc" text-anchor="start">● 딥차콜 테두리: 마이페이지 &amp; 재구매</text>
+  </g>
+</svg>

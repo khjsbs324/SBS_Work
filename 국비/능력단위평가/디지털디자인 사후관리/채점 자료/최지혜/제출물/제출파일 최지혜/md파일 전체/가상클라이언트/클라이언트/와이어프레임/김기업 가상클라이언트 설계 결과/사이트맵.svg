@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #FAFDFD; }
+      .title { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 700; font-size: 22px; fill: #1A3B34; }
+      .subtitle { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-size: 13px; fill: #585D62; }
+      .root-node { fill: #1A365D; stroke: #0F294A; stroke-width: 2px; rx: 8px; }
+      .root-text { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 700; font-size: 16px; fill: #FFFFFF; text-anchor: middle; }
+      .gnb-node { fill: #EBF3FA; stroke: #2B6CB0; stroke-width: 2px; rx: 6px; }
+      .gnb-text { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 700; font-size: 13px; fill: #1A365D; text-anchor: middle; }
+      .page-node { fill: #FFFFFF; stroke: #DCE1E1; stroke-width: 1.5px; rx: 5px; }
+      .page-title { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 600; font-size: 12px; fill: #232527; }
+      .page-code { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 700; font-size: 10px; fill: #2B6CB0; }
+      .page-desc { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-size: 10px; fill: #7E8D7F; }
+      .modal-node { fill: #FFF6ED; stroke: #D97706; stroke-width: 1.5px; rx: 5px; stroke-dasharray: 3 3; }
+      .modal-text { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 600; font-size: 11px; fill: #92400E; }
+      .ex-node { fill: #FEE2E2; stroke: #EF4444; stroke-width: 1.5px; rx: 5px; stroke-dasharray: 3 3; }
+      .ex-text { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-weight: 600; font-size: 11px; fill: #991B1B; }
+      .line { stroke: #2B6CB0; stroke-width: 1.5px; fill: none; }
+      .modal-line { stroke: #D97706; stroke-width: 1.2px; stroke-dasharray: 4 4; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="920" class="bg" />
+
+  <!-- Title Header -->
+  <text x="50" y="45" class="title">🗺️ 플로뜰리에 (Flottelier) - 김기업 B2B 사이트맵 (Sitemap v3.0)</text>
+  <text x="50" y="70" class="subtitle">기업 명절/창립기념일 ESG 친환경 기프트 &amp; 로고 자수 &amp; 엑셀 일괄 배송 B2B 특판 플랫폼</text>
+
+  <!-- ROOT NODE -->
+  <rect x="425" y="100" width="350" height="45" class="root-node" />
+  <text x="600" y="128" class="root-text">플로뜰리에 B2B ENTERPRISE 센터</text>
+
+  <!-- GNB NODES (5 Columns) -->
+  <!-- Col 1: B2B 메인 -->
+  <line x1="600" y1="145" x2="140" y2="190" class="line" />
+  <rect x="40" y="190" width="200" height="40" class="gnb-node" />
+  <text x="140" y="215" class="gnb-text">01. 메인 (P-01)</text>
+
+  <!-- Col 2: 예산별 기프트 -->
+  <line x1="600" y1="145" x2="370" y2="190" class="line" />
+  <rect x="270" y="190" width="200" height="40" class="gnb-node" />
+  <text x="370" y="215" class="gnb-text">02. 예산별 기프트 (P-02~04)</text>
+
+  <!-- Col 3: 로고 자수 &amp; 슬리브 -->
+  <line x1="600" y1="145" x2="600" y2="190" class="line" />
+  <rect x="500" y="190" width="200" height="40" class="gnb-node" />
+  <text x="600" y="215" class="gnb-text">03. 로고 &amp; CEO 카드 (P-05~06)</text>
+
+  <!-- Col 4: 엑셀 배송 &amp; 납기 -->
+  <line x1="600" y1="145" x2="830" y2="190" class="line" />
+  <rect x="730" y="190" width="200" height="40" class="gnb-node" />
+  <text x="830" y="215" class="gnb-text">04. 엑셀 배송 &amp; 납기 (P-07~09)</text>
+
+  <!-- Col 5: 견적 &amp; ESG 실증 -->
+  <line x1="600" y1="145" x2="1060" y2="190" class="line" />
+  <rect x="960" y="190" width="200" height="40" class="gnb-node" />
+  <text x="1060" y="215" class="gnb-text">05. 견적 &amp; ESG 실증 (P-10~12)</text>
+
+  <!-- COLUMN 1 SUBPAGES -->
+  <line x1="140" y1="230" x2="140" y2="270" class="line" />
+  <rect x="40" y="270" width="200" height="75" class="page-node" />
+  <text x="52" y="290" class="page-code">P-01 메인</text>
+  <text x="52" y="308" class="page-title">B2B 기업 특판 메인 홈</text>
+  <text x="52" y="325" class="page-desc">3/5/10만원대 퀵 견적 &amp; 엑셀 배송</text>
+
+  <line x1="140" y1="345" x2="140" y2="380" class="line" />
+  <rect x="40" y="380" width="200" height="75" class="page-node" />
+  <text x="52" y="400" class="page-code">P-12 사전 검증</text>
+  <text x="52" y="418" class="page-title">기업 무료 샘플 키트</text>
+  <text x="52" y="435" class="page-desc">경영진 보고용 실물 키트 (24H 발송)</text>
+
+  <!-- COLUMN 2 SUBPAGES -->
+  <line x1="370" y1="230" x2="370" y2="270" class="line" />
+  <rect x="270" y="270" width="200" height="75" class="page-node" />
+  <text x="282" y="290" class="page-code">P-02 실속팩</text>
+  <text x="282" y="308" class="page-title">3만원대 실속 베이직 팩</text>
+  <text x="282" y="325" class="page-desc">3겹 세안 3장 + 재생지 패키징</text>
+
+  <line x1="370" y1="345" x2="370" y2="380" class="line" />
+  <rect x="270" y="380" width="200" height="75" class="page-node" />
+  <text x="282" y="400" class="page-code">P-03 BEST 1위</text>
+  <text x="282" y="418" class="page-title">5만원대 프리미엄 팩</text>
+  <text x="282" y="435" class="page-desc">세안 3장+바스 1장+CEO 감사카드</text>
+
+  <line x1="370" y1="455" x2="370" y2="490" class="line" />
+  <rect x="270" y="490" width="200" height="75" class="page-node" />
+  <text x="282" y="510" class="page-code">P-04 VIP 패키지</text>
+  <text x="282" y="528" class="page-title">10만원대 VIP 프레스티지</text>
+  <text x="282" y="545" class="page-desc">풀세트 + 한지 지함 + 소창 보자기</text>
+
+  <!-- COLUMN 3 SUBPAGES -->
+  <line x1="600" y1="230" x2="600" y2="270" class="line" />
+  <rect x="500" y="270" width="200" height="75" class="page-node" />
+  <text x="512" y="290" class="page-code">P-05 자수 센터</text>
+  <text x="512" y="308" class="page-title">기업 로고 자수 스튜디오</text>
+  <text x="512" y="325" class="page-desc">AI/PNG 로고 업로드 &amp; 금/은사 렌더링</text>
+
+  <line x1="600" y1="345" x2="600" y2="380" class="line" />
+  <rect x="500" y="380" width="200" height="75" class="page-node" />
+  <text x="512" y="400" class="page-code">P-06 맞춤 패키징</text>
+  <text x="512" y="418" class="page-title">맞춤 슬리브 &amp; CEO 카드</text>
+  <text x="512" y="435" class="page-desc">대표이사 인사말 템플릿 &amp; 콩기름 인쇄</text>
+
+  <!-- COLUMN 4 SUBPAGES -->
+  <line x1="830" y1="230" x2="830" y2="270" class="line" />
+  <rect x="730" y="270" width="200" height="75" class="page-node" />
+  <text x="742" y="290" class="page-code">P-07 엑셀 배송</text>
+  <text x="742" y="308" class="page-title">엑셀 일괄 배송 센터</text>
+  <text x="742" y="325" class="page-desc">수백 명 주소록 1초 업로드 직배송</text>
+
+  <line x1="830" y1="345" x2="830" y2="380" class="line" />
+  <rect x="730" y="380" width="200" height="75" class="page-node" />
+  <text x="742" y="400" class="page-code">P-08 납기 보증</text>
+  <text x="742" y="418" class="page-title">납기일 엄수 보증관</text>
+  <text x="742" y="435" class="page-desc">D-Day 납품 확약서 발급 (지연 100% 보상)</text>
+
+  <line x1="830" y1="455" x2="830" y2="490" class="line" />
+  <rect x="730" y="490" width="200" height="75" class="page-node" />
+  <text x="742" y="510" class="page-code">P-09 배송 추적</text>
+  <text x="742" y="528" class="page-title">배송 트래킹 대시보드</text>
+  <text x="742" y="545" class="page-desc">수백 개 송장 실시간 수령 현황</text>
+
+  <!-- COLUMN 5 SUBPAGES -->
+  <line x1="1060" y1="230" x2="1060" y2="270" class="line" />
+  <rect x="960" y="270" width="200" height="75" class="page-node" />
+  <text x="972" y="290" class="page-code">P-10 견적 &amp; 세무</text>
+  <text x="972" y="308" class="page-title">실시간 견적 &amp; 세금계산서</text>
+  <text x="972" y="325" class="page-desc">직인 날인 공식 견적서 PDF 1초 출력</text>
+
+  <line x1="1060" y1="345" x2="1060" y2="380" class="line" />
+  <rect x="960" y="380" width="200" height="75" class="page-node" />
+  <text x="972" y="400" class="page-code">P-11 ESG 실증</text>
+  <text x="972" y="418" class="page-title">ESG 탄소/플라스틱 리포트</text>
+  <text x="972" y="435" class="page-desc">플라스틱 120g 절감 인증서 무료 동봉</text>
+
+  <!-- MODALS SECTION -->
+  <rect x="40" y="600" width="1120" height="130" fill="#FFFDF8" stroke="#E2D9CC" rx="8" />
+  <text x="60" y="630" font-family="'Noto Sans KR', sans-serif" font-weight="700" font-size="14px" fill="#92400E">💡 4대 레이어드 모달 시스템 (Modal Overlays)</text>
+
+  <rect x="60" y="648" width="260" height="65" class="modal-node" />
+  <text x="75" y="670" class="modal-text">MODAL M-01 : 엑셀 일괄 파서 모달</text>
+  <text x="75" y="692" font-family="'Noto Sans KR', sans-serif" font-size="10px" fill="#585D62">드래그앤드롭 주소록 1초 파싱 &amp; 오류 검증</text>
+
+  <rect x="340" y="648" width="260" height="65" class="modal-node" />
+  <text x="355" y="670" class="modal-text">MODAL M-03 : Canvas 로고 자수기</text>
+  <text x="355" y="692" font-family="'Noto Sans KR', sans-serif" font-size="10px" fill="#585D62">금사/은사 정밀 자수 실시간 합성 렌더링</text>
+
+  <rect x="620" y="648" width="260" height="65" class="modal-node" />
+  <text x="635" y="670" class="modal-text">MODAL M-04 : 실시간 견적서 PDF 출력</text>
+  <text x="635" y="692" font-family="'Noto Sans KR', sans-serif" font-size="10px" fill="#585D62">법인 직인 날인 공식 B2B 견적서 1초 다운로드</text>
+
+  <rect x="900" y="648" width="260" height="65" class="modal-node" />
+  <text x="915" y="670" class="modal-text">MODAL M-02 : KC 4無 성적서 200% 확대</text>
+  <text x="915" y="692" font-family="'Noto Sans KR', sans-serif" font-size="10px" fill="#585D62">100회 세탁 KATRI 무형광 성적서 뷰어</text>
+
+  <!-- EXCEPTION SECTION -->
+  <rect x="40" y="750" width="1120" height="100" fill="#FFF8F8" stroke="#F8D7DA" rx="8" />
+  <text x="60" y="775" font-family="'Noto Sans KR', sans-serif" font-weight="700" font-size="13px" fill="#991B1B">⚠️ 예외 처리 페이지 (Exception Pages - 가정)</text>
+
+  <rect x="60" y="790" width="340" height="45" class="ex-node" />
+  <text x="75" y="817" class="ex-text">EX-01 : 엑셀 주소록 형식/헤더 오류 피드백</text>
+
+  <rect x="430" y="790" width="340" height="45" class="ex-node" />
+  <text x="445" y="817" class="ex-text">EX-02 : 1,000세트 이상 초대형 특판 납기 조율</text>
+
+  <rect x="800" y="790" width="340" height="45" class="ex-node" />
+  <text x="815" y="817" class="ex-text">EX-03 : 404 Not Found 복구 페이지</text>
+
+</svg>

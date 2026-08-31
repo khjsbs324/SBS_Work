@@ -1,0 +1,52 @@
+flowchart TD
+  classDef common fill:#F0F4F8,stroke:#2B6CB0,stroke-width:2px,color:#1A202C;
+  classDef main fill:#EBF8FF,stroke:#3182CE,stroke-width:2px,color:#2B6CB0,font-weight:bold;
+  classDef sub fill:#FFFFFF,stroke:#CBD5E0,stroke-width:1.5px,color:#2D3748;
+  classDef modal fill:#FEFCBF,stroke:#D69E2E,stroke-width:1.5px,stroke-dasharray: 5 5,color:#744210;
+  classDef exc fill:#FED7D7,stroke:#E53E3E,stroke-width:1.5px,color:#9B2C2C;
+
+  ROOT["🏃 플로뜰리에 오하운 스포츠 센터 (Flottelier Sport)"]:::common
+
+  %% 1차 메뉴
+  ROOT --> M1["01. SPORT & LINEUP"]:::main
+  ROOT --> M2["02. PERFORMANCE & LAB"]:::main
+  ROOT --> M3["03. CUSTOM STUDIO"]:::main
+  ROOT --> M4["04. SPORT GUIDE"]:::main
+  ROOT --> M5["05. MY & CONCIERGE"]:::main
+  ROOT --> MEX["00. EXCEPTION"]:::exc
+
+  %% 01. SPORT & LINEUP 서브
+  M1 --> SCR01["SCR-01: 스포츠 메인 홈"]:::sub
+  M1 --> SCR02["SCR-02: 전체 스포츠 카탈로그"]:::sub
+  M1 --> SCR03["SCR-03: 오하운 스타터 팩 상세"]:::sub
+  M1 --> SCR04["SCR-04: 스포츠 슬림 롱타월 상세"]:::sub
+
+  %% 02. PERFORMANCE & LAB 서브
+  M2 --> SCR05["SCR-05: 1초 땀 흡수 챌린지"]:::sub
+  M2 --> SCR06["SCR-06: 땀 냄새 제로 99.8% 랩"]:::sub
+  M2 --> SCR07["SCR-07: 40% 초경량 & 1시간 건조"]:::sub
+
+  %% 03. CUSTOM STUDIO 서브
+  M3 --> SCR08["SCR-08: 슬로건 Canvas 자수"]:::sub
+  M3 --> SCR09["SCR-09: 크루 단체 자수/발주"]:::sub
+
+  %% 04. SPORT GUIDE 서브
+  M4 --> SCR10["SCR-10: 종목별 겹수 가이드"]:::sub
+  M4 --> SCR11["SCR-11: 세탁기 간편 관리 지침"]:::sub
+  M4 --> SCR12["SCR-12: 미세플라스틱 0% 4無 인증"]:::sub
+
+  %% 05. MY & CONCIERGE 서브
+  M5 --> SCR13["SCR-13: 1장 스포츠 안심 체험팩"]:::sub
+  M5 --> SCR14["SCR-14: 장바구니 & 1초 결제"]:::sub
+  M5 --> SCR15["SCR-15: 마이페이지 & 1-Click 재구매"]:::sub
+
+  %% 예외 화면
+  MEX --> SCREX1["SCR-EX01: 검색 없음 / 품절"]:::exc
+  MEX --> SCREX2["SCR-EX02: 404 Not Found"]:::exc
+
+  %% 모달 연동
+  SCR04 -.-> MOD01["MOD-01: Canvas 자수 모달"]:::modal
+  SCR04 -.-> MOD02["MOD-02: 스냅 스트랩 3D 뷰어"]:::modal
+  SCR13 -.-> MOD03["MOD-03: 1장 체험팩 100% 환급"]:::modal
+  SCR09 -.-> MOD04["MOD-04: 크루 견적서 PDF 출력"]:::modal
+  SCR06 -.-> MOD05["MOD-05: KATRI 성적서 확대 모달"]:::modal

@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 980" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Malgun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; font-size: 24px; font-weight: bold; fill: #1E293B; }
+      .subtitle { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 13px; fill: #64748B; }
+      .node-title { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 14px; font-weight: bold; }
+      .node-code { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; }
+      .node-desc { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11.5px; fill: #475569; }
+      .badge-text { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 10px; font-weight: bold; fill: #FFFFFF; }
+      .edge-text { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 11px; fill: #0EA5E9; font-weight: bold; }
+      .legend-title { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 13px; font-weight: bold; fill: #1E293B; }
+      .legend-label { font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-size: 12px; fill: #334155; }
+    </style>
+    
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <filter id="shadow-main" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2B3A42" flood-opacity="0.18"/>
+    </filter>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+    <marker id="arrow-terra" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#C47A5A"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="100%" height="100%" fill="#F8FAFC"/>
+
+  <!-- 헤더 영역 -->
+  <g transform="translate(40, 35)">
+    <text class="title" x="0" y="0">🗺️ 플로뜰리에 (Flottelier) - 김선물 마스터 사이트맵 (Sitemap v3.0)</text>
+    <text class="subtitle" x="0" y="24">프리미엄 4차 정련 소창 기프트 큐레이션 · 실시간 자수 각인 &amp; 메시지 카드 · 100% 무비닐 패키징 · 가격표 미동봉 직배송 플랫폼</text>
+  </g>
+
+  <!-- 루트 노드 -->
+  <g transform="translate(430, 80)" filter="url(#shadow-main)">
+    <rect width="480" height="54" rx="27" fill="#2B3A42"/>
+    <text class="node-title" x="240" y="32" text-anchor="middle" fill="#FFFFFF" font-size="16px">🎁 플로뜰리에 기프트 아틀리에 (Flottelier Gift)</text>
+  </g>
+
+  <!-- 1차 Depth 연결선들 -->
+  <path d="M 670 134 L 670 165" stroke="#64748B" stroke-width="2" fill="none"/>
+  <path d="M 185 165 L 1155 165" stroke="#64748B" stroke-width="2" fill="none"/>
+  <path d="M 185 165 L 185 190" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 508 165 L 508 190" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 831 165 L 831 190" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 1155 165 L 1155 190" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- ==================== 1열: 01. GIFT CURATION ==================== -->
+  <g transform="translate(40, 190)">
+    <rect width="290" height="50" rx="8" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5" filter="url(#shadow)"/>
+    <text class="node-code" x="145" y="20" text-anchor="middle" fill="#1E293B">01. GIFT CURATION</text>
+    <text class="node-title" x="145" y="38" text-anchor="middle" fill="#0F172A" font-size="13px">상황별 &amp; 예산별 큐레이션</text>
+
+    <line x1="145" y1="50" x2="145" y2="70" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- P-GF-01: 메인 & 큐레이션 -->
+    <g transform="translate(0, 70)" filter="url(#shadow)">
+      <rect width="290" height="92" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#2B3A42"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">P-GF-01</text>
+      <text class="node-title" x="78" y="24" fill="#0F172A" font-size="13px">선물 메인 &amp; 큐레이션 허브</text>
+      <text class="node-desc" x="12" y="48">· 5대 상황(집들이/출산/생일/웨딩) 탭</text>
+      <text class="node-desc" x="12" y="66">· 3만/5만/7만 예산별 필터 &amp; BEST 1위</text>
+      <text class="node-desc" x="12" y="84">· 4차 정련 30초 소창 가치 인포그래픽</text>
+    </g>
+
+    <line x1="145" y1="162" x2="145" y2="185" stroke="#C47A5A" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-terra)"/>
+
+    <!-- M-GF-04: 1장 안심 체험팩 -->
+    <g transform="translate(0, 185)" filter="url(#shadow)">
+      <rect width="290" height="84" rx="6" fill="#FFFDF8" stroke="#C47A5A" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#C47A5A"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">M-GF-04</text>
+      <text class="node-title" x="78" y="24" fill="#9A3412" font-size="13px">1장 3,000원 기프트 안심 체험팩</text>
+      <text class="node-desc" x="12" y="48">· 선물하기 전 내가 먼저 써보는 1장</text>
+      <text class="node-desc" x="12" y="68">· 본품 선물 구매 시 100% 전액 환급</text>
+    </g>
+  </g>
+
+  <!-- ==================== 2열: 02. GIFT SETS ==================== -->
+  <g transform="translate(363, 190)">
+    <rect width="290" height="50" rx="8" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5" filter="url(#shadow)"/>
+    <text class="node-code" x="145" y="20" text-anchor="middle" fill="#1E293B">02. GIFT SETS</text>
+    <text class="node-title" x="145" y="38" text-anchor="middle" fill="#0F172A" font-size="13px">선물 세트 컬렉션</text>
+
+    <line x1="145" y1="50" x2="145" y2="70" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- P-GF-02: 시그니처 4종 세트 (메인 베스트) -->
+    <g transform="translate(0, 70)" filter="url(#shadow)">
+      <rect width="290" height="98" rx="6" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#0D9488"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">P-GF-02</text>
+      <text class="node-title" x="78" y="24" fill="#0F766E" font-size="13px">시그니처 4종 세트 상세 (★)</text>
+      <text class="node-desc" x="12" y="48">· 데일리 3겹 2장 + 세안 2겹 2장</text>
+      <text class="node-desc" x="12" y="68">· 500% HD 확대 &amp; 장당 단가 계산기</text>
+      <text class="node-desc" x="12" y="88" fill="#0F766E">· 실시간 자수/패키징/메시지 카드 연동</text>
+    </g>
+
+    <line x1="145" y1="168" x2="145" y2="188" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- P-GF-03: 리추얼 라이프스타일 복합 세트 -->
+    <g transform="translate(0, 188)" filter="url(#shadow)">
+      <rect width="290" height="84" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#475569"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">P-GF-03</text>
+      <text class="node-title" x="78" y="24" fill="#0F172A" font-size="13px">리추얼 라이프스타일 세트</text>
+      <text class="node-desc" x="12" y="48">· 3겹 타월 + 천연 EM 세탁비누 + 룸미스트</text>
+      <text class="node-desc" x="12" y="68">· 비누 향 선택 &amp; 라이프스타일 룩북</text>
+    </g>
+
+    <line x1="145" y1="272" x2="145" y2="292" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- P-GF-04: 베이비 퓨어 오가닉 세트 -->
+    <g transform="translate(0, 292)" filter="url(#shadow)">
+      <rect width="290" height="84" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#475569"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">P-GF-04</text>
+      <text class="node-title" x="78" y="24" fill="#0F172A" font-size="13px">베이비 퓨어 출산 세트</text>
+      <text class="node-desc" x="12" y="48">· 2겹 가제 5장 + 와입스 3장 + 순면 턱받이</text>
+      <text class="node-desc" x="12" y="68">· KC 유해물질 불검출 &amp; 4無 성적서 원본</text>
+    </g>
+  </g>
+
+  <!-- ==================== 3열: 03. CUSTOM & GUIDE ==================== -->
+  <g transform="translate(686, 190)">
+    <rect width="290" height="50" rx="8" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5" filter="url(#shadow)"/>
+    <text class="node-code" x="145" y="20" text-anchor="middle" fill="#1E293B">03. CUSTOM &amp; GUIDE</text>
+    <text class="node-title" x="145" y="38" text-anchor="middle" fill="#0F172A" font-size="13px">커스텀 · 패키징 &amp; 가이드</text>
+
+    <line x1="145" y1="50" x2="145" y2="70" stroke="#C47A5A" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-terra)"/>
+
+    <!-- M-GF-01: 실시간 Canvas 자수 시뮬레이터 -->
+    <g transform="translate(0, 70)" filter="url(#shadow)">
+      <rect width="290" height="84" rx="6" fill="#FFFDF8" stroke="#C47A5A" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#C47A5A"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">M-GF-01</text>
+      <text class="node-title" x="78" y="24" fill="#9A3412" font-size="13px">Canvas 자수 시뮬레이터</text>
+      <text class="node-desc" x="12" y="48">· 한글/영문 폰트 4종 &amp; 6종 오가닉 실</text>
+      <text class="node-desc" x="12" y="68">· 0.05초 실시간 패브릭 질감 렌더링</text>
+    </g>
+
+    <line x1="145" y1="154" x2="145" y2="174" stroke="#C47A5A" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-terra)"/>
+
+    <!-- M-GF-02: 100% 무비닐 패키징 뷰어 -->
+    <g transform="translate(0, 174)" filter="url(#shadow)">
+      <rect width="290" height="84" rx="6" fill="#FFFDF8" stroke="#C47A5A" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#C47A5A"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">M-GF-02</text>
+      <text class="node-title" x="78" y="24" fill="#9A3412" font-size="13px">100% 친환경 패키징 3D 뷰어</text>
+      <text class="node-desc" x="12" y="48">· 재생지 박스 &amp; 소창 파우치 360도</text>
+      <text class="node-desc" x="12" y="68">· 수령인용 '리추얼 가이드 카드' 동봉 확인</text>
+    </g>
+
+    <line x1="145" y1="258" x2="145" y2="278" stroke="#C47A5A" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-terra)"/>
+
+    <!-- M-GF-03: 메시지 카드 작성기 -->
+    <g transform="translate(0, 278)" filter="url(#shadow)">
+      <rect width="290" height="74" rx="6" fill="#FFFDF8" stroke="#C47A5A" stroke-width="1.5"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#C47A5A"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">M-GF-03</text>
+      <text class="node-title" x="78" y="24" fill="#9A3412" font-size="13px">자필 메시지 카드 작성기</text>
+      <text class="node-desc" x="12" y="48">· 3종 손글씨 폰트 &amp; 축하 템플릿 렌더링</text>
+    </g>
+
+    <line x1="145" y1="352" x2="145" y2="372" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- P-GF-05: 30초 소창 가이드 & 겹수 선택관 -->
+    <g transform="translate(0, 372)" filter="url(#shadow)">
+      <rect width="290" height="84" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#475569"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">P-GF-05</text>
+      <text class="node-title" x="78" y="24" fill="#0F172A" font-size="13px">30초 소창 가이드 &amp; 겹수 선택관</text>
+      <text class="node-desc" x="12" y="48">· 2/3/4겹 용도별 1초 선택 매트릭스</text>
+      <text class="node-desc" x="12" y="68">· 소창 4대 가치 &amp; 3년 업사이클링 안내</text>
+    </g>
+  </g>
+
+  <!-- ==================== 4열: 04. ORDER & SAFE DELIVERY ==================== -->
+  <g transform="translate(1010, 190)">
+    <rect width="290" height="50" rx="8" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5" filter="url(#shadow)"/>
+    <text class="node-code" x="145" y="20" text-anchor="middle" fill="#1E293B">04. ORDER &amp; SAFE DELIVERY</text>
+    <text class="node-title" x="145" y="38" text-anchor="middle" fill="#0F172A" font-size="13px">직배송 &amp; 가격표 미동봉</text>
+
+    <line x1="145" y1="50" x2="145" y2="70" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- P-GF-06: 직배송 주문서 -->
+    <g transform="translate(0, 70)" filter="url(#shadow)">
+      <rect width="290" height="98" rx="6" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#0D9488"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">P-GF-06</text>
+      <text class="node-title" x="78" y="24" fill="#0F766E" font-size="13px">선물 직배송 주문서 (★)</text>
+      <text class="node-desc" x="12" y="48">· 수령인 주소 입력 폼 &amp; 카카오 선물하기</text>
+      <text class="node-desc" x="12" y="68" fill="#0F766E" font-weight="bold">· [가격표 100% 제외 배송] 고정 체크</text>
+      <text class="node-desc" x="12" y="88">· 메시지 카드 / 자수 최종 검수</text>
+    </g>
+
+    <line x1="145" y1="168" x2="145" y2="188" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- P-GF-07: 주문 완료 -->
+    <g transform="translate(0, 188)" filter="url(#shadow)">
+      <rect width="290" height="84" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/>
+      <rect x="12" y="10" width="60" height="18" rx="3" fill="#2B3A42"/>
+      <text class="badge-text" x="42" y="23" text-anchor="middle">P-GF-07</text>
+      <text class="node-title" x="78" y="24" fill="#0F172A" font-size="13px">선물 주문 완료 &amp; 확인</text>
+      <text class="node-desc" x="12" y="48">· 선물 포장 완성 상태 실시간 리포트</text>
+      <text class="node-desc" x="12" y="68">· 직배송 송장 알림톡 &amp; 모바일 카드 링크</text>
+    </g>
+
+    <line x1="145" y1="272" x2="145" y2="292" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+    <!-- EX-GF-01/02: 예외 처리 -->
+    <g transform="translate(0, 292)" filter="url(#shadow)">
+      <rect width="290" height="84" rx="6" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.2"/>
+      <rect x="12" y="10" width="65" height="18" rx="3" fill="#EF4444"/>
+      <text class="badge-text" x="44" y="23" text-anchor="middle">EX-GF-01/02</text>
+      <text class="node-title" x="85" y="24" fill="#991B1B" font-size="12px">예외 분기 및 유효성 모달 [가정]</text>
+      <text class="node-desc" x="12" y="48">· EX-01: 자수 문구 미입력 / 초과 오류</text>
+      <text class="node-desc" x="12" y="68">· EX-02: 직배송 주소 불완전 알림</text>
+    </g>
+  </g>
+
+  <!-- ==================== 하단 범례 (Legend) ==================== -->
+  <g transform="translate(40, 710)" filter="url(#shadow)">
+    <rect width="1260" height="230" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text class="legend-title" x="24" y="32">📌 범례 및 설계 규칙 안내 (Legend &amp; Rules)</text>
+
+    <!-- 범례 항목들 -->
+    <g transform="translate(24, 52)">
+      <!-- 1차 Depth -->
+      <rect width="18" height="18" rx="4" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5"/>
+      <text class="legend-label" x="28" y="14">1차 Depth 메뉴 그룹 (GNB 4대 영역)</text>
+
+      <!-- 핵심 메인 화면 -->
+      <rect x="320" y="0" width="18" height="18" rx="4" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+      <text class="legend-label" x="348" y="14">핵심 선물 주문 페이지 (P-GF-02, P-GF-06)</text>
+
+      <!-- 일반 페이지 -->
+      <rect x="680" y="0" width="18" height="18" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/>
+      <text class="legend-label" x="708" y="14">상세 화면 및 정보 안내관 (P-01, P-03, P-04, P-05, P-07)</text>
+
+      <!-- 모달 오버레이 -->
+      <rect x="990" y="0" width="18" height="18" rx="4" fill="#FFFDF8" stroke="#C47A5A" stroke-width="1.5"/>
+      <text class="legend-label" x="1018" y="14">전역 모달 시스템 (M-GF-01 ~ 04)</text>
+    </g>
+
+    <!-- 핵심 설계 포인트 요약 -->
+    <g transform="translate(24, 95)">
+      <line x1="0" y1="0" x2="1210" y2="0" stroke="#F1F5F9" stroke-width="1.5"/>
+      <text class="node-desc" x="0" y="24" font-weight="bold" fill="#0F172A">💡 김선물(박서윤) 님 핵심 페인포인트 100% 해소 설계 요약:</text>
+      <text class="node-desc" x="0" y="48">1. [선택 장애 해소] 상황별 5대 탭 + 예산별 3만/5만/7만 필터 및 호불호 0% BEST 1위 시그니처 4종 세트 상시 추천</text>
+      <text class="node-desc" x="0" y="68">2. [안심 직배송 보증] 주문서에 "가격표 및 영수증 100% 미동봉 배송 보증" 고정 체크박스 및 안심 알림톡 연동</text>
+      <text class="node-desc" x="0" y="88">3. [포장/커스텀 확신] 100% 무비닐 재생지 &amp; 파우치 3D 언박싱 뷰어(M-02) 및 Canvas 실시간 자수 프리뷰(M-01)</text>
+      <text class="node-desc" x="0" y="108">4. [수령인 배려] 삶기 번거로움 없는 4차 정련 완제품 안내 및 '소창 리추얼 가이드 카드' 기본 동봉</text>
+    </g>
+  </g>
+</svg>

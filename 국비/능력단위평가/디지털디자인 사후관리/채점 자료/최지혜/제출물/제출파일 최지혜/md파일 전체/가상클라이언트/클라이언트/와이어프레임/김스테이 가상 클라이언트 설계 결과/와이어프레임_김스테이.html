@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로뜰리에 (Flottelier) - 김스테이 B2B 와이어프레임 뷰어 (Wireframe v3.0)</title>
+  <style>
+    :root {
+      --wf-bg: #F4F6F6;
+      --wf-card-bg: #FFFFFF;
+      --wf-border: #D1D5DB;
+      --wf-border-dark: #4B5563;
+      --wf-text-main: #111827;
+      --wf-text-sub: #4B5563;
+      --wf-text-muted: #9CA3AF;
+      --wf-accent: #2B6CB0;
+      --wf-accent-light: #EBF3FA;
+      --wf-placeholder: #E5E7EB;
+      --wf-tag-bg: #F3F4F6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+      background-color: var(--wf-bg);
+      color: var(--wf-text-main);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      width: 320px;
+      background: #FFFFFF;
+      border-right: 1px solid var(--wf-border);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      height: 100%;
+    }
+
+    .sidebar-header {
+      padding: 20px;
+      border-bottom: 1px solid var(--wf-border);
+      background: #FAFAFA;
+    }
+
+    .sidebar-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--wf-text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-badge {
+      font-size: 11px;
+      background: var(--wf-accent);
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .sidebar-desc {
+      font-size: 12px;
+      color: var(--wf-text-sub);
+      margin-top: 4px;
+    }
+
+    .screen-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 10px;
+      list-style: none;
+    }
+
+    .screen-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--wf-text-muted);
+      padding: 10px 10px 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .screen-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: 6px;
+      margin-bottom: 3px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+    }
+    .screen-item:hover {
+      background: var(--wf-tag-bg);
+    }
+    .screen-item.active {
+      background: var(--wf-accent-light);
+      color: var(--wf-accent);
+      font-weight: 700;
+      border-color: rgba(43, 108, 176, 0.3);
+    }
+
+    .screen-code {
+      font-size: 11px;
+      font-weight: 700;
+      background: #E5E7EB;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    .screen-item.active .screen-code {
+      background: var(--wf-accent);
+      color: #FFFFFF;
+    }
+
+    /* Viewport & Controls */
+    .main-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: #EAEAEA;
+      overflow: hidden;
+    }
+
+    .toolbar {
+      height: 52px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--wf-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      flex-shrink: 0;
+    }
+
+    .current-screen-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .curr-badge {
+      font-size: 12px;
+      font-weight: 700;
+      background: #111827;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .curr-name {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .viewport-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vp-btn {
+      padding: 6px 12px;
+      border: 1px solid var(--wf-border);
+      border-radius: 6px;
+      font-size: 12px;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .vp-btn.active {
+      background: var(--wf-text-main);
+      color: #fff;
+      border-color: var(--wf-text-main);
+    }
+
+    .canvas-wrapper {
+      flex: 1;
+      overflow-y: auto;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .wireframe-device {
+      background: #FFFFFF;
+      border: 1px solid var(--wf-border-dark);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: width 0.3s ease;
+      min-height: 800px;
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Wireframe Components */
+    .wf-header {
+      border-bottom: 1px solid var(--wf-border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FAFAFA;
+    }
+    .wf-topbar {
+      background: #1F2937;
+      color: #F9FAFB;
+      font-size: 11px;
+      padding: 6px 24px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .wf-logo {
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+    .wf-nav {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .wf-body {
+      padding: 24px;
+      flex: 1;
+    }
+
+    .wf-footer {
+      border-top: 1px solid var(--wf-border);
+      padding: 20px 24px;
+      background: #F9FAFB;
+      font-size: 11px;
+      color: var(--wf-text-sub);
+      text-align: center;
+    }
+
+    /* Reusable Wireframe UI Elements */
+    .wf-box {
+      border: 1px dashed var(--wf-border-dark);
+      background: var(--wf-placeholder);
+      padding: 20px;
+      border-radius: 4px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .wf-card {
+      border: 1px solid var(--wf-border);
+      background: #FFFFFF;
+      padding: 18px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .wf-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .wf-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .wf-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--wf-accent);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      border: none;
+      text-decoration: none;
+    }
+    .wf-btn:hover {
+      background: #1A365D;
+    }
+    .wf-btn-sub {
+      background: #E5E7EB;
+      color: #111827;
+    }
+    .wf-btn-sub:hover {
+      background: #D1D5DB;
+    }
+
+    .wf-input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid var(--wf-border);
+      border-radius: 4px;
+      font-size: 13px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      background: #fff;
+    }
+
+    .wf-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      background: #E5E7EB;
+      color: #374151;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    /* Modal Overlay Simulation */
+    .wf-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .wf-modal-box {
+      background: #FFFFFF;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      border: 2px solid #374151;
+    }
+    .wf-modal-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--wf-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #F9FAFB;
+    }
+    .wf-modal-body {
+      padding: 20px;
+    }
+
+    /* Responsive Device Modes */
+    .device-desktop { max-width: 1200px; }
+    .device-tablet { max-width: 768px; }
+    .device-mobile { max-width: 375px; }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-title">
+        <span>Flottelier STAY B2B</span>
+        <span class="sidebar-badge">v3.0</span>
+      </div>
+      <p class="sidebar-desc">김스테이(정우진) 페르소나 맞춤형 와이어프레임</p>
+    </div>
+
+    <ul class="screen-list" id="screenListNav">
+      <!-- Generated via JS -->
+    </ul>
+  </aside>
+
+  <!-- Main Stage -->
+  <main class="main-stage">
+    <header class="toolbar">
+      <div class="current-screen-info">
+        <span class="curr-badge" id="currBadge">P-01</span>
+        <span class="curr-name" id="currName">B2B 메인페이지</span>
+      </div>
+
+      <div class="viewport-controls">
+        <button class="vp-btn active" onclick="setDevice('desktop')">💻 Desktop (1200px)</button>
+        <button class="vp-btn" onclick="setDevice('tablet')">📱 Tablet (768px)</button>
+        <button class="vp-btn" onclick="setDevice('mobile')">📱 Mobile (375px)</button>
+      </div>
+    </header>
+
+    <div class="canvas-wrapper">
+      <div class="wireframe-device device-desktop" id="deviceContainer">
+        <!-- Common Top Notice Bar -->
+        <div class="wf-topbar">
+          <span>[B2B 사업자 세금계산서 100% 즉시 발행]</span>
+          <span>[객실 비치용 국/영문 리추얼 안내 카드 무료 동봉]</span>
+        </div>
+
+        <!-- Common Header -->
+        <div class="wf-header">
+          <div class="wf-logo" onclick="showScreen('P-01')" style="cursor: pointer;">Flottelier STAY</div>
+          <div class="wf-nav">
+            <span style="cursor: pointer;" onclick="showScreen('P-02')">01. 객실 번들</span>
+            <span style="cursor: pointer;" onclick="showScreen('P-05')">02. 로고 자수</span>
+            <span style="cursor: pointer;" onclick="showScreen('P-07')">03. 실시간 견적서</span>
+            <span style="cursor: pointer;" onclick="showScreen('P-08')">04. 내구성 검증</span>
+            <span style="cursor: pointer;" onclick="showScreen('P-09')">05. 샘플 키트</span>
+          </div>
+          <div>
+            <button class="wf-btn" onclick="showModal('M-04')">📄 견적서 PDF 출력</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Screen Content Body -->
+        <div class="wf-body" id="screenContainer">
+          <!-- Screen content injected here -->
+        </div>
+
+        <!-- Common Footer -->
+        <div class="wf-footer">
+          <p>플로뜰리에 B2B 호스피탈리티 지원 센터 | 사업자 세금계산서 즉시 발행 | 100% 무비닐 벌크 패키징 보증</p>
+          <p style="margin-top: 4px; opacity: 0.7;">&copy; 2026 Flottelier Hospitality. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Layered Modals -->
+  <div class="wf-modal-overlay" id="modalOverlay">
+    <div class="wf-modal-box">
+      <div class="wf-modal-header">
+        <h3 id="modalTitle" style="font-size: 15px; font-weight: 700;">모달 타이틀</h3>
+        <button onclick="closeModal()" style="font-size: 18px; border:none; background:none; cursor:pointer;">&times;</button>
+      </div>
+      <div class="wf-modal-body" id="modalBody">
+        <!-- Modal Content -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const screens = [
+      { id: "P-01", group: "메인 & 카탈로그", name: "B2B 메인페이지", render: renderP01 },
+      { id: "P-02", group: "메인 & 카탈로그", name: "스테이 번들 카탈로그", render: renderP02 },
+      { id: "P-03", group: "상품 & 어메니티", name: "번들 상품 상세 페이지", render: renderP03 },
+      { id: "P-04", group: "상품 & 어메니티", name: "객실 풀 어메니티 패키지", render: renderP04 },
+      { id: "P-05", group: "로고 자수 & 가이드", name: "숙소 로고 자수 센터", render: renderP05 },
+      { id: "P-06", group: "로고 자수 & 가이드", name: "국/영문 리추얼 카드관", render: renderP06 },
+      { id: "P-07", group: "견적 & 결제", name: "실시간 견적 & 세금계산서", render: renderP07 },
+      { id: "P-08", group: "견적 & 결제", name: "100회 세탁 내구성관", render: renderP08 },
+      { id: "P-09", group: "견적 & 결제", name: "호스트 샘플 키트 신청", render: renderP09 },
+      { id: "P-10", group: "주문 & 파트너", name: "B2B 장바구니 & 결제", render: renderP10 },
+      { id: "P-11", group: "주문 & 파트너", name: "정기납품 & 엠블럼관", render: renderP11 },
+      { id: "M-02", group: "레이어드 모달", name: "KC 4無 성적서 200% 확대", render: () => renderModalDirect('M-02') },
+      { id: "M-03", group: "레이어드 모달", name: "Canvas 실시간 자수기 모달", render: () => renderModalDirect('M-03') },
+      { id: "M-04", group: "레이어드 모달", name: "실시간 견적서 PDF 1초 출력", render: () => renderModalDirect('M-04') },
+      { id: "EX-01", group: "예외 페이지", name: "로고 파일 오류 안내 [가정]", render: renderEX01 },
+      { id: "EX-02", group: "예외 페이지", name: "대량 납기 조율 안내 [가정]", render: renderEX02 },
+      { id: "EX-03", group: "예외 페이지", name: "404 Not Found [가정]", render: renderEX03 }
+    ];
+
+    let currentScreenId = "P-01";
+
+    function initNav() {
+      const nav = document.getElementById('screenListNav');
+      let currentGroup = "";
+      
+      screens.forEach(s => {
+        if (s.group !== currentGroup) {
+          currentGroup = s.group;
+          const grpEl = document.createElement('li');
+          grpEl.className = 'screen-group-title';
+          grpEl.innerText = currentGroup;
+          nav.appendChild(grpEl);
+        }
+
+        const item = document.createElement('li');
+        item.className = 'screen-item' + (s.id === currentScreenId ? ' active' : '');
+        item.id = 'nav-' + s.id;
+        item.onclick = () => showScreen(s.id);
+        item.innerHTML = `
+          <span><span class="screen-code">${s.id}</span>${s.name}</span>
+          <span style="font-size: 11px; color: #9CA3AF;">&rarr;</span>
+        `;
+        nav.appendChild(item);
+      });
+    }
+
+    function showScreen(id) {
+      currentScreenId = id;
+      document.querySelectorAll('.screen-item').forEach(el => el.classList.remove('active'));
+      const activeNav = document.getElementById('nav-' + id);
+      if (activeNav) activeNav.classList.add('active');
+
+      const screenObj = screens.find(s => s.id === id);
+      if (screenObj) {
+        document.getElementById('currBadge').innerText = screenObj.id;
+        document.getElementById('currName').innerText = screenObj.name;
+        
+        if (id.startsWith('M-')) {
+          showModal(id);
+        } else {
+          closeModal();
+          document.getElementById('screenContainer').innerHTML = screenObj.render();
+        }
+      }
+    }
+
+    function setDevice(type) {
+      const dev = document.getElementById('deviceContainer');
+      const btns = document.querySelectorAll('.vp-btn');
+      btns.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      dev.className = 'wireframe-device device-' + type;
+    }
+
+    // Modal Simulation
+    function showModal(modalId) {
+      const overlay = document.getElementById('modalOverlay');
+      const title = document.getElementById('modalTitle');
+      const body = document.getElementById('modalBody');
+
+      overlay.style.display = 'flex';
+
+      if (modalId === 'M-02') {
+        title.innerText = 'KC 공인 4無 시험성적서 200% 확대 뷰어 (M-02)';
+        body.innerHTML = `
+          <div class="wf-box" style="height: 300px; display:flex; align-items:center; justify-content:center; background:#FFF;">
+            <div>
+              <div style="font-size: 24px; margin-bottom: 8px;">📑</div>
+              <strong>KOTITI / KATRI 시험연구원 100% 무형광 성적서</strong>
+              <p style="font-size: 12px; color: #6B7280; margin-top: 4px;">형광증백제 0.00% / 염료 불검출 / 4차 정련 완료 공인 인증</p>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap: 8px; margin-top: 16px;">
+            <button class="wf-btn wf-btn-sub" onclick="closeModal()">닫기</button>
+            <button class="wf-btn" onclick="alert('성적서 원본 PDF 다운로드가 완료되었습니다.'); closeModal();">원본 PDF 다운로드</button>
+          </div>
+        `;
+      } else if (modalId === 'M-03') {
+        title.innerText = 'Canvas 실시간 숙소 로고 자수 시뮬레이터 (M-03)';
+        body.innerHTML = `
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="wf-box" style="height: 220px; background:#FAF7F2; border:1px solid #D1D5DB; display:flex; align-items:center; justify-content:center;">
+              <div style="text-align:center;">
+                <div style="font-size: 18px; font-weight:700; color:#B45309;">[ STAY JEJU LOGO ]</div>
+                <div style="font-size: 11px; color:#6B7280; margin-top:4px;">샴페인 골드 실 자수 렌더링 완료</div>
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 12px; font-weight:700;">자수 실 색상 선택</label>
+              <div style="display:flex; gap: 6px; margin: 8px 0 16px;">
+                <span style="width:24px; height:24px; border-radius:50%; background:#D97706; border:2px solid #000; cursor:pointer;" title="샴페인 골드"></span>
+                <span style="width:24px; height:24px; border-radius:50%; background:#059669; cursor:pointer;" title="포레스트 그린"></span>
+                <span style="width:24px; height:24px; border-radius:50%; background:#4B5563; cursor:pointer;" title="차콜 그레이"></span>
+              </div>
+              <label style="font-size: 12px; font-weight:700;">자수 위치</label>
+              <select class="wf-input">
+                <option>우측 하단 (추천)</option>
+                <option>중앙 상단</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap: 8px; margin-top: 16px;">
+            <button class="wf-btn wf-btn-sub" onclick="closeModal()">취소</button>
+            <button class="wf-btn" onclick="closeModal(); showScreen('P-06');">자수 시안 확정 &rarr;</button>
+          </div>
+        `;
+      } else if (modalId === 'M-04') {
+        title.innerText = '실시간 직인 날인 공식 견적서 PDF 1초 출력 (M-04)';
+        body.innerHTML = `
+          <div class="wf-card" style="background:#FFF; border:1px solid #111;">
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #E5E7EB; padding-bottom:8px; margin-bottom:8px;">
+              <strong>[견적서] 플로뜰리에 B2B 호스피탈리티</strong>
+              <span class="wf-tag">공식 직인 날인</span>
+            </div>
+            <p style="font-size:12px;">• 공급자: 플로뜰리에 (사업자등록번호: 123-45-67890)</p>
+            <p style="font-size:12px;">• 품목: 부티크 스테이 50장 스탠다드 팩 (로고 자수 포함)</p>
+            <p style="font-size:12px; font-weight:700; color:#2B6CB0; margin-top:8px;">• 총 합계금액: 495,000원 (VAT 포함 / 배송비 무료)</p>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap: 8px; margin-top: 16px;">
+            <button class="wf-btn wf-btn-sub" onclick="closeModal()">닫기</button>
+            <button class="wf-btn" onclick="alert('견적서 PDF 저장이 완료되었습니다.'); closeModal(); showScreen('P-10');">PDF 다운로드 후 발주서 이동 &rarr;</button>
+          </div>
+        `;
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').style.display = 'none';
+    }
+
+    function renderModalDirect(id) {
+      showModal(id);
+      return `<div class="wf-box">모달 [${id}]이 활성화되었습니다.</div>`;
+    }
+
+    /* Screen Renderers */
+    function renderP01() {
+      return `
+        <div class="wf-card" style="background:#EBF3FA; border-color:#2B6CB0; text-align:center; padding: 30px;">
+          <span class="wf-tag" style="background:#2B6CB0; color:#fff;">B2B 호스피탈리티 전용</span>
+          <h2 style="font-size:22px; margin: 8px 0;">스테이의 품격을 높이는 4차 정련 소창 어메니티</h2>
+          <p style="font-size:13px; color:#4B5563;">락스 냄새 0%, 먼지 날림 0%, 객실 턴오버 시간을 3배 단축하는 프리미엄 소창 타월</p>
+          <div style="margin-top:16px; display:flex; justify-content:center; gap:10px;">
+            <button class="wf-btn" onclick="showScreen('P-02')">📦 객실 번들 카탈로그 보기</button>
+            <button class="wf-btn wf-btn-sub" onclick="showScreen('P-09')">🎁 호스트 3종 샘플 신청 (100% 환급)</button>
+          </div>
+        </div>
+
+        <div style="font-weight:700; font-size:15px; margin: 20px 0 10px;">객실 규모별 B2B 대량 번들 라인업</div>
+        <div class="wf-grid-3">
+          <div class="wf-card">
+            <span class="wf-tag">독채 스테이 1채용</span>
+            <h3 style="font-size:16px; margin:6px 0;">20장 스타터 팩</h3>
+            <p style="font-size:12px; color:#6B7280;">정가 260,000원 &rarr; <strong>198,000원 (25%↓)</strong></p>
+            <p style="font-size:11px; color:#2B6CB0; margin-top:4px;">장당 9,900원 / 국영문 카드 20매 동봉</p>
+            <button class="wf-btn" style="width:100%; margin-top:12px;" onclick="showScreen('P-03')">상세보기 &amp; 자수</button>
+          </div>
+
+          <div class="wf-card" style="border: 2px solid #2B6CB0;">
+            <span class="wf-tag" style="background:#2B6CB0; color:#fff;">BEST 1위 (3객실용)</span>
+            <h3 style="font-size:16px; margin:6px 0;">50장 스탠다드 팩</h3>
+            <p style="font-size:12px; color:#6B7280;">정가 650,000원 &rarr; <strong>422,500원 (35%↓)</strong></p>
+            <p style="font-size:11px; color:#2B6CB0; margin-top:4px;">장당 8,450원 / 국영문 카드 50매 동봉</p>
+            <button class="wf-btn" style="width:100%; margin-top:12px;" onclick="showScreen('P-03')">상세보기 &amp; 자수</button>
+          </div>
+
+          <div class="wf-card">
+            <span class="wf-tag">부티크 &amp; 리조트용</span>
+            <h3 style="font-size:16px; margin:6px 0;">100장 프로 팩</h3>
+            <p style="font-size:12px; color:#6B7280;">정가 1,300,000원 &rarr; <strong>780,000원 (40%↓)</strong></p>
+            <p style="font-size:11px; color:#2B6CB0; margin-top:4px;">장당 7,800원 / 국영문 카드 100매 동봉</p>
+            <button class="wf-btn" style="width:100%; margin-top:12px;" onclick="showScreen('P-03')">상세보기 &amp; 자수</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP02() {
+      return `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+          <h2 style="font-size:18px;">P-02. 스테이 번들 카탈로그</h2>
+          <div style="display:flex; gap:6px;">
+            <button class="wf-btn wf-btn-sub">전체</button>
+            <button class="wf-btn">3겹 데일리</button>
+            <button class="wf-btn wf-btn-sub">4겹 바스타월</button>
+            <button class="wf-btn wf-btn-sub" onclick="showScreen('P-04')">풀 패키지</button>
+          </div>
+        </div>
+        <div class="wf-grid-2">
+          <div class="wf-card">
+            <div class="wf-box" style="height:140px;">[ 50장 스탠다드 번들 실물 사진 ]</div>
+            <h4>부티크 스테이 50장 스탠다드 팩</h4>
+            <p style="font-size:12px; color:#6B7280; margin:4px 0;">3겹 데일리 페이스타월 50장 + 국영문 리추얼 카드 50매</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
+              <strong style="color:#2B6CB0;">422,500원 (장당 8,450원)</strong>
+              <button class="wf-btn" onclick="showScreen('P-03')">선택하기 &rarr;</button>
+            </div>
+          </div>
+          <div class="wf-card">
+            <div class="wf-box" style="height:140px;">[ 객실 풀 어메니티 5종 세트 ]</div>
+            <h4>스테이 풀 패브릭 어메니티 5종 패키지</h4>
+            <p style="font-size:12px; color:#6B7280; margin:4px 0;">바스 2장 + 세안 4장 + 핸드 2장 + 발매트 1장 + 티코스터 2장</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
+              <strong style="color:#2B6CB0;">89,000원 / 객실당</strong>
+              <button class="wf-btn" onclick="showScreen('P-04')">선택하기 &rarr;</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP03() {
+      return `
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <div>
+            <div class="wf-box" style="height:320px;">[ 50장 번들 상부장 1/3 수납 연출 컷 ]</div>
+            <div class="wf-card">
+              <strong>🔬 3배 빠른 건조 실증 데이터</strong>
+              <p style="font-size:12px; color:#4B5563; margin-top:4px;">• 일반 테리 타월: 자연 건조 4시간</p>
+              <p style="font-size:12px; color:#2B6CB0; font-weight:700;">• 플로뜰리에 4차 정련 소창: 자연 건조 1시간 (객실 턴오버 60% 단축)</p>
+            </div>
+          </div>
+          <div>
+            <span class="wf-tag">B2B Best 1위</span>
+            <h2 style="font-size:20px; margin: 6px 0;">부티크 스테이 50장 스탠다드 팩</h2>
+            <p style="font-size:13px; color:#6B7280;">4차 정련 완료 완제품 (받아서 삶지 않고 바로 사용)</p>
+            <div style="margin:16px 0; padding:12px; background:#F3F4F6; border-radius:6px;">
+              <div style="font-size:13px; color:#4B5563;">수량별 대량 할인 적용가</div>
+              <div style="font-size:22px; font-weight:800; color:#2B6CB0;">422,500원 <span style="font-size:12px; font-weight:400; color:#374151;">(장당 8,450원 / 35% 할인)</span></div>
+            </div>
+
+            <div style="margin-bottom:16px;">
+              <label style="font-size:12px; font-weight:700;">순면 루프(고리) 마감 옵션</label>
+              <div style="margin-top:6px;">
+                <label style="font-size:13px; margin-right:12px;"><input type="radio" name="loop" checked> 고리형 포함 (무료 프로모션)</label>
+                <label style="font-size:13px;"><input type="radio" name="loop"> 고리 없음 (기본형)</label>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <button class="wf-btn" style="padding:12px;" onclick="showScreen('P-05')">🎨 숙소 로고 자수 커스텀하기 &rarr;</button>
+              <button class="wf-btn wf-btn-sub" style="padding:12px;" onclick="showModal('M-04')">📄 실시간 견적서 PDF 출력</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP04() {
+      return `
+        <h2>P-04. 객실 풀 어메니티 패키지</h2>
+        <p style="font-size:13px; color:#6B7280; margin-bottom:16px;">욕실부터 다이닝까지 객실 전체를 통일하는 5종 패브릭 어메니티 셋업</p>
+        <div class="wf-grid-3">
+          <div class="wf-card"><div class="wf-box">[ 바스타월 4겹 ]</div><strong>4겹 대형 바스타월</strong></div>
+          <div class="wf-card"><div class="wf-box">[ 데일리 3겹 ]</div><strong>3겹 세안 페이스타월</strong></div>
+          <div class="wf-card"><div class="wf-box">[ 핸드 &amp; 발매트 ]</div><strong>2겹 핸드타월 &amp; 발매트</strong></div>
+        </div>
+        <div style="text-align:right;">
+          <button class="wf-btn" onclick="showScreen('P-05')">풀 패키지 로고 자수 커스텀 &rarr;</button>
+        </div>
+      `;
+    }
+
+    function renderP05() {
+      return `
+        <h2>P-05. 숙소 로고 자수 센터 (Canvas Preview)</h2>
+        <p style="font-size:13px; color:#6B7280; margin-bottom:16px;">숙소 로고 AI/PNG 파일을 업로드하면 0.05초 만에 소창 패브릭 자수 시안이 렌더링됩니다.</p>
+        
+        <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:20px;">
+          <div class="wf-box" style="height:320px; background:#FAF7F2; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+            <div style="font-size:24px; font-weight:800; color:#B45309;">[ STAY JEJU ]</div>
+            <p style="font-size:12px; color:#4B5563; margin-top:8px;">Canvas 자수 합성 시뮬레이션 프리뷰 (실제 규격 비율 100%)</p>
+          </div>
+          <div>
+            <div class="wf-card">
+              <label style="font-size:12px; font-weight:700;">1. 로고 파일 업로드 (AI / SVG / PNG)</label>
+              <div class="wf-box" style="padding:15px; margin:8px 0; cursor:pointer;" onclick="showModal('M-03')">
+                📂 로고 파일 드래그 앤 드롭 (또는 클릭)
+              </div>
+              <label style="font-size:12px; font-weight:700;">2. 자수 실 색상</label>
+              <select class="wf-input">
+                <option>샴페인 골드 (한옥/스테이 인기 1위)</option>
+                <option>포레스트 세이지 그린</option>
+                <option>앤티크 차콜 그레이</option>
+              </select>
+              <button class="wf-btn" style="width:100%;" onclick="showScreen('P-06')">자수 시안 확정 &amp; 리추얼 카드 확인 &rarr;</button>
+              <div style="margin-top:8px; text-align:center;">
+                <a href="javascript:void(0)" onclick="showScreen('EX-01')" style="font-size:11px; color:#EF4444; text-decoration:underline;">(오류 테스트: 파일 비지원 포맷 시뮬레이션)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP06() {
+      return `
+        <h2>P-06. 객실 비치용 국/영문 리추얼 안내 카드관</h2>
+        <div class="wf-grid-2" style="margin-top:16px;">
+          <div class="wf-card">
+            <div class="wf-box" style="height:200px;">[ 국/영문 병기 리추얼 카드 실물 컷 ]</div>
+            <strong>투숙객 감동 리추얼 카드 (무료 동봉)</strong>
+            <p style="font-size:12px; color:#6B7280; margin-top:4px;">소창의 4차 정련 스토리와 뽀송한 촉감의 비밀을 투숙객에게 전달합니다.</p>
+          </div>
+          <div class="wf-card">
+            <h4>발주 옵션 확인</h4>
+            <p style="font-size:13px; margin:8px 0;">• 발주 번들: 50장 스탠다드 팩</p>
+            <p style="font-size:13px; margin:8px 0;">• 리추얼 카드 동봉 수량: <strong>50매 (0원 무료)</strong></p>
+            <p style="font-size:13px; margin:8px 0;">• 자수: STAY JEJU (샴페인 골드)</p>
+            <button class="wf-btn" style="width:100%; margin-top:16px;" onclick="showScreen('P-07')">실시간 견적서 확인하기 &rarr;</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP07() {
+      return `
+        <h2>P-07. 실시간 견적 &amp; 세금계산서 센터</h2>
+        <div class="wf-grid-2" style="margin-top:16px;">
+          <div class="wf-card">
+            <h3>B2B 공식 견적서 (직인 날인)</h3>
+            <table style="width:100%; font-size:12px; margin-top:12px; border-collapse:collapse;">
+              <tr style="border-bottom:1px solid #E5E7EB;"><td style="padding:6px 0;">공급가액</td><td style="text-align:right;">384,091원</td></tr>
+              <tr style="border-bottom:1px solid #E5E7EB;"><td style="padding:6px 0;">부가세 (10%)</td><td style="text-align:right;">38,409원</td></tr>
+              <tr style="border-bottom:1px solid #E5E7EB;"><td style="padding:6px 0;">로고 자수 (50장)</td><td style="text-align:right;">0원 (무료)</td></tr>
+              <tr style="border-bottom:1px solid #E5E7EB;"><td style="padding:6px 0;">배송비</td><td style="text-align:right;">0원 (무료)</td></tr>
+              <tr style="font-weight:700; color:#2B6CB0;"><td style="padding:8px 0; font-size:14px;">총 견적 합계</td><td style="text-align:right; font-size:16px;">422,500원</td></tr>
+            </table>
+            <button class="wf-btn" style="width:100%; margin-top:14px;" onclick="showModal('M-04')">📄 직인 날인 견적서 PDF 1초 출력</button>
+          </div>
+          <div class="wf-card">
+            <h3>사업자 세금계산서 신청</h3>
+            <label style="font-size:12px; margin-top:8px; display:block;">사업자등록번호 (10자리)</label>
+            <input type="text" class="wf-input" value="123-45-67890">
+            <label style="font-size:12px; display:block;">세금계산서 수신 이메일</label>
+            <input type="email" class="wf-input" value="stay_jeju@stay.com">
+            <button class="wf-btn" style="width:100%;" onclick="showScreen('P-10')">결제 및 발주 진행하기 &rarr;</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP08() {
+      return `
+        <h2>P-08. 100회 세탁 내구성관 (KATRI 공인 시험성적서)</h2>
+        <div class="wf-box" style="height:260px; margin-top:16px; cursor:pointer;" onclick="showModal('M-02')">
+          📑 [ KATRI 100회 고온 세탁 올 풀림/수축 시험성적서 - 클릭 시 200% 확대 ]
+        </div>
+        <p style="font-size:13px; text-align:center; color:#4B5563;">100회 세탁 후에도 섬유 수축률 3% 이내 안정화, 형광물질 0.00% 불검출</p>
+      `;
+    }
+
+    function renderP09() {
+      return `
+        <h2>P-09. 호스트 전용 3종 샘플 키트 신청</h2>
+        <div class="wf-card" style="max-width:600px; margin: 16px auto;">
+          <div class="wf-box" style="height:140px;">[ 2겹/3겹/4겹 3종 샘플 패키지 ]</div>
+          <h3>대량 발주 전 3종 샘플 키트 (15,000원)</h3>
+          <p style="font-size:12px; color:#6B7280; margin:6px 0;">본품 대량 발주 시 15,000원을 100% 전액 차감해 드리는 환급 쿠폰이 동봉됩니다.</p>
+          <button class="wf-btn" style="width:100%; margin-top:12px;" onclick="alert('샘플 키트 신청이 완료되었습니다. 100% 환급 쿠폰이 발급되었습니다.'); showScreen('P-01');">15,000원 결제 및 샘플 신청</button>
+        </div>
+      `;
+    }
+
+    function renderP10() {
+      return `
+        <h2>P-10. B2B 장바구니 &amp; 법인 결제</h2>
+        <div class="wf-grid-2" style="margin-top:16px;">
+          <div class="wf-card">
+            <h4>발주 품목 확인</h4>
+            <p style="font-size:13px; margin:4px 0;">• 부티크 스테이 50장 스탠다드 팩</p>
+            <p style="font-size:13px; margin:4px 0;">• 숙소 로고 자수: STAY JEJU (샴페인 골드)</p>
+            <p style="font-size:13px; margin:4px 0;">• 국/영문 리추얼 카드: 50매 (무료)</p>
+            <p style="font-size:13px; margin:4px 0;">• 포장: 100% 무비닐 재생지 벌크 포장</p>
+          </div>
+          <div class="wf-card">
+            <h4>법인 결제</h4>
+            <p style="font-size:14px; font-weight:700; color:#2B6CB0; margin:8px 0;">총 결제금액: 422,500원 (VAT 포함)</p>
+            <button class="wf-btn" style="width:100%; padding:12px;" onclick="showScreen('P-11')">법인카드 / 가상계좌 1초 결제 완료 &rarr;</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderP11() {
+      return `
+        <div class="wf-card" style="background:#EBF3FA; border-color:#2B6CB0; text-align:center; padding:30px;">
+          <span class="wf-tag" style="background:#059669; color:#fff;">발주 접수 완료</span>
+          <h2 style="font-size:22px; margin:8px 0;">정우진 호스트님, 발주가 성공적으로 완료되었습니다!</h2>
+          <p style="font-size:13px; color:#4B5563;">D+2 로고 자수 제작 후 100% 무비닐 벌크 포장으로 신속 출고됩니다.</p>
+        </div>
+        <div class="wf-grid-2" style="margin-top:16px;">
+          <div class="wf-card">
+            <h4>3~6개월 B2B 정기 납품 구독</h4>
+            <p style="font-size:12px; color:#6B7280; margin:4px 0;">정기적으로 낡은 수건을 자동 보충 교체해 드립니다.</p>
+            <button class="wf-btn wf-btn-sub" style="width:100%; margin-top:8px;">정기 납품 구독 활성화</button>
+          </div>
+          <div class="wf-card">
+            <h4>에코 스테이 파트너 엠블럼</h4>
+            <p style="font-size:12px; color:#6B7280; margin:4px 0;">숙소 홍보 및 SNS에 활용 가능한 친환경 인증 엠블럼</p>
+            <button class="wf-btn" style="width:100%; margin-top:8px;" onclick="alert('에코 스테이 파트너 엠블럼 고화질 파일이 다운로드되었습니다.');">엠블럼 다운로드</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderEX01() {
+      return `
+        <div class="wf-card" style="border-color:#EF4444; max-width:600px; margin:30px auto; text-align:center;">
+          <span class="wf-tag" style="background:#EF4444; color:#fff;">오류 코드 EX-01</span>
+          <h2 style="font-size:18px; color:#991B1B; margin:8px 0;">로고 파일 형식 및 해상도 확인 필요</h2>
+          <p style="font-size:13px; color:#4B5563;">업로드하신 파일이 저해상도 비트맵이거나 지원하지 않는 포맷입니다.<br>선명한 자수 제작을 위해 AI, SVG 또는 고해상도 PNG를 권장합니다.</p>
+          <div style="margin-top:16px; display:flex; justify-content:center; gap:8px;">
+            <button class="wf-btn wf-btn-sub" onclick="showScreen('P-05')">파일 다시 업로드</button>
+            <button class="wf-btn" onclick="alert('1:1 디자이너 카카오톡 무료 보정 상담으로 연결됩니다.'); showScreen('P-05');">1:1 디자이너 무료 변환 신청</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderEX02() {
+      return `
+        <div class="wf-card" style="border-color:#D97706; max-width:600px; margin:30px auto; text-align:center;">
+          <span class="wf-tag" style="background:#D97706; color:#fff;">예외 분기 EX-02</span>
+          <h2 style="font-size:18px; color:#92400E; margin:8px 0;">300장 이상 대량 발주 납기 조율 안내</h2>
+          <p style="font-size:13px; color:#4B5563;">300장 이상 초대형 발주는 긴급 생산 라인 가동 및 분할 순차 배송으로 진행됩니다.</p>
+          <button class="wf-btn" style="margin-top:16px;" onclick="showScreen('P-07')">전담 매니저 1:1 납기 확약 상담</button>
+        </div>
+      `;
+    }
+
+    function renderEX03() {
+      return `
+        <div class="wf-card" style="max-width:500px; margin:40px auto; text-align:center;">
+          <span class="wf-tag">404 Not Found</span>
+          <h2 style="font-size:20px; margin:10px 0;">요청하신 페이지를 찾을 수 없습니다.</h2>
+          <p style="font-size:13px; color:#6B7280;">주소가 잘못 입력되었거나 변경되었습니다.</p>
+          <button class="wf-btn" style="margin-top:16px;" onclick="showScreen('P-01')">B2B 메인 홈으로 이동</button>
+        </div>
+      `;
+    }
+
+    window.onload = () => {
+      initNav();
+      showScreen('P-01');
+    };
+  </script>
+</body>
+</html>

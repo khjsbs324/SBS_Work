@@ -1,0 +1,61 @@
+flowchart TD
+  classDef startEnd fill:#1E3A8A,stroke:#3B82F6,stroke-width:2px,color:#FFFFFF,font-weight:bold;
+  classDef userAction fill:#FFFFFF,stroke:#2B6CB0,stroke-width:1.5px,color:#1A202C;
+  classDef decision fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#92400E,font-weight:bold;
+  classDef system fill:#EFF6FF,stroke:#3B82F6,stroke-width:1.5px,color:#1E3A8A;
+  classDef modal fill:#FDF4FF,stroke:#C026D3,stroke-width:1.5px,stroke-dasharray: 4 4,color:#86198F;
+  classDef error fill:#FEE2E2,stroke:#EF4444,stroke-width:1.5px,color:#991B1B;
+
+  %% 시작점
+  START(["🏃 서비스 시작 (진입)"]):::startEnd --> S1["SCR-01: 스포츠 메인 홈"]:::userAction
+
+  %% 탐색 단계
+  S1 --> DEC_GOAL{"사용자 핵심 의도?"}:::decision
+  
+  DEC_GOAL -- "1장 먼저 써보기" --> S13["SCR-13: 1장 안심 체험팩 (MOD-03)"]:::modal
+  DEC_GOAL -- "제품 전체 탐색" --> S2["SCR-02: 전체 카탈로그"]:::userAction
+  DEC_GOAL -- "기능성 성능 검증" --> S5["SCR-05/06/07: 기능성 실증 랩"]:::system
+  DEC_GOAL -- "크루 단체 발주" --> S9["SCR-09: 크루 단체 자수/견적"]:::userAction
+
+  %% 체험팩 흐름
+  S13 --> SYS_TRIAL["3,000원 간편 결제 & 100% 환급 쿠폰 자동 발급"]:::system
+  SYS_TRIAL --> END_TRIAL(["📦 체험팩 발송 & 쿠폰 수령"]):::startEnd
+
+  %% 기능성 검증 후 복귀
+  S5 --> MOD05["MOD-05: KATRI 탈취 성적서 200% 확대"]:::modal
+  MOD05 --> S2
+
+  %% 카탈로그 및 상세 선택
+  S2 --> DEC_PROD{"구매 상품 선택"}:::decision
+  DEC_PROD -- "오하운 스타터 팩" --> S3["SCR-03: 스타터 팩 상세"]:::userAction
+  DEC_PROD -- "스포츠 롱타월 단품" --> S4["SCR-04: 스포츠 슬림 롱타월 상세"]:::userAction
+  DEC_PROD -- "검색 결과 없음" --> EX1["SCR-EX01: 검색 없음 / 추천어"]:::error
+  EX1 --> S2
+
+  %% 상세 옵션 & 자수 커스텀
+  S3 & S4 --> OPT_SNAP["MOD-02: 스냅 단추 스트랩 3D 뷰어"]:::modal
+  OPT_SNAP --> S8["SCR-08 / MOD-01: Canvas 슬로건 자수 스튜디오"]:::userAction
+  
+  S8 --> DEC_EMB{"자수 유효성 검사"}:::decision
+  DEC_EMB -- "영문 12자 초과 / 오류" --> ERR_EMB["⚠️ 글자수 초과 경고 표시"]:::error
+  ERR_EMB --> S8
+  DEC_EMB -- "유효성 정상 (합성 완료)" --> S14["SCR-14: 장바구니 & 1초 결제"]:::userAction
+
+  %% 크루 대량 발주 흐름
+  S9 --> MOD04["MOD-04: 법인 직인 견적서 PDF 1초 출력"]:::modal
+  MOD04 --> S14
+
+  %% 장바구니 및 결제
+  S14 --> DEC_AUTH{"로그인 상태 확인"}:::decision
+  DEC_AUTH -- "비회원" --> GUEST_PAY["간편 전화번호 / SNS 1초 인증"]:::userAction
+  DEC_AUTH -- "회원 (김운동)" --> APPLY_COUPON["100% 환급 쿠폰 / 자수 템플릿 자동 적용"]:::system
+  
+  GUEST_PAY & APPLY_COUPON --> PAY_EXEC["N Pay / 카카오페이 1초 원클릭 결제"]:::system
+  
+  PAY_EXEC --> DEC_PAY{"결제 성공 여부"}:::decision
+  DEC_PAY -- "취소 / 실패" --> S14
+  DEC_PAY -- "결제 승인 완료" --> S15["SCR-15: 주문 완료 & 카카오 알림톡 발송"]:::system
+
+  %% 사후 관리 및 재구매
+  S15 --> S11["SCR-11: 세탁기 간편 관리 지침서 (삶기 불필요)"]:::userAction
+  S11 --> END_SUCCESS(["🏁 서비스 완료 (6개월 교체 알림 예약)"]):::startEnd

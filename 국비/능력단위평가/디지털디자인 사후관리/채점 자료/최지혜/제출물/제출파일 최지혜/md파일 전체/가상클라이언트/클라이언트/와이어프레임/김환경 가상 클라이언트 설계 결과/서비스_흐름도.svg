@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 950" width="100%" height="100%">
+  <style>
+    .bg { fill: #FAFDFD; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 26px; font-weight: bold; fill: #232527; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; fill: #585D62; }
+    
+    .start-end { fill: #232527; rx: 25; stroke: #232527; stroke-width: 2; }
+    .action-box { fill: #FAF7F2; rx: 8; stroke: #C47A5A; stroke-width: 2; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.04)); }
+    .system-box { fill: #F4F8F5; rx: 8; stroke: #7E8D7F; stroke-width: 2; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.04)); }
+    .decision-poly { fill: #FFF9F5; stroke: #C47A5A; stroke-width: 2; }
+    
+    .txt-white { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; font-weight: bold; fill: #FFFFFF; text-anchor: middle; }
+    .txt-title { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 14px; font-weight: bold; fill: #232527; text-anchor: middle; }
+    .txt-sub { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 11px; fill: #585D62; text-anchor: middle; }
+    .txt-decision { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 12px; font-weight: bold; fill: #C47A5A; text-anchor: middle; }
+    .txt-label { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Noto Sans KR", sans-serif; font-size: 11px; font-weight: bold; fill: #C47A5A; }
+    
+    .line { stroke: #8E949A; stroke-width: 2; fill: none; }
+    .line-flow { stroke: #C47A5A; stroke-width: 2; fill: none; }
+  </style>
+
+  <rect class="bg" width="1200" height="950" />
+
+  <!-- Header Banner -->
+  <text x="600" y="45" class="title" text-anchor="middle">클린소창 (CLEAN SOCHANG) 서비스 흐름도 (Service Flowchart)</text>
+  <text x="600" y="72" class="subtitle" text-anchor="middle">김환경 페르소나 (공인 환경인증 1초 조회 ➔ 친환경 정보표 ➔ 무비닐0% 포장 ➔ N Pay 결제 ➔ 자원 회수)</text>
+
+  <!-- Legend -->
+  <g transform="translate(60, 95)">
+    <rect class="start-end" width="140" height="34" />
+    <text x="70" y="22" class="txt-white">시작 / 종료</text>
+    
+    <rect class="action-box" x="160" width="140" height="34" />
+    <text x="230" y="22" class="txt-title">사용자 행동 (화면)</text>
+    
+    <rect class="system-box" x="320" width="140" height="34" />
+    <text x="390" y="22" class="txt-title">시스템 연산/처리</text>
+    
+    <polygon points="530,0 590,17 530,34 470,17" class="decision-poly" />
+    <text x="530" y="22" class="txt-decision">판단 분기</text>
+  </g>
+
+  <!-- START NODE -->
+  <g transform="translate(500, 160)">
+    <rect class="start-end" width="200" height="46" />
+    <text x="100" y="28" class="txt-white">🚀 사이트 진입 (인증 검색/QR)</text>
+  </g>
+
+  <path class="line" d="M 600 206 L 600 235" />
+
+  <!-- STEP 1: P-01 -->
+  <g transform="translate(490, 235)">
+    <rect class="action-box" width="220" height="60" />
+    <text x="110" y="26" class="txt-title">P-01: 메인페이지 진입</text>
+    <text x="110" y="44" class="txt-sub">국가 공인 환경표지 상단 뱃지</text>
+  </g>
+
+  <path class="line" d="M 600 295 L 600 325" />
+
+  <!-- STEP 2: P-04 -->
+  <g transform="translate(490, 325)">
+    <rect class="action-box" width="220" height="60" />
+    <text x="110" y="26" class="txt-title">P-04: 전체 에코 카탈로그</text>
+    <text x="110" y="44" class="txt-sub">무비닐 / 오가닉 소창타월</text>
+  </g>
+
+  <path class="line" d="M 600 385 L 600 415" />
+
+  <!-- STEP 3: P-05 -->
+  <g transform="translate(490, 415)">
+    <rect class="action-box" width="220" height="60" />
+    <text x="110" y="26" class="txt-title">P-05: 상품 상세 페이지</text>
+    <text x="110" y="44" class="txt-sub">친환경 정보표 &amp; 무비닐포장 폼</text>
+  </g>
+
+  <path class="line-flow" d="M 600 475 L 600 505" />
+
+  <!-- DECISION 1: CERT CHECK -->
+  <g transform="translate(600, 545)">
+    <polygon points="0,-40 100,0 0,40 -100,0" class="decision-poly" />
+    <text x="0" y="-5" class="txt-decision">공인 인증서 원본</text>
+    <text x="0" y="12" class="txt-decision">조회하는가?</text>
+  </g>
+
+  <!-- Yes -> M-02 -->
+  <path class="line-flow" d="M 700 545 L 780 545" />
+  <text x="725" y="538" class="txt-label">예</text>
+
+  <g transform="translate(780, 515)">
+    <rect class="action-box" width="230" height="60" />
+    <text x="115" y="26" class="txt-title">M-02: 공인 인증서 원문 모달</text>
+    <text x="115" y="44" class="txt-sub">200% HD &amp; 1초 공식 조회 링크</text>
+  </g>
+
+  <path class="line-flow" d="M 895 575 L 895 620 L 600 620 L 600 645" />
+
+  <!-- No -> Info Sheet Check -->
+  <path class="line" d="M 600 585 L 600 645" />
+  <text x="610" y="605" class="txt-label">아니오</text>
+
+  <!-- DECISION 2: ECO INFO SHEET -->
+  <g transform="translate(600, 685)">
+    <polygon points="0,-40 100,0 0,40 -100,0" class="decision-poly" />
+    <text x="0" y="-5" class="txt-decision">친환경 정보표로</text>
+    <text x="0" y="12" class="txt-decision">환경지표 비교하는가?</text>
+  </g>
+
+  <!-- Yes -> P-06 -->
+  <path class="line-flow" d="M 700 685 L 780 685" />
+  <text x="725" y="678" class="txt-label">예</text>
+
+  <g transform="translate(780, 655)">
+    <rect class="action-box" width="230" height="60" />
+    <text x="115" y="26" class="txt-title">P-06: 친환경 정보표 비교</text>
+    <text x="115" y="44" class="txt-sub">Eco Specs Sheet 한눈 비교표</text>
+  </g>
+
+  <path class="line-flow" d="M 895 715 L 895 760 L 600 760 L 600 780" />
+
+  <!-- No -> P-11 -->
+  <path class="line" d="M 600 725 L 600 780" />
+  <text x="610" y="745" class="txt-label">아니오</text>
+
+  <!-- P-11 & END -->
+  <g transform="translate(240, 780)">
+    <rect class="action-box" width="220" height="55" />
+    <text x="110" y="24" class="txt-title">P-11: 장바구니 &amp; 1초 결제</text>
+    <text x="110" y="40" class="txt-sub">무비닐 0% / 묶음 합배송</text>
+  </g>
+
+  <path class="line-flow" d="M 460 807 L 520 807" />
+
+  <g transform="translate(520, 780)">
+    <rect class="action-box" width="200" height="55" />
+    <text x="100" y="24" class="txt-title">P-12: 마이페이지</text>
+    <text x="100" y="40" class="txt-sub">자원 회수 프로그램 M-03</text>
+  </g>
+
+  <path class="line-flow" d="M 720 807 L 780 807" />
+
+  <g transform="translate(780, 785)">
+    <rect class="start-end" width="200" height="46" />
+    <text x="100" y="28" class="txt-white">🎉 주문 완료 (알림톡)</text>
+  </g>
+
+  <!-- POPUP STORE BRANCH -->
+  <g transform="translate(100, 235)">
+    <rect class="action-box" width="220" height="60" />
+    <text x="110" y="26" class="txt-title">P-08: 성수 팝업스토어</text>
+    <text x="110" y="44" class="txt-sub">제로웨이스트 오프라인 체험관</text>
+  </g>
+
+  <path class="line" d="M 490 265 L 320 265" />
+  <path class="line" d="M 210 295 L 210 325" />
+
+  <g transform="translate(100, 325)">
+    <rect class="action-box" width="220" height="60" />
+    <text x="110" y="26" class="txt-title">M-01: 팝업 사전예약 모달</text>
+    <text x="110" y="44" class="txt-sub">타임슬롯 14:00 (3석 남음)</text>
+  </g>
+
+  <path class="line" d="M 210 385 L 210 415" />
+
+  <g transform="translate(100, 415)">
+    <rect class="start-end" width="220" height="46" />
+    <text x="110" y="28" class="txt-white">🎟️ 팝업 예약 알림톡 완료</text>
+  </g>
+</svg>

@@ -1,11 +1,11 @@
-# Google Calendar → Notion Sync Pipeline
+# 텍스트 일정 → Notion Sync Pipeline
 
 ## Purpose
-구글 캘린더 일정을 읽어 Notion "프로젝트" Data Source에 등록하고, 변경 사항과 다음 일정 추천을
+사용자가 대화 중 텍스트로 붙여넣은 일정을 읽어 Notion "프로젝트" Data Source에 등록하고, 변경 사항과 다음 일정 추천을
 날짜별 output으로 정리하는 4단계 파이프라인을 운영한다.
 
 ## Pipeline Stages
-1. **캘린더 읽기** — `read-google-calendar` 스킬. Google Calendar MCP(`mcp__claude_ai_Google_Calendar__*`)로 일정을 조회해 `.state/calendar-snapshot-latest.json`에 저장한다.
+1. **일정 읽기** — `read-pasted-schedule` 스킬. 사용자가 붙여넣은 텍스트를 파싱해 `.state/calendar-snapshot-latest.json`에 저장한다.
 2. **Notion 등록** — `sync-notion` 스킬. `pipeline/connectors/notion-connector.ps1`로 이벤트를 Notion Data Source에 생성/갱신(upsert)한다.
 3. **수정 사항 정리** — `organize-output` 스킬. 이번 동기화에서 생긴 변경(신규/갱신/동일)을 `output/changes/YYYY-MM-DD.md`로 정리한다.
 4. **다음 일정 추천** — `recommend-schedule` 스킬. 현재 일정의 빈 시간대를 분석해 `output/recommendations/YYYY-MM-DD.md`로 정리한다.
@@ -23,7 +23,7 @@
 - 기존 Notion 항목(프로젝트 3건 등)은 캘린더 이벤트와 제목이 겹치지 않는 한 수정/삭제하지 않는다. 제목이 같은 항목만 "갱신 대상"으로 간주한다.
 - 캘린더 → Notion 매핑은 `pipeline/config/pipeline.config.json`의 `propertyMapping`을 따른다. 임의로 속성명을 바꾸지 않는다.
 - `output/` 파일은 파이프라인 실행 결과로만 생성한다. 수동으로 편집하지 않는다.
-- Google Calendar 인증이 안 되어 있으면 `pipeline/samples/sample-calendar-events.json`으로 드라이런(dry-run)하고, 결과에 "샘플 데이터" 임을 명시한다.
+- 사용자가 아직 일정 텍스트를 붙여넣지 않았으면 `pipeline/samples/sample-calendar-events.json`으로 드라이런(dry-run)하고, 결과에 "샘플 데이터" 임을 명시한다.
 
 ## Directory Roles
 - `.claude/`: Claude Code 설정 (agents / rules / skills / hooks)
