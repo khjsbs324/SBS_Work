@@ -1,0 +1,200 @@
+- table [ref=f50e2]:
+  - rowgroup [ref=f50e6]:
+    - row [ref=f50e7]:
+      - cell "SBS아카데미 대전" [ref=f50e8]
+    - row [ref=f50e11]:
+      - cell "김혜지 수정 비번변경 로그아웃  훈련과정  공지사항  고객센터  카톡문의" [ref=f50e12]:
+        - generic [ref=f50e13]:
+          - generic [ref=f50e14]: 김혜지
+          - generic [ref=f50e15]:
+            - link "수정" [ref=f50e16] [cursor=pointer]:
+              - /url: "#"
+            - link "비번변경" [ref=f50e17] [cursor=pointer]:
+              - /url: "#"
+            - link "로그아웃" [ref=f50e18] [cursor=pointer]:
+              - /url: /logout.php?mode=teacher_logout
+        - list [ref=f50e19]:
+          - listitem [ref=f50e20] [cursor=pointer]:
+            - generic [ref=f50e21]:
+              - generic [ref=f50e22]: 
+              - text: 훈련과정
+          - listitem [ref=f50e23] [cursor=pointer]:
+            - generic [ref=f50e24]:
+              - generic [ref=f50e25]: 
+              - text: 공지사항
+        - list [ref=f50e26]:
+          - listitem [ref=f50e27] [cursor=pointer]:
+            - generic [ref=f50e28]:
+              - paragraph [ref=f50e29]:
+                - generic [ref=f50e30]: 
+              - paragraph [ref=f50e31]: 고객센터
+          - listitem [ref=f50e32] [cursor=pointer]:
+            - generic [ref=f50e33]:
+              - paragraph [ref=f50e34]:
+                - generic [ref=f50e35]: 
+              - paragraph [ref=f50e36]: 카톡문의
+      - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A(1회차) 처음으로 출결관리 집체훈련 시간표 훈련생 사전평가  오리엔테이션  출석현황 능력단위평가  훈련생평가 이의신청 상담일지 보충수업  훈련일지 과정회의록 과정공지사항 지원내역 과제 서식공유 게시판생성  게시판순서변경 수강생정보 돌아가기 수강전 상담내역 직원 상담내역 강사 상담내역 취업 상담내역 삭제하기 등록하기" [ref=f50e37]:
+        - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A(1회차) 처음으로" [ref=f50e38]:
+          - caption [ref=f50e39]:
+            - generic [ref=f50e40]:
+              - generic [ref=f50e41]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A(1회차)"
+              - link "처음으로" [ref=f50e42] [cursor=pointer]:
+                - /url: /teacher/ver4/curri/index.php
+          - rowgroup [ref=f50e50]:
+            - row [ref=f50e51]:
+              - cell "개강일" [ref=f50e52]
+              - cell "2026-05-20" [ref=f50e53]
+              - cell "종강일" [ref=f50e54]
+              - cell "2026-12-02" [ref=f50e55]
+              - cell "강사" [ref=f50e56]
+              - cell "김가경, 김혜지" [ref=f50e57]
+            - row [ref=f50e58]:
+              - cell "실시인원" [ref=f50e59]
+              - cell "11" [ref=f50e60]
+              - cell "수강인원" [ref=f50e61]
+              - cell "10" [ref=f50e62]
+              - cell "수강포기인원" [ref=f50e63]
+              - cell "1" [ref=f50e64]
+        - list [ref=f50e65]:
+          - listitem [ref=f50e66] [cursor=pointer]:
+            - list [ref=f50e67]:
+              - listitem [ref=f50e68]: 출결관리
+          - listitem [ref=f50e69] [cursor=pointer]:
+            - list [ref=f50e70]:
+              - listitem [ref=f50e71]: 집체훈련
+          - listitem [ref=f50e72] [cursor=pointer]:
+            - list [ref=f50e73]:
+              - listitem [ref=f50e74]: 시간표
+          - listitem [ref=f50e75] [cursor=pointer]:
+            - list [ref=f50e76]:
+              - listitem [ref=f50e77]: 훈련생
+          - listitem [ref=f50e78] [cursor=pointer]:
+            - list [ref=f50e79]:
+              - listitem [ref=f50e80]: 사전평가
+              - listitem [ref=f50e81]:
+                - generic [ref=f50e82]: 
+          - listitem [ref=f50e83] [cursor=pointer]:
+            - list [ref=f50e84]:
+              - listitem [ref=f50e85]: 오리엔테이션
+              - listitem [ref=f50e86]:
+                - generic [ref=f50e87]: 
+          - listitem [ref=f50e88] [cursor=pointer]:
+            - list [ref=f50e89]:
+              - listitem [ref=f50e90]: 출석현황
+          - listitem [ref=f50e91] [cursor=pointer]:
+            - list [ref=f50e92]:
+              - listitem [ref=f50e93]: 능력단위평가
+              - listitem [ref=f50e94]:
+                - generic [ref=f50e95]: 
+          - listitem [ref=f50e96] [cursor=pointer]:
+            - list [ref=f50e97]:
+              - listitem [ref=f50e98]: 훈련생평가
+          - listitem [ref=f50e99] [cursor=pointer]:
+            - list [ref=f50e100]:
+              - listitem [ref=f50e101]: 이의신청
+          - listitem [ref=f50e102] [cursor=pointer]:
+            - list [ref=f50e103]:
+              - listitem [ref=f50e104]: 상담일지
+          - listitem [ref=f50e105] [cursor=pointer]:
+            - list [ref=f50e106]:
+              - listitem [ref=f50e107]: 보충수업
+              - listitem [ref=f50e108]:
+                - generic [ref=f50e109]: 
+          - listitem [ref=f50e110] [cursor=pointer]:
+            - list [ref=f50e111]:
+              - listitem [ref=f50e112]: 훈련일지
+          - listitem [ref=f50e113] [cursor=pointer]:
+            - generic [ref=f50e114]: 과정회의록
+          - listitem [ref=f50e115] [cursor=pointer]:
+            - generic [ref=f50e116]: 과정공지사항
+          - listitem [ref=f50e117] [cursor=pointer]:
+            - generic [ref=f50e118]: 지원내역
+          - listitem [ref=f50e119] [cursor=pointer]:
+            - generic [ref=f50e120]: 과제
+          - listitem [ref=f50e121] [cursor=pointer]:
+            - generic [ref=f50e122]: 서식공유
+          - listitem [ref=f50e123] [cursor=pointer]:
+            - list [ref=f50e124]:
+              - listitem [ref=f50e125]:
+                - link "게시판생성" [ref=f50e126]:
+                  - /url: "#"
+              - listitem [ref=f50e127]:
+                - generic [ref=f50e128]: 
+          - listitem [ref=f50e129] [cursor=pointer]:
+            - link "게시판순서변경" [ref=f50e131]:
+              - /url: "#"
+        - table "수강생정보 돌아가기" [ref=f50e132]:
+          - caption [ref=f50e133]:
+            - generic [ref=f50e134]:
+              - generic [ref=f50e135]: 수강생정보
+              - link "돌아가기" [ref=f50e137] [cursor=pointer]:
+                - /url: ./index.php?Pcode=300002
+          - rowgroup [ref=f50e144]:
+            - row [ref=f50e145]:
+              - cell "학생명" [ref=f50e146]
+              - cell "이은수" [ref=f50e147]
+              - cell "연락처" [ref=f50e148]
+              - cell "010-7244-0217" [ref=f50e149]
+              - cell [ref=f50e150]
+            - row [ref=f50e151]:
+              - cell "생년월일" [ref=f50e152]
+              - cell "2002-08-08" [ref=f50e153]
+              - cell "성별" [ref=f50e154]
+              - cell "여자" [ref=f50e155]
+            - row [ref=f50e156]:
+              - cell "이메일" [ref=f50e157]
+              - cell "jennycorazon0808@gmail.com" [ref=f50e158]
+              - cell "주소" [ref=f50e159]
+              - cell "대전 중구 수침로 138" [ref=f50e160]
+        - table [ref=f50e162]:
+          - caption [ref=f50e163]:
+            - generic [ref=f50e164]:
+              - list [ref=f50e166]:
+                - listitem [ref=f50e167] [cursor=pointer]: 수강전 상담내역
+                - listitem [ref=f50e168] [cursor=pointer]: 직원 상담내역
+                - listitem [ref=f50e169] [cursor=pointer]: 강사 상담내역
+                - listitem [ref=f50e170] [cursor=pointer]: 취업 상담내역
+              - generic [ref=f50e172]:
+                - button "삭제하기" [ref=f50e173] [cursor=pointer]
+                - link "등록하기" [ref=f50e174] [cursor=pointer]:
+                  - /url: "#"
+          - rowgroup [ref=f50e182]:
+            - row [ref=f50e183]:
+              - columnheader [ref=f50e184]:
+                - checkbox [ref=f50e185]
+              - columnheader "상담내역" [ref=f50e186]
+              - columnheader "작성일" [ref=f50e187]
+              - columnheader "첨부파일" [ref=f50e188]
+              - columnheader "작성자" [ref=f50e189]
+              - columnheader "수정" [ref=f50e190]
+          - rowgroup [ref=f50e191]:
+            - row [ref=f50e192]:
+              - cell [ref=f50e193]:
+                - checkbox [ref=f50e194]
+              - 'cell "수강생 수준 : 중상 수업 의지 : 상중 수업 태도 : 중상 라포 형성 : 중상 기존 상담에서는 코딩 결과가 바로 화면에 나타나는 과정에 흥미가 있고 기본 개념 이해도는 높은 편이었으나, 이해한 내용을 실제 작업에 적용하고 많은 리서치 자료를 정리하는 과정은 어렵다고 했으며 이전 작업에서도 데스크톱 완성도에 비해 모바일 고정 폭 문제가 남아 있었음. 현재는 1440px, 768px, 390px 화면을 각각 맞추고 탭, 장바구니, 진단과 상세 화면까지 정상적으로 연결하는 등 반응형 구조와 기능 구현 부분이 많이 좋아졌음. 작업물을 함께 확인하면서 13개 구성요소와 폭넓은 리서치를 브랜드 규칙으로 연결한 강점이 실제 기능으로 확장된 점을 긍정적으로 피드백함. 다만 최종 제출 폴더에서 이미지 파일이 빠져 여러 화면이 깨지는데도 검증 문서에는 정상으로 기록한 부분이 있어 결과물 패키지와 실제 화면을 끝까지 대조하는 습관이 필요함. 이에 강사는 최종 폴더를 새로운 환경에서 인터넷 연결 없이 직접 열어 이미지 경로와 오류를 확인하도록 안내했으며, 다음 작업부터는 이미지 폴더를 포함한 전체 자산, 관리 문서, 산출물 인덱스와 백업·해시·복구 기록을 함께 점검한 뒤 제출하도록 지도함." [ref=f50e195]'
+              - cell "2026-08-25" [ref=f50e196]
+              - cell "-" [ref=f50e197]
+              - cell "김혜지" [ref=f50e198]
+              - cell [ref=f50e199]:
+                - link "수정하기" [ref=f50e200] [cursor=pointer]:
+                  - /url: "#"
+            - row [ref=f50e201]:
+              - cell [ref=f50e202]:
+                - checkbox [ref=f50e203]
+              - cell [ref=f50e204]
+              - cell "2026-07-27" [ref=f50e205]
+              - cell "-" [ref=f50e206]
+              - cell "김혜지" [ref=f50e207]
+              - cell [ref=f50e208]:
+                - link "수정하기" [ref=f50e209] [cursor=pointer]:
+                  - /url: "#"
+            - row [ref=f50e210]:
+              - cell [ref=f50e211]:
+                - checkbox [ref=f50e212]
+              - 'cell "이은수(*2026. 06. 10 기준) 수강생 수준 : 상하 수업 의지 : 상하 수업 태도 : 상중 라포 형성 : 상하 면담 내용 전반적으로 수업 시간과 학습 환경에 매우 잘 적응하고 있으며 과제나 실습을 스스로 해결하려는 태도도 안정적으로 형성되어 있음. 코드를 입력한 결과가 바로 웹페이지로 확인되는 과정에 흥미를 느끼고 있으며, 수업 초반과 비교했을 때 코딩을 더 쉽게 이해하게 되었고 리서치를 통해 제품 개발의 시작 과정을 파악하게 된 변화가 있음. Figma와 Auto Layout 이해도는 전반적으로 높은 편이며, 현재 과제 수행이나 평가 기준에서 큰 어려움은 없는 상태로 보임. 다만 리서치 자료를 조사하고 정리, 요약하는 과정은 아직 어렵게 느끼고 있어 정보 구조화와 핵심 내용 추출 연습이 필요함." [ref=f50e213]'
+              - cell "2026-06-10" [ref=f50e214]
+              - cell "-" [ref=f50e215]
+              - cell "김혜지" [ref=f50e216]
+              - cell [ref=f50e217]:
+                - link "수정하기" [ref=f50e218] [cursor=pointer]:
+                  - /url: "#"
