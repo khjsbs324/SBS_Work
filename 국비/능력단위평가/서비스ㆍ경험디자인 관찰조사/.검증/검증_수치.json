@@ -1,0 +1,46 @@
+{
+  "items": 12,
+  "total": 100,
+  "source_matches": true,
+  "issues": [],
+  "checked_text_files": 12,
+  "pdf_checks": [
+    {
+      "source": "체크리스트.md",
+      "pdf": "최종 결과 산출물\\06_학생용_체크리스트.pdf",
+      "pages": 9,
+      "html_overflow": [],
+      "pdf_outside_page": [],
+      "replacement_chars": 0,
+      "text_characters": 8439
+    },
+    {
+      "source": "02_학생용_과제안내서.md",
+      "pdf": ".검증\\학생용_과제안내서_출력확인.pdf",
+      "pages": 4,
+      "html_overflow": [],
+      "pdf_outside_page": [],
+      "replacement_chars": 0,
+      "text_characters": 3533
+    },
+    {
+      "source": "03_학생_제출_산출물.md",
+      "pdf": ".검증\\학생_제출안내_출력확인.pdf",
+      "pages": 2,
+      "html_overflow": [],
+      "pdf_outside_page": [],
+      "replacement_chars": 0,
+      "text_characters": 1656
+    },
+    {
+      "source": "05_학생공개용_채점기준.md",
+      "pdf": ".검증\\학생공개용_채점기준_출력확인.pdf",
+      "pages": 3,
+      "html_overflow": [],
+      "pdf_outside_page": [],
+      "replacement_chars": 0,
+      "text_characters": 3723
+    }
+  ],
+  "original_checklist_sha256": "1671835cb1fcaf75eff438019eaa2b84abb9c8100518caa364cee0242e1d915a"
+}

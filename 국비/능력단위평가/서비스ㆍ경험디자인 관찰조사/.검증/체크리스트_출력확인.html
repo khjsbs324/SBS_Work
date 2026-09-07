@@ -1,0 +1,219 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>체크리스트</title><style>
+@page { size: A4; margin: 16mm 15mm 18mm; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #1b2837; background: white; font: 10.5pt/1.52 "Malgun Gothic", sans-serif; word-break: keep-all; overflow-wrap: anywhere; }
+h1 { font-size: 19pt; line-height: 1.35; margin: 0 0 16pt; color:#163d54; }
+h2 { font-size: 14pt; border-bottom: 1.4pt solid #6f9bab; padding: 0 0 6pt; margin: 21pt 0 10pt; break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 13pt 0 7pt; break-after: avoid; }
+p { margin: 6pt 0; orphans: 2; widows: 2; }
+p:has(>strong:only-child) { break-after: avoid; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 9pt 0 13pt; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th,td { border: 0.65pt solid #c6d0d8; padding: 7pt 8pt; vertical-align: top; }
+th { background: #eaf0f4; font-weight: 700; text-align: left; }
+th:first-child,td:first-child { width: 28%; }
+td:first-child { font-weight: 600; }
+blockquote { border-left: 3pt solid #6f9bab; margin: 8pt 0; padding: 4pt 10pt; background: #f3f6f8; }
+a { color: #175774; text-decoration: underline; }
+code { font-family: "Malgun Gothic",sans-serif; font-size: 10pt; background: #f0f3f5; padding: 0 2pt; }
+.check { padding-left: 16pt; position:relative; }
+.box { display:inline-block; width:8pt; height:8pt; border:0.7pt solid #536575; position:absolute; left:0; top:4pt; }
+.bullet { padding-left: 10pt; text-indent: -10pt; }
+hr { border:0; border-top:0.7pt solid #bccbd5; margin:15pt 0; }
+@media screen { body { width: 180mm; margin: 16mm auto; } }
+</style><body><h1>서비스ㆍ경험디자인 관찰조사 체크리스트</h1>
+<blockquote>학생용 작성 양식입니다. 기존 브랜딩 프로젝트를 바탕으로 가상 서비스를 설명하고, 관찰조사를 설계한 뒤 가상 이용 상황을 점검합니다. AI와 상의한 내용은 직접 판단하여 수정하고 재확인합니다. 작성한 내용을 <strong>PDF 1개</strong>로 제출합니다.</blockquote>
+<h2>0. 작성 안내</h2>
+<p><strong>시험 시간은 180분입니다.</strong> 아래 필수 항목을 먼저 작성합니다. 문장형 답변은 항목당 1~3문장을 권장하며, 서비스 설명은 처음 읽는 사람도 이해할 수 있게 구체적으로 적습니다. 같은 내용을 다시 길게 쓰지 않고 앞의 기록 번호를 연결해도 됩니다.</p>
+<table><thead><tr><th>필수 작성량</th><th>내용</th></tr></thead><tbody>
+<tr><td>서비스 설명</td><td>서비스 1개와 기존 브랜딩 근거 1건</td></tr>
+<tr><td>선행조사</td><td>직접 확인한 출처 2건: 경쟁·유사 서비스 1건 포함</td></tr>
+<tr><td>사용자</td><td>서로 다른 유형 2개, 기능·감성·사회 경험과 전략</td></tr>
+<tr><td>관찰설계</td><td>목적·대상·환경·시점·방법·범위, 질문 2개</td></tr>
+<tr><td>가상 이용기록</td><td>이용 전·중·후 3단계</td></tr>
+<tr><td>요구</td><td>명시적 요구 가설 1개와 잠재 요구 가설 1개, 관련 이론 적용</td></tr>
+<tr><td>서비스 점검</td><td>디자인 요소 2개, 우선 보완 문제 2개</td></tr>
+<tr><td>AI 및 개선</td><td>AI 제안 판단 2건, 수정·재확인 각 2건</td></tr>
+<tr><td>최종 정리</td><td>연결 관계 2줄, 남은 가설과 후속 조사, PDF 확인</td></tr>
+</tbody></table>
+<p><strong>선택 항목:</strong> 추가 사용자, 추가 출처, 별도 SWOT 분석, 상세 여정도, 화면 목업, 추가 수정은 시간이 남을 때 작성합니다. 별도 코딩·개발·배포·실제 사용자 모집은 요구하지 않습니다. 선택 항목을 많이 만드는 것보다 필수 내용과 연결 근거가 분명해야 합니다.</p>
+<p>표를 같은 내용의 짧은 문단이나 도식으로 바꾸어도 됩니다. 다른 절에 이미 작성한 내용은 위치를 연결하면 인정하며, 표의 빈칸 수만으로 판단하지 않습니다. 필수 수량은 작업을 끝내기 위한 최소 안내이며 개수를 채우는 것만으로 평가가 결정되지 않습니다.</p>
+<h3>근거를 표시하는 방법</h3>
+<p class="bullet">• <code>[프로젝트]</code>: 내 기존 자료나 직접 수정·확인한 문서에서 확인한 내용. 자료명과 쪽 또는 위치를 적습니다.</p>
+<p class="bullet">• <code>[조사]</code>: 내가 실제로 열어 확인한 문헌·보고서·공식 서비스 자료의 내용. 자료명, 출처·주소, 확인일을 적습니다.</p>
+<p class="bullet">• <code>[가설]</code>: 아직 실제 사용자에게 확인하지 않은 유형·행동·발언·감정·요구·효과의 예상입니다.</p>
+<p class="bullet">• <code>[AI 제안]</code>: AI가 제안한 내용입니다. 내가 채택했더라도 사용자에게 검증된 사실로 바뀌지 않습니다.</p>
+<p class="bullet">• 확인된 자료 내용과 나의 해석을 서로 다른 문장으로 적습니다. AI 답변 자체는 조사 출처가 아닙니다.</p>
+<p class="bullet">• <strong>가상 이용기록과 명시적 요구 가설은 실제 관찰·인터뷰 결과가 아닙니다.</strong> 실제로 만나지 않은 사람의 발언이나 측정값을 실측 결과처럼 쓰지 않습니다.</p>
+<p class="bullet">• 재확인은 내가 수정한 문서·화면·절차를 다시 점검하는 과정입니다. 실제 사용자 만족도나 행동 개선을 검증했다는 뜻은 아닙니다.</p>
+<p class="bullet">• 이름·연락처·얼굴·계정 등 실제 개인정보를 문서나 AI에 입력하지 않습니다.</p>
+<h3>권장 시간표</h3>
+<table><thead><tr><th>시간</th><th>작업</th></tr></thead><tbody>
+<tr><td>0~20분</td><td>서비스와 브랜딩 설명</td></tr>
+<tr><td>20~40분</td><td>선행조사 2건과 개발방향 정리</td></tr>
+<tr><td>40~60분</td><td>사용자 유형과 경험 전략</td></tr>
+<tr><td>60~85분</td><td>관찰설계</td></tr>
+<tr><td>85~110분</td><td>가상 이용기록과 요구 해석</td></tr>
+<tr><td>110~130분</td><td>디자인 요소 점검과 문제 선정</td></tr>
+<tr><td>130~150분</td><td>AI 상의와 학생 판단</td></tr>
+<tr><td>150~170분</td><td>수정과 재확인</td></tr>
+<tr><td>170~180분</td><td>연결 관계·누락 점검과 PDF 출력</td></tr>
+</tbody></table>
+<hr>
+<h2>1. 기본 정보와 서비스 설명 — 필수</h2>
+<table><thead><tr><th>항목</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>학생 이름·작성일</td><td>　</td></tr>
+<tr><td>브랜딩 프로젝트명·서비스명</td><td>　</td></tr>
+<tr><td>한 문장 정의</td><td>누가, 어떤 상황에서 겪는 문제를, 어떤 방식으로 해결하는가?</td></tr>
+<tr><td>기획 배경·핵심 문제</td><td>어떤 불편에서 시작했는가? 확인된 근거와 예상 내용을 구분</td></tr>
+<tr><td>주요 사용자·핵심 혜택</td><td>누구에게 어떤 기능적·감정적 도움을 주는가?</td></tr>
+<tr><td>제공 내용·이용 흐름</td><td>무엇을 제공하고, 어떻게 알게 되어 이용하고 마무리하는가?</td></tr>
+<tr><td>운영 방식·사용자 부담</td><td>누가, 어디서, 어떤 도구·절차로 제공하는가? 시간·비용·학습 부담은?</td></tr>
+<tr><td>포함 범위·제약</td><td>이번에 점검할 범위와 제외할 범위, 현실적 제약</td></tr>
+<tr><td>기존 브랜딩 근거</td><td><code>[프로젝트]</code> 자료명·쪽/위치와 확인한 가치·디자인 요소</td></tr>
+<tr><td>브랜드 연결·유지 원칙</td><td>그 가치가 서비스의 어떤 접점·문구·화면·공간에 이어지는가?</td></tr>
+</tbody></table>
+<p class="check"><span class="box"></span>서비스의 대상·문제·제공 내용·이용 흐름을 처음 읽는 사람도 이해할 수 있다.</p>
+<p class="check"><span class="box"></span>기존 결과물의 존재와 가상 서비스의 기획 내용을 구분했다.</p>
+<h2>2. 선행조사와 서비스 개발방향 — 필수</h2>
+<p><strong>자료 2건을 직접 확인합니다. 그중 1건 이상은 경쟁·유사 서비스 자료입니다.</strong> 기존에 조사한 자료를 다시 확인하여 사용해도 됩니다. 자료에 적힌 사실과 내 서비스에 적용한 해석은 구분합니다.</p>
+<h3>자료 1 — SRC-01</h3>
+<table><thead><tr><th>항목</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>종류·자료명</td><td><code>[조사]</code> 문헌·보고서·공식 서비스 자료 등</td></tr>
+<tr><td>작성 기관·출처·주소·확인일</td><td>URL 또는 오프라인 자료의 식별 가능한 서지정보·쪽</td></tr>
+<tr><td>자료에서 확인한 내용</td><td>사용자·환경·서비스와 관련된 사실 1~2개</td></tr>
+<tr><td>나의 해석·적용 방향·한계</td><td>어떤 요구와 개발방향을 도출하는가? 내 사용자에게 적용할 때 자료만으로 알 수 없는 것은?</td></tr>
+<tr><td>확인할 관찰 질문</td><td>이 자료만으로 알 수 없어 사용자 행동에서 확인할 내용</td></tr>
+</tbody></table>
+<h3>자료 2 — SRC-02</h3>
+<table><thead><tr><th>항목</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>종류·자료명</td><td><code>[조사]</code> 문헌·보고서·공식 서비스 자료 등</td></tr>
+<tr><td>작성 기관·출처·주소·확인일</td><td>URL 또는 오프라인 자료의 식별 가능한 서지정보·쪽</td></tr>
+<tr><td>자료에서 확인한 내용</td><td>사용자·환경·서비스와 관련된 사실 1~2개</td></tr>
+<tr><td>나의 해석·적용 방향·한계</td><td>어떤 요구와 개발방향을 도출하는가? 내 사용자에게 적용할 때 자료만으로 알 수 없는 것은?</td></tr>
+<tr><td>확인할 관찰 질문</td><td>이 자료만으로 알 수 없어 사용자 행동에서 확인할 내용</td></tr>
+</tbody></table>
+<p><strong>경쟁·유사 서비스 비교</strong></p>
+<table><thead><tr><th>항목</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>비교할 서비스·연결 자료 번호</td><td>서비스명 / SRC-</td></tr>
+<tr><td>확인한 사용자·기능·이용 과정</td><td>출처에서 확인한 내용과 추정을 구분</td></tr>
+<tr><td>참고할 점·제약</td><td>내 사용자와 상황에도 적용 가능한가?</td></tr>
+<tr><td>내 서비스 개념·차별 방향</td><td>비교 결과를 바탕으로 어떤 가치와 이용 경험을 제공할 것인가?</td></tr>
+</tbody></table>
+<p class="check"><span class="box"></span>출처를 실제로 확인했고 자료의 사실과 나의 해석을 구분했다.</p>
+<p class="check"><span class="box"></span>기본자료에서 개발방향으로, 경쟁 비교에서 서비스 개념으로 연결했다.</p>
+<h2>3. 사용자 유형과 경험 전략 — 필수</h2>
+<p>유형은 나이만으로 나누지 말고 이용 상황·라이프스타일·소비심리를 함께 비교합니다. <strong>라이프스타일·인구학적·소비심리학적 특성의 세 관점에 대해 실제 자료에서 확인한 내용과 위치를 연결</strong>합니다. 같은 자료를 여러 특성에 연결해도 됩니다. 이를 조합하여 만든 2개 사용자 유형은 <code>[가설]</code>이며 자료에서 확인한 부분은 해당 자료 번호와 함께 구분합니다.</p>
+<table><thead><tr><th>사용자 유형</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>유형 1 — USER-01</td><td>역할·필요한 인구학적 특성 / 생활방식·이용 상황 / 가치관·동기·선택 태도 / 예상 요구와 불편 / 근거 SRC- 또는 프로젝트 위치</td></tr>
+<tr><td>유형 2 — USER-02</td><td>역할·필요한 인구학적 특성 / 생활방식·이용 상황 / 가치관·동기·선택 태도 / 예상 요구와 불편 / 근거 SRC- 또는 프로젝트 위치</td></tr>
+<tr><td>두 유형을 나눈 기준</td><td>어떤 차이가 요구와 이용 행동을 다르게 만드는가?</td></tr>
+<tr><td>우선 대상으로 삼을 유형</td><td>USER- / 우선하는 이유와 대표 이용 목표</td></tr>
+</tbody></table>
+<p><strong>경험에서 디자인 전략 정하기</strong></p>
+<table><thead><tr><th>경험 요소</th><th>예상 경험 → 디자인 전략</th></tr></thead><tbody>
+<tr><td>기능적 경험</td><td><code>[가설]</code> 사용자가 수행하려는 일과 어려움 → 이를 돕는 방향</td></tr>
+<tr><td>감성적 경험</td><td><code>[가설]</code> 기대하는 감정과 불안 → 문구·피드백·응대 등의 방향</td></tr>
+<tr><td>사회적 경험</td><td><code>[가설]</code> 타인과의 관계·소속감·시선 등 → 상호작용·공유·공간 등의 방향</td></tr>
+</tbody></table>
+<p class="check"><span class="box"></span>인구학적 특성, 라이프스타일, 가치관·동기·태도를 함께 적었다.</p>
+<p class="check"><span class="box"></span>기능·감성·사회적 경험 각각을 서비스의 디자인 전략에 연결했다.</p>
+<h2>4. 관찰조사 설계 — 필수</h2>
+<p>실제로 관찰을 진행할 때 사용할 계획을 구체화합니다. <strong>이번 시험에서 실행하는 활동은 가상 이용 시나리오 검토</strong>입니다. 관찰계획과 실제로 수행한 작업을 구분합니다.</p>
+<table><thead><tr><th>항목</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>관찰 목적·연결 자료</td><td>SRC- / USER- / 무엇을 확인하면 어떤 기획 결정을 할 수 있는가?</td></tr>
+<tr><td>관찰 대상·과업</td><td>어느 유형의 어떤 이용 상황·과업을 볼 것인가?</td></tr>
+<tr><td>환경·시점·소요 시간</td><td>어디서, 이용 과정의 언제, 얼마 동안 관찰할 계획인가?</td></tr>
+<tr><td>포함·제외 범위</td><td>어떤 행동·접점을 기록하고 무엇은 제외하는가?</td></tr>
+<tr><td>계획한 관찰 방법·선택 이유</td><td>직접 관찰, 섀도잉, 시간 또는 사건 중심 기록 등에서 선택하고 이유 설명</td></tr>
+<tr><td>기록 방법·판단 기준</td><td>어떤 행동·중단·재시도·시간 등을 어떻게 기록하고 비교할 것인가?</td></tr>
+<tr><td>관찰 질문 1</td><td>행동으로 확인할 질문 / 연결한 자료나 예상 요구</td></tr>
+<tr><td>관찰 질문 2</td><td>행동으로 확인할 질문 / 연결한 자료나 예상 요구</td></tr>
+<tr><td>따로 물어볼 질문</td><td>관찰만으로 알 수 없는 생각·이유를 확인할 개방형 질문 1개</td></tr>
+<tr><td>실행 구분·한계</td><td>이번에는 <code>[가설]</code> 기반 검토 / 실제로 확인하지 못하는 것</td></tr>
+<tr><td>실제 조사 시 참여자 보호 계획</td><td>목적·방법·동의 안내, 개인정보 최소 기록, 촬영·녹음 시 별도 동의 계획</td></tr>
+</tbody></table>
+<p class="check"><span class="box"></span>선행조사에서 나온 의문을 관찰 목적과 질문으로 바꾸었다.</p>
+<p class="check"><span class="box"></span>대상·환경·시점·방법·기록 기준이 서로 연결된다.</p>
+<h2>5. 가상 이용기록과 요구 해석 — 필수</h2>
+<h3>5-1. 이용 전·중·후 기록</h3>
+<p>아래는 <strong>실제 관찰 결과가 아닌 가상 검토 기록</strong>입니다. 직접 기록하는 예상 행동과 그 행동에 대한 해석을 나눕니다. 기존 문서·화면을 직접 확인한 내용이 섞이면 그 부분은 <code>[프로젝트]</code>로 표시합니다.</p>
+<table><thead><tr><th>기록 번호·단계</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>FLOW-01 이용 전</td><td><code>[가설]</code> 사용자 USER- / 상황·목표 / 접점 / 예상 행동 / 예상 생각·감정 / 불편 단서와 그 해석</td></tr>
+<tr><td>FLOW-02 이용 중</td><td><code>[가설]</code> 사용자 USER- / 상황·목표 / 접점 / 예상 행동 / 예상 생각·감정 / 불편 단서와 그 해석</td></tr>
+<tr><td>FLOW-03 이용 후</td><td><code>[가설]</code> 사용자 USER- / 상황·목표 / 접점 / 예상 행동 / 예상 생각·감정 / 불편 단서와 그 해석</td></tr>
+</tbody></table>
+<h3>5-2. 명시적 요구와 잠재 요구</h3>
+<p><strong>명시적 요구 가설</strong>은 사용자가 직접 말할 수 있을 것으로 예상한 요구입니다. <strong>잠재 요구 가설</strong>은 행동·상황의 단서에서 해석한 숨은 요구입니다. 가상 발언을 실제 인용으로 쓰지 않습니다.</p>
+<p>관련 이론으로 <strong>카노 모델</strong>을 적용합니다. 기본 요구는 없으면 불만을 만드는 필수 조건, 성능 요구는 충족 정도에 따라 만족이 달라지는 조건, 매력 요구는 예상 밖의 추가 가치를 주는 조건으로 구분합니다. 각 요구에서 가장 적합한 유형을 하나 골라 이유를 적습니다. 이는 설문으로 확정한 분류가 아닌 기획 가설입니다.</p>
+<p>수업에서 배운 다른 관련 이론을 사용해도 됩니다. 이 경우 이론명·판단 기준과 자신의 요구에 적용한 이유를 적습니다.</p>
+<table><thead><tr><th>요구 기록</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>NEED-01 명시적 요구 가설</td><td><code>[가설]</code> 사용자 USER- / 예상 발언과 요구 / 출처 SRC- 또는 FLOW- 단서 / 요구로 해석한 이유 / 기본·성능·매력 중 선택 및 이유</td></tr>
+<tr><td>NEED-02 잠재 요구 가설</td><td><code>[가설]</code> 사용자 USER- / 행동·상황 단서 FLOW- / 단서에서 해석한 숨은 요구 / 자료 SRC-와의 연결 / 기본·성능·매력 중 선택 및 이유</td></tr>
+<tr><td>다른 해석·후속 질문</td><td>NEED-02의 같은 단서를 다르게 해석할 가능성 / 두 해석을 구분하기 위해 실제 사용자에게 확인할 질문</td></tr>
+<tr><td>요구 우선순위·판단 이유</td><td>어떤 요구를 먼저 해결할 것인가? 사용자 영향·서비스 목표·실행 가능성에서 설명</td></tr>
+</tbody></table>
+<p class="check"><span class="box"></span>이용 전·중·후와 각 접점의 행동·감정·불편을 기록했다.</p>
+<p class="check"><span class="box"></span>수집한 자료와 가상 이용기록에서 요구를 도출하고 이론을 적용했다.</p>
+<p class="check"><span class="box"></span>잠재 요구에는 행동 단서와 해석 과정이 함께 있다.</p>
+<h2>6. 디자인 요소 점검과 문제 선정 — 필수</h2>
+<p><strong>디자인 요소 2개</strong>를 사용자 성향·요구와 연결하여 설정합니다. 화면·기능 외에도 공간·동선·정보·절차·대기시간·응대 등 서비스에 필요한 요소를 선택할 수 있습니다.</p>
+<table><thead><tr><th>요소 기록</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>ELEMENT-01</td><td>구체적인 요소·적용 위치·운영 방식 / 연결 USER-·NEED-·FLOW- / 선택 이유 / 적용할 브랜드 원칙 / 적합·보완·미확인 판단</td></tr>
+<tr><td>ELEMENT-02</td><td>구체적인 요소·적용 위치·운영 방식 / 연결 USER-·NEED-·FLOW- / 선택 이유 / 적용할 브랜드 원칙 / 적합·보완·미확인 판단</td></tr>
+<tr><td>잠재 요구에서 예상한 환경개선</td><td>NEED-02 / 바꿀 공간·정보·절차·응대·시간 환경 / 예상 사용자 경험 변화 <code>[가설]</code> / 생길 수 있는 부작용·운영 부담 / 실제 확인할 방법</td></tr>
+</tbody></table>
+<p>점검에서 발견한 <strong>보완 문제 2개</strong>를 적습니다. 좋아 보이지 않는다는 취향 대신 요구·이용 과정·브랜드 원칙과 맞지 않는 이유를 적습니다.</p>
+<table><thead><tr><th>문제 기록</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>OBS-01</td><td>위치·단계 / 연결 NEED-·ELEMENT- / 현재 상태와 기대 상태 / 사용자 영향 / 우선순위와 이유 / 수정 후 확인할 기준</td></tr>
+<tr><td>OBS-02</td><td>위치·단계 / 연결 NEED-·ELEMENT- / 현재 상태와 기대 상태 / 사용자 영향 / 우선순위와 이유 / 수정 후 확인할 기준</td></tr>
+</tbody></table>
+<p class="check"><span class="box"></span>사용자 성향·요구가 디자인 요소 설정의 이유가 된다.</p>
+<p class="check"><span class="box"></span>잠재 요구를 해결하기 위한 환경개선과 예상 효과를 설명했다.</p>
+<h2>7. AI와 상의하고 직접 판단하기 — 필수</h2>
+<p>서비스 설명, 사용자 유형, 자료에서 확인한 내용, 가설, OBS-01·02, 유지할 브랜드 원칙을 AI에 전달합니다. 질문과 답변의 핵심을 PDF 안에 넣습니다. 전체 대화 내보내기나 유료 AI 사용은 요구하지 않습니다.</p>
+<p><strong>사용할 수 있는 질문 틀</strong></p>
+<blockquote>아래 서비스와 문제를 검토해 줘. 확인된 자료, 내 가설, AI 제안을 구분하고 제공하지 않은 사용자 발언·통계·조사 결과를 만들지 마. 문제마다 보완안 2개와 장단점, 연결되는 사용자 요구, 실제 관찰로 추가 확인할 점을 제안해 줘.</blockquote>
+<blockquote></blockquote>
+<blockquote>서비스 설명: … / 사용자: … / 자료 근거: … / 가설: … / 문제 OBS-01·02: … / 유지할 원칙: …</blockquote>
+<table><thead><tr><th>기록</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>사용 AI·사용일</td><td>도구명 / 날짜</td></tr>
+<tr><td>AI-01</td><td>연결 OBS- / 내가 입력한 질문의 핵심 / <code>[AI 제안]</code> 핵심 답변 / 반영·수정 반영·보류·제외 중 결정 / 내 판단 이유 / 추가 확인할 점</td></tr>
+<tr><td>AI-02</td><td>연결 OBS- / 내가 입력한 질문의 핵심 / <code>[AI 제안]</code> 핵심 답변 / 반영·수정 반영·보류·제외 중 결정 / 내 판단 이유 / 추가 확인할 점</td></tr>
+</tbody></table>
+<p class="check"><span class="box"></span>내 서비스의 근거와 제약을 전달했고 답변을 내가 이해했다.</p>
+<p class="check"><span class="box"></span>두 제안 모두 내 판단과 이유를 기록했다. 실제로 거절한 제안이 있을 때 그 이유도 적었다.</p>
+<p class="check"><span class="box"></span>AI가 제시한 출처나 수치를 확인 없이 사실로 사용하지 않았다.</p>
+<h2>8. 수정과 재확인 — 필수</h2>
+<p>문구·서비스 설명·이용 절차·관찰계획·화면 설명 등 이번 문서 안에서 <strong>수정 2건</strong>을 완료합니다. AI를 보류·제외했어도 자신의 대안으로 수정할 수 있습니다. 새 프로그램이나 완성된 화면을 만들 필요는 없습니다.</p>
+<p><strong>수정 2건 중 적어도 1건은 잠재 요구 <code>NEED-02</code>를 해결하는 서비스 환경 개선에 직접 연결합니다.</strong> 6장에서 제안한 공간·정보·절차·응대·시간 등의 보완 내용을 본문에 반영하고, 예상 효과와 부작용을 어떤 조건으로 확인할지 연결합니다.</p>
+<table><thead><tr><th>수정 기록</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>REV-01</td><td>연결 OBS-·NEED-·AI- / 수정 전 문장·상태 / 수정 후 문장·상태 / 수정 이유 / 반영한 본문 위치</td></tr>
+<tr><td>REV-02</td><td>연결 OBS-·NEED-·AI- / 수정 전 문장·상태 / 수정 후 문장·상태 / 수정 이유 / 반영한 본문 위치</td></tr>
+</tbody></table>
+<p>수정 내용을 본문에도 반영하고, 아래에 <strong>재확인 2건</strong>을 적습니다. <code>확인했다</code>만 적지 말고 확인한 대상과 결과를 적습니다.</p>
+<table><thead><tr><th>재확인 기록</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>CHECK-01</td><td>REV-01 / 다시 본 문서·화면·단계 / 확인 조건·기대 상태 / 내가 직접 확인한 내용 <code>[프로젝트]</code> / 충족·미충족·미확인 / 남은 가설·조치</td></tr>
+<tr><td>CHECK-02</td><td>REV-02 / 다시 본 문서·화면·단계 / 확인 조건·기대 상태 / 내가 직접 확인한 내용 <code>[프로젝트]</code> / 충족·미충족·미확인 / 남은 가설·조치</td></tr>
+</tbody></table>
+<p class="check"><span class="box"></span>수정 전·후 차이가 구체적이며 최종 본문에도 반영되어 있다.</p>
+<p class="check"><span class="box"></span>재확인 결과를 실제 사용자 효과 검증과 구분했다.</p>
+<h2>9. 연결 관계와 최종 제출 점검 — 필수</h2>
+<p><strong>작성한 실제 번호로 2줄을 연결합니다.</strong> 아래 줄은 연결 형식이며 답안이 아닙니다.</p>
+<p class="bullet">• 연결 1: SRC- → USER- → FLOW- → NEED- → ELEMENT- → OBS- → AI- → REV- → CHECK-</p>
+<p class="bullet">• 연결 2: SRC- → USER- → FLOW- → NEED- → ELEMENT- → OBS- → AI- → REV- → CHECK-</p>
+<table><thead><tr><th>최종 정리</th><th>작성 내용</th></tr></thead><tbody>
+<tr><td>핵심 개선과 예상 효과</td><td>무엇을 고쳤고 사용자 경험이 어떻게 달라질 것으로 예상하는가?</td></tr>
+<tr><td>남은 가설과 다음 관찰</td><td>실제 사용자에게 가장 먼저 확인할 것과 구체적인 방법</td></tr>
+<tr><td>시간·범위 때문에 남긴 사항</td><td>없으면 없음. 미확인 내용을 완료로 표시하지 않음</td></tr>
+</tbody></table>
+<p class="check"><span class="box"></span>필수 작성량을 충족했고 기록 번호와 본문 위치가 서로 맞는다.</p>
+<p class="check"><span class="box"></span><code>[프로젝트]</code>·<code>[조사]</code>·<code>[가설]</code>·<code>[AI 제안]</code>을 구분했다.</p>
+<p class="check"><span class="box"></span>출처와 AI 판단 내용이 PDF 안에 들어 있다.</p>
+<p class="check"><span class="box"></span>이름·프로젝트명·서비스명·작성일을 적었다.</p>
+<p class="check"><span class="box"></span>빈 선택 항목과 불필요한 작성 안내는 정리했다.</p>
+<p class="check"><span class="box"></span>한글·표·이미지·주소가 잘리지 않고 읽히며 모든 페이지를 열어 확인했다.</p>
+<p class="check"><span class="box"></span>파일명은 <code>이름_서비스경험디자인_관찰조사.pdf</code>로 저장했다.</p>
+<p>학생 최종 확인:</p>
+<p>작성 완료 일시:</p></body></html>
