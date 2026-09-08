@@ -1,0 +1,3 @@
+# Harness scratch space only; existing evidence folders remain tracked.
+.harness-cache/
+scripts/__pycache__/
