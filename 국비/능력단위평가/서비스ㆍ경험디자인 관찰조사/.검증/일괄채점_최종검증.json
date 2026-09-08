@@ -1,0 +1,119 @@
+{
+  "subject": "(전공)서비스 경험 디자인 조사 및 시나리오 개발",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "examDate": "2026-09-07",
+  "checkedAt": "2026-09-08T14:00:46+09:00",
+  "remainingStudentsCompleted": 9,
+  "enrolledStudentsGraded": 10,
+  "withdrawnExcluded": "김지선",
+  "pdfPagesReviewedThisBatch": 177,
+  "results": [
+    {
+      "student": "김정은",
+      "Sid": "sbsartdj1115",
+      "rawTotal": 78,
+      "registeredTotal": 91,
+      "pdfPages": 18,
+      "feedbackChars": 2396,
+      "feedbackSha256": "e360f41faec1bb3534473c6f43e1bdd86b81585aba3062ce9c8868fef92f9fc9",
+      "verifiedAt": "2026-09-08T13:46:37+09:00",
+      "verification": "통과"
+    },
+    {
+      "student": "박주연",
+      "Sid": "sbsartdj1117",
+      "rawTotal": 78,
+      "registeredTotal": 91,
+      "pdfPages": 15,
+      "feedbackChars": 2174,
+      "feedbackSha256": "a938a80b703f2c6ab74a83a80051dce3dc7b95ec5bfad87f916552d1f7ff99db",
+      "verifiedAt": "2026-09-08T13:50:25+09:00",
+      "verification": "통과"
+    },
+    {
+      "student": "박찬미",
+      "Sid": "sbsartdj1118",
+      "rawTotal": 84,
+      "registeredTotal": 94,
+      "pdfPages": 23,
+      "feedbackChars": 2347,
+      "feedbackSha256": "e0ea6313d5f6613c437f74b0616e29bde7cc61f420844b38a473516e0b9474a2",
+      "verifiedAt": "2026-09-08T13:58:06+09:00",
+      "verification": "통과"
+    },
+    {
+      "student": "이은경",
+      "Sid": "sbsartdj1119",
+      "rawTotal": 73,
+      "registeredTotal": 89,
+      "pdfPages": 13,
+      "feedbackChars": 2095,
+      "feedbackSha256": "267c4898391555cac7536d3d000023d461459eb6f62105926710f6a88c68b53a",
+      "verifiedAt": "2026-09-08T13:48:36+09:00",
+      "verification": "통과"
+    },
+    {
+      "student": "이은수",
+      "Sid": "sbsartdj1123",
+      "rawTotal": 71,
+      "registeredTotal": 88,
+      "pdfPages": 23,
+      "feedbackChars": 2254,
+      "feedbackSha256": "0c89e333db06499d3039221efb81255e8b03919654ae7b03efc90d2609b35cf9",
+      "verifiedAt": "2026-09-08T13:51:06+09:00",
+      "verification": "통과"
+    },
+    {
+      "student": "이지희",
+      "Sid": "sbsartdj1120",
+      "rawTotal": 70,
+      "registeredTotal": 88,
+      "pdfPages": 23,
+      "feedbackChars": 2338,
+      "feedbackSha256": "9895ced9489f25bda8cca5875eb3a83a424c0cf00727caf86cdacd4f67461067",
+      "verifiedAt": "2026-09-08T14:00:21+09:00",
+      "verification": "통과"
+    },
+    {
+      "student": "임연우",
+      "Sid": "sbsartdj1121",
+      "rawTotal": 75,
+      "registeredTotal": 90,
+      "pdfPages": 17,
+      "feedbackChars": 2262,
+      "feedbackSha256": "d1c0273f2b0adbc9897b9a0c765907053216879e8f7420c3099521753f3fb95a",
+      "verifiedAt": "2026-09-08T13:51:53+09:00",
+      "verification": "통과"
+    },
+    {
+      "student": "최지혜",
+      "Sid": "sbsartdj1124",
+      "rawTotal": 73,
+      "registeredTotal": 89,
+      "pdfPages": 25,
+      "feedbackChars": 2481,
+      "feedbackSha256": "1e6b22669ecd57b30c80689e76a295d68b658d9db8b3da6b17f9921ff8a2afd8",
+      "verifiedAt": "2026-09-08T13:52:55+09:00",
+      "verification": "통과"
+    },
+    {
+      "student": "허지민",
+      "Sid": "sbsartdj1122",
+      "rawTotal": 72,
+      "registeredTotal": 89,
+      "pdfPages": 20,
+      "feedbackChars": 2681,
+      "feedbackSha256": "4a21d9349a2ae07fbd2ae9c9334c1b8f69a8a1b5242d80526005630e4e8eaeb4",
+      "verifiedAt": "2026-09-08T13:55:49+09:00",
+      "verification": "통과"
+    }
+  ],
+  "checks": [
+    "학생별 제출파일 SHA-256 일치",
+    "12개 수행준거·배점·원점수·환산점수·최대잔여 배분 검증",
+    "학생별 저장 후 상세 화면 점수·피드백 전문 일치",
+    "현재 전체 명단 재학생10명 점수 확인",
+    "교사용 보고서·공개피드백·사이트 감사기록 일치",
+    "수강포기자 제외 유지"
+  ]
+}

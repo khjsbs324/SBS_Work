@@ -1,0 +1,28 @@
+{
+  "student": "임연우",
+  "subject": "(전공)서비스 경험 디자인 조사 및 시나리오 개발",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "Pcode": "300002",
+  "Lcode": "11",
+  "Sid": "sbsartdj1121",
+  "FollowNo": "1",
+  "questionNo": "1344",
+  "exam_date": "2026-09-07",
+  "received_at": "2026-09-08T13:39:48+09:00",
+  "archive": "1788774518_a61323be.zip",
+  "archive_sha256": "5182dd3d23ac0cd375627a6bcb3627a703326363de70e51d36e4ce9509f7b19c",
+  "files": [
+    {
+      "filename": "서비스 기획_임연우.md",
+      "archive_filename": "서비스 기획_임연우.md",
+      "bytes": 85693,
+      "sha256": "5fa68749ad12aea062f1b60becae37cab60a7c78d413a78d951ff9333ea0b28c"
+    },
+    {
+      "filename": "서비스 기획_임연우.pdf",
+      "archive_filename": "서비스 기획_임연우.pdf",
+      "bytes": 1296678,
+      "sha256": "7499b83ca357c41a7a9724891a7bf97a5281c48edf8f27e931e44b4b47cd724e"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "student": "강민경",
+  "subject": "(전공)서비스 경험 디자인 조사 및 시나리오 개발",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "Pcode": "300002",
+  "Lcode": "11",
+  "Sid": "sbsartdj1114",
+  "FollowNo": "1",
+  "questionNo": "1344",
+  "exam_date": "2026-09-07",
+  "received_at": "2026-09-08T12:59:06+09:00",
+  "archive": "1788775495_6cbfc456.zip",
+  "archive_sha256": "0db218873a57cb7474aa40efbf7c00bf7ce025f597a1e9d51dc17bef8fb36cae",
+  "files": [
+    {
+      "filename": "서비스 기획_강민경.md",
+      "bytes": 83810,
+      "sha256": "1d794273a51a8e34b5dea6a888063f62e347473ef50a433ba534605fb5da0593"
+    },
+    {
+      "filename": "서비스 기획_강민경.pdf",
+      "bytes": 219622,
+      "sha256": "c4c12ebf58bf3c37e1af8ebde0b65ee3a9335f863f01e2004310b7212b1adf7d"
+    }
+  ]
+}

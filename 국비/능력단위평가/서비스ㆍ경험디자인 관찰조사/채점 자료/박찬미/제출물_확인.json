@@ -1,0 +1,40 @@
+{
+  "student": "박찬미",
+  "subject": "(전공)서비스 경험 디자인 조사 및 시나리오 개발",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "Pcode": "300002",
+  "Lcode": "11",
+  "Sid": "sbsartdj1118",
+  "FollowNo": "1",
+  "questionNo": "1344",
+  "exam_date": "2026-09-07",
+  "received_at": "2026-09-08T13:37:53+09:00",
+  "archive": "1788774463_58dd6c38.zip",
+  "archive_sha256": "ed341d90d8e67cde42d726ff0d7a719d701e16fbd58c868a9c53025f3fbed8c4",
+  "files": [
+    {
+      "filename": "서비스기획_박찬미/서비스기획_박찬미.pdf",
+      "archive_filename": "서비스기획_박찬미/서비스기획_박찬미.pdf",
+      "bytes": 1323119,
+      "sha256": "7cbd846b60929512fbb1f2f846f86c606643989bbeacfb4c79e249850caf85c1"
+    },
+    {
+      "filename": "__MACOSX/서비스기획_박찬미/._서비스기획_박찬미.pdf",
+      "archive_filename": "__MACOSX/서비스기획_박찬미/._서비스기획_박찬미.pdf",
+      "bytes": 281,
+      "sha256": "69b464b2b647b8418bf8be4a4789052b1d7a941dbe0c388750f1f1451f4efbf9"
+    },
+    {
+      "filename": "서비스기획_박찬미/서비스 기획_박찬미.md",
+      "archive_filename": "서비스기획_박찬미/서비스 기획_박찬미.md",
+      "bytes": 74795,
+      "sha256": "ac93ab379448dd9a27e260916e3464c9d19f084892ee9eaaff14ec7461451219"
+    },
+    {
+      "filename": "__MACOSX/서비스기획_박찬미/._서비스 기획_박찬미.md",
+      "archive_filename": "__MACOSX/서비스기획_박찬미/._서비스 기획_박찬미.md",
+      "bytes": 378,
+      "sha256": "159792bcb294fce1aebed7a413a1aacd25f62465e57ce8f1cd39b939153cafb0"
+    }
+  ]
+}

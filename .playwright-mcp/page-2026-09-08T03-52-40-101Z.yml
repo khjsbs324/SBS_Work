@@ -1,0 +1,30 @@
+- table [ref=e4]:
+  - rowgroup [ref=e10]:
+    - row [ref=e11]:
+      - cell "SBS아카데미 대전" [ref=e12]
+    - row [ref=e13]:
+      - cell [ref=e14] [cursor=pointer]:
+        - img "행정모드" [ref=e15]
+        - text: 행정모드
+      - cell [ref=e16] [cursor=pointer]:
+        - img "강사모드" [ref=e17]
+        - text: 강사모드
+      - cell [ref=e18] [cursor=pointer]:
+        - img "훈련생모드" [ref=e19]
+        - text: 훈련생모드
+      - cell [ref=e20] [cursor=pointer]:
+        - img "이수자평가" [ref=e21]
+        - text: 이수자평가
+    - row [ref=e22]:
+      - cell [ref=e23]:
+        - textbox "아이디를 입력하세요" [ref=e24]
+    - row [ref=e25]:
+      - cell [ref=e26]:
+        - textbox "비밀번호를 입력하세요" [ref=e27]
+    - row [ref=e28]:
+      - cell "강사가입 아이디/비밀번호찾기 로그인" [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e32]:
+            - generic [ref=e33] [cursor=pointer]: 강사가입
+            - generic [ref=e34] [cursor=pointer]: 아이디/비밀번호찾기
+          - button "로그인" [ref=e36] [cursor=pointer]

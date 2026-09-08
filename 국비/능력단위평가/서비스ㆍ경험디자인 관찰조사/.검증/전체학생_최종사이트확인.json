@@ -1,0 +1,59 @@
+{
+  "url": "https://sbsartdj.maniaro.net/teacher/ver4/curri/appraisal/app/appraisal.php?Pcode=300002&Lcode=11&AppCode=AF",
+  "students": [
+    {
+      "student": "강민경",
+      "score": "90",
+      "Sid": "sbsartdj1114"
+    },
+    {
+      "student": "김정은",
+      "score": "91",
+      "Sid": "sbsartdj1115"
+    },
+    {
+      "student": "박주연",
+      "score": "91",
+      "Sid": "sbsartdj1117"
+    },
+    {
+      "student": "박찬미",
+      "score": "94",
+      "Sid": "sbsartdj1118"
+    },
+    {
+      "student": "이은경",
+      "score": "89",
+      "Sid": "sbsartdj1119"
+    },
+    {
+      "student": "이은수",
+      "score": "88",
+      "Sid": "sbsartdj1123"
+    },
+    {
+      "student": "이지희",
+      "score": "88",
+      "Sid": "sbsartdj1120"
+    },
+    {
+      "student": "임연우",
+      "score": "90",
+      "Sid": "sbsartdj1121"
+    },
+    {
+      "student": "최지혜",
+      "score": "89",
+      "Sid": "sbsartdj1124"
+    },
+    {
+      "student": "허지민",
+      "score": "89",
+      "Sid": "sbsartdj1122"
+    }
+  ],
+  "withdrawn": [
+    "김지선\n구분\t본평가\t결석자평가\t재평가\n2026-08-20 기타 사유로 수강포기"
+  ],
+  "verifiedAt": "2026-09-08T05:00:33.784Z"
+}

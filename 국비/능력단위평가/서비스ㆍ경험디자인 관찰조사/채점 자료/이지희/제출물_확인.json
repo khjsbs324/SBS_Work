@@ -1,0 +1,28 @@
+{
+  "student": "이지희",
+  "subject": "(전공)서비스 경험 디자인 조사 및 시나리오 개발",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "Pcode": "300002",
+  "Lcode": "11",
+  "Sid": "sbsartdj1120",
+  "FollowNo": "1",
+  "questionNo": "1344",
+  "exam_date": "2026-09-07",
+  "received_at": "2026-09-08T13:38:52+09:00",
+  "archive": "1788774523_454d4240.zip",
+  "archive_sha256": "d50be249dc2eb61787c1739afc3aeddc31bff93c37a4f15d8a493381ec9499f4",
+  "files": [
+    {
+      "filename": "서비스 기획_ 이지희.pdf",
+      "archive_filename": "서비스 기획_ 이지희.pdf",
+      "bytes": 761339,
+      "sha256": "b8f1b4525ded06dac23c35e85944734715b45c1df00af1cca722fe900e68dee0"
+    },
+    {
+      "filename": "서비스기획_이지희.md",
+      "archive_filename": "서비스기획_이지희.md",
+      "bytes": 91330,
+      "sha256": "03ae946501d78eec41c1eff456f19982b62b9058e4f4e376055045886eb3dbfb"
+    }
+  ]
+}

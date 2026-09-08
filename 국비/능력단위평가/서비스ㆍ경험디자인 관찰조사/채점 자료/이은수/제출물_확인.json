@@ -1,0 +1,28 @@
+{
+  "student": "이은수",
+  "subject": "(전공)서비스 경험 디자인 조사 및 시나리오 개발",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "Pcode": "300002",
+  "Lcode": "11",
+  "Sid": "sbsartdj1123",
+  "FollowNo": "1",
+  "questionNo": "1344",
+  "exam_date": "2026-09-07",
+  "received_at": "2026-09-08T13:38:50+09:00",
+  "archive": "1788774524_54d7c489.zip",
+  "archive_sha256": "2a4a5429739305b46d9442232dc9c98240befec08d4df2a6377ca27d21a69597",
+  "files": [
+    {
+      "filename": "서비스 기획_이은수.md",
+      "archive_filename": "서비스 기획_이은수.md",
+      "bytes": 64959,
+      "sha256": "9f69f4738776ad85629428b26c8df28f620eab2d26a1a4a9972b14e379482971"
+    },
+    {
+      "filename": "서비스 기획_이은수.pdf",
+      "archive_filename": "서비스 기획_이은수.pdf",
+      "bytes": 523176,
+      "sha256": "bba114b2ca86a94b1b74a4dc1769d46d37d6b5c522f489d7f25dc060f70b4482"
+    }
+  ]
+}

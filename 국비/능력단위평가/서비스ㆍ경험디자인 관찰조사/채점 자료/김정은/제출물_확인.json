@@ -1,0 +1,26 @@
+{
+  "student": "김정은",
+  "subject": "(전공)서비스 경험 디자인 조사 및 시나리오 개발",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "Pcode": "300002",
+  "Lcode": "11",
+  "Sid": "sbsartdj1115",
+  "FollowNo": "1",
+  "questionNo": "1344",
+  "exam_date": "2026-09-07",
+  "received_at": "2026-09-08T13:37:11+09:00",
+  "archive": "1788774526_2abf9bf9.zip",
+  "archive_sha256": "bdc968a498315d8d1ecc42e14886e9d5234a554095ec55529f922021c31df766",
+  "files": [
+    {
+      "filename": "서비스 기획_김정은.md",
+      "bytes": 68636,
+      "sha256": "62fddb8fcdd3faf29b9b9a2ad56b61278a5bc997caf1eb1c7f9fb5a97807a654"
+    },
+    {
+      "filename": "서비스 기획_김정은.pdf",
+      "bytes": 693808,
+      "sha256": "d8952bbb2099257e2eb47bdf57a33d0abb8ce7ab7db39fe7b5918587a14ebcbd"
+    }
+  ]
+}

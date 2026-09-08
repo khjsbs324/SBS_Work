@@ -1,0 +1,168 @@
+- table [ref=f32e2]:
+  - rowgroup [ref=f32e6]:
+    - row [ref=f32e7]:
+      - cell "SBS아카데미 대전" [ref=f32e8]
+    - row [ref=f32e11]:
+      - cell "김혜지 수정 비번변경 로그아웃  훈련과정  공지사항  고객센터  카톡문의" [ref=f32e12]:
+        - generic [ref=f32e13]:
+          - generic [ref=f32e14]: 김혜지
+          - generic [ref=f32e15]:
+            - link "수정" [ref=f32e16] [cursor=pointer]:
+              - /url: "#"
+            - link "비번변경" [ref=f32e17] [cursor=pointer]:
+              - /url: "#"
+            - link "로그아웃" [ref=f32e18] [cursor=pointer]:
+              - /url: /logout.php?mode=teacher_logout
+        - list [ref=f32e19]:
+          - listitem [ref=f32e20] [cursor=pointer]:
+            - generic [ref=f32e21]:
+              - generic [ref=f32e22]: 
+              - text: 훈련과정
+          - listitem [ref=f32e23] [cursor=pointer]:
+            - generic [ref=f32e24]:
+              - generic [ref=f32e25]: 
+              - text: 공지사항
+        - list [ref=f32e26]:
+          - listitem [ref=f32e27] [cursor=pointer]:
+            - generic [ref=f32e28]:
+              - paragraph [ref=f32e29]:
+                - generic [ref=f32e30]: 
+              - paragraph [ref=f32e31]: 고객센터
+          - listitem [ref=f32e32] [cursor=pointer]:
+            - generic [ref=f32e33]:
+              - paragraph [ref=f32e34]:
+                - generic [ref=f32e35]: 
+              - paragraph [ref=f32e36]: 카톡문의
+      - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A(1회차) 처음으로 출결관리 집체훈련 시간표 훈련생 사전평가  오리엔테이션  출석현황 능력단위평가  훈련생평가 이의신청 상담일지 보충수업  훈련일지 과정회의록 과정공지사항 지원내역 과제 서식공유 게시판생성  게시판순서변경 평가정보 돌아가기 평가내역 평가점수 일괄등록" [ref=f32e37]:
+        - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A(1회차) 처음으로" [ref=f32e38]:
+          - caption [ref=f32e39]:
+            - generic [ref=f32e40]:
+              - generic [ref=f32e41]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A(1회차)"
+              - link "처음으로" [ref=f32e42] [cursor=pointer]:
+                - /url: /teacher/ver4/curri/index.php
+          - rowgroup [ref=f32e50]:
+            - row [ref=f32e51]:
+              - cell "개강일" [ref=f32e52]
+              - cell "2026-05-20" [ref=f32e53]
+              - cell "종강일" [ref=f32e54]
+              - cell "2026-12-04" [ref=f32e55]
+              - cell "강사" [ref=f32e56]
+              - cell "김가경, 김혜지" [ref=f32e57]
+            - row [ref=f32e58]:
+              - cell "실시인원" [ref=f32e59]
+              - cell "11" [ref=f32e60]
+              - cell "수강인원" [ref=f32e61]
+              - cell "10" [ref=f32e62]
+              - cell "수강포기인원" [ref=f32e63]
+              - cell "1" [ref=f32e64]
+        - list [ref=f32e65]:
+          - listitem [ref=f32e66] [cursor=pointer]:
+            - list [ref=f32e67]:
+              - listitem [ref=f32e68]: 출결관리
+          - listitem [ref=f32e69] [cursor=pointer]:
+            - list [ref=f32e70]:
+              - listitem [ref=f32e71]: 집체훈련
+          - listitem [ref=f32e72] [cursor=pointer]:
+            - list [ref=f32e73]:
+              - listitem [ref=f32e74]: 시간표
+          - listitem [ref=f32e75] [cursor=pointer]:
+            - list [ref=f32e76]:
+              - listitem [ref=f32e77]: 훈련생
+          - listitem [ref=f32e78] [cursor=pointer]:
+            - list [ref=f32e79]:
+              - listitem [ref=f32e80]: 사전평가
+              - listitem [ref=f32e81]:
+                - generic [ref=f32e82]: 
+          - listitem [ref=f32e83] [cursor=pointer]:
+            - list [ref=f32e84]:
+              - listitem [ref=f32e85]: 오리엔테이션
+              - listitem [ref=f32e86]:
+                - generic [ref=f32e87]: 
+          - listitem [ref=f32e88] [cursor=pointer]:
+            - list [ref=f32e89]:
+              - listitem [ref=f32e90]: 출석현황
+          - listitem [ref=f32e91] [cursor=pointer]:
+            - list [ref=f32e92]:
+              - listitem [ref=f32e93]: 능력단위평가
+              - listitem [ref=f32e94]:
+                - generic [ref=f32e95]: 
+          - listitem [ref=f32e96] [cursor=pointer]:
+            - list [ref=f32e97]:
+              - listitem [ref=f32e98]: 훈련생평가
+          - listitem [ref=f32e99] [cursor=pointer]:
+            - list [ref=f32e100]:
+              - listitem [ref=f32e101]: 이의신청
+          - listitem [ref=f32e102] [cursor=pointer]:
+            - list [ref=f32e103]:
+              - listitem [ref=f32e104]: 상담일지
+          - listitem [ref=f32e105] [cursor=pointer]:
+            - list [ref=f32e106]:
+              - listitem [ref=f32e107]: 보충수업
+              - listitem [ref=f32e108]:
+                - generic [ref=f32e109]: 
+          - listitem [ref=f32e110] [cursor=pointer]:
+            - list [ref=f32e111]:
+              - listitem [ref=f32e112]: 훈련일지
+          - listitem [ref=f32e113] [cursor=pointer]:
+            - generic [ref=f32e114]: 과정회의록
+          - listitem [ref=f32e115] [cursor=pointer]:
+            - generic [ref=f32e116]: 과정공지사항
+          - listitem [ref=f32e117] [cursor=pointer]:
+            - generic [ref=f32e118]: 지원내역
+          - listitem [ref=f32e119] [cursor=pointer]:
+            - generic [ref=f32e120]: 과제
+          - listitem [ref=f32e121] [cursor=pointer]:
+            - generic [ref=f32e122]: 서식공유
+          - listitem [ref=f32e123] [cursor=pointer]:
+            - list [ref=f32e124]:
+              - listitem [ref=f32e125]:
+                - link "게시판생성" [ref=f32e126]:
+                  - /url: "#"
+              - listitem [ref=f32e127]:
+                - generic [ref=f32e128]: 
+          - listitem [ref=f32e129] [cursor=pointer]:
+            - link "게시판순서변경" [ref=f32e131]:
+              - /url: "#"
+        - table "평가정보 돌아가기" [ref=f32e132]:
+          - caption [ref=f32e133]:
+            - generic [ref=f32e134]:
+              - generic [ref=f32e135]: 평가정보
+              - link "돌아가기" [ref=f32e137] [cursor=pointer]:
+                - /url: ../app/appraisal.php?Pcode=300002&Lcode=11&AppCode=AF
+          - rowgroup [ref=f32e144]:
+            - row [ref=f32e145]:
+              - cell "능력단위명" [ref=f32e146]
+              - cell "서비스ㆍ경험디자인 관찰조사" [ref=f32e147]
+              - cell "평가일시" [ref=f32e148]
+              - cell "2026-09-07" [ref=f32e149]
+              - cell [ref=f32e150]:
+                - paragraph [ref=f32e151]: 0 / 100
+                - paragraph [ref=f32e152]: "패널티 : 0점"
+            - row [ref=f32e153]:
+              - cell "훈련강사" [ref=f32e154]
+              - cell "김*지" [ref=f32e155]
+              - cell "훈련생명" [ref=f32e156]
+              - cell "김정은" [ref=f32e157]
+        - table "평가내역 평가점수 일괄등록" [ref=f32e159]:
+          - caption [ref=f32e160]:
+            - generic [ref=f32e161]:
+              - generic [ref=f32e162]: 평가내역
+              - link "평가점수 일괄등록" [ref=f32e164] [cursor=pointer]:
+                - /url: "#"
+          - rowgroup [ref=f32e171]:
+            - row [ref=f32e172]:
+              - columnheader "문항" [ref=f32e173]
+              - columnheader "문제" [ref=f32e174]
+              - columnheader "파일" [ref=f32e175]
+              - columnheader "링크" [ref=f32e176]
+              - columnheader "상세정보" [ref=f32e177]
+          - rowgroup [ref=f32e178]:
+            - row [ref=f32e179]:
+              - cell "1" [ref=f32e180]
+              - cell "제한 시간 내에 AI와 협업하여 사용자에게 적합한 서비스를 기획·검증하고, 완성도 높은 서비스 제안서를 PDF로 제출해 주세요." [ref=f32e181]
+              - cell [ref=f32e182]:
+                - link "다운로드" [ref=f32e183] [cursor=pointer]:
+                  - /url: /uflist/download.php?type=project_appraisal&pcode=300002&lcode=11&file=1788774526_2abf9bf9.zip
+              - cell "-" [ref=f32e184]
+              - cell [ref=f32e185]:
+                - button "상세정보" [ref=f32e186] [cursor=pointer]

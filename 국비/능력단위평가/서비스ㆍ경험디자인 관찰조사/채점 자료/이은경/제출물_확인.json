@@ -1,0 +1,28 @@
+{
+  "student": "이은경",
+  "subject": "(전공)서비스 경험 디자인 조사 및 시나리오 개발",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "Pcode": "300002",
+  "Lcode": "11",
+  "Sid": "sbsartdj1119",
+  "FollowNo": "1",
+  "questionNo": "1344",
+  "exam_date": "2026-09-07",
+  "received_at": "2026-09-08T13:38:47+09:00",
+  "archive": "1788774520_46bc61d3.zip",
+  "archive_sha256": "2297b5eb9897c32e710598b8e3a7949c6ee8b117c7a7fae4e3cadb349030f918",
+  "files": [
+    {
+      "filename": "서비스 기획_이은경.pdf",
+      "archive_filename": "서비스 기획_이은경.pdf",
+      "bytes": 823050,
+      "sha256": "b8e33229a8e55de8d477330255a093bfe37e6939c2a17a067f967e4c93842999"
+    },
+    {
+      "filename": "소피 앱 기획.md",
+      "archive_filename": "소피 앱 기획.md",
+      "bytes": 11642,
+      "sha256": "a82597a2ef02ab46ca24e24570d144b706e74bcbc4b69e3a62958169eb43dae4"
+    }
+  ]
+}
