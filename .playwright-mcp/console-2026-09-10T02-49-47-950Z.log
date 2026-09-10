@@ -1,0 +1,18 @@
+[    8320ms] [LOG] IMMER INIT @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:1
+[    8438ms] [LOG] AXIOS INIT @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:171
+[    8439ms] [LOG] DAYJS INIT @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:171
+[    8452ms] [LOG] MATRIX INIT production_20260909135851 @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8452ms] [LOG] POLYFILLS INIT (skipped for modern browsers) @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8452ms] [LOG] REDUX INIT @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8453ms] [LOG] TIARA INIT @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8512ms] [INFO] %cTalk Channel Manager v1.0.0 font-size: 15px; @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8610ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://business.kakao.com/api/users/me:0
+[    8627ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://business.kakao.com/api/geoip2/country_code:0
+[    8629ms] [ERROR] Unauthorized @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8630ms] [ERROR] Unauthorized @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8632ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://business.kakao.com/api/users/me:0
+[    8633ms] [ERROR] {"status":401,"error":{"message":"Unauthorized"}} @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8633ms] [ERROR] {ignoreErrorRedirection: undefined, status: 401, error: Object} @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8635ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://pf-capi.kakao.com/ws/info?t=1789008596543:0
+[    8635ms] [ERROR] disconnected @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126
+[    8637ms] [ERROR] retry after 6352ms, retry count: 1 @ https://t1.kakaocdn.net/rocket/rocket-front/ch/qix/chatty/production/20260909135851/assets/index-CPE59XUq.js:126

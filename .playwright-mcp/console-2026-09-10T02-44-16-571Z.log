@@ -1,0 +1,16 @@
+[    1077ms] [ERROR] Hydration completed but contains mismatches. @ https://www.behance.net/:12
+[    1811ms] [LOG] Going to iterate over instancesSettings @ https://www.behance.net/:12
+[    2054ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://www.behance.net/:12
+[    2057ms] [ERROR] Not signed in with the identity provider. @ https://www.behance.net/:0
+[    2348ms] [WARNING] All required parameters not yet supplied: authParams, variant @ https://www.behance.net/:12
+[    2348ms] [WARNING] All required parameters not yet supplied: authParams, variant @ https://www.behance.net/:12
+[    2348ms] [WARNING] All required parameters not yet supplied: authParams, variant @ https://www.behance.net/:12
+[    2348ms] [WARNING] All required parameters not yet supplied: authParams, variant @ https://www.behance.net/:12
+[    2348ms] [WARNING] All required parameters not yet supplied: authParams, variant @ https://www.behance.net/:12
+[    2349ms] [WARNING] All required parameters not yet supplied: authParams, variant @ https://www.behance.net/:12
+[    2349ms] [WARNING] All required parameters not yet supplied: authParams @ https://www.behance.net/:12
+[    2557ms] [LOG] {portEvent: MessageEvent} @ https://auth-light.identity.adobe.com/sentry/iframe/index.html?client_id=BehanceWebSusi1&relay=d73a8ad0-7840-4fe7-9ca2-e21982a68d31&asserted_origin=https%3A%2F%2Fwww.behance.net:364
+[    2582ms] [LOG] {event: Object} @ https://auth-light.identity.adobe.com/sentry/iframe/index.html?client_id=BehanceWebSusi1&relay=d73a8ad0-7840-4fe7-9ca2-e21982a68d31&asserted_origin=https%3A%2F%2Fwww.behance.net:188
+[    2605ms] [LOG] {portEvent: MessageEvent} @ https://auth-light.identity.adobe.com/sentry/iframe/index.html?client_id=BehanceWebSusi1&relay=d73a8ad0-7840-4fe7-9ca2-e21982a68d31&asserted_origin=https%3A%2F%2Fwww.behance.net:364
+[    2605ms] [LOG] {event: Object} @ https://auth-light.identity.adobe.com/sentry/iframe/index.html?client_id=BehanceWebSusi1&relay=d73a8ad0-7840-4fe7-9ca2-e21982a68d31&asserted_origin=https%3A%2F%2Fwww.behance.net:188
+[    3032ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://www.behance.net/:12
