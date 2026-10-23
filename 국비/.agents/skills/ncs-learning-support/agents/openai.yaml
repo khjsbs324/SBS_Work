@@ -1,0 +1,4 @@
+interface:
+  display_name: "국비 회의록 및 학습 지원"
+  short_description: "평가결과에 따른 그룹별 회의록과 지원자료 제작·등록·검증"
+  default_prompt: "Use $ncs-learning-support to continue the selected course's ability-unit meeting and A/B/C learning support workflow."

@@ -1,0 +1,10 @@
+body{font-family:"Malgun Gothic",sans-serif;color:#233449;margin:0;font-size:10.2pt;line-height:1.55}
+h2{font-size:18pt;line-height:1.35;color:#17365a;margin:0 0 16px}h3{font-size:11pt;margin:10px 0 4px}
+p{margin:8px 0}table{border-collapse:collapse;width:100%;font-size:9pt;line-height:1.5;margin:10px 0}
+td,th{border:1px solid #b8c8d8;padding:7px;vertical-align:top}th{background:#e9f0f8;text-align:left}
+blockquote{background:#edf4fa;border-left:4px solid #4077a8;margin:12px 0;padding:7px 12px}
+ul{padding-left:21px}li{margin:5px 0}img{width:100%;height:auto;max-height:74mm;object-fit:contain}
+a{color:#245c96;word-break:break-all}.page{box-sizing:border-box;width:210mm;min-height:297mm;padding:17mm 16mm 15mm;page-break-after:always;background:white}
+.page:last-child{page-break-after:auto}.kicker{font-size:9pt;color:#58728e;margin-bottom:12px}
+.footer{margin-top:12px;font-size:8pt;color:#60748c;border-top:1px solid #d7e1ec;padding-top:6px}
+@page{size:A4;margin:0}@media screen{body{background:#dce4ed}.page{margin:18px auto}}

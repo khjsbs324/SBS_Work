@@ -36,6 +36,8 @@ python -B -m unittest discover -s 국비/scripts -p test_harness.py
 
 ## 역할과 구조
 
+회의록과 그룹별 학습 지원은 [희의록및지원내역](희의록및지원내역/README.md)에서 관리하며 [ncs-learning-support](.agents/skills/ncs-learning-support/SKILL.md)를 사용한다. 전용 검증은 국비 폴더에서 `py -3.12 -X utf8 -B -m unittest discover -s scripts/ncs_support/tests -p test_*.py`를 실행한다. 공통 check는 하위 자동화 모듈의 Python 문법도 검사한다.
+
 | 구성 | 책임 |
 |---|---|
 | AGENTS.md | 폴더의 목적, 원본 보존, 기준 자료, 작업 선택과 완료 검사 |

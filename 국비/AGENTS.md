@@ -4,6 +4,7 @@
 
 ## 작업 선택
 
+- 평가결과 분석 회의록·A/B/C 학습 지원내역: [회의록 및 지원내역 지침](희의록및지원내역/AGENTS.md)과 [ncs-learning-support](.agents/skills/ncs-learning-support/SKILL.md).
 - 평가 출제·채점·피드백·문제 등록: [능력단위평가 지침](능력단위평가/AGENTS.md)과 [ncs-exam-production](.agents/skills/ncs-exam-production/SKILL.md).
 - 훈련시간·시간표 편성: [타임테이블 지침](타임테이블/AGENTS.md)과 [ncs-timetable](.agents/skills/ncs-timetable/SKILL.md).
 - 학생 면담 자료 분석·일지: [면담 지침](<국비 시상식/면담 일지/AGENTS.md>)과 [student-interview](.agents/skills/student-interview/SKILL.md).

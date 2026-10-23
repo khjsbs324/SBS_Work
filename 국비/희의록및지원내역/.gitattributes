@@ -1,0 +1,2 @@
+# Preserve validation artifacts byte-for-byte for attachment and ZIP checks.
+검증/구축검증/자료재생성/** -text whitespace=cr-at-eol

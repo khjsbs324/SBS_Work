@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "note": "기존 자료는 보존한다. 과거 관측 경로이며 현재 상태는 다시 확인한다. 로컬 경로는 국비 기준.",
+  "entries": [
+    {
+      "unit": "구현",
+      "group": "A",
+      "date": "2026-06-15",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1042",
+      "post_file": "능력단위평가/구현/최종 결과 산출물/지원내역/2026-06-15_A그룹/post.json"
+    },
+    {
+      "unit": "구현",
+      "group": "B",
+      "date": "2026-06-15",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1043",
+      "post_file": "능력단위평가/구현/최종 결과 산출물/지원내역/2026-06-15_B그룹/post.json"
+    },
+    {
+      "unit": "구현",
+      "group": "C",
+      "date": "2026-06-15",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1044",
+      "post_file": "능력단위평가/구현/최종 결과 산출물/지원내역/2026-06-15_C그룹/post.json"
+    },
+    {
+      "unit": "구현 응용",
+      "group": "A",
+      "date": "2026-07-06",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1048",
+      "post_file": "능력단위평가/구현 응용/최종 결과 산출물/지원내역/2026-07-06_A그룹/post.json"
+    },
+    {
+      "unit": "구현 응용",
+      "group": "B",
+      "date": "2026-07-06",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1049",
+      "post_file": "능력단위평가/구현 응용/최종 결과 산출물/지원내역/2026-07-06_B그룹/post.json"
+    },
+    {
+      "unit": "구현 응용",
+      "group": "C",
+      "date": "2026-07-06",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1050",
+      "post_file": "능력단위평가/구현 응용/최종 결과 산출물/지원내역/2026-07-06_C그룹/post.json"
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "group": "A",
+      "date": "2026-06-22",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1045",
+      "post_file": "능력단위평가/시각디자인 리서치 분석/최종 결과 산출물/지원내역/2026-06-22_A그룹/post.json"
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "group": "B",
+      "date": "2026-06-22",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1046",
+      "post_file": "능력단위평가/시각디자인 리서치 분석/최종 결과 산출물/지원내역/2026-06-22_B그룹/post.json"
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "group": "C",
+      "date": "2026-06-22",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1047",
+      "post_file": "능력단위평가/시각디자인 리서치 분석/최종 결과 산출물/지원내역/2026-06-22_C그룹/post.json"
+    },
+    {
+      "unit": "시각디자인 리서치 조사",
+      "group": "A",
+      "date": "2026-06-08",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1035",
+      "post_file": "능력단위평가/시각디자인 리서치 조사/최종 결과 산출물/지원내역/2026-06-08_A그룹/post.json",
+      "url_provenance": "직전 세션 등록 기록, 현재 화면 재확인 필요"
+    },
+    {
+      "unit": "시각디자인 리서치 조사",
+      "group": "B",
+      "date": "2026-06-08",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1040",
+      "post_file": "능력단위평가/시각디자인 리서치 조사/최종 결과 산출물/지원내역/2026-06-08_B그룹/post.json",
+      "url_provenance": "직전 세션 등록 기록, 현재 화면 재확인 필요"
+    },
+    {
+      "unit": "시각디자인 리서치 조사",
+      "group": "C",
+      "date": "2026-06-08",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1041",
+      "post_file": "능력단위평가/시각디자인 리서치 조사/최종 결과 산출물/지원내역/2026-06-08_C그룹/post.json",
+      "url_provenance": "직전 세션 등록 기록, 현재 화면 재확인 필요"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "group": "A",
+      "date": "2026-07-06",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1051",
+      "post_file": "능력단위평가/시안 디자인 개발 심화/최종 결과 산출물/지원내역/2026-07-06_A그룹/post.json"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "group": "B",
+      "date": "2026-07-06",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1052",
+      "post_file": "능력단위평가/시안 디자인 개발 심화/최종 결과 산출물/지원내역/2026-07-06_B그룹/post.json"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "group": "C",
+      "date": "2026-07-06",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1053",
+      "post_file": "능력단위평가/시안 디자인 개발 심화/최종 결과 산출물/지원내역/2026-07-06_C그룹/post.json"
+    },
+    {
+      "unit": "구현",
+      "group": "A",
+      "date": "2026-10-26",
+      "course_id": "B",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/bbs/view.php?Pcode=500000&BoardCode=1&no=11",
+      "audit_file": "능력단위평가/구현/최종 결과 산출물/지원내역/B과정_2026-10-26_등록검증.json"
+    },
+    {
+      "unit": "구현",
+      "group": "B",
+      "date": "2026-10-26",
+      "course_id": "B",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/bbs/view.php?Pcode=500000&BoardCode=1&no=12",
+      "audit_file": "능력단위평가/구현/최종 결과 산출물/지원내역/B과정_2026-10-26_등록검증.json"
+    },
+    {
+      "unit": "구현",
+      "group": "C",
+      "date": "2026-10-26",
+      "course_id": "B",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/bbs/view.php?Pcode=500000&BoardCode=1&no=13",
+      "audit_file": "능력단위평가/구현/최종 결과 산출물/지원내역/B과정_2026-10-26_등록검증.json"
+    }
+  ]
+}

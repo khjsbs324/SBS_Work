@@ -1,0 +1,19 @@
+{
+  "example": true,
+  "group": "A",
+  "unit": "실제 능력단위명으로 교체",
+  "subtitle": "이 그룹이 완성할 학습 목표",
+  "sections": [
+    {"title": "학습 목표와 평가 근거", "html": "<p>실제 평가에서 확인한 보완 방향을 작성합니다.</p>"},
+    {"title": "학습 순서와 시각 예시", "html": "<p><img src=\"@@process.png@@\" alt=\"실제 제작한 학습 도식 설명\" /></p><p>단계별 설명과 실습을 작성합니다.</p>"},
+    {"title": "완료 기준과 다음 학습", "html": "<p>자신의 파일에서 확인할 기준과 후속 활동을 작성합니다.</p>"}
+  ],
+  "images": ["process.png"],
+  "sources": [
+    {"provider": "실제 국내 전문가 또는 제공기관", "title": "실제 원문 제목", "url": "https://example.com/replace-with-verified-source", "language": "ko", "free": true, "scope": "실제 읽을 범위 또는 영상 구간", "activity": "내 결과물에 적용할 구체적 활동", "checked_at": "실제 확인 시각과 시간대"}
+  ],
+  "worksheets": [
+    {"title": "근거와 보완 기록", "fields": ["실제 파일과 위치", "확인한 강점 또는 문제", "수정 내용과 이유", "검수 조건과 결과", "남은 질문"]}
+  ],
+  "files": ["학습자료.pdf", "실습양식.docx", "읽는순서.txt", "process.png", "빈칸양식/01_실습.csv"]
+}

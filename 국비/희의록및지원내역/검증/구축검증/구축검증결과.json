@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "purpose": "자동화 구축 검증. 새 능력단위 지원내역 등록 작업이 아님.",
+  "checked_at": "2026-10-23T05:00:19.459Z",
+  "tests": {
+    "support": {
+      "count": 16,
+      "passed": true,
+      "python": "3.12"
+    },
+    "existingHarness": {
+      "count": 14,
+      "passed": true,
+      "python": "3.12"
+    },
+    "skillValidator": {
+      "passed": true
+    },
+    "browserMock": {
+      "ok": true,
+      "mockedWrites": 1,
+      "realExternalWrites": 0,
+      "htmlPreserved": true,
+      "duplicateBlocked": true,
+      "uniqueObservedRow": 1
+    }
+  },
+  "liveReadOnly": {
+    "list": {
+      "complete": true,
+      "pages": 4,
+      "posts": 19,
+      "ids": [
+        "1014",
+        "1053",
+        "1052",
+        "1051",
+        "1050",
+        "1049",
+        "1048",
+        "1047",
+        "1046",
+        "1045",
+        "1044",
+        "1043",
+        "1042",
+        "1041",
+        "1040",
+        "1035",
+        "830",
+        "829",
+        "782"
+      ]
+    },
+    "post": {
+      "course_id": "A",
+      "unit": "시안 디자인 개발 심화",
+      "lcode": "6",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "group": "A",
+      "post_date": "2026-07-06",
+      "title": "[능력단위평가_지원내역] 시안 디자인 개발 심화 A그룹 지원자료",
+      "post_id": "1051",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1051",
+      "checked_at": "2026-10-23T05:00:19.459Z",
+      "title_exact": true,
+      "date_exact": true,
+      "text_exact": true,
+      "images_loaded": true,
+      "anchors_valid": true,
+      "reference_urls": [
+        "https://design.samsung.com/kr/contents/design-career-1/vcd.html",
+        "https://design.samsung.com/kr/contents/blue-story/",
+        "https://spoqa.github.io/2012/12/03/Typography.html",
+        "https://helpx.adobe.com/kr/illustrator/using/pdf-options.html"
+      ],
+      "styles": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "tablePadding": "14px 16px"
+      },
+      "anchor_navigation": true,
+      "attachment_status": 200,
+      "attachment_sha256": "993b4060a9f94d620898e761c3f4d713fb4c463f1b91d9e2eda0fdd6026b5718",
+      "course_confirmed": true
+    }
+  },
+  "materialRebuild": {
+    "groups": [
+      {
+        "group": "A",
+        "pages": 10,
+        "heights": [
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123
+        ],
+        "images": true,
+        "overflow": 0
+      },
+      {
+        "group": "B",
+        "pages": 10,
+        "heights": [
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123
+        ],
+        "images": true,
+        "overflow": 0
+      },
+      {
+        "group": "C",
+        "pages": 10,
+        "heights": [
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123,
+          1123
+        ],
+        "images": true,
+        "overflow": 0
+      }
+    ],
+    "actualPdfPageCounts": {
+      "A": 10,
+      "B": 10,
+      "C": 10
+    },
+    "representativePagesReviewed": {
+      "A": 4,
+      "B": 6,
+      "C": 7
+    },
+    "zipEntriesPerGroup": 19,
+    "visualReview": true,
+    "originalSourcesPreserved": true
+  },
+  "commonCheck": {
+    "newErrors": [],
+    "existingErrors": [
+      "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완"
+    ],
+    "overallPass": false
+  },
+  "externalChanges": {
+    "realPostsCreated": 0,
+    "meetingsChanged": 0,
+    "scoresChanged": 0
+  },
+  "limitations": [
+    "AI가 현재 평가·피드백·자료 내용·레이아웃을 판단해야 함",
+    "실제 저장 경로는 모의 화면에서 검증했으며 실제 사이트에서는 기존 게시글만 읽음",
+    "새 평가의 폼·과정·종료일은 매 작업 현재 화면으로 재확인",
+    "자료 재생성은 공개된 기존 자료를 사용한 구축 검증용이며 실제 작업 완료 기록이 아님"
+  ]
+}

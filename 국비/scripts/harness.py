@@ -24,7 +24,7 @@ from urllib.parse import unquote, urlsplit
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_NAMES = {"ncs-exam-production", "ncs-timetable", "student-interview"}
+SKILL_NAMES = {"ncs-exam-production", "ncs-timetable", "student-interview", "ncs-learning-support"}
 DATA_DIRS = {"채점 자료", "채점 완료", "학생_제출_산출물", "문제 코드", "정답", ".검증", ".harness-cache"}
 
 
@@ -349,7 +349,7 @@ def check(root=ROOT, records=False, strict_hashes=False):
     for path in (base / "skills", base / ".agents"):
         if path.exists() and any(p.is_file() for p in path.rglob("*")):
             errors.append(f"Legacy automation still present: {path.relative_to(root)}")
-    for path in (root / "scripts").glob("*.py"):
+    for path in (root / "scripts").rglob("*.py"):
         inspect(path, lambda p=path: ast.parse(read_text(p), filename=str(p)))
     # No project Hook/Agent config is installed. New configurations need an
     # explicit validator when introduced rather than silently passing this check.

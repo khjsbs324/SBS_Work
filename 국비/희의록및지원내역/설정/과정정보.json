@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-10-23",
+  "note": "이전 등록에서 확인한 경로다. 과정명·게시판·능력단위·종료일은 매 작업의 현재 화면에서 다시 확인한다. Lcode는 단위별로 읽는다.",
+  "courses": {
+    "A": {
+      "name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+      "version": "ver4",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "base_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4"
+    },
+    "B": {
+      "name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) B (1회차)",
+      "version": "ver5",
+      "Pcode": "500000",
+      "BoardCode": "1",
+      "base_url": "https://sbsartdj.maniaro.net/teacher/curri/ver5"
+    }
+  }
+}
