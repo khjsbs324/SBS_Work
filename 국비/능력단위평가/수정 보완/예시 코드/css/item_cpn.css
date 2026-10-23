@@ -1,0 +1,26 @@
+/* ------ 전역 ------ */
+/* 전체 브라우저에 들어가는 기본 글자 색상 */
+.col-de-light {
+  color: var(--color-default-light);
+}
+.col-de-dark {
+  color: var(--color-default-dark);
+}
+
+/* 전체 브라우저에 들어가는 XS글자 */
+.XS-text-cpn {
+  font-size: var(--text-XS);
+  font-weight: var(--textW-SMALL);
+}
+
+/* ------ 지역 ------ */
+/* 상단바에 들어가는 SMALL */
+.SMALL-text-header {
+  font-size: var(--text-SMALL);
+  font-weight: var(--textW-MEDIUM);
+  color: var(--color-default-dark);
+}
+.SMALL-li-header {
+  font-size: var(--text-base);
+  font-weight: var(--textW-LARGE);
+}

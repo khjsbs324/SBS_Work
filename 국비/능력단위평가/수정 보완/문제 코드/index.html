@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MALBON GOLF KOREA | CSS 분리·오류 수정 실습(문제)</title>
+
+  <!-- 구글 폰트 / 심볼 연결 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!--
+    [실습 안내]
+    1) 아래 style.css 한 파일에는 모든 스타일이 섞여 있습니다.
+       "정답 코드" 폴더처럼 normal / root / component / btn_cpn / item_cpn / layout_cpn / style / media
+       8개 파일로 적절히 나누어 다시 연결하세요.
+    2) style.css 안에는 레이아웃이 깨지는 오답 코드가 3곳 들어 있습니다.
+       "정답.png"와 비교하며 찾아 수정하세요.
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body id="top">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" hidden>
+
+    <div class="con header-con">
+      <h1 class="logo-box">
+        <a class="logo" href="#top">malbon</a>
+      </h1>
+
+      <nav class="gnb">
+        <ul class="SMALL-li-header gnb-list">
+          <li><a href="#">NEW</a></li>
+          <li><a href="#">MEN</a></li>
+          <li><a href="#">WOMEN</a></li>
+          <li><a href="#">ACCESSORIES</a></li>
+          <li><a href="#">EXCLUSIVE</a></li>
+          <li class="gnb-divider" aria-hidden="true"></li>
+          <li><a href="#">OUTLET</a></li>
+          <li><a href="#">LOOKBOOK</a></li>
+          <li><a href="#">BUCKETS CLUB</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icon-list">
+        <a href="#" class="XS-text-cpn header-text-link">로그인</a>
+        <a href="#" class="material-symbols-rounded icon-FS-SMALL" aria-label="마이페이지">person</a>
+        <a href="#" class="material-symbols-rounded icon-FS-SMALL" aria-label="검색">search</a>
+        <a href="#" class="material-symbols-rounded icon-FS-SMALL cart-icon" aria-label="장바구니">
+          shopping_bag<span class="cart-count">0</span>
+        </a>
+        <label for="menu-toggle" class="material-symbols-rounded mo-menu-btn" aria-label="메뉴 열기">menu</label>
+      </div>
+    </div>
+
+    <!-- 모바일 슬라이드 메뉴 (0~1024, 체크박스 방식/JS 미사용) -->
+    <label for="menu-toggle" class="mobile-nav-dim" aria-hidden="true"></label>
+    <nav class="mobile-nav">
+      <label for="menu-toggle" class="material-symbols-rounded mobile-nav-close" aria-label="메뉴 닫기">close</label>
+      <ul class="mobile-nav-list SMALL-li-header">
+        <li><a href="#">NEW</a></li>
+        <li><a href="#">MEN</a></li>
+        <li><a href="#">WOMEN</a></li>
+        <li><a href="#">ACCESSORIES</a></li>
+        <li><a href="#">EXCLUSIVE</a></li>
+        <li><a href="#">OUTLET</a></li>
+        <li><a href="#">LOOKBOOK</a></li>
+        <li><a href="#">BUCKETS CLUB</a></li>
+      </ul>
+      <ul class="mobile-nav-list mobile-nav-sub XS-text-cpn">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">마이페이지</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO SLIDER ===================== -->
+  <section class="hero">
+    <div class="hero-slider">
+      <div class="hero-slide" id="slide1">
+        <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/42/97811c4f834392dfd6b8ca9a3909cc74.jpg" alt="MALBON X BALLANTINES 컬렉션">
+        <div class="hero-caption con">
+          <p class="XS-text-cpn col-de-light hero-eyebrow">MALBON X BALLANTINES</p>
+          <h2 class="hero-title col-de-light">야외 활동에 안성맞춤인 스타일,<br>파트너와 함께 만든 협업 컬렉션</h2>
+        </div>
+      </div>
+      <div class="hero-slide" id="slide2">
+        <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/42/ad1e6db96b7ad6e0a7a2e71c9530a945.jpg" alt="MALECÓN SUN 컬렉션">
+        <div class="hero-caption con">
+          <p class="XS-text-cpn col-de-light hero-eyebrow">MALECÓN SUN</p>
+          <h2 class="hero-title col-de-light">길게 이어지는 하루,<br>골프와 일상을 잇는 말본의 여름</h2>
+        </div>
+      </div>
+      <div class="hero-slide" id="slide3">
+        <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/42/c6c9bebd74b89d7e7af3884d9f97fee6.jpg" alt="CHART A NEW COURSE 컬렉션">
+        <div class="hero-caption con">
+          <p class="XS-text-cpn col-de-light hero-eyebrow">CHART A NEW COURSE</p>
+          <h2 class="hero-title col-de-light">새로운 세 가지 컬러로 돌아온<br>The Course</h2>
+        </div>
+      </div>
+      <div class="hero-slide" id="slide4">
+        <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/42/394048e9807c43e64adc3e6ada62568d.jpg" alt="IRONWORKS DIVISION 컬렉션">
+        <div class="hero-caption con">
+          <p class="XS-text-cpn col-de-light hero-eyebrow">IRONWORKS DIVISION</p>
+          <h2 class="hero-title col-de-light">워크웨어의 감성을 담아,<br>골프와 문화를 연결한 26 FALL D1</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-controls con">
+      <a href="#slide1" class="slide-arrow material-symbols-rounded" aria-label="이전 배너">chevron_left</a>
+      <div class="slide-dots">
+        <a href="#slide1" class="is-active" aria-label="1번 배너"></a>
+        <a href="#slide2" aria-label="2번 배너"></a>
+        <a href="#slide3" aria-label="3번 배너"></a>
+        <a href="#slide4" aria-label="4번 배너"></a>
+      </div>
+      <a href="#slide4" class="slide-arrow material-symbols-rounded" aria-label="다음 배너">chevron_right</a>
+    </div>
+  </section>
+
+  <!-- ===================== QUICK LINKS ===================== -->
+  <nav class="quick-links">
+    <div class="con quick-links-con">
+      <ul class="quick-links-list XS-text-cpn">
+        <li><a href="#">#NEW</a></li>
+        <li><a href="#">#BLAZE</a></li>
+        <li><a href="#">#OUTLET</a></li>
+      </ul>
+      <span class="quick-links-divider" aria-hidden="true"></span>
+      <ul class="quick-links-list XS-text-cpn">
+        <li><a href="#">MEN</a></li>
+        <li><a href="#">WOMEN</a></li>
+        <li><a href="#">ACC</a></li>
+        <li><a href="#">HAT</a></li>
+        <li><a href="#">CADDY BAG</a></li>
+        <li><a href="#">YOUTH</a></li>
+        <li><a href="#" class="is-active">Thanks, Archive</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== BEST PICKS ===================== -->
+  <section class="section best-picks">
+    <div class="con">
+      <div class="section-head">
+        <h2 class="section-title">BEST PICKS</h2>
+        <a href="#" class="btn-more">더보기<span class="material-symbols-rounded">add</span></a>
+      </div>
+
+      <div class="tab-list SMALL-text-cpn" role="tablist">
+        <a href="#" class="tab-btn is-active" role="tab">WOMEN</a>
+        <a href="#" class="tab-btn" role="tab">MEN</a>
+        <a href="#" class="tab-btn" role="tab">TOP</a>
+        <a href="#" class="tab-btn" role="tab">BOTTOM</a>
+        <a href="#" class="tab-btn" role="tab">CAP</a>
+        <a href="#" class="tab-btn" role="tab">ACCESSORIES</a>
+      </div>
+
+      <ul class="grid-5 product-grid">
+        <li class="product-card">
+          <a href="#" class="img-wrap ratio-1x1">
+            <img src="https://malbongolf.wisacdn.com/_data/product/202607/27/a49e47abc1a3e51374f90875ddf819a3.jpg" alt="여성 여름 반팔 카라 스웨터 OFF WHITE">
+          </a>
+          <div class="product-info">
+            <p class="product-name"><a href="#">여성 여름 반팔 카라 스웨터 OFF WHITE (WOMAN)</a></p>
+            <p class="product-code">M6322PKT11OWT</p>
+            <p class="product-price">379,000원</p>
+            <div class="swatch-list">
+              <span class="swatch" style="background-color:#f2ede2"></span>
+              <span class="swatch" style="background-color:#22262b"></span>
+            </div>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="#" class="img-wrap ratio-1x1">
+            <img src="https://malbongolf.wisacdn.com/_data/product/202607/27/c809cd72d0ca631a5dd76f47bd113f3b.jpg" alt="변형 에리 블루종 반팔 OFF WHITE">
+          </a>
+          <div class="product-info">
+            <p class="product-name"><a href="#">변형 에리 블루종 반팔 OFF WHITE (WOMAN)</a></p>
+            <p class="product-code">M6322PTS11OWT</p>
+            <p class="product-price">319,000원</p>
+            <div class="swatch-list">
+              <span class="swatch" style="background-color:#f2ede2"></span>
+              <span class="swatch" style="background-color:#1b2436"></span>
+            </div>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="#" class="img-wrap ratio-1x1">
+            <img src="https://malbongolf.wisacdn.com/_data/product/202607/27/d29b329d222856c6a4cd50cd23086b7e.jpg" alt="데님 라이크 반팔 자켓 SKY BLUE">
+          </a>
+          <div class="product-info">
+            <p class="product-name"><a href="#">데님 라이크 반팔 자켓 SKY BLUE (WOMAN)</a></p>
+            <p class="product-code">M6322PJK15SBL</p>
+            <p class="product-price">399,000원</p>
+            <div class="swatch-list">
+              <span class="swatch" style="background-color:#a9c6d8"></span>
+            </div>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="#" class="img-wrap ratio-1x1">
+            <img src="https://malbongolf.wisacdn.com/_data/product/202607/27/4986d2237854290427ebd4947b0974d6.jpg" alt="데님 라이크 스티치 H라인 스커트 NAVY">
+          </a>
+          <div class="product-info">
+            <p class="product-name"><a href="#">데님 라이크 스티치 H라인 스커트 NAVY (WOMAN)</a></p>
+            <p class="product-code">M6322PSK32NVY</p>
+            <p class="product-price">439,000원</p>
+            <div class="swatch-list">
+              <span class="swatch" style="background-color:#1b2436"></span>
+              <span class="swatch" style="background-color:#22262b"></span>
+              <span class="swatch" style="background-color:#cdbfa4"></span>
+            </div>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="#" class="img-wrap ratio-1x1">
+            <img src="https://malbongolf.wisacdn.com/_data/product/202607/27/87178d42c873ccd8d93ec1b654d17390.jpg" alt="잔플리츠 포켓 변형 스커트 OFF WHITE">
+          </a>
+          <div class="product-info">
+            <p class="product-name"><a href="#">잔플리츠 포켓 변형 스커트 OFF WHITE (WOMAN)</a></p>
+            <p class="product-code">M6322PSK12OWT</p>
+            <p class="product-price">499,000원</p>
+            <div class="swatch-list">
+              <span class="swatch" style="background-color:#f2ede2"></span>
+              <span class="swatch" style="background-color:#cdbfa4"></span>
+              <span class="swatch" style="background-color:#1b2436"></span>
+            </div>
+          </div>
+        </li>
+        <li class="product-card best-picks-extra">
+          <a href="#" class="img-wrap ratio-1x1">
+            <img src="https://malbongolf.wisacdn.com/_data/product/202512/23/efdb86caaea6329e4cb873d17d0dd3aa.jpg" alt="여성 니트라이크 하프집업 후드 맨투맨 BEIGE">
+          </a>
+          <div class="product-info">
+            <p class="product-name"><a href="#">여성 니트라이크 하프집업 후드 맨투맨 BEIGE (WOMAN)</a></p>
+            <p class="product-code">M6122PFS11BEI</p>
+            <p class="product-price">359,000원</p>
+            <div class="swatch-list">
+              <span class="swatch" style="background-color:#cdbfa4"></span>
+              <span class="swatch" style="background-color:#22262b"></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== COLLECTION ===================== -->
+  <section class="section collection">
+    <div class="con">
+      <h2 class="section-title collection-heading-main">COLLECTION</h2>
+
+      <div class="collection-row">
+        <div class="collection-media img-wrap ratio-portrait">
+          <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/f65829aea49dda24cb8e4a5212f1c34b.jpg" alt="MALBON GRATEFUL DEAD 컬렉션 화보">
+        </div>
+        <div class="collection-content">
+          <p class="section-sub">MALBON · GRATEFUL DEAD</p>
+          <h3 class="collection-title">사이키델릭 아트와<br>자유로운 무드를 담아<br>새롭게 제안하는</h3>
+          <p class="XS-text-cpn col-muted">MALBON · GRATEFUL DEAD 협업 컬렉션을 만나보세요</p>
+          <ul class="grid-3 collection-products">
+            <li class="product-card">
+              <div class="img-wrap ratio-1x1">
+                <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/8ee9a5ca7952bb8f1a51f7bcf613090f.jpg" alt="GRATEFUL DEAD 헤어라인 셔츠 화이트">
+              </div>
+              <p class="product-name">[GRATEFUL DEAD] 헤어라인 셔츠 화이트</p>
+              <p class="product-price">289,000원</p>
+            </li>
+            <li class="product-card">
+              <div class="img-wrap ratio-1x1">
+                <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/d2a4c743b466e934600402d290b4b979.jpg" alt="GRATEFUL DEAD 그래픽 셔츠 화이트">
+              </div>
+              <p class="product-name">[GRATEFUL DEAD] 그래픽 셔츠 화이트</p>
+              <p class="product-price">289,000원</p>
+            </li>
+            <li class="product-card">
+              <div class="img-wrap ratio-1x1">
+                <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/3c98afa144f63f592733607c472314c4.jpg" alt="GRATEFUL DEAD 스트라이프 반팔 셔츠">
+              </div>
+              <p class="product-name">[GRATEFUL DEAD] 스트라이프 반팔 셔츠</p>
+              <p class="product-price">259,000원</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="collection-row is-reverse">
+        <div class="collection-content">
+          <p class="section-sub">MALBON · DANIEL ARSHAM</p>
+          <h3 class="collection-title">시간의 흔적을 담은<br>예술적 감각으로<br>새롭게 완성한</h3>
+          <p class="XS-text-cpn col-muted">MALBON · ARSHAM 협업 컬렉션을 만나보세요</p>
+          <ul class="grid-3 collection-products">
+            <li class="product-card">
+              <div class="img-wrap ratio-1x1">
+                <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/a5e5d7d592a4806141afa1ddc3f8e241.jpg" alt="ARSHAM 도트 패턴 반팔 셔츠 블랙">
+              </div>
+              <p class="product-name">[ARSHAM] 도트 패턴 반팔 셔츠 블랙</p>
+              <p class="product-price">289,000원</p>
+            </li>
+            <li class="product-card">
+              <div class="img-wrap ratio-1x1">
+                <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/0052e6d67344c24f7c5b04817fdd9c59.jpg" alt="ARSHAM 그래픽 반팔 티셔츠 화이트">
+              </div>
+              <p class="product-name">[ARSHAM] 그래픽 반팔 티셔츠 화이트</p>
+              <p class="product-price">189,000원</p>
+            </li>
+            <li class="product-card">
+              <div class="img-wrap ratio-1x1">
+                <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/8684f21239a49108fc18f1a9e8ba99f5.jpg" alt="ARSHAM 와핑 그래픽 반팔 티셔츠 블랙">
+              </div>
+              <p class="product-name">[ARSHAM] 와핑 그래픽 반팔 티셔츠 블랙</p>
+              <p class="product-price">329,000원</p>
+            </li>
+          </ul>
+        </div>
+        <div class="collection-media img-wrap ratio-portrait">
+          <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/7baceea5c0f35945bf6cb5cf04bdd80f.jpg" alt="MALBON DANIEL ARSHAM 컬렉션 화보">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OUTLET BANNER ===================== -->
+  <section class="outlet-banner">
+    <div class="img-wrap ratio-wide">
+      <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/55/eb0a1788486f3474bfb97d1573e8f6a5.jpg" alt="OUTLET Archive sale">
+    </div>
+    <div class="outlet-caption">
+      <p class="outlet-title col-de-light">OUTLET</p>
+      <p class="XS-text-cpn col-de-light">Archive sale · Select item</p>
+    </div>
+  </section>
+
+  <!-- ===================== NOW TRENDING ===================== -->
+  <section class="section trending">
+    <div class="con">
+      <div class="section-head">
+        <h2 class="section-title">NOW TRENDING</h2>
+      </div>
+      <p class="section-sub trending-sub">지금 가장 뜨는 인기 아이템을 만나보세요</p>
+
+      <div class="trending-body">
+        <div class="trending-promo">
+          <div>
+            <p class="MEDIUM-text-cpn col-de-light">Golf Bag</p>
+            <ul class="trending-list XS-text-cpn col-de-light">
+              <li>Water proof</li>
+              <li>Lightweight</li>
+              <li>Sun Shield</li>
+              <li>Essential Cap</li>
+            </ul>
+          </div>
+          <a href="#" class="btn-more col-de-light">더보기<span class="material-symbols-rounded">chevron_right</span></a>
+        </div>
+
+        <ul class="trending-products">
+          <li class="product-card">
+            <a href="#" class="img-wrap ratio-1x1">
+              <img src="https://malbongolf.wisacdn.com/_data/product/202606/19/ed48e724103d61e2cf365669035e271b.jpg" alt="골프백 확장형 로고자켓 KHAKI">
+            </a>
+            <div class="product-info">
+              <p class="product-name">골프백 확장형 로고자켓 KHAKI</p>
+              <p class="product-price">590,000원</p>
+              <div class="swatch-list"><span class="swatch" style="background-color:#8a7a5c"></span></div>
+            </div>
+          </li>
+          <li class="product-card">
+            <a href="#" class="img-wrap ratio-1x1">
+              <img src="https://malbongolf.wisacdn.com/_data/product/202606/19/9daf2ba52d6c0cbcebbf79682da749a8.jpg" alt="골프백 확장형 로고자켓 BLACK">
+            </a>
+            <div class="product-info">
+              <p class="product-name">골프백 확장형 로고자켓 BLACK (MAN)</p>
+              <p class="product-price">279,000원</p>
+              <div class="swatch-list"><span class="swatch" style="background-color:#22262b"></span></div>
+            </div>
+          </li>
+          <li class="product-card">
+            <a href="#" class="img-wrap ratio-1x1">
+              <img src="https://malbongolf.wisacdn.com/_data/product/202606/29/a668cd3f864c233187de592f666667b9.jpg" alt="골프백 확장형 로고백 KHAKI">
+            </a>
+            <div class="product-info">
+              <p class="product-name">골프백 확장형 로고백 KHAKI</p>
+              <p class="product-price">590,000원</p>
+              <div class="swatch-list"><span class="swatch" style="background-color:#8a7a5c"></span></div>
+            </div>
+          </li>
+          <li class="product-card">
+            <a href="#" class="img-wrap ratio-1x1">
+              <img src="https://malbongolf.wisacdn.com/_data/product/202606/19/25bc9ebc51f636c43447030469fd9643.jpg" alt="MALBON X BALLANTINES 캐디백">
+            </a>
+            <div class="product-info">
+              <p class="product-name">[MALBON X BALLANTINES] 캐디백</p>
+              <p class="product-price">690,000원</p>
+              <div class="swatch-list"><span class="swatch" style="background-color:#1b3a29"></span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROMOTIONS ===================== -->
+  <section class="section promotions">
+    <div class="con">
+      <div class="section-head">
+        <h2 class="section-title">PROMOTIONS</h2>
+      </div>
+      <p class="section-sub">프로모션 상품 이벤트를 만나보세요, 지금 확인해보세요</p>
+
+      <ul class="grid-4 promo-grid">
+        <li class="promo-card img-wrap ratio-portrait">
+          <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/f65829aea49dda24cb8e4a5212f1c34b.jpg" alt="Step In Stay Grounded">
+          <div class="promo-caption">
+            <p class="MEDIUM-text-cpn col-de-light">Step In Stay Grounded</p>
+            <p class="XS-text-cpn col-de-light">친환경 소재로 완성한 골프화</p>
+          </div>
+        </li>
+        <li class="promo-card img-wrap ratio-portrait">
+          <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/47/7baceea5c0f35945bf6cb5cf04bdd80f.jpg" alt="Malbon x Bettinardi">
+          <div class="promo-caption">
+            <p class="MEDIUM-text-cpn col-de-light">Malbon x Bettinardi</p>
+            <p class="XS-text-cpn col-de-light">말본과 베티나르디가 완성하는 그린 위 감각</p>
+          </div>
+        </li>
+        <li class="promo-card img-wrap ratio-portrait">
+          <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/42/c6c9bebd74b89d7e7af3884d9f97fee6.jpg" alt="Tailfins & Palms">
+          <div class="promo-caption">
+            <p class="MEDIUM-text-cpn col-de-light">TAILFINS &amp; PALMS</p>
+            <p class="XS-text-cpn col-de-light">여름을 닮은 컬러 팔레트 컬렉션</p>
+          </div>
+        </li>
+        <li class="promo-card img-wrap ratio-portrait">
+          <img src="https://malbongolf.wisacdn.com/_data/banner/user_group_banner/sw_kor_2026/42/394048e9807c43e64adc3e6ada62568d.jpg" alt="새로운 시즌 컬렉션">
+          <div class="promo-caption">
+            <p class="MEDIUM-text-cpn col-de-light">New Season Drop</p>
+            <p class="XS-text-cpn col-de-light">새 시즌을 여는 신상품을 만나보세요</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== LOOK BOOK ===================== -->
+  <section class="section lookbook">
+    <div class="con">
+      <div class="section-head">
+        <h2 class="section-title">LOOK BOOK</h2>
+        <a href="#" class="btn-more">더보기<span class="material-symbols-rounded">add</span></a>
+      </div>
+      <p class="section-sub">룩북 스타일링을 만나보세요</p>
+
+      <ul class="grid-4 lookbook-grid">
+        <li class="lookbook-card">
+          <div class="img-wrap ratio-portrait">
+            <img src="https://malbongolf.wisacdn.com/board//_data/gallery_6/202607/31//2521c37f1e13d2f469de67896c76f68a.jpg" alt="룩북 스타일링 1">
+          </div>
+          <ul class="lookbook-items">
+            <li class="lookbook-item"><a href="#"><span class="product-name">여성 피케 반팔 셔츠 SKY BLUE (WOMAN)</span><span class="product-price">279,000원</span></a></li>
+            <li class="lookbook-item"><a href="#"><span class="product-name">여성 밴드 미니 스커트 NAVY (WOMAN)</span><span class="product-price">259,000원</span></a></li>
+          </ul>
+        </li>
+        <li class="lookbook-card">
+          <div class="img-wrap ratio-portrait">
+            <img src="https://malbongolf.wisacdn.com/board//_data/gallery_6/202607/31//8836895f8a37b7c4ad38510b08e926aa.jpg" alt="룩북 스타일링 2">
+          </div>
+          <ul class="lookbook-items">
+            <li class="lookbook-item"><a href="#"><span class="product-name">남성 스트라이프 카라 셔츠 SKY BLUE (MAN)</span><span class="product-price">279,000원</span></a></li>
+            <li class="lookbook-item"><a href="#"><span class="product-name">숏츠 데님 워크 팬츠 (MAN)</span><span class="product-price">259,000원</span></a></li>
+          </ul>
+        </li>
+        <li class="lookbook-card">
+          <div class="img-wrap ratio-portrait">
+            <img src="https://malbongolf.wisacdn.com/board//_data/gallery_6/202607/30//e571601cc60c5c7600a744acd77e9653.jpg" alt="룩북 스타일링 3">
+          </div>
+          <ul class="lookbook-items">
+            <li class="lookbook-item"><a href="#"><span class="product-name">ZOE 밴딩 팬츠 LIGHT KHAKI (WOMAN)</span><span class="product-price">279,000원</span></a></li>
+            <li class="lookbook-item"><a href="#"><span class="product-name">에센셜 니트 베스트 LIGHT KHAKI (WOMAN)</span><span class="product-price">259,000원</span></a></li>
+          </ul>
+        </li>
+        <li class="lookbook-card">
+          <div class="img-wrap ratio-portrait">
+            <img src="https://malbongolf.wisacdn.com/board//_data/gallery_6/202607/30//bec7425d4899b30e287dc5a759d003a7.jpg" alt="룩북 스타일링 4">
+          </div>
+          <ul class="lookbook-items">
+            <li class="lookbook-item"><a href="#"><span class="product-name">숏 슬리브 니트 TOP WHITE (WOMAN)</span><span class="product-price">219,000원</span></a></li>
+            <li class="lookbook-item"><a href="#"><span class="product-name">하이웨이스트 반바지 WHITE (WOMAN)</span><span class="product-price">189,000원</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="con footer-con">
+      <div class="footer-top">
+        <ul class="footer-links XS-text-cpn col-de-light">
+          <li><a href="#">이용안내</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">제휴문의</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-body">
+        <div class="footer-info XS-text-cpn">
+          <p>상호 (주)말본골프코리아(예시) | 대표 홍길동 | 사업자등록번호 000-00-00000</p>
+          <p>주소 서울특별시 강남구 테헤란로 000, 0층 | 통신판매업신고 제0000-서울강남-00000호</p>
+          <p>고객센터 1588-0000 (평일 09:00~18:00) | 이메일 help@example.com</p>
+          <p class="footer-copy">COPYRIGHT ⓒ MALBON GOLF KOREA. ALL RIGHTS RESERVED.</p>
+        </div>
+        <p class="logo footer-logo col-de-light">malbon</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top-btn material-symbols-rounded" aria-label="맨 위로">arrow_upward</a>
+
+</body>
+</html>

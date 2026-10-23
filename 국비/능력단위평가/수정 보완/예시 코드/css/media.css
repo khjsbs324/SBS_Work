@@ -1,0 +1,65 @@
+/* 0 ~ 1380 */
+@media screen and (max-width: 1380px) {
+  .SMALL-li-header {
+    font-size: var(--text-sm);
+  }
+}
+
+/* 1241 ~ n값 */
+.user-box-1240 {
+  display: none;
+}
+/* 0 ~ 1240 */
+@media screen and (max-width: 1240px) {
+  .user-box {
+    display: none;
+  }
+  .user-box-1240 {
+    display: flex;
+  }
+}
+
+
+/* 0 ~ 1080 */
+/* @media에서는 css변수를 사용할 수 없다, 아래와
+같은 방식으로 코드를 해결해야한다.
+@media screen and (max-width: var(--grid-1080)) {
+  header {
+		padding-left: var(--padding-grid-MEDIUM);
+		padding-right: var(--padding-grid-MEDIUM);
+  }
+} 
+*/
+
+/* 올바른 방식 */
+@media screen and (max-width: 1080px) {
+  header {
+    min-width: var(--gridM-1080);
+  }
+  header .con {
+    max-width: var(--GW-S);
+    padding-left: var(--padding-grid-MEDIUM);
+    padding-right: var(--padding-grid-MEDIUM);
+    background-color: yellow;
+  }
+}
+
+.menu1-768 {
+  display: none;
+}
+/* 0 ~ 768 */
+@media screen and (max-width: 768px) {
+  header .con {
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid red;
+  }
+  .menu1-768 {
+    display: flex;
+    border: 1px solid red;
+  }
+  .user-box-1240 {
+    display: none;
+    border: 1px solid red;
+  }
+}
