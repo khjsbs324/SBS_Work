@@ -1,0 +1,24 @@
+{
+  "course_id": "A",
+  "unit": "디자인 구성요소 설계",
+  "lcode": "7",
+  "Pcode": "300002",
+  "mode": "updated",
+  "reason": "사용자 지적에 따라 서식공유 754번 양식과 기존 시각디자인 리서치 분석 회의록의 항목 순서·문체·필드 배치로 수정",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+  "actual_date": "2026-10-23",
+  "checked_at": "2026-10-23T08:21:43.029Z",
+  "template_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=87&no=754",
+  "reference_meeting_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=5",
+  "original_snapshot": "회의록_양식수정전.json",
+  "exact_readback": true,
+  "analysis_length": 2593,
+  "improvement_length": 529,
+  "analysis_sha256": "829af820911fceb62783c9d888ae563abad4f0c410bccf564571d35eaf447e7f",
+  "improvement_sha256": "8cbc3bc7a152ca6a092afe4dd14c801dfea87610fb3b6d6cc304c0e44ae9e03b",
+  "scope": "디자인 구성요소 설계 회의록 분석내용·개선사항",
+  "notes": [
+    "참석자와 학습자 직접 건의 기록은 확인되지 않아 사실로 만들어 넣지 않음",
+    "현재 학습지원 편성 기준을 결과란에 명시하였으며 평가점수는 수정하지 않음"
+  ]
+}

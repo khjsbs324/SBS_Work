@@ -1,0 +1,42 @@
+{
+  "course_id": "A",
+  "unit": "디자인 구성요소 설계",
+  "lcode": "7",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "group": "A",
+  "post_date": "2026-07-27",
+  "title": "[능력단위평가_지원내역] 디자인 구성요소 설계 A그룹 지원자료",
+  "post_id": "1054",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1054",
+  "checked_at": "2026-10-26T06:53:10.497Z",
+  "title_exact": true,
+  "date_exact": true,
+  "text_exact": true,
+  "images_loaded": true,
+  "anchors_valid": true,
+  "reference_urls": [
+    "https://help.figma.com/hc/ko/articles/360038662654-Figma-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C",
+    "https://help.figma.com/hc/ko/articles/360040451373-Auto-Layout-%EA%B0%80%EC%9D%B4%EB%93%9C",
+    "https://developer.mozilla.org/ko/docs/Web/Accessibility/Guides/Understanding_WCAG"
+  ],
+  "styles": {
+    "maxWidth": "980px",
+    "fontSize": "17px",
+    "lineHeight": "33.15px",
+    "tablePadding": "14px 16px"
+  },
+  "anchor_navigation": true,
+  "attachment_status": 200,
+  "attachment_sha256": "5db6dc2596b3a36c7283457ea0c8a128e47aeeb37181b3c63df1f1cf906f0f0f",
+  "course_confirmed": true,
+  "references_checked": true,
+  "layout_reviewed": true,
+  "layout_screenshot": "A_정정게시본문.png",
+  "pdf_page_count": 6,
+  "pdf_review": "A_정정PDF6.png",
+  "correction_reason": "기존 접근성 지침 첨부 PDF가 HTTP 500을 반환하여 확인 가능한 한국어 MDN 안내로 교체",
+  "previous_receipt": "A_상세검증.json",
+  "actual_correction_date": "2026-10-26"
+}

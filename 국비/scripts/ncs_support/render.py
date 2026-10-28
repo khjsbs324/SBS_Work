@@ -2,8 +2,8 @@ import csv
 import zipfile
 import xml.etree.ElementTree as ET
 from html import escape
-from .common import WORK_ROOT, require, write_json
-from .records import group_dir, load_run
+from .common import WORK_ROOT, write_json
+from .records import group_dir, load_run, require_editable
 from .validate import content_check
 from .styles import style_article, xp, xt
 
@@ -32,7 +32,7 @@ def workbook(folder, content):
 
 def build_group(run, group):
     run, job, state = load_run(run)
-    require('registered' not in state['groups'][group], 'Already registered; preserve original materials')
+    require_editable(state, group)
     folder = group_dir(run, group)
     content = content_check(folder, job, group)
     sections = list(content['sections'])

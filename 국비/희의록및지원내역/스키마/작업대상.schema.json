@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "학습 지원 일괄 작업 대상",
+  "type": "object",
+  "required": ["schema_version", "course_id", "units"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "course_id": {"type": "string", "minLength": 1},
+    "note": {"type": "string"},
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["unit", "enabled", "observation"],
+        "properties": {
+          "unit": {"type": "string", "minLength": 1},
+          "enabled": {"type": "boolean"},
+          "observation": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/observation"}]},
+          "observation_history": {"type": "array", "items": {"$ref": "#/$defs/observation"}}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "observation": {
+      "type": "object",
+      "required": ["course_id", "course_name", "unit", "Pcode", "BoardCode", "version", "lcode", "unit_end_date", "screen_confirmed", "source_url", "checked_at"],
+      "properties": {
+        "course_id": {"type": "string"},
+        "course_name": {"type": "string"},
+        "unit": {"type": "string"},
+        "Pcode": {"type": "string"},
+        "BoardCode": {"type": "string"},
+        "version": {"type": "string"},
+        "lcode": {"type": "string", "pattern": "^[0-9]+$"},
+        "unit_end_date": {"type": "string", "format": "date"},
+        "screen_confirmed": {"const": true},
+        "source_url": {"type": "string", "format": "uri"},
+        "checked_at": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

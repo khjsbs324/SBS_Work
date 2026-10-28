@@ -1,0 +1,39 @@
+{
+  "course_id": "A",
+  "unit": "디자인 구성요소 설계",
+  "lcode": "7",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-26T15:41:55+09:00",
+  "group": "A",
+  "post_date": "2026-07-27",
+  "local_checks": true,
+  "pdf_reviewed": true,
+  "visual_reviewed": true,
+  "sources_reviewed": true,
+  "privacy_reviewed": true,
+  "pdf_page_count": 6,
+  "pdf_pages_seen": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "pdf_captures": [
+    "../04_등록검증/A_p1.png",
+    "../04_등록검증/A_p2.png",
+    "../04_등록검증/A_p3.png",
+    "../04_등록검증/A_p4.png",
+    "../04_등록검증/A_p5.png",
+    "../04_등록검증/A_p6.png"
+  ],
+  "visual_file": "../03_지원자료/A그룹/design-map.png",
+  "scope": "학생용 본문, PDF, DOCX, CSV, 이미지, ZIP의 직접 판독 및 검사",
+  "notes": [
+    "가상 예시를 실제 학생 평가 결과물과 구분함",
+    "본문과 ZIP에 학생 이름·점수·내부 그룹 배정 근거를 포함하지 않음"
+  ]
+}

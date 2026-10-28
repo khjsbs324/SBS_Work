@@ -4,8 +4,10 @@
   "actual_date": "실제 작성일",
   "retrospective": true,
   "original": {"date": "기존 날짜", "analysis": "기존 분석 전문", "improvement": "기존 개선 전문"},
-  "analysis": "사후작성 여부와 근거를 밝히고 A·B·C별 인원, 성취, 강점, 확인된 보완점을 작성",
-  "improvement": "A·B·C별 지원자료, 학습 순서, 실습, 확인 기준, 후속 방향을 작성",
+  "template_files": {"analysis": "분석.txt", "improvement": "개선.txt"},
+  "analysis": "분석.txt의 실제 기존 양식 순서를 유지해 작성한 전문. 자리표시자는 모두 실제 근거로 교체",
+  "improvement": "개선.txt의 2. 조치사항에 작성한 전문. A·B·C별 지원활동·확인 기준·후속 지도 계획",
+  "template_reference_url": "현재 확인한 기존 회의록 또는 공식 양식 URL",
   "group_basis": "해당 평가·회의록에서 확인한 기준. 기존 점수는 변경하지 않음",
   "uncertainties": ["이름 불일치·피드백 부족·재평가 표시 등 확인 한계"]
 }

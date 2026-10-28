@@ -1,0 +1,518 @@
+{
+  "global": {
+    "target_confirmed": {
+      "course_id": "A",
+      "unit": "디자인 구성요소 설계",
+      "lcode": "7",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "checked_at": "2026-10-26T15:41:55+09:00",
+      "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+      "unit_end_date": "2026-07-24",
+      "screen_confirmed": true,
+      "evaluation_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=7",
+      "board_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/list.php?Pcode=300002&BoardCode=85",
+      "board_pages_checked": 4,
+      "board_posts_checked": 19,
+      "same_unit_posts_found": 0,
+      "recorded_at": "2026-10-26T15:42:05+09:00"
+    },
+    "sources_collected": {
+      "course_id": "A",
+      "unit": "디자인 구성요소 설계",
+      "lcode": "7",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "checked_at": "2026-10-26T15:41:55+09:00",
+      "task_read": true,
+      "scores_read": true,
+      "feedback_read": true,
+      "meeting_read": true,
+      "source_urls": [
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=7",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7"
+      ],
+      "task_scope": "등록된 개별 피드백 열 건에서 확인한 실제 서비스 랜딩 페이지 설계 과제의 요구사항·산출물",
+      "original_task_full_text_available": false,
+      "limitations": [
+        "LMS에서 평가문제 전문을 찾지 못함. 로컬 Exam.md는 현재 LMS 피드백의 평가 과제와 달라 사용하지 않음.",
+        "피드백이 비어 있는 학습자 한 명에게 특정 결함을 추정하지 않음."
+      ],
+      "displayed_score_count": 11,
+      "feedback_entry_count": 10,
+      "recorded_at": "2026-10-26T15:42:06+09:00"
+    },
+    "meeting_resolved": {
+      "course_id": "A",
+      "unit": "디자인 구성요소 설계",
+      "lcode": "7",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "checked_at": "2026-10-26T15:41:55+09:00",
+      "mode": "existing",
+      "reason": "2026-10-23 등록한 회의록을 현재 상세 화면에서 날짜·두 본문 해시로 재확인",
+      "exact_readback": true,
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+      "actual_date": "2026-10-23",
+      "analysis_length": 2593,
+      "analysis_sha256": "829af820911fceb62783c9d888ae563abad4f0c410bccf564571d35eaf447e7f",
+      "improvement_length": 529,
+      "improvement_sha256": "8cbc3bc7a152ca6a092afe4dd14c801dfea87610fb3b6d6cc304c0e44ae9e03b",
+      "recorded_at": "2026-10-26T15:42:06+09:00"
+    }
+  },
+  "groups": {
+    "A": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 설계",
+        "lcode": "7",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "checked_at": "2026-10-26T15:41:55+09:00",
+        "group": "A",
+        "post_date": "2026-07-27",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "pdf_page_count": 6,
+        "pdf_pages_seen": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "pdf_captures": [
+          "../04_등록검증/A_p1.png",
+          "../04_등록검증/A_p2.png",
+          "../04_등록검증/A_p3.png",
+          "../04_등록검증/A_p4.png",
+          "../04_등록검증/A_p5.png",
+          "../04_등록검증/A_p6.png"
+        ],
+        "visual_file": "../03_지원자료/A그룹/design-map.png",
+        "scope": "학생용 본문, PDF, DOCX, CSV, 이미지, ZIP의 직접 판독 및 검사",
+        "notes": [
+          "가상 예시를 실제 학생 평가 결과물과 구분함",
+          "본문과 ZIP에 학생 이름·점수·내부 그룹 배정 근거를 포함하지 않음"
+        ],
+        "snapshot": {
+          "article.html": "d1794fc43d8dc8753f071f27f1eeb02ae13a01d031e97d68e0499724692edb25",
+          "content.json": "327e0b487987adee9aba547bf5cd6ad87097f63e9fbbc1cb1deb45abd37ded3d",
+          "design-map.png": "6d99adced284b4dcc573571bf6571d067c02764cfbbf765af816fa145e20c0f6",
+          "guide.html": "ba3b3794789bde33aafd868f10665aa87efb87f877c7a779ab0794bb046a5f9b",
+          "post.json": "b3aa2cd61f9da604bae0497b3637eeee406cd5d75faef881e21b58c12b93a829",
+          "빈칸양식/01_실습.csv": "7d2dfc4f07a77c6666d97c8a50dcbbb4bdddd1067c6e3ca790d3ea47481a9b6f",
+          "빈칸양식/02_실습.csv": "bab4dfcb5c47ac02e4aadbd60febc639d384e543206f88ece7a5ab91b77d67f7",
+          "빈칸양식/03_실습.csv": "ea71598c0c1d3fcb453ea996ec4c6a60e5fc9c096a7b4b085fa63d199be248bd",
+          "실습양식.docx": "8840ad0d02c296bb9cbda641084aa7c4b4d44669123b4aa781b6e5aca33db41c",
+          "읽는순서.txt": "a696e9f4152b14a49065a9a05327a4eb082bb7e7386fa38d8d57e853b8d85a50",
+          "학습자료.pdf": "6db7a951a881375774584d6bdb3a3be2d3b039d327c80ecaf2482b2fced1390c",
+          "학습자료.zip": "5db6dc2596b3a36c7283457ea0c8a128e47aeeb37181b3c63df1f1cf906f0f0f"
+        },
+        "recorded_at": "2026-10-26T15:42:07+09:00",
+        "corrected_at": "2026-10-26T15:55:46+09:00",
+        "correction_evidence": "A_정정자재검수.json"
+      },
+      "registered": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 설계",
+        "lcode": "7",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "A",
+        "post_date": "2026-07-27",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 설계 A그룹 지원자료",
+        "post_id": "1054",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1054",
+        "checked_at": "2026-10-26T06:44:00.913Z",
+        "observed_in_list": true,
+        "actual_registration_date": "2026-10-26",
+        "displayed_post_date": "2026-07-27",
+        "recorded_at": "2026-10-26T15:46:40+09:00"
+      },
+      "verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 설계",
+        "lcode": "7",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "A",
+        "post_date": "2026-07-27",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 설계 A그룹 지원자료",
+        "post_id": "1054",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1054",
+        "checked_at": "2026-10-26T06:53:10.497Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://help.figma.com/hc/ko/articles/360038662654-Figma-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C",
+          "https://help.figma.com/hc/ko/articles/360040451373-Auto-Layout-%EA%B0%80%EC%9D%B4%EB%93%9C",
+          "https://developer.mozilla.org/ko/docs/Web/Accessibility/Guides/Understanding_WCAG"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "5db6dc2596b3a36c7283457ea0c8a128e47aeeb37181b3c63df1f1cf906f0f0f",
+        "course_confirmed": true,
+        "references_checked": true,
+        "layout_reviewed": true,
+        "layout_screenshot": "A_정정게시본문.png",
+        "pdf_page_count": 6,
+        "pdf_review": "A_정정PDF6.png",
+        "correction_reason": "기존 접근성 지침 첨부 PDF가 HTTP 500을 반환하여 확인 가능한 한국어 MDN 안내로 교체",
+        "previous_receipt": "A_상세검증.json",
+        "actual_correction_date": "2026-10-26",
+        "recorded_at": "2026-10-26T15:56:00+09:00"
+      }
+    },
+    "B": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 설계",
+        "lcode": "7",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "checked_at": "2026-10-26T15:41:55+09:00",
+        "group": "B",
+        "post_date": "2026-07-27",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "pdf_page_count": 6,
+        "pdf_pages_seen": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "pdf_captures": [
+          "../04_등록검증/B_p1.png",
+          "../04_등록검증/B_p2.png",
+          "../04_등록검증/B_p3.png",
+          "../04_등록검증/B_p4.png",
+          "../04_등록검증/B_p5.png",
+          "../04_등록검증/B_p6.png"
+        ],
+        "visual_file": "../03_지원자료/B그룹/design-map.png",
+        "scope": "학생용 본문, PDF, DOCX, CSV, 이미지, ZIP의 직접 판독 및 검사",
+        "notes": [
+          "가상 예시를 실제 학생 평가 결과물과 구분함",
+          "본문과 ZIP에 학생 이름·점수·내부 그룹 배정 근거를 포함하지 않음"
+        ],
+        "snapshot": {
+          "article.html": "13195d120402161f0e1fa6cae3179bfb5c54c03b0fb091f6c80715489b52c213",
+          "content.json": "9f79ede8b9491d9c4d964649e299e83c28abc48bb8cd1118c82572a6aa2da4a6",
+          "design-map.png": "7068fb58afb563f546d10a471f6de96fa0590a2d70fe1fa5284ee5bbd86a08b3",
+          "guide.html": "2becea4ff05fd8aa3f2f00d79561ba0fe3d1890365f085b26cbf58c03f00d2bf",
+          "post.json": "8facf720fbb20311a16ce446ba12322281f92d3dd7b59f5c3c997eb8a8899701",
+          "빈칸양식/01_실습.csv": "23b7b5e99907fa19dfdc02ac763a53c63fb21a25b73024ca143659aefcfbc03a",
+          "빈칸양식/02_실습.csv": "cb48f1e77770148ab8da312e71ea8616967c845c4c34b837fad238c3232a4627",
+          "빈칸양식/03_실습.csv": "2898d6969bb9236fdbd9ab1f9bf6bcff63a2ba3ee5bad247dbebad5a126588df",
+          "실습양식.docx": "4c2ecd1f9897229ebeed5551f4c413191dd5b2d920a6517ee206ef7d24695243",
+          "읽는순서.txt": "c9978332e2fb722bc7668f872066ffc65f7bcd0254567b7a8d6b19e706e3db19",
+          "학습자료.pdf": "188229945f2836e0f0047a923df7fcc65beaf88ca35f4c89d94995056c0537bf",
+          "학습자료.zip": "c4c0ac80d0082807cb564417c9a70e253b2b3ed861c00df1f52fc5d2380c29fb"
+        },
+        "recorded_at": "2026-10-26T15:42:08+09:00"
+      },
+      "registered": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 설계",
+        "lcode": "7",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "B",
+        "post_date": "2026-07-27",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 설계 B그룹 지원자료",
+        "post_id": "1055",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1055",
+        "checked_at": "2026-10-26T06:44:55.796Z",
+        "observed_in_list": true,
+        "actual_registration_date": "2026-10-26",
+        "displayed_post_date": "2026-07-27",
+        "recorded_at": "2026-10-26T15:46:42+09:00"
+      },
+      "verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 설계",
+        "lcode": "7",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "B",
+        "post_date": "2026-07-27",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 설계 B그룹 지원자료",
+        "post_id": "1055",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1055",
+        "checked_at": "2026-10-26T06:44:55.796Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://help.figma.com/hc/ko/articles/360041539473-Figma-Design%EC%9D%98-%ED%94%84%EB%A0%88%EC%9E%84",
+          "https://help.figma.com/hc/ko/articles/360040315773-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%97%B0%EA%B2%B0",
+          "https://help.figma.com/hc/ko/articles/360040451373-Auto-Layout-%EA%B0%80%EC%9D%B4%EB%93%9C"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "c4c0ac80d0082807cb564417c9a70e253b2b3ed861c00df1f52fc5d2380c29fb",
+        "course_confirmed": true,
+        "references_checked": true,
+        "layout_reviewed": true,
+        "layout_screenshot": "B_게시본문.png",
+        "pdf_page_count": 6,
+        "pdf_review_contact": "B_contact.png",
+        "recorded_at": "2026-10-26T15:46:43+09:00"
+      }
+    },
+    "C": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 설계",
+        "lcode": "7",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "checked_at": "2026-10-26T15:41:55+09:00",
+        "group": "C",
+        "post_date": "2026-07-27",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "pdf_page_count": 6,
+        "pdf_pages_seen": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "pdf_captures": [
+          "../04_등록검증/C_p1.png",
+          "../04_등록검증/C_p2.png",
+          "../04_등록검증/C_p3.png",
+          "../04_등록검증/C_p4.png",
+          "../04_등록검증/C_p5.png",
+          "../04_등록검증/C_p6.png"
+        ],
+        "visual_file": "../03_지원자료/C그룹/design-map.png",
+        "scope": "학생용 본문, PDF, DOCX, CSV, 이미지, ZIP의 직접 판독 및 검사",
+        "notes": [
+          "가상 예시를 실제 학생 평가 결과물과 구분함",
+          "본문과 ZIP에 학생 이름·점수·내부 그룹 배정 근거를 포함하지 않음"
+        ],
+        "snapshot": {
+          "article.html": "a33a7417cb2d9eea838b912bc8485abaf503eee5ca2d1bf157cea4b27db7a976",
+          "content.json": "13bfcea07ddda56e727317bbfca9812a42978446c1356979682a49a54a88b178",
+          "design-map.png": "6c904e818209a6b4cebc4c1eaa66047c2fbd8112415fb8e655cf19f3bcf7e40f",
+          "guide.html": "c67441816f9614f3cd21603dde65200db4e7a8a6895acb212fa0e792d8149b74",
+          "post.json": "f45ba4487869147faa6b97fbd58382e4c93e638c12c576014490a60c9ff39e1f",
+          "빈칸양식/01_실습.csv": "fc1e71ef095dacc8bbd55be0843c8c4b257914ebf1efcf172413c0a3772ea3f9",
+          "빈칸양식/02_실습.csv": "4081f2c171bd3998bd755f26cc055250974cbb0b909f82702521daa991be538d",
+          "실습양식.docx": "04797971acdf0fca76f8d4aebd9de978afb9c93b505ef4aea7052324a18f6e87",
+          "읽는순서.txt": "84d3626245a6d8ef8eb16de41c10e2a27dab1e5eb9b94330f33e6402b7e4fac1",
+          "학습자료.pdf": "57504e3f8aa9d78feec3a20b2eb6209bd6346829010a4a0480fbb69cc801db21",
+          "학습자료.zip": "a9ee0aa144e38cb5294f8f33b2838951f3d2ecc7c2aa4d08126ab70d128046e3"
+        },
+        "recorded_at": "2026-10-26T15:42:09+09:00",
+        "corrected_at": "2026-10-26T15:55:46+09:00",
+        "correction_evidence": "C_정정자재검수.json"
+      },
+      "registered": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 설계",
+        "lcode": "7",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "C",
+        "post_date": "2026-07-27",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 설계 C그룹 지원자료",
+        "post_id": "1056",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1056",
+        "checked_at": "2026-10-26T06:45:35.365Z",
+        "observed_in_list": true,
+        "actual_registration_date": "2026-10-26",
+        "displayed_post_date": "2026-07-27",
+        "recorded_at": "2026-10-26T15:46:43+09:00"
+      },
+      "verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 설계",
+        "lcode": "7",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "C",
+        "post_date": "2026-07-27",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 설계 C그룹 지원자료",
+        "post_id": "1056",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1056",
+        "checked_at": "2026-10-26T06:53:54.707Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://help.figma.com/hc/ko/articles/360041539473-Figma-Design%EC%9D%98-%ED%94%84%EB%A0%88%EC%9E%84",
+          "https://help.figma.com/hc/ko/articles/360040315773-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%97%B0%EA%B2%B0",
+          "https://developer.mozilla.org/ko/docs/Web/Accessibility/Guides/Understanding_WCAG"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "a9ee0aa144e38cb5294f8f33b2838951f3d2ecc7c2aa4d08126ab70d128046e3",
+        "course_confirmed": true,
+        "references_checked": true,
+        "layout_reviewed": true,
+        "layout_screenshot": "C_정정게시본문.png",
+        "pdf_page_count": 6,
+        "pdf_review": "C_정정PDF6.png",
+        "correction_reason": "기존 접근성 지침 첨부 PDF가 HTTP 500을 반환하여 확인 가능한 한국어 MDN 안내로 교체",
+        "previous_receipt": "C_상세검증.json",
+        "actual_correction_date": "2026-10-26",
+        "recorded_at": "2026-10-26T15:56:01+09:00"
+      }
+    }
+  },
+  "history": [
+    {
+      "stage": "target_confirmed",
+      "group": null,
+      "recorded_at": "2026-10-26T15:42:05+09:00",
+      "evidence_sha256": "b261210552a5fef2a9ba5461a4228b07637b545cd5ff5a6dbce9ccb1a5e521fb"
+    },
+    {
+      "stage": "sources_collected",
+      "group": null,
+      "recorded_at": "2026-10-26T15:42:06+09:00",
+      "evidence_sha256": "09d60be9ce361eb3117927c8c942794bf84f12c521fee12d43d8f9300d497b2f"
+    },
+    {
+      "stage": "meeting_resolved",
+      "group": null,
+      "recorded_at": "2026-10-26T15:42:06+09:00",
+      "evidence_sha256": "3e4434f1731038a10caa97687d872bcc77041d4a9344af422834766e48ad3f58"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "A",
+      "recorded_at": "2026-10-26T15:42:07+09:00",
+      "evidence_sha256": "f80edc487a8cf88383fed86ea765a8499821765bb04bebd5da9fad872b535f44"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "B",
+      "recorded_at": "2026-10-26T15:42:08+09:00",
+      "evidence_sha256": "e3ef14c07169c5b14d6b63c49c3824a03b872b1240a702cc62232d1d5ce0616f"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "C",
+      "recorded_at": "2026-10-26T15:42:09+09:00",
+      "evidence_sha256": "90ad071c44c7428d1dd10b6c42c8a2c49ecd762858760436f0f65e7a5605086b"
+    },
+    {
+      "stage": "registered",
+      "group": "A",
+      "recorded_at": "2026-10-26T15:46:40+09:00",
+      "evidence_sha256": "5921941ab49d500bc2fc128e90b8b69878284ab798cf0c3c37a9aeef33550b06"
+    },
+    {
+      "stage": "verified",
+      "group": "A",
+      "recorded_at": "2026-10-26T15:46:41+09:00",
+      "evidence_sha256": "7113c57ce38ee31ffda19ada473e345268735b70cc4d9f6d50f5feee65ae8276"
+    },
+    {
+      "stage": "registered",
+      "group": "B",
+      "recorded_at": "2026-10-26T15:46:42+09:00",
+      "evidence_sha256": "74b679910c69418ebc7469c516119b7785234e5923dc51933b9430c8ae9eca3f"
+    },
+    {
+      "stage": "verified",
+      "group": "B",
+      "recorded_at": "2026-10-26T15:46:43+09:00",
+      "evidence_sha256": "0cf2f03f1cad2c18744eef20a272a8832070da8bdbdfc50bfdb30ed5efe347de"
+    },
+    {
+      "stage": "registered",
+      "group": "C",
+      "recorded_at": "2026-10-26T15:46:43+09:00",
+      "evidence_sha256": "6b83be2c7b5afdf861c8ccb65d73fa8c944c22a450037515446184d0163d2cff"
+    },
+    {
+      "stage": "verified",
+      "group": "C",
+      "recorded_at": "2026-10-26T15:46:44+09:00",
+      "evidence_sha256": "ba77eaac537886cf83981ad39e069ef4736d91455d21c9c2233b318e6512a1b0"
+    },
+    {
+      "stage": "materials_corrected",
+      "group": "A",
+      "recorded_at": "2026-10-26T15:55:46+09:00",
+      "evidence_sha256": "5994438f49825869541af57e4c619d1ee58d14498e02fae71d8874e35361ebfd"
+    },
+    {
+      "stage": "materials_corrected",
+      "group": "C",
+      "recorded_at": "2026-10-26T15:55:46+09:00",
+      "evidence_sha256": "dd0f7c0a1d15dde5c284821cff869968c0d5478db803cbfaea28c9169df16095"
+    },
+    {
+      "stage": "verified",
+      "group": "A",
+      "recorded_at": "2026-10-26T15:56:00+09:00",
+      "evidence_sha256": "7f5b233ff880f400818eb376727954fed87434b539edb87ae37527a701fc37b6"
+    },
+    {
+      "stage": "verified",
+      "group": "C",
+      "recorded_at": "2026-10-26T15:56:01+09:00",
+      "evidence_sha256": "c4bf23646f71b4d638e873ee2c9b9bc073939aa60fb66eb66cbaa3eb5816d39c"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ def initialize(course, unit, end, lcode, action='prepare', request='', meeting='
     posting = next_weekday(end)
     parent = Path(root) / '작업' / (course + '과정') / unit
     if parent.exists():
-        for path in parent.glob('*/작업정보.json'):
+        for path in sorted(parent.glob('*/작업정보.json'), reverse=True):
             old = read_json(path)
             if old['unit_end_date'] == end and old['action'] == action:
                 require(old['lcode'] == str(lcode) and old['meeting_mode'] == meeting
@@ -28,12 +28,15 @@ def initialize(course, unit, end, lcode, action='prepare', request='', meeting='
                     return {'run': str(path.parent), 'resumed': True, 'state': state}
                 raise ValueError('A completed run already exists; inspect it before creating a replacement')
     run = parent / now().replace(':', '').replace('+0900', '')
+    if run.exists():
+        from uuid import uuid4
+        run = run.with_name(run.name + '_' + uuid4().hex[:8])
     run.mkdir(parents=True, exist_ok=False)
-    for name in ('01_근거자료', '02_회의록', '04_등록검증'):
+    for name in ('01_근거자료', '02_회의록', '04_등록검증', '05_정정이력'):
         (run / name).mkdir()
     for group in GROUPS:
         (run / '03_지원자료' / (group + '그룹')).mkdir(parents=True)
-    job = {'schema_version': 1, 'course_id': course, 'course': courses[course], 'unit': unit,
+    job = {'schema_version': 1, 'evidence_version': 2, 'course_id': course, 'course': courses[course], 'unit': unit,
            'lcode': str(lcode), 'unit_end_date': end, 'post_date': posting, 'action': action,
            'request': request, 'meeting_mode': meeting, 'created_at': now()}
     write_json(run / '작업정보.json', job)
@@ -53,6 +56,13 @@ def load_run(run):
 def group_dir(run, group):
     require(group in GROUPS, 'Group must be A, B or C')
     return Path(run) / '03_지원자료' / (group + '그룹')
+
+
+def require_editable(state, group):
+    require(group in GROUPS, 'Group must be A, B or C')
+    stages = state['groups'][group]
+    require('registered' not in stages or stages.get('revision', {}).get('open') is True,
+            'Already registered; open an evidenced revision before changing materials')
 
 
 def snapshot(run, group):
@@ -94,24 +104,50 @@ def record(run, stage, evidence, group=None):
         require(group is None, 'Global stage cannot take group')
         index = GLOBAL_STAGES.index(stage)
         require(all(s in state['global'] for s in GLOBAL_STAGES[:index]), 'Previous global stage is incomplete')
-        require(stage not in state['global'], 'Global stage already recorded; preserve existing evidence')
+        prior_global = state['global'].get(stage)
+        draft_review = (stage == 'meeting_resolved' and job['action'] == 'prepare'
+                        and prior_global and prior_global.get('mode') == 'drafted' and receipt.get('mode') == 'drafted')
+        require(prior_global is None or draft_review, 'Global stage already recorded; preserve existing evidence')
         if stage == 'target_confirmed':
             require(receipt.get('course_name') == job['course']['name'] and receipt.get('unit_end_date') == job['unit_end_date'], 'Course/end date not confirmed')
             require(receipt.get('screen_confirmed') is True, 'Actual target screen must be checked')
         elif stage == 'sources_collected':
-            require(all(receipt.get(k) is True for k in ('task_read', 'scores_read', 'feedback_read', 'meeting_read')), 'Read actual task, scores, feedback and meeting')
+            require(all(receipt.get(k) is True for k in ('scores_read', 'feedback_read', 'meeting_read')), 'Read actual scores, feedback and meeting')
+            if job.get('evidence_version', 1) >= 2:
+                mode = receipt.get('task_basis')
+                require(mode in {'original', 'feedback_reconstruction'}, 'Specify actual task evidence basis')
+                if mode == 'original':
+                    require(receipt.get('task_read') is True and receipt.get('original_task_full_text_available') is True,
+                            'Original task text must actually be read')
+                else:
+                    require(receipt.get('task_read') is False and receipt.get('original_task_full_text_available') is False,
+                            'Do not mark unavailable task text as read')
+                    require(bool(receipt.get('task_scope')) and isinstance(receipt.get('limitations'), list)
+                            and any(receipt['limitations']), 'Describe reconstructed scope and limitations')
+            else:
+                require(receipt.get('task_read') is True, 'Read actual task evidence')
             require(isinstance(receipt.get('source_urls'), list) and bool(receipt['source_urls']), 'Source URL array required')
         else:
             allowed = {'skipped'} if job['meeting_mode'] == 'skip' else {'existing', 'created', 'updated'}
+            if job['action'] == 'prepare' and job['meeting_mode'] != 'skip':
+                allowed = {'existing', 'drafted'}
             require(receipt.get('mode') in allowed, 'Meeting mode mismatch')
-            require(receipt.get('mode') == 'skipped' or receipt.get('exact_readback') is True, 'Meeting requires exact readback')
+            if receipt.get('mode') == 'drafted':
+                require(receipt.get('local_reviewed') is True, 'Review the local meeting draft')
+                draft = child(run, receipt.get('draft_path'))
+                content = read_json(draft)
+                require(content.get('example') is False and all(content.get(k) for k in ('analysis', 'improvement', 'actual_date')),
+                        'Write a real meeting draft first')
+                receipt['draft_sha256'] = sha256(draft)
+            else:
+                require(receipt.get('mode') == 'skipped' or receipt.get('exact_readback') is True, 'Meeting requires exact readback')
             require(bool(receipt.get('reason')), 'Meeting decision reason required')
         destination = state['global']
     else:
         require(group in GROUPS and all(s in state['global'] for s in GLOBAL_STAGES), 'Resolve target, sources and meeting first')
         destination = state['groups'][group]
         if stage == 'materials_verified':
-            require('registered' not in destination, 'Already registered; inspect live post before changing materials')
+            require_editable(state, group)
             from .validate import validate_group
             validate_group(run, group)
             require(all(receipt.get(k) is True for k in ('local_checks', 'pdf_reviewed', 'visual_reviewed', 'sources_reviewed', 'privacy_reviewed')), 'Complete actual material reviews')
@@ -132,7 +168,14 @@ def record(run, stage, evidence, group=None):
                 require(receipt.get('reference_urls') == read_json(group_dir(run, group) / 'post.json')['source_urls'], 'Saved reference URLs differ')
                 require(receipt.get('attachment_status') == 200 and receipt.get('attachment_sha256') == sha256(group_dir(run, group) / '학습자료.zip'), 'Downloaded attachment differs from local ZIP')
     receipt['recorded_at'] = now()
+    if stage in GLOBAL_STAGES and stage in destination:
+        state['history'].append({'stage': 'draft_review_replaced', 'recorded_at': now(), 'previous': destination[stage]})
     destination[stage] = receipt
+    if stage == 'verified' and destination.get('revision', {}).get('open'):
+        revision = destination['revision']
+        revision.update(open=False, closed_at=now(), verified_snapshot=snapshot(run, group),
+                        verification_sha256=sha256(evidence))
+        write_json(child(run, revision['backup']) / '정정완료.json', revision)
     state['history'].append({'stage': stage, 'group': group, 'recorded_at': receipt['recorded_at'], 'evidence_sha256': sha256(evidence)})
     write_json(run / '진행상태.json', state)
     return status(run)
@@ -141,6 +184,14 @@ def record(run, stage, evidence, group=None):
 def status(run):
     run, job, state = load_run(run)
     stale = []
+    stale_global = []
+    meeting = state['global'].get('meeting_resolved', {})
+    if meeting.get('mode') == 'drafted':
+        try:
+            if sha256(child(run, meeting['draft_path'])) != meeting['draft_sha256']:
+                stale_global.append('meeting_resolved')
+        except (ValueError, OSError, KeyError):
+            stale_global.append('meeting_resolved')
     for group in GROUPS:
         review = state['groups'][group].get('materials_verified')
         if review:
@@ -150,7 +201,9 @@ def status(run):
             except (ValueError, OSError, KeyError):
                 stale.append(group)
     finish = 'verified' if job['action'] == 'register' else 'materials_verified'
-    complete = all(s in state['global'] for s in GLOBAL_STAGES) and all(finish in state['groups'][g] for g in GROUPS) and not stale
+    active = [g for g in GROUPS if state['groups'][g].get('revision', {}).get('open')]
+    complete = all(s in state['global'] for s in GLOBAL_STAGES) and all(finish in state['groups'][g] for g in GROUPS) and not stale and not stale_global and not active
     return {'status': ('complete' if job['action'] == 'register' else 'prepared') if complete else 'in_progress',
             'course_id': job['course_id'], 'unit': job['unit'], 'post_date': job['post_date'], 'stale_groups': stale,
+            'stale_global': stale_global, 'active_revisions': active,
             'global': list(state['global']), 'groups': {g: list(state['groups'][g]) for g in GROUPS}}

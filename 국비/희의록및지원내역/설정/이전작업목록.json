@@ -3,6 +3,36 @@
   "note": "기존 자료는 보존한다. 과거 관측 경로이며 현재 상태는 다시 확인한다. 로컬 경로는 국비 기준.",
   "entries": [
     {
+      "unit": "디자인 구성요소 설계",
+      "group": "A",
+      "date": "2026-07-27",
+      "actual_registration_date": "2026-10-26",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1054",
+      "post_file": "희의록및지원내역/작업/A과정/디자인 구성요소 설계/2026-10-26T153138/03_지원자료/A그룹/post.json",
+      "audit_file": "희의록및지원내역/작업/A과정/디자인 구성요소 설계/2026-10-26T153138/04_등록검증/A_정정검증.json"
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "group": "B",
+      "date": "2026-07-27",
+      "actual_registration_date": "2026-10-26",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1055",
+      "post_file": "희의록및지원내역/작업/A과정/디자인 구성요소 설계/2026-10-26T153138/03_지원자료/B그룹/post.json",
+      "audit_file": "희의록및지원내역/작업/A과정/디자인 구성요소 설계/2026-10-26T153138/04_등록검증/B_상세검증.json"
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "group": "C",
+      "date": "2026-07-27",
+      "actual_registration_date": "2026-10-26",
+      "course_id": "A",
+      "post_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1056",
+      "post_file": "희의록및지원내역/작업/A과정/디자인 구성요소 설계/2026-10-26T153138/03_지원자료/C그룹/post.json",
+      "audit_file": "희의록및지원내역/작업/A과정/디자인 구성요소 설계/2026-10-26T153138/04_등록검증/C_정정검증.json"
+    },
+    {
       "unit": "구현",
       "group": "A",
       "date": "2026-06-15",

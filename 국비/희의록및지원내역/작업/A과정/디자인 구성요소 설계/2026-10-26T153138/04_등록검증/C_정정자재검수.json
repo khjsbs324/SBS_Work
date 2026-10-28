@@ -1,0 +1,39 @@
+{
+  "group": "C",
+  "checked_at": "2026-10-26T15:55:46+09:00",
+  "reason": "다운로드 오류를 반환하는 한국형 접근성 지침 첨부 링크를 열리는 한국어 MDN 자료로 교체",
+  "old_snapshot": {
+    "article.html": "785d1d3f23f82b57e05325b262007dd4b8efd2817ba660a6d0a884df013eb872",
+    "content.json": "49f82a1c122fb2c8b0d6ce7acfd86231a17656ef42e496aea6f28e4e4b853d09",
+    "design-map.png": "6c904e818209a6b4cebc4c1eaa66047c2fbd8112415fb8e655cf19f3bcf7e40f",
+    "guide.html": "aaf6b4be89a132ae0891cfc8469f29dcd4f7a24ee01a4e2dfc99ab152397e4b5",
+    "post.json": "af5717c2c6acc14ff15d6f6fd43ff50b33cc01f19e1a9e27cb8188f7e35ee518",
+    "빈칸양식/01_실습.csv": "fc1e71ef095dacc8bbd55be0843c8c4b257914ebf1efcf172413c0a3772ea3f9",
+    "빈칸양식/02_실습.csv": "4081f2c171bd3998bd755f26cc055250974cbb0b909f82702521daa991be538d",
+    "실습양식.docx": "a93f01a90994c3636e7926c3ad43f70030c0b5e297fb94ce06615e997de4c1c2",
+    "읽는순서.txt": "84d3626245a6d8ef8eb16de41c10e2a27dab1e5eb9b94330f33e6402b7e4fac1",
+    "학습자료.pdf": "e26a6defba6443b6b65376f629e2c76f4f2bec56cb253ad84ce011be1d6b46ae",
+    "학습자료.zip": "880727aba43ff95f796eb524af4ef65d0081b41d42ac5e31c85a77b704c87605"
+  },
+  "new_snapshot": {
+    "article.html": "a33a7417cb2d9eea838b912bc8485abaf503eee5ca2d1bf157cea4b27db7a976",
+    "content.json": "13bfcea07ddda56e727317bbfca9812a42978446c1356979682a49a54a88b178",
+    "design-map.png": "6c904e818209a6b4cebc4c1eaa66047c2fbd8112415fb8e655cf19f3bcf7e40f",
+    "guide.html": "c67441816f9614f3cd21603dde65200db4e7a8a6895acb212fa0e792d8149b74",
+    "post.json": "f45ba4487869147faa6b97fbd58382e4c93e638c12c576014490a60c9ff39e1f",
+    "빈칸양식/01_실습.csv": "fc1e71ef095dacc8bbd55be0843c8c4b257914ebf1efcf172413c0a3772ea3f9",
+    "빈칸양식/02_실습.csv": "4081f2c171bd3998bd755f26cc055250974cbb0b909f82702521daa991be538d",
+    "실습양식.docx": "04797971acdf0fca76f8d4aebd9de978afb9c93b505ef4aea7052324a18f6e87",
+    "읽는순서.txt": "84d3626245a6d8ef8eb16de41c10e2a27dab1e5eb9b94330f33e6402b7e4fac1",
+    "학습자료.pdf": "57504e3f8aa9d78feec3a20b2eb6209bd6346829010a4a0480fbb69cc801db21",
+    "학습자료.zip": "a9ee0aa144e38cb5294f8f33b2838951f3d2ecc7c2aa4d08126ab70d128046e3"
+  },
+  "zip_sha256": "a9ee0aa144e38cb5294f8f33b2838951f3d2ecc7c2aa4d08126ab70d128046e3",
+  "local_validation": true,
+  "pdf_page_count": 6,
+  "pdf_page_6_capture": "C_정정PDF6.png",
+  "live_receipt": "C_정정검증.json",
+  "original_backup": "정정전/C그룹",
+  "privacy_reviewed": true,
+  "source_access_checked": true
+}

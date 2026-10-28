@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "course_id": "A",
+  "note": "A반 NCS 능력단위의 로컬 후보 목록. 순서는 현재 목록 순서이며 실제 교육 순서는 LMS 종료일 확인 후 조정한다. observation=null은 LMS 대상 미확인이다. B반과 비NCS 과정은 이번 일괄 작업 범위에 포함하지 않는다.",
+  "units": [
+    {"unit": "구현", "enabled": true, "observation": null},
+    {"unit": "구현 응용", "enabled": true, "observation": null},
+    {"unit": "시각디자인 리서치 조사", "enabled": true, "observation": null},
+    {"unit": "시각디자인 리서치 분석", "enabled": true, "observation": null},
+    {"unit": "시안 디자인 개발 심화", "enabled": true, "observation": null},
+    {"unit": "디자인 구성요소 설계", "enabled": true, "observation": null},
+    {"unit": "디자인 구성요소 제작", "enabled": true, "observation": null},
+    {"unit": "디지털디자인 사후관리", "enabled": true, "observation": null},
+    {"unit": "서비스ㆍ경험디자인 관찰조사", "enabled": true, "observation": null},
+    {"unit": "서비스ㆍ경험디자인 시나리오 개발", "enabled": true, "observation": null},
+    {"unit": "수정 보완", "enabled": true, "observation": null},
+    {"unit": "스마트문화앱 UI 디자인", "enabled": true, "observation": null},
+    {"unit": "프로토타입 기초데이터 수집 및 스케치", "enabled": true, "observation": null},
+    {"unit": "프로토타입 제작 및 사용성 테스트", "enabled": true, "observation": null}
+  ]
+}

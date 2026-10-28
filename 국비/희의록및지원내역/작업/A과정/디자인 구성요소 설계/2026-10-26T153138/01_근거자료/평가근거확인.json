@@ -1,0 +1,25 @@
+{
+  "course_id": "A",
+  "unit": "디자인 구성요소 설계",
+  "lcode": "7",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-26T15:41:55+09:00",
+  "task_read": true,
+  "scores_read": true,
+  "feedback_read": true,
+  "meeting_read": true,
+  "source_urls": [
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=7",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7"
+  ],
+  "task_scope": "등록된 개별 피드백 열 건에서 확인한 실제 서비스 랜딩 페이지 설계 과제의 요구사항·산출물",
+  "original_task_full_text_available": false,
+  "limitations": [
+    "LMS에서 평가문제 전문을 찾지 못함. 로컬 Exam.md는 현재 LMS 피드백의 평가 과제와 달라 사용하지 않음.",
+    "피드백이 비어 있는 학습자 한 명에게 특정 결함을 추정하지 않음."
+  ],
+  "displayed_score_count": 11,
+  "feedback_entry_count": 10
+}

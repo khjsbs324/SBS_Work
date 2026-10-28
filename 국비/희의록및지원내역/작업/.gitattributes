@@ -1,0 +1,2 @@
+# Preserve reviewed file bytes so stored SHA-256 snapshots survive checkout.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,41 @@
+{
+  "group": "A",
+  "checked_at": "2026-10-26T15:55:46+09:00",
+  "reason": "다운로드 오류를 반환하는 한국형 접근성 지침 첨부 링크를 열리는 한국어 MDN 자료로 교체",
+  "old_snapshot": {
+    "article.html": "7fad04a693ccf02ecf77bc8aa635a3da47d6d499d38a8a12f102850d2488138b",
+    "content.json": "693c41e0be58f5eae2dc22c89c768869b867d5bfda542f12631386c191da6ce2",
+    "design-map.png": "6d99adced284b4dcc573571bf6571d067c02764cfbbf765af816fa145e20c0f6",
+    "guide.html": "7787e1dac0c2dd469e4e679ce3e226c330aebea11437f45b5273996c4939428f",
+    "post.json": "f961a4953eb4156910b1834e46eae4f2703a4ef02e88c5aba821f8a7a7741db3",
+    "빈칸양식/01_실습.csv": "7d2dfc4f07a77c6666d97c8a50dcbbb4bdddd1067c6e3ca790d3ea47481a9b6f",
+    "빈칸양식/02_실습.csv": "bab4dfcb5c47ac02e4aadbd60febc639d384e543206f88ece7a5ab91b77d67f7",
+    "빈칸양식/03_실습.csv": "ea71598c0c1d3fcb453ea996ec4c6a60e5fc9c096a7b4b085fa63d199be248bd",
+    "실습양식.docx": "2e0639a8cb3ebd283bb6cc321ff51cac0769716b983d8fcc11c9d1dcc72904b7",
+    "읽는순서.txt": "a696e9f4152b14a49065a9a05327a4eb082bb7e7386fa38d8d57e853b8d85a50",
+    "학습자료.pdf": "f6c713f5653a403eb029f7b40c05b6a1ca61d722ece1807a5ff61b9975fa2552",
+    "학습자료.zip": "69884184509cb9a51de5f6cb3722e9862e5f93ca45510a5215e9b251f2b73a32"
+  },
+  "new_snapshot": {
+    "article.html": "d1794fc43d8dc8753f071f27f1eeb02ae13a01d031e97d68e0499724692edb25",
+    "content.json": "327e0b487987adee9aba547bf5cd6ad87097f63e9fbbc1cb1deb45abd37ded3d",
+    "design-map.png": "6d99adced284b4dcc573571bf6571d067c02764cfbbf765af816fa145e20c0f6",
+    "guide.html": "ba3b3794789bde33aafd868f10665aa87efb87f877c7a779ab0794bb046a5f9b",
+    "post.json": "b3aa2cd61f9da604bae0497b3637eeee406cd5d75faef881e21b58c12b93a829",
+    "빈칸양식/01_실습.csv": "7d2dfc4f07a77c6666d97c8a50dcbbb4bdddd1067c6e3ca790d3ea47481a9b6f",
+    "빈칸양식/02_실습.csv": "bab4dfcb5c47ac02e4aadbd60febc639d384e543206f88ece7a5ab91b77d67f7",
+    "빈칸양식/03_실습.csv": "ea71598c0c1d3fcb453ea996ec4c6a60e5fc9c096a7b4b085fa63d199be248bd",
+    "실습양식.docx": "8840ad0d02c296bb9cbda641084aa7c4b4d44669123b4aa781b6e5aca33db41c",
+    "읽는순서.txt": "a696e9f4152b14a49065a9a05327a4eb082bb7e7386fa38d8d57e853b8d85a50",
+    "학습자료.pdf": "6db7a951a881375774584d6bdb3a3be2d3b039d327c80ecaf2482b2fced1390c",
+    "학습자료.zip": "5db6dc2596b3a36c7283457ea0c8a128e47aeeb37181b3c63df1f1cf906f0f0f"
+  },
+  "zip_sha256": "5db6dc2596b3a36c7283457ea0c8a128e47aeeb37181b3c63df1f1cf906f0f0f",
+  "local_validation": true,
+  "pdf_page_count": 6,
+  "pdf_page_6_capture": "A_정정PDF6.png",
+  "live_receipt": "A_정정검증.json",
+  "original_backup": "정정전/A그룹",
+  "privacy_reviewed": true,
+  "source_access_checked": true
+}

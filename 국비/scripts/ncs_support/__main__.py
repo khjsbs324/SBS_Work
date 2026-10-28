@@ -11,6 +11,26 @@ def main(argv=None):
     sub = parser.add_subparsers(dest='command', required=True)
     p = sub.add_parser('date')
     p.add_argument('end')
+    for command in ('queue', 'report'):
+        p = sub.add_parser(command)
+        p.add_argument('--course', default='A')
+    p = sub.add_parser('next')
+    p.add_argument('run', nargs='?')
+    p.add_argument('--course', default='A')
+    p = sub.add_parser('confirm-target')
+    p.add_argument('--evidence', required=True)
+    p = sub.add_parser('start')
+    p.add_argument('--course', default='A')
+    p.add_argument('--unit', required=True)
+    p.add_argument('--action', choices=('prepare', 'register'), default='prepare')
+    p.add_argument('--request', default='')
+    p.add_argument('--meeting', choices=('ensure', 'skip'), default='ensure')
+    p = sub.add_parser('revise')
+    p.add_argument('run')
+    p.add_argument('group', choices=('A', 'B', 'C'))
+    p.add_argument('--evidence', required=True)
+    p.add_argument('--reason', required=True)
+    p.add_argument('--request', required=True)
     p = sub.add_parser('init')
     for flag in ('course', 'unit', 'end', 'lcode'):
         p.add_argument('--' + flag, required=True)
@@ -31,6 +51,21 @@ def main(argv=None):
     try:
         if args.command == 'date':
             result = {'unit_end_date': args.end, 'post_date': next_weekday(args.end)}
+        elif args.command in ('queue', 'report', 'confirm-target'):
+            from .catalog import confirm_target, inventory, write_report
+            if args.command == 'confirm-target':
+                result = confirm_target(args.evidence)
+            else:
+                result = (inventory if args.command == 'queue' else write_report)(args.course)
+        elif args.command == 'next':
+            from .pipeline import next_in_course, next_step
+            result = next_step(args.run) if args.run else next_in_course(args.course)
+        elif args.command == 'start':
+            from .pipeline import start_unit
+            result = start_unit(args.unit, args.course, args.action, args.request, args.meeting)
+        elif args.command == 'revise':
+            from .revisions import begin_revision
+            result = begin_revision(args.run, args.group, args.evidence, args.reason, args.request)
         elif args.command == 'init':
             result = initialize(args.course, args.unit, args.end, args.lcode, args.action, args.request, args.meeting)
         elif args.command == 'status':

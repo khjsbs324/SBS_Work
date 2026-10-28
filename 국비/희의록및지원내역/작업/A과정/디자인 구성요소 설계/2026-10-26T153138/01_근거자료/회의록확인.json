@@ -1,0 +1,18 @@
+{
+  "course_id": "A",
+  "unit": "디자인 구성요소 설계",
+  "lcode": "7",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-26T15:41:55+09:00",
+  "mode": "existing",
+  "reason": "2026-10-23 등록한 회의록을 현재 상세 화면에서 날짜·두 본문 해시로 재확인",
+  "exact_readback": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+  "actual_date": "2026-10-23",
+  "analysis_length": 2593,
+  "analysis_sha256": "829af820911fceb62783c9d888ae563abad4f0c410bccf564571d35eaf447e7f",
+  "improvement_length": 529,
+  "improvement_sha256": "8cbc3bc7a152ca6a092afe4dd14c801dfea87610fb3b6d6cc304c0e44ae9e03b"
+}
