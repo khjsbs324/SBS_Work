@@ -1,0 +1,289 @@
+[
+  {
+    "student": "김규린",
+    "Sid": "sbsartdj1165",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1165",
+    "scores": [
+      9,
+      7,
+      7,
+      9,
+      7,
+      8,
+      8,
+      7,
+      8
+    ],
+    "maxima": [
+      12,
+      10,
+      10,
+      12,
+      10,
+      12,
+      12,
+      10,
+      12
+    ],
+    "criterionIds": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+    ],
+    "total": 70,
+    "feedback": "김규린 학생은 HOME·SITE MAP·CONTACT US와 모나미 로고를 연결하고, 유틸리티와 메인헤더를 나누는 기본 틀을 작성했습니다. 로고 파일과 CSS는 정상적으로 불러와집니다. 현재 화면에는 상단 영역만 있으며, 주 메뉴와 아이콘은 실제 콘텐츠 대신 “메뉴”, “아이콘”이라는 글자로 남아 있습니다. 두 영역을 선택해 구현하는 과제이므로 상단의 실제 요소를 채우고 두 번째 영역을 추가하는 것이 우선입니다.\n\n1. 상단 > 실제 메뉴와 임시 글자 구분\n\n[학생 코드 — EXAM/index.html]\n```html\n<div class=\"menu\">메뉴</div>\n<div class=\"icon\">아이콘</div>\n```\n\n[주 메뉴 수정 예시]\n```html\n<nav class=\"menu\">\n  <ul>\n    <li>모나미소개</li>\n    <li>모나미제품</li>\n    <li>NEWS & VIDEO</li>\n    <li>브랜드스토어</li>\n    <li>모나미 미술대회</li>\n    <li>고객지원</li>\n    <li>기업 구매 / 개발</li>\n  </ul>\n</nav>\n```\n\n부모 상자를 만든 것과 필요한 내용을 구현한 것은 구분해야 합니다. “메뉴”를 위와 같이 실제 일곱 개 항목으로 바꾸고, 아이콘 영역에는 제공 자료의 검색 이미지와 메뉴 표시를 배치하세요. 이 과제에서는 모양과 배치를 구현하는 범위부터 완성하면 됩니다.\n\n2. 상단 > 안쪽 폭과 가로 정렬\n\n[학생 코드 — EXAM/style.css]\n```css\n.con { width: 1050px; height: 58px; display: flex; }\n.m-header-con { display: flex; }\n```\n\n[수정 예시]\n```css\nbody { margin: 0; }\n.con { width: 1400px; }\n.m-header-con {\n  width: 1400px;\n  height: 89px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.menu ul { display: flex; gap: 24px; }\n```\n\n현재 위쪽 메뉴는 1050px 컨테이너를 사용하지만 아래쪽 메인헤더에는 같은 내부 폭이 없어 로고와 임시 글자가 화면 왼쪽에 붙습니다. 두 줄을 1400px 안쪽 폭에 맞추고, 로고·주 메뉴·아이콘을 부모의 가로 공간 안에서 배치하세요. 이미 Flex를 시작한 점을 살려 부모에서 정렬과 간격을 정하는 연습을 하면 됩니다.\n\n3. 상단 > 언어·SNS 묶음과 최종 테두리\n\n[학생 코드]\n```css\n.utility-con { justify-content: flex-end; align-items: center; }\n.main-header { border: 1px solid red; height: 89px; }\n```\n\n현재는 오른쪽 메뉴만 있으므로 `flex-end`가 적용되어 있습니다. 제공된 언어·SNS 이미지를 추가해 왼쪽 묶음을 만든 다음, 그 묶음과 오른쪽 메뉴를 `.utility-con`의 자식으로 두고 `justify-content: space-between`으로 나누세요. 빨간 테두리는 구조 확인용 표시이므로 최종 화면에서는 `border: 1px solid #eee`처럼 완성 예시에 맞춰 정리하는 것이 좋습니다. 이미 로고의 크기와 대체 설명을 작성했으므로 다른 이미지도 같은 방식으로 파일 경로와 표시 크기를 확인하세요.\n\n4. 두 번째 선택 영역 추가\n\n제출된 HTML은 상단을 닫은 뒤 바로 끝나며, 두 번째 영역의 HTML·CSS는 없습니다. 예를 들어 NEW ARRIVALS를 선택한다면 제목과 설명, 첫 행의 두 이미지, 아래 행의 세 이미지를 한 영역으로 묶고 순서대로 완성할 수 있습니다. 이 예시는 다음 수정 방향이며, 현재 제출물에 해당 영역이 구현되어 있다는 뜻은 아닙니다. 우선 상단의 임시 글자를 실제 콘텐츠로 바꾼 뒤 두 번째 영역을 선택해 작업하세요.\n\n최종점수는 70점입니다. 먼저 상단의 실제 메뉴·아이콘·언어·SNS를 채우고, 같은 방식으로 두 번째 선택 영역을 완성하시기 바랍니다.",
+    "feedbackSHA256": "829c88efe918c6450a8d73eaba9700148d6bd5a8fa574c6a736c59f92a799720"
+  },
+  {
+    "student": "김형관",
+    "Sid": "sbsartdj1166",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1166",
+    "scores": [
+      11,
+      9,
+      9,
+      11,
+      9,
+      11,
+      11,
+      9,
+      11
+    ],
+    "maxima": [
+      12,
+      10,
+      10,
+      12,
+      10,
+      12,
+      12,
+      10,
+      12
+    ],
+    "criterionIds": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+    ],
+    "total": 91,
+    "feedback": "김형관 학생은 상단의 언어 표시와 SNS, 로고, 일곱 개 메뉴, 검색·전체 메뉴 표시를 구성했습니다. 1400px 안쪽 폭과 메뉴 높이를 적용했고, 마우스를 올렸을 때 메뉴 글자색이 바뀌는 것도 확인했습니다. NEW ARRIVALS는 제품 이미지 다섯 개를 모두 연결했지만, 제목과 이미지가 서로 다른 부모에 놓여 있고 이미지 순서도 일부 바뀌어 있습니다. 이번에는 상단과 신제품 두 영역을 기준으로 살펴보았습니다.\n\n1. 상단 > 메뉴 문구 확인\n\n[학생 코드 — 시험/index.html]\n```html\n<li>CONATACT US</li>\n```\n\n[수정 예시]\n```html\n<li>CONTACT US</li>\n```\n\n상단의 실제 콘텐츠는 대부분 채워져 있습니다. 이 문구의 오타를 정정하고, 같은 방식으로 메뉴 이름을 원본과 한 번씩 대조하세요. 검색 이미지와 세 줄 메뉴 표시도 정상적으로 연결되어 있으므로 현재의 기본 구조는 유지해도 됩니다.\n\n2. NEW ARRIVALS > 제목과 이미지를 같은 부모 안에 배치\n\n[학생 코드의 구조]\n```html\n<div class=\"new\">\n  <div class=\"title\"><h2>NEW<br>ARRIVALS</h2></div>\n</div>\n<div class=\"toparea\">...</div>\n<div class=\"btnarea\">...</div>\n```\n\n[구조 수정 예시]\n```html\n<div class=\"new\">\n  <div class=\"toparea\">\n    <div class=\"new-left\">\n      <div class=\"new-heading\">\n        <h2>NEW<br>ARRIVALS</h2>\n        <div class=\"title-line\"></div>\n        <p>가장 먼저 만나는 설레는 기다림</p>\n      </div>\n      <img class=\"new01\" src=\"./image/file1_1699945409grwui60w6u.jpg\" alt=\"FX ZETA C3 볼펜\">\n    </div>\n    <img class=\"new02\" src=\"./image/file1_169994521784nzg4whv7.jpg\" alt=\"지퀀스 노트\">\n  </div>\n  <div class=\"btnarea\">\n    <!-- 아래 행 이미지 세 개를 여기에 배치합니다. -->\n  </div>\n</div>\n```\n\n현재 `.new`를 닫은 뒤 이미지 두 행을 작성했기 때문에, 제목에 적용한 1200px 폭이 이미지 행에는 적용되지 않습니다. 제목과 첫 이미지를 왼쪽 묶음으로 만들고, 오른쪽 노트 이미지와 함께 첫 행을 구성하세요. 위 예시의 `...`는 현재 구조를 간단히 표시한 것이며 실제 HTML에 넣는 문자가 아닙니다.\n\n3. NEW ARRIVALS > Flex 값과 행의 간격\n\n[학생 코드 — 시험/style.css]\n```css\n.toparea {\n  display: flexbox;\n  align-items: center;\n}\n```\n\n[수정 예시]\n```css\n.new { width: 1200px; margin: 0 auto; padding: 88px 0 90px; }\n.toparea, .btnarea {\n  display: flex;\n  gap: 22px;\n  align-items: flex-start;\n}\n.new-left { width: 392px; }\n.new-heading { height: 155px; }\n.btnarea { margin-top: 22px; }\n.new img { display: block; border-radius: 22px; }\n.new h2 { margin: 0; font-size: 32px; font-weight: 500; }\n.title-line { width: 26px; height: 3px; background: #c81939; margin: 12px 0 10px; }\n.new-heading p { margin: 0; font-size: 13px; }\n```\n\n`display: flexbox`는 적용되는 값이 아닙니다. 브라우저에서도 `.toparea`가 `block`으로 남아 있는 것을 확인했습니다. `flex`로 바꾸고 부모를 바로잡으면 첫 행은 392 + 22 + 786 = 1200px이 됩니다. 아래 행도 이미지 392px·450px·314px과 간격 두 곳을 합쳐 같은 폭에 맞추세요.\n\n4. NEW ARRIVALS > 이미지 파일과 설명을 함께 확인\n\n현재 첫 이미지에는 만년필 사진이 들어가 있지만 `alt`에는 FX ZETA C3가 적혀 있습니다. 아래 행의 볼펜 이미지와 프리미엄 펜 이미지도 위치와 이름이 어긋납니다. 파일명을 다음 순서로 배치하고 각 사진에 맞는 대체 설명을 작성하세요.\n\n```html\n<!-- 아래 행: 프러스펜 프라임 / 만년필 / 60색 마커 -->\n<img src=\"./image/file1_1715318030bhfwnjum09.jpg\" alt=\"프러스펜3000프라임과 케이스\">\n<img src=\"./image/file1_1681087061mb8i5l6zdx.jpg\" alt=\"153 아이디 만년필과 케이스\">\n<img src=\"./image/file1_1715319042z7nuju2l3p.jpg\" alt=\"프러스펜 3000 60색 마커\">\n```\n\n파일이 표시되는지만 확인하지 말고, 표시된 제품과 그 위치·설명이 같은 의미인지 확인해야 합니다. 이미지 다섯 개는 이미 준비되어 있으므로 새 자료를 찾기보다 현재 파일의 배치부터 정리하면 됩니다.\n\n최종점수는 91점입니다. 먼저 신제품의 공통 부모와 `display: flex`를 수정하고, 다섯 이미지의 순서와 두 행의 1200px 폭을 다시 확인하세요.",
+    "feedbackSHA256": "3ef6190c960ad83cf8e814485d24ce1081625d6b83bafa62fd23bab329ac6866"
+  },
+  {
+    "student": "박선환",
+    "Sid": "sbsartdj1167",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1167",
+    "scores": [
+      10,
+      8,
+      8,
+      10,
+      8,
+      10,
+      10,
+      8,
+      10
+    ],
+    "maxima": [
+      12,
+      10,
+      10,
+      12,
+      10,
+      12,
+      12,
+      10,
+      12
+    ],
+    "criterionIds": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+    ],
+    "total": 82,
+    "feedback": "박선환 학생은 언어·SNS·유틸리티를 가로로 배치하고, BEST PRODUCT의 제목·설명·카테고리와 일곱 개 상품 이미지를 작성했습니다. 제출 메모에도 상품 영역의 크기와 탭 규격을 정리해 두었습니다. 실제 화면에서는 상품이 가로 목록으로 이어지지 않고 세로로 쌓여 회색 배경 아래까지 넘어갑니다. 이번에는 작업 내용과 메모가 확인되는 상단과 인기상품 영역을 중심으로 살펴보았습니다.\n\n1. 상단 > 유틸리티 아래의 메인헤더\n\n언어·SNS와 HOME 계열의 정렬은 잘 되어 있습니다. 현재 `.head_top` 다음에는 바로 `.main_banner`가 이어져, 모나미 로고와 주 메뉴·검색 표시를 담는 줄이 없습니다. 상단을 완성하려면 두 줄을 구분해야 합니다. `.head_top` 아래에 메인헤더의 부모를 추가하고 제공 자료의 로고, 일곱 메뉴, 검색·전체 메뉴 표시를 배치하세요. 언어 선택이나 실제 페이지 이동 기능을 추가하는 작업보다 표시 요소와 정렬을 먼저 완성하면 됩니다.\n\n2. BEST PRODUCT > 카테고리 span에 크기가 적용되지 않는 이유\n\n[학생 코드 — monami 시험/style.css]\n```css\n#actions .tab_premium {\n  width: 157px;\n  height: 36px;\n  border: 2px solid #bcbcbc;\n}\n```\n\n[수정 예시 — 기존 규칙 뒤에 추가]\n```css\n.actions { gap: 6px; }\n#actions span {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  box-sizing: border-box;\n}\n#actions .tab_premium {\n  border-color: #c81939;\n  color: #c81939;\n}\n```\n\n현재 `span`은 `inline` 상태라 지정한 너비와 높이를 가진 상자로 보이지 않습니다. 실제 첫 탭의 너비는 약68px로 표시되었습니다. `display: flex`를 주면 157×36px 상자 안에서 글자를 정렬할 수 있습니다. 첫 탭의 선택 표시도 넣어 주세요. 카테고리별 데이터를 전환하는 기능은 이번 수정 범위에 추가할 필요가 없습니다.\n\n3. BEST PRODUCT > 가로 목록의 부모에 Flex 적용\n\n[학생 코드]\n```css\n.product_list_image > ul > li {\n  width: 266px;\n  height: 390px;\n  gap: 18px;\n  display: flex;\n  padding-top: 40px;\n  border-radius: ;\n}\n```\n\n[수정 예시]\n```css\n.products_con { height: auto; }\n.product_list { width: 100%; overflow-x: auto; }\n.product_list_image > ul {\n  display: flex;\n  width: 3016px;\n  gap: 9px;\n}\n.product_list_image > ul > li {\n  flex: 0 0 266px;\n  width: 266px;\n  height: 505px;\n  display: block;\n  padding-top: 0;\n  border-radius: 16px;\n  overflow: hidden;\n  background: #fff;\n}\n.product_list_image > ul > li > img {\n  display: block;\n  width: 100%;\n  height: 390px;\n  object-fit: cover;\n}\n```\n\n상품 여러 개를 가로로 나열하려면 각 `li`가 아니라 그들을 담는 `ul`에 Flex를 적용해야 합니다. 현재 `li` 안의 이미지에만 가로 배치 방식이 적용되어 목록 자체는 세로로 쌓입니다. 그래서 목록 높이가 약3010px이 되어 바깥 회색 영역보다 길어집니다. 부모를 가로 목록으로 바꾸고 바깥의 고정 높이를 풀어 한 번에 정리하세요. 값이 비어 있는 `border-radius`도 유효한 값으로 작성해야 합니다.\n\n4. BEST PRODUCT > 이미지 아래 상품 정보와 나머지 카드\n\n[현재 카드]\n```html\n<li><img src=\"./image/list/product-01.jpg\" alt=\"상품이미지\"></li>\n```\n\n[카드 구조 예시]\n```html\n<li>\n  <img src=\"./image/list/product-01.jpg\" alt=\"사진에 맞는 실제 상품명\">\n  <div class=\"product-info\">\n    <p>프리미엄 펜</p>\n    <p class=\"product-name\">사진에 맞는 실제 상품명</p>\n  </div>\n</li>\n```\n\n현재 일곱 이미지 파일은 모두 정상적으로 표시됩니다. 각 카드에는 사진뿐 아니라 분류와 상품명이 필요합니다. 위 예시의 문구를 그대로 쓰지 말고 실제 사진의 제품 이름을 확인해 바꾸세요. 정답 목록의 11개와 비교하면 네 개 카드가 더 필요합니다. 제공 자료에서 해당 이미지를 추가하고 같은 카드 구조를 반복하세요. `3016px`은 11개 카드 너비와 간격을 합친 값입니다. 스크롤 영역에 `tabindex=\"0\"`을 주고, 완성한 마지막 카드까지 이동할 수 있는지도 확인하면 좋습니다.\n\n최종점수는 82점입니다. 먼저 `ul`을 가로 목록으로 바꿔 넘침을 정리하고, 탭 크기와 상품명·카드 수를 완성하세요.",
+    "feedbackSHA256": "bc8a88a1dcd17e2ffbcf929062ad3893186230d6c0dbb081bbd996745718d767"
+  },
+  {
+    "student": "신윤아",
+    "Sid": "sbsartdj1168",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1168",
+    "scores": [
+      12,
+      10,
+      10,
+      11,
+      10,
+      11,
+      11,
+      10,
+      11
+    ],
+    "maxima": [
+      12,
+      10,
+      10,
+      12,
+      10,
+      12,
+      12,
+      10,
+      12
+    ],
+    "criterionIds": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+    ],
+    "total": 96,
+    "feedback": "신윤아 학생은 상단의 언어·SNS·일곱 개 주 메뉴·검색 표시를 구성했고, 메뉴에 마우스를 올렸을 때 글자색이 바뀌는 것도 확인했습니다. NEW ARRIVALS는 1200px 안쪽 폭과 22px 간격, 이미지 다섯 개의 크기와 순서를 정확하게 맞췄습니다. 왼쪽 제목과 작은 이미지를 세로 Flex로 묶고 `space-between`으로 아래 끝을 맞춘 방식도 적절합니다. 보완할 부분은 상단의 유동 폭과 신제품 영역의 중복 여백입니다.\n\n1. 상단 > 94% 대신 기준 내부 폭 사용\n\n[학생 코드 — 모나미 1차/style.css]\n```css\n.head_top .conwrap { width: 94%; }\n.category { width: 94%; margin: 0 auto; display: flex; }\n```\n\n[수정 예시]\n```css\n.head_top .conwrap,\n.category {\n  width: 1400px;\n  margin-left: auto;\n  margin-right: auto;\n}\n```\n\n현재 상단 내부 폭은 1920px 화면에서 약1791px, 1440px 화면에서 약1340px로 달라집니다. 그래서 메뉴 사이가 넓은 화면에서는 벌어지고 다른 데스크톱에서는 좁아집니다. 이번 완성 예시의 기준인 1400px을 두 줄에 함께 적용하면 로고와 메뉴의 위치를 안정적으로 맞출 수 있습니다. 바깥 흰색 배경과 내부 콘텐츠의 폭은 구분해서 설정하세요.\n\n2. 상단 > 언어 표시와 문서 언어\n\n[학생 코드 — index.html]\n```html\n<html lang=\"en\">\n<div class=\"lang\">\n  <img src=\"./image/lang_kor.png\" alt=\"한국어\">\n  <span>KOR</span>\n</div>\n```\n\n[수정 예시]\n```html\n<html lang=\"ko\">\n```\n\n화면의 주된 내용이 한국어이므로 문서의 기본 언어도 `ko`로 지정하세요. 언어 표시에는 국기와 KOR가 잘 들어가 있습니다. 그 옆에 정답의 아래 방향 표시를 추가하면 펼침 형태도 맞출 수 있습니다. 실제 언어 전환 기능을 만드는 것까지 요구하는 것은 아닙니다.\n\n3. NEW ARRIVALS > 바깥과 안쪽의 중복 패딩\n\n[학생 코드]\n```css\n.new {\n  height: 999px;\n  padding: 75px 0 90px;\n  box-sizing: border-box;\n}\n.new .con {\n  height: 821px;\n  padding: 75px 0 90px;\n}\n.toparea { margin: 13px 0 22px; }\n```\n\n[수정 예시]\n```css\n.new {\n  height: auto;\n  padding: 88px 0 90px;\n}\n.new .con {\n  height: auto;\n  padding: 0;\n}\n.toparea { margin: 0 0 22px; }\n```\n\n바깥 `.new`와 안쪽 `.con`에 같은 패딩을 두 번 적용했습니다. 그 결과 첫 콘텐츠는 영역 시작에서 163px 아래에 놓이고, 안쪽 박스도 설정한 821px보다 큰 986px 높이가 됩니다. 위아래 여백은 바깥 영역 한 곳에서만 담당하게 하고 안쪽은 실제 내용의 높이에 따라 늘어나도록 정리하세요. 현재의 이미지 크기와 1200px 폭, 행 간 22px 간격은 유지하면 됩니다.\n\n4. NEW ARRIVALS > 제품을 설명하는 alt\n\n[학생 코드]\n```html\n<img src=\"./image/new1.jpg\" alt=\"new1\">\n<img src=\"./image/new2.jpg\" alt=\"new2\">\n```\n\n[수정 예시]\n```html\n<img src=\"./image/new1.jpg\" alt=\"FX ZETA C3 볼펜, 여러 색상\">\n<img src=\"./image/new2.jpg\" alt=\"지퀀스 노트, 세 가지 색상\">\n```\n\n이미지의 경로와 크기는 정확합니다. 대체 설명은 파일 번호보다 사진에 담긴 제품을 설명하도록 작성하세요. 나머지 세 이미지에도 프리미엄 펜과 케이스, 만년필과 케이스, 60색 마커처럼 내용을 구분해 적으면 됩니다. 카드의 20px 둥글기는 이미 자연스럽게 표현되어 있으므로 전체 여백을 먼저 보완한 뒤 세부 수치를 정리하는 순서가 좋습니다.\n\n최종점수는 96점입니다. 상단 내부 폭을 맞추고 신제품의 중복 패딩을 제거한 다음, 두 데스크톱 너비에서 이미지 크기와 행 간격이 그대로 유지되는지 확인하세요.",
+    "feedbackSHA256": "ac8db6db1ea6324c2c5f72e10074a91819f3411d2292cf6d80ac353c17b60ed3"
+  },
+  {
+    "student": "이주원",
+    "Sid": "sbsartdj1171",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1171",
+    "scores": [
+      12,
+      10,
+      10,
+      12,
+      10,
+      11,
+      11,
+      10,
+      11
+    ],
+    "maxima": [
+      12,
+      10,
+      10,
+      12,
+      10,
+      12,
+      12,
+      10,
+      12
+    ],
+    "criterionIds": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+    ],
+    "total": 97,
+    "feedback": "이주원 학생은 상단의 언어·SNS·로고·일곱 개 메뉴와 검색 표시를 빠짐없이 구성했습니다. 메뉴 hover도 정상적으로 동작합니다. NEW ARRIVALS에서는 두 행의 폭이 1200px이고, 다섯 이미지가 각각 392×205, 786×360, 392×292, 450×439, 314×292로 표시됩니다. 원본 이미지의 크기와 두 행의 순서를 정확하게 연결한 점이 좋습니다. 이번에는 이 두 영역의 정렬과 세부 표현을 중심으로 보완하면 됩니다.\n\n1. 상단 > 기본 여백과 내부 폭 통일\n\n[학생 코드 — 261023_Test/style.css]\n```css\nbody { font-family: sans-serif; }\n.conwrap { width: 1440px; height: 44px; }\n.m-nav-inner { width: 1400px; height: 89px; }\n```\n\n[수정 예시]\n```css\nbody { margin: 0; font-family: sans-serif; }\n.conwrap { width: 1400px; }\n.img-con { display: flex; gap: 7px; }\n```\n\nbody의 기본 8px 바깥 여백이 남아 있어 상하단 선도 화면 가장자리에서 떨어져 있습니다. 위쪽은 1440px, 아래쪽은 1400px이라 내부의 시작점도 다릅니다. 기본 여백을 제거하고 두 내부 폭을 맞추세요. SNS 간격은 이미지 각각에 `gap`을 넣기보다 이미지들을 담는 `.img-con`을 Flex 부모로 만들고 간격을 지정하면 정확해집니다.\n\n2. 상단 > 검색·전체 메뉴 아이콘 크기\n\n[학생 코드]\n```css\n.search-icon { font-size: 30px; }\n.menu-icon { font-size: 30px; }\n```\n\n[수정 예시]\n```css\n.search-icon { font-size: 19px; }\n.menu-icon { font-size: 20px; }\n```\n\n아이콘 자체는 정상적으로 표시됩니다. 현재 크기가 메뉴 글자와 다른 요소에 비해 커 보이므로 검색은 약19px, 전체 메뉴 표시는 약20px을 기준으로 맞추세요. 아이콘 도구를 바꿀 필요는 없으며, 표시된 실제 모양과 시각적인 크기를 기준으로 조정하면 됩니다.\n\n3. NEW ARRIVALS > 첫 행의 상단과 아래 끝 정렬\n\n[학생 코드]\n```css\n.top-products-l { display: flex; flex-direction: column; }\n.top-product-l { margin-top: 36px; }\n.top-products-right { margin-top: 18px; }\n```\n\n[수정 예시]\n```css\n.top-products-left {\n  width: 392px;\n  height: 360px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.top-product-l { margin-top: 0; }\n.top-products-right { margin-top: 0; }\n.top-area img, .bot-img img { display: block; }\n```\n\nHTML의 실제 부모 이름은 `.top-products-left`인데 CSS에는 `.top-products-l`로 적혀 있습니다. 부모 이름을 맞추고 왼쪽을 360px 높이의 세로 Flex로 만들면 제목은 위, 첫 이미지는 아래에 놓을 수 있습니다. 오른쪽 이미지는 현재 위에서 18px 내려가 있으므로 이 여백을 제거하세요. 이미지를 `block`으로 바꾸면 인라인 이미지 아래의 글자 기준선 공간도 없어집니다. 현재 이미지의 너비·높이와 두 행의 22px 간격은 그대로 유지하면 됩니다.\n\n4. NEW ARRIVALS > 전체 여백과 강조선\n\n[학생 코드]\n```css\n.new-arrivals { height: 999px; margin-top: 77px; }\n.title-bg { width: 24px; height: 6px; }\n```\n\n[수정 예시]\n```css\n.new-arrivals {\n  height: auto;\n  margin-top: 0;\n  padding: 88px 0 90px;\n}\n.title-bg { width: 26px; height: 3px; }\n```\n\n이미지 크기가 맞춰져 있으므로 영역 높이를 고정해서 빈 공간을 만드는 것보다 콘텐츠와 위아래 패딩을 합쳐 높이가 만들어지도록 정리하면 관리하기 쉽습니다. 빨간 선은 현재 6px로 두꺼우므로 3px 높이로 줄여 제목과의 비중을 맞추세요.\n\n최종점수는 97점입니다. 먼저 상단의 기본 여백과 내부 폭을 정리하고, 신제품 첫 행의 두 이미지 끝선을 맞추면 됩니다.",
+    "feedbackSHA256": "b99e09049c5789481559b0347953bdeb207211bc574982bf1f1b45bfcf21c608"
+  },
+  {
+    "student": "전해주",
+    "Sid": "sbsartdj1169",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1169",
+    "scores": [
+      10,
+      8,
+      8,
+      10,
+      8,
+      9,
+      9,
+      8,
+      9
+    ],
+    "maxima": [
+      12,
+      10,
+      10,
+      12,
+      10,
+      12,
+      12,
+      10,
+      12
+    ],
+    "criterionIds": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+    ],
+    "total": 79,
+    "feedback": "전해주 학생은 언어·SNS·HOME 계열을 가로로 배치했고, BEST PRODUCT의 제목·빨간 선·소개 문장을 구성했습니다. 국기와 SNS 이미지도 정상적으로 연결됩니다. 현재 상단에는 로고와 주 메뉴 줄이 없고, 인기상품에는 제목 아래의 카테고리와 상품 목록이 작성되지 않았습니다. 이번에는 실제 작업한 상단과 인기상품 두 영역을 기준으로 보완점을 정리했습니다.\n\n1. 상단 > 언어 상자의 축소와 실제 메뉴 문구\n\n[학생 코드 — 모나미시험/style.css]\n```css\n.head-left { width: 204px; display: flex; }\n.language { width: 86px; padding: 5px; }\n.sns { width: 204px; padding-left: 7px; padding-right: 7px; }\n```\n\n[수정 예시]\n```css\n.head-left { width: auto; gap: 14px; }\n.language {\n  flex: 0 0 86px;\n  width: 86px;\n  height: 28px;\n  padding: 0;\n  box-sizing: border-box;\n}\n.sns { width: auto; padding: 0; }\n```\n\n왼쪽 부모와 SNS 자식에 모두 204px 너비가 지정되어 언어 상자까지 같은 공간에 들어가려 합니다. 그래서 언어 상자는 작성한 너비보다 작은 약81px로 표시됩니다. 왼쪽 부모는 내용에 따라 늘어나게 하고, 언어 상자는 줄어들지 않도록 설정하세요. 오른쪽의 `CONTECT US`는 `CONTACT US`로 바꾸면 됩니다.\n\n2. 상단 > 로고와 주 메뉴 줄 추가\n\n현재 `.head-top` 다음에는 바로 배너가 이어집니다. 유틸리티만으로 상단 전체가 완성된 것은 아니므로, 그 아래에 1400px 내부 부모와 89px 높이의 메인헤더를 추가하세요. 제공 자료의 로고, 일곱 개 주 메뉴, 검색·전체 메뉴 표시를 같은 부모 안에 가로로 배치하고 세로 가운데를 맞추면 됩니다. 먼저 표시와 정렬을 완성하는 데 집중하세요.\n\n3. BEST PRODUCT > 준비한 이미지 파일을 HTML 카드로 연결\n\n[학생 코드 — index.html]\n```html\n<div class=\"product\">\n  <div class=\"product-txt\">BEST PRODUCT</div>\n  <div class=\"line\"></div>\n  <div class=\"txt\">언제 어디서나 생활 속에 함께하는 모나미</div>\n</div>\n```\n\n[제목 아래에 추가할 카드 구조 예시]\n```html\n<div class=\"product-scroll\" tabindex=\"0\">\n  <div class=\"product-list\">\n    <div class=\"product-card\">\n      <img src=\"./product-images/01-pluspen-3000-prime.jpg\" alt=\"프러스펜 3000 프라임\">\n      <div class=\"product-info\">\n        <p>프리미엄 펜</p>\n        <p>프러스펜 3000 프라임</p>\n      </div>\n    </div>\n  </div>\n</div>\n```\n\n제출 ZIP에는 상품 이미지 11개가 준비되어 있지만 현재 HTML에서는 사용되지 않았습니다. 위 예시는 이미 들어 있는 첫 이미지 파일을 연결하는 방법입니다. 각 파일에 맞는 상품명을 확인하고 같은 구조로 11개를 작성하세요. 그 위에는 프리미엄 펜·펜/펜슬·마카/컬러링·노트/사무용품의 표시도 추가해야 합니다.\n\n4. BEST PRODUCT > 가로 카드 목록과 실제 높이\n\n[추가할 CSS 예시]\n```css\n.product { height: auto; padding-bottom: 70px; }\n.product-scroll { overflow-x: auto; }\n.product-list { display: flex; gap: 9px; width: 3016px; }\n.product-card {\n  flex: 0 0 266px;\n  height: 505px;\n  border-radius: 16px;\n  overflow: hidden;\n  background: #fff;\n}\n.product-card > img {\n  display: block;\n  width: 266px;\n  height: 390px;\n  object-fit: cover;\n}\n.product-info { padding: 30px 28px 18px; }\n```\n\n현재 951px 높이의 회색 배경만 길게 남아 있습니다. 상품 카드와 그 부모를 실제로 만든 뒤 높이를 내용에 맞추세요. 3016px은 카드 11개와 사이 간격을 합한 값입니다. 완성 후 마지막 상품까지 가로로 이동되는지 확인하면 됩니다.\n\n5. 코드 문법 정리\n\n[학생 코드]\n```css\nfont-weight: auto;\n```\n\n[수정 예시]\n```css\nfont-weight: 400;\n```\n\n`font-weight`에 `auto`는 적용되지 않으므로 사용할 굵기를 숫자나 `normal`로 지정하세요. HTML에서는 `.product`를 닫은 다음 `</div>`가 하나 더 있으므로 여는 태그와 짝을 확인해 제거해야 합니다. 현재 페이지는 표시되지만 브라우저의 자동 보정에 기대지 않도록 정리하는 연습이 필요합니다.\n\n최종점수는 79점입니다. 우선 준비된 11개 상품 이미지를 실제 카드로 연결하고, 상단의 로고·주 메뉴 줄을 완성하세요.",
+    "feedbackSHA256": "fadda170b9d90a1275b577de9ce11cddeb3dba06183d62daf35b0d6f42804810"
+  },
+  {
+    "student": "홍석경",
+    "Sid": "sbsartdj1170",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1170",
+    "scores": [
+      11,
+      9,
+      9,
+      11,
+      9,
+      10,
+      10,
+      9,
+      10
+    ],
+    "maxima": [
+      12,
+      10,
+      10,
+      12,
+      10,
+      12,
+      12,
+      10,
+      12
+    ],
+    "criterionIds": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+    ],
+    "total": 88,
+    "feedback": "홍석경 학생은 상단의 언어·SNS·유틸리티를 1400px 부모 안에 배치했습니다. SNS 이미지 크기와 간격, 오른쪽 메뉴의 글자 크기를 세밀하게 작성한 점이 확인됩니다. 메인 비주얼의 대표 사진도 정상적으로 표시됩니다. 현재 89px 메뉴 공간에는 내용이 없고, 사진 위의 브랜드 제목과 설명도 작성되지 않았습니다. 실제 콘텐츠가 있는 상단과 메인 비주얼 두 영역을 평가 대상으로 보았습니다.\n\n1. 상단 > 빈 공간을 실제 메인헤더로 바꾸기\n\n[학생 코드 — index.html]\n```html\n<div class=\"menu-space\"></div>\n```\n\n[메인헤더 구조 예시]\n```html\n<div class=\"menu-space\">\n  <div class=\"menu-inner\">\n    <img src=\"./image/logo.jpg\" alt=\"MONAMI 모나미\">\n    <nav class=\"main-nav\">\n      <ul>\n        <li>모나미소개</li><li>모나미제품</li><li>NEWS & VIDEO</li>\n        <li>브랜드스토어</li><li>모나미 미술대회</li><li>고객지원</li>\n        <li>기업 구매 / 개발</li>\n      </ul>\n    </nav>\n    <div class=\"menu-actions\"><!-- 검색과 전체 메뉴 표시 --></div>\n  </div>\n</div>\n```\n\n위 예시의 `logo.jpg`는 현재 첨부에 들어 있는 파일이 아니므로 제공 정답 자료의 로고 이미지를 추가한 뒤 연결해야 합니다. 빈 상자의 높이만 맞추면 실제 로고·메뉴가 있는 것과는 결과가 다릅니다. 이미 유틸리티에서 사용한 부모 정렬 방식을 이 줄에도 적용하세요.\n\n```css\n.menu-inner {\n  width: 1400px;\n  height: 89px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.menu-inner > img { width: 162px; height: 89px; }\n.main-nav ul { display: flex; gap: 24px; }\n.main-nav li:hover { color: #c81939; }\n```\n\n2. 메인 비주얼 > 사진만 있는 구조에 브랜드 문구 추가\n\n[학생 코드]\n```html\n<div class=\"main-banner\">\n  <img src=\"./image/banner.jpg\" alt=\"main-banner\">\n</div>\n```\n\n[수정 구조 예시]\n```html\n<div class=\"main-banner\">\n  <div class=\"banner-inner\">\n    <div class=\"banner-copy\">\n      <div class=\"banner-title\">\n        <p>어쩌면 삶은</p><p>인생이라는 종이 위에</p>\n        <p>써 내려가는</p><p>펜의 기록 같습니다.</p>\n      </div>\n      <div class=\"banner-desc\">\n        <p>그중에서도 지우고 싶지 않은 기록이 있습니다.</p>\n        <p>모나미는 언제나 당신의 행복한 기록과 함께 합니다.</p>\n      </div>\n    </div>\n  </div>\n</div>\n```\n\n사진은 정답의 대표 이미지와 일치합니다. 다만 현재 사진에는 글자가 들어 있지 않으므로 브랜드 메시지는 별도의 HTML 텍스트로 작성해야 합니다. 사진을 배경으로 두고 그 안의 텍스트 부모를 Flex로 정렬하면 수업에서 배운 배치 방식으로 구성할 수 있습니다.\n\n3. 메인 비주얼 > 데스크톱 기준 높이 유지\n\n[학생 코드]\n```css\n.main-banner img { width: 100%; display: block; }\n```\n\n[위 HTML 구조와 함께 적용할 수정 예시]\n```css\n.main-banner {\n  height: 652px;\n  background: #222 url('./image/banner.jpg') center / cover no-repeat;\n}\n.banner-inner {\n  width: 1400px;\n  height: 100%;\n  margin: 0 auto;\n  padding-left: 120px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n}\n.banner-copy { color: #fff; }\n.banner-copy p { margin: 0; }\n.banner-title { padding-bottom: 24px; }\n.banner-title p { font-size: 50px; height: 63px; }\n.banner-desc p { font-size: 15px; color: #ddd; padding-bottom: 5px; }\n```\n\n현재 이미지는 비율을 유지하며 잘 줄어들지만, 1440px 화면에서는 영역 높이도 489px로 작아집니다. 이번 데스크톱 완성 예시는 높이 652px을 유지하므로 위처럼 영역 높이를 정하고 배경을 `cover`로 맞추세요. 이 예시는 기존 `<img>`를 텍스트가 들어 있는 배경 구조로 교체하는 방법입니다. 두 방식을 동시에 넣어 같은 사진이 두 번 보이지 않도록 확인하세요.\n\n최종점수는 88점입니다. 유틸리티의 세밀한 간격은 유지하면서, 비어 있는 메뉴 줄과 사진 위의 브랜드 문구를 먼저 채우세요.",
+    "feedbackSHA256": "c1054327a6943e84218222bcaf9308007a6dd8559a70b3aa7420be83d103a46a"
+  }
+]

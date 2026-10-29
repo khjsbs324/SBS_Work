@@ -1,0 +1,192 @@
+{
+  "unit": "시각디자인 리서치 조사",
+  "lcode": "4",
+  "unit_end_date": "2026-06-05",
+  "reassessment_date": "2026-06-10",
+  "appraisal_summary": "평가정보\n돌아가기\n구분\t본평가\t결석자평가\t재평가\t사전평가\t능력단위\n\n\n평가날짜\n\n평가시간\n\n커트라인\n\n패널티\n\n\t\n\n2026-06-05\n\n16:00~18:50\n\n60점\n\n0점\n\n\t\n\n2026-06-08\n\n18:50~22:00\n\n60점\n\n10점\n\n\t\n\n2026-06-10\n\n18:50~21:50\n\n0점\n\n10점\n\n\t84.85\t65.18\n평가인원\t10\t1\t1",
+  "students": [
+    {
+      "name": "이은수",
+      "score": "79",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1123"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "강민경",
+      "score": "75",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1114"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "이지희",
+      "score": "69",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1120"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "김정은",
+      "score": "64",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1115"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "김지선",
+      "score": "64",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=3&Sid=sbsartdj1116"
+        }
+      ],
+      "reasonSnippets": [
+        "파일 미완성, 미제출로 인한 재평가"
+      ]
+    },
+    {
+      "name": "임연우",
+      "score": "63",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1121"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "박찬미",
+      "score": "62",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=2&Sid=sbsartdj1118"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "이은경",
+      "score": "61",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1119"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "박주연",
+      "score": "60",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1117"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "최지혜",
+      "score": "60",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1124"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "허지민",
+      "score": "60",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1122"
+        }
+      ],
+      "reasonSnippets": []
+    }
+  ],
+  "reassessment_records": [
+    {
+      "unit": "시각디자인 리서치 조사",
+      "lcode": "4",
+      "name": "김지선",
+      "display_score": "64",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=3&Sid=sbsartdj1116",
+      "performance": [
+        {
+          "caption": "수행평가서",
+          "rows": [
+            [
+              "능력단위명",
+              "시각디자인 리서치 조사",
+              "시작일",
+              "2026-05-21",
+              "종료일",
+              "2026-06-05"
+            ],
+            [
+              "본평가",
+              "2026-06-05",
+              "결석자평가",
+              "-",
+              "재평가",
+              "2026-06-10"
+            ],
+            [
+              "-",
+              "-",
+              "64"
+            ],
+            [
+              "성취수준",
+              "수행정도"
+            ],
+            [
+              "",
+              "5. 해당 지식과 기술을 확실하게 습득하여 직무수행에 필요한 기술적 사고력과 문제 해결력을 토대로 주도적으로 완벽한 작업을 수행할 수 있다."
+            ],
+            [
+              "",
+              "4. 해당 지식과 기술을 습득하여 직무수행에 필요한 기술적 사고력과 문제 해결력을 토대로 작업을 수행할 수 있다."
+            ],
+            [
+              "",
+              "3. 해당 지식과 기술을 대부분 습득하여 직무수행에 필요한 지식과 기술을 가지고 대부분의 작업을 수행할 수 있다."
+            ],
+            [
+              "",
+              "2. 해당 지식과 기술을 부분적으로 습득하여 직무수행에 필요한 지식과 기술을 가지고 타인과 공동으로 작업을 수행할 수 있다."
+            ]
+          ]
+        }
+      ],
+      "feedback": "All Ready는 출산 준비물을 예쁘고 실용적인 캐리어에 담아 바로 병원이나 산후조리원으로 이동할 수 있게 한다는 콘셉트가 명확하고, 워킹맘 증가와 시성비·편리미엄, 골드키즈·텐포켓 현상을 시장 가능성과 잘 연결한 점이 좋았습니다. 특히 여러 페르소나를 통해 정보 검색의 번거로움, 중복 배송비, 성분 불안, 무거운 짐, 예쁜 패키징에 대한 니즈를 구체적으로 정리한 점이 인상적입니다. 또한 출산 캐리어에서 끝나는 것이 아니라 백일, 이유식, 여행 키트로 이어지는 릴레이 매출 전략을 제안한 점도 브랜드 확장 가능성을 보여줍니다. 다만 경쟁사별 디자인 특징과 장단점, 캐리어 패키지의 색상·소재·라벨링·구성품 배치 등 조형적 디자인 분석은 조금 더 보완이 필요합니다. 주 사용자와 부 사용자를 우선순위에 따라 구분하고, 1차 출시 제품과 이후 확장 제품을 단계별로 정리하면 결과물의 완성도가 더 높아질 것입니다. 고생하셨습니다^^",
+      "checked_at": "2026-10-29T02:30:00.697Z"
+    }
+  ],
+  "checked_at": "2026-10-29T02:28:48.498Z"
+}

@@ -1,0 +1,2486 @@
+{
+  "reference": {
+    "path": "국비\\능력단위평가\\구현\\최종 결과 산출물\\모나미_구현_정답.zip",
+    "bytes": 19900382,
+    "sha256": "8bbf1d05dca16abfdda367f9bf104e980a390a9655e81eac7a6dda7b3737fda7",
+    "bad_member": null,
+    "members": [
+      {
+        "name": "모나미_구현_정답/00_읽는순서.txt",
+        "bytes": 2457
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-01_상단/index.html",
+        "bytes": 3730
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-01_상단/style.css",
+        "bytes": 5175
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-02_비주얼/index.html",
+        "bytes": 1489
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-02_비주얼/style.css",
+        "bytes": 2897
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-03_신제품/index.html",
+        "bytes": 2390
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-03_신제품/style.css",
+        "bytes": 3209
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-04_인기상품/index.html",
+        "bytes": 6425
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-04_인기상품/style.css",
+        "bytes": 4006
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-05_영상영역/index.html",
+        "bytes": 1209
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-05_영상영역/style.css",
+        "bytes": 2432
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-06_하단정보/index.html",
+        "bytes": 2963
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-06_하단정보/style.css",
+        "bytes": 4452
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-07_푸터/index.html",
+        "bytes": 1979
+      },
+      {
+        "name": "모나미_구현_정답/01_섹션별/MON-07_푸터/style.css",
+        "bytes": 3711
+      },
+      {
+        "name": "모나미_구현_정답/02_전체통합/index.html",
+        "bytes": 17611
+      },
+      {
+        "name": "모나미_구현_정답/02_전체통합/style.css",
+        "bytes": 12442
+      },
+      {
+        "name": "모나미_구현_정답/02_전체통합/전체코드.html",
+        "bytes": 30039
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/CSS_읽기_안내.txt",
+        "bytes": 2722
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-01_개별.png",
+        "bytes": 20208
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-01_통합.png",
+        "bytes": 20208
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-02_개별.png",
+        "bytes": 942997
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-02_통합.png",
+        "bytes": 942996
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-03_개별.png",
+        "bytes": 395043
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-03_통합.png",
+        "bytes": 395043
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-04_개별.png",
+        "bytes": 139711
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-04_통합.png",
+        "bytes": 139711
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-05_개별.png",
+        "bytes": 1509612
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-05_통합.png",
+        "bytes": 1509612
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-06_개별.png",
+        "bytes": 399464
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-06_통합.png",
+        "bytes": 399454
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-07_개별.png",
+        "bytes": 28323
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/MON-07_통합.png",
+        "bytes": 28323
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/브라우저_중간확인_CSSOM_로컬파일.json",
+        "bytes": 4975
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/브라우저_확인결과.json",
+        "bytes": 5120
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/원사이트_기준화면.png",
+        "bytes": 1981343
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/전체통합_1440.png",
+        "bytes": 2750964
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/전체통합_1920.png",
+        "bytes": 3443630
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/정적_확인결과.json",
+        "bytes": 3131
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/검토/주석_보강_확인결과.json",
+        "bytes": 456
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/구현범위_및_미구현기능.txt",
+        "bytes": 3913
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/글꼴_출처.json",
+        "bytes": 829
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/브라우저_확인결과.txt",
+        "bytes": 2510
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/섹션_통합_안내.txt",
+        "bytes": 2334
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/원본코드_대응.json",
+        "bytes": 3476
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/원본코드_대응표.txt",
+        "bytes": 6729
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/이미지_출처.json",
+        "bytes": 8124
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/참고원본/HTML기초_index.html.txt",
+        "bytes": 386
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/참고원본/HTML기초_style.css.txt",
+        "bytes": 376
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/참고원본/마켓컬리_index.html.txt",
+        "bytes": 5843
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/참고원본/마켓컬리_style.css.txt",
+        "bytes": 5202
+      },
+      {
+        "name": "모나미_구현_정답/03_설명자료/협업_전달_안내.txt",
+        "bytes": 4312
+      },
+      {
+        "name": "모나미_구현_정답/font/Pretendard-Bold.woff2",
+        "bytes": 791156
+      },
+      {
+        "name": "모나미_구현_정답/font/Pretendard-Medium.woff2",
+        "bytes": 778432
+      },
+      {
+        "name": "모나미_구현_정답/font/Pretendard-Regular.woff2",
+        "bytes": 765892
+      },
+      {
+        "name": "모나미_구현_정답/image/arrow-left.gif",
+        "bytes": 1172
+      },
+      {
+        "name": "모나미_구현_정답/image/arrow-right.gif",
+        "bytes": 1172
+      },
+      {
+        "name": "모나미_구현_정답/image/best-01.jpg",
+        "bytes": 20561
+      },
+      {
+        "name": "모나미_구현_정답/image/best-02.jpg",
+        "bytes": 25462
+      },
+      {
+        "name": "모나미_구현_정답/image/best-03.jpg",
+        "bytes": 29601
+      },
+      {
+        "name": "모나미_구현_정답/image/best-04.jpg",
+        "bytes": 13542
+      },
+      {
+        "name": "모나미_구현_정답/image/best-05.jpg",
+        "bytes": 12475
+      },
+      {
+        "name": "모나미_구현_정답/image/best-06.jpg",
+        "bytes": 20400
+      },
+      {
+        "name": "모나미_구현_정답/image/best-07.jpg",
+        "bytes": 13010
+      },
+      {
+        "name": "모나미_구현_정답/image/best-08.jpg",
+        "bytes": 15777
+      },
+      {
+        "name": "모나미_구현_정답/image/best-09.jpg",
+        "bytes": 16134
+      },
+      {
+        "name": "모나미_구현_정답/image/best-10.jpg",
+        "bytes": 14441
+      },
+      {
+        "name": "모나미_구현_정답/image/best-11.jpg",
+        "bytes": 12294
+      },
+      {
+        "name": "모나미_구현_정답/image/facebook.gif",
+        "bytes": 1372
+      },
+      {
+        "name": "모나미_구현_정답/image/footer-logo.jpg",
+        "bytes": 2424
+      },
+      {
+        "name": "모나미_구현_정답/image/hero.jpg",
+        "bytes": 219987
+      },
+      {
+        "name": "모나미_구현_정답/image/inquiry-bg.jpg",
+        "bytes": 52707
+      },
+      {
+        "name": "모나미_구현_정답/image/inquiry-icon.png",
+        "bytes": 1740
+      },
+      {
+        "name": "모나미_구현_정답/image/instagram.gif",
+        "bytes": 1583
+      },
+      {
+        "name": "모나미_구현_정답/image/logo.jpg",
+        "bytes": 3578
+      },
+      {
+        "name": "모나미_구현_정답/image/new-01.jpg",
+        "bytes": 32065
+      },
+      {
+        "name": "모나미_구현_정답/image/new-02.jpg",
+        "bytes": 48792
+      },
+      {
+        "name": "모나미_구현_정답/image/new-03.jpg",
+        "bytes": 31651
+      },
+      {
+        "name": "모나미_구현_정답/image/new-04.jpg",
+        "bytes": 57015
+      },
+      {
+        "name": "모나미_구현_정답/image/new-05.jpg",
+        "bytes": 31964
+      },
+      {
+        "name": "모나미_구현_정답/image/news.png",
+        "bytes": 1645105
+      },
+      {
+        "name": "모나미_구현_정답/image/scroll-cursor.gif",
+        "bytes": 1715
+      },
+      {
+        "name": "모나미_구현_정답/image/search.gif",
+        "bytes": 1429
+      },
+      {
+        "name": "모나미_구현_정답/image/shop-bg.png",
+        "bytes": 2602
+      },
+      {
+        "name": "모나미_구현_정답/image/shop-icon.png",
+        "bytes": 1949
+      },
+      {
+        "name": "모나미_구현_정답/image/video-poster.jpg",
+        "bytes": 317910
+      },
+      {
+        "name": "모나미_구현_정답/image/youtube.png",
+        "bytes": 799
+      }
+    ]
+  },
+  "student": {
+    "path": "국비\\능력단위평가\\구현\\채점 자료\\강애란\\원본\\1792725272_45ad1b41.zip",
+    "bytes": 13974426,
+    "sha256": "3b2617cad257e08558d1e082bd622cb74f626006e986c6687e85354091705142",
+    "bad_member": null,
+    "members": [
+      {
+        "name": ".git/config",
+        "bytes": 165
+      },
+      {
+        "name": ".git/description",
+        "bytes": 73
+      },
+      {
+        "name": ".git/HEAD",
+        "bytes": 21
+      },
+      {
+        "name": ".git/hooks/applypatch-msg.sample",
+        "bytes": 478
+      },
+      {
+        "name": ".git/hooks/commit-msg.sample",
+        "bytes": 896
+      },
+      {
+        "name": ".git/hooks/fsmonitor-watchman.sample",
+        "bytes": 4726
+      },
+      {
+        "name": ".git/hooks/post-update.sample",
+        "bytes": 189
+      },
+      {
+        "name": ".git/hooks/pre-applypatch.sample",
+        "bytes": 424
+      },
+      {
+        "name": ".git/hooks/pre-commit.sample",
+        "bytes": 1649
+      },
+      {
+        "name": ".git/hooks/pre-merge-commit.sample",
+        "bytes": 416
+      },
+      {
+        "name": ".git/hooks/pre-push.sample",
+        "bytes": 1374
+      },
+      {
+        "name": ".git/hooks/pre-rebase.sample",
+        "bytes": 4898
+      },
+      {
+        "name": ".git/hooks/pre-receive.sample",
+        "bytes": 544
+      },
+      {
+        "name": ".git/hooks/prepare-commit-msg.sample",
+        "bytes": 1492
+      },
+      {
+        "name": ".git/hooks/push-to-checkout.sample",
+        "bytes": 2783
+      },
+      {
+        "name": ".git/hooks/sendemail-validate.sample",
+        "bytes": 2308
+      },
+      {
+        "name": ".git/hooks/update.sample",
+        "bytes": 3650
+      },
+      {
+        "name": ".git/index",
+        "bytes": 145
+      },
+      {
+        "name": ".git/info/exclude",
+        "bytes": 240
+      },
+      {
+        "name": ".git/objects/6f/9509c88bed7080d496fc5e1d87a9315e30549d",
+        "bytes": 59
+      },
+      {
+        "name": ".git/objects/df/e0770424b2a19faf507a501ebfc23be8f54e7b",
+        "bytes": 76
+      },
+      {
+        "name": ".gitattributes",
+        "bytes": 66
+      },
+      {
+        "name": "janjan_archive/.git/COMMIT_EDITMSG",
+        "bytes": 32
+      },
+      {
+        "name": "janjan_archive/.git/config",
+        "bytes": 404
+      },
+      {
+        "name": "janjan_archive/.git/description",
+        "bytes": 73
+      },
+      {
+        "name": "janjan_archive/.git/FETCH_HEAD",
+        "bytes": 109
+      },
+      {
+        "name": "janjan_archive/.git/HEAD",
+        "bytes": 21
+      },
+      {
+        "name": "janjan_archive/.git/hooks/applypatch-msg.sample",
+        "bytes": 478
+      },
+      {
+        "name": "janjan_archive/.git/hooks/commit-msg.sample",
+        "bytes": 896
+      },
+      {
+        "name": "janjan_archive/.git/hooks/fsmonitor-watchman.sample",
+        "bytes": 4726
+      },
+      {
+        "name": "janjan_archive/.git/hooks/post-update.sample",
+        "bytes": 189
+      },
+      {
+        "name": "janjan_archive/.git/hooks/pre-applypatch.sample",
+        "bytes": 424
+      },
+      {
+        "name": "janjan_archive/.git/hooks/pre-commit.sample",
+        "bytes": 1649
+      },
+      {
+        "name": "janjan_archive/.git/hooks/pre-merge-commit.sample",
+        "bytes": 416
+      },
+      {
+        "name": "janjan_archive/.git/hooks/pre-push.sample",
+        "bytes": 1374
+      },
+      {
+        "name": "janjan_archive/.git/hooks/pre-rebase.sample",
+        "bytes": 4898
+      },
+      {
+        "name": "janjan_archive/.git/hooks/pre-receive.sample",
+        "bytes": 544
+      },
+      {
+        "name": "janjan_archive/.git/hooks/prepare-commit-msg.sample",
+        "bytes": 1492
+      },
+      {
+        "name": "janjan_archive/.git/hooks/push-to-checkout.sample",
+        "bytes": 2783
+      },
+      {
+        "name": "janjan_archive/.git/hooks/sendemail-validate.sample",
+        "bytes": 2308
+      },
+      {
+        "name": "janjan_archive/.git/hooks/update.sample",
+        "bytes": 3650
+      },
+      {
+        "name": "janjan_archive/.git/index",
+        "bytes": 1864
+      },
+      {
+        "name": "janjan_archive/.git/info/exclude",
+        "bytes": 240
+      },
+      {
+        "name": "janjan_archive/.git/logs/HEAD",
+        "bytes": 547
+      },
+      {
+        "name": "janjan_archive/.git/logs/refs/heads/main",
+        "bytes": 547
+      },
+      {
+        "name": "janjan_archive/.git/logs/refs/remotes/origin/HEAD",
+        "bytes": 906
+      },
+      {
+        "name": "janjan_archive/.git/logs/refs/remotes/origin/main",
+        "bytes": 150
+      },
+      {
+        "name": "janjan_archive/.git/objects/0f/7670b2c21c543d5081342b837efa8a532bcb00",
+        "bytes": 628036
+      },
+      {
+        "name": "janjan_archive/.git/objects/11/178003d70e14e2bf5699e5e5e19c29a2d2a6cc",
+        "bytes": 82367
+      },
+      {
+        "name": "janjan_archive/.git/objects/14/6546f12ead9128e24385e4007f9909c0a54194",
+        "bytes": 5277
+      },
+      {
+        "name": "janjan_archive/.git/objects/17/16d65f6a5322d2c4927c96a84c74e562fa3f62",
+        "bytes": 235
+      },
+      {
+        "name": "janjan_archive/.git/objects/1a/be9f591a423db1460bd9ecefe8731c35b0791e",
+        "bytes": 3517
+      },
+      {
+        "name": "janjan_archive/.git/objects/1b/3f1bc438d662aa7a3bbf52dbe43a654078b7bb",
+        "bytes": 191
+      },
+      {
+        "name": "janjan_archive/.git/objects/26/5ecd90daed2e0f2d85b3ff4c3168f54cd3510e",
+        "bytes": 422
+      },
+      {
+        "name": "janjan_archive/.git/objects/30/a6e1a8f6c3a6e12f32fe48a2f9fe76677164fb",
+        "bytes": 190
+      },
+      {
+        "name": "janjan_archive/.git/objects/31/95c07408d2452c3669b629a1d52b660d4d06c2",
+        "bytes": 234
+      },
+      {
+        "name": "janjan_archive/.git/objects/39/7f5a99b8afc13540c81a43fcc08f0c086019e0",
+        "bytes": 4004
+      },
+      {
+        "name": "janjan_archive/.git/objects/3a/ff973d27506589423265c412c8c100c69cad95",
+        "bytes": 239
+      },
+      {
+        "name": "janjan_archive/.git/objects/3e/f6807c59523176e5e266c026617be86ece7875",
+        "bytes": 691074
+      },
+      {
+        "name": "janjan_archive/.git/objects/4c/b4440d33dbe82b3f4ba6a4bd114a6f0fcc9415",
+        "bytes": 182
+      },
+      {
+        "name": "janjan_archive/.git/objects/53/28f6c66c0a78bd223434064fa520b553742dac",
+        "bytes": 135714
+      },
+      {
+        "name": "janjan_archive/.git/objects/54/991f990ebddfc3279db478f89b8fb39e886da6",
+        "bytes": 156
+      },
+      {
+        "name": "janjan_archive/.git/objects/55/b28ddc512a7ba25fa15a3ca372e5b5cf70205b",
+        "bytes": 106
+      },
+      {
+        "name": "janjan_archive/.git/objects/60/bcf400ebbf5ac5e4733a29ce87d2a3903ac593",
+        "bytes": 148
+      },
+      {
+        "name": "janjan_archive/.git/objects/61/c55a29677aed02abc5c5b0de972ee9a2563188",
+        "bytes": 59545
+      },
+      {
+        "name": "janjan_archive/.git/objects/63/ece5305d96dcc37a4e8879426170eed42527c9",
+        "bytes": 57
+      },
+      {
+        "name": "janjan_archive/.git/objects/65/7124c8f547f03327cc0e026e6e652fa108c42d",
+        "bytes": 4360
+      },
+      {
+        "name": "janjan_archive/.git/objects/6c/413c27bade1350cc485c5ad14997b1fcab391d",
+        "bytes": 1090865
+      },
+      {
+        "name": "janjan_archive/.git/objects/74/5a27ffff562e951447f7edee431678ab8e6856",
+        "bytes": 125
+      },
+      {
+        "name": "janjan_archive/.git/objects/79/87e76e7eed33408ef6e1b22827565d148e45ed",
+        "bytes": 3479
+      },
+      {
+        "name": "janjan_archive/.git/objects/7b/4e40177c155963f1a8c8237f487766a083dc40",
+        "bytes": 230
+      },
+      {
+        "name": "janjan_archive/.git/objects/7c/2b63ffed18fd550818eff07ec2171f943a9294",
+        "bytes": 4416
+      },
+      {
+        "name": "janjan_archive/.git/objects/8b/c372730f38d196dc29e4f9dff412cebfe899a3",
+        "bytes": 138
+      },
+      {
+        "name": "janjan_archive/.git/objects/97/35f93a84486a5f91d48488c839b6009e5dd8a3",
+        "bytes": 289
+      },
+      {
+        "name": "janjan_archive/.git/objects/9c/5fd1e9c1c5dcae1d57f80857f052e262b56448",
+        "bytes": 4452
+      },
+      {
+        "name": "janjan_archive/.git/objects/aa/a866d5ddf1609dd4d3b83a3939db7290fcc954",
+        "bytes": 486
+      },
+      {
+        "name": "janjan_archive/.git/objects/ad/09f842595200204c75f5169d2e861f0fd23120",
+        "bytes": 140
+      },
+      {
+        "name": "janjan_archive/.git/objects/b1/0ff50241c6dec570c3192e16e6b62353f3676a",
+        "bytes": 232
+      },
+      {
+        "name": "janjan_archive/.git/objects/bb/412c9704a79acca07f256be9cffedbf1a105ed",
+        "bytes": 1061843
+      },
+      {
+        "name": "janjan_archive/.git/objects/bf/7bfa7e662469f64cc7d8e0d71778f3aebac911",
+        "bytes": 142
+      },
+      {
+        "name": "janjan_archive/.git/objects/c8/24e05712b00501462dd21721a910062093014a",
+        "bytes": 4397
+      },
+      {
+        "name": "janjan_archive/.git/objects/c9/fb19218bc6c03286f36066a6db8f4aef31f330",
+        "bytes": 211
+      },
+      {
+        "name": "janjan_archive/.git/objects/de/2d3b412304193812a66239a86dc54663528f50",
+        "bytes": 3326
+      },
+      {
+        "name": "janjan_archive/.git/objects/e5/0144386af2933ce167da0f5f96dc3f4100c259",
+        "bytes": 3852
+      },
+      {
+        "name": "janjan_archive/.git/objects/e5/28039dc41dc79489bef28e32379df35577ce54",
+        "bytes": 1250
+      },
+      {
+        "name": "janjan_archive/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 15
+      },
+      {
+        "name": "janjan_archive/.git/objects/f3/710de1a6c5d38c182286ea5fa8076760d78261",
+        "bytes": 2286
+      },
+      {
+        "name": "janjan_archive/.git/objects/f5/96144aa89a0edff570d27950a21195a6cd649e",
+        "bytes": 472
+      },
+      {
+        "name": "janjan_archive/.git/objects/fe/c1a494515b08efcd4e30db3156142903e7f20c",
+        "bytes": 4392
+      },
+      {
+        "name": "janjan_archive/.git/objects/pack/pack-f3aeb7b17b56fd41a7ec0a21f3f815ffcb58f301.idx",
+        "bytes": 1156
+      },
+      {
+        "name": "janjan_archive/.git/objects/pack/pack-f3aeb7b17b56fd41a7ec0a21f3f815ffcb58f301.pack",
+        "bytes": 882
+      },
+      {
+        "name": "janjan_archive/.git/objects/pack/pack-f3aeb7b17b56fd41a7ec0a21f3f815ffcb58f301.rev",
+        "bytes": 64
+      },
+      {
+        "name": "janjan_archive/.git/packed-refs",
+        "bytes": 112
+      },
+      {
+        "name": "janjan_archive/.git/refs/heads/main",
+        "bytes": 41
+      },
+      {
+        "name": "janjan_archive/.git/refs/remotes/origin/HEAD",
+        "bytes": 30
+      },
+      {
+        "name": "janjan_archive/.git/refs/remotes/origin/main",
+        "bytes": 41
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/20262026030440990910754158.png",
+        "bytes": 719093
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/console-2026-10-22T04-27-53-875Z.log",
+        "bytes": 1112
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/console-2026-10-22T04-35-26-339Z.log",
+        "bytes": 1112
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/console-2026-10-22T04-36-29-640Z.log",
+        "bytes": 1112
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/console-2026-10-22T04-38-59-016Z.log",
+        "bytes": 1112
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/page-2026-10-22T04-27-54-444Z.yml",
+        "bytes": 19515
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/page-2026-10-22T04-34-31-346Z.png",
+        "bytes": 1092039
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/page-2026-10-22T04-34-46-884Z.yml",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/page-2026-10-22T04-35-27-367Z.yml",
+        "bytes": 19500
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/page-2026-10-22T04-36-31-308Z.yml",
+        "bytes": 19538
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/page-2026-10-22T04-36-58-518Z.png",
+        "bytes": 1121843
+      },
+      {
+        "name": "janjan_archive/.playwright-mcp/page-2026-10-22T04-38-59-566Z.yml",
+        "bytes": 19598
+      },
+      {
+        "name": "janjan_archive/agents.md",
+        "bytes": 189
+      },
+      {
+        "name": "janjan_archive/docs/design-reference-lime.md",
+        "bytes": 6518
+      },
+      {
+        "name": "janjan_archive/docs/lime-reference.png",
+        "bytes": 639974
+      },
+      {
+        "name": "janjan_archive/docs/reference-links-dashboard.md",
+        "bytes": 2224
+      },
+      {
+        "name": "janjan_sbs/.git/COMMIT_EDITMSG",
+        "bytes": 34
+      },
+      {
+        "name": "janjan_sbs/.git/config",
+        "bytes": 400
+      },
+      {
+        "name": "janjan_sbs/.git/description",
+        "bytes": 73
+      },
+      {
+        "name": "janjan_sbs/.git/FETCH_HEAD",
+        "bytes": 105
+      },
+      {
+        "name": "janjan_sbs/.git/HEAD",
+        "bytes": 21
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/applypatch-msg.sample",
+        "bytes": 478
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/commit-msg.sample",
+        "bytes": 896
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/fsmonitor-watchman.sample",
+        "bytes": 4726
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/post-update.sample",
+        "bytes": 189
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/pre-applypatch.sample",
+        "bytes": 424
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/pre-commit.sample",
+        "bytes": 1649
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/pre-merge-commit.sample",
+        "bytes": 416
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/pre-push.sample",
+        "bytes": 1374
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/pre-rebase.sample",
+        "bytes": 4898
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/pre-receive.sample",
+        "bytes": 544
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/prepare-commit-msg.sample",
+        "bytes": 1492
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/push-to-checkout.sample",
+        "bytes": 2783
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/sendemail-validate.sample",
+        "bytes": 2308
+      },
+      {
+        "name": "janjan_sbs/.git/hooks/update.sample",
+        "bytes": 3650
+      },
+      {
+        "name": "janjan_sbs/.git/index",
+        "bytes": 10462
+      },
+      {
+        "name": "janjan_sbs/.git/info/exclude",
+        "bytes": 240
+      },
+      {
+        "name": "janjan_sbs/.git/logs/HEAD",
+        "bytes": 1660
+      },
+      {
+        "name": "janjan_sbs/.git/logs/refs/heads/main",
+        "bytes": 1660
+      },
+      {
+        "name": "janjan_sbs/.git/logs/refs/remotes/origin/HEAD",
+        "bytes": 4257
+      },
+      {
+        "name": "janjan_sbs/.git/logs/refs/remotes/origin/main",
+        "bytes": 1350
+      },
+      {
+        "name": "janjan_sbs/.git/objects/00/3714541948810c9a9e28b55e4c8679eda20ccf",
+        "bytes": 57445
+      },
+      {
+        "name": "janjan_sbs/.git/objects/03/825dbe687f1049d35f81ea4652979fe8da0b1b",
+        "bytes": 193
+      },
+      {
+        "name": "janjan_sbs/.git/objects/06/1d2075b7a5c3b4b3ffa8886eb7fb924d0b36c7",
+        "bytes": 167
+      },
+      {
+        "name": "janjan_sbs/.git/objects/08/56476522bfc8fd51f5e0a9fc80b8d665087145",
+        "bytes": 861
+      },
+      {
+        "name": "janjan_sbs/.git/objects/0c/f7351e7717e63765ecd372a442e9b35eee5912",
+        "bytes": 152
+      },
+      {
+        "name": "janjan_sbs/.git/objects/0e/9266b0fdc584739eecefa902899803f4ae4f74",
+        "bytes": 62
+      },
+      {
+        "name": "janjan_sbs/.git/objects/10/2f8ddb8a5afd00e1510e85116ac6728de29911",
+        "bytes": 119
+      },
+      {
+        "name": "janjan_sbs/.git/objects/10/f2795f5569d0dae32dc5c4cf28356f6ee1dffa",
+        "bytes": 80
+      },
+      {
+        "name": "janjan_sbs/.git/objects/11/ee019bdfb214438d8f661c5f713cb38b7d1b19",
+        "bytes": 1568
+      },
+      {
+        "name": "janjan_sbs/.git/objects/13/6edb4f87f2f9804bce0a7d6ffbf274bcd1cde7",
+        "bytes": 230
+      },
+      {
+        "name": "janjan_sbs/.git/objects/16/36ed1a74933fc45d3b2c8c17a57d0afe5e553f",
+        "bytes": 599
+      },
+      {
+        "name": "janjan_sbs/.git/objects/16/c2be55f1edf537e12e1dc7758cda232448c621",
+        "bytes": 88
+      },
+      {
+        "name": "janjan_sbs/.git/objects/17/bd21b6a94c2b64494dc373f60116fa91e5dcfe",
+        "bytes": 239
+      },
+      {
+        "name": "janjan_sbs/.git/objects/18/c937c1decc72965f78b8db412ccbd955ed7558",
+        "bytes": 55
+      },
+      {
+        "name": "janjan_sbs/.git/objects/1a/5d3fa810f5fb6a8f8790d61397d9ca5334f5ce",
+        "bytes": 62
+      },
+      {
+        "name": "janjan_sbs/.git/objects/1b/78b996eff2f287742e4c55b1b0ff6bcdd04fb4",
+        "bytes": 43669
+      },
+      {
+        "name": "janjan_sbs/.git/objects/1e/84ea6962ffdec55be76aee6047e708fcec706c",
+        "bytes": 42393
+      },
+      {
+        "name": "janjan_sbs/.git/objects/2b/da90290f597949c731898d3e1cf57e265f8a03",
+        "bytes": 53
+      },
+      {
+        "name": "janjan_sbs/.git/objects/2d/2bd27491f89cbd4039bb8b17f925473641a31e",
+        "bytes": 860
+      },
+      {
+        "name": "janjan_sbs/.git/objects/30/1ff360ff465ade56b1a8c83ffa1904303e694b",
+        "bytes": 62
+      },
+      {
+        "name": "janjan_sbs/.git/objects/30/900b685c301e3d75034a636e66a027503307b6",
+        "bytes": 17969
+      },
+      {
+        "name": "janjan_sbs/.git/objects/31/d66603e61b0f0cfbe90dd55e2ea875a9cd3357",
+        "bytes": 860
+      },
+      {
+        "name": "janjan_sbs/.git/objects/34/dc491a4ea9680fbbd88676a1d73aa22643f5ad",
+        "bytes": 56
+      },
+      {
+        "name": "janjan_sbs/.git/objects/35/2382afb707f405b5fea7c187a46beb08525144",
+        "bytes": 4740
+      },
+      {
+        "name": "janjan_sbs/.git/objects/37/bcea85129e05ebf3e4968ff70c1dd8695690a6",
+        "bytes": 43265
+      },
+      {
+        "name": "janjan_sbs/.git/objects/38/073dc6ca3c2e0aead7de17af4304eb01dbecaa",
+        "bytes": 189
+      },
+      {
+        "name": "janjan_sbs/.git/objects/38/817463bd3105e71a644faf4f97587a16a2917a",
+        "bytes": 127
+      },
+      {
+        "name": "janjan_sbs/.git/objects/3a/be8043ff3b3d6ea9c1d14b6877cb22eed6ea9d",
+        "bytes": 862
+      },
+      {
+        "name": "janjan_sbs/.git/objects/3b/61c2b97c00cf2bbbfb664f40b05cc9cffa7906",
+        "bytes": 1339
+      },
+      {
+        "name": "janjan_sbs/.git/objects/3b/f97dcd21e3d54977ed58e45fc4a6b17c204d4c",
+        "bytes": 59
+      },
+      {
+        "name": "janjan_sbs/.git/objects/3d/de6fe4f57da6115670eb9e3d1f7968081fb83d",
+        "bytes": 53
+      },
+      {
+        "name": "janjan_sbs/.git/objects/44/0178d96941e733173ee3cb798bf849616b9c42",
+        "bytes": 137
+      },
+      {
+        "name": "janjan_sbs/.git/objects/45/09e0f671b80fd78f5e27414131b33ab069da56",
+        "bytes": 31745
+      },
+      {
+        "name": "janjan_sbs/.git/objects/47/6e208008552309ba777f63049e12ccb6de25f2",
+        "bytes": 136
+      },
+      {
+        "name": "janjan_sbs/.git/objects/48/7086e7fbdc1574713d53fe69fa3ba643b4bd8b",
+        "bytes": 38201
+      },
+      {
+        "name": "janjan_sbs/.git/objects/4d/eb63935028c2a4e6e4c8d2a7b7c3b142a9bdaa",
+        "bytes": 159
+      },
+      {
+        "name": "janjan_sbs/.git/objects/4f/cf7f5c00809340a12900264d07fc220dc010d4",
+        "bytes": 13999
+      },
+      {
+        "name": "janjan_sbs/.git/objects/4f/db57dbc2003f2eb343693e332d27caa0015361",
+        "bytes": 181
+      },
+      {
+        "name": "janjan_sbs/.git/objects/51/c34c868842d5770ddd1754d4b809bb5b50ad24",
+        "bytes": 111
+      },
+      {
+        "name": "janjan_sbs/.git/objects/54/6077f92708a3c892496a0f9a5c673dacbb3cbc",
+        "bytes": 62
+      },
+      {
+        "name": "janjan_sbs/.git/objects/56/125fa84b27cffc6c453c852548082c502cc568",
+        "bytes": 1228
+      },
+      {
+        "name": "janjan_sbs/.git/objects/56/5c4f414d57a24c79ac7a6f2fb692725ebfef1f",
+        "bytes": 2040
+      },
+      {
+        "name": "janjan_sbs/.git/objects/57/7b0db9739fe8635ff4dc8d0d4e80ab2a890b2f",
+        "bytes": 432
+      },
+      {
+        "name": "janjan_sbs/.git/objects/57/e5e4973afa0906f88e77fd977a1ae1fc8cd22b",
+        "bytes": 50147
+      },
+      {
+        "name": "janjan_sbs/.git/objects/58/df2434d3aa1e6e27509df0f8ee79c17aa7caf6",
+        "bytes": 359
+      },
+      {
+        "name": "janjan_sbs/.git/objects/5b/5e5a395156960c2fe36da475cfbd65de9229b5",
+        "bytes": 168
+      },
+      {
+        "name": "janjan_sbs/.git/objects/5d/98e8fc7fba83efc4989083b301c767649780ba",
+        "bytes": 602
+      },
+      {
+        "name": "janjan_sbs/.git/objects/5e/923350f814ac65a88de6bb0ec51bc96b000d32",
+        "bytes": 1813
+      },
+      {
+        "name": "janjan_sbs/.git/objects/61/5405d82071597b55124de7d1593562779708a2",
+        "bytes": 1417
+      },
+      {
+        "name": "janjan_sbs/.git/objects/61/56856d29730adecb3e724949abfd63f0dc19fb",
+        "bytes": 90
+      },
+      {
+        "name": "janjan_sbs/.git/objects/61/788fb397defc53a24e831b44a121ac1f967fd3",
+        "bytes": 62
+      },
+      {
+        "name": "janjan_sbs/.git/objects/61/af6280a692b222b904bad922e0b90aafa0cb2b",
+        "bytes": 29185
+      },
+      {
+        "name": "janjan_sbs/.git/objects/67/9bc3738160275e3d42b715b31253a573f3dbed",
+        "bytes": 56
+      },
+      {
+        "name": "janjan_sbs/.git/objects/69/29fe2f8f56c3f1f6ef330c1fab84aece16ebdf",
+        "bytes": 156
+      },
+      {
+        "name": "janjan_sbs/.git/objects/6a/0e85fc22ce51ad06315fd4807ce9c1e380eff2",
+        "bytes": 401
+      },
+      {
+        "name": "janjan_sbs/.git/objects/6b/fee537287297559b0529cf21c8bf41f5221fa3",
+        "bytes": 88
+      },
+      {
+        "name": "janjan_sbs/.git/objects/6e/03559235f9c959f2813e167b15a4e48e00951f",
+        "bytes": 243
+      },
+      {
+        "name": "janjan_sbs/.git/objects/6e/c8df77f3727176034ffc4430196953044996f3",
+        "bytes": 533
+      },
+      {
+        "name": "janjan_sbs/.git/objects/72/7ee9b5c8dc7a4469a975568c052aa3e74bdc56",
+        "bytes": 75
+      },
+      {
+        "name": "janjan_sbs/.git/objects/74/27cfbacd0403c81ba5f294eab7ea9a9e08ffc5",
+        "bytes": 42443
+      },
+      {
+        "name": "janjan_sbs/.git/objects/74/6e6e036bcbacf0188bdda33da50c9e9782a35a",
+        "bytes": 1336
+      },
+      {
+        "name": "janjan_sbs/.git/objects/75/a8e41207d783219f4bd461f3f3f957049cb928",
+        "bytes": 653
+      },
+      {
+        "name": "janjan_sbs/.git/objects/79/b624ad7fd5a4abe0d84b363df8dfe363f1dcfd",
+        "bytes": 60829
+      },
+      {
+        "name": "janjan_sbs/.git/objects/7d/31a3a31259637654fa0ddb7ba999b886f4cf7f",
+        "bytes": 129
+      },
+      {
+        "name": "janjan_sbs/.git/objects/83/dafadedf13bd80fce678e92e20f5a34ebf3f7b",
+        "bytes": 126
+      },
+      {
+        "name": "janjan_sbs/.git/objects/84/07303d3c1443056c854d2051dac131227d112a",
+        "bytes": 31828
+      },
+      {
+        "name": "janjan_sbs/.git/objects/87/6b904115faad7dbe795f8ee130ea7bc2764caa",
+        "bytes": 125
+      },
+      {
+        "name": "janjan_sbs/.git/objects/88/5e006b5a676450fb7b816919f24ece9bec376f",
+        "bytes": 88
+      },
+      {
+        "name": "janjan_sbs/.git/objects/89/0f893aec6bc70402a21227356681c16852b636",
+        "bytes": 166
+      },
+      {
+        "name": "janjan_sbs/.git/objects/8a/bc888935670843949af6acda07dcf0ef76ebe1",
+        "bytes": 37965
+      },
+      {
+        "name": "janjan_sbs/.git/objects/8a/caa3713c70541669aad547d82828ced544de28",
+        "bytes": 410
+      },
+      {
+        "name": "janjan_sbs/.git/objects/8b/8525d905134feebb50cd393ecfe0190eba13a0",
+        "bytes": 30252
+      },
+      {
+        "name": "janjan_sbs/.git/objects/8c/1e84adc398660f9e45b201be564d5c0d935ba3",
+        "bytes": 728
+      },
+      {
+        "name": "janjan_sbs/.git/objects/8d/7d3e76d453aceab384030d11991a70345b9889",
+        "bytes": 129
+      },
+      {
+        "name": "janjan_sbs/.git/objects/8d/7f177fe80f296f3f9f91d212f50cc4260803e2",
+        "bytes": 861
+      },
+      {
+        "name": "janjan_sbs/.git/objects/90/a20a7d324eb9c609b2432258c382e57b99eff1",
+        "bytes": 1324
+      },
+      {
+        "name": "janjan_sbs/.git/objects/90/da78484281ee328391fb4b8bc5ff9708f73edf",
+        "bytes": 53
+      },
+      {
+        "name": "janjan_sbs/.git/objects/92/d0a83f3fa82eb2702d5db0fa428ebc128a805e",
+        "bytes": 550
+      },
+      {
+        "name": "janjan_sbs/.git/objects/93/49cd225fd2e1b346bff8a7dfc46d16b0fc8d6d",
+        "bytes": 185
+      },
+      {
+        "name": "janjan_sbs/.git/objects/93/b0e346e651d762d9f7025221104bef629bf208",
+        "bytes": 76083
+      },
+      {
+        "name": "janjan_sbs/.git/objects/94/657e485f35bdd7222ce0c35fb6388715ecbbe5",
+        "bytes": 1227
+      },
+      {
+        "name": "janjan_sbs/.git/objects/95/692b5867cd389df9183640930d7c95f03d5607",
+        "bytes": 563
+      },
+      {
+        "name": "janjan_sbs/.git/objects/97/2792c028301941b5ecfe1e21bad1998fc1d9ed",
+        "bytes": 125
+      },
+      {
+        "name": "janjan_sbs/.git/objects/98/ca71de8dc6f425d53505cea3655fa951d5e49c",
+        "bytes": 193
+      },
+      {
+        "name": "janjan_sbs/.git/objects/9c/8c46087cfc7d33c23370c8b820e76b69ccc3ea",
+        "bytes": 62
+      },
+      {
+        "name": "janjan_sbs/.git/objects/9e/c558dae4e422786a23850e32ca27307fb77600",
+        "bytes": 14029
+      },
+      {
+        "name": "janjan_sbs/.git/objects/a1/aaa9ca1c9f3d53c0eaf5417ae873ff76b18c11",
+        "bytes": 1587
+      },
+      {
+        "name": "janjan_sbs/.git/objects/a3/024f873edc97bc8884fb21808f7a0ba8d51f50",
+        "bytes": 910
+      },
+      {
+        "name": "janjan_sbs/.git/objects/a3/66431c329ecdbd70c05512b1adea4aac233221",
+        "bytes": 1042
+      },
+      {
+        "name": "janjan_sbs/.git/objects/a4/4bbb1b7890593a7e07836945d878d588af4742",
+        "bytes": 208
+      },
+      {
+        "name": "janjan_sbs/.git/objects/a4/d4d0689d428e8cbe84c6a0d1149c3cbb46f40b",
+        "bytes": 1219
+      },
+      {
+        "name": "janjan_sbs/.git/objects/a5/13722ca78a9ab3651f24e6e0fa050116c9a107",
+        "bytes": 166
+      },
+      {
+        "name": "janjan_sbs/.git/objects/a7/2761357f1b5e472640f9644dcf38c4a224a1ee",
+        "bytes": 1760
+      },
+      {
+        "name": "janjan_sbs/.git/objects/b3/55f43af311aa77db3d09ebfdb8f10eb6d21910",
+        "bytes": 33162
+      },
+      {
+        "name": "janjan_sbs/.git/objects/be/02b269691aa6f046bc4a937d75b49b27b5f9b2",
+        "bytes": 585
+      },
+      {
+        "name": "janjan_sbs/.git/objects/be/175924aab0b6c0e34988cec0b5110325cfebe3",
+        "bytes": 119
+      },
+      {
+        "name": "janjan_sbs/.git/objects/c0/00f8b3ee75465c53a1e89ff116b8968ae2026e",
+        "bytes": 832
+      },
+      {
+        "name": "janjan_sbs/.git/objects/c1/4b3705f90cbad1a4937da9587ad62e598935f7",
+        "bytes": 125
+      },
+      {
+        "name": "janjan_sbs/.git/objects/c3/2c067f4fbcf4e65194d8dac6cfa1201582ff10",
+        "bytes": 6254
+      },
+      {
+        "name": "janjan_sbs/.git/objects/c3/9df79c86374adeaf1c0da3c9d74d342abedc76",
+        "bytes": 582
+      },
+      {
+        "name": "janjan_sbs/.git/objects/c6/d5f2bee741d2b442014a004659eddd69b357f1",
+        "bytes": 23485
+      },
+      {
+        "name": "janjan_sbs/.git/objects/c7/ed39f1e040b5da843bb76bc9ebc97ac2f20c62",
+        "bytes": 167
+      },
+      {
+        "name": "janjan_sbs/.git/objects/c9/5357bcbc80a1fb056bd464993e97563e1c2f9f",
+        "bytes": 258
+      },
+      {
+        "name": "janjan_sbs/.git/objects/ca/67b087a88ea9995b9dea73df866a9d160efb4e",
+        "bytes": 195
+      },
+      {
+        "name": "janjan_sbs/.git/objects/ca/f127cf6a63560eaa7efad1065e3a5ec884e45e",
+        "bytes": 90
+      },
+      {
+        "name": "janjan_sbs/.git/objects/ce/5c1f36dce9ad8112c75dabfe1c43be6b967405",
+        "bytes": 39952
+      },
+      {
+        "name": "janjan_sbs/.git/objects/ce/7474dc31366a887565931b8952df769ac63640",
+        "bytes": 330
+      },
+      {
+        "name": "janjan_sbs/.git/objects/ce/a4873c5c7f13b1392e7651139f9680721237ef",
+        "bytes": 864
+      },
+      {
+        "name": "janjan_sbs/.git/objects/d0/91f778fbc1a444c556070b5630bbec47b77168",
+        "bytes": 722
+      },
+      {
+        "name": "janjan_sbs/.git/objects/d3/47a3f9a64d2c9dc156caa2f60d785dc8b82927",
+        "bytes": 119
+      },
+      {
+        "name": "janjan_sbs/.git/objects/d7/26eea9587583776c9715740a4159aea10529d3",
+        "bytes": 35668
+      },
+      {
+        "name": "janjan_sbs/.git/objects/d9/d654110da849f7b2d69088c95633bd321fa4b9",
+        "bytes": 56
+      },
+      {
+        "name": "janjan_sbs/.git/objects/da/8437b5da66bb98635fd23ac17a4e1de9f864ae",
+        "bytes": 166
+      },
+      {
+        "name": "janjan_sbs/.git/objects/da/ac0f16f060a1846eb30e5c028b4b9d5a5c9618",
+        "bytes": 310
+      },
+      {
+        "name": "janjan_sbs/.git/objects/df/b6dd02f6aed65aa43c15c13fcd6ad196b8b135",
+        "bytes": 42382
+      },
+      {
+        "name": "janjan_sbs/.git/objects/e2/27a32a3f8344c7aec61de5bf58dd1babe5e57f",
+        "bytes": 166
+      },
+      {
+        "name": "janjan_sbs/.git/objects/e4/1aa8fb17aac5c4a92d2e73e99dd82f12612ce9",
+        "bytes": 14019
+      },
+      {
+        "name": "janjan_sbs/.git/objects/e5/f6a2f70f84297cc8cf21539007b1f938fc89c0",
+        "bytes": 62
+      },
+      {
+        "name": "janjan_sbs/.git/objects/e6/2da8090f09836f4d2bdfd803970b915ccc5d5e",
+        "bytes": 169
+      },
+      {
+        "name": "janjan_sbs/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 15
+      },
+      {
+        "name": "janjan_sbs/.git/objects/eb/1c93b7bf74664c4af5f166979a46626206ed6b",
+        "bytes": 18015
+      },
+      {
+        "name": "janjan_sbs/.git/objects/ed/73e484ad4e39675fdc7334108dfd3bdfbba87b",
+        "bytes": 823
+      },
+      {
+        "name": "janjan_sbs/.git/objects/ee/60789ec6a2cddaf8c0638bac7c04fa6c46805d",
+        "bytes": 37439
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f0/99bf5edf8df10939fd5f84f7f2c1ec54109e6e",
+        "bytes": 207
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f1/49d96a44cb9c7846f96724f5c533792339e531",
+        "bytes": 4673
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f1/5bdde67bb2b20e4aeb810e2fae91f77b8a3436",
+        "bytes": 425
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f1/7d528024724744885f31b58f9be7c88f4b1931",
+        "bytes": 259
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f2/a764306d0538779e8b5d4d752837681e538a33",
+        "bytes": 1337
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f2/d36cb136227ea8b00b54cff9a9d179705e9055",
+        "bytes": 188
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f3/9a6a842c13440bcd2742f2411b240dc2ccde9c",
+        "bytes": 35969
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f4/32674cfbee8740095389024d0a75ba909bece2",
+        "bytes": 159
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f4/91647b5d705e3935c90258ea9082b1cbe975b4",
+        "bytes": 125
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f7/6633065bdf8acbe801cdbe48d6b357654794cd",
+        "bytes": 37631
+      },
+      {
+        "name": "janjan_sbs/.git/objects/f9/43a91d414ac2fea9dcbaa99c3804cab0d8cd28",
+        "bytes": 88
+      },
+      {
+        "name": "janjan_sbs/.git/objects/fc/976b59ae16bcc8fa2e056c224dd5205ae1b246",
+        "bytes": 120
+      },
+      {
+        "name": "janjan_sbs/.git/objects/fd/b14e11aa0327d39b0bd481e842db36e80ce98b",
+        "bytes": 1578
+      },
+      {
+        "name": "janjan_sbs/.git/objects/fe/ce9ea39662184d12bf8019f59611d15d5769da",
+        "bytes": 32479
+      },
+      {
+        "name": "janjan_sbs/.git/objects/pack/pack-46c476b68bc29ee562e36451930b9255ae2d59bb.idx",
+        "bytes": 1156
+      },
+      {
+        "name": "janjan_sbs/.git/objects/pack/pack-46c476b68bc29ee562e36451930b9255ae2d59bb.pack",
+        "bytes": 876
+      },
+      {
+        "name": "janjan_sbs/.git/objects/pack/pack-46c476b68bc29ee562e36451930b9255ae2d59bb.rev",
+        "bytes": 64
+      },
+      {
+        "name": "janjan_sbs/.git/packed-refs",
+        "bytes": 112
+      },
+      {
+        "name": "janjan_sbs/.git/refs/heads/main",
+        "bytes": 41
+      },
+      {
+        "name": "janjan_sbs/.git/refs/remotes/origin/HEAD",
+        "bytes": 30
+      },
+      {
+        "name": "janjan_sbs/.git/refs/remotes/origin/main",
+        "bytes": 41
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-19T01-58-02-649Z.log",
+        "bytes": 4333
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-19T04-27-00-323Z.log",
+        "bytes": 5486
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-19T04-31-42-597Z.log",
+        "bytes": 5258
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T00-11-10-418Z.log",
+        "bytes": 5489
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T00-28-14-056Z.log",
+        "bytes": 5489
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T00-31-08-973Z.log",
+        "bytes": 5489
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T00-50-15-244Z.log",
+        "bytes": 5917
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T03-32-34-785Z.log",
+        "bytes": 928
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T03-38-12-364Z.log",
+        "bytes": 4333
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T03-43-24-556Z.log",
+        "bytes": 4333
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T04-15-59-757Z.log",
+        "bytes": 4454
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T04-16-14-987Z.log",
+        "bytes": 3226
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-20T23-58-31-259Z.log",
+        "bytes": 5265
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-21T00-03-15-414Z.log",
+        "bytes": 4333
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-21T00-12-57-775Z.log",
+        "bytes": 301
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-21T00-33-55-140Z.log",
+        "bytes": 5268
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-21T00-36-00-167Z.log",
+        "bytes": 3001
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-21T01-24-38-784Z.log",
+        "bytes": 4333
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-21T01-27-01-997Z.log",
+        "bytes": 139
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/console-2026-10-21T01-33-20-147Z.log",
+        "bytes": 4333
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-19T04-31-42-627Z.yml",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-20T00-11-10-451Z.yml",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-20T00-31-09-010Z.yml",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-20T00-50-15-284Z.yml",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-20T03-32-34-819Z.yml",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-20T03-38-13-323Z.yml",
+        "bytes": 90455
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-20T03-43-25-512Z.yml",
+        "bytes": 90840
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-20T23-58-31-290Z.yml",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-21T00-03-16-337Z.yml",
+        "bytes": 67876
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-21T00-16-14-043Z.yml",
+        "bytes": 21586
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-21T00-16-49-116Z.yml",
+        "bytes": 28725
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-21T00-33-55-181Z.yml",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-21T01-24-39-627Z.yml",
+        "bytes": 67892
+      },
+      {
+        "name": "janjan_sbs/.playwright-mcp/page-2026-10-21T01-33-20-983Z.yml",
+        "bytes": 67892
+      },
+      {
+        "name": "janjan_sbs/1코딩/HTML기초/index.html",
+        "bytes": 422
+      },
+      {
+        "name": "janjan_sbs/1코딩/HTML기초/style.css",
+        "bytes": 442
+      },
+      {
+        "name": "janjan_sbs/1코딩/HTML기초/에이전트/windget.md",
+        "bytes": 614
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/banner/banner01.jpg",
+        "bytes": 61501
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/banner/banner02.jpg",
+        "bytes": 79050
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/banner/banner03.jpg",
+        "bytes": 59720
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/icon/cart.svg",
+        "bytes": 549
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/icon/location.svg",
+        "bytes": 1354
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/icon/wishlist.svg",
+        "bytes": 553
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/logo/kurly-logo.svg",
+        "bytes": 3395
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/01-5029850.jpg",
+        "bytes": 29241
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/02-5162187.jpg",
+        "bytes": 31757
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/03-5031442.jpg",
+        "bytes": 32509
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/04-1000750847.jpg",
+        "bytes": 38207
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/05-1000185200.jpg",
+        "bytes": 43688
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/06-1000743035.jpg",
+        "bytes": 42420
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/07-5063578.jpg",
+        "bytes": 37972
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/08-1001931649.jpg",
+        "bytes": 43275
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/09-1001391829.jpg",
+        "bytes": 42411
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/10-5114853.jpg",
+        "bytes": 35719
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/11-1001935431.jpg",
+        "bytes": 31844
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/12-1000433115.jpg",
+        "bytes": 33165
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/13-5059395.jpg",
+        "bytes": 42580
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/14-5090273.jpg",
+        "bytes": 30295
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/15-1000930043.jpg",
+        "bytes": 39988
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/16-5069067.jpg",
+        "bytes": 36020
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/17-1000765126.jpg",
+        "bytes": 37646
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/18-5132780.jpg",
+        "bytes": 23506
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/19-1000956905.jpg",
+        "bytes": 37476
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/20-1000969096.jpg",
+        "bytes": 50150
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/image/product/products.csv",
+        "bytes": 4787
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/index.html",
+        "bytes": 5852
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/style.css",
+        "bytes": 5200
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/설정값 기록",
+        "bytes": 2889
+      },
+      {
+        "name": "janjan_sbs/1코딩/마켓컬리/와이어프레임/와이어프레임.zip",
+        "bytes": 5429
+      },
+      {
+        "name": "janjan_sbs/1코딩/재구현/마켓컬리/와이어프레임/image/icon/cart.svg",
+        "bytes": 549
+      },
+      {
+        "name": "janjan_sbs/1코딩/재구현/마켓컬리/와이어프레임/image/icon/location.svg",
+        "bytes": 1354
+      },
+      {
+        "name": "janjan_sbs/1코딩/재구현/마켓컬리/와이어프레임/image/icon/wishlist.svg",
+        "bytes": 553
+      },
+      {
+        "name": "janjan_sbs/1코딩/재구현/마켓컬리/와이어프레임/image/logo/kurly-logo.svg",
+        "bytes": 3395
+      },
+      {
+        "name": "janjan_sbs/1코딩/재구현/마켓컬리/와이어프레임/index.html",
+        "bytes": 1179
+      },
+      {
+        "name": "janjan_sbs/1코딩/재구현/마켓컬리/와이어프레임/memo.md",
+        "bytes": 1553
+      },
+      {
+        "name": "janjan_sbs/1코딩/재구현/마켓컬리/와이어프레임/style.css",
+        "bytes": 3355
+      },
+      {
+        "name": "janjan_sbs/README.md",
+        "bytes": 12
+      },
+      {
+        "name": "janjan_sbs/에이전트/codex.md",
+        "bytes": 190
+      },
+      {
+        "name": "janjan_sbs/에이전트/windget.md",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_sbs/에이전트/기초세팅.mb",
+        "bytes": 349
+      },
+      {
+        "name": "janjan_study/.git/COMMIT_EDITMSG",
+        "bytes": 28
+      },
+      {
+        "name": "janjan_study/.git/config",
+        "bytes": 402
+      },
+      {
+        "name": "janjan_study/.git/description",
+        "bytes": 73
+      },
+      {
+        "name": "janjan_study/.git/FETCH_HEAD",
+        "bytes": 107
+      },
+      {
+        "name": "janjan_study/.git/HEAD",
+        "bytes": 21
+      },
+      {
+        "name": "janjan_study/.git/hooks/applypatch-msg.sample",
+        "bytes": 478
+      },
+      {
+        "name": "janjan_study/.git/hooks/commit-msg.sample",
+        "bytes": 896
+      },
+      {
+        "name": "janjan_study/.git/hooks/fsmonitor-watchman.sample",
+        "bytes": 4726
+      },
+      {
+        "name": "janjan_study/.git/hooks/post-update.sample",
+        "bytes": 189
+      },
+      {
+        "name": "janjan_study/.git/hooks/pre-applypatch.sample",
+        "bytes": 424
+      },
+      {
+        "name": "janjan_study/.git/hooks/pre-commit.sample",
+        "bytes": 1649
+      },
+      {
+        "name": "janjan_study/.git/hooks/pre-merge-commit.sample",
+        "bytes": 416
+      },
+      {
+        "name": "janjan_study/.git/hooks/pre-push.sample",
+        "bytes": 1374
+      },
+      {
+        "name": "janjan_study/.git/hooks/pre-rebase.sample",
+        "bytes": 4898
+      },
+      {
+        "name": "janjan_study/.git/hooks/pre-receive.sample",
+        "bytes": 544
+      },
+      {
+        "name": "janjan_study/.git/hooks/prepare-commit-msg.sample",
+        "bytes": 1492
+      },
+      {
+        "name": "janjan_study/.git/hooks/push-to-checkout.sample",
+        "bytes": 2783
+      },
+      {
+        "name": "janjan_study/.git/hooks/sendemail-validate.sample",
+        "bytes": 2308
+      },
+      {
+        "name": "janjan_study/.git/hooks/update.sample",
+        "bytes": 3650
+      },
+      {
+        "name": "janjan_study/.git/index",
+        "bytes": 1998
+      },
+      {
+        "name": "janjan_study/.git/info/exclude",
+        "bytes": 240
+      },
+      {
+        "name": "janjan_study/.git/logs/HEAD",
+        "bytes": 370
+      },
+      {
+        "name": "janjan_study/.git/logs/refs/heads/main",
+        "bytes": 370
+      },
+      {
+        "name": "janjan_study/.git/logs/refs/remotes/origin/HEAD",
+        "bytes": 763
+      },
+      {
+        "name": "janjan_study/.git/logs/refs/remotes/origin/main",
+        "bytes": 365
+      },
+      {
+        "name": "janjan_study/.git/objects/0f/37d3210c40970cd67a20a22001c92f46f3da8f",
+        "bytes": 191
+      },
+      {
+        "name": "janjan_study/.git/objects/12/8d87e1dc3b4df21140d3fdaf18163bbf34ff38",
+        "bytes": 481
+      },
+      {
+        "name": "janjan_study/.git/objects/25/abb9d30181ce07e424420b6612d352d14f2e04",
+        "bytes": 263
+      },
+      {
+        "name": "janjan_study/.git/objects/29/d2257f2b64bd10a207d7f6a1a94c476ec6218e",
+        "bytes": 4029
+      },
+      {
+        "name": "janjan_study/.git/objects/47/c94910fb4573f4f58aeec5e0095a1643038b05",
+        "bytes": 225
+      },
+      {
+        "name": "janjan_study/.git/objects/50/4023e5f8f79c6db0bfee68abddfdf3c3964989",
+        "bytes": 174
+      },
+      {
+        "name": "janjan_study/.git/objects/53/42907c5b37a0d1c3b36c30d363dc6d5e1e31d6",
+        "bytes": 336
+      },
+      {
+        "name": "janjan_study/.git/objects/57/0c37bf2575a2d6fd780bb4dbf2d578d706fdda",
+        "bytes": 175
+      },
+      {
+        "name": "janjan_study/.git/objects/5b/1c31e0e2df3f39ce142e26fe5be1660f936c15",
+        "bytes": 819
+      },
+      {
+        "name": "janjan_study/.git/objects/68/6b8dafa36b4ed3a8d701feeaddb2f112573aa2",
+        "bytes": 145
+      },
+      {
+        "name": "janjan_study/.git/objects/70/6073a1b23620dd36bcf0106089d27302d42684",
+        "bytes": 149
+      },
+      {
+        "name": "janjan_study/.git/objects/78/ba42ae72fed3013bba6fd5055a13c9172d140a",
+        "bytes": 1100
+      },
+      {
+        "name": "janjan_study/.git/objects/86/e6774d3a3a849cfa079de121bf9685593d856c",
+        "bytes": 160
+      },
+      {
+        "name": "janjan_study/.git/objects/98/93e5250015c98208ab6582127244c575c906c3",
+        "bytes": 1268
+      },
+      {
+        "name": "janjan_study/.git/objects/ad/8b45249bf620b657111e89fd407e25052a0e0c",
+        "bytes": 128
+      },
+      {
+        "name": "janjan_study/.git/objects/bd/233d1962f16276f17404836fe9d01c85fc2a75",
+        "bytes": 190
+      },
+      {
+        "name": "janjan_study/.git/objects/dc/5814405968603221ff41ec94a0d60b79930a36",
+        "bytes": 120
+      },
+      {
+        "name": "janjan_study/.git/objects/e4/0a9db3535e4486768ad3162e93466467bc0344",
+        "bytes": 88
+      },
+      {
+        "name": "janjan_study/.git/objects/ea/98802fa38b11037826d334fbc8d93a56ccc0ae",
+        "bytes": 45
+      },
+      {
+        "name": "janjan_study/.git/objects/fc/d26682cdb042a4075373d36e22b6ef8dc06280",
+        "bytes": 127
+      },
+      {
+        "name": "janjan_study/.git/objects/pack/pack-97c259efd4229b0b7a58eeaad624968a48a03078.idx",
+        "bytes": 1828
+      },
+      {
+        "name": "janjan_study/.git/objects/pack/pack-97c259efd4229b0b7a58eeaad624968a48a03078.pack",
+        "bytes": 7195
+      },
+      {
+        "name": "janjan_study/.git/objects/pack/pack-97c259efd4229b0b7a58eeaad624968a48a03078.rev",
+        "bytes": 160
+      },
+      {
+        "name": "janjan_study/.git/packed-refs",
+        "bytes": 112
+      },
+      {
+        "name": "janjan_study/.git/refs/heads/main",
+        "bytes": 41
+      },
+      {
+        "name": "janjan_study/.git/refs/remotes/origin/HEAD",
+        "bytes": 30
+      },
+      {
+        "name": "janjan_study/.git/refs/remotes/origin/main",
+        "bytes": 41
+      },
+      {
+        "name": "janjan_study/.playwright-mcp/console-2026-10-19T15-34-22-068Z.log",
+        "bytes": 12255
+      },
+      {
+        "name": "janjan_study/.playwright-mcp/console-2026-10-21T03-31-03-520Z.log",
+        "bytes": 137
+      },
+      {
+        "name": "janjan_study/.playwright-mcp/page-2026-10-19T15-34-22-128Z.yml",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_study/.playwright-mcp/page-2026-10-21T03-31-05-953Z.yml",
+        "bytes": 15025
+      },
+      {
+        "name": "janjan_study/1코딩/GitHub.md",
+        "bytes": 715
+      },
+      {
+        "name": "janjan_study/1코딩/마켓컬리와이어프레임/index.html",
+        "bytes": 703
+      },
+      {
+        "name": "janjan_study/1코딩/마켓컬리와이어프레임/style.css",
+        "bytes": 2540
+      },
+      {
+        "name": "janjan_study/1코딩/에이전트/codex.md",
+        "bytes": 182
+      },
+      {
+        "name": "janjan_study/1코딩/에이전트/winget.md",
+        "bytes": 619
+      },
+      {
+        "name": "janjan_study/1코딩/에이전트/기초세팅.md",
+        "bytes": 273
+      },
+      {
+        "name": "janjan_study/README.md",
+        "bytes": 104
+      },
+      {
+        "name": "janjan_study/모나미구현연습/image/sns/sns_facebook.gif",
+        "bytes": 1372
+      },
+      {
+        "name": "janjan_study/모나미구현연습/image/sns/sns_insta.gif",
+        "bytes": 1583
+      },
+      {
+        "name": "janjan_study/모나미구현연습/image/sns/sns_youtube.png",
+        "bytes": 799
+      },
+      {
+        "name": "janjan_study/모나미구현연습/index.html",
+        "bytes": 786
+      },
+      {
+        "name": "janjan_study/모나미구현연습/style.css",
+        "bytes": 591
+      },
+      {
+        "name": "janjan_test/.git/config",
+        "bytes": 368
+      },
+      {
+        "name": "janjan_test/.git/description",
+        "bytes": 73
+      },
+      {
+        "name": "janjan_test/.git/FETCH_HEAD",
+        "bytes": 0
+      },
+      {
+        "name": "janjan_test/.git/HEAD",
+        "bytes": 21
+      },
+      {
+        "name": "janjan_test/.git/hooks/applypatch-msg.sample",
+        "bytes": 478
+      },
+      {
+        "name": "janjan_test/.git/hooks/commit-msg.sample",
+        "bytes": 896
+      },
+      {
+        "name": "janjan_test/.git/hooks/fsmonitor-watchman.sample",
+        "bytes": 4726
+      },
+      {
+        "name": "janjan_test/.git/hooks/post-update.sample",
+        "bytes": 189
+      },
+      {
+        "name": "janjan_test/.git/hooks/pre-applypatch.sample",
+        "bytes": 424
+      },
+      {
+        "name": "janjan_test/.git/hooks/pre-commit.sample",
+        "bytes": 1649
+      },
+      {
+        "name": "janjan_test/.git/hooks/pre-merge-commit.sample",
+        "bytes": 416
+      },
+      {
+        "name": "janjan_test/.git/hooks/pre-push.sample",
+        "bytes": 1374
+      },
+      {
+        "name": "janjan_test/.git/hooks/pre-rebase.sample",
+        "bytes": 4898
+      },
+      {
+        "name": "janjan_test/.git/hooks/pre-receive.sample",
+        "bytes": 544
+      },
+      {
+        "name": "janjan_test/.git/hooks/prepare-commit-msg.sample",
+        "bytes": 1492
+      },
+      {
+        "name": "janjan_test/.git/hooks/push-to-checkout.sample",
+        "bytes": 2783
+      },
+      {
+        "name": "janjan_test/.git/hooks/sendemail-validate.sample",
+        "bytes": 2308
+      },
+      {
+        "name": "janjan_test/.git/hooks/update.sample",
+        "bytes": 3650
+      },
+      {
+        "name": "janjan_test/.git/info/exclude",
+        "bytes": 240
+      },
+      {
+        "name": "janjan_test/.vscode/settings.json",
+        "bytes": 42
+      },
+      {
+        "name": "janjan_test/index.html",
+        "bytes": 420
+      },
+      {
+        "name": "janjan_test/style.css",
+        "bytes": 90
+      },
+      {
+        "name": "monani_20261023/.git/COMMIT_EDITMSG",
+        "bytes": 16
+      },
+      {
+        "name": "monani_20261023/.git/config",
+        "bytes": 405
+      },
+      {
+        "name": "monani_20261023/.git/description",
+        "bytes": 73
+      },
+      {
+        "name": "monani_20261023/.git/FETCH_HEAD",
+        "bytes": 110
+      },
+      {
+        "name": "monani_20261023/.git/HEAD",
+        "bytes": 21
+      },
+      {
+        "name": "monani_20261023/.git/hooks/applypatch-msg.sample",
+        "bytes": 478
+      },
+      {
+        "name": "monani_20261023/.git/hooks/commit-msg.sample",
+        "bytes": 896
+      },
+      {
+        "name": "monani_20261023/.git/hooks/fsmonitor-watchman.sample",
+        "bytes": 4726
+      },
+      {
+        "name": "monani_20261023/.git/hooks/post-update.sample",
+        "bytes": 189
+      },
+      {
+        "name": "monani_20261023/.git/hooks/pre-applypatch.sample",
+        "bytes": 424
+      },
+      {
+        "name": "monani_20261023/.git/hooks/pre-commit.sample",
+        "bytes": 1649
+      },
+      {
+        "name": "monani_20261023/.git/hooks/pre-merge-commit.sample",
+        "bytes": 416
+      },
+      {
+        "name": "monani_20261023/.git/hooks/pre-push.sample",
+        "bytes": 1374
+      },
+      {
+        "name": "monani_20261023/.git/hooks/pre-rebase.sample",
+        "bytes": 4898
+      },
+      {
+        "name": "monani_20261023/.git/hooks/pre-receive.sample",
+        "bytes": 544
+      },
+      {
+        "name": "monani_20261023/.git/hooks/prepare-commit-msg.sample",
+        "bytes": 1492
+      },
+      {
+        "name": "monani_20261023/.git/hooks/push-to-checkout.sample",
+        "bytes": 2783
+      },
+      {
+        "name": "monani_20261023/.git/hooks/sendemail-validate.sample",
+        "bytes": 2308
+      },
+      {
+        "name": "monani_20261023/.git/hooks/update.sample",
+        "bytes": 3650
+      },
+      {
+        "name": "monani_20261023/.git/index",
+        "bytes": 2081
+      },
+      {
+        "name": "monani_20261023/.git/info/exclude",
+        "bytes": 240
+      },
+      {
+        "name": "monani_20261023/.git/logs/HEAD",
+        "bytes": 361
+      },
+      {
+        "name": "monani_20261023/.git/logs/refs/heads/main",
+        "bytes": 361
+      },
+      {
+        "name": "monani_20261023/.git/logs/refs/remotes/origin/HEAD",
+        "bytes": 1189
+      },
+      {
+        "name": "monani_20261023/.git/logs/refs/remotes/origin/main",
+        "bytes": 150
+      },
+      {
+        "name": "monani_20261023/.git/objects/02/a5d1a71055d8fc9857da37df7dc794975dd669",
+        "bytes": 1036
+      },
+      {
+        "name": "monani_20261023/.git/objects/06/254c4b7c9299f8592483f715195d3066747d20",
+        "bytes": 170
+      },
+      {
+        "name": "monani_20261023/.git/objects/12/01917e104b9fec80479e9e445e572003a1ae79",
+        "bytes": 119
+      },
+      {
+        "name": "monani_20261023/.git/objects/19/da23c4f5aa41f51c2235fc8bd5f5e09260815b",
+        "bytes": 3057
+      },
+      {
+        "name": "monani_20261023/.git/objects/1c/99054b181d4df0e66885283238469b7ebab3b9",
+        "bytes": 1395
+      },
+      {
+        "name": "monani_20261023/.git/objects/1c/f38c49273aaa6e1907dd83cee36d13537e5134",
+        "bytes": 1467
+      },
+      {
+        "name": "monani_20261023/.git/objects/41/446a0363e380cda307e71ea94ee20fe476d25e",
+        "bytes": 1645624
+      },
+      {
+        "name": "monani_20261023/.git/objects/48/bb0b773180925825b8ef6d5435c6dee12b7ccd",
+        "bytes": 31024
+      },
+      {
+        "name": "monani_20261023/.git/objects/4d/d88b534f0677ee9a2ea30c3fe67f0ce74104b3",
+        "bytes": 45117
+      },
+      {
+        "name": "monani_20261023/.git/objects/4f/6d2567f274ad6b49e5fb071416d4ad78a6cfb3",
+        "bytes": 216843
+      },
+      {
+        "name": "monani_20261023/.git/objects/54/dba8700a1ea9a3ed1b527ba34fb9f8ee651d4f",
+        "bytes": 31077
+      },
+      {
+        "name": "monani_20261023/.git/objects/5b/1c31e0e2df3f39ce142e26fe5be1660f936c15",
+        "bytes": 819
+      },
+      {
+        "name": "monani_20261023/.git/objects/5c/12d1dbdf046adfbef6205f0ff93a574e9afedc",
+        "bytes": 864
+      },
+      {
+        "name": "monani_20261023/.git/objects/64/d04471ddc640dcbe307f2db4eb32fa741e658f",
+        "bytes": 1690
+      },
+      {
+        "name": "monani_20261023/.git/objects/78/ba42ae72fed3013bba6fd5055a13c9172d140a",
+        "bytes": 1100
+      },
+      {
+        "name": "monani_20261023/.git/objects/79/1a25b999a1ed4c7b3a48c31e10e1843f1a768b",
+        "bytes": 1066
+      },
+      {
+        "name": "monani_20261023/.git/objects/98/93e5250015c98208ab6582127244c575c906c3",
+        "bytes": 1268
+      },
+      {
+        "name": "monani_20261023/.git/objects/ab/23f0f23138054b1e4fbc276aee3e74dd59daf3",
+        "bytes": 55438
+      },
+      {
+        "name": "monani_20261023/.git/objects/b9/777468ecba2f9466849e92a00e0a4fd0ec0f82",
+        "bytes": 51692
+      },
+      {
+        "name": "monani_20261023/.git/objects/c0/fc9128dcfe001334c08b854dec5f64fe1c846b",
+        "bytes": 30720
+      },
+      {
+        "name": "monani_20261023/.git/objects/d3/7234c173185c19293371c4c6458f0c824fb58f",
+        "bytes": 812
+      },
+      {
+        "name": "monani_20261023/.git/objects/e0/52a647af4641db7e79a1466c964d193903f6aa",
+        "bytes": 855
+      },
+      {
+        "name": "monani_20261023/.git/objects/f2/28600f87222c8d6c03995bca76720d4ea90a80",
+        "bytes": 1594
+      },
+      {
+        "name": "monani_20261023/.git/objects/f8/6766ecd6c2585f8bedb56c700795506401058f",
+        "bytes": 740
+      },
+      {
+        "name": "monani_20261023/.git/objects/ff/89236b2839d55bf97781c4a0c0ff96a596f8d3",
+        "bytes": 1204
+      },
+      {
+        "name": "monani_20261023/.git/objects/pack/pack-edc2a3fb8ae0daf461a116c5c850dbb6a082bf9b.idx",
+        "bytes": 1156
+      },
+      {
+        "name": "monani_20261023/.git/objects/pack/pack-edc2a3fb8ae0daf461a116c5c850dbb6a082bf9b.pack",
+        "bytes": 884
+      },
+      {
+        "name": "monani_20261023/.git/objects/pack/pack-edc2a3fb8ae0daf461a116c5c850dbb6a082bf9b.rev",
+        "bytes": 64
+      },
+      {
+        "name": "monani_20261023/.git/packed-refs",
+        "bytes": 112
+      },
+      {
+        "name": "monani_20261023/.git/refs/heads/main",
+        "bytes": 41
+      },
+      {
+        "name": "monani_20261023/.git/refs/remotes/origin/HEAD",
+        "bytes": 30
+      },
+      {
+        "name": "monani_20261023/.git/refs/remotes/origin/main",
+        "bytes": 41
+      },
+      {
+        "name": "monani_20261023/image/b_file_1768790167lxyus9qzvj.png",
+        "bytes": 1645105
+      },
+      {
+        "name": "monani_20261023/image/brandstore_tit_bg.png",
+        "bytes": 1949
+      },
+      {
+        "name": "monani_20261023/image/btn_search.gif",
+        "bytes": 1429
+      },
+      {
+        "name": "monani_20261023/image/file1_1681087061mb8i5l6zdx.jpg",
+        "bytes": 57015
+      },
+      {
+        "name": "monani_20261023/image/file1_169994521784nzg4whv7.jpg",
+        "bytes": 48792
+      },
+      {
+        "name": "monani_20261023/image/file1_1699945409grwui60w6u.jpg",
+        "bytes": 32065
+      },
+      {
+        "name": "monani_20261023/image/file1_1715318030bhfwnjum09.jpg",
+        "bytes": 31651
+      },
+      {
+        "name": "monani_20261023/image/file1_1715319042z7nuju2l3p.jpg",
+        "bytes": 31964
+      },
+      {
+        "name": "monani_20261023/image/inquiry_bg.jpg",
+        "bytes": 52707
+      },
+      {
+        "name": "monani_20261023/image/inquiry_tit_bg.png",
+        "bytes": 1740
+      },
+      {
+        "name": "monani_20261023/image/lang_arr.gif",
+        "bytes": 1154
+      },
+      {
+        "name": "monani_20261023/image/lang_eng.gif",
+        "bytes": 1361
+      },
+      {
+        "name": "monani_20261023/image/lang_kor.gif",
+        "bytes": 1585
+      },
+      {
+        "name": "monani_20261023/image/logo.jpg",
+        "bytes": 3578
+      },
+      {
+        "name": "monani_20261023/image/shop_bg.png",
+        "bytes": 2602
+      },
+      {
+        "name": "monani_20261023/image/sns_facebook.gif",
+        "bytes": 1372
+      },
+      {
+        "name": "monani_20261023/image/sns_insta.gif",
+        "bytes": 1583
+      },
+      {
+        "name": "monani_20261023/image/sns_youtube.png",
+        "bytes": 799
+      },
+      {
+        "name": "monani_20261023/image/tm_bar.gif",
+        "bytes": 1096
+      },
+      {
+        "name": "monani_20261023/image/visual1.jpg",
+        "bytes": 219987
+      },
+      {
+        "name": "monani_20261023/index.html",
+        "bytes": 5412
+      },
+      {
+        "name": "monani_20261023/style.css",
+        "bytes": 5164
+      }
+    ]
+  }
+}

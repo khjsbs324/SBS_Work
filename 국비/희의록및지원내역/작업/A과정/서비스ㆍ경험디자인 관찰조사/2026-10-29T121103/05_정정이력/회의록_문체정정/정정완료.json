@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=11",
+  "completed_at": "2026-10-29T03:19:40.795461+00:00",
+  "exact_readback": true,
+  "previous_prefix_preserved": true,
+  "date_preserved": true,
+  "reassessment_preserved": true,
+  "visual_reviewed": true,
+  "hashes": {
+    "최종수정안.json": "447d3223f1d68b485b31b7054de5c4e764605b91f7d9c5a8230e98c8fda95d5c",
+    "최종저장확인.json": "179d0a89197672815fe8f49295bc190dfc13997d015e1bc55df3ea4c2424177d",
+    "회의록_수정전.json": "e281fa59ace4c2943b1d6c3d9b0d16b96ccf45c5ff499859cb74a3f999d9c284",
+    "수정후화면.png": "2647e7197bb4df1c13e543a82aa9ef183b37679d14d2fa21dab17e3c907dcf54"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "student": "신윤아",
+  "sourceHashesVerified": true,
+  "browserTwoDesktopWidthsVerified": true,
+  "publicFeedbackReviewed": true,
+  "rawTotal": 89,
+  "registeredTotal": 96,
+  "sumOfSiteIntegerScores": 96,
+  "siteIntegerScores": [
+    12,
+    10,
+    10,
+    11,
+    10,
+    11,
+    11,
+    10,
+    11
+  ],
+  "lmsSaved": true,
+  "studentSourceModified": false,
+  "feedbackCodeProposalsChecked": true,
+  "scoreAndIdentityChecksPassed": true,
+  "strictSubmissionHashesPassed": true,
+  "lmsVerifiedAt": "2026-10-26T04:41:13.132Z",
+  "lmsTotal": 96,
+  "lmsIntegerScoresVerified": true,
+  "lmsFeedbackExactMatch": true,
+  "lmsProofFile": "사이트_등록확인.json"
+}

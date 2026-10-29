@@ -1,0 +1,187 @@
+{
+  "global": {
+    "target_confirmed": {
+      "course_id": "A",
+      "unit": "테스트 단위",
+      "lcode": "6",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "checked_at": "2026-10-29T13:49:56+09:00",
+      "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+      "unit_end_date": "2026-07-03",
+      "screen_confirmed": true,
+      "recorded_at": "2026-10-29T13:49:56+09:00"
+    },
+    "sources_collected": {
+      "course_id": "A",
+      "unit": "테스트 단위",
+      "lcode": "6",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "checked_at": "2026-10-29T13:49:56+09:00",
+      "task_basis": "original",
+      "original_task_full_text_available": true,
+      "task_read": true,
+      "scores_read": true,
+      "feedback_read": true,
+      "meeting_read": true,
+      "source_urls": [
+        "https://example.org/test-fixture"
+      ],
+      "recorded_at": "2026-10-29T13:49:56+09:00"
+    },
+    "meeting_resolved": {
+      "course_id": "A",
+      "unit": "테스트 단위",
+      "lcode": "6",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "checked_at": "2026-10-29T13:49:56+09:00",
+      "mode": "existing",
+      "reason": "isolated test fixture",
+      "meeting_path": "02_회의록/회의록.json",
+      "meeting_sha256": "fb2fc395f6955b2cd702f9dc942857e745d9f2215416bea170d71ead6ae5ff1e",
+      "roster_sha256": "83ef30f7c03a2edccb622c0089ba5c0ff1b7cc2467bf5eace7d440a0b979602e",
+      "review_checks": {
+        "feedback_alignment": true,
+        "group_allocation": true,
+        "teaching_continuity": true,
+        "natural_language": true,
+        "support_alignment": true
+      },
+      "review_notes": "Fixture manual review",
+      "local_reviewed": true,
+      "exclusion_request": "",
+      "exact_readback": true,
+      "readback": {
+        "analysis": "주제\n목적\n결과\nA그룹 : [학생A]\nB그룹 : [학생B]\nC그룹 : [학생C]\n실제 요소 제작하기\n종합 의견\n건의사항",
+        "improvement": "조치사항\nA그룹 : [학생A]\nB그룹 : [학생B]\nC그룹 : [학생C]\n학생 변화\n교수법 개선\n후속 지도",
+        "meeting_date": "2026-10-29",
+        "checked_at": "2026-10-29T13:49:56+09:00",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=6"
+      },
+      "plan_hashes": {
+        "A": "49b885ff31b02b2348ea18b09e4725241773735e3c82170a79230068b2a96b4e",
+        "B": "f4c0af25d9db4e02d6fc2bc7defa9cf97a684fca4fdace87b3140d423a64ae3c",
+        "C": "8011829925da4d0484313ee87dd2ebde7bd726065b2f7705b57ae33e4e3fd286"
+      },
+      "contract_version": 1,
+      "document_snapshot": {
+        "schema_version": 1,
+        "example": false,
+        "unit": "테스트 단위",
+        "actual_date": "2026-10-29",
+        "meeting_date": "2026-10-29",
+        "roster_path": "01_근거자료/평가대상.json",
+        "analysis": "주제\n목적\n결과\nA그룹 : [학생A]\nB그룹 : [학생B]\nC그룹 : [학생C]\n실제 요소 제작하기\n종합 의견\n건의사항",
+        "improvement": "조치사항\nA그룹 : [학생A]\nB그룹 : [학생B]\nC그룹 : [학생C]\n학생 변화\n교수법 개선\n후속 지도",
+        "groups": {
+          "A": {
+            "student_ids": [
+              "A"
+            ],
+            "basis": "Observed basis A",
+            "strengths": "Strength A",
+            "needs": "Need A",
+            "activities": "Activity A",
+            "criteria": "Criterion A"
+          },
+          "B": {
+            "student_ids": [
+              "B"
+            ],
+            "basis": "Observed basis B",
+            "strengths": "Strength B",
+            "needs": "Need B",
+            "activities": "Activity B",
+            "criteria": "Criterion B"
+          },
+          "C": {
+            "student_ids": [
+              "C"
+            ],
+            "basis": "Observed basis C",
+            "strengths": "Strength C",
+            "needs": "Need C",
+            "activities": "Activity C",
+            "criteria": "Criterion C"
+          }
+        },
+        "teaching_link": {
+          "previous_unit": "이전 단위",
+          "next_unit": "다음 단위",
+          "follow_up": "실제 후속 지도"
+        }
+      },
+      "recorded_at": "2026-10-29T13:49:56+09:00"
+    }
+  },
+  "groups": {
+    "A": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "테스트 단위",
+        "lcode": "6",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "checked_at": "2026-10-29T13:49:56+09:00",
+        "group": "A",
+        "post_date": "2026-07-06",
+        "pdf_page_count": 2,
+        "support_plan_sha256": "49b885ff31b02b2348ea18b09e4725241773735e3c82170a79230068b2a96b4e",
+        "plan_alignment_reviewed": true,
+        "plan_alignment_notes": "Fixture needs/activity/criteria review",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "snapshot": {
+          "article.html": "40d062615862dd96c0f3b6c90eeda169aaa0b9871f590d9aef9f82829130a6be",
+          "content.json": "ca59f0b7313e79310dbe76e0f2e2eaf5c2add673f75ec26d349af74235fb4cb8",
+          "guide.html": "1cffad98f6e181336d8b4e5c80f33ac3f833a9928b57c8da34b3562a303c923b",
+          "post.json": "179069bdecd79e66ec8df787aa0800b536060a1df81342edb8d17fc216568e0f",
+          "process.png": "6b1048f8a6d40bac0b2954c18fefa40c4ea7a96120fc2e54b7317c0e43c2bbec",
+          "빈칸양식/01_실습.csv": "9c2c9cddb53209d4ac2440816147abb3f8302b585423282b23cb3ad70c67cd12",
+          "실습양식.docx": "37acac76818c9407032b99ea2b95f087d1ec6821b9346d6c521883986ce3bc0e",
+          "읽는순서.txt": "7e2724a2c971d9470cbcf37964afd9fccad6fe279b19e4051e87d5ac4ee2bde2",
+          "학습자료.pdf": "2303068130ffda02ad5463548e8d5692658347c169b0e105c4e3abba90597290",
+          "학습자료.zip": "053b2135bfa01cc7fbc8544431a8ee240fe831fd8f13d948b91e88b3f75b1aaf"
+        },
+        "recorded_at": "2026-10-29T13:49:56+09:00"
+      }
+    },
+    "B": {},
+    "C": {}
+  },
+  "history": [
+    {
+      "stage": "target_confirmed",
+      "group": null,
+      "recorded_at": "2026-10-29T13:49:56+09:00",
+      "evidence_sha256": "14b0a4dcf6196a039807538e58042ee36ffbdada8c14e144d555ec679aaa8b92"
+    },
+    {
+      "stage": "sources_collected",
+      "group": null,
+      "recorded_at": "2026-10-29T13:49:56+09:00",
+      "evidence_sha256": "87b45169936b8301aa7b9f0c9f52c4ccd3ce440d30e6117361374eca9b109e06"
+    },
+    {
+      "stage": "meeting_resolved",
+      "group": null,
+      "recorded_at": "2026-10-29T13:49:56+09:00",
+      "evidence_sha256": "6d9f7f1bbb9d9264125cdeb7a74a68e2aa878bc7ebc505772671c150c0cb6a29"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "A",
+      "recorded_at": "2026-10-29T13:49:56+09:00",
+      "evidence_sha256": "04bd3a96387cfa04030128e78943af7bc291d3b994d0fe40d9f5c26a161c2968"
+    }
+  ]
+}

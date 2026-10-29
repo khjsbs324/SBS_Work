@@ -1,0 +1,218 @@
+{
+  "checks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "d13151",
+        "wall_time_seconds": 1.8407847,
+        "exit_code": 1,
+        "original_token_count": 95,
+        "output": "{\r\n  \"ok\": false,\r\n  \"summary\": {\r\n    \"instruction_files\": 37,\r\n    \"skills\": [\r\n      \"ncs-exam-production\",\r\n      \"ncs-learning-support\",\r\n      \"ncs-timetable\",\r\n      \"student-interview\"\r\n    ],\r\n    \"custom_agents\": 0,\r\n    \"hooks\": 0\r\n  },\r\n  \"errors\": [\r\n    \"능력단위평가\\\\수정 보완\\\\CLAUDE.md: Missing link/import: 수정 보완\"\r\n  ],\r\n  \"warnings\": []\r\n}\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "253d82",
+        "wall_time_seconds": 1.5207514,
+        "exit_code": 0,
+        "original_token_count": 30,
+        "output": "..............\r\n----------------------------------------------------------------------\r\nRan 14 tests in 0.234s\r\n\r\nOK\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "33cf3e",
+        "wall_time_seconds": 9.7233965,
+        "exit_code": 0,
+        "original_token_count": 32,
+        "output": "........................\r\n----------------------------------------------------------------------\r\nRan 24 tests in 8.410s\r\n\r\nOK\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "d592da",
+        "wall_time_seconds": 1.1227421,
+        "exit_code": 1,
+        "original_token_count": 52,
+        "output": "Traceback (most recent call last):\r\n  File \"C:\\Users\\SBS\\.codex\\skills\\.system\\skill-creator\\scripts\\quick_validate.py\", line 10, in <module>\r\n    import yaml\r\nModuleNotFoundError: No module named 'yaml'\r\n"
+      }
+    }
+  ],
+  "skill_validation": {
+    "ok": true,
+    "environment": "existing .codex-temp/interview-venv",
+    "output": "Skill is valid!",
+    "default_environment_limitation": "Python 3.14 및 기본 Python에는 PyYAML이 없어 기존 가상환경에서 검증함"
+  },
+  "review": {
+    "instructions": "원문 보존·명시적 정정·교수법 연계·재평가·본문과 관리 정보의 구분을 확인함",
+    "templates": "두 양식에 실제 본문 항목과 짧은 자리표시자만 남겼으며 상세 지침은 meeting.md로 이동함"
+  },
+  "live_site_modified": false,
+  "status": "complete",
+  "completed_at": "2026-10-29T03:45:49.737734+00:00",
+  "changed_files": [
+    "희의록및지원내역/AGENTS.md",
+    "희의록및지원내역/README.md",
+    "희의록및지원내역/템플릿/회의록/분석.txt",
+    "희의록및지원내역/템플릿/회의록/개선.txt",
+    "희의록및지원내역/템플릿/회의록/meeting.example.json",
+    ".agents/skills/ncs-learning-support/SKILL.md",
+    ".agents/skills/ncs-learning-support/references/meeting.md",
+    ".agents/skills/ncs-learning-support/references/recovery.md",
+    "희의록및지원내역/스키마/증빙규격.md"
+  ],
+  "runtime_code_unchanged": true,
+  "original_example_keys_retained": true,
+  "document_links_valid": true,
+  "template_review_passed": true,
+  "real_record_examples": [
+    {
+      "unit": "구현",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\구현\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-06-15",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    },
+    {
+      "unit": "구현 응용",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\구현 응용\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-23",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\디자인 구성요소 설계\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-23",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": true
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\디자인 구성요소 제작\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-29",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\디지털디자인 사후관리\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-29",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\서비스ㆍ경험디자인 관찰조사\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-29",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\서비스ㆍ경험디자인 시나리오 개발\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-29",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    },
+    {
+      "unit": "수정 보완",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\수정 보완\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-29",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\스마트문화앱 UI 디자인\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-29",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\시각디자인 리서치 분석\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-06-22",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    },
+    {
+      "unit": "시각디자인 리서치 조사",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\시각디자인 리서치 조사\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-06-08",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": true
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\시안 디자인 개발 심화\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-23",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": true
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "source_receipt": "희의록및지원내역\\작업\\A과정\\프로토타입 기초데이터 수집 및 스케치\\2026-10-29T122159\\05_정정이력\\작성일표시삭제\\저장확인.json",
+      "meeting_date": "2026-10-29",
+      "body_only_fields": [
+        "analysis",
+        "improvement"
+      ],
+      "metadata_separate": true,
+      "reassessment_record_retained": false
+    }
+  ],
+  "scope": "로컬 지침·양식·입력 예시·안내 정리. 기존 회의록 및 작업 상태는 보존."
+}

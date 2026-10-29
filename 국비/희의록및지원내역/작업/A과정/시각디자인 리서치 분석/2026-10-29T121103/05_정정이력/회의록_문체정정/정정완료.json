@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "unit": "시각디자인 리서치 분석",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=5",
+  "completed_at": "2026-10-29T03:19:40.802742+00:00",
+  "exact_readback": true,
+  "previous_prefix_preserved": true,
+  "date_preserved": true,
+  "reassessment_preserved": true,
+  "visual_reviewed": true,
+  "hashes": {
+    "최종수정안.json": "a6310078ef1c3524578fea2d1766689a0afc72da14e91fe11b7eb9d17bd3c16a",
+    "저장확인.json": "3e562fe7dd5ac69bcb9b0c7d3d6dd7d16cfc09fa58e5bdd2654a5ca8057e3256",
+    "회의록_수정전.json": "181348c657a9850eac56d2357a537e1701a06a5264a3aef51a7bd1f5e1e69855",
+    "수정후화면.png": "dde1eb6903c7bfae8b6b469d2cac4bf7ccc425c8ce727f765f076acaab77fc2d"
+  }
+}

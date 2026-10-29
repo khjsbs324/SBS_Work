@@ -1,0 +1,435 @@
+{
+  "date": "2026-10-23",
+  "initial": [
+    {
+      "group": "A",
+      "stage": "01_before",
+      "cards": 4,
+      "overflow": true,
+      "buttons": 0,
+      "descriptions": 3,
+      "images": true
+    },
+    {
+      "group": "A",
+      "stage": "02_after",
+      "cards": 4,
+      "overflow": false,
+      "buttons": 4,
+      "descriptions": 4,
+      "images": true
+    },
+    {
+      "group": "A",
+      "width": 1200,
+      "overflow": false,
+      "cards": 4,
+      "images": true,
+      "display": "flex",
+      "rows": 1
+    },
+    {
+      "group": "A",
+      "width": 768,
+      "overflow": false,
+      "cards": 4,
+      "images": true,
+      "display": "flex",
+      "rows": 2
+    },
+    {
+      "group": "A",
+      "width": 390,
+      "overflow": false,
+      "cards": 4,
+      "images": true,
+      "display": "flex",
+      "rows": 4
+    },
+    {
+      "group": "A",
+      "keyboard": {
+        "tag": "BUTTON",
+        "class": "practice-button",
+        "outline": "3px",
+        "focusVisible": true
+      },
+      "normalErrors": []
+    },
+    {
+      "group": "A",
+      "pdfPages": [
+        {
+          "n": 1,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 2,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 4,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 5,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 6,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 7,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 8,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 9,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 10,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "stage": "01_before",
+      "cards": 4,
+      "overflow": true,
+      "buttons": 0,
+      "descriptions": 3,
+      "images": true
+    },
+    {
+      "group": "B",
+      "stage": "02_after",
+      "cards": 4,
+      "overflow": false,
+      "buttons": 4,
+      "descriptions": 4,
+      "images": true
+    },
+    {
+      "group": "B",
+      "width": 1200,
+      "overflow": false,
+      "cards": 4,
+      "images": true,
+      "display": "flex",
+      "rows": 1
+    },
+    {
+      "group": "B",
+      "width": 768,
+      "overflow": false,
+      "cards": 4,
+      "images": true,
+      "display": "flex",
+      "rows": 2
+    },
+    {
+      "group": "B",
+      "width": 390,
+      "overflow": false,
+      "cards": 4,
+      "images": true,
+      "display": "flex",
+      "rows": 4
+    },
+    {
+      "group": "B",
+      "keyboard": {
+        "tag": "BUTTON",
+        "class": "practice-button",
+        "outline": "3px",
+        "focusVisible": true
+      },
+      "normalErrors": []
+    },
+    {
+      "group": "B",
+      "pdfPages": [
+        {
+          "n": 1,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 2,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 4,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 5,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 6,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 7,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 8,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 9,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 10,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "stage": "02_one_card",
+      "cards": 1,
+      "overflow": false,
+      "buttons": 1,
+      "descriptions": 1,
+      "images": true
+    },
+    {
+      "group": "C",
+      "stage": "04_flex_layout",
+      "cards": 4,
+      "overflow": false,
+      "buttons": 4,
+      "descriptions": 4,
+      "images": true
+    },
+    {
+      "group": "C",
+      "width": 1200,
+      "overflow": false,
+      "cards": 4,
+      "images": true,
+      "display": "flex",
+      "rows": 1
+    },
+    {
+      "group": "C",
+      "width": 768,
+      "overflow": false,
+      "cards": 4,
+      "images": true,
+      "display": "flex",
+      "rows": 2
+    },
+    {
+      "group": "C",
+      "width": 390,
+      "overflow": false,
+      "cards": 4,
+      "images": true,
+      "display": "flex",
+      "rows": 4
+    },
+    {
+      "group": "C",
+      "keyboard": {
+        "tag": "BUTTON",
+        "class": "practice-button",
+        "outline": "3px",
+        "focusVisible": true
+      },
+      "normalErrors": []
+    },
+    {
+      "group": "C",
+      "pdfPages": [
+        {
+          "n": 1,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 2,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 4,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 5,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 6,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 7,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 8,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 9,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        },
+        {
+          "n": 10,
+          "h": 1123,
+          "min": 1122.52,
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "stagesAndPDF": [
+    {
+      "group": "A",
+      "expectedMissingCSS": [
+        {
+          "url": "http://127.0.0.1:2319/2026-06-15_A%EA%B7%B8%EB%A3%B9/practice/01_before/styles.css",
+          "status": 404
+        }
+      ],
+      "loadedSheets": 1
+    },
+    {
+      "group": "A",
+      "pdfGenerated": true,
+      "imagesLoaded": true
+    },
+    {
+      "group": "B",
+      "expectedMissingCSS": [
+        {
+          "url": "http://127.0.0.1:2319/2026-06-15_B%EA%B7%B8%EB%A3%B9/practice/01_before/styles.css",
+          "status": 404
+        }
+      ],
+      "loadedSheets": 1
+    },
+    {
+      "group": "B",
+      "pdfGenerated": true,
+      "imagesLoaded": true
+    },
+    {
+      "group": "C",
+      "stage": "01_connection",
+      "cards": 1,
+      "display": "block",
+      "images": true
+    },
+    {
+      "group": "C",
+      "stage": "02_one_card",
+      "cards": 1,
+      "display": "block",
+      "images": true
+    },
+    {
+      "group": "C",
+      "stage": "03_four_cards",
+      "cards": 4,
+      "display": "block",
+      "images": true
+    },
+    {
+      "group": "C",
+      "stage": "04_flex_layout",
+      "cards": 4,
+      "display": "flex",
+      "images": true
+    },
+    {
+      "group": "C",
+      "pdfGenerated": true,
+      "imagesLoaded": true
+    }
+  ],
+  "pdfActualPageCounts": {
+    "A": 10,
+    "B": 10,
+    "C": 10
+  }
+}

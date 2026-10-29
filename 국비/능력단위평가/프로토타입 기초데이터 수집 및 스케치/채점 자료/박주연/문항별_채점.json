@@ -1,0 +1,180 @@
+{
+  "student": "박주연",
+  "unit": "프로토타입 기초데이터 수집 및 스케치",
+  "Sid": "sbsartdj1117",
+  "project": "NUNID",
+  "report": "열람/03_학생_제출_산출물.md",
+  "examDate": "2026-10-22",
+  "gradedAt": "2026-10-23T10:07:46.501722+09:00",
+  "rows": [
+    {
+      "id": "PS-01",
+      "max": 10,
+      "raw": 6,
+      "evidence": "보고서 3~4, 링크.txt",
+      "judgement": "4개 외부 사례의 참고 요소와 적용 이유가 있다. 데이터별 출처·확인일·권리 상태 및 동일 기준에 따른 장단점 비교가 충분하지 않다.",
+      "registered": 9
+    },
+    {
+      "id": "PS-02",
+      "max": 10,
+      "raw": 7,
+      "evidence": "보고서 2·5, 메인페이지.pdf, 브랜드소개페이지_수정안.html·카테고리페이지_수정안.html",
+      "judgement": "스킨케어·메이크업 통합 콘셉트와 브랜드·상품 화면 위계는 확인된다. 대상 사용자와 해결 목표가 포괄적이며 기획 근거가 일부 미작성이다.",
+      "registered": 9
+    },
+    {
+      "id": "PS-03",
+      "max": 10,
+      "raw": 5,
+      "evidence": "보고서 5·6·8, 수정안 HTML의 상품·버튼 구조",
+      "judgement": "화면 배치와 주요 행동 위치는 읽힌다. 버튼의 의도된 결과와 상태·전환 주석을 추가해야 다른 제작자가 인계받기 쉽다. 실제 버튼 동작 구현은 필수로 요구하지 않는다.",
+      "registered": 8
+    },
+    {
+      "id": "PS-04",
+      "max": 10,
+      "raw": 5,
+      "evidence": "보고서 5, 메인페이지.pdf 및 브랜드·카테고리 시안",
+      "judgement": "정보 찾기 과업과 페이지 구조가 있다. 시작·진행·완료·복귀를 묶은 스토리보드와 분기·피드백 설명은 제한적이다.",
+      "registered": 8
+    },
+    {
+      "id": "PS-05",
+      "max": 10,
+      "raw": 6,
+      "evidence": "보고서 7의 자체 점검 3과업",
+      "judgement": "수행자·점검일·과업과 찾은 정보·비동작 사실을 기록했다. 자체 점검도 인정하되 사전 성공 조건·진행 절차와 관찰 원자료의 세밀함이 부족하다.",
+      "registered": 8
+    },
+    {
+      "id": "PS-06",
+      "max": 10,
+      "raw": 4,
+      "evidence": "보고서 7~8",
+      "judgement": "성공·비동작 사실은 적었으나 프로젝트 사용성 기준, 영향·원인·우선순위가 구체화되지 않았다. 기능 미구현 자체를 감점하지 않는다.",
+      "registered": 8
+    },
+    {
+      "id": "PS-07",
+      "max": 10,
+      "raw": 3,
+      "evidence": "보고서 8, 브랜드·카테고리 초안/수정안 HTML 4종",
+      "judgement": "실제 다른 버전은 동봉되어 내용·구조 변화는 확인된다. 보고서는 전후 미확인으로 남아 있고 점검 문제와 수정 결정을 연결한 기록이 부족하다.",
+      "registered": 7
+    },
+    {
+      "id": "PS-08",
+      "max": 10,
+      "raw": 3,
+      "evidence": "보고서 6, 초안·수정안 HTML",
+      "judgement": "서로 다른 시안은 있으나 썸네일 대안 탐색·비교 기준·선정 이유를 학생 자료에서 확인하기 어렵다. 두 버전의 존재만으로 다안 발상을 높게 인정하지 않는다.",
+      "registered": 7
+    },
+    {
+      "id": "PS-09",
+      "max": 10,
+      "raw": 7,
+      "evidence": "메인페이지.pdf, 브랜드소개페이지_수정안.html·카테고리페이지_수정안.html",
+      "judgement": "PC 화면의 여백·타이포·상품 그리드와 중립 시각 방향이 읽힌다. 매체별 조건과 필요한 모션·대체 상태의 선택 근거는 미정리다.",
+      "registered": 9
+    },
+    {
+      "id": "PS-10",
+      "max": 10,
+      "raw": 6,
+      "evidence": "ZIP 전체 목록, 보고서 1·9, 공유 저장소 b2d1dc3",
+      "judgement": "메인 PDF와 편집 HTML 4종으로 주요 시안을 확인했다. 보고서 PDF와 화면 대응·버전 정리, 누락된 주석을 포함한 인계 구성이 미완료다. 저장소의 동등 자료도 대조했다.",
+      "registered": 8
+    }
+  ],
+  "rawTotal": 52,
+  "registeredTotal": 81,
+  "feedback": "카테고리 수정안에서 상품을 같은 카드 형식으로 비교하도록 정리한 점이 좋았고, 브랜드 소개에서도 메시지와 설명의 순서가 잘 구분되었습니다. 7장의 자체 점검에서는 제품명 아래의 자외선 차단 표시를 단서로 상품을 찾았고, 장바구니·바로구매 버튼의 위치는 찾았지만 반응하지 않았다는 사실을 구분했습니다. 무엇을 보고 판단했는지 적은 기록은 유지하되, 작성자 자신의 점검에서 확인한 범위라는 점을 함께 설명하면 기록의 범위가 더 명확해질 것입니다.\n\n다만 실제 시안과 보고서 설명의 차이를 정리하면 작업한 내용이 더 잘 드러날 것 같습니다. 브랜드 소개·카테고리의 초안과 수정안 HTML은 모두 제출되어 있지만, 보고서 5~6장과 8장에는 ‘확인 후 보완’, ‘자료 확인 후 작성’, ‘수정 전후 미기재’라는 문장이 남아 있습니다. 화면 자체를 확인할 수 없는 상태는 아니므로, 이미 만든 결과를 보고서에 연결하여 어떤 판단으로 바꿨는지 보여주는 작업을 보완하면 좋겠습니다.\n\n보고서 5장의 ‘자외선 차단 기능이 있는 베이스 제품 찾기’를 한 개의 완결된 과업으로 정리하면 탐색 흐름을 이해하기 쉬울 것 같습니다. 상품 목록에서 시작하여 어떤 분류를 고르고, 카드의 어떤 정보를 읽고, 무엇을 확인하면 과업이 끝나는지 화면 번호와 화살표로 표시하면 각 화면의 역할이 더 잘 드러날 것입니다. 장바구니나 구매 버튼은 완성된 결제 기능을 구현하기보다 선택했을 때 보여줄 안내와 다음 상태를 주석으로 설명하면 충분합니다. 버튼이 반응하지 않는다는 기록만으로 끝내면 다음 제작자는 의도적으로 생략한 동작과 아직 결정하지 않은 동작을 구별하기 어렵습니다.\n\n4장의 레퍼런스 표에는 이즈앤트리·투쿨포스쿨의 좌우 배치, 넘버즈인의 히어로, 누메의 카테고리 버튼을 참고했다고 적혀 있습니다. 여기에 각 방식의 장단점과 누니드에서 선택한 이유를 같은 기준으로 덧붙이면 레퍼런스를 적용한 이유가 더욱 분명해질 것 같습니다. 예를 들어 브랜드 설명을 이미지 옆에 둘 때 핵심 문장을 빨리 찾을 수 있는지, 긴 설명이 들어가면 어떤 배치가 읽기 쉬운지를 비교할 수 있습니다. 이는 앞으로 확인할 질문이며, 해당 사이트의 실제 사용자 반응을 관찰한 결과와는 구분해 적는 것이 적절합니다. 자료별 확인일과 이용 조건도 함께 정리하면 자료의 출처를 확인하기 쉬울 것입니다.\n\n수정 전후 자료는 이미 제출한 HTML 두 버전을 활용하면 좋겠습니다. 카테고리 분류나 카드 정보가 바뀐 부분을 같은 위치에서 비교하고, 변경한 내용·해결하려는 문제·남겨 둔 사항을 연결하면 됩니다. 다음 자체 점검에서는 시작 화면과 성공 조건을 먼저 정하고, 선택한 순서와 막힌 지점을 남기면 수정이 필요한 위치를 더 구체적으로 찾을 수 있을 것입니다. 다른 점검자에게 같은 과업을 맡길 수 있다면 작성자가 이미 구조를 알고 있다는 영향을 줄이는 데도 도움이 됩니다. 보고서와 원본의 화면 번호를 맞춘 뒤 PDF로 묶어 최종 제출본을 정리하면 전달 자료의 완성도도 높아질 것입니다.\n\n최종점수는 81점입니다. 이미 제출한 시안의 과업 흐름과 변경 이유를 보고서에 먼저 연결하면 현재 작업의 장점이 더 잘 전달될 것 같습니다. 새로운 기능을 늘리기보다 이 부분부터 정리하면 좋겠습니다. 고생하셨습니다.",
+  "duplicateDeductionReview": "실제 점검 실행 여부의 핵심 판단은 PS-05에 두고 PS-06은 기준·문제 정의·영향·가설·우선순위를, PS-07은 변경 대응·실제 반영·보류·재확인 설명을 별도 검토했다. 파일 형식·상대경로 정합성은 PS-10, 실제 대안의 범위는 PS-08에서 판단했다. 코드 실행 완성·배포·실거래 여부는 감점 요건에 추가하지 않았다.",
+  "siteRegistration": {
+    "status": "registered_and_verified",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1117",
+    "checkedAt": "2026-10-23T01:30:42.478Z",
+    "verifiedScores": [
+      9,
+      9,
+      8,
+      8,
+      8,
+      8,
+      7,
+      7,
+      9,
+      8
+    ],
+    "verifiedTotal": 81,
+    "feedbackExactMatch": true,
+    "feedbackSHA256": "e2265d711f9aeb43d6b89a18c6cb4381ad506ee82ce87b1209f9362454c70db8",
+    "snapshot": "검토/피드백_말투_등록후_20261023_102950.yml",
+    "feedbackRevision": "20261023_102950"
+  },
+  "feedbackRevisions": [
+    {
+      "revision": "20261023_101834",
+      "scope": "feedback_only",
+      "previousFeedbackSHA256": "c777589389ad5a3cb9057e824b6111ad26033ca40d0a789d4c139a7897e3c555",
+      "feedbackSHA256": "aa92ef1fead9224c46d31e0b4ebc95f76645b3520453ebb7105ba6a5815f856d",
+      "checkedAt": "2026-10-23T01:21:14.890Z",
+      "backupDirectory": "채점 자료\\피드백_변경이력\\20261023_101834",
+      "previousSiteRegistration": {
+        "status": "registered_and_verified",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1117",
+        "checkedAt": "2026-10-23T01:09:46.318Z",
+        "verifiedScores": [
+          9,
+          9,
+          8,
+          8,
+          8,
+          8,
+          7,
+          7,
+          9,
+          8
+        ],
+        "verifiedTotal": 81,
+        "feedbackExactMatch": true,
+        "feedbackSHA256": "c777589389ad5a3cb9057e824b6111ad26033ca40d0a789d4c139a7897e3c555",
+        "snapshot": "검토/사이트_등록후.yml"
+      },
+      "scoreStateSHA256": "60ead64350130d9919d18f5fe6e0dace674bae6275d8df8e08fc2279e1d9d3d1"
+    },
+    {
+      "revision": "20261023_102950",
+      "scope": "feedback_tone_only",
+      "previousFeedbackSHA256": "aa92ef1fead9224c46d31e0b4ebc95f76645b3520453ebb7105ba6a5815f856d",
+      "feedbackSHA256": "e2265d711f9aeb43d6b89a18c6cb4381ad506ee82ce87b1209f9362454c70db8",
+      "checkedAt": "2026-10-23T01:30:42.478Z",
+      "backupDirectory": "채점 자료\\피드백_변경이력\\20261023_102950",
+      "previousSiteRegistration": {
+        "status": "registered_and_verified",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1117",
+        "checkedAt": "2026-10-23T01:21:14.890Z",
+        "verifiedScores": [
+          9,
+          9,
+          8,
+          8,
+          8,
+          8,
+          7,
+          7,
+          9,
+          8
+        ],
+        "verifiedTotal": 81,
+        "feedbackExactMatch": true,
+        "feedbackSHA256": "aa92ef1fead9224c46d31e0b4ebc95f76645b3520453ebb7105ba6a5815f856d",
+        "snapshot": "검토/피드백_보강_등록후_20261023_101834.yml",
+        "feedbackRevision": "20261023_101834"
+      },
+      "scoreStateSHA256": "60ead64350130d9919d18f5fe6e0dace674bae6275d8df8e08fc2279e1d9d3d1"
+    }
+  ]
+}

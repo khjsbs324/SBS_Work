@@ -1,0 +1,44 @@
+{
+  "change": "회의록 선행 작성 및 ABC 지원계획 연계",
+  "scope": "기존 디렉토리를 유지하고 지침·템플릿·실행 코드 개선",
+  "canonical": "02_회의록/회의록.json",
+  "validation": {
+    "support_tests": 34,
+    "harness_tests": 14,
+    "skill": "valid",
+    "browser": {
+      "ok": true,
+      "mockedWrites": 1,
+      "realExternalWrites": 0,
+      "htmlPreserved": true,
+      "duplicateBlocked": true,
+      "missingGateBlocked": true,
+      "wrongPlanBlocked": true,
+      "changedMeetingBlocked": true,
+      "uniqueObservedRow": 1
+    },
+    "node_syntax": "passed",
+    "harness_check": {
+      "passed": false,
+      "preexisting_error": "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완"
+    }
+  },
+  "compatibility": {
+    "unit": "디자인 구성요소 제작",
+    "status": "complete",
+    "meeting_review_status": "legacy",
+    "stale_groups": [],
+    "policy": "이전 완료 기록 보존, 새 작업·재개·정정 시 강화된 회의록 검수"
+  },
+  "limitations": [
+    "정형 검사는 교수법 실행 사실이나 교육 내용의 적절성을 판단하지 않으며 직접 내용 검수가 필요함",
+    "브라우저 검증은 격리된 모의 등록이며 실제 LMS 변경 없음"
+  ],
+  "changed_behaviors": [
+    "회의록 전문·실제 ABC 편성·능력단위요소 검사",
+    "회의록 검수·LMS 날짜 및 두 본문 재확인 후 자료 생성 허용",
+    "그룹별 계획과 자료 해시 및 내용 대조 검수",
+    "회의록 문장만 변경 시 회의록 재검수, 그룹 계획 변경 시 해당 그룹 자료만 재검수",
+    "등록 직전 회의록 및 계획 변경 차단"
+  ]
+}

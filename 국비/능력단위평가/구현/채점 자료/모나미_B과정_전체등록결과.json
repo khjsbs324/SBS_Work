@@ -1,0 +1,199 @@
+{
+  "course": "B (1회차)",
+  "Pcode": "500000",
+  "Lcode": "8",
+  "unit": "구현",
+  "evaluationDate": "2026-10-23",
+  "newlyGradedAndRegistered": [
+    {
+      "student": "김규린",
+      "Sid": "sbsartdj1165",
+      "sections": [
+        "상단",
+        "두 번째 섹션 미구현"
+      ],
+      "rawTotal": 26,
+      "registeredTotal": 70,
+      "scores": [
+        9,
+        7,
+        7,
+        9,
+        7,
+        8,
+        8,
+        7,
+        8
+      ],
+      "feedbackChars": 2076,
+      "saved": true,
+      "verifiedAt": "2026-10-26T04:40:59.377Z"
+    },
+    {
+      "student": "김형관",
+      "Sid": "sbsartdj1166",
+      "sections": [
+        "상단",
+        "NEW ARRIVALS"
+      ],
+      "rawTotal": 77,
+      "registeredTotal": 91,
+      "scores": [
+        11,
+        9,
+        9,
+        11,
+        9,
+        11,
+        11,
+        9,
+        11
+      ],
+      "feedbackChars": 2834,
+      "saved": true,
+      "verifiedAt": "2026-10-26T04:39:31.982Z"
+    },
+    {
+      "student": "박선환",
+      "Sid": "sbsartdj1167",
+      "sections": [
+        "상단",
+        "BEST PRODUCT"
+      ],
+      "rawTotal": 55,
+      "registeredTotal": 82,
+      "scores": [
+        10,
+        8,
+        8,
+        10,
+        8,
+        10,
+        10,
+        8,
+        10
+      ],
+      "feedbackChars": 2674,
+      "saved": true,
+      "verifiedAt": "2026-10-26T04:39:41.676Z"
+    },
+    {
+      "student": "신윤아",
+      "Sid": "sbsartdj1168",
+      "sections": [
+        "상단",
+        "NEW ARRIVALS"
+      ],
+      "rawTotal": 89,
+      "registeredTotal": 96,
+      "scores": [
+        12,
+        10,
+        10,
+        11,
+        10,
+        11,
+        11,
+        10,
+        11
+      ],
+      "feedbackChars": 2191,
+      "saved": true,
+      "verifiedAt": "2026-10-26T04:41:13.132Z"
+    },
+    {
+      "student": "이주원",
+      "Sid": "sbsartdj1171",
+      "sections": [
+        "상단",
+        "NEW ARRIVALS"
+      ],
+      "rawTotal": 93,
+      "registeredTotal": 97,
+      "scores": [
+        12,
+        10,
+        10,
+        12,
+        10,
+        11,
+        11,
+        10,
+        11
+      ],
+      "feedbackChars": 2335,
+      "saved": true,
+      "verifiedAt": "2026-10-26T04:41:17.306Z"
+    },
+    {
+      "student": "전해주",
+      "Sid": "sbsartdj1169",
+      "sections": [
+        "상단",
+        "BEST PRODUCT"
+      ],
+      "rawTotal": 48,
+      "registeredTotal": 79,
+      "scores": [
+        10,
+        8,
+        8,
+        10,
+        8,
+        9,
+        9,
+        8,
+        9
+      ],
+      "feedbackChars": 2706,
+      "saved": true,
+      "verifiedAt": "2026-10-26T04:41:21.562Z"
+    },
+    {
+      "student": "홍석경",
+      "Sid": "sbsartdj1170",
+      "sections": [
+        "상단",
+        "메인 비주얼"
+      ],
+      "rawTotal": 71,
+      "registeredTotal": 88,
+      "scores": [
+        11,
+        9,
+        9,
+        11,
+        9,
+        10,
+        10,
+        9,
+        10
+      ],
+      "feedbackChars": 2735,
+      "saved": true,
+      "verifiedAt": "2026-10-26T04:41:25.878Z"
+    }
+  ],
+  "previouslyRegistered": {
+    "student": "강애란",
+    "score": 94
+  },
+  "gradedTotal": 8,
+  "pending": [
+    {
+      "student": "권현진",
+      "Sid": "sbsartdj1164",
+      "status": "평가중",
+      "hasGradeLink": false
+    }
+  ],
+  "allRegisteredScoresIntegers": true,
+  "allFeedbacksReadBackAndMatched": true,
+  "originalSubmissionsModified": false,
+  "newValidationErrors": [],
+  "existingValidationErrors": [
+    "수정 보완/CLAUDE.md 연결 오류",
+    "수정 보완/Exam.md 제목 형식 오류"
+  ],
+  "listVerifiedAt": "2026-10-26T04:42:12.982Z"
+}

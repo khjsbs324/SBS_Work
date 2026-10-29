@@ -36,7 +36,7 @@ def initialize(course, unit, end, lcode, action='prepare', request='', meeting='
         (run / name).mkdir()
     for group in GROUPS:
         (run / '03_지원자료' / (group + '그룹')).mkdir(parents=True)
-    job = {'schema_version': 1, 'evidence_version': 2, 'course_id': course, 'course': courses[course], 'unit': unit,
+    job = {'schema_version': 1, 'evidence_version': 3, 'course_id': course, 'course': courses[course], 'unit': unit,
            'lcode': str(lcode), 'unit_end_date': end, 'post_date': posting, 'action': action,
            'request': request, 'meeting_mode': meeting, 'created_at': now()}
     write_json(run / '작업정보.json', job)
@@ -105,9 +105,8 @@ def record(run, stage, evidence, group=None):
         index = GLOBAL_STAGES.index(stage)
         require(all(s in state['global'] for s in GLOBAL_STAGES[:index]), 'Previous global stage is incomplete')
         prior_global = state['global'].get(stage)
-        draft_review = (stage == 'meeting_resolved' and job['action'] == 'prepare'
-                        and prior_global and prior_global.get('mode') == 'drafted' and receipt.get('mode') == 'drafted')
-        require(prior_global is None or draft_review, 'Global stage already recorded; preserve existing evidence')
+        require(prior_global is None or stage == 'meeting_resolved',
+                'Global stage already recorded; preserve existing evidence')
         if stage == 'target_confirmed':
             require(receipt.get('course_name') == job['course']['name'] and receipt.get('unit_end_date') == job['unit_end_date'], 'Course/end date not confirmed')
             require(receipt.get('screen_confirmed') is True, 'Actual target screen must be checked')
@@ -128,23 +127,14 @@ def record(run, stage, evidence, group=None):
                 require(receipt.get('task_read') is True, 'Read actual task evidence')
             require(isinstance(receipt.get('source_urls'), list) and bool(receipt['source_urls']), 'Source URL array required')
         else:
-            allowed = {'skipped'} if job['meeting_mode'] == 'skip' else {'existing', 'created', 'updated'}
-            if job['action'] == 'prepare' and job['meeting_mode'] != 'skip':
-                allowed = {'existing', 'drafted'}
-            require(receipt.get('mode') in allowed, 'Meeting mode mismatch')
-            if receipt.get('mode') == 'drafted':
-                require(receipt.get('local_reviewed') is True, 'Review the local meeting draft')
-                draft = child(run, receipt.get('draft_path'))
-                content = read_json(draft)
-                require(content.get('example') is False and all(content.get(k) for k in ('analysis', 'improvement', 'actual_date')),
-                        'Write a real meeting draft first')
-                receipt['draft_sha256'] = sha256(draft)
-            else:
-                require(receipt.get('mode') == 'skipped' or receipt.get('exact_readback') is True, 'Meeting requires exact readback')
             require(bool(receipt.get('reason')), 'Meeting decision reason required')
+            from .meeting import review_receipt
+            review_receipt(run, job, receipt)
         destination = state['global']
     else:
         require(group in GROUPS and all(s in state['global'] for s in GLOBAL_STAGES), 'Resolve target, sources and meeting first')
+        from .meeting import require_plan
+        plan_hash = require_plan(run, job, state, group, read_json(group_dir(run, group) / 'content.json'))
         destination = state['groups'][group]
         if stage == 'materials_verified':
             require_editable(state, group)
@@ -152,10 +142,16 @@ def record(run, stage, evidence, group=None):
             validate_group(run, group)
             require(all(receipt.get(k) is True for k in ('local_checks', 'pdf_reviewed', 'visual_reviewed', 'sources_reviewed', 'privacy_reviewed')), 'Complete actual material reviews')
             require(type(receipt.get('pdf_page_count')) is int and receipt['pdf_page_count'] > 0, 'Record actual PDF page count')
+            require(receipt.get('support_plan_sha256') == plan_hash
+                    and receipt.get('plan_alignment_reviewed') is True
+                    and bool(receipt.get('plan_alignment_notes', '').strip()),
+                    'Review material needs, activities and completion criteria against the current group plan')
             receipt['snapshot'] = snapshot(run, group)
         else:
             require(job['action'] == 'register', 'This run only authorizes local preparation')
             require('materials_verified' in destination and destination['materials_verified']['snapshot'] == snapshot(run, group), 'Materials changed or were not reviewed')
+            require(destination['materials_verified'].get('support_plan_sha256') == plan_hash,
+                    'Group plan changed; re-review this group before registration')
             post_identity(job, group, receipt)
             if stage == 'registered':
                 require('registered' not in destination, 'Already registered; do not duplicate')
@@ -169,7 +165,8 @@ def record(run, stage, evidence, group=None):
                 require(receipt.get('attachment_status') == 200 and receipt.get('attachment_sha256') == sha256(group_dir(run, group) / '학습자료.zip'), 'Downloaded attachment differs from local ZIP')
     receipt['recorded_at'] = now()
     if stage in GLOBAL_STAGES and stage in destination:
-        state['history'].append({'stage': 'draft_review_replaced', 'recorded_at': now(), 'previous': destination[stage]})
+        event = 'draft_review_replaced' if receipt.get('mode') == 'drafted' else 'meeting_review_replaced'
+        state['history'].append({'stage': event, 'recorded_at': now(), 'previous': destination[stage]})
     destination[stage] = receipt
     if stage == 'verified' and destination.get('revision', {}).get('open'):
         revision = destination['revision']
@@ -186,7 +183,17 @@ def status(run):
     stale = []
     stale_global = []
     meeting = state['global'].get('meeting_resolved', {})
-    if meeting.get('mode') == 'drafted':
+    plan_hashes = {}
+    contract_required = job.get('evidence_version', 1) >= 3 or meeting.get('contract_version') == 1
+    if contract_required and meeting:
+        from .meeting import document, require_meeting
+        try:
+            _, hashes = document(run, job)
+            plan_hashes = hashes['plan_hashes']
+            require_meeting(run, job, state)
+        except (ValueError, OSError, KeyError, TypeError):
+            stale_global.append('meeting_resolved')
+    elif meeting.get('mode') == 'drafted':
         try:
             if sha256(child(run, meeting['draft_path'])) != meeting['draft_sha256']:
                 stale_global.append('meeting_resolved')
@@ -196,14 +203,19 @@ def status(run):
         review = state['groups'][group].get('materials_verified')
         if review:
             try:
-                if review['snapshot'] != snapshot(run, group):
+                if (review['snapshot'] != snapshot(run, group)
+                        or plan_hashes and review.get('support_plan_sha256') != plan_hashes[group]):
                     stale.append(group)
             except (ValueError, OSError, KeyError):
                 stale.append(group)
     finish = 'verified' if job['action'] == 'register' else 'materials_verified'
     active = [g for g in GROUPS if state['groups'][g].get('revision', {}).get('open')]
+    meeting_status = ('review_required' if stale_global else
+                      'legacy' if meeting and not contract_required else
+                      meeting.get('mode', 'unreviewed'))
     complete = all(s in state['global'] for s in GLOBAL_STAGES) and all(finish in state['groups'][g] for g in GROUPS) and not stale and not stale_global and not active
     return {'status': ('complete' if job['action'] == 'register' else 'prepared') if complete else 'in_progress',
             'course_id': job['course_id'], 'unit': job['unit'], 'post_date': job['post_date'], 'stale_groups': stale,
             'stale_global': stale_global, 'active_revisions': active,
+            'meeting_review_status': meeting_status,
             'global': list(state['global']), 'groups': {g: list(state['groups'][g]) for g in GROUPS}}

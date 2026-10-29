@@ -1,0 +1,692 @@
+/* ============================================================
+   공통 CSS — 모든 섹션에서 사용하는 수업 코드
+   참고: UIUXB_2610 / 1코딩/마켓컬리/와이어프레임/style.css
+   원본의 초기화, .con, Flex, 이미지 규칙을 모나미 화면에 맞게 적용했습니다.
+   협업: 이 부분을 바꾸면 모든 섹션에 영향이 있습니다.
+   통합: 초기화와 @font-face는 한 번만 둡니다.
+   글꼴: 원본에서 사용한 Pretendard의 400/500/700을 로컬 파일로 연결합니다.
+   ============================================================ */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* .con은 전체 폭이 아니라 내부 콘텐츠 폭입니다.
+   원본 .con의 1050px을 모나미 데스크톱 기준 1400px로 조정했습니다. */
+.con {
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* img의 기본 아래쪽 글자 간격을 없애고 블록으로 배치합니다. */
+img {
+  display: block;
+}
+
+/* 원본 products-title / products-desc를 재사용한 제목 패턴입니다. */
+.section-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #111;
+}
+
+.section-desc {
+  font-size: 13px;
+  color: #777;
+}
+
+.title-line {
+  width: 26px;
+  height: 3px;
+  background-color: #c81939;
+}
+
+
+
+/* MON-01 시작 — 상단 전용. utility-nav와 main-nav를 구분해 목록 규칙이 섞이지 않게 합니다. */
+.utility-menu {
+  border: 1px solid #eee;
+}
+
+.utility-con {
+  height: 56px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utility-left {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.language {
+  width: 86px;
+  height: 28px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+.social-list {
+  display: flex;
+  gap: 6px;
+}
+
+.social-list img {
+  width: 30px;
+  height: 30px;
+}
+
+.utility-nav ul {
+  display: flex;
+  gap: 12px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.main-header {
+  border: 1px solid #eee;
+}
+
+.m-header-con {
+  height: 89px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  width: 162px;
+}
+
+.brand img {
+  width: 162px;
+  height: 89px;
+}
+
+.main-nav {
+  width: 1070px;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav li {
+  font-size: 16px;
+  color: #333;
+}
+
+/* 원본 #actions 아이콘의 :hover 패턴으로 글자 색만 바꿉니다. */
+.main-nav li:hover {
+  color: #c81939;
+}
+
+/* 검색 이미지와 전체 메뉴 아이콘을 담은 바깥 부모입니다.
+   display:flex: 두 자식을 기본 방향인 가로로 나란히 놓습니다.
+   gap:28px: 검색 이미지와 메뉴 아이콘 사이를 28px 띄웁니다.
+   align-items:center: 높이가 다른 두 아이콘의 세로 중심을 맞춥니다. */
+.actions {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+/* 검색은 실제 이미지 파일이므로 이미지의 표시 크기를 지정합니다. */
+.actions img {
+  width: 19px;
+  height: 18px;
+}
+
+/* 메뉴 아이콘의 부모: 안쪽 div 3개의 배치 방법을 정합니다.
+   width:20px: 메뉴 아이콘 묶음의 너비입니다.
+   display:flex: 안쪽 자식들을 Flex 방식으로 배치합니다.
+   flex-direction:column: 자식의 배치 방향을 가로에서 세로로 바꿉니다.
+   gap:5px: 첫째·둘째 선 사이와 둘째·셋째 선 사이에 각각 5px 간격을 둡니다.
+   선 3개의 높이 6px + 간격 두 곳 10px = 아이콘 전체 높이 16px입니다. */
+.menu-lines {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* 메뉴 아이콘의 자식: .menu-lines 안에 있는 div 모두에 적용합니다.
+   빈 div도 너비 20px·높이 2px·회색 배경을 가지면 얇은 가로선으로 보입니다.
+   이 규칙 하나가 자식 3개에 공통 적용되어 같은 모양의 선 3개가 만들어집니다.
+   다른 곳의 div에는 이 규칙이 적용되지 않습니다. */
+.menu-lines div {
+  width: 20px;
+  height: 2px;
+  background-color: #555;
+}
+
+/* MON-01 끝 */
+
+/* MON-02 시작 — background는 원본 button 초기화에서도 사용한 속성입니다.
+   여기서는 사진 URL·중앙 정렬·cover를 값으로 지정하여 문구 뒤에 사진을 둡니다. */
+.hero {
+  height: 652px;
+  background: #222 url('../image/hero.jpg') center / cover no-repeat;
+}
+
+.hero-con {
+  height: 100%;
+  align-items: center;
+  padding-left: 120px;
+}
+
+.hero-copy {
+  color: #fff;
+}
+
+.hero-title {
+  padding-bottom: 24px;
+}
+
+.hero-title p {
+  font-size: 50px;
+  font-weight: 400;
+  height: 63px;
+}
+
+.hero-desc p {
+  font-size: 15px;
+  color: #ddd;
+  padding-bottom: 5px;
+}
+
+/* MON-02 끝 */
+
+/* MON-03 시작 — 서로 다른 이미지 크기를 중첩 Flex 두 행으로 구성합니다. */
+.new-products {
+  padding-top: 88px;
+  padding-bottom: 90px;
+}
+
+.new-con {
+  width: 1200px;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.new-row {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.new-left {
+  width: 392px;
+}
+
+.new-heading {
+  height: 155px;
+}
+
+.new-heading .section-title span {
+  display: block;
+  height: 38px;
+}
+
+.new-heading .title-line {
+  margin: 12px 0 10px;
+}
+
+.new-card {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.new-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.new-card-01 {
+  width: 392px;
+  height: 205px;
+}
+
+.new-card-02 {
+  width: 786px;
+  height: 360px;
+}
+
+.new-card-03 {
+  width: 392px;
+  height: 292px;
+}
+
+.new-card-04 {
+  width: 450px;
+  height: 439px;
+}
+
+.new-card-05 {
+  width: 314px;
+  height: 292px;
+}
+
+/* MON-03 끝 */
+
+/* MON-04 시작 — 카드 구조는 원본과 같고 이미지·상품 정보·배치 값이 다릅니다. */
+.best-products {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #eee;
+}
+
+.best-heading {
+  text-align: center;
+}
+
+.best-heading .title-line {
+  margin: 14px auto 12px;
+}
+
+.brand-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.brand-tab {
+  width: 157px;
+  height: 36px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  color: #999;
+  font-size: 13px;
+}
+
+.brand-tab.active {
+  border: 2px solid #c81939;
+  color: #c81939;
+}
+
+.product-scroll {
+  overflow: auto;
+}
+
+.product-list {
+  width: 3016px;
+  display: flex;
+  gap: 9px;
+}
+
+.product-card {
+  width: 266px;
+  height: 505px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.product-image {
+  height: 390px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 30px 28px 18px;
+}
+
+.product-category {
+  font-size: 12px;
+  color: #aaa;
+  padding-bottom: 7px;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #111;
+  font-weight: 700;
+}
+
+.scroll-guide {
+  width: 850px;
+  margin: 55px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.scroll-rule {
+  width: 340px;
+  height: 1px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-label {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scroll-label img {
+  width: 21px;
+  height: 27px;
+}
+
+.scroll-label p {
+  font-size: 10px;
+  color: #888;
+}
+
+/* MON-04 끝 */
+
+/* MON-05 시작 — height:auto로 1920×1000 원본 이미지 비율을 유지합니다. */
+.brand-video img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* MON-05 끝 */
+
+/* MON-06 시작 — 각 칸에 box-sizing을 주어 padding 때문에 1400px을 넘지 않게 합니다. */
+.information {
+  background-color: #f7f7f7;
+}
+
+.information-con {
+  height: 355px;
+}
+
+.news {
+  width: 700px;
+  padding: 45px 49px 25px 0;
+  box-sizing: border-box;
+}
+
+.news-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-heading h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.news-heading span {
+  font-size: 11px;
+  color: #888;
+}
+
+.news > .title-line {
+  margin: 10px 0 24px;
+}
+
+.news-feature {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 18px;
+}
+
+.news-feature > img {
+  width: 164px;
+  height: 116px;
+  object-fit: cover;
+}
+
+.news-copy {
+  width: 467px;
+}
+
+.news-copy h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #222;
+  padding-bottom: 9px;
+}
+
+.news-copy > p {
+  font-size: 13px;
+  color: #888;
+}
+
+.news-copy .news-date {
+  padding-top: 25px;
+  text-align: right;
+  font-size: 12px;
+}
+
+.news-rule {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.news-list {
+  padding-top: 10px;
+}
+
+.news-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  font-size: 12px;
+  color: #888;
+}
+
+.info-panel {
+  width: 350px;
+  padding-top: 65px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inquiry {
+  background: #f5f5f5 url('../image/inquiry-bg.jpg') center top / 350px 355px no-repeat;
+}
+
+.shop {
+  background: #f5f5f5 url('../image/shop-bg.png') center top / 350px 365px no-repeat;
+}
+
+.panel-icon {
+  width: 60px;
+  height: 53px;
+  object-fit: contain;
+  margin: 0 0 22px;
+}
+
+.info-panel h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.info-panel .title-line {
+  margin: 10px 0 16px;
+}
+
+.panel-desc {
+  text-align: center;
+}
+
+.panel-desc p {
+  font-size: 13px;
+  color: #888;
+  padding-bottom: 4px;
+}
+
+.outline-btn {
+  width: 170px;
+  height: 38px;
+  border: 2px solid #c81939;
+  border-radius: 24px;
+  color: #c81939;
+  font-size: 12px;
+  margin: 30px 0 0;
+}
+
+/* MON-06 끝 */
+
+/* MON-07 시작 — 전체 배경과 안쪽 .con의 폭을 분리합니다. */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 65px;
+  background-color: #111;
+}
+
+.footer-con {
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.footer-rule {
+  width: 100%;
+  height: 1px;
+  background-color: #292929;
+}
+
+.footer-top > img {
+  width: 128px;
+  height: 32px;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 22px;
+  color: #777;
+  font-size: 12px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.company-info {
+  width: 570px;
+}
+
+.footer-bottom h2 {
+  font-size: 13px;
+  color: #ccc;
+  padding-bottom: 12px;
+}
+
+.company-info p {
+  font-size: 12px;
+  color: #555;
+  padding-bottom: 5px;
+}
+
+.customer-center {
+  width: 250px;
+}
+
+.customer-center .customer-tel {
+  font-size: 24px;
+  color: #777;
+  padding-bottom: 15px;
+}
+
+.kakao-btn {
+  width: 155px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #444;
+  color: #bbb;
+  font-size: 13px;
+}
+
+.family-site {
+  width: 245px;
+  height: 35px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #777;
+  font-size: 12px;
+}
+
+/* MON-07 끝 */

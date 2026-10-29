@@ -1,0 +1,117 @@
+{
+  "registration": {
+    "group": "A",
+    "preflight": {
+      "valid": true,
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "title": "[능력단위평가_지원내역] 구현 응용 A그룹 지원자료",
+      "date": "2026-07-06",
+      "images": 3,
+      "anchors": 10,
+      "externalLinks": 4,
+      "codeBlocks": 7,
+      "placeholder": false,
+      "file": "구현응용_A그룹_학습자료.zip"
+    },
+    "saved": {
+      "status": 200,
+      "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+    },
+    "uploaded": {
+      "structure.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728577_9bfcd3b4.png",
+      "closed.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728577_37a7dbca.png",
+      "opened.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728578_209a606b.png"
+    },
+    "rows": [
+      {
+        "text": "\n\t\t\t\t\t\t\t\t\t\t13\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 응용 A그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06\n\t\t\t\t\t\t\t\t\t",
+        "id": "1048"
+      }
+    ]
+  },
+  "verification": {
+    "group": "A",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1048",
+    "correctCourse": true,
+    "textMatches": true,
+    "titleMatches": true,
+    "dateMatches": true,
+    "images": [
+      {
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728577_9bfcd3b4.png",
+        "loaded": true
+      },
+      {
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728577_37a7dbca.png",
+        "loaded": true
+      },
+      {
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728578_209a606b.png",
+        "loaded": true
+      }
+    ],
+    "anchors": [
+      {
+        "href": "#a-learning-1",
+        "exists": true
+      },
+      {
+        "href": "#a-learning-2",
+        "exists": true
+      },
+      {
+        "href": "#a-learning-3",
+        "exists": true
+      },
+      {
+        "href": "#a-learning-4",
+        "exists": true
+      },
+      {
+        "href": "#a-learning-5",
+        "exists": true
+      },
+      {
+        "href": "#a-learning-6",
+        "exists": true
+      },
+      {
+        "href": "#a-learning-7",
+        "exists": true
+      },
+      {
+        "href": "#a-learning-8",
+        "exists": true
+      },
+      {
+        "href": "#a-learning-9",
+        "exists": true
+      },
+      {
+        "href": "#a-learning-10",
+        "exists": true
+      }
+    ],
+    "sources": [
+      "https://opentutorials.org/module/2367/13348",
+      "https://opentutorials.org/module/2367/13516",
+      "https://opentutorials.org/module/2367/13414",
+      "https://www.tcpschool.com/html/html5_graphic_svg"
+    ],
+    "headings": 11,
+    "codeBlocks": 7,
+    "style": {
+      "maxWidth": "980px",
+      "fontSize": "17px",
+      "lineHeight": "33.15px",
+      "cellPadding": "14px 16px"
+    },
+    "attachment": {
+      "status": 200,
+      "bytes": 377185,
+      "exact": true
+    },
+    "anchorScrollWorks": true
+  }
+}

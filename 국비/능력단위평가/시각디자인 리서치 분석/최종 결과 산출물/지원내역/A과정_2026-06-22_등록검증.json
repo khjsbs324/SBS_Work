@@ -1,0 +1,349 @@
+{
+  "course": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "unit": "시각디자인 리서치 분석",
+  "unitEndDate": "2026-06-19",
+  "postingDate": "2026-06-22",
+  "meeting": {
+    "existed": true,
+    "changed": false,
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=5"
+  },
+  "registration": [
+    {
+      "group": "A",
+      "preflight": {
+        "valid": true,
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "title": "[능력단위평가_지원내역] 시각디자인 리서치 분석 A그룹 지원자료",
+        "date": "2026-06-22",
+        "images": 2,
+        "anchors": 10,
+        "externalLinks": 5,
+        "placeholder": false,
+        "file": "시각디자인리서치분석_A그룹_학습자료.zip"
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+      },
+      "uploaded": {
+        "trace.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727791_199b7d54.png",
+        "position.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727792_33621d8f.png"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t10\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시각디자인 리서치 분석 A그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-06-22\n\t\t\t\t\t\t\t\t\t",
+          "id": "1045"
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "preflight": {
+        "valid": true,
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "title": "[능력단위평가_지원내역] 시각디자인 리서치 분석 B그룹 지원자료",
+        "date": "2026-06-22",
+        "images": 2,
+        "anchors": 10,
+        "externalLinks": 5,
+        "placeholder": false,
+        "file": "시각디자인리서치분석_B그룹_학습자료.zip"
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+      },
+      "uploaded": {
+        "trace.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727815_e56044a6.png",
+        "position.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727815_50a190e4.png"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t11\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시각디자인 리서치 분석 B그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-06-22\n\t\t\t\t\t\t\t\t\t",
+          "id": "1046"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "preflight": {
+        "valid": true,
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "title": "[능력단위평가_지원내역] 시각디자인 리서치 분석 C그룹 지원자료",
+        "date": "2026-06-22",
+        "images": 2,
+        "anchors": 10,
+        "externalLinks": 5,
+        "placeholder": false,
+        "file": "시각디자인리서치분석_C그룹_학습자료.zip"
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+      },
+      "uploaded": {
+        "trace.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727816_fc0c66a4.png",
+        "position.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727816_2b8eb062.png"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t12\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시각디자인 리서치 분석 C그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-06-22\n\t\t\t\t\t\t\t\t\t",
+          "id": "1047"
+        }
+      ]
+    }
+  ],
+  "verification": [
+    {
+      "group": "A",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1045",
+      "correctCourse": true,
+      "textMatches": true,
+      "titleMatches": true,
+      "dateMatches": true,
+      "images": [
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727792_33621d8f.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727791_199b7d54.png",
+          "loaded": true
+        }
+      ],
+      "anchors": [
+        {
+          "href": "#a-learning-1",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-2",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-3",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-4",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-5",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-6",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-7",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-8",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-9",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-10",
+          "exists": true
+        }
+      ],
+      "sources": [
+        "https://story.pxd.co.kr/176",
+        "https://story.pxd.co.kr/1343",
+        "https://www.samsungsds.com/kr/insights/design-thinking-3.html",
+        "https://toss.tech/article/26109",
+        "https://www.youtube.com/watch?v=8HzYbvzoPqw"
+      ],
+      "headings": 11,
+      "style": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "cellPadding": "14px 16px"
+      },
+      "attachment": {
+        "status": 200,
+        "bytes": 273491,
+        "exact": true
+      },
+      "anchorScrollWorks": true
+    },
+    {
+      "group": "B",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1046",
+      "correctCourse": true,
+      "textMatches": true,
+      "titleMatches": true,
+      "dateMatches": true,
+      "images": [
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727815_e56044a6.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727815_50a190e4.png",
+          "loaded": true
+        }
+      ],
+      "anchors": [
+        {
+          "href": "#b-learning-1",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-2",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-3",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-4",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-5",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-6",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-7",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-8",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-9",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-10",
+          "exists": true
+        }
+      ],
+      "sources": [
+        "https://story.pxd.co.kr/176",
+        "https://story.pxd.co.kr/1343",
+        "https://www.samsungsds.com/kr/insights/design-thinking-3.html",
+        "https://toss.tech/article/26109",
+        "https://www.youtube.com/watch?v=8HzYbvzoPqw"
+      ],
+      "headings": 11,
+      "style": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "cellPadding": "14px 16px"
+      },
+      "attachment": {
+        "status": 200,
+        "bytes": 271033,
+        "exact": true
+      },
+      "anchorScrollWorks": true
+    },
+    {
+      "group": "C",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1047",
+      "correctCourse": true,
+      "textMatches": true,
+      "titleMatches": true,
+      "dateMatches": true,
+      "images": [
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727816_fc0c66a4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727816_2b8eb062.png",
+          "loaded": true
+        }
+      ],
+      "anchors": [
+        {
+          "href": "#c-learning-1",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-2",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-3",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-4",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-5",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-6",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-7",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-8",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-9",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-10",
+          "exists": true
+        }
+      ],
+      "sources": [
+        "https://story.pxd.co.kr/176",
+        "https://story.pxd.co.kr/1343",
+        "https://www.samsungsds.com/kr/insights/design-thinking-3.html",
+        "https://toss.tech/article/26109",
+        "https://www.youtube.com/watch?v=8HzYbvzoPqw"
+      ],
+      "headings": 11,
+      "style": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "cellPadding": "14px 16px"
+      },
+      "attachment": {
+        "status": 200,
+        "bytes": 271226,
+        "exact": true
+      },
+      "anchorScrollWorks": true
+    }
+  ],
+  "finalList": [
+    "12\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시각디자인 리서치 분석 C그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-06-22",
+    "11\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시각디자인 리서치 분석 B그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-06-22",
+    "10\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시각디자인 리서치 분석 A그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-06-22"
+  ]
+}

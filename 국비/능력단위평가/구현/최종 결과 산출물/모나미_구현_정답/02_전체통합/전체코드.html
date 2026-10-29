@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../image/logo.jpg">
+  <title>MONAMI | HTML·CSS 한 파일 정답</title>
+  <!-- UIUXB_2610의 HTML/CSS 수업 예제를 참고한 모나미 데스크톱 학습용 정답 -->
+  <style>
+/* ============================================================
+   공통 CSS — 모든 섹션에서 사용하는 수업 코드
+   참고: UIUXB_2610 / 1코딩/마켓컬리/와이어프레임/style.css
+   원본의 초기화, .con, Flex, 이미지 규칙을 모나미 화면에 맞게 적용했습니다.
+   협업: 이 부분을 바꾸면 모든 섹션에 영향이 있습니다.
+   통합: 초기화와 @font-face는 한 번만 둡니다.
+   글꼴: 원본에서 사용한 Pretendard의 400/500/700을 로컬 파일로 연결합니다.
+   ============================================================ */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* .con은 전체 폭이 아니라 내부 콘텐츠 폭입니다.
+   원본 .con의 1050px을 모나미 데스크톱 기준 1400px로 조정했습니다. */
+.con {
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* img의 기본 아래쪽 글자 간격을 없애고 블록으로 배치합니다. */
+img {
+  display: block;
+}
+
+/* 원본 products-title / products-desc를 재사용한 제목 패턴입니다. */
+.section-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #111;
+}
+
+.section-desc {
+  font-size: 13px;
+  color: #777;
+}
+
+.title-line {
+  width: 26px;
+  height: 3px;
+  background-color: #c81939;
+}
+
+
+
+/* MON-01 시작 — 상단 전용. utility-nav와 main-nav를 구분해 목록 규칙이 섞이지 않게 합니다. */
+.utility-menu {
+  border: 1px solid #eee;
+}
+
+.utility-con {
+  height: 56px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utility-left {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.language {
+  width: 86px;
+  height: 28px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+.social-list {
+  display: flex;
+  gap: 6px;
+}
+
+.social-list img {
+  width: 30px;
+  height: 30px;
+}
+
+.utility-nav ul {
+  display: flex;
+  gap: 12px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.main-header {
+  border: 1px solid #eee;
+}
+
+.m-header-con {
+  height: 89px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  width: 162px;
+}
+
+.brand img {
+  width: 162px;
+  height: 89px;
+}
+
+.main-nav {
+  width: 1070px;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav li {
+  font-size: 16px;
+  color: #333;
+}
+
+/* 원본 #actions 아이콘의 :hover 패턴으로 글자 색만 바꿉니다. */
+.main-nav li:hover {
+  color: #c81939;
+}
+
+/* 검색 이미지와 전체 메뉴 아이콘을 담은 바깥 부모입니다.
+   display:flex: 두 자식을 기본 방향인 가로로 나란히 놓습니다.
+   gap:28px: 검색 이미지와 메뉴 아이콘 사이를 28px 띄웁니다.
+   align-items:center: 높이가 다른 두 아이콘의 세로 중심을 맞춥니다. */
+.actions {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+/* 검색은 실제 이미지 파일이므로 이미지의 표시 크기를 지정합니다. */
+.actions img {
+  width: 19px;
+  height: 18px;
+}
+
+/* 메뉴 아이콘의 부모: 안쪽 div 3개의 배치 방법을 정합니다.
+   width:20px: 메뉴 아이콘 묶음의 너비입니다.
+   display:flex: 안쪽 자식들을 Flex 방식으로 배치합니다.
+   flex-direction:column: 자식의 배치 방향을 가로에서 세로로 바꿉니다.
+   gap:5px: 첫째·둘째 선 사이와 둘째·셋째 선 사이에 각각 5px 간격을 둡니다.
+   선 3개의 높이 6px + 간격 두 곳 10px = 아이콘 전체 높이 16px입니다. */
+.menu-lines {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* 메뉴 아이콘의 자식: .menu-lines 안에 있는 div 모두에 적용합니다.
+   빈 div도 너비 20px·높이 2px·회색 배경을 가지면 얇은 가로선으로 보입니다.
+   이 규칙 하나가 자식 3개에 공통 적용되어 같은 모양의 선 3개가 만들어집니다.
+   다른 곳의 div에는 이 규칙이 적용되지 않습니다. */
+.menu-lines div {
+  width: 20px;
+  height: 2px;
+  background-color: #555;
+}
+
+/* MON-01 끝 */
+
+/* MON-02 시작 — background는 원본 button 초기화에서도 사용한 속성입니다.
+   여기서는 사진 URL·중앙 정렬·cover를 값으로 지정하여 문구 뒤에 사진을 둡니다. */
+.hero {
+  height: 652px;
+  background: #222 url('../image/hero.jpg') center / cover no-repeat;
+}
+
+.hero-con {
+  height: 100%;
+  align-items: center;
+  padding-left: 120px;
+}
+
+.hero-copy {
+  color: #fff;
+}
+
+.hero-title {
+  padding-bottom: 24px;
+}
+
+.hero-title p {
+  font-size: 50px;
+  font-weight: 400;
+  height: 63px;
+}
+
+.hero-desc p {
+  font-size: 15px;
+  color: #ddd;
+  padding-bottom: 5px;
+}
+
+/* MON-02 끝 */
+
+/* MON-03 시작 — 서로 다른 이미지 크기를 중첩 Flex 두 행으로 구성합니다. */
+.new-products {
+  padding-top: 88px;
+  padding-bottom: 90px;
+}
+
+.new-con {
+  width: 1200px;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.new-row {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.new-left {
+  width: 392px;
+}
+
+.new-heading {
+  height: 155px;
+}
+
+.new-heading .section-title span {
+  display: block;
+  height: 38px;
+}
+
+.new-heading .title-line {
+  margin: 12px 0 10px;
+}
+
+.new-card {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.new-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.new-card-01 {
+  width: 392px;
+  height: 205px;
+}
+
+.new-card-02 {
+  width: 786px;
+  height: 360px;
+}
+
+.new-card-03 {
+  width: 392px;
+  height: 292px;
+}
+
+.new-card-04 {
+  width: 450px;
+  height: 439px;
+}
+
+.new-card-05 {
+  width: 314px;
+  height: 292px;
+}
+
+/* MON-03 끝 */
+
+/* MON-04 시작 — 카드 구조는 원본과 같고 이미지·상품 정보·배치 값이 다릅니다. */
+.best-products {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #eee;
+}
+
+.best-heading {
+  text-align: center;
+}
+
+.best-heading .title-line {
+  margin: 14px auto 12px;
+}
+
+.brand-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.brand-tab {
+  width: 157px;
+  height: 36px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  color: #999;
+  font-size: 13px;
+}
+
+.brand-tab.active {
+  border: 2px solid #c81939;
+  color: #c81939;
+}
+
+.product-scroll {
+  overflow: auto;
+}
+
+.product-list {
+  width: 3016px;
+  display: flex;
+  gap: 9px;
+}
+
+.product-card {
+  width: 266px;
+  height: 505px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.product-image {
+  height: 390px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 30px 28px 18px;
+}
+
+.product-category {
+  font-size: 12px;
+  color: #aaa;
+  padding-bottom: 7px;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #111;
+  font-weight: 700;
+}
+
+.scroll-guide {
+  width: 850px;
+  margin: 55px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.scroll-rule {
+  width: 340px;
+  height: 1px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-label {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scroll-label img {
+  width: 21px;
+  height: 27px;
+}
+
+.scroll-label p {
+  font-size: 10px;
+  color: #888;
+}
+
+/* MON-04 끝 */
+
+/* MON-05 시작 — height:auto로 1920×1000 원본 이미지 비율을 유지합니다. */
+.brand-video img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* MON-05 끝 */
+
+/* MON-06 시작 — 각 칸에 box-sizing을 주어 padding 때문에 1400px을 넘지 않게 합니다. */
+.information {
+  background-color: #f7f7f7;
+}
+
+.information-con {
+  height: 355px;
+}
+
+.news {
+  width: 700px;
+  padding: 45px 49px 25px 0;
+  box-sizing: border-box;
+}
+
+.news-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-heading h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.news-heading span {
+  font-size: 11px;
+  color: #888;
+}
+
+.news > .title-line {
+  margin: 10px 0 24px;
+}
+
+.news-feature {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 18px;
+}
+
+.news-feature > img {
+  width: 164px;
+  height: 116px;
+  object-fit: cover;
+}
+
+.news-copy {
+  width: 467px;
+}
+
+.news-copy h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #222;
+  padding-bottom: 9px;
+}
+
+.news-copy > p {
+  font-size: 13px;
+  color: #888;
+}
+
+.news-copy .news-date {
+  padding-top: 25px;
+  text-align: right;
+  font-size: 12px;
+}
+
+.news-rule {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.news-list {
+  padding-top: 10px;
+}
+
+.news-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  font-size: 12px;
+  color: #888;
+}
+
+.info-panel {
+  width: 350px;
+  padding-top: 65px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inquiry {
+  background: #f5f5f5 url('../image/inquiry-bg.jpg') center top / 350px 355px no-repeat;
+}
+
+.shop {
+  background: #f5f5f5 url('../image/shop-bg.png') center top / 350px 365px no-repeat;
+}
+
+.panel-icon {
+  width: 60px;
+  height: 53px;
+  object-fit: contain;
+  margin: 0 0 22px;
+}
+
+.info-panel h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.info-panel .title-line {
+  margin: 10px 0 16px;
+}
+
+.panel-desc {
+  text-align: center;
+}
+
+.panel-desc p {
+  font-size: 13px;
+  color: #888;
+  padding-bottom: 4px;
+}
+
+.outline-btn {
+  width: 170px;
+  height: 38px;
+  border: 2px solid #c81939;
+  border-radius: 24px;
+  color: #c81939;
+  font-size: 12px;
+  margin: 30px 0 0;
+}
+
+/* MON-06 끝 */
+
+/* MON-07 시작 — 전체 배경과 안쪽 .con의 폭을 분리합니다. */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 65px;
+  background-color: #111;
+}
+
+.footer-con {
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.footer-rule {
+  width: 100%;
+  height: 1px;
+  background-color: #292929;
+}
+
+.footer-top > img {
+  width: 128px;
+  height: 32px;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 22px;
+  color: #777;
+  font-size: 12px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.company-info {
+  width: 570px;
+}
+
+.footer-bottom h2 {
+  font-size: 13px;
+  color: #ccc;
+  padding-bottom: 12px;
+}
+
+.company-info p {
+  font-size: 12px;
+  color: #555;
+  padding-bottom: 5px;
+}
+
+.customer-center {
+  width: 250px;
+}
+
+.customer-center .customer-tel {
+  font-size: 24px;
+  color: #777;
+  padding-bottom: 15px;
+}
+
+.kakao-btn {
+  width: 155px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #444;
+  color: #bbb;
+  font-size: 13px;
+}
+
+.family-site {
+  width: 245px;
+  height: 35px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #777;
+  font-size: 12px;
+}
+
+/* MON-07 끝 */
+
+</style>
+</head>
+<body>
+<!-- ============================================================
+  MON-01 시작: 상단 유틸리티 + 로고 + 주 메뉴
+  참고: 마켓컬리 index.html의 header, utility-menu, brand, nav, actions
+  구조: header > utility-menu + main-header
+  협업: .con 1400px은 푸터와 공유합니다. 메뉴를 추가하면 폭 합계도 확인합니다.
+  이미지: logo.jpg 162×89, SNS 이미지 각 30×30
+  범위: 메뉴·검색·전체 메뉴는 화면 구성 학습용 표시입니다. 새 JS를 넣지 않았습니다.
+============================================================ -->
+<header id="MON-01">
+  <div class="utility-menu">
+    <div class="con utility-con">
+      <div class="utility-left">
+        <div class="language">🇰🇷 KOR <span>⌄</span></div>
+        <div class="social-list">
+          <img src="../image/facebook.gif" alt="모나미 페이스북 아이콘">
+          <img src="../image/instagram.gif" alt="모나미 인스타그램 아이콘">
+          <img src="../image/youtube.png" alt="모나미 유튜브 아이콘">
+        </div>
+      </div>
+      <nav class="utility-nav" aria-label="유틸리티 메뉴 표시">
+        <ul><li>HOME</li><li>SITE MAP</li><li>CONTACT US</li></ul>
+      </nav>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="con m-header-con">
+      <h1 class="brand"><img src="../image/logo.jpg" alt="MONAMI 모나미"></h1>
+      <nav class="main-nav" aria-label="주 메뉴 표시">
+        <ul>
+          <li>모나미소개</li><li>모나미제품</li><li>NEWS &amp; VIDEO</li>
+          <li>브랜드스토어</li><li>모나미 미술대회</li><li>고객지원</li>
+          <li>기업 구매 / 개발</li>
+        </ul>
+      </nav>
+      <!-- actions: 검색 이미지와 전체 메뉴 아이콘을 한 줄로 묶는 부모입니다.
+           가로 배치와 두 아이콘 사이 간격은 CSS .actions에서 지정합니다. -->
+      <div class="actions">
+        <!-- 검색은 준비된 이미지 파일을 사용합니다. alt는 이미지의 의미를 설명합니다. -->
+        <img src="../image/search.gif" alt="검색 아이콘">
+
+        <!-- 전체 메뉴 아이콘(☰)은 이미지 파일 대신 아래의 빈 div 3개로 그립니다.
+             div 안에 글자가 없어도 CSS로 너비·높이·배경색을 주면 선이 보입니다.
+             부모 .menu-lines: 선 3개를 세로로 배치하고, 선 사이를 5px 띄웁니다.
+             자식 .menu-lines div: 각 선을 너비 20px, 높이 2px, 회색(#555)으로 만듭니다.
+             role="img": 이 묶음을 화면 읽기 프로그램에 하나의 이미지로 알려줍니다.
+             aria-label: 그 이미지의 이름을 '전체 메뉴 아이콘'으로 알려줍니다.
+             현재는 모양만 표시합니다. 클릭해서 메뉴를 여는 기능은 없습니다. -->
+        <div class="menu-lines" role="img" aria-label="전체 메뉴 아이콘">
+          <div></div> <!-- 첫 번째 자식: 위쪽 가로선 -->
+          <div></div> <!-- 두 번째 자식: 가운데 가로선 -->
+          <div></div> <!-- 세 번째 자식: 아래쪽 가로선 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- MON-01 끝 -->
+<main>
+<!-- ============================================================
+  MON-02 시작: 메인 비주얼
+  참고: 마켓컬리 banner의 대표 이미지 영역 + 제목·설명 패턴
+  협업: 사진은 CSS .hero에서 연결합니다. 사진을 바꾸면 글자 대비를 확인합니다.
+  배치: 사진과 문구를 absolute로 겹치지 않고 배경 + 내부 Flex로 구성합니다.
+  폭: 1400px 컨테이너, 문구 왼쪽 여백 120px, 전체 높이 652px
+============================================================ -->
+<div id="MON-02" class="hero">
+  <div class="con hero-con">
+    <div class="hero-copy">
+      <div class="hero-title">
+        <p>어쩌면 삶은</p><p>인생이라는 종이 위에</p>
+        <p>써 내려가는</p><p>펜의 기록 같습니다.</p>
+      </div>
+      <div class="hero-desc">
+        <p>그중에서도 지우고 싶지 않은 기록이 있습니다.</p>
+        <p>모나미는 언제나 당신의 행복한 기록과 함께 합니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MON-02 끝 -->
+<!-- ============================================================
+  MON-03 시작: NEW ARRIVALS
+  참고: 마켓컬리 product-list > product-card > product-image 패턴
+  행 1: (제목 + 392×205 이미지) 392px + 간격 22px + 786×360 이미지
+  행 2: 392×292 + 450×439 + 314×292, 간격 각 22px
+  협업: 두 행 모두 폭 합계가 1200px입니다. 이미지 하나만 늘리면 행 전체가 달라집니다.
+  공통: 이 영역의 .new-con은 .con의 폭만 1200px로 재정의합니다.
+  상품명: 각 img alt에 기록했습니다. 원사이트의 hover 오버레이는 추가하지 않았습니다.
+============================================================ -->
+<div id="MON-03" class="new-products">
+  <div class="con new-con">
+    <div class="new-row">
+      <div class="new-left">
+        <div class="new-heading">
+          <h2 class="section-title"><span>NEW</span><span>ARRIVALS</span></h2>
+          <div class="title-line"></div>
+          <p class="section-desc">가장 먼저 만나는 설레는 기다림</p>
+        </div>
+        <div class="new-card new-card-01">
+          <img src="../image/new-01.jpg" alt="PEN — FX ZETA C3, 여러 색상의 볼펜">
+        </div>
+      </div>
+      <div class="new-card new-card-02">
+        <img src="../image/new-02.jpg" alt="NOTE — 지퀀스, 세 가지 색상의 노트">
+      </div>
+    </div>
+    <div class="new-row">
+      <div class="new-card new-card-03">
+        <img src="../image/new-03.jpg" alt="PREMIUM PEN — 프러스펜3000프라임과 케이스">
+      </div>
+      <div class="new-card new-card-04">
+        <img src="../image/new-04.jpg" alt="FOUNTAIN PEN — 153 아이디 만년필과 케이스">
+      </div>
+      <div class="new-card new-card-05">
+        <img src="../image/new-05.jpg" alt="WATER-BASED MARKER — 프러스펜 3000, 60색 마커">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MON-03 끝 -->
+<!-- ============================================================
+  MON-04 시작: BEST PRODUCT
+  참고: 마켓컬리 brand-tabs의 active 표시 + 반복되는 product-card
+  협업: 카드 266px, 사이 간격 9px, 전체 목록 폭 3016px = 266×11 + 9×10
+  범위: 프리미엄 펜 목록을 보여줍니다. 카테고리 버튼은 disabled인 표시용입니다.
+  스크롤: overflow:auto의 브라우저 기본 가로 스크롤입니다. JS 드래그가 아닙니다.
+============================================================ -->
+<div id="MON-04" class="best-products">
+  <div class="best-heading">
+    <h2 class="section-title">BEST PRODUCT</h2>
+    <div class="title-line"></div>
+    <p class="section-desc">언제 어디서나 생활 속에 함께하는 모나미</p>
+  </div>
+  <div class="brand-tabs" aria-label="상품 카테고리 표시">
+    <button type="button" class="brand-tab active" disabled>프리미엄 펜</button>
+    <button type="button" class="brand-tab" disabled>펜·펜슬</button>
+    <button type="button" class="brand-tab" disabled>마카·컬러링</button>
+    <button type="button" class="brand-tab" disabled>노트·사무용품</button>
+  </div>
+  <div class="product-scroll" tabindex="0" role="region" aria-label="프리미엄 펜 상품 목록, 가로 스크롤">
+    <div class="product-list">
+      <!-- 상품 01: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-01.jpg" alt="프러스펜 3000 프라임"></div>
+        <div class="product-info"><p class="product-category">프리미엄 펜</p><p class="product-name">프러스펜 3000 프라임</p></div>
+      </div>
+      <!-- 상품 02: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-02.jpg" alt="153 리스펙트 리파인"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 리스펙트 리파인</p></div>
+      </div>
+      <!-- 상품 03: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-03.jpg" alt="153 아이디 만년필"></div>
+        <div class="product-info"><p class="product-category">만년필</p><p class="product-name">153 아이디 만년필</p></div>
+      </div>
+      <!-- 상품 04: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-04.jpg" alt="153 네오 만년필 EF"></div>
+        <div class="product-info"><p class="product-category">만년필</p><p class="product-name">153 네오 만년필 EF</p></div>
+      </div>
+      <!-- 상품 05: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-05.jpg" alt="153 블랙 &amp; 화이트"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 블랙 &amp; 화이트</p></div>
+      </div>
+      <!-- 상품 06: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-06.jpg" alt="153 골드"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 골드</p></div>
+      </div>
+      <!-- 상품 07: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-07.jpg" alt="153 아이디"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 아이디</p></div>
+      </div>
+      <!-- 상품 08: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-08.jpg" alt="60주년 프러스펜 3000 데스크펜 스페셜 에디션"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">60주년 프러스펜 3000 데스크펜 스페셜 에디션</p></div>
+      </div>
+      <!-- 상품 09: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-09.jpg" alt="153 아이디 샤프"></div>
+        <div class="product-info"><p class="product-category">고급샤프</p><p class="product-name">153 아이디 샤프</p></div>
+      </div>
+      <!-- 상품 10: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-10.jpg" alt="153 네오"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 네오</p></div>
+      </div>
+      <!-- 상품 11: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-11.jpg" alt="153 리스펙트"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 리스펙트</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-guide">
+    <div class="scroll-rule"><img src="../image/arrow-left.gif" alt=""></div>
+    <div class="scroll-label"><img src="../image/scroll-cursor.gif" alt=""><p>SCROLL</p></div>
+    <div class="scroll-rule"><img src="../image/arrow-right.gif" alt=""></div>
+  </div>
+</div>
+<!-- MON-04 끝 -->
+<!-- ============================================================
+  MON-05 시작: 브랜드 영상 자리의 대표 이미지
+  참고: 마켓컬리 banner img의 width:100%, object-fit 패턴
+  범위: 원사이트의 bg_video.jpg를 정적인 이미지로 사용합니다.
+  협업: 수업 참고 코드에는 video 태그·재생 JS가 없어 재생 기능을 추가하지 않았습니다.
+  확인: 이미지의 원본 비율을 유지합니다. 이 파일을 영상 재생 완료 증빙으로 쓰지 않습니다.
+============================================================ -->
+<div id="MON-05" class="brand-video">
+  <img src="../image/video-poster.jpg" alt="브랜드 영상 대표 이미지: 모나미 펜으로 그림을 그리는 손">
+</div>
+<!-- MON-05 끝 -->
+<!-- ============================================================
+  MON-06 시작: 뉴스 + 문의 + 공식 스토어
+  참고: 마켓컬리 이미지·정보 묶음, 제목·설명, add-btn의 버튼 테두리
+  폭: 1400px = 뉴스 700px + 문의 350px + 스토어 350px
+  협업: 뉴스 문구가 길어지면 글자 크기를 줄이지 말고 줄 수·내용 길이를 먼저 검토합니다.
+  상태: 버튼은 외부 요청을 보내지 않는 disabled 표시용입니다.
+============================================================ -->
+<div id="MON-06" class="information">
+  <div class="con information-con">
+    <div class="news">
+      <div class="news-heading"><h2>MONAMI NEWS</h2><span>MORE</span></div>
+      <div class="title-line"></div>
+      <div class="news-feature">
+        <img src="../image/news.png" alt="리쥼 3·리쥼 S 지워지는 중성펜 출시 안내 이미지">
+        <div class="news-copy">
+          <h3>모나미, 지워지는 중성펜 리쥼 3·리쥼 S 신제품 출시</h3>
+          <p>60도 마찰열에 지워지는 특수잉크를 적용해 손쉽게 지울 수 있는 신제품을 소개합니다.</p>
+          <p class="news-date">2025-12-15</p>
+        </div>
+      </div>
+      <div class="news-rule"></div>
+      <ul class="news-list">
+        <li><span>‘쓰는 펜’과 ‘그리는 펜’ 직접 경험해보세요!</span><span>2025-12-11</span></li>
+        <li><span>주방 필수품 키친마카 라인업 확대</span><span>2025-11-17</span></li>
+        <li><span>‘153 독도’ 수익금 기부 및 특별 기획</span><span>2025-10-24</span></li>
+      </ul>
+    </div>
+    <div class="inquiry info-panel">
+      <img class="panel-icon" src="../image/inquiry-icon.png" alt="">
+      <h2>INQUIRY</h2>
+      <div class="title-line"></div>
+      <div class="panel-desc"><p>언제나 소중한 의견에 귀 기울이겠습니다.</p><p>궁금한 사항은 문의하세요.</p></div>
+      <button type="button" class="outline-btn" disabled>INQUIRY NOW</button>
+    </div>
+    <div class="shop info-panel">
+      <img class="panel-icon" src="../image/shop-icon.png" alt="">
+      <h2>모나미 네이버 브랜드스토어</h2>
+      <div class="title-line"></div>
+      <div class="panel-desc"><p>모나미 공식 쇼핑몰입니다.</p><p>공식몰만의 다양한 혜택을 만나보세요.</p></div>
+      <button type="button" class="outline-btn" disabled>BUY NOW</button>
+    </div>
+  </div>
+</div>
+<!-- MON-06 끝 -->
+</main>
+<!-- ============================================================
+  MON-07 시작: 푸터
+  참고: 마켓컬리 utility-con의 양끝 정렬과 제목·설명·버튼 패턴
+  협업: .con 1400px을 상단과 공유합니다. 회사 정보·전화번호는 내용 교체 지점입니다.
+  범위: 개인정보 팝업·패밀리 사이트 펼침·채팅 연결은 새로 추가하지 않았습니다.
+  footer 태그 대신 수업에서 사용한 div 묶음으로 하단을 구성했습니다.
+============================================================ -->
+<div id="MON-07" class="footer" role="contentinfo">
+  <div class="con footer-con">
+    <div class="footer-top">
+      <img src="../image/footer-logo.jpg" alt="MONAMI 모나미 푸터 로고">
+      <ul class="footer-menu"><li>회사소개</li><li>개인정보처리방침</li><li>이메일무단수집거부</li></ul>
+    </div>
+    <div class="footer-rule"></div>
+    <div class="footer-bottom">
+      <div class="company-info">
+        <h2>INFO</h2>
+        <p>ADDRESS : 경기도 용인시 수지구 손곡로 17　 l　 TEL : 031-216-0153　 l　 FAX : 031-270-5154</p>
+        <p>COPYRIGHT(C) MONAMI.CO.,LTD. ALL RIGHTS RESERVED.</p>
+      </div>
+      <div class="customer-center">
+        <h2>CUSTOMER CENTER</h2><p class="customer-tel">080-022-0153</p>
+        <button type="button" class="kakao-btn" disabled>카카오톡 문의</button>
+      </div>
+      <div class="family-site">FAMILY SITE <span>⌃</span></div>
+    </div>
+  </div>
+</div>
+<!-- MON-07 끝 -->
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "student": "임연우",
+  "pages": [
+    {
+      "page": 1,
+      "width": 24467.0,
+      "height": 23761.0,
+      "lines": 712,
+      "characters": 14799
+    }
+  ],
+  "method": "PyMuPDF get_texttrace Unicode glyphs, line origin and bounding boxes; original PDF unchanged",
+  "visualReview": "Overview rendered; text content and figures require subsequent human/model visual review before scoring."
+}

@@ -1,0 +1,749 @@
+{
+  "student": "신윤아",
+  "url": "http://127.0.0.1:8766/%EC%8B%A0%EC%9C%A4%EC%95%84/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/first_test_MNM/%EB%AA%A8%EB%82%98%EB%AF%B8%201%EC%B0%A8/index.html",
+  "status": 200,
+  "browser": "155.0.8059.85",
+  "measurements": [
+    {
+      "innerWidth": 1920,
+      "clientWidth": 1905,
+      "scrollWidth": 1920,
+      "boxes": [
+        {
+          "selector": ".head_top .conwrap",
+          "x": 57.15625,
+          "y": 0,
+          "width": 1790.6875,
+          "height": 44,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 57.1562px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1791,
+          "clientWidth": 1791
+        },
+        {
+          "selector": ".category",
+          "x": 57.15625,
+          "y": 59,
+          "width": 1790.6875,
+          "height": 89,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 57.1562px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1791,
+          "clientWidth": 1791
+        },
+        {
+          "selector": ".category ul",
+          "x": 224.15625,
+          "y": 59,
+          "width": 1461.6875,
+          "height": 89,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "17px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(48, 48, 48)",
+          "scrollWidth": 1462,
+          "clientWidth": 1462
+        },
+        {
+          "selector": ".category ul li:first-child",
+          "x": 224.15625,
+          "y": 91,
+          "width": 208.8125,
+          "height": 25,
+          "display": "list-item",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "17px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(48, 48, 48)",
+          "scrollWidth": 209,
+          "clientWidth": 209
+        },
+        {
+          "selector": ".new",
+          "x": 0,
+          "y": 800,
+          "width": 1905,
+          "height": 999,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "75px 0px 90px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1905,
+          "clientWidth": 1905
+        },
+        {
+          "selector": ".new .con",
+          "x": 352.5,
+          "y": 875,
+          "width": 1200,
+          "height": 986,
+          "display": "block",
+          "gap": "normal",
+          "padding": "75px 0px 90px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        },
+        {
+          "selector": ".toparea",
+          "x": 352.5,
+          "y": 963,
+          "width": 1200,
+          "height": 360,
+          "display": "flex",
+          "gap": "22px",
+          "padding": "0px",
+          "margin": "13px 0px 22px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        },
+        {
+          "selector": ".toparea .left",
+          "x": 352.5,
+          "y": 963,
+          "width": 392,
+          "height": 360,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 392,
+          "clientWidth": 392
+        },
+        {
+          "selector": ".image1",
+          "x": 352.5,
+          "y": 1118,
+          "width": 392,
+          "height": 205,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 392,
+          "clientWidth": 392
+        },
+        {
+          "selector": ".image2",
+          "x": 766.5,
+          "y": 963,
+          "width": 786,
+          "height": 360,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 786,
+          "clientWidth": 786
+        },
+        {
+          "selector": ".btmarea",
+          "x": 352.5,
+          "y": 1345,
+          "width": 1200,
+          "height": 439,
+          "display": "flex",
+          "gap": "22px",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        }
+      ],
+      "images": [
+        {
+          "src": "./image/lang_kor.png",
+          "alt": "한국어",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "./image/sns_facebook.png",
+          "alt": "페이스북",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/sns_insta.png",
+          "alt": "인스타그램",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/sns_youtube.png",
+          "alt": "유투브",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/logo.jpg",
+          "alt": "모나미 로고",
+          "complete": true,
+          "naturalWidth": 162,
+          "naturalHeight": 89,
+          "width": 162,
+          "height": 89
+        },
+        {
+          "src": "./image/btn_search.jpg",
+          "alt": "검색",
+          "complete": true,
+          "naturalWidth": 19,
+          "naturalHeight": 18,
+          "width": 19,
+          "height": 18
+        },
+        {
+          "src": "./image/btn_all.jpg",
+          "alt": "전체 카테고리",
+          "complete": true,
+          "naturalWidth": 19,
+          "naturalHeight": 16,
+          "width": 19,
+          "height": 16
+        },
+        {
+          "src": "./image/visual1.jpg",
+          "alt": "배너",
+          "complete": true,
+          "naturalWidth": 1920,
+          "naturalHeight": 652,
+          "width": 1920,
+          "height": 652
+        },
+        {
+          "src": "./image/new1.jpg",
+          "alt": "new1",
+          "complete": true,
+          "naturalWidth": 392,
+          "naturalHeight": 205,
+          "width": 392,
+          "height": 205
+        },
+        {
+          "src": "./image/new2.jpg",
+          "alt": "new2",
+          "complete": true,
+          "naturalWidth": 786,
+          "naturalHeight": 360,
+          "width": 786,
+          "height": 360
+        },
+        {
+          "src": "./image/new3.jpg",
+          "alt": "new3",
+          "complete": true,
+          "naturalWidth": 392,
+          "naturalHeight": 292,
+          "width": 392,
+          "height": 292
+        },
+        {
+          "src": "./image/new4.jpg",
+          "alt": "new4",
+          "complete": true,
+          "naturalWidth": 450,
+          "naturalHeight": 439,
+          "width": 450,
+          "height": 439
+        },
+        {
+          "src": "./image/new5.jpg",
+          "alt": "new5",
+          "complete": true,
+          "naturalWidth": 314,
+          "naturalHeight": 292,
+          "width": 314,
+          "height": 292
+        }
+      ],
+      "text": "KOR\nHOME\nSITE MAP\nCONTACT US\n모나미소개\n모나미제품\nNEWS＆VIDEO\n브랜드스토어\n모나미 미술대회\n고객지원\n기업 구매/개발\nNEW\nARRIVALS\n\n가장 먼저 만나는 설레는 기다림",
+      "fontStatus": "loaded"
+    },
+    {
+      "innerWidth": 1440,
+      "clientWidth": 1425,
+      "scrollWidth": 1920,
+      "boxes": [
+        {
+          "selector": ".head_top .conwrap",
+          "x": 42.75,
+          "y": -719,
+          "width": 1339.5,
+          "height": 44,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 42.75px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1340,
+          "clientWidth": 1340
+        },
+        {
+          "selector": ".category",
+          "x": 42.75,
+          "y": -660,
+          "width": 1339.5,
+          "height": 89,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 42.75px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1340,
+          "clientWidth": 1340
+        },
+        {
+          "selector": ".category ul",
+          "x": 209.75,
+          "y": -660,
+          "width": 1010.5,
+          "height": 89,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "17px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(48, 48, 48)",
+          "scrollWidth": 1011,
+          "clientWidth": 1011
+        },
+        {
+          "selector": ".category ul li:first-child",
+          "x": 209.75,
+          "y": -628,
+          "width": 144.34375,
+          "height": 25,
+          "display": "list-item",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "17px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(48, 48, 48)",
+          "scrollWidth": 144,
+          "clientWidth": 144
+        },
+        {
+          "selector": ".new",
+          "x": 0,
+          "y": 81,
+          "width": 1425,
+          "height": 999,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "75px 0px 90px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        {
+          "selector": ".new .con",
+          "x": 112.5,
+          "y": 156,
+          "width": 1200,
+          "height": 986,
+          "display": "block",
+          "gap": "normal",
+          "padding": "75px 0px 90px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        },
+        {
+          "selector": ".toparea",
+          "x": 112.5,
+          "y": 244,
+          "width": 1200,
+          "height": 360,
+          "display": "flex",
+          "gap": "22px",
+          "padding": "0px",
+          "margin": "13px 0px 22px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        },
+        {
+          "selector": ".toparea .left",
+          "x": 112.5,
+          "y": 244,
+          "width": 392,
+          "height": 360,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 392,
+          "clientWidth": 392
+        },
+        {
+          "selector": ".image1",
+          "x": 112.5,
+          "y": 399,
+          "width": 392,
+          "height": 205,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 392,
+          "clientWidth": 392
+        },
+        {
+          "selector": ".image2",
+          "x": 526.5,
+          "y": 244,
+          "width": 786,
+          "height": 360,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 786,
+          "clientWidth": 786
+        },
+        {
+          "selector": ".btmarea",
+          "x": 112.5,
+          "y": 626,
+          "width": 1200,
+          "height": 439,
+          "display": "flex",
+          "gap": "22px",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, \"Noto Sans KR\", sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        }
+      ],
+      "images": [
+        {
+          "src": "./image/lang_kor.png",
+          "alt": "한국어",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "./image/sns_facebook.png",
+          "alt": "페이스북",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/sns_insta.png",
+          "alt": "인스타그램",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/sns_youtube.png",
+          "alt": "유투브",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/logo.jpg",
+          "alt": "모나미 로고",
+          "complete": true,
+          "naturalWidth": 162,
+          "naturalHeight": 89,
+          "width": 162,
+          "height": 89
+        },
+        {
+          "src": "./image/btn_search.jpg",
+          "alt": "검색",
+          "complete": true,
+          "naturalWidth": 19,
+          "naturalHeight": 18,
+          "width": 19,
+          "height": 18
+        },
+        {
+          "src": "./image/btn_all.jpg",
+          "alt": "전체 카테고리",
+          "complete": true,
+          "naturalWidth": 19,
+          "naturalHeight": 16,
+          "width": 19,
+          "height": 16
+        },
+        {
+          "src": "./image/visual1.jpg",
+          "alt": "배너",
+          "complete": true,
+          "naturalWidth": 1920,
+          "naturalHeight": 652,
+          "width": 1920,
+          "height": 652
+        },
+        {
+          "src": "./image/new1.jpg",
+          "alt": "new1",
+          "complete": true,
+          "naturalWidth": 392,
+          "naturalHeight": 205,
+          "width": 392,
+          "height": 205
+        },
+        {
+          "src": "./image/new2.jpg",
+          "alt": "new2",
+          "complete": true,
+          "naturalWidth": 786,
+          "naturalHeight": 360,
+          "width": 786,
+          "height": 360
+        },
+        {
+          "src": "./image/new3.jpg",
+          "alt": "new3",
+          "complete": true,
+          "naturalWidth": 392,
+          "naturalHeight": 292,
+          "width": 392,
+          "height": 292
+        },
+        {
+          "src": "./image/new4.jpg",
+          "alt": "new4",
+          "complete": true,
+          "naturalWidth": 450,
+          "naturalHeight": 439,
+          "width": 450,
+          "height": 439
+        },
+        {
+          "src": "./image/new5.jpg",
+          "alt": "new5",
+          "complete": true,
+          "naturalWidth": 314,
+          "naturalHeight": 292,
+          "width": 314,
+          "height": 292
+        }
+      ],
+      "text": "KOR\nHOME\nSITE MAP\nCONTACT US\n모나미소개\n모나미제품\nNEWS＆VIDEO\n브랜드스토어\n모나미 미술대회\n고객지원\n기업 구매/개발\nNEW\nARRIVALS\n\n가장 먼저 만나는 설레는 기다림",
+      "fontStatus": "loaded"
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "hover": {
+    "selector": ".category ul li:first-child",
+    "before": "rgb(48, 48, 48)",
+    "after": "rgb(196, 15, 57)",
+    "changed": true
+  },
+  "css": [
+    {
+      "href": "http://127.0.0.1:8766/%EC%8B%A0%EC%9C%A4%EC%95%84/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/first_test_MNM/%EB%AA%A8%EB%82%98%EB%AF%B8%201%EC%B0%A8/style.css",
+      "rules": [
+        {
+          "selector": "html",
+          "css": "overflow-y: scroll;"
+        },
+        {
+          "selector": "body",
+          "css": "font-family: Montserrat, \"Noto Sans KR\", sans-serif; margin: 0px;"
+        },
+        {
+          "selector": ".head_top",
+          "css": "height: 58px; border-bottom: 1px solid rgb(234, 234, 234);"
+        },
+        {
+          "selector": ".head_top .conwrap",
+          "css": "display: flex; justify-content: space-between; height: 44px; width: 94%; margin: 0px auto;"
+        },
+        {
+          "selector": ".sns ul",
+          "css": "display: flex; gap: 7px; list-style: none; padding: 0px; margin: 0px;"
+        },
+        {
+          "selector": ".sns img",
+          "css": "display: block; width: 30px; height: 30px;"
+        },
+        {
+          "selector": ".links",
+          "css": "display: flex; align-items: center; gap: 12px; margin-top: 14px;"
+        },
+        {
+          "selector": ".topmenu",
+          "css": "float: right; margin-top: 20px; color: rgb(155, 154, 154); font-size: 11px; line-height: 20px;"
+        },
+        {
+          "selector": ".topmenu ul",
+          "css": "display: flex; gap: 22px; list-style: none; margin: 0px; padding: 0px;"
+        },
+        {
+          "selector": ".lang",
+          "css": "box-sizing: border-box; display: flex; align-items: center; gap: 6px; width: 88px; height: 30px; padding: 0px 10px; border: 1px solid rgb(234, 234, 234); border-radius: 10px; color: rgb(0, 0, 0); font-size: 11px; font-weight: 400;"
+        },
+        {
+          "selector": ".lang img",
+          "css": "display: block; width: 13px; height: 11px;"
+        },
+        {
+          "selector": ".category",
+          "css": "height: 89px; width: 94%; margin: 0px auto; display: flex;"
+        },
+        {
+          "selector": ".category ul",
+          "css": "display: flex; flex: 1 1 0%; align-items: center; list-style: none; height: 100%; font-size: 17px; color: rgb(48, 48, 48); margin: 0px; padding: 0px;"
+        },
+        {
+          "selector": ".category ul li",
+          "css": "flex: 1 1 0%; text-align: center;"
+        },
+        {
+          "selector": ".category ul li:hover",
+          "css": "color: rgb(196, 15, 57);"
+        },
+        {
+          "selector": ".category .logo",
+          "css": "display: block; margin-right: 5px;"
+        },
+        {
+          "selector": ".search",
+          "css": "flex: 0 0 162px; display: flex; align-items: center; justify-content: flex-end; gap: 28px;"
+        },
+        {
+          "selector": ".bgarea",
+          "css": "height: 652px;"
+        },
+        {
+          "selector": ".new",
+          "css": "height: 999px; box-sizing: border-box; padding: 75px 0px 90px; color: rgb(85, 85, 85); display: flex; justify-content: center; align-items: flex-start;"
+        },
+        {
+          "selector": ".new .con",
+          "css": "width: 1200px; height: 821px; padding: 75px 0px 90px;"
+        },
+        {
+          "selector": ".tit h2",
+          "css": "font-size: 32px; font-weight: 600; color: rgb(0, 0, 0); margin: 0px;"
+        },
+        {
+          "selector": ".tit h2::after",
+          "css": "content: \"\"; display: block; width: 26px; height: 4px; margin-top: 10px; background: rgb(196, 15, 57);"
+        },
+        {
+          "selector": ".tit p",
+          "css": "font-size: 13px; color: rgb(110, 110, 110); margin-top: 10px;"
+        },
+        {
+          "selector": ".toparea",
+          "css": "display: flex; gap: 22px; margin: 13px 0px 22px;"
+        },
+        {
+          "selector": ".toparea .left",
+          "css": "width: 392px; height: 360px; display: flex; flex-direction: column; justify-content: space-between;"
+        },
+        {
+          "selector": ".toparea img",
+          "css": "display: block; border-radius: 20px;"
+        },
+        {
+          "selector": ".btmarea",
+          "css": "height: 439px; display: flex; align-items: flex-start; gap: 22px;"
+        },
+        {
+          "selector": ".btmarea img",
+          "css": "border-radius: 20px;"
+        },
+        {
+          "selector": ".product",
+          "css": ""
+        }
+      ]
+    }
+  ],
+  "verifiedAt": "2026-10-26T04:25:37.336Z"
+}

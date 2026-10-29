@@ -1,0 +1,494 @@
+{
+  "student": "전해주",
+  "url": "http://127.0.0.1:8766/%EC%A0%84%ED%95%B4%EC%A3%BC/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/%EB%AA%A8%EB%82%98%EB%AF%B8%EC%8B%9C%ED%97%98/index.html",
+  "status": 200,
+  "browser": "155.0.8059.85",
+  "measurements": [
+    {
+      "innerWidth": 1920,
+      "clientWidth": 1905,
+      "scrollWidth": 1905,
+      "boxes": [
+        {
+          "selector": ".head-top",
+          "x": 277.5,
+          "y": 0,
+          "width": 1350,
+          "height": 60,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 277.5px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1350,
+          "clientWidth": 1350
+        },
+        {
+          "selector": ".head-left",
+          "x": 277.5,
+          "y": 0,
+          "width": 204,
+          "height": 59,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 204,
+          "clientWidth": 204
+        },
+        {
+          "selector": ".language",
+          "x": 277.5,
+          "y": 15.5,
+          "width": 80.578125,
+          "height": 28,
+          "display": "flex",
+          "gap": "12px",
+          "padding": "5px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 79,
+          "clientWidth": 79
+        },
+        {
+          "selector": ".head-right",
+          "x": 1423.5,
+          "y": 0,
+          "width": 204,
+          "height": 59,
+          "display": "flex",
+          "gap": "15px",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "11px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(155, 154, 154)",
+          "scrollWidth": 204,
+          "clientWidth": 204
+        },
+        {
+          "selector": ".banner",
+          "x": 0,
+          "y": 60,
+          "width": 1905,
+          "height": 652,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1905,
+          "clientWidth": 1905
+        },
+        {
+          "selector": ".product",
+          "x": 0,
+          "y": 712,
+          "width": 1905,
+          "height": 951,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1905,
+          "clientWidth": 1905
+        },
+        {
+          "selector": ".product-txt",
+          "x": 0,
+          "y": 712,
+          "width": 1905,
+          "height": 109,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "70px 0px 0px",
+          "margin": "0px",
+          "fontSize": "32px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1905,
+          "clientWidth": 1905
+        },
+        {
+          "selector": ".line",
+          "x": 939.5,
+          "y": 821,
+          "width": 26,
+          "height": 18,
+          "display": "block",
+          "gap": "normal",
+          "padding": "15px 0px 0px",
+          "margin": "0px 939.5px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 26,
+          "clientWidth": 26
+        },
+        {
+          "selector": ".txt",
+          "x": 0,
+          "y": 839,
+          "width": 1905,
+          "height": 35,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "15px 0px 0px",
+          "margin": "0px",
+          "fontSize": "13.5px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1905,
+          "clientWidth": 1905
+        }
+      ],
+      "images": [
+        {
+          "src": "./head_top/lang_kor.gif",
+          "alt": "태극기",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "./head_top/lang_arr.gif",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 5,
+          "width": 7,
+          "height": 5
+        },
+        {
+          "src": "./head_top/sns_facebook.gif",
+          "alt": "페이스북",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./head_top/sns_insta.gif",
+          "alt": "인스타그램",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./head_top/sns_youtube.png",
+          "alt": "유튜브",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./visual1.jpg",
+          "alt": "모나미 메인 배너",
+          "complete": true,
+          "naturalWidth": 1920,
+          "naturalHeight": 652,
+          "width": 1905,
+          "height": 652
+        }
+      ],
+      "text": "KOR\nHOME\nSITE MAP\nCONTECT US\nBEST PRODUCT\n언제 어디서나 생활 속에 함께하는 모나미",
+      "fontStatus": "loaded"
+    },
+    {
+      "innerWidth": 1440,
+      "clientWidth": 1425,
+      "scrollWidth": 1425,
+      "boxes": [
+        {
+          "selector": ".head-top",
+          "x": 37.5,
+          "y": -583,
+          "width": 1350,
+          "height": 60,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 37.5px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1350,
+          "clientWidth": 1350
+        },
+        {
+          "selector": ".head-left",
+          "x": 37.5,
+          "y": -583,
+          "width": 204,
+          "height": 59,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 204,
+          "clientWidth": 204
+        },
+        {
+          "selector": ".language",
+          "x": 37.5,
+          "y": -567.5,
+          "width": 80.578125,
+          "height": 28,
+          "display": "flex",
+          "gap": "12px",
+          "padding": "5px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 79,
+          "clientWidth": 79
+        },
+        {
+          "selector": ".head-right",
+          "x": 1183.5,
+          "y": -583,
+          "width": 204,
+          "height": 59,
+          "display": "flex",
+          "gap": "15px",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "11px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(155, 154, 154)",
+          "scrollWidth": 204,
+          "clientWidth": 204
+        },
+        {
+          "selector": ".banner",
+          "x": 0,
+          "y": -523,
+          "width": 1425,
+          "height": 652,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        {
+          "selector": ".product",
+          "x": 0,
+          "y": 129,
+          "width": 1425,
+          "height": 951,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        {
+          "selector": ".product-txt",
+          "x": 0,
+          "y": 129,
+          "width": 1425,
+          "height": 109,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "70px 0px 0px",
+          "margin": "0px",
+          "fontSize": "32px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        {
+          "selector": ".line",
+          "x": 699.5,
+          "y": 238,
+          "width": 26,
+          "height": 18,
+          "display": "block",
+          "gap": "normal",
+          "padding": "15px 0px 0px",
+          "margin": "0px 699.5px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 26,
+          "clientWidth": 26
+        },
+        {
+          "selector": ".txt",
+          "x": 0,
+          "y": 256,
+          "width": 1425,
+          "height": 35,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "15px 0px 0px",
+          "margin": "0px",
+          "fontSize": "13.5px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(85, 85, 85)",
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        }
+      ],
+      "images": [
+        {
+          "src": "./head_top/lang_kor.gif",
+          "alt": "태극기",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "./head_top/lang_arr.gif",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 5,
+          "width": 7,
+          "height": 5
+        },
+        {
+          "src": "./head_top/sns_facebook.gif",
+          "alt": "페이스북",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./head_top/sns_insta.gif",
+          "alt": "인스타그램",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./head_top/sns_youtube.png",
+          "alt": "유튜브",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./visual1.jpg",
+          "alt": "모나미 메인 배너",
+          "complete": true,
+          "naturalWidth": 1920,
+          "naturalHeight": 652,
+          "width": 1425,
+          "height": 652
+        }
+      ],
+      "text": "KOR\nHOME\nSITE MAP\nCONTECT US\nBEST PRODUCT\n언제 어디서나 생활 속에 함께하는 모나미",
+      "fontStatus": "loaded"
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "hover": null,
+  "css": [
+    {
+      "href": "http://127.0.0.1:8766/%EC%A0%84%ED%95%B4%EC%A3%BC/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/%EB%AA%A8%EB%82%98%EB%AF%B8%EC%8B%9C%ED%97%98/style.css",
+      "rules": [
+        {
+          "selector": "body",
+          "css": "margin: 0px; font-family: Montserrat, sans-serif;"
+        },
+        {
+          "selector": ".head-top",
+          "css": "height: 59px; width: 1350px; border-bottom: 1px solid rgb(234, 234, 234); margin: auto; display: flex; justify-content: space-between;"
+        },
+        {
+          "selector": ".head-left",
+          "css": "height: 59px; width: 204px; display: flex; align-items: center;"
+        },
+        {
+          "selector": ".language",
+          "css": "height: 16px; width: 86px; border: 1px solid rgb(234, 234, 234); border-radius: 8px; display: flex; justify-content: center; gap: 12px; align-items: center; padding: 5px;"
+        },
+        {
+          "selector": ".language-kor",
+          "css": "font-size: 11px; font-family: Montserrat, sans-serif;"
+        },
+        {
+          "selector": ".language-arr img",
+          "css": "display: block;"
+        },
+        {
+          "selector": ".sns",
+          "css": "height: 30px; width: 204px; display: flex; justify-content: center; gap: 7px; padding-left: 7px; padding-right: 7px;"
+        },
+        {
+          "selector": ".head-right",
+          "css": "height: 59px; width: 204px; display: flex; align-items: center; justify-content: center; gap: 15px; font-size: 11px; font-family: Montserrat, sans-serif; color: rgb(155, 154, 154);"
+        },
+        {
+          "selector": ".banner",
+          "css": "width: 100%; height: 652px; overflow: hidden;"
+        },
+        {
+          "selector": ".banner img",
+          "css": "width: 100%; height: 100%;"
+        },
+        {
+          "selector": ".product",
+          "css": "height: 951px; width: 100%; background-color: rgb(238, 238, 238);"
+        },
+        {
+          "selector": ".product-txt",
+          "css": "font-size: 32px; font-weight: 600; display: flex; justify-content: center; padding-top: 70px;"
+        },
+        {
+          "selector": ".line",
+          "css": "width: 26px; border-bottom: 3px solid rgb(196, 15, 57); margin: auto; padding-top: 15px;"
+        },
+        {
+          "selector": ".txt",
+          "css": "font-size: 13.5px; color: rgb(85, 85, 85); display: flex; justify-content: center; padding-top: 15px;"
+        }
+      ]
+    }
+  ],
+  "verifiedAt": "2026-10-26T04:25:41.920Z"
+}

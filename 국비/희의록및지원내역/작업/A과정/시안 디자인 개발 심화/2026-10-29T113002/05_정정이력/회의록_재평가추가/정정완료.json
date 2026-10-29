@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "scope": "meeting_improvement_append_only",
+  "unit": "시안 디자인 개발 심화",
+  "lcode": "6",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=6",
+  "checked_at": "2026-10-29T02:33:09.256Z",
+  "original_date": "2026-10-23",
+  "date_preserved": true,
+  "analysis_preserved": true,
+  "improvement_prefix_preserved": true,
+  "appendix_exact": true,
+  "appendix_occurrences": 1,
+  "assessment_data_unchanged": true,
+  "backup_sha256": "84091b58d456d2fe5abc8eeefb0f3c6e55870dcd62ff24316f742b1caf57eba8",
+  "original_analysis_sha256": "b326d77187b8592a99bba9051f8e507b6205e64895266ae17d6e3c2c49781f9c",
+  "original_improvement_sha256": "06b491d179faf4d04bf65379190413eda11d774d2264b1cf5fd13f673448426f",
+  "saved_improvement_sha256": "1ef567142bf1502dc255e92c030423475a632cbb8bf92bc0ed077a0603596468",
+  "local_checks": {
+    "common_tests_passed": 14,
+    "support_tests_passed": 24,
+    "harness_existing_error": "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완"
+  },
+  "evidence_files": [
+    "회의록_수정전.json",
+    "현재평가확인.json",
+    "회의록_추가안.json",
+    "저장확인.json",
+    "평가보존확인.json",
+    "추가후화면.png"
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "student": "홍석경",
+  "url": "http://127.0.0.1:8766/%ED%99%8D%EC%84%9D%EA%B2%BD/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/index.html",
+  "status": 200,
+  "browser": "155.0.8059.85",
+  "measurements": [
+    {
+      "innerWidth": 1920,
+      "clientWidth": 1920,
+      "scrollWidth": 1920,
+      "boxes": [
+        {
+          "selector": ".head-top",
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 59,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "selector": ".conwrap",
+          "x": 260,
+          "y": 0,
+          "width": 1400,
+          "height": 58,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 260px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1400,
+          "clientWidth": 1400
+        },
+        {
+          "selector": ".menu-space",
+          "x": 0,
+          "y": 59,
+          "width": 1920,
+          "height": 89,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "selector": ".main-banner",
+          "x": 0,
+          "y": 148,
+          "width": 1920,
+          "height": 652,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "selector": ".best-products",
+          "x": 0,
+          "y": 800,
+          "width": 1920,
+          "height": 0,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        }
+      ],
+      "images": [
+        {
+          "src": "./image/icon/lang_kor.gif",
+          "alt": "korea",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "image/icon/sns_facebook.gif",
+          "alt": "facebook",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "image/icon/sns_insta.gif",
+          "alt": "instagram",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "image/icon/sns_youtube.png",
+          "alt": "youtube",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/banner.jpg",
+          "alt": "main-banner",
+          "complete": true,
+          "naturalWidth": 1920,
+          "naturalHeight": 652,
+          "width": 1920,
+          "height": 652
+        }
+      ],
+      "text": "KOR\nHOME\nSITE MAP\nCONTACT US",
+      "fontStatus": "loaded"
+    },
+    {
+      "innerWidth": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "boxes": [
+        {
+          "selector": ".head-top",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 59,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "selector": ".conwrap",
+          "x": 20,
+          "y": 0,
+          "width": 1400,
+          "height": 58,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 20px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1400,
+          "clientWidth": 1400
+        },
+        {
+          "selector": ".menu-space",
+          "x": 0,
+          "y": 59,
+          "width": 1440,
+          "height": 89,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "selector": ".main-banner",
+          "x": 0,
+          "y": 148,
+          "width": 1440,
+          "height": 489,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "selector": ".best-products",
+          "x": 0,
+          "y": 637,
+          "width": 1440,
+          "height": 0,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Montserrat, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        }
+      ],
+      "images": [
+        {
+          "src": "./image/icon/lang_kor.gif",
+          "alt": "korea",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "image/icon/sns_facebook.gif",
+          "alt": "facebook",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "image/icon/sns_insta.gif",
+          "alt": "instagram",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "image/icon/sns_youtube.png",
+          "alt": "youtube",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/banner.jpg",
+          "alt": "main-banner",
+          "complete": true,
+          "naturalWidth": 1920,
+          "naturalHeight": 652,
+          "width": 1440,
+          "height": 489
+        }
+      ],
+      "text": "KOR\nHOME\nSITE MAP\nCONTACT US",
+      "fontStatus": "loaded"
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "hover": null,
+  "css": [
+    {
+      "href": "http://127.0.0.1:8766/%ED%99%8D%EC%84%9D%EA%B2%BD/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/style.css",
+      "rules": [
+        {
+          "selector": "body",
+          "css": "margin: 0px; font-family: Montserrat, sans-serif;"
+        },
+        {
+          "selector": "ul, li",
+          "css": "margin: 0px; padding: 0px; list-style: none;"
+        },
+        {
+          "selector": ".head-top",
+          "css": "height: 59px; border-bottom: 1px solid rgb(234, 234, 234); box-sizing: border-box;"
+        },
+        {
+          "selector": ".conwrap",
+          "css": "width: 1400px; height: 100%; display: flex; justify-content: space-between; align-items: center; margin-left: auto; margin-right: auto;"
+        },
+        {
+          "selector": ".link",
+          "css": "display: flex; align-items: center; gap: 12px;"
+        },
+        {
+          "selector": ".lang",
+          "css": "width: 88px; height: 30px; border: 1px solid rgb(234, 234, 234); border-radius: 10px; display: flex; align-items: center; justify-content: center; gap: 6px; box-sizing: border-box; font-size: 11px;"
+        },
+        {
+          "selector": ".sns ul",
+          "css": "display: flex; gap: 7px; align-items: center; list-style: none;"
+        },
+        {
+          "selector": ".sns img",
+          "css": "width: 30px; height: 30px;"
+        },
+        {
+          "selector": ".utility-menu",
+          "css": "height: 20px; display: flex; align-items: center; margin-left: auto;"
+        },
+        {
+          "selector": ".utility-con",
+          "css": "display: flex; justify-content: flex-end; align-items: center; box-sizing: border-box;"
+        },
+        {
+          "selector": ".utility-con ul",
+          "css": "display: flex; align-items: center; gap: 22px; list-style: none; margin: 0px; padding: 0px;"
+        },
+        {
+          "selector": ".utility-con li",
+          "css": "font-family: Montserrat, sans-serif; font-size: 11px; font-weight: 400; color: rgb(155, 154, 154);"
+        },
+        {
+          "selector": ".main-banner",
+          "css": "width: 100%;"
+        },
+        {
+          "selector": ".main-banner img",
+          "css": "width: 100%; display: block;"
+        },
+        {
+          "selector": ".menu-space",
+          "css": "height: 89px; background-color: white;"
+        }
+      ]
+    }
+  ],
+  "verifiedAt": "2026-10-26T04:25:44.545Z"
+}

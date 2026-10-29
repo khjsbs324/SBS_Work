@@ -1,0 +1,14 @@
+{
+  "student": "박주연",
+  "pages": [
+    {
+      "page": 1,
+      "width": 7110.359375,
+      "height": 4570.0390625,
+      "lines": 3436,
+      "characters": 23589
+    }
+  ],
+  "method": "PyMuPDF get_texttrace Unicode glyphs, line origin and bounding boxes; original PDF unchanged",
+  "visualReview": "Overview rendered; text content and figures require subsequent human/model visual review before scoring."
+}

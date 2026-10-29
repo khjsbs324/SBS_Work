@@ -8,6 +8,7 @@
     "group": {"enum": ["A", "B", "C"]},
     "unit": {"type": "string", "minLength": 1},
     "subtitle": {"type": "string", "minLength": 1},
+    "support_plan_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$", "description": "새 작업·재개 작업은 검수된 그룹 지원계획 참조 필수. 이전 기록의 읽기 호환성을 위해 스키마의 전역 required에는 추가하지 않음."},
     "sections": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["title", "html"], "properties": {"title": {"type": "string", "minLength": 1}, "html": {"type": "string", "minLength": 1}}}},
     "images": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
     "sources": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["url", "title", "provider", "language", "free", "scope", "activity", "checked_at"], "properties": {"url": {"type": "string", "format": "uri"}, "title": {"type": "string", "minLength": 1}, "provider": {"type": "string", "minLength": 1}, "language": {"const": "ko"}, "free": {"const": true}, "scope": {"type": "string", "minLength": 1}, "activity": {"type": "string", "minLength": 1}, "checked_at": {"type": "string", "format": "date-time"}}}},

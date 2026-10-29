@@ -1,0 +1,241 @@
+{
+  "recordType": "monami-selected-sections-v1",
+  "student": "홍석경",
+  "unit": "구현",
+  "Sid": "sbsartdj1170",
+  "course": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) B (1회차)",
+  "Pcode": "500000",
+  "Lcode": "8",
+  "AppCode": "D",
+  "FollowNo": "1",
+  "questionNo": "7",
+  "evaluationDate": "2026-10-23",
+  "reviewedAt": "2026-10-26T13:35:49+09:00",
+  "scope": {
+    "userInstruction": "모나미 정답을 기준으로 선택한 2가지 섹션을 평가합니다. 비선택 영역의 미완성은 감점하지 않습니다.",
+    "selectedSections": [
+      "상단",
+      "메인 비주얼"
+    ],
+    "selectionBasis": "제출 코드의 구체적 구성과 제출 메모를 기준으로 평가 영역을 선정했습니다. 완성 사진만 들어간 공통 배너보다 실제 제목·목록을 작업한 섹션을 우선했습니다.",
+    "criteriaPerSection": [
+      {
+        "name": "HTML 구조",
+        "max": 10
+      },
+      {
+        "name": "배치·크기·간격",
+        "max": 20
+      },
+      {
+        "name": "콘텐츠·이미지·대체 설명",
+        "max": 10
+      },
+      {
+        "name": "시각 스타일·가독성",
+        "max": 5
+      },
+      {
+        "name": "CSS 유효성·요구 상태·실행",
+        "max": 5
+      }
+    ],
+    "scoreTiersPerSection": [
+      {
+        "min": 46,
+        "max": 50,
+        "name": "매우 충실"
+      },
+      {
+        "min": 36,
+        "max": 45,
+        "name": "주요 구현 완료, 일부 보완"
+      },
+      {
+        "min": 21,
+        "max": 35,
+        "name": "부분 구현"
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "name": "핵심 구현 부족"
+      }
+    ],
+    "legacyRubricConflict": "기존 Exam.md 및 LMS 일반 문항은 개인 브랜딩 전체 사이트와 협업 보고서 과제를 설명합니다. 이번 실제 과제는 모나미 선택 2섹션 구현이므로 기존 IM-01~09 전체 수행을 채점했다고 간주하지 않습니다. 원본 Exam과 LMS 문제는 수정하지 않고, 실제 과제에 맞는 섹션별 실습 점수를 별도 기록합니다.",
+    "noDuplicatePenalty": "같은 누락 영역 또는 공통 배치 원인은 섹션별 하나의 미완성 묶음으로 판단했습니다. 동일 현상을 이미지·요소 개수만큼 별도 추가 감점하지 않습니다.",
+    "excluded": [
+      "비선택 영역의 미완성",
+      "전 페이지 완성 의무",
+      "보고서·협업 기록 제출 의무",
+      "모바일 반응형",
+      "JavaScript 메뉴·검색·탭 전환·슬라이더",
+      "영상 재생",
+      "배포 여부",
+      "Grid 사용 자체",
+      "클래스명 일치",
+      "글꼴·아이콘 도구의 선택 자체"
+    ]
+  },
+  "source": {
+    "archive": "1792725262_db6975e6.zip",
+    "bytes": 507065,
+    "sha256": "9d13cf2e2c7f98e46d6a7cc90b42d7af25ac9003e398296f77fe9fb65563077d",
+    "GitHub": [
+      {
+        "href": "https://github.com/lf2net080/TEST_MONAMI.git",
+        "onclick": null
+      }
+    ],
+    "localCommits": [
+      {
+        "directory": "학생_검토사본",
+        "head": "ref: refs/heads/main",
+        "commit": "e76065cabef5d39c9e3c05e450adbc8e1602c6df"
+      }
+    ]
+  },
+  "reference": {
+    "filename": "모나미_구현_정답.zip",
+    "sha256": "8bbf1d05dca16abfdda367f9bf104e980a390a9655e81eac7a6dda7b3737fda7"
+  },
+  "environment": {
+    "browser": "155.0.8059.85",
+    "desktopWidths": [
+      1920,
+      1440
+    ],
+    "studentSourceModified": false
+  },
+  "rows": [
+    {
+      "id": "MON-01",
+      "name": "상단",
+      "max": 50,
+      "raw": 32,
+      "details": [
+        {
+          "name": "HTML 구조",
+          "max": 10,
+          "raw": 5,
+          "reason": "유틸리티는 묶었지만 .menu-space가 빈 div로 남아 메인헤더 구조가 없습니다."
+        },
+        {
+          "name": "배치·크기·간격",
+          "max": 20,
+          "raw": 12,
+          "reason": "1400px 중앙 컨테이너와 언어·SNS 양끝 배치는 정확합니다. 89px 빈 영역에는 메뉴 배치가 없습니다."
+        },
+        {
+          "name": "콘텐츠·이미지·대체 설명",
+          "max": 10,
+          "raw": 5,
+          "reason": "언어·SNS·HOME 계열은 있으나 로고·주 메뉴·검색 표시가 없습니다."
+        },
+        {
+          "name": "시각 스타일·가독성",
+          "max": 5,
+          "raw": 5,
+          "reason": "작성한 유틸리티의 크기·간격·글자 표현은 적절합니다."
+        },
+        {
+          "name": "CSS 유효성·요구 상태·실행",
+          "max": 5,
+          "raw": 5,
+          "reason": "자산과 CSS가 정상입니다. 메인헤더 미완성은 하나의 누락 묶음으로 반영했습니다."
+        }
+      ],
+      "evidence": "제출물_확인.json; 소스_검토.json; 화면검토/브라우저_확인.json 및 학생 화면 PNG",
+      "judgement": "유틸리티는 묶었지만 .menu-space가 빈 div로 남아 메인헤더 구조가 없습니다. 1400px 중앙 컨테이너와 언어·SNS 양끝 배치는 정확합니다. 89px 빈 영역에는 메뉴 배치가 없습니다. 언어·SNS·HOME 계열은 있으나 로고·주 메뉴·검색 표시가 없습니다. 작성한 유틸리티의 크기·간격·글자 표현은 적절합니다. 자산과 CSS가 정상입니다. 메인헤더 미완성은 하나의 누락 묶음으로 반영했습니다.",
+      "registered": 43
+    },
+    {
+      "id": "MON-02",
+      "name": "메인 비주얼",
+      "max": 50,
+      "raw": 39,
+      "details": [
+        {
+          "name": "HTML 구조",
+          "max": 10,
+          "raw": 8,
+          "reason": "대표 이미지는 있으나 사진과 브랜드 문구를 함께 담는 내부 구조가 없습니다."
+        },
+        {
+          "name": "배치·크기·간격",
+          "max": 20,
+          "raw": 16,
+          "reason": "1920 화면에서는 높이652px이지만 1440 화면에서는489px이 되어 데스크톱 기준 높이를 유지하지 않습니다."
+        },
+        {
+          "name": "콘텐츠·이미지·대체 설명",
+          "max": 10,
+          "raw": 5,
+          "reason": "대표 사진은 정상이며 제목 4줄과 설명 2줄이 없습니다."
+        },
+        {
+          "name": "시각 스타일·가독성",
+          "max": 5,
+          "raw": 5,
+          "reason": "사진은 가로 너비와 비율이 유지되며 선명하게 표시됩니다. 없는 문구의 스타일을 별도 추가 감점하지 않습니다."
+        },
+        {
+          "name": "CSS 유효성·요구 상태·실행",
+          "max": 5,
+          "raw": 5,
+          "reason": "이미지 로딩·코드 실행이 정상입니다. 빈 BEST PRODUCT는 선택하지 않은 영역으로 제외했습니다."
+        }
+      ],
+      "evidence": "제출물_확인.json; 소스_검토.json; 화면검토/브라우저_확인.json 및 학생 화면 PNG",
+      "judgement": "대표 이미지는 있으나 사진과 브랜드 문구를 함께 담는 내부 구조가 없습니다. 1920 화면에서는 높이652px이지만 1440 화면에서는489px이 되어 데스크톱 기준 높이를 유지하지 않습니다. 대표 사진은 정상이며 제목 4줄과 설명 2줄이 없습니다. 사진은 가로 너비와 비율이 유지되며 선명하게 표시됩니다. 없는 문구의 스타일을 별도 추가 감점하지 않습니다. 이미지 로딩·코드 실행이 정상입니다. 빈 BEST PRODUCT는 선택하지 않은 영역으로 제외했습니다.",
+      "registered": 45
+    }
+  ],
+  "rawTotal": 71,
+  "registeredTotal": 88,
+  "conversion": "공통 환산 ROUND(60 + 원점수 × 0.4, 0); 문항별 최대잔여법 적용",
+  "externalRegistration": {
+    "saved": true,
+    "status": "사이트 등록 및 상세 화면 재검증 완료",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1170",
+    "verifiedAt": "2026-10-26T04:41:25.878Z",
+    "siteCriterionIds": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+    ],
+    "siteMaxima": [
+      12,
+      10,
+      10,
+      12,
+      10,
+      12,
+      12,
+      10,
+      12
+    ],
+    "siteScores": [
+      11,
+      9,
+      9,
+      11,
+      9,
+      10,
+      10,
+      9,
+      10
+    ],
+    "siteTotal": 88,
+    "integerScoresVerified": true,
+    "feedbackExactMatch": true,
+    "proofFile": "사이트_등록확인.json",
+    "allocationPurpose": "사용자가 정수 등록을 지시한 방식에 따라 확정 총점을 기존 9개 필수 입력칸에 배점 비율과 최대잔여법으로 배분했습니다. NCS 각 수행준거의 별도 실증 평가를 새로 수행했다는 의미가 아닙니다."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "student": "김규린",
+  "Sid": "sbsartdj1165",
+  "Pcode": "500000",
+  "Lcode": "8",
+  "unit": "구현",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1165",
+  "saved": true,
+  "alreadyCorrect": true,
+  "total": 70,
+  "scores": [
+    9,
+    7,
+    7,
+    9,
+    7,
+    8,
+    8,
+    7,
+    8
+  ],
+  "siteMaxima": [
+    12,
+    10,
+    10,
+    12,
+    10,
+    12,
+    12,
+    10,
+    12
+  ],
+  "criterionIds": [
+    "55",
+    "56",
+    "57",
+    "58",
+    "59",
+    "60",
+    "61",
+    "62",
+    "63"
+  ],
+  "allIntegers": true,
+  "feedbackSHA256": "829c88efe918c6450a8d73eaba9700148d6bd5a8fa574c6a736c59f92a799720",
+  "feedbackChars": 2076,
+  "feedbackExactMatch": true,
+  "verifiedAt": "2026-10-26T04:40:59.377Z",
+  "dialogs": []
+}

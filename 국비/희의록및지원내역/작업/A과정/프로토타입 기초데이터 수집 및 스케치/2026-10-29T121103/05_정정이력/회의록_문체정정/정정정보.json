@@ -1,0 +1,9 @@
+{
+  "status": "prepared",
+  "request": "위 계획대로",
+  "scope": "previous_pedagogy_additions_and_six_new_analyses",
+  "existing_prefix_preserved": true,
+  "reason": "사용자가 승인한 코드·반복 주석 삭제 및 강사 문체 정리",
+  "support_pipeline": "지원 게시글용 revise 대신 회의록 전용 원문 백업·정정 증빙을 보존함",
+  "previous_source_run": "2026-10-29T113907"
+}

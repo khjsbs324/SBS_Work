@@ -32,9 +32,12 @@ def workbook(folder, content):
 
 def build_group(run, group):
     run, job, state = load_run(run)
+    from .meeting import require_meeting, require_plan
+    require_meeting(run, job, state)
     require_editable(state, group)
     folder = group_dir(run, group)
     content = content_check(folder, job, group)
+    require_plan(run, job, state, group, content)
     sections = list(content['sections'])
     refs = '<p>한국어 무료 공개 자료입니다. 안내한 범위를 읽거나 보고 자신의 결과물에 적용하세요.</p>'
     for source in content['sources']:
@@ -54,7 +57,7 @@ def build_group(run, group):
     (folder / 'guide.html').write_text('<!doctype html><html lang="ko"><meta charset="utf-8"><title>' + escape(job['unit']) + '</title><style>' + css + '</style><body>' + ''.join(pages) + '</body></html>', encoding='utf-8')
     workbook(folder, content)
     (folder / '읽는순서.txt').write_text(job['unit'] + ' ' + group + '그룹\n\n1. ZIP 압축을 풉니다.\n2. 학습자료.pdf에서 필요한 학습 순서를 확인합니다.\n3. 실습양식.docx 또는 빈칸양식 CSV에 자신의 실제 근거와 결과를 적습니다.\n4. 원본과 내보내기 파일을 다시 열어 확인합니다.\n\n가상 예시는 학습용이며 자신의 평가 결과물이나 검수 결과를 대신하지 않습니다.\n첨부 예시는 제공한 형식으로 열어 확인하고 도구별 가져오기·서체·실물 출력 조건은 별도로 검토하세요.\n', encoding='utf-8')
-    post = {'schema_version': 1, 'group': group, 'title': f"[능력단위평가_지원내역] {job['unit']} {group}그룹 지원자료", 'date': job['post_date'],
+    post = {'schema_version': 1, 'group': group, 'support_plan_sha256': content['support_plan_sha256'], 'title': f"[능력단위평가_지원내역] {job['unit']} {group}그룹 지원자료", 'date': job['post_date'],
             'html': html, 'sections': len(sections), 'images': content['images'], 'source_urls': [a.get('href') for a in ET.fromstring('<root>' + raw + '</root>').iter('a') if a.get('href', '').startswith(('http://', 'https://'))], 'attachment': '학습자료.zip'}
     write_json(folder / 'post.json', post)
     return {'group': group, 'sections': len(sections), 'worksheets': len(content['worksheets']), 'pdf': 'Create 학습자료.pdf from guide.html in Playwright and inspect actual pages before packaging'}

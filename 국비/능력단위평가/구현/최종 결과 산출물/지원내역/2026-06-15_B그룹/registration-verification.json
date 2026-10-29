@@ -1,0 +1,122 @@
+{
+  "registration": {
+    "group": "B",
+    "preflight": {
+      "valid": true,
+      "title": "[능력단위평가_지원내역] 구현 B그룹 지원자료",
+      "date": "2026-06-15",
+      "images": 3,
+      "anchors": 10,
+      "codeBlocks": 6,
+      "placeholder": false,
+      "file": "구현_B그룹_학습자료.zip"
+    },
+    "saved": {
+      "status": 200,
+      "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+    },
+    "uploaded": {
+      "structure.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724987_0040eb6d.png",
+      "before.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724987_855324f3.png",
+      "after.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724987_1bdf8b9c.png"
+    },
+    "rows": [
+      {
+        "text": "\n\t\t\t\t\t\t\t\t\t\t13\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 B그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-06-15\n\t\t\t\t\t\t\t\t\t",
+        "id": "1043"
+      }
+    ]
+  },
+  "verification": {
+    "group": "B",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1043",
+    "textMatches": true,
+    "images": [
+      {
+        "loaded": true,
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724987_0040eb6d.png"
+      },
+      {
+        "loaded": true,
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724987_855324f3.png"
+      },
+      {
+        "loaded": true,
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724987_1bdf8b9c.png"
+      }
+    ],
+    "anchors": [
+      {
+        "href": "#b-learning-1",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-2",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-3",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-4",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-5",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-6",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-7",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-8",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-9",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-10",
+        "exists": true
+      }
+    ],
+    "sources": [
+      "https://opentutorials.org/course/3084/18409",
+      "https://opentutorials.org/course/3086/18319",
+      "https://opentutorials.org/module/2367/13348",
+      "https://opentutorials.org/module/2367/13526"
+    ],
+    "headingCount": 11,
+    "codeBlocks": 6,
+    "style": {
+      "maxWidth": "980px",
+      "fontSize": "17px",
+      "lineHeight": "33.15px",
+      "tablePadding": "14px 16px",
+      "codeSize": "14.875px",
+      "whiteSpace": "pre-wrap"
+    },
+    "attachment": {
+      "status": 200,
+      "bytes": 318687,
+      "exact": true
+    },
+    "metadata": [
+      "\n\t\t\t\t제목\n\t\t\t\t[능력단위평가_지원내역] 구현 B그룹 지원자료\n\t\t\t",
+      "\n\t\t\t\t작성자\n\t\t\t\t김혜지\n\t\t\t\t작성일\n\t\t\t\t2026-06-15\n\t\t\t"
+    ],
+    "anchorScrollWorks": true
+  },
+  "localHarnessCheck": {
+    "ok": false,
+    "existingError": "능력단위평가\\수정 보완\\CLAUDE.md: Missing link/import: 수정 보완",
+    "changeRelated": false
+  }
+}

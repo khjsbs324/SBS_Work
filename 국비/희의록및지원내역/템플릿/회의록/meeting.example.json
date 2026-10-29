@@ -1,13 +1,86 @@
 {
+  "schema_version": 1,
   "example": true,
-  "mode": "created 또는 updated 또는 existing 또는 skipped",
-  "actual_date": "실제 작성일",
+  "unit": "실제 능력단위명",
+  "mode": "created 또는 updated 또는 existing 또는 drafted",
+  "actual_date": "실제 작성·정정일 YYYY-MM-DD",
+  "meeting_date": "현재 LMS 회의일시 YYYY-MM-DD",
   "retrospective": true,
-  "original": {"date": "기존 날짜", "analysis": "기존 분석 전문", "improvement": "기존 개선 전문"},
-  "template_files": {"analysis": "분석.txt", "improvement": "개선.txt"},
-  "analysis": "분석.txt의 실제 기존 양식 순서를 유지해 작성한 전문. 자리표시자는 모두 실제 근거로 교체",
-  "improvement": "개선.txt의 2. 조치사항에 작성한 전문. A·B·C별 지원활동·확인 기준·후속 지도 계획",
-  "template_reference_url": "현재 확인한 기존 회의록 또는 공식 양식 URL",
-  "group_basis": "해당 평가·회의록에서 확인한 기준. 기존 점수는 변경하지 않음",
-  "uncertainties": ["이름 불일치·피드백 부족·재평가 표시 등 확인 한계"]
+  "roster_path": "01_근거자료/평가대상.json",
+  "original": {
+    "date": "기존 날짜",
+    "analysis": "기존 분석 전문",
+    "improvement": "기존 개선 전문"
+  },
+  "template_files": {
+    "analysis": "분석.txt",
+    "improvement": "개선.txt"
+  },
+  "analysis": "주제·목적·결과·ABC그룹 실제 명단·실제 능력단위요소별 조치·종합 의견·건의사항을 채운 완성 본문",
+  "improvement": "조치사항·ABC그룹 실제 명단과 지원활동·학생 변화·교수법 개선·후속 지도를 채운 완성 본문",
+  "groups": {
+    "A": {
+      "student_ids": [
+        "A의 실제 학생 ID"
+      ],
+      "basis": "이 그룹으로 편성한 실제 수행·보완 근거",
+      "strengths": "학생들의 확인된 강점",
+      "needs": "우선 보완할 실제 항목",
+      "activities": "제공할 자료와 수행할 활동",
+      "criteria": "보완 완료를 확인할 기준"
+    },
+    "B": {
+      "student_ids": [
+        "B의 실제 학생 ID"
+      ],
+      "basis": "이 그룹으로 편성한 실제 수행·보완 근거",
+      "strengths": "학생들의 확인된 강점",
+      "needs": "우선 보완할 실제 항목",
+      "activities": "제공할 자료와 수행할 활동",
+      "criteria": "보완 완료를 확인할 기준"
+    },
+    "C": {
+      "student_ids": [
+        "C의 실제 학생 ID"
+      ],
+      "basis": "이 그룹으로 편성한 실제 수행·보완 근거",
+      "strengths": "학생들의 확인된 강점",
+      "needs": "우선 보완할 실제 항목",
+      "activities": "제공할 자료와 수행할 활동",
+      "criteria": "보완 완료를 확인할 기준"
+    }
+  },
+  "teaching_link": {
+    "previous_unit": "직전 단위명, 첫 단위이면 빈 문자열",
+    "next_unit": "다음 단위명, 마지막이면 빈 문자열",
+    "follow_up": "다음 단위에서 확인할 지도 내용",
+    "source_paths": []
+  },
+  "template_reference_url": "대조한 양식이나 기존 회의록 URL",
+  "group_basis": "현재 피드백의 수행·보완 요구로 A/B/C에 실제 학생 배정",
+  "uncertainties": [],
+  "field_usage": {
+    "lms_body": [
+      "analysis",
+      "improvement"
+    ],
+    "lms_date": "meeting_date",
+    "local_only": [
+      "groups",
+      "roster_path",
+      "actual_date",
+      "retrospective",
+      "original",
+      "template_files",
+      "template_reference_url",
+      "group_basis",
+      "uncertainties",
+      "teaching_link",
+      "field_usage",
+      "example",
+      "mode",
+      "schema_version",
+      "unit"
+    ]
+  }
 }

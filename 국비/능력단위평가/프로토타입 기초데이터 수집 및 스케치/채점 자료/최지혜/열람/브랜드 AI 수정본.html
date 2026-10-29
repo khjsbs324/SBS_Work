@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="자연의 아름다움과 소창의 순수한 감각을 일상에 전하는 플로뜰리에의 브랜드 이야기입니다.">
+  <title>Flottelier — Brand Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #161714;
+      --soft-ink: #595a54;
+      --muted: #8c8c83;
+      --paper: #f8f7f2;
+      --white: #ffffff;
+      --line: #deddd6;
+      --moss: #4d5542;
+      --serif: "Cormorant Garamond", "Noto Serif KR", Georgia, serif;
+      --sans: "Noto Sans KR", Arial, sans-serif;
+      --page: min(1180px, calc(100vw - 96px));
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.8;
+      word-break: keep-all;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button { color: inherit; font: inherit; }
+
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      padding: 10px 16px;
+      color: var(--white);
+      background: var(--ink);
+      transform: translateY(-160%);
+      transition: transform .2s ease;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 78px;
+      border-bottom: 1px solid rgba(22, 23, 20, .14);
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      width: min(1360px, calc(100vw - 64px));
+      height: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .brand {
+      justify-self: start;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      position: relative;
+      width: 25px;
+      height: 25px;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 5px 10px;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      transform: rotate(45deg);
+    }
+
+    .brand-mark::after { transform: rotate(-45deg); }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -.02em;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(26px, 3.5vw, 54px);
+    }
+
+    .desktop-nav a {
+      position: relative;
+      padding: 29px 0 27px;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: .08em;
+    }
+
+    .desktop-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 20px;
+      height: 1px;
+      background: var(--ink);
+      transition: right .35s var(--ease);
+    }
+
+    .desktop-nav a:hover::after,
+    .desktop-nav a:focus-visible::after { right: 0; }
+
+    .header-note {
+      justify-self: end;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 11px;
+      font-style: italic;
+      letter-spacing: .08em;
+    }
+
+    .menu-toggle {
+      display: none;
+      justify-self: end;
+      position: relative;
+      width: auto;
+      height: 42px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      position: absolute;
+      left: 8px;
+      width: 26px;
+      height: 1px;
+      background-color: #161714;
+      transition: transform .3s ease;
+    }
+
+    .menu-toggle span:first-child { top: 17px; }
+    .menu-toggle span:last-child { top: 24px; }
+
+    .menu-open .menu-toggle span:first-child { transform: translateY(3.5px) rotate(45deg); }
+    .menu-open .menu-toggle span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+
+    .mobile-nav {
+      position: fixed;
+      inset: 78px 0 0;
+      z-index: 90;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+      padding: 40px;
+      color: var(--white);
+      background: var(--ink);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s ease, visibility .3s ease;
+    }
+
+    .mobile-nav a {
+      font-family: var(--serif);
+      font-size: clamp(34px, 9vw, 50px);
+      line-height: 1;
+    }
+
+    .mobile-nav small {
+      margin-top: 18px;
+      color: rgba(255,255,255,.55);
+      font-size: 11px;
+      letter-spacing: .12em;
+    }
+
+    .menu-open .mobile-nav {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .section-number {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 0 0 32px;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .section-number::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .story {
+      width: var(--page);
+      min-height: 1230px;
+      margin: 0 auto;
+      padding-top: 138px;
+    }
+
+    .story-primary {
+      display: grid;
+      grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
+      gap: clamp(70px, 10vw, 150px);
+      align-items: start;
+    }
+
+    .story-visual {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      background: var(--paper);
+    }
+
+    .story-visual img,
+    .story-secondary img,
+    .principle-image img,
+    .closing-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.2s var(--ease);
+    }
+
+    .story-visual:hover img,
+    .story-secondary:hover img,
+    .principle-image:hover img { transform: scale(1.025); }
+
+    .story-copy { padding-top: 56px; }
+
+    .story-copy h1 {
+      max-width: 520px;
+      margin: 0;
+      font-family: "Noto Serif KR", serif;
+      font-size: clamp(33px, 3.2vw, 49px);
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: -.045em;
+    }
+
+    .story-copy p {
+      max-width: 510px;
+      margin: 94px 0 0;
+      color: var(--soft-ink);
+      font-family: "Noto Serif KR", serif;
+      font-size: clamp(16px, 1.5vw, 20px);
+      line-height: 2.25;
+    }
+
+    .story-detail {
+      width: min(930px, 86%);
+      margin: 120px auto 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: clamp(60px, 7vw, 96px);
+      align-items: center;
+    }
+
+    .story-secondary {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      margin: 0;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .story-secondary img { object-position: center; }
+
+    .story-detail-copy h2 {
+      margin: 0;
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.85;
+      letter-spacing: -.025em;
+    }
+
+    .story-detail-copy p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.85;
+      letter-spacing: -.02em;
+    }
+
+    .story-detail-copy p:last-child { margin-bottom: 0; }
+
+    .philosophy {
+      padding: 178px 0 190px;
+      background: var(--paper);
+    }
+
+    .philosophy-inner {
+      width: var(--page);
+      margin: 0 auto;
+    }
+
+    .philosophy-header {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: end;
+      margin-bottom: 116px;
+    }
+
+    .philosophy-header .section-number { margin: 0; }
+
+    .philosophy-header h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(54px, 7vw, 96px);
+      font-weight: 400;
+      line-height: .9;
+      letter-spacing: -.04em;
+    }
+
+    .value-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .value {
+      display: grid;
+      grid-template-columns: 150px 220px 1fr;
+      gap: 46px;
+      align-items: center;
+      min-height: 260px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .value-index {
+      align-self: start;
+      padding-top: 64px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 38px;
+      font-style: italic;
+    }
+
+    .value-image {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      background: #eceae3;
+    }
+
+    .value-image img {
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.72) contrast(.96);
+    }
+
+    .value-copy { padding: 45px 0; }
+
+    .value-copy h3 {
+      margin: 0 0 19px;
+      font-family: var(--sans);
+      font-size: clamp(20px, 2vw, 27px);
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: -.035em;
+    }
+
+    .value-copy h3 span {
+      display: inline-block;
+      margin-left: 10px;
+      color: var(--soft-ink);
+      font-family: "Noto Serif KR", serif;
+      font-size: .67em;
+      font-weight: 400;
+    }
+
+    .value-copy p {
+      max-width: 670px;
+      margin: 0;
+      color: var(--soft-ink);
+      font-size: 15px;
+      line-height: 1.95;
+    }
+
+    .our-philosophy {
+      width: var(--page);
+      margin: 0 auto;
+      padding: 190px 0 220px;
+    }
+
+    .our-title {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin-bottom: 170px;
+    }
+
+    .our-title h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(53px, 7vw, 96px);
+      font-weight: 400;
+      line-height: .92;
+      letter-spacing: -.04em;
+    }
+
+    .our-title p {
+      align-self: end;
+      max-width: 480px;
+      margin: 0 0 4px auto;
+      color: var(--soft-ink);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .principles {
+      display: grid;
+      gap: 180px;
+    }
+
+    .principle {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr) 280px;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .principle.no-image {
+      grid-template-columns: 130px minmax(0, 760px);
+      align-items: start;
+    }
+
+    .principle:nth-child(2) { margin-left: 7%; }
+
+    .principle-index {
+      align-self: start;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 67px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: .9;
+    }
+
+    .principle-copy h3 {
+      margin: 0 0 24px;
+      font-family: var(--serif);
+      font-size: clamp(29px, 3vw, 43px);
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: -.025em;
+    }
+
+    .principle-copy h3 em {
+      display: block;
+      margin-top: 9px;
+      color: var(--soft-ink);
+      font-family: "Noto Serif KR", serif;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: -.02em;
+    }
+
+    .principle-copy p {
+      max-width: 650px;
+      margin: 0;
+      color: var(--soft-ink);
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .principle-image {
+      width: 280px;
+      height: 280px;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .process-section {
+      width: var(--page);
+      margin: 0 auto;
+      padding: 190px 0 170px;
+    }
+
+    .process-intro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      margin-bottom: 120px;
+    }
+
+    .process-intro-copy h2 {
+      max-width: 820px;
+      margin: 0;
+      font-family: "Noto Serif KR", serif;
+      font-size: clamp(38px, 5vw, 68px);
+      font-weight: 400;
+      line-height: 1.48;
+      letter-spacing: -.055em;
+    }
+
+    .process-intro-copy > p {
+      max-width: 690px;
+      margin: 46px 0 0;
+      color: var(--soft-ink);
+      font-size: 15px;
+      line-height: 2.05;
+    }
+
+    .process-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      min-height: 310px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-step-index {
+      position: relative;
+      padding: 58px 0;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 64px;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .process-step-index::after {
+      content: "";
+      position: absolute;
+      left: 2px;
+      bottom: 62px;
+      width: 56px;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .process-step-body {
+      display: grid;
+      grid-template-columns: minmax(250px, .85fr) minmax(320px, 1.15fr);
+      gap: clamp(40px, 7vw, 96px);
+      align-items: center;
+      padding: 58px 0;
+    }
+
+    .process-step-heading small {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .process-step-heading h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -.025em;
+    }
+
+    .process-step-heading h3 em {
+      display: block;
+      margin-top: 12px;
+      color: var(--soft-ink);
+      font-family: var(--sans);
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: -.02em;
+    }
+
+    .process-step-detail p {
+      margin: 0;
+      color: var(--soft-ink);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .process-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 25px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .process-tags li {
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      color: var(--soft-ink);
+      font-size: 10px;
+      letter-spacing: .02em;
+    }
+
+    .safety-guarantee {
+      padding: 160px 0 170px;
+      color: var(--white);
+      background: var(--ink);
+    }
+
+    .safety-inner {
+      width: var(--page);
+      margin: 0 auto;
+    }
+
+    .safety-intro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      margin-bottom: 95px;
+    }
+
+    .safety-label {
+      color: rgba(255,255,255,.56);
+    }
+
+    .safety-copy h2 {
+      max-width: 760px;
+      margin: 0;
+      font-family: "Noto Serif KR", serif;
+      font-size: clamp(37px, 4.7vw, 64px);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -.055em;
+    }
+
+    .safety-copy p {
+      max-width: 680px;
+      margin: 38px 0 0;
+      color: rgba(255,255,255,.62);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .safety-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255,255,255,.22);
+      border-bottom: 1px solid rgba(255,255,255,.22);
+    }
+
+    .safety-card {
+      min-height: 320px;
+      padding: 46px 30px 42px;
+      border-right: 1px solid rgba(255,255,255,.22);
+    }
+
+    .safety-card:last-child { border-right: 0; }
+
+    .zero-mark {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      margin-bottom: 54px;
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 50%;
+      font-family: var(--serif);
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    .safety-card h3 {
+      margin: 0 0 19px;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .safety-card h3 span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255,255,255,.58);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: .04em;
+    }
+
+    .safety-card p {
+      margin: 0;
+      color: rgba(255,255,255,.58);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .ritual-timeline {
+      padding: 180px 0;
+      background: var(--paper);
+    }
+
+    .ritual-inner {
+      width: var(--page);
+      margin: 0 auto;
+    }
+
+    .ritual-intro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      margin-bottom: 90px;
+    }
+
+    .ritual-copy h2 {
+      max-width: 800px;
+      margin: 0;
+      font-family: "Noto Serif KR", serif;
+      font-size: clamp(38px, 4.8vw, 66px);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -.055em;
+    }
+
+    .ritual-copy p {
+      max-width: 690px;
+      margin: 38px 0 0;
+      color: var(--soft-ink);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .ritual-experience {
+      padding: 58px;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .ritual-status {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .wash-count {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(52px, 7vw, 92px);
+      font-style: italic;
+      line-height: .9;
+      letter-spacing: -.03em;
+    }
+
+    .wash-count small {
+      margin-left: 9px;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: .1em;
+    }
+
+    .ritual-size {
+      margin: 0;
+      color: var(--soft-ink);
+      font-size: 12px;
+      text-align: right;
+      letter-spacing: .04em;
+    }
+
+    .fabric-stage {
+      --wash-progress: 0;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 330px;
+      overflow: hidden;
+      background: #e8e3d8;
+    }
+
+    .fabric-panel {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 36px;
+      overflow: hidden;
+    }
+
+    .fabric-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: #eee9de;
+      background-image:
+        repeating-linear-gradient(0deg, transparent 0 7px, rgba(73,67,55,.13) 7px 8px),
+        repeating-linear-gradient(90deg, transparent 0 7px, rgba(73,67,55,.13) 7px 8px);
+      transform: scale(calc(1 - var(--wash-progress) * .0006));
+      transition: transform .25s ease, filter .25s ease;
+    }
+
+    .fabric-panel.after::before {
+      background-color: #f4f0e7;
+      background-image:
+        repeating-linear-gradient(0deg, transparent 0 5px, rgba(73,67,55,.1) 5px 6px),
+        repeating-linear-gradient(90deg, transparent 0 5px, rgba(73,67,55,.1) 5px 6px);
+      filter: blur(calc(var(--wash-progress) * .018px));
+    }
+
+    .fabric-panel.after {
+      border-left: 1px solid rgba(22,23,20,.18);
+    }
+
+    .fabric-caption {
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+      max-width: 310px;
+      padding: 16px 18px;
+      background: rgba(255,255,255,.9);
+    }
+
+    .fabric-caption strong {
+      display: block;
+      margin-bottom: 5px;
+      font-family: "Noto Serif KR", serif;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .fabric-caption span {
+      color: var(--soft-ink);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .wash-slider-wrap { margin-top: 42px; }
+
+    .wash-slider {
+      width: 100%;
+      height: 2px;
+      margin: 0;
+      accent-color: var(--ink);
+      cursor: ew-resize;
+    }
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .08em;
+    }
+
+    .closing {
+      position: relative;
+      min-height: 720px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      color: var(--white);
+      background: #30342c;
+    }
+
+    .closing-image {
+      position: absolute;
+      inset: 0;
+    }
+
+    .closing-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(19, 24, 17, .44);
+    }
+
+    .closing-image img {
+      object-position: center 55%;
+      filter: saturate(.72);
+    }
+
+    .closing-copy {
+      position: relative;
+      z-index: 1;
+      width: min(780px, calc(100vw - 48px));
+      text-align: center;
+    }
+
+    .closing-kicker {
+      margin: 0 0 26px;
+      font-size: 10px;
+      letter-spacing: .22em;
+    }
+
+    .closing h2 {
+      margin: 0;
+      font-family: "Noto Serif KR", serif;
+      font-size: clamp(37px, 5vw, 68px);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -.045em;
+    }
+
+    .closing-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 50px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.7);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .1em;
+    }
+
+    .closing-link span {
+      font-size: 18px;
+      transition: transform .3s var(--ease);
+    }
+
+    .closing-link:hover span { transform: translateX(5px); }
+
+    .site-footer {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: end;
+      min-height: 210px;
+      padding: 58px max(32px, calc((100vw - 1360px) / 2));
+      color: rgba(255,255,255,.74);
+      background: var(--ink);
+    }
+
+    .footer-brand {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 36px;
+    }
+
+    .site-footer p {
+      margin: 0;
+      font-size: 10px;
+      letter-spacing: .08em;
+    }
+
+    .site-footer p:last-child { text-align: right; }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity .9s var(--ease), transform .9s var(--ease);
+    }
+
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 960px) {
+      :root { --page: min(100% - 48px, 760px); }
+
+      .header-inner { width: calc(100vw - 40px); grid-template-columns: 1fr auto; }
+      .desktop-nav, .header-note { display: none; }
+      .menu-toggle, .mobile-nav { display: flex; }
+      .menu-toggle {
+        position: fixed;
+        top: 18px;
+        right: 20px;
+        z-index: 120;
+        align-items: center;
+      }
+
+      .story { min-height: auto; padding: 94px 0 130px; }
+      .story-primary { grid-template-columns: 1fr; gap: 58px; }
+      .story-visual { width: min(78vw, 560px); }
+      .story-copy { padding: 0 0 0 12%; }
+      .story-copy p { margin-top: 48px; }
+      .story-detail { width: 88%; margin-top: 90px; grid-template-columns: 1fr; gap: 48px; }
+      .story-secondary { width: min(100%, 390px); aspect-ratio: 3 / 4; }
+
+      .philosophy { padding: 120px 0; }
+      .philosophy-header, .our-title { grid-template-columns: 1fr; gap: 42px; }
+      .philosophy-header { margin-bottom: 75px; }
+      .philosophy-header h2, .our-title h2 { margin-left: 12%; }
+      .value { grid-template-columns: 84px 140px 1fr; gap: 26px; }
+      .value-image { width: 125px; height: 125px; }
+
+      .our-philosophy { padding: 130px 0 160px; }
+      .our-title { margin-bottom: 120px; }
+      .our-title p { margin-left: 12%; }
+      .principles { gap: 130px; }
+      .principle, .principle.no-image { grid-template-columns: 82px 1fr; }
+      .principle:nth-child(2) { margin-left: 0; }
+      .principle-image { grid-column: 2; width: min(310px, 100%); height: auto; aspect-ratio: 1; margin-top: 32px; }
+
+      .process-intro,
+      .safety-intro,
+      .ritual-intro { grid-template-columns: 1fr; gap: 36px; }
+      .process-step { grid-template-columns: 110px 1fr; }
+      .process-step-body { grid-template-columns: 1fr; gap: 28px; }
+      .safety-grid { grid-template-columns: 1fr 1fr; }
+      .safety-card:nth-child(2) { border-right: 0; }
+      .safety-card:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.22); }
+
+      .site-footer { grid-template-columns: 1fr 1fr; gap: 30px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 640px) {
+      :root { --page: calc(100% - 36px); }
+      .site-header { height: 68px; }
+      .mobile-nav { inset: 68px 0 0; }
+      .brand-name { font-size: 20px; }
+      .menu-toggle { top: 13px; }
+
+      .story { padding-top: 62px; }
+      .story-visual { width: 88%; }
+      .story-copy { padding-left: 7%; }
+      .story-copy h1 { font-size: 29px; }
+      .story-copy p { font-size: 15px; line-height: 2.1; }
+      .story-detail { width: 93%; margin-top: 70px; gap: 38px; }
+      .story-detail-copy h2 { font-size: 15px; }
+      .story-detail-copy p { font-size: 14px; }
+
+      .philosophy { padding: 90px 0 100px; }
+      .philosophy-header { margin-bottom: 55px; }
+      .philosophy-header h2, .our-title h2 { margin-left: 0; }
+      .value {
+        grid-template-columns: 52px 92px 1fr;
+        gap: 14px;
+        min-height: 210px;
+      }
+      .value-index { padding-top: 39px; font-size: 29px; }
+      .value-image { width: 82px; height: 82px; }
+      .value-copy { padding: 34px 0; }
+      .value-copy h3 { margin-bottom: 12px; font-size: 18px; }
+      .value-copy h3 span { display: block; margin: 5px 0 0; font-size: 12px; }
+      .value-copy p { font-size: 13px; line-height: 1.8; }
+
+      .our-philosophy { padding: 100px 0 120px; }
+      .our-title { margin-bottom: 90px; }
+      .our-title p { margin: 0; }
+      .principles { gap: 100px; }
+      .principle, .principle.no-image { grid-template-columns: 48px 1fr; gap: 18px; }
+      .principle-index { font-size: 43px; }
+      .principle-copy h3 { font-size: 27px; }
+      .principle-copy p { font-size: 14px; }
+
+      .process-section { padding: 105px 0 100px; }
+      .process-intro { margin-bottom: 65px; }
+      .process-step { grid-template-columns: 1fr; }
+      .process-step-index { padding: 38px 0 0; font-size: 42px; }
+      .process-step-index::after { display: none; }
+      .process-step-body { padding: 28px 0 44px; }
+      .process-tags li { font-size: 9px; }
+
+      .safety-guarantee { padding: 100px 0; }
+      .safety-intro { margin-bottom: 60px; }
+      .safety-grid { grid-template-columns: 1fr; }
+      .safety-card,
+      .safety-card:nth-child(2) { min-height: auto; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
+      .safety-card:last-child { border-bottom: 0; }
+      .zero-mark { margin-bottom: 34px; }
+
+      .ritual-timeline { padding: 105px 0; }
+      .ritual-intro { margin-bottom: 60px; }
+      .ritual-experience { padding: 24px 18px; }
+      .ritual-status { align-items: flex-start; flex-direction: column; }
+      .ritual-size { text-align: left; }
+      .fabric-stage { grid-template-columns: 1fr; }
+      .fabric-panel { min-height: 230px; padding: 20px; }
+      .fabric-panel.after { border-top: 1px solid rgba(22,23,20,.18); border-left: 0; }
+
+      .closing { min-height: 580px; }
+      .site-footer { grid-template-columns: 1fr; min-height: 240px; }
+      .site-footer p:last-child { text-align: left; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+      [data-reveal] { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Flottelier 홈">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Flottelier</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <a href="#home">HOME</a>
+        <a href="#story">STORY</a>
+        <a href="#philosophy">PHILOSOPHY</a>
+        <a href="#process">OUR PROCESS</a>
+        <a href="브랜드 ai 초안.html">CATEGORY</a>
+      </nav>
+
+      <span class="header-note">A quiet ritual for every day</span>
+
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav">MENU</button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="모바일 메뉴">
+    <a href="#story">Story</a>
+    <a href="#philosophy">Philosophy</a>
+    <a href="#process">Our process</a>
+    <a href="브랜드 ai 초안.html">Category</a>
+    <small>FLOTTELIER · BRAND PHILOSOPHY</small>
+  </nav>
+
+  <main id="main">
+    <section class="story" id="home" aria-labelledby="storyTitle">
+      <div class="story-primary" id="story">
+        <figure class="story-visual" data-reveal>
+          <img src="brand-page-assets/brand-07.jpg" alt="햇살이 드는 정원에 소창 천이 가지런히 널린 풍경">
+        </figure>
+
+        <div class="story-copy" data-reveal>
+          <p class="section-number">01. Brand Story</p>
+          <h1 id="storyTitle">자연의 아름다움이<br>일상에 스며들다</h1>
+          <p>꽃이 피어나는 뜰에서 영감을 얻어,<br>매일의 작은 순간에 특별한 감각을 더합니다.</p>
+        </div>
+      </div>
+
+      <div class="story-detail" data-reveal>
+        <div class="story-detail-copy">
+          <h2>일상의 작은 순간에도 아름다움이 피어나도록.</h2>
+          <p>매일 사용하는 수건은 우리 일상에서 가장 익숙한 물건 중 하나입니다. 하지만 익숙하다는 이유로 그 안에 담긴 소재의 가치와 아름다움을 지나치고 있지는 않을까요?</p>
+          <p>플로뜰리에는 이러한 작은 질문에서 시작되었습니다. 꽃에서 발견한 아름다움, 뜰에서 느끼는 자연의 여유, 아틀리에의 섬세한 감각을 담아 평범한 일상에 새로운 가치를 더하고자 합니다.</p>
+          <p>단순히 물기를 닦는 수건을 넘어, 매일 손이 닿는 순간마저 소중한 경험이 되기를 바랍니다.</p>
+        </div>
+        <figure class="story-secondary">
+          <img src="brand-page-assets/brand-03.jpg" alt="자연스러운 천 위에 놓인 흰 꽃">
+        </figure>
+      </div>
+    </section>
+
+    <section class="philosophy" id="philosophy" aria-labelledby="philosophyTitle">
+      <div class="philosophy-inner">
+        <header class="philosophy-header" data-reveal>
+          <p class="section-number">02. Brand Philosophy</p>
+          <h2 id="philosophyTitle">Our<br>sensibility</h2>
+        </header>
+
+        <ol class="value-list">
+          <li class="value" data-reveal>
+            <span class="value-index">01</span>
+            <figure class="value-image">
+              <img src="brand-page-assets/brand-01.jpg" alt="흰 천 위에 놓인 작은 데이지 꽃">
+            </figure>
+            <div class="value-copy">
+              <h3>ART IN EVERYDAY <span>일상 속 예술</span></h3>
+              <p>특별한 순간이 아니더라도 일상에서 자연과 예술의 아름다움을 경험할 수 있도록 합니다.</p>
+            </div>
+          </li>
+
+          <li class="value" data-reveal>
+            <span class="value-index">02</span>
+            <figure class="value-image">
+              <img src="brand-page-assets/brand-04.jpg" alt="부드럽게 접힌 천의 섬세한 결">
+            </figure>
+            <div class="value-copy">
+              <h3>GENTLE TOUCH <span>섬세한 일상의 감각</span></h3>
+              <p>매일 피부에 닿는 제품인 만큼 소재와 사용 경험을 세심하게 생각합니다.</p>
+            </div>
+          </li>
+
+          <li class="value" data-reveal>
+            <span class="value-index">03</span>
+            <figure class="value-image">
+              <img src="brand-page-assets/brand-06.jpg" alt="초록 숲속 빨랫줄에 걸린 흰 천">
+            </figure>
+            <div class="value-copy">
+              <h3>NATURE IN MIND <span>자연을 향한 마음</span></h3>
+              <p>자연에서 얻은 영감을 제품에 담는 것을 넘어, 제작 과정에서도 환경에 미치는 영향을 고민합니다.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="process-section" id="process" aria-labelledby="processTitle">
+      <header class="process-intro" data-reveal>
+        <p class="section-number">03. Our Process</p>
+        <div class="process-intro-copy">
+          <h2 id="processTitle">왜 플로뜰리에 소창은<br>받자마자 바로 쓸 수 있을까요?</h2>
+          <p>원단에 묻어있는 옥수수 전분 풀기와 자연 불순물을 제거하기 위해 집에서 냄비에 삶고 말려야 했던 번거로움을 공방의 정성 어린 4단계 전통 공정으로 완벽히 해결했습니다.</p>
+        </div>
+      </header>
+
+      <ol class="process-list">
+        <li class="process-step" data-reveal>
+          <span class="process-step-index">01</span>
+          <div class="process-step-body">
+            <div class="process-step-heading">
+              <small>50℃ · 12 hours</small>
+              <h3>1차 온수 침지 <em>Soaking</em></h3>
+            </div>
+            <div class="process-step-detail">
+              <p>강화도 50℃ 청정 지하수에 12시간 동안 담가, 전분이 고온에서 굳기 전에 부드럽게 수화 팽윤시켜 원단 손상 없이 직조 옥수수 풀기를 자연스럽게 불려냅니다.</p>
+              <ul class="process-tags">
+                <li>호화 전 50℃ 저온 팽윤</li>
+                <li>원단 손상 없는 12h 침지</li>
+                <li>강화도 맑은 지하수 사용</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="process-step" data-reveal>
+          <span class="process-step-index">02</span>
+          <div class="process-step-body">
+            <div class="process-step-heading">
+              <small>100℃ · Pure hot water</small>
+              <h3>2차 가마솥 열탕 삶음 <em>Boiling</em></h3>
+            </div>
+            <div class="process-step-detail">
+              <p>전통 무쇠 가마솥 방식으로 100℃ 고온 열탕 삶기를 진행하여 목화 원사의 천연 왁스막을 녹이고, 잔류 전분을 85% 이상 박리·살균합니다.</p>
+              <ul class="process-tags">
+                <li>100℃ 열탕 왁스 용융</li>
+                <li>화학약품 0% 순수 열수 살균</li>
+                <li>전분 85% 이상 고온 박리</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="process-step" data-reveal>
+          <span class="process-step-index">03</span>
+          <div class="process-step-body">
+            <div class="process-step-heading">
+              <small>3 rounds · Clean water</small>
+              <h3>3차 고압 청정수 린스 <em>Rinsing</em></h3>
+            </div>
+            <div class="process-step-detail">
+              <p>강화도 청정 암반수로 3차례에 걸친 고압 회전 린스를 거쳐 박리된 전분 찌꺼기를 완전 배출하며, KS K 0210 시험 기준 요오드 전분 반응 ‘불검출’을 달성합니다.</p>
+              <ul class="process-tags">
+                <li>3단계 고압 회전 린스</li>
+                <li>요오드 시험 전분 불검출</li>
+                <li>신생아 구강 접촉 안심</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="process-step" data-reveal>
+          <span class="process-step-index">04</span>
+          <div class="process-step-body">
+            <div class="process-step-heading">
+              <small>Air · No softener</small>
+              <h3>4차 자연 건조 &amp; 에어 텀블링 <em>Drying &amp; Tumbling</em></h3>
+            </div>
+            <div class="process-step-detail">
+              <p>맑은 바람 건조 후 고속 공기 기류의 물리 가공으로 섬유 조직 사이사이에 뽀송한 미세 공기층을 형성하여, 삶을 필요 없는 100% 완제품으로 출고합니다.</p>
+              <ul class="process-tags">
+                <li>화학유연제 0% 에어 텀블링</li>
+                <li>뽀송한 미세 공기층 형성</li>
+                <li>받자마자 즉시 사용 100%</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="safety-guarantee" id="safety" aria-labelledby="safetyTitle">
+      <div class="safety-inner">
+        <header class="safety-intro" data-reveal>
+          <p class="section-number safety-label">Absolute Transparency</p>
+          <div class="safety-copy">
+            <h2 id="safetyTitle">민감한 피부와 신생아를 위한<br>4無 안심 보증</h2>
+            <p>화학 가공을 일절 배제하여 연약한 아기 피부와 아토피·초민감 피부도 안심하고 쓸 수 있는 시험성적서 원본을 투명하게 공개합니다.</p>
+          </div>
+        </header>
+
+        <div class="safety-grid">
+          <article class="safety-card" data-reveal>
+            <span class="zero-mark">0%</span>
+            <h3>무형광 <span>No Optical Brightener</span></h3>
+            <p>피부 트러블과 알레르기를 유발하는 형광증백제 0.0% 검출</p>
+          </article>
+          <article class="safety-card" data-reveal>
+            <span class="zero-mark">0%</span>
+            <h3>무표백 <span>No Bleach</span></h3>
+            <p>인위적인 백색을 내기 위한 염소계 화학 표백제 완전 배제</p>
+          </article>
+          <article class="safety-card" data-reveal>
+            <span class="zero-mark">0%</span>
+            <h3>무염색 <span>No Dye</span></h3>
+            <p>원사 본연의 따스한 자연 아이보리 빛을 그대로 보존</p>
+          </article>
+          <article class="safety-card" data-reveal>
+            <span class="zero-mark">0%</span>
+            <h3>무향료 <span>No Fragrance</span></h3>
+            <p>인공 향료와 계면활성제 잔여물이 없는 깨끗한 순면</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ritual-timeline" id="ritual" aria-labelledby="ritualTitle">
+      <div class="ritual-inner">
+        <header class="ritual-intro" data-reveal>
+          <p class="section-number">Evolution of Comfort</p>
+          <div class="ritual-copy">
+            <h2 id="ritualTitle">세탁할수록 부드러워지는<br>소창 길들이기 타임라인</h2>
+            <p>소창은 쓸수록 진가를 발휘합니다. 슬라이더를 움직여 50회 세탁 후 촘촘해진 조직감과 부드러운 수축 변화를 확인해 보세요.</p>
+          </div>
+        </header>
+
+        <div class="ritual-experience" data-reveal>
+          <div class="ritual-status">
+            <p class="wash-count"><span id="washCount">0</span><small>WASHES</small></p>
+            <p class="ritual-size" id="ritualSize">신품 규격 · 40 × 80 cm</p>
+          </div>
+
+          <div class="fabric-stage" id="fabricStage">
+            <div class="fabric-panel before">
+              <div class="fabric-caption">
+                <strong>세탁 전</strong>
+                <span>정돈되고 빳빳한 성근 직조 상태</span>
+              </div>
+            </div>
+            <div class="fabric-panel after">
+              <div class="fabric-caption">
+                <strong>세탁 50회 후</strong>
+                <span>공기층이 차올라 도톰하고 흡수력이 살아난 구름 같은 감촉</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="wash-slider-wrap">
+            <input class="wash-slider" id="washSlider" type="range" min="0" max="50" value="0" aria-label="세탁 횟수">
+            <div class="slider-labels"><span>NEW · 40 × 80 cm</span><span>50 WASHES · 35 × 72 cm</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closingTitle">
+      <div class="closing-image" aria-hidden="true">
+        <img src="brand-page-assets/brand-06.jpg" alt="">
+      </div>
+      <div class="closing-copy" data-reveal>
+        <p class="closing-kicker">FLOTTELIER · SOCHANG COLLECTION</p>
+        <h2 id="closingTitle">매일의 작은 순간을<br>부드러운 감각으로</h2>
+        <a class="closing-link" href="브랜드 ai 초안.html">COLLECTION 보기 <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">Flottelier</div>
+    <p>NATURE · ART · GENTLE TOUCH</p>
+    <p>© <span id="year"></span> FLOTTELIER</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    function closeMenu() {
+      document.body.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', '메뉴 열기');
+      menuToggle.textContent = 'MENU';
+    }
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = document.body.classList.toggle('menu-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+      menuToggle.textContent = isOpen ? 'CLOSE' : 'MENU';
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    const revealItems = document.querySelectorAll('[data-reveal]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+    revealItems.forEach(item => observer.observe(item));
+
+    const washSlider = document.getElementById('washSlider');
+    const washCount = document.getElementById('washCount');
+    const ritualSize = document.getElementById('ritualSize');
+    const fabricStage = document.getElementById('fabricStage');
+
+    function updateWashTimeline(value) {
+      const washes = Number(value);
+      const progress = washes / 50;
+      const width = (40 - 5 * progress).toFixed(1).replace('.0', '');
+      const height = (80 - 8 * progress).toFixed(1).replace('.0', '');
+      washCount.textContent = washes;
+      ritualSize.textContent = washes === 0
+        ? '신품 규격 · 40 × 80 cm'
+        : `세탁 ${washes}회 · ${width} × ${height} cm`;
+      fabricStage.style.setProperty('--wash-progress', washes);
+    }
+
+    washSlider.addEventListener('input', event => updateWashTimeline(event.target.value));
+    updateWashTimeline(washSlider.value);
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+{
+  "student": "김규린",
+  "url": "http://127.0.0.1:8766/%EA%B9%80%EA%B7%9C%EB%A6%B0/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/EXAM/index.html",
+  "status": 200,
+  "browser": "155.0.8059.85",
+  "measurements": [
+    {
+      "innerWidth": 1920,
+      "clientWidth": 1920,
+      "scrollWidth": 1920,
+      "boxes": [
+        {
+          "selector": ".utility-menu",
+          "x": 8,
+          "y": 8,
+          "width": 1904,
+          "height": 149,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1904,
+          "clientWidth": 1904
+        },
+        {
+          "selector": ".con",
+          "x": 435,
+          "y": 8,
+          "width": 1050,
+          "height": 58,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 427px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1050,
+          "clientWidth": 1050
+        },
+        {
+          "selector": ".main-header",
+          "x": 8,
+          "y": 66,
+          "width": 1904,
+          "height": 91,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1902,
+          "clientWidth": 1902
+        },
+        {
+          "selector": ".m-header-con",
+          "x": 9,
+          "y": 67,
+          "width": 1902,
+          "height": 94,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1902,
+          "clientWidth": 1902
+        },
+        {
+          "selector": ".logo",
+          "x": 9,
+          "y": 67,
+          "width": 162,
+          "height": 94,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 162,
+          "clientWidth": 162
+        },
+        {
+          "selector": ".menu",
+          "x": 171,
+          "y": 67,
+          "width": 29.453125,
+          "height": 94,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 29,
+          "clientWidth": 29
+        },
+        {
+          "selector": ".icon",
+          "x": 200.453125,
+          "y": 67,
+          "width": 44.171875,
+          "height": 94,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 44,
+          "clientWidth": 44
+        }
+      ],
+      "images": [
+        {
+          "src": "./img/logo-transparent.png",
+          "alt": "모나미 로고",
+          "complete": true,
+          "naturalWidth": 1692,
+          "naturalHeight": 930,
+          "width": 162,
+          "height": 89
+        }
+      ],
+      "text": "HOME\nSITE MAP\nCONTACT US\n메뉴\n아이콘",
+      "fontStatus": "loaded"
+    },
+    {
+      "innerWidth": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "boxes": [
+        {
+          "selector": ".utility-menu",
+          "x": 8,
+          "y": 8,
+          "width": 1424,
+          "height": 149,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1424,
+          "clientWidth": 1424
+        },
+        {
+          "selector": ".con",
+          "x": 195,
+          "y": 8,
+          "width": 1050,
+          "height": 58,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 187px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1050,
+          "clientWidth": 1050
+        },
+        {
+          "selector": ".main-header",
+          "x": 8,
+          "y": 66,
+          "width": 1424,
+          "height": 91,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1422,
+          "clientWidth": 1422
+        },
+        {
+          "selector": ".m-header-con",
+          "x": 9,
+          "y": 67,
+          "width": 1422,
+          "height": 94,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1422,
+          "clientWidth": 1422
+        },
+        {
+          "selector": ".logo",
+          "x": 9,
+          "y": 67,
+          "width": 162,
+          "height": 94,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 162,
+          "clientWidth": 162
+        },
+        {
+          "selector": ".menu",
+          "x": 171,
+          "y": 67,
+          "width": 29.453125,
+          "height": 94,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 29,
+          "clientWidth": 29
+        },
+        {
+          "selector": ".icon",
+          "x": 200.453125,
+          "y": 67,
+          "width": 44.171875,
+          "height": 94,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "\"Noto Sans KR\", sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 44,
+          "clientWidth": 44
+        }
+      ],
+      "images": [
+        {
+          "src": "./img/logo-transparent.png",
+          "alt": "모나미 로고",
+          "complete": true,
+          "naturalWidth": 1692,
+          "naturalHeight": 930,
+          "width": 162,
+          "height": 89
+        }
+      ],
+      "text": "HOME\nSITE MAP\nCONTACT US\n메뉴\n아이콘",
+      "fontStatus": "loaded"
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "hover": null,
+  "css": [
+    {
+      "href": "http://127.0.0.1:8766/%EA%B9%80%EA%B7%9C%EB%A6%B0/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/EXAM/style.css",
+      "rules": [
+        {
+          "selector": "body",
+          "css": "font-family: \"Noto Sans KR\", sans-serif;"
+        },
+        {
+          "selector": "ul, li",
+          "css": "margin: 0px; padding: 0px; list-style: none;"
+        },
+        {
+          "selector": ".con",
+          "css": "width: 1050px; height: 58px; margin-left: auto; margin-right: auto; display: flex;"
+        },
+        {
+          "selector": ".utility-con",
+          "css": "justify-content: flex-end; align-items: center;"
+        },
+        {
+          "selector": ".con > nav > ul",
+          "css": "display: flex; gap: 22px; font-size: 11px; color: rgb(155, 154, 154);"
+        },
+        {
+          "selector": ".main-header",
+          "css": "border: 1px solid red; height: 89px;"
+        },
+        {
+          "selector": ".m-header-con",
+          "css": "display: flex;"
+        }
+      ]
+    }
+  ],
+  "verifiedAt": "2026-10-26T04:25:30.055Z"
+}

@@ -1,0 +1,34 @@
+{
+  "student": "신윤아",
+  "passed": true,
+  "purpose": "원본 채점과 구분한 메모리 내 수정 예시 검증입니다. 학생 제출 파일은 수정하지 않습니다.",
+  "proposedCss": ".head_top .conwrap,.category{width:1400px;margin-left:auto;margin-right:auto}.new{height:auto;padding:88px 0 90px}.new .con{height:auto;padding:0}.toparea{margin:0 0 22px}",
+  "boxes": [
+    {
+      "viewport": 1920,
+      "width": 1200,
+      "height": 360,
+      "display": "flex"
+    },
+    {
+      "viewport": 1440,
+      "width": 1200,
+      "height": 360,
+      "display": "flex"
+    }
+  ],
+  "readability": {
+    "title": "신윤아 모나미 구현 피드백",
+    "headings": [
+      "1. 상단 > 94% 대신 기준 내부 폭 사용",
+      "2. 상단 > 언어 표시와 문서 언어",
+      "3. NEW ARRIVALS > 바깥과 안쪽의 중복 패딩",
+      "4. NEW ARRIVALS > 제품을 설명하는 alt"
+    ],
+    "codeBlocks": 8,
+    "viewport": 1440,
+    "documentWidth": 1425,
+    "characters": 2159
+  },
+  "verifiedAt": "2026-10-26T04:37:38.293Z"
+}

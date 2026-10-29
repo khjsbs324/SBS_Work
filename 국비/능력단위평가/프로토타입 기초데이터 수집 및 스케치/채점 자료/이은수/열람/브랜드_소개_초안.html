@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밀도(MILDO) — 브랜드 소개 | 조선 암행어사 마패 헤리티지 & 커스텀 레이어링 하우스</title>
+    <style>
+        :root {
+            --bg-white: #ffffff;
+            --bg-base: #fafafa;
+            --bg-linen: #fbfbfa;
+            --bg-surface: #f4f4f5;
+            --bg-dark: #121212;
+            --bg-dark-card: #18181b;
+            --bg-dark-border: #27272a;
+            --text-primary: #121212;
+            --text-secondary: #52525b;
+            --text-muted: #71717a;
+            --border-line: #e4e4e7;
+            --border-dark: #27272a;
+            --accent-brass: #ca8a04;
+            --accent-brass-light: #fef08a;
+            --accent-brass-dark: #a16207;
+            --accent-red: #991b1b;
+            --accent-pine: #15803d;
+            --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-serif: 'Nanum Myeongjo', serif;
+            --font-mono: 'SF Mono', 'Courier New', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-sans); }
+        body { background-color: var(--bg-white); color: var(--text-primary); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+        .container-narrow { max-width: 920px; margin: 0 auto; padding: 0 28px; }
+
+        /* Typography */
+        .section-header { text-align: center; margin-bottom: 56px; }
+        .section-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent-brass); border-bottom: 1px solid var(--accent-brass); padding-bottom: 4px; margin-bottom: 16px; font-family: var(--font-mono); }
+        .section-tag-group { display: inline-flex; flex-direction: column; align-items: center; margin-bottom: 16px; text-align: center; }
+        .section-tag-en { font-size: 11px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent-brass); font-family: var(--font-mono); margin-bottom: 4px; line-height: 1.3; }
+        .section-tag-ko { font-size: 13px; font-weight: 800; color: var(--text-secondary); letter-spacing: 0.5px; line-height: 1.4; }
+        .section-title { font-size: 34px; font-weight: 900; letter-spacing: -0.6px; line-height: 1.4; color: var(--text-primary); margin-bottom: 16px; font-family: var(--font-serif); word-break: keep-all; }
+        .section-desc { font-size: 15px; color: var(--text-secondary); max-width: 760px; margin: 0 auto; word-break: keep-all; line-height: 1.85; }
+
+        /* Buttons */
+        .btn-black { background: var(--bg-dark); color: #ffffff; padding: 14px 30px; border-radius: 2px; font-weight: 800; font-size: 13px; display: inline-block; text-decoration: none; border: 1px solid var(--bg-dark); cursor: pointer; text-align: center; transition: all 0.2s; }
+        .btn-black:hover { background: #27272a; }
+        .btn-outline { background: transparent; color: var(--text-primary); padding: 14px 30px; border-radius: 2px; font-weight: 800; font-size: 13px; display: inline-block; text-decoration: none; border: 1px solid var(--border-dark); cursor: pointer; text-align: center; transition: all 0.2s; }
+        .btn-outline:hover { background: var(--bg-surface); }
+        .btn-brass { background: var(--accent-brass); color: #ffffff; padding: 14px 30px; border-radius: 2px; font-weight: 800; font-size: 13px; display: inline-block; text-decoration: none; border: 1px solid var(--accent-brass); cursor: pointer; text-align: center; transition: all 0.2s; }
+        .btn-brass:hover { background: var(--accent-brass-dark); }
+
+        /* Grids & Cards */
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+        .feature-card { background: #ffffff; border: 1px solid var(--border-line); padding: 36px 28px; border-radius: 4px; transition: transform 0.2s, box-shadow 0.2s; }
+        .feature-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,0.04); }
+        .feature-num { font-size: 12px; font-weight: 900; color: var(--accent-brass); font-family: var(--font-mono); margin-bottom: 12px; }
+        .feature-title { font-size: 20px; font-weight: 900; font-family: var(--font-serif); margin-bottom: 10px; }
+        .feature-text { font-size: 13px; color: var(--text-secondary); line-height: 1.8; word-break: keep-all; }
+
+        /* Craft Principles Metrics */
+        .stat-box { background: #ffffff; border: 1px solid var(--border-line); padding: 24px 16px; text-align: center; border-radius: 4px; transition: transform 0.2s, box-shadow 0.2s; }
+        .stat-box:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.04); }
+        .stat-title { font-size: 16px; font-weight: 900; font-family: var(--font-serif); color: var(--text-primary); margin-bottom: 6px; letter-spacing: -0.2px; }
+        .stat-num { font-size: 20px; font-weight: 900; font-family: var(--font-mono); color: var(--text-primary); margin-bottom: 6px; }
+        .stat-lbl { font-size: 12px; font-weight: 700; color: var(--text-secondary); line-height: 1.4; }
+
+        /* Heritage Badge */
+        .seal-badge { width: 44px; height: 44px; border: 1.5px solid var(--accent-red); color: var(--accent-red); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-weight: 900; font-size: 18px; border-radius: 3px; background: rgba(153,27,27,0.06); letter-spacing: -1px; }
+
+        /* Timeline Box */
+        .timeline-item { position: relative; padding-left: 32px; border-left: 2px solid var(--border-line); margin-bottom: 36px; }
+        .timeline-item::before { content: ''; position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-brass); }
+        .timeline-year { font-size: 12.5px; font-weight: 900; font-family: var(--font-mono); color: var(--accent-brass); margin-bottom: 4px; }
+        .timeline-title { font-size: 17px; font-weight: 900; font-family: var(--font-serif); margin-bottom: 6px; }
+        .timeline-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+
+        /* Ultra Clean Transparent Minimal Badges */
+        .product-badge { font-size: 10.5px; font-weight: 800; font-family: var(--font-mono); background: transparent; padding: 3px 8px; border-radius: 2px; display: inline-block; letter-spacing: 0.5px; white-space: nowrap; }
+        .product-badge-1mapae { color: var(--accent-pine); border: 1px solid rgba(21, 128, 61, 0.35); }
+        .product-badge-2mapae { color: var(--accent-red); border: 1px solid rgba(153, 27, 27, 0.4); }
+        .product-badge-3mapae { color: var(--accent-brass); border: 1px solid rgba(202, 138, 4, 0.45); }
+        .product-badge-wellness { color: var(--text-secondary); border: 1px solid rgba(82, 82, 91, 0.35); }
+        .product-badge-gift { color: var(--text-primary); border: 1px solid rgba(18, 18, 18, 0.35); }
+        /* Matrix Table Row */
+        .mapae-table-row {
+            display: grid;
+            grid-template-columns: 60px 110px 1.5fr 1.2fr;
+            gap: 20px;
+            align-items: center;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-line);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .btn-dual-wrap {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+
+        /* Prevent Horizontal Scroll without breaking position: sticky */
+        body {
+            overflow-x: clip;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* ========================================================
+           Responsive Media Queries (Tablet & Mobile)
+           ======================================================== */
+        @media (max-width: 1024px) {
+            .container, .container-narrow { padding: 0 20px; }
+            .grid-4 { grid-template-columns: repeat(2, 1fr) !important; gap: 18px; }
+            .grid-3 { grid-template-columns: repeat(2, 1fr) !important; gap: 20px; }
+            .mapae-table-row { grid-template-columns: 50px 90px 1.4fr 1.1fr; gap: 14px; }
+            .section-title { font-size: 28px; }
+            header nav { gap: 14px; font-size: 12px; }
+        }
+
+        /* Center-Aligned GNB & Sticky Header */
+        .main-header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-line);
+            z-index: 1000;
+            padding: 14px 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+            transition: all 0.2s ease;
+        }
+        .gnb-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 20px;
+        }
+        .gnb-nav {
+            display: flex;
+            gap: 28px;
+            font-size: 13.5px;
+            font-weight: 700;
+            align-items: center;
+            justify-self: center;
+        }
+        .gnb-link {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13.5px;
+            font-weight: 700;
+            padding: 6px 0;
+            transition: color 0.2s ease, border-color 0.2s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .gnb-link:hover {
+            color: var(--text-primary);
+        }
+        .gnb-link.active {
+            color: var(--text-primary);
+            font-weight: 900;
+            border-bottom-color: var(--text-primary);
+        }
+
+        .user-menu-btn {
+            background: transparent;
+            border: none;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-primary);
+            transition: color 0.2s ease, transform 0.2s ease;
+            padding: 0;
+        }
+        .user-menu-btn:hover {
+            color: var(--accent-brass);
+            transform: scale(1.1);
+        }
+
+        /* Hero Typography & Elements */
+        .hero-main-title {
+            font-size: 38px;
+            font-weight: 900;
+            font-family: var(--font-serif);
+            line-height: 1.4;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+        .hero-main-desc {
+            font-size: 15.5px;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 40px;
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+        .desktop-br {
+            display: inline;
+        }
+
+        /* Floating Cart Sticky Pill Widget */
+        .floating-cart-pill {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            background: var(--bg-dark);
+            color: #ffffff;
+            border: 1px solid #27272a;
+            border-radius: 30px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.24);
+            cursor: pointer;
+            transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s;
+            user-select: none;
+        }
+        .floating-cart-pill:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 36px rgba(0,0,0,0.3);
+            border-color: var(--accent-brass);
+        }
+
+        .gnb-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+            justify-self: start;
+            flex-shrink: 0;
+            padding-left: 6px;
+            transition: opacity 0.2s ease;
+        }
+        .gnb-logo:hover {
+            opacity: 0.85;
+        }
+
+        .top-announcement-bar {
+            background: var(--bg-dark);
+            color: #e4e4e7;
+            font-size: 11.5px;
+            padding: 8px 0;
+            letter-spacing: 0.3px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+        }
+        .top-announcement-bar a {
+            color: #f4f4f5;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: opacity 0.2s ease;
+        }
+        .top-announcement-bar a:hover {
+            opacity: 0.85;
+        }
+        .top-badge {
+            background: var(--accent-brass);
+            color: #121212;
+            font-size: 9.5px;
+            font-weight: 800;
+            padding: 1px 6px;
+            border-radius: 2px;
+            font-family: var(--font-mono);
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .container, .container-narrow { padding: 0 16px !important; }
+            .top-announcement-bar { font-size: 10.5px !important; padding: 7px 0 !important; }
+            .top-announcement-bar .desktop-announcement-text { display: none !important; }
+            .top-announcement-bar .mobile-announcement-text { display: inline !important; }
+            .desktop-br { display: none !important; }
+            
+            /* GNB Minimal Luxury Header for Mobile (Logo Left, User Menu Right) */
+            .gnb-nav { display: none !important; }
+            .gnb-grid {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                width: 100% !important;
+                padding: 0 4px !important;
+            }
+            .gnb-logo {
+                padding-left: 10px !important;
+            }
+            .user-menu-btn {
+                margin-right: 8px !important;
+            }
+            
+            /* Grids Collapse to 1-Column */
+            .grid-2, .grid-3, .grid-4, .footer-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+            
+            /* Bottom Dual Buttons: Compact & Side-by-Side 1-Row Layout */
+            .btn-dual-wrap { 
+                display: grid !important; 
+                grid-template-columns: 1.15fr 1fr !important; 
+                gap: 8px !important; 
+                width: 100% !important;
+            }
+            .btn-dual-wrap .btn-black,
+            .btn-dual-wrap .btn-outline {
+                padding: 10px 6px !important;
+                font-size: 11px !important;
+                white-space: nowrap !important;
+                text-align: center !important;
+                width: 100% !important;
+            }
+            .epilogue-btn-wrap {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 8px !important;
+                width: 100% !important;
+                margin-top: 24px !important;
+            }
+            .epilogue-btn-wrap a {
+                padding: 10px 6px !important;
+                font-size: 11px !important;
+                white-space: nowrap !important;
+                text-align: center !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* 1·2·3 마패 체계 표 모바일 카드형 변환 (가독성 100% 확보) */
+            .mapae-table-row {
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+                padding: 18px 16px !important;
+                background: var(--bg-surface);
+                border: 1px solid var(--border-line);
+                border-radius: 6px;
+                margin-bottom: 14px;
+            }
+            .mapae-table-row .mapae-badge-col {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            /* Universal Mobile Heading & Typography Overrides */
+            h1, .hero-main-title, section h1, div h1 {
+                font-size: clamp(22px, 6.5vw, 26px) !important;
+                line-height: 1.35 !important;
+                margin-bottom: 14px !important;
+            }
+            h2, .section-title, section h2, div h2, main h2 {
+                font-size: 19.5px !important;
+                line-height: 1.35 !important;
+                margin-bottom: 10px !important;
+            }
+            h3, .feature-title, section h3, div h3, main h3 {
+                font-size: 15px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 8px !important;
+            }
+            h4, section h4, div h4 {
+                font-size: 13.5px !important;
+                line-height: 1.4 !important;
+            }
+            .hero-main-desc {
+                font-size: 13px !important;
+                line-height: 1.75 !important;
+                margin-bottom: 24px !important;
+            }
+            .section-header { margin-bottom: 24px !important; }
+            .section-tag { font-size: 9px !important; letter-spacing: 1.5px !important; margin-bottom: 8px !important; }
+            .section-desc { font-size: 12px !important; line-height: 1.7 !important; }
+            
+            /* Buttons Full Width / Optimized Touch */
+            .btn-black, .btn-outline, .btn-brass { padding: 10px 18px !important; font-size: 11.5px !important; }
+            
+            /* Stats & Timeline */
+            .stat-box { padding: 14px 8px !important; }
+            .stat-num, .stat-title { font-size: 14.5px !important; }
+            .stat-lbl { font-size: 10px !important; }
+            .timeline-item { padding-left: 18px !important; margin-bottom: 18px !important; }
+            
+            /* Floating Cart Responsive */
+            .floating-cart-pill { bottom: 16px !important; right: 16px !important; padding: 7px 14px !important; font-size: 10.5px !important; }
+
+            /* Modal Responsive */
+            #diagnosisModal > div {
+                width: 94% !important;
+                max-width: 100% !important;
+                padding: 22px 16px !important;
+                margin: 16px auto !important;
+            }
+
+            /* ========================================================
+               Mobile Section Vertical Spacing & Distinct Chapter Separation
+               (구간 상하 여백 54px~56px 황금비율 + 명확한 챕터 구분감 부여)
+               ======================================================== */
+            section, main > section {
+                padding-top: 56px !important;
+                padding-bottom: 56px !important;
+                min-height: auto !important;
+                border-bottom: 1px solid var(--border-line) !important;
+            }
+            #heritage, #custom, #hardware, #atelier, #epilogue {
+                padding-top: 54px !important;
+                padding-bottom: 54px !important;
+            }
+            footer {
+                padding-top: 40px !important;
+                padding-bottom: 28px !important;
+            }
+            .section-header {
+                margin-bottom: 28px !important;
+            }
+            
+            /* Section Tag Clean Kicker & 2-Row Group */
+            .section-tag {
+                display: inline-block !important;
+                font-size: 11px !important;
+                letter-spacing: 1.5px !important;
+                margin-bottom: 8px !important;
+                background: transparent !important;
+                padding: 0 !important;
+                border: none !important;
+                font-family: var(--font-mono) !important;
+            }
+            .section-tag-group {
+                margin-bottom: 12px !important;
+            }
+            .section-tag-en {
+                font-size: 10px !important;
+                letter-spacing: 1.8px !important;
+                margin-bottom: 2px !important;
+            }
+            .section-tag-ko {
+                font-size: 12px !important;
+                letter-spacing: 0.2px !important;
+            }
+
+            /* Card Containers Elevation for Visual Separation */
+            .feature-card, .mapae-table-row, .stat-box {
+                box-shadow: 0 4px 16px rgba(0,0,0,0.03) !important;
+            }
+
+            /* ========================================================
+               모바일 설명 폰트 & 본문 단락(Description Typography) 전면 통일
+               ======================================================== */
+            .section-desc, 
+            section p, 
+            main p,
+            .feature-text {
+                font-size: 12.5px !important;
+                line-height: 1.72 !important;
+                color: var(--text-secondary) !important;
+                word-break: keep-all !important;
+            }
+
+            div[style*="margin-top:70px"], div[style*="margin-top: 70px"] {
+                margin-top: 32px !important;
+            }
+            div[style*="margin-top:48px"], div[style*="margin-top: 48px"],
+            div[style*="margin-top:56px"], div[style*="margin-top: 56px"],
+            div[style*="margin-top:40px"], div[style*="margin-top: 40px"] {
+                margin-top: 26px !important;
+            }
+            .mobile-desc-hide {
+                display: none !important;
+            }
+            .mobile-ellipsis-2 {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+
+        /* Narrow Mobile (<= 480px & 360px) Zero-Overflow */
+        @media (max-width: 480px) {
+            .container, .container-narrow { padding: 0 14px !important; }
+            .section-tag {
+                white-space: normal !important;
+                word-break: keep-all !important;
+                max-width: 100% !important;
+            }
+            .floating-cart-pill {
+                bottom: 12px !important;
+                right: 12px !important;
+                padding: 6px 12px !important;
+                font-size: 10px !important;
+            }
+            .stat-box { padding: 12px 6px !important; }
+            .stat-num, .stat-title { font-size: 13.5px !important; }
+        }
+        @media (max-width: 360px) {
+            .container, .container-narrow { padding: 0 10px !important; }
+            .hero-main-title { font-size: 19px !important; }
+            .section-title { font-size: 17px !important; }
+            .btn-black, .btn-brass, .btn-outline {
+                font-size: 11px !important;
+                padding: 8px 12px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SEC-01: Top Notification Bar & Sticky GNB -->
+    <div class="top-announcement-bar">
+        <div class="container" style="display:flex; justify-content:center; align-items:center;">
+            <a href="카테고리.html" title="디스커버리 킷 보러가기">
+                <span class="top-badge">혜택</span>
+                <span class="desktop-announcement-text" style="font-weight:600;">첫 주문 한정, 19,000원 웰컴 크레딧 증정 ‘디스커버리 킷’ 혜택을 만나보세요.</span>
+                <span class="mobile-announcement-text" style="display:none; font-weight:600;">첫 주문 한정, 19,000원 웰컴 크레딧 킷</span>
+                <span style="font-size:10px; opacity:0.6; font-family:var(--font-mono);">→</span>
+            </a>
+        </div>
+    </div>
+    
+    <header class="main-header">
+        <div class="container gnb-grid">
+            <!-- Left: Brand Identity Logo -->
+            <a href="메인_페이지.html" class="gnb-logo">
+                <div style="width:34px; height:34px; border:1.5px solid var(--text-primary); display:flex; align-items:center; justify-content:center; font-weight:900; font-family:var(--font-serif); font-size:15px;">密</div>
+                <div>
+                    <div style="font-size:16px; font-weight:900; font-family:var(--font-serif); letter-spacing:-0.2px;">밀도 (MILDO)</div>
+                    <div style="font-size:8px; font-weight:800; color:var(--text-muted); letter-spacing:1.2px; font-family:var(--font-mono);">HAUTE PERFUMERY</div>
+                </div>
+            </a>
+
+            <!-- Center: Navigation Menus -->
+            <nav class="gnb-nav">
+                <a href="메인_페이지.html" class="gnb-link">
+                    <span class="gnb-text-full">메인 홈</span>
+                    <span class="gnb-text-short" style="display:none;">홈</span>
+                </a>
+                <a href="브랜드_소개.html" class="gnb-link active">브랜드 소개</a>
+                <a href="카테고리.html" class="gnb-link">
+                    <span class="gnb-text-full">전체 16종 카탈로그</span>
+                    <span class="gnb-text-short" style="display:none;">16종 카탈로그</span>
+                </a>
+            </nav>
+
+            <!-- Right: User Menu Icon -->
+            <div style="display:flex; align-items:center; justify-self:end; flex-shrink:0;">
+                <button type="button" onclick="openUserMenuModal()" class="user-menu-btn" title="사용자 메뉴 (마이페이지)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEC-02: Hero — 브랜드 탄생 배경 & 매니페스토 (Brand Origin) -->
+    <section style="padding:110px 0 90px; background:var(--bg-base); border-bottom:1px solid var(--border-line);">
+        <div class="container">
+            <div style="text-align:center; max-width:880px; margin:0 auto;">
+                <div class="section-tag-group">
+                    <span class="section-tag-en">BRAND MANIFESTO</span>
+                    <span class="section-tag-ko">짙은 연기 속, 나를 각인시키는 향의 밀도</span>
+                </div>
+                <h1 class="hero-main-title">
+                    짙은 연기 속,<br class="desktop-br">
+                    나를 각인시키는 향의 밀도
+                </h1>
+                <p class="hero-main-desc">
+                    남들과 똑같은 향 대신 진짜 나다운 향을 찾고 싶었던 작은 고민에서 밀도(MILDO)는 시작했습니다.<br class="desktop-br">
+                    오후면 날아가는 향기, 가방에 넣기엔 무겁고 깨질까 불안한 유리병의 아쉬움을 넘어—<br class="desktop-br">
+                    밀도는 조선 암행어사의 마패(馬牌)가 지녔던 결단과 위엄을 현대의 세련된 향과 휴대 오브제로 재창조합니다.
+                </p>
+
+                <div class="btn-dual-wrap" style="justify-content:center; margin-bottom:52px;">
+                    <a href="카테고리.html" class="btn-black" style="font-size:13px;">16종 전체 컬렉션 탐색 &gt;</a>
+                    <button type="button" onclick="openDiagnosisModal()" class="btn-brass" style="font-size:13px; cursor:pointer;">30초 나만의 마패 향 찾기 &gt;</button>
+                </div>
+
+                <!-- 4대 핵심 가치 지표 매트릭스 -->
+                <div class="grid-4">
+                    <div class="stat-box">
+                        <div class="stat-title">3단계 마패 체계</div>
+                        <div class="stat-lbl">1·2·3마패 체계적 등급제</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-title">마그네틱 캡</div>
+                        <div class="stat-lbl">정밀 밀폐형 자석 뚜껑</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-title">16종 컬렉션</div>
+                        <div class="stat-lbl">충돌 없는 마스터 포뮬러</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-title">조선 헤리티지</div>
+                        <div class="stat-lbl">전통 서재 원료의 현대적 조향</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEC-03: 세계관 — 조선 암행어사와 마패(馬牌)의 재해석 (The Heritage) -->
+    <section id="heritage" style="padding:110px 0; border-bottom:1px solid var(--border-line); background:#ffffff;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag-group">
+                    <span class="section-tag-en">HERITAGE</span>
+                    <span class="section-tag-ko">조선 마패의 현대적 재해석</span>
+                </div>
+                <h2 class="section-title">조선 암행어사의 마패(馬牌),<br>보이지 않는 내면의 위엄과 인장이 되다</h2>
+                <p class="section-desc">
+                    마패가 지녔던 역사적 상징과, 이를 현대인의 일상과 향으로 재해석한 밀도(MILDO)의 3단계 체계를 소개합니다.
+                </p>
+            </div>
+
+            <!-- 1. 역사적 참고 (Historical Context) -->
+            <div style="background:#ffffff; border:1px solid var(--border-line); border-radius:4px; padding:36px 40px; box-shadow:0 4px 16px rgba(0,0,0,0.02); margin-bottom:28px;">
+                <div style="margin-bottom:18px;">
+                    <span style="font-size:11px; font-weight:800; font-family:var(--font-mono); color:var(--accent-brass); letter-spacing:1.5px; text-transform:uppercase;">
+                        [01. HISTORICAL CONTEXT] 역사적 사실과 상징
+                    </span>
+                    <h3 style="font-size:20px; font-weight:900; font-family:var(--font-serif); margin:8px 0 6px; color:var(--text-primary);">
+                        마패 : 이동, 신분과 공적 책임의 상징
+                    </h3>
+                    <p style="font-size:13.5px; color:var(--text-secondary); margin:0;">
+                        조선 시대의 마패(馬牌)는 단순한 관직 증명서가 아닌, 역참에서 말을 징발하여 먼 길을 이동할 수 있었던 국가 공인 신표였습니다.
+                    </p>
+                </div>
+                <div style="background:var(--bg-surface); border:1px solid var(--border-line); border-radius:4px; padding:22px 26px;">
+                    <p style="font-size:14px; color:var(--text-secondary); line-height:1.85; margin:0; word-break:keep-all;">
+                        새겨진 말의 수(1마패~5마패)에 따라 이용할 수 있는 역마의 수와 임무의 무게가 달랐으며, 암행어사가 품속 깊은 곳에 은밀히 간직하다 결정적인 순간에 스스로를 드러내고 증명하던 숭고한 자부심의 상징이었습니다.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2. 브랜드의 현대적 해석 (Modern Interpretation) -->
+            <div style="background:#ffffff; border:1px solid var(--border-line); border-radius:4px; padding:36px 40px; box-shadow:0 4px 16px rgba(0,0,0,0.02); margin-bottom:48px;">
+                <div style="margin-bottom:24px;">
+                    <span style="font-size:11px; font-weight:800; font-family:var(--font-mono); color:var(--accent-brass); letter-spacing:1.5px; text-transform:uppercase;">
+                        [02. MODERN INTERPRETATION] 브랜드의 현대적 해석
+                    </span>
+                    <h3 style="font-size:20px; font-weight:900; font-family:var(--font-serif); margin:8px 0 6px; color:var(--text-primary);">
+                        밀도의 3단계 마패 체계 : 사용 시간과 향의 존재감
+                    </h3>
+                    <p style="font-size:13.5px; color:var(--text-secondary); margin:0;">
+                        밀도는 사용 시간(지속력)과 상황별 존재감(향의 깊이)에 따라 1마패·2마패·3마패로 구분된 독창적인 상품 체계를 완성했습니다.
+                    </p>
+                </div>
+
+                <!-- 한눈에 비교되는 세로 도표 (Vertical Matrix Table with Signature Scents) -->
+                <div style="display:flex; flex-direction:column; border-top:1px solid var(--border-line);">
+                    
+                    <!-- Row 01 -->
+                    <div class="mapae-table-row">
+                        <div style="font-size:28px; font-weight:900; font-family:var(--font-mono); color:var(--accent-pine); letter-spacing:-1px;">01</div>
+                        <div class="mapae-badge-col">
+                            <span class="product-badge product-badge-1mapae" style="margin-bottom:4px;">1마패</span>
+                            <div style="font-size:11px; font-weight:800; color:var(--text-muted); font-family:var(--font-mono);">DAILY BASE</div>
+                        </div>
+                        <div>
+                            <div style="font-size:14.5px; font-weight:900; color:var(--text-primary); margin-bottom:4px;">가벼운 향의 밀도</div>
+                            <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.6; margin-bottom:8px;">
+                                피부에 맑게 스며들어 하루의 든든한 밑바탕이 되는 산뜻한 시작.
+                            </div>
+                            <div style="font-size:12px; color:var(--text-secondary); background:rgba(21,128,61,0.06); padding:6px 12px; border-radius:3px; border-left:3px solid var(--accent-pine);">
+                                <strong>대표작 : 유자 청송</strong> — 하동 청유자와 청송의 산뜻한 일상 향
+                            </div>
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:8px;">
+                            <div style="background:var(--bg-base); padding:8px 14px; border-radius:4px; border:1px solid var(--border-line);">
+                                <div style="font-size:10px; font-weight:800; color:var(--text-muted); font-family:var(--font-mono);">추천 상황 (TPO)</div>
+                                <div style="font-size:12.5px; font-weight:800; color:var(--text-primary);">출근 전과 일상</div>
+                            </div>
+                            <a href="카테고리.html" class="btn-outline" style="font-size:11px; padding:8px 12px; text-align:center; border-color:var(--accent-pine); color:var(--accent-pine); width:100%; box-sizing:border-box;">
+                                유자 청송 포함 1마패 보기 &gt;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Row 02 -->
+                    <div class="mapae-table-row">
+                        <div style="font-size:28px; font-weight:900; font-family:var(--font-mono); color:var(--accent-red); letter-spacing:-1px;">02</div>
+                        <div class="mapae-badge-col">
+                            <span class="product-badge product-badge-2mapae" style="margin-bottom:4px;">2마패</span>
+                            <div style="font-size:11px; font-weight:800; color:var(--text-muted); font-family:var(--font-mono);">POINT MOOD</div>
+                        </div>
+                        <div>
+                            <div style="font-size:14.5px; font-weight:900; color:var(--text-primary); margin-bottom:4px;">감정과 장면의 전환</div>
+                            <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.6; margin-bottom:8px;">
+                                나른함을 깨우고 감정의 균형과 개성을 표현하는 감각적 포인트.
+                            </div>
+                            <div style="font-size:12px; color:var(--text-secondary); background:rgba(153,27,27,0.06); padding:6px 12px; border-radius:3px; border-left:3px solid var(--accent-red);">
+                                <strong>대표작 : 적송 홍화</strong> — 적송의 무게와 홍화의 감성을 함께 보여주는 향
+                            </div>
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:8px;">
+                            <div style="background:var(--bg-base); padding:8px 14px; border-radius:4px; border:1px solid var(--border-line);">
+                                <div style="font-size:10px; font-weight:800; color:var(--text-muted); font-family:var(--font-mono);">추천 상황 (TPO)</div>
+                                <div style="font-size:12.5px; font-weight:800; color:var(--text-primary);">늦은 오후와 만남</div>
+                            </div>
+                            <a href="카테고리.html" class="btn-outline" style="font-size:11px; padding:8px 12px; text-align:center; border-color:var(--accent-red); color:var(--accent-red); width:100%; box-sizing:border-box;">
+                                적송 홍화 포함 2마패 보기 &gt;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Row 03 -->
+                    <div class="mapae-table-row" style="border-bottom:none;">
+                        <div style="font-size:28px; font-weight:900; font-family:var(--font-mono); color:var(--accent-brass); letter-spacing:-1px;">03</div>
+                        <div class="mapae-badge-col">
+                            <span class="product-badge product-badge-3mapae" style="margin-bottom:4px;">3마패</span>
+                            <div style="font-size:11px; font-weight:800; color:var(--text-muted); font-family:var(--font-mono);">ALL-DAY MASTER</div>
+                        </div>
+                        <div>
+                            <div style="font-size:14.5px; font-weight:900; color:var(--text-primary); margin-bottom:4px;">깊고 오래 남는 존재감</div>
+                            <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.6; margin-bottom:8px;">
+                                방짜유기 놋쇠 캡을 얹어 공간을 은은히 채우는 묵직한 서명.
+                            </div>
+                            <div style="font-size:12px; color:var(--text-secondary); background:rgba(202,138,4,0.08); padding:6px 12px; border-radius:3px; border-left:3px solid var(--accent-brass);">
+                                <strong>대표작 : 백단 묵향</strong> — 백단, 송연묵과 방짜유기 뚜껑으로 밀도의 정체성을 보여주는 향
+                            </div>
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:8px;">
+                            <div style="background:var(--bg-base); padding:8px 14px; border-radius:4px; border:1px solid var(--border-line);">
+                                <div style="font-size:10px; font-weight:800; color:var(--text-muted); font-family:var(--font-mono);">추천 상황 (TPO)</div>
+                                <div style="font-size:12.5px; font-weight:800; color:var(--text-primary);">저녁 모임과 공간 훈향</div>
+                            </div>
+                            <a href="카테고리.html" class="btn-outline" style="font-size:11px; padding:8px 12px; text-align:center; border-color:var(--accent-brass); color:var(--accent-brass); width:100%; box-sizing:border-box;">
+                                백단 묵향 포함 3마패 보기 &gt;
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 전통 향방 철학 박스 -->
+            <div class="grid-2" style="background:var(--bg-surface); border:1px solid var(--border-line); padding:clamp(24px, 4vw, 40px); border-radius:4px; gap:36px; align-items:center;">
+                <div>
+                    <span style="font-size:11px; font-weight:800; color:var(--accent-brass); letter-spacing:1px; font-family:var(--font-mono);">K-HERITAGE PHILOSOPHY</span>
+                    <h3 style="font-size:22px; font-weight:900; font-family:var(--font-serif); margin:8px 0 12px;">조선 선비의 서재와 전통 향방 문화의 현대적 계승</h3>
+                    <p style="font-size:13px; color:var(--text-secondary); line-height:1.8;">
+                        밀도는 조선 선비들이 서재에서 먹을 갈고 침향을 훈향하며 마음을 정돈하던 고유의 절제미를 바탕으로, 현대인의 일상에 자연스럽게 스며드는 정교한 레이어링 하우스를 지향합니다.
+                    </p>
+                </div>
+                <div style="background:#ffffff; border:1px solid var(--border-line); padding:24px; text-align:center; border-radius:4px;">
+                    <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:8px;">짙은 연기 속, 나를 각인시키는 향의 밀도</div>
+                    <div style="font-size:24px; font-weight:900; font-family:var(--font-serif); letter-spacing:3px; color:var(--text-primary); margin-bottom:8px;">밀도 (MILDO)</div>
+                    <div style="font-size:11px; color:var(--accent-brass); font-family:var(--font-mono);">Modern Heritage Perfumery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEC-04: 핵심 가치 — 맞춤 레이어링 가이드 & 조화로운 향조 제안 (Custom Layering Guide) -->
+    <section id="custom" style="padding:110px 0; border-bottom:1px solid var(--border-line); background:var(--bg-base);">
+        <div class="container">
+            <div class="section-header" style="max-width:800px; margin:0 auto 48px; text-align:center;">
+                <div class="section-tag-group">
+                    <span class="section-tag-en">LAYERING RITUAL</span>
+                    <span class="section-tag-ko">맞춤형 조향 및 실전 레이어링 리추얼</span>
+                </div>
+                <h2 class="section-title">시간대와 감정의 변화에 맞춰 완성하는<br>밀도의 2:1 실전 레이어링 리추얼</h2>
+                <div style="background:var(--bg-linen); border:1px solid var(--border-line); border-radius:4px; padding:18px 24px; margin-top:16px; display:inline-block; text-align:left;">
+                    <p style="font-size:13.5px; color:var(--text-primary); line-height:1.75; margin:0; word-break:keep-all;">
+                        <strong>※ 실전 레이어링(Layering)이란</strong> 향을 무작위로 섞는 것이 아닌, 시간의 흐름(아침·오후·저녁)에 따라 서로 다른 마패 향을 덧입혀 나만의 고유한 향 서사를 짓는 과정입니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-num" style="color:var(--accent-pine);">STEP 01 · 08:00 AM</div>
+                    <h3 class="feature-title">아침의 맑은 베이스 착향</h3>
+                    <p class="feature-text">
+                        출근 전 아침, <strong>1마패(유자 청송)를 손목과 목덜미에 2회 분사</strong>합니다. 피부에 맑게 스며들어 하루를 든든하게 지탱하는 산뜻한 밑바탕이 완성됩니다.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-num" style="color:var(--accent-red);">STEP 02 · 15:00 PM</div>
+                    <h3 class="feature-title">오후의 무드 전환 덧뿌림</h3>
+                    <p class="feature-text">
+                        나른해진 오후 3시, 1마패 베이스 위에 <strong>2마패(적송 홍화)를 1회 덧뿌립니다</strong>. 2:1 추천 배합이 이루어지며 기분 전환과 함께 나만의 감각적인 포인트가 살아납니다.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-num" style="color:var(--accent-brass);">STEP 03 · 20:00 PM</div>
+                    <h3 class="feature-title">저녁의 묵직한 여운 완성</h3>
+                    <p class="feature-text">
+                        저녁 약속이나 사색의 시간, <strong>3마패(백단 묵향)를 가슴이나 옷깃 안쪽에 1회 분무</strong>합니다. 깊은 놋쇠 묵향이 공간을 채우며 하루의 기품 있는 서명을 완성합니다.
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:36px;">
+                <button type="button" onclick="openDiagnosisModal()" class="btn-black" style="padding:14px 32px; font-size:13px; cursor:pointer;">
+                    30초 나만의 마패 향 진단 시작하기 &gt;
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEC-05: 하드웨어 혁신 — 가방에 걸고 이동하는 향수 & 휴대 설계 (Portable Luxury Hardware) -->
+    <section id="hardware" style="padding:110px 0; border-bottom:1px solid var(--border-line); background:#ffffff;">
+        <div class="container">
+            <div class="section-header" style="max-width:800px; margin:0 auto 48px; text-align:center;">
+                <div class="section-tag-group">
+                    <span class="section-tag-en">HARDWARE INNOVATION</span>
+                    <span class="section-tag-ko">가방에 거는 휴대용 마패 오브제</span>
+                </div>
+                <h2 class="section-title">가방과 벨트에 걸고 언제 어디서나 이동하는 향수</h2>
+                <p class="section-desc">
+                    무거운 유리병을 집에 두고 다니던 불편함을 넘어, 하루의 모든 동선에서 향을 덧입는 실시간 휴대형 하드웨어 디자인을 완성했습니다.
+                </p>
+            </div>
+
+            <!-- [대형 사용 장면 쇼케이스] 이동하는 향수의 실제 라이프스타일 씬 -->
+            <div class="grid-2" style="background:var(--bg-surface); border:1px solid var(--border-line); border-radius:4px; padding:clamp(24px, 4vw, 44px); margin-bottom:36px; gap:36px; align-items:center;">
+                
+                <!-- 좌측: 사용 장면 실제 이미지 영역 (플레이스홀더) -->
+                <div style="background:#ffffff; border:2px dashed var(--border-line); padding:44px 28px; border-radius:4px; text-align:center; min-height:280px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+                    <div style="font-size:11px; font-weight:800; color:var(--accent-brass); font-family:var(--font-mono); letter-spacing:2px; margin-bottom:10px;">[IMAGE PLACEHOLDER]</div>
+                    <div style="font-size:16px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary); margin-bottom:10px;">
+                        가방·벨트에 걸린 마패 향수 실착용 라이프스타일 컷
+                    </div>
+                    <p style="font-size:12.5px; color:var(--text-secondary); line-height:1.7; max-width:320px; margin:0 auto; word-break:keep-all;">
+                        (토트백 스트랩 및 벨트 고리에 방짜유기 놋쇠 마패 참과 슬림 보틀이 체결되어, 도심 속을 이동하며 자연스럽게 손이 닿는 실제 착용 연출 사진이 들어갈 영역)
+                    </p>
+                </div>
+
+                <!-- 우측: 사용 시나리오 에디토리얼 설명 -->
+                <div>
+                    <span style="font-size:10.5px; font-weight:800; font-family:var(--font-mono); color:var(--accent-brass); letter-spacing:1.5px;">PRIMARY USE-CASE SCENE</span>
+                    <h3 style="font-size:22px; font-weight:900; font-family:var(--font-serif); margin:8px 0 14px; line-height:1.45; color:var(--text-primary);">
+                        외출할 때 가방에 툭 걸고,<br>이동 중 언제든 한 손으로 열어 향을 덧입다
+                    </h3>
+                    <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.85; margin-bottom:14px; word-break:keep-all;">
+                        기존 향수는 100ml 무거운 유리병에 담겨 집 화장대 위에 머물러야 했습니다. 밀도는 향수가 사용자의 일상 동선을 따라 항상 함께 움직여야 한다고 생각했습니다.
+                    </p>
+                    <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.85; margin:0; word-break:keep-all;">
+                        토트백 스트랩이나 벨트 루프에 마패 참을 걸어두면, 가방 속을 번거롭게 뒤적일 필요 없이 출근길, 미팅 직전, 산책길에 한 손으로 캡을 열어 나만의 고유한 향을 피부 위에 완성할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 휴대 핵심 근거 2대 축 -->
+            <div class="grid-2" style="margin-bottom:32px;">
+                <div class="feature-card" style="padding:36px 32px; background:var(--bg-linen); border:1px solid var(--border-line);">
+                    <div class="feature-num" style="color:var(--accent-brass);">HARDWARE 01</div>
+                    <h3 class="feature-title" style="font-size:20px;">가방이나 벨트에 연결되는 마패 장식의 구조</h3>
+                    <p class="feature-text" style="font-size:13.5px; line-height:1.8;">
+                        전통 방짜유기 놋쇠 주조 기법에 착안한 메탈 마패 펜던트 스트랩. 가방 고리, 벨트 루프, 파우치에 걸어 분실 걱정 없이 휴대하며 나만의 힙트래디션 스타일을 연출합니다.
+                    </p>
+                </div>
+                <div class="feature-card" style="padding:36px 32px; background:var(--bg-linen); border:1px solid var(--border-line);">
+                    <div class="feature-num" style="color:var(--accent-brass);">HARDWARE 02</div>
+                    <h3 class="feature-title" style="font-size:20px;">이동 중 열림과 누수를 줄이기 위한 뚜껑 결합 방식</h3>
+                    <p class="feature-text" style="font-size:13.5px; line-height:1.8;">
+                        가방 안의 움직임이나 마찰 속에서도 뚜껑이 쉽게 분리되거나 새지 않도록, 누수 방지를 고려해 정밀하게 설계된 마그네틱 결합 구조로 한 손으로도 경쾌하게 여닫을 수 있습니다.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 소장형 헤리티지 오브제 (지속 가능한 공예 가치) -->
+            <div style="background:var(--bg-surface); border:1px solid var(--border-line); border-left:4px solid var(--accent-brass); padding:32px 36px; border-radius:4px;">
+                <div style="display:flex; gap:8px; align-items:center; margin-bottom:8px;">
+                    <span style="font-size:10px; font-weight:800; font-family:var(--font-mono); background:rgba(202,138,4,0.12); color:var(--accent-brass); padding:2px 8px; border-radius:2px;">CRAFT & SUSTAINABILITY</span>
+                    <h4 style="font-size:17px; font-weight:900; font-family:var(--font-serif); margin:0; color:var(--text-primary);">향을 다 사용한 후에도 영구 소장하는 서예 문진 &amp; 인센스 홀더</h4>
+                </div>
+                <p style="font-size:13px; color:var(--text-secondary); line-height:1.75; margin:0; word-break:keep-all;">
+                    밀도의 마패 보틀은 향수를 모두 비운 후에도 버려지지 않고, 책상 위의 정갈한 서예 문진이나 인센스 스틱 홀더로 영구 소장할 수 있도록 지속 가능한 공예 가치를 담았습니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEC-06: 순수 원료 & 조향 기준 (Botanical Sourcing & Extraction Philosophy) -->
+    <section id="botanical" style="padding:110px 0; border-bottom:1px solid var(--border-line); background:var(--bg-base);">
+        <div class="container">
+            <div class="section-header" style="max-width:820px; margin:0 auto 48px; text-align:center;">
+                <div class="section-tag-group">
+                    <span class="section-tag-en">BOTANICAL SOURCING</span>
+                    <span class="section-tag-ko">한반도 청정 원료와 추출 철학</span>
+                </div>
+                <h2 class="section-title">한국의 자연과 전통의 정취를 담아내는<br>밀도의 조향 및 원료 투명성 기준</h2>
+                <p class="section-desc">
+                    자연 원료 고유의 향조를 온전히 보존하고, 일상에서 편안하게 머무는 정직하고 투명한 원료·소재 관리 기준을 공개합니다.
+                </p>
+            </div>
+
+            <!-- [상단 2x2 그리드] 밀도를 완성하는 4대 핵심 향조 -->
+            <div class="grid-2" style="margin-bottom:28px;">
+                
+                <!-- 하동 청유자 -->
+                <div class="feature-card" style="padding:32px 30px; background:#ffffff; border:1px solid var(--border-line); display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                            <span style="font-size:10.5px; font-weight:800; font-family:var(--font-mono); color:var(--accent-pine);">BOTANICAL NOTE</span>
+                            <span class="product-badge product-badge-1mapae">1마패 연결</span>
+                        </div>
+                        <h3 style="font-size:18px; font-weight:900; font-family:var(--font-serif); margin-bottom:14px; color:var(--text-primary);">하동 청유자 (靑柚子)</h3>
+                        
+                        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.75; display:flex; flex-direction:column; gap:9px;">
+                            <div><strong style="color:var(--text-primary);">원료 및 산지 :</strong> 경남 하동군 청정 산지 청유자</div>
+                            <div><strong style="color:var(--text-primary);">향의 인상 :</strong> 껍질째 갓 압착한 싱그러운 시트러스</div>
+                            <div><strong style="color:var(--text-primary);">대표 향 연결 :</strong> 01. 유자 청송 (1마패 · DAILY BASE) 핵심 탑 노트</div>
+                            <div><strong style="color:var(--text-primary);">사용 시간·공간 :</strong> 출근 전 아침 및 생동감 있는 일상 공간</div>
+                        </div>
+                    </div>
+                    <div style="margin-top:18px; padding-top:12px; border-top:1px solid var(--border-line); font-size:11px; font-weight:800; color:var(--accent-pine); font-family:var(--font-mono);">
+                        [천연 추출 성분 · 저온 추출 지향]
+                    </div>
+                </div>
+
+                <!-- 지리산 적송 -->
+                <div class="feature-card" style="padding:32px 30px; background:#ffffff; border:1px solid var(--border-line); display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                            <span style="font-size:10.5px; font-weight:800; font-family:var(--font-mono); color:var(--accent-red);">BOTANICAL NOTE</span>
+                            <span class="product-badge product-badge-2mapae">2마패 연결</span>
+                        </div>
+                        <h3 style="font-size:18px; font-weight:900; font-family:var(--font-serif); margin-bottom:14px; color:var(--text-primary);">지리산 적송 (赤松)</h3>
+                        
+                        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.75; display:flex; flex-direction:column; gap:9px;">
+                            <div><strong style="color:var(--text-primary);">원료 및 산지 :</strong> 국내 지리산 자락 자생 소나무 솔잎</div>
+                            <div><strong style="color:var(--text-primary);">향의 인상 :</strong> 서늘한 솔잎의 청량함과 차분히 가라앉는 깊은 우디 잔향</div>
+                            <div><strong style="color:var(--text-primary);">대표 향 연결 :</strong> 04. 적송 홍화 (2마패 · POINT MOOD) 핵심 노트</div>
+                            <div><strong style="color:var(--text-primary);">사용 시간·공간 :</strong> 늦은 오후 및 감정 전환 공간</div>
+                        </div>
+                    </div>
+                    <div style="margin-top:18px; padding-top:12px; border-top:1px solid var(--border-line); font-size:11px; font-weight:800; color:var(--accent-red); font-family:var(--font-mono);">
+                        [천연 에센셜 오일 · 산지 협력 기준]
+                    </div>
+                </div>
+
+                <!-- 백단향 -->
+                <div class="feature-card" style="padding:32px 30px; background:#ffffff; border:1px solid var(--border-line); display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                            <span style="font-size:10.5px; font-weight:800; font-family:var(--font-mono); color:var(--accent-brass);">BOTANICAL NOTE</span>
+                            <span class="product-badge product-badge-3mapae">3마패 연결</span>
+                        </div>
+                        <h3 style="font-size:18px; font-weight:900; font-family:var(--font-serif); margin-bottom:14px; color:var(--text-primary);">백단향 (白檀, Sandalwood)</h3>
+                        
+                        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.75; display:flex; flex-direction:column; gap:9px;">
+                            <div><strong style="color:var(--text-primary);">원료 및 산지 :</strong> 전통 샌달우드 (글로벌 공인 원료사 공급)</div>
+                            <div><strong style="color:var(--text-primary);">향의 인상 :</strong> 그윽하고 따뜻하게 피어오르는 묵직한 오리엔탈 우디의 무게</div>
+                            <div><strong style="color:var(--text-primary);">대표 향 연결 :</strong> 08. 백단 묵향 (3마패 · ALL-DAY MASTER) 마스터 베이스</div>
+                            <div><strong style="color:var(--text-primary);">사용 시간·공간 :</strong> 저녁 모임 및 사색을 위한 프라이빗 공간</div>
+                        </div>
+                    </div>
+                    <div style="margin-top:18px; padding-top:12px; border-top:1px solid var(--border-line); font-size:11px; font-weight:800; color:var(--accent-brass); font-family:var(--font-mono);">
+                        [천연 목재 추출물 · IFRA 기준 준수]
+                    </div>
+                </div>
+
+                <!-- 조선 송연묵향 -->
+                <div class="feature-card" style="padding:32px 30px; background:#ffffff; border:1px solid var(--border-line); display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                            <span style="font-size:10.5px; font-weight:800; font-family:var(--font-mono); color:var(--accent-brass);">SIGNATURE ACCORD</span>
+                            <span class="product-badge product-badge-3mapae">3마패 연결</span>
+                        </div>
+                        <h3 style="font-size:18px; font-weight:900; font-family:var(--font-serif); margin-bottom:14px; color:var(--text-primary);">조선 송연묵향 (전통 먹향 조향 배합)</h3>
+                        
+                        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.75; display:flex; flex-direction:column; gap:9px;">
+                            <div><strong style="color:var(--text-primary);">원료 및 배경 :</strong> 소나무 그을음으로 빚던 조선 전통 먹의 정취를 재현한 조향 레시피</div>
+                            <div><strong style="color:var(--text-primary);">향의 인상 :</strong> 벼루에 먹을 갈 때 서재에 은은하게 퍼지는 차분하고 서늘한 묵향</div>
+                            <div><strong style="color:var(--text-primary);">대표 향 연결 :</strong> 08. 백단 묵향 (3마패 · ALL-DAY MASTER) 핵심 정체성</div>
+                            <div><strong style="color:var(--text-primary);">사용 시간·공간 :</strong> 깊은 생각에 잠기거나 마음을 정돈하는 밤 시간대 및 서재</div>
+                        </div>
+                    </div>
+                    <div style="margin-top:18px; padding-top:12px; border-top:1px solid var(--border-line); font-size:11px; font-weight:800; color:var(--accent-brass); font-family:var(--font-mono);">
+                        [전통 먹향을 구현한 시그니처 조향 배합]
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- [하단 1열 와이드 박스] 전통 닥나무 한지 (시향지 & 패키지 봉인 소재) -->
+            <div style="background:#ffffff; border:1px solid var(--border-line); border-left:4px solid var(--accent-brass); padding:28px 36px; border-radius:4px; margin-bottom:40px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:10px;">
+                    <div style="display:flex; gap:8px; align-items:center;">
+                        <span style="font-size:10px; font-weight:800; font-family:var(--font-mono); background:rgba(202,138,4,0.12); color:var(--accent-brass); padding:2px 8px; border-radius:2px;">PACKAGING & TASTING</span>
+                        <h4 style="font-size:17px; font-weight:900; font-family:var(--font-serif); margin:0; color:var(--text-primary);">전통 닥나무 한지 (시향지 & 패키지 봉인 소재)</h4>
+                    </div>
+                    <span style="font-size:11px; font-weight:800; color:var(--text-muted); font-family:var(--font-mono);">[친환경 지류 소재 · 전 제품 공통 적용]</span>
+                </div>
+                <p style="font-size:13px; color:var(--text-secondary); line-height:1.75; margin:0; word-break:keep-all;">
+                    밀도의 모든 제품에는 국내 전통 공방에서 제작된 닥나무 수제 한지가 적용됩니다. 언박싱의 정취를 더하는 <strong>보틀 봉인 띠지</strong>와, 가정에서 향을 온전히 음미할 수 있는 <strong>수제 시향지(10매)</strong>로 전 제품에 함께 제공됩니다.
+                </p>
+            </div>
+
+            <!-- 안전 및 품질 관리 3단계 투명성 로드맵 배너 -->
+            <div id="quality" style="margin-top:40px; background:#ffffff; border:1px solid var(--border-line); padding:40px 36px; border-radius:4px; scroll-margin-top:120px;">
+                <div style="text-align:center; max-width:680px; margin:0 auto 32px;">
+                    <div class="section-tag-group" style="margin-bottom:12px;">
+                        <span class="section-tag-en">QUALITY &amp; SAFETY ROADMAP</span>
+                        <span class="section-tag-ko">안전 조향 및 원료 투명성 기준</span>
+                    </div>
+                    <h4 style="font-size:20px; font-weight:900; font-family:var(--font-serif); margin-bottom:8px; color:var(--text-primary);">안전하고 편안한 착향을 위한 밀도의 품질 관리 기준</h4>
+                    <p style="font-size:13px; color:var(--text-secondary); line-height:1.75; margin:0; word-break:keep-all;">
+                        현재 적용 중인 기준과 앞으로 진행할 시험 목표를 명확히 구분하여 정직하게 안내합니다.
+                    </p>
+                </div>
+
+                <div class="grid-3" style="gap:20px;">
+                    
+                    <!-- 1. 현재 적용한 기준 -->
+                    <div style="background:var(--bg-base); border:1px solid var(--border-line); padding:24px 22px; border-radius:4px; display:flex; flex-direction:column; justify-content:space-between;">
+                        <div>
+                            <span style="font-size:10px; font-weight:800; font-family:var(--font-mono); background:rgba(21,128,61,0.1); color:var(--accent-pine); padding:3px 8px; border-radius:2px; display:inline-block; margin-bottom:10px;">
+                                01. 현재 적용 기준
+                            </span>
+                            <h5 style="font-size:15px; font-weight:900; font-family:var(--font-serif); margin-bottom:8px; color:var(--text-primary);">
+                                IFRA 가이드라인 참고
+                            </h5>
+                            <p style="font-size:12px; color:var(--text-secondary); line-height:1.7; margin:0; word-break:keep-all;">
+                                국제향료협회(IFRA)의 글로벌 안전 권고 표준을 참고하여 피부에 안전한 비율로 조향합니다.
+                            </p>
+                        </div>
+                        <div style="margin-top:14px; padding-top:10px; border-top:1px solid var(--border-line); font-size:10.5px; font-weight:800; color:var(--accent-pine); font-family:var(--font-mono);">
+                            [참고 기준 준수]
+                        </div>
+                    </div>
+
+                    <!-- 2. 브랜드가 지향하는 방향 -->
+                    <div style="background:var(--bg-base); border:1px solid var(--border-line); padding:24px 22px; border-radius:4px; display:flex; flex-direction:column; justify-content:space-between;">
+                        <div>
+                            <span style="font-size:10px; font-weight:800; font-family:var(--font-mono); background:rgba(202,138,4,0.12); color:var(--accent-brass); padding:3px 8px; border-radius:2px; display:inline-block; margin-bottom:10px;">
+                                02. 브랜드 지향점
+                            </span>
+                            <h5 style="font-size:15px; font-weight:900; font-family:var(--font-serif); margin-bottom:8px; color:var(--text-primary);">
+                                클린 포뮬러 &amp; 성분 공개
+                            </h5>
+                            <p style="font-size:12px; color:var(--text-secondary); line-height:1.7; margin:0; word-break:keep-all;">
+                                인위적인 화학 잔여물을 최소화하고 피부에 편안하게 머무는 정직한 원료 구성을 지향합니다.
+                            </p>
+                        </div>
+                        <div style="margin-top:14px; padding-top:10px; border-top:1px solid var(--border-line); font-size:10.5px; font-weight:800; color:var(--accent-brass); font-family:var(--font-mono);">
+                            [투명성 지향 목표]
+                        </div>
+                    </div>
+
+                    <!-- 3. 앞으로 확인할 항목 -->
+                    <div style="background:var(--bg-base); border:1px solid var(--border-line); padding:24px 22px; border-radius:4px; display:flex; flex-direction:column; justify-content:space-between;">
+                        <div>
+                            <span style="font-size:10px; font-weight:800; font-family:var(--font-mono); background:rgba(161,161,170,0.15); color:var(--text-secondary); padding:3px 8px; border-radius:2px; display:inline-block; margin-bottom:10px;">
+                                03. 확인 예정 항목
+                            </span>
+                            <h5 style="font-size:15px; font-weight:900; font-family:var(--font-serif); margin-bottom:8px; color:var(--text-primary);">
+                                EWG 검토 &amp; 자극 시험
+                            </h5>
+                            <p style="font-size:12px; color:var(--text-secondary); line-height:1.7; margin:0; word-break:keep-all;">
+                                공인 시험기관을 통한 피부 1차 자극 평가 시험 및 EWG 안전 등급 확인을 진행할 예정입니다.
+                            </p>
+                        </div>
+                        <div style="margin-top:14px; padding-top:10px; border-top:1px solid var(--border-line); font-size:10.5px; font-weight:800; color:var(--text-muted); font-family:var(--font-mono);">
+                            [시험 및 검증 예정]
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEC-07: 패키징 & 쇼룸 아틀리에 기획 (Packaging & Flagship Atelier Concept) -->
+    <section id="atelier" style="padding:110px 0; border-bottom:1px solid var(--border-line); background:#ffffff;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag-group">
+                    <span class="section-tag-en">PACKAGING &amp; FLAGSHIP ATELIER</span>
+                    <span class="section-tag-ko">전통 선물 패키징과 프라이빗 아틀리에</span>
+                </div>
+                <h2 class="section-title">밀도의 정성을 담은 전통 선물 패키징과<br>1:1 프라이빗 아틀리에 기획</h2>
+                <p class="section-desc">
+                    한국의 격조 높은 언박싱 감동과 고즈넉한 한옥에서 펼쳐질 몰입형 조향 체험 기획을 소개합니다.
+                </p>
+            </div>
+
+            <div class="grid-2" style="gap:32px;">
+                
+                <!-- 좌측: 능화창 선물 패키징 -->
+                <div style="background:var(--bg-linen); border:1px solid var(--border-line); padding:clamp(22px, 4.5vw, 40px); border-radius:4px; display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; margin-bottom:10px;">
+                            <div style="display:flex; flex-direction:column; gap:2px;">
+                                <span class="section-tag-en" style="font-size:10px; margin:0;">GIFT PACKAGING</span>
+                                <span class="section-tag-ko" style="font-size:11.5px;">전통 선물 포장</span>
+                            </div>
+                            <span style="font-size:11px; font-weight:700; background:rgba(202,138,4,0.12); color:var(--accent-brass); padding:2px 8px; border-radius:2px; border:1px solid rgba(202,138,4,0.3);">무료 포장 서비스 제공</span>
+                        </div>
+                        <h3 class="feature-title" style="margin:8px 0 14px; font-size:22px;">능화창(菱花窓) 선물 패키징</h3>
+                        
+                        <div style="font-size:13px; color:var(--text-secondary); line-height:1.75; display:flex; flex-direction:column; gap:10px; margin-bottom:28px;">
+                            <div>
+                                <strong style="color:var(--text-primary);">패키징 상자 :</strong><br>
+                                조선 전통 창호 능화창(꽃살문) 슬리브 하드 상자 &amp; 붉은색 수제 한지 띠지 봉인
+                            </div>
+                            <div>
+                                <strong style="color:var(--text-primary);">보자기 래핑 :</strong><br>
+                                단정한 수제 전통 보자기 및 황동 마패 태슬 노리개 포장 옵션
+                            </div>
+                            <div>
+                                <strong style="color:var(--text-primary);">동봉 혜택 :</strong><br>
+                                한지 감사 메시지 카드, 전통 지류 시향지 10매 및 마패 참 전용 파우치 동봉
+                            </div>
+                            <div>
+                                <strong style="color:var(--text-primary);">대상 상품 :</strong><br>
+                                전 등급 본품(20ml·50ml·75ml) 및 전 세트 상품 (주문서에서 옵션 선택)
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-black" style="width:100%; cursor:pointer;" onclick="openPackagingModal()">선물 패키징 옵션 선택 &gt;</button>
+                </div>
+
+                <!-- 우측: 밀도 프라이빗 아틀리에 -->
+                <div style="background:var(--bg-linen); border:1px solid var(--border-line); padding:clamp(22px, 4.5vw, 40px); border-radius:4px; display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; margin-bottom:10px;">
+                            <div style="display:flex; flex-direction:column; gap:2px;">
+                                <span class="section-tag-en" style="font-size:10px; margin:0;">PRIVATE ATELIER</span>
+                                <span class="section-tag-ko" style="font-size:11.5px;">1:1 조향 체험</span>
+                            </div>
+                            <span style="font-size:11px; font-weight:700; background:rgba(202,138,4,0.12); color:var(--accent-brass); padding:2px 8px; border-radius:2px; border:1px solid rgba(202,138,4,0.3);">쇼룸 기획안 · 운영 방식 검토 중</span>
+                        </div>
+                        <h3 class="feature-title" style="margin:8px 0 14px; font-size:22px;">밀도 프라이빗 아틀리에</h3>
+                        
+                        <div style="font-size:13px; color:var(--text-secondary); line-height:1.75; display:flex; flex-direction:column; gap:10px; margin-bottom:28px;">
+                            <div>
+                                <strong style="color:var(--text-primary);">공간 경험 내용 :</strong><br>
+                                16가지 고유 원료와 마패 보틀을 직접 만지고 시향하는 1:1 몰입형 감각 체험
+                            </div>
+                            <div>
+                                <strong style="color:var(--text-primary);">프로그램 진행 순서 :</strong><br>
+                                취향 차트 진단 ➔ 1·2·3마패 원료 시향 및 조합 ➔ 나만의 첩보 카드 완성
+                            </div>
+                            <div>
+                                <strong style="color:var(--text-primary);">운영 조건 (기획) :</strong><br>
+                                100% 프라이빗 사전 예약제 운영 기획 (회차당 1팀 한정 도슨트 검토 중)
+                            </div>
+                            <div>
+                                <strong style="color:var(--text-primary);">사전 알림 안내 :</strong><br>
+                                정식 쇼룸 오픈 2주 전, 카카오 알림톡/문자로 우선 예약 시크릿 링크 제공
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-dual-wrap">
+                        <button type="button" class="btn-black" onclick="openAtelierModal()" style="cursor:pointer; width:100%; text-align:center;">
+                            아틀리에 기획 보기 / 알림 신청 &gt;
+                        </button>
+                        <button type="button" class="btn-outline" onclick="openDiagnosisModal()" style="background:#ffffff; cursor:pointer; width:100%; text-align:center;">
+                            온라인 30초 진단 &gt;
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEC-08: 제품 기획 및 설계 여정 (Product Architecture Process) -->
+    <section style="padding:110px 0; border-bottom:1px solid var(--border-line); background:var(--bg-base);">
+        <div class="container-narrow">
+            <div class="section-header">
+                <div class="section-tag-group">
+                    <span class="section-tag-en">PRODUCT ARCHITECTURE PROCESS</span>
+                    <span class="section-tag-ko">밀도(MILDO)의 제품 기획 및 설계 여정</span>
+                </div>
+                <h2 class="section-title">밀도(MILDO)의 제품 기획 및 설계 여정</h2>
+                <p class="section-desc">일상의 불편을 발견하고, 조선의 지혜를 빌려 포터블 럭셔리로 완성하기까지의 설계 과정입니다.</p>
+            </div>
+
+            <div style="margin-top:50px;">
+                <div class="timeline-item">
+                    <div class="timeline-year">STEP 01. PROBLEM DISCOVERY</div>
+                    <div class="timeline-title">문제 발견</div>
+                    <div class="timeline-desc">화장대 위에 갇힌 무거운 100ml 유리병의 휴대 한계, 흔해진 향의 클론화, 기준 없는 모호한 레이어링의 불편함을 정의.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">STEP 02. TIER ARCHITECTURE</div>
+                    <div class="timeline-title">마패 등급과 향 체계 기획</div>
+                    <div class="timeline-desc">조선 암행어사 마패에서 착안하여 사용 시간(지속력)과 향의 존재감을 기준으로 한 직관적인 1·2·3마패 계층 체계 수립.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">STEP 03. SIGNATURE FORMULATION</div>
+                    <div class="timeline-title">대표 향 3종 개발 방향 설정</div>
+                    <div class="timeline-desc">1마패 '유자 청송(데일리 베이스)', 2마패 '적송 홍화(포인트 무드)', 3마패 '백단 묵향(올데이 마스터)'의 조향 기준 정립.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">STEP 04. HARDWARE &amp; CRAFT</div>
+                    <div class="timeline-title">휴대 오브제와 포장 구조 설계</div>
+                    <div class="timeline-desc">가방에 걸고 이동하는 방짜유기 놋쇠 참(Charm), 누수 방지 마그네틱 결합 캡, 능화창 수제 한지 패키지 완성.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">STEP 05. CATALOG EXPANSION</div>
+                    <div class="timeline-title">전체 16종 상품 체계 확장</div>
+                    <div class="timeline-desc">11종 향수 본품과 웰니스 오브제, 디스커버리 킷으로 확장하여 모든 일상 동선과 취향에 대응하는 조화로운 포트폴리오 구축.</div>
+                </div>
+                <div class="timeline-item" style="margin-bottom:0;">
+                    <div class="timeline-year">STEP 06. ATELIER PLANNING</div>
+                    <div class="timeline-title">아틀리에 오픈 준비</div>
+                    <div class="timeline-desc">북촌·성수 아틀리에 쇼룸 오픈 준비 및 1:1 몰입형 조향 도슨트 프로그램 사전 알림 신청 진행.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEC-09: 브랜드 에필로그 (Brand Epilogue & Final Manifesto) -->
+    <section id="epilogue" style="padding:120px 0; background:#18181b; color:#f4f4f5; border-bottom:1px solid var(--border-dark); position:relative; overflow:hidden;">
+        <div class="container-narrow" style="text-align:center;">
+            <div class="section-tag-group" style="margin-bottom:20px;">
+                <span class="section-tag-en" style="letter-spacing:3px;">THE EPILOGUE OF MILDO</span>
+                <span class="section-tag-ko" style="color:#a1a1aa;">밀도의 마지막 서사</span>
+            </div>
+
+            <h2 class="section-title" style="line-height:1.45; margin-bottom:20px; color:#ffffff; word-break:keep-all;">
+                "조선의 묵향과 바람, <br class="desktop-br">당신의 하루에 고유한 품격과 서사가 되다."
+            </h2>
+
+            <p style="font-size:14px; color:#a1a1aa; line-height:1.9; max-width:680px; margin:0 auto 48px; word-break:keep-all; font-weight:400;">
+                밀도(MILDO)는 단순히 몸에 뿌리는 향을 짓지 않습니다.<br>
+                조선 암행어사가 품속 깊이 간직하던 마패처럼, 복잡한 일상 속에서 온전한 ‘나 자신’을 증명하고 드러내는 가장 은밀하고 기품 있는 인장(印章)을 조향합니다.<br>
+                지리산의 서늘한 적송부터 천년의 백단향, 그리고 한국 자연의 맑은 정수까지—<br>
+                시대를 초월한 한국의 헤리티지를 당신의 고유한 숨결 위에 새겨 넣습니다.
+            </p>
+
+            <div style="display:flex; flex-direction:column; align-items:center; gap:8px; margin-bottom:44px;">
+                <div style="font-size:13px; font-weight:800; color:#e4e4e7; letter-spacing:1px; font-family:var(--font-serif);">
+                    밀도 조향 아티잔 일동 · 密道 調香師
+                </div>
+                <div style="font-size:11px; color:#71717a; font-family:var(--font-mono);">
+                    MILDO Haute Perfumery House
+                </div>
+            </div>
+
+            <div class="epilogue-btn-wrap">
+                <a href="메인_페이지.html" style="display:inline-block; padding:12px 28px; background:transparent; color:#f4f4f5; border:1px solid #52525b; border-radius:2px; font-size:12px; font-weight:800; text-decoration:none; transition:all 0.2s;">
+                    ← 메인 홈 이동
+                </a>
+                <a href="카테고리.html" style="display:inline-block; padding:12px 28px; background:var(--accent-brass); color:#ffffff; border:1px solid var(--accent-brass); border-radius:2px; font-size:12px; font-weight:800; text-decoration:none; transition:all 0.2s;">
+                    16종 카탈로그 &gt;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Clean Footer -->
+    <footer style="padding:70px 0 40px; background:var(--bg-dark); color:#a1a1aa; font-size:12px;">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="font-size:16px; font-weight:900; color:#fff; font-family:var(--font-serif); margin-bottom:12px;">밀도 (MILDO)</div>
+                    <p style="line-height:1.8; margin-bottom:12px;">짙은 연기 속, 나를 각인시키는 향의 밀도.<br>조선 암행어사 마패 헤리티지 &amp; 100% 커스텀 레이어링 하우스.<br>MILDO Haute Perfumery House · Seoul, Korea</p>
+                    <div style="font-size:11px; color:#71717a; font-family:var(--font-mono);">14종 향수·오브제 본품 + 2종 입문·선물 세트 (총 16대 컬렉션)</div>
+                </div>
+                <div>
+                    <div style="font-size:13px; font-weight:900; color:#fff; margin-bottom:12px;">5대 마패 컬렉션 (총 16종)</div>
+                    <div style="display:flex; flex-direction:column; gap:6px; line-height:1.8;">
+                        <a href="카테고리.html?tab=1mapae#sec-1mapae" style="color:#a1a1aa; text-decoration:none;">· 1마패 · 일상 Base (3종)</a>
+                        <a href="카테고리.html?tab=2mapae#sec-2mapae" style="color:#a1a1aa; text-decoration:none;">· 2마패 · 감성 Point (4종)</a>
+                        <a href="카테고리.html?tab=3mapae#sec-3mapae" style="color:#a1a1aa; text-decoration:none;">· 3마패 · 시그니처 Master (4종)</a>
+                        <a href="카테고리.html?tab=wellness#sec-wellness" style="color:#a1a1aa; text-decoration:none;">· 웰니스 오브제 (3종)</a>
+                        <a href="카테고리.html?tab=gift#sec-gift" style="color:#a1a1aa; text-decoration:none;">· 스페셜 기프트 &amp; 킷 (2종)</a>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-size:13px; font-weight:900; color:#fff; margin-bottom:12px;">브랜드 &amp; 조향 철학</div>
+                    <div style="display:flex; flex-direction:column; gap:6px; line-height:1.8;">
+                        <a href="브랜드_소개.html#botanical" style="color:#a1a1aa; text-decoration:none;">· 한국 자연 원료 &amp; 조향 철학</a>
+                        <a href="브랜드_소개.html#custom" style="color:#a1a1aa; text-decoration:none;">· 밀도 3단계 레이어링 리추얼</a>
+                        <a href="브랜드_소개.html#hardware" style="color:#a1a1aa; text-decoration:none;">· 휴대용 마패 오브제 &amp; 공예</a>
+                        <a href="브랜드_소개.html#quality" style="color:#a1a1aa; text-decoration:none;">· 안전 조향 &amp; 원료 투명성 기준</a>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-size:13px; font-weight:900; color:#fff; margin-bottom:12px;">고객 지원 &amp; 서비스</div>
+                    <div style="display:flex; flex-direction:column; gap:6px; line-height:1.8;">
+                        <a href="카테고리.html?tab=gift#sec-gift" style="color:#a1a1aa; text-decoration:none;">· 19,000원 웰컴 크레딧 디스커버리 킷</a>
+                        <a href="javascript:void(0)" onclick="openPackagingModal()" style="color:#a1a1aa; text-decoration:none;">· 밀도 전통 선물 패키징 안내</a>
+                        <a href="javascript:void(0)" onclick="openAtelierModal()" style="color:#a1a1aa; text-decoration:none;">· 프라이빗 아틀리에 사전 신청</a>
+                        <a href="javascript:void(0)" onclick="openDiagnosisModal()" style="color:#a1a1aa; text-decoration:none;">· 30초 나만의 마패 향 찾기</a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top:1px solid var(--border-dark); padding-top:24px; margin-top:20px; text-align:center; color:#71717a; font-size:11px;">
+                © 2026 MILDO Haute Perfumery House. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================
+         [MODAL] 30초 나만의 마패 향 찾기 (Olfactive Diagnosis Modal)
+         ======================================================== -->
+    <div id="diagnosisModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.65); z-index:9999; justify-content:center; align-items:center; padding:20px; backdrop-filter:blur(4px);" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div style="background:#ffffff; border-radius:6px; max-width:540px; width:100%; padding:36px; box-shadow:0 20px 50px rgba(0,0,0,0.2); position:relative; max-height:90vh; overflow-y:auto; border:1px solid var(--border-line);">
+            
+            <!-- 닫기 버튼 -->
+            <button type="button" onclick="closeDiagnosisModal()" style="position:absolute; top:18px; right:18px; background:transparent; border:none; font-size:22px; cursor:pointer; color:var(--text-muted); line-height:1;" aria-label="닫기">✕</button>
+
+            <!-- 퀴즈 단계 화면들 -->
+            <div id="quizContainer">
+                <div style="margin-bottom:20px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                        <span style="font-size:10px; font-weight:800; font-family:var(--font-mono); color:var(--accent-brass); letter-spacing:1.5px;">OLFACTIVE DIAGNOSIS</span>
+                        <span id="quizStepIndicator" style="font-size:11px; font-weight:800; color:var(--text-muted); font-family:var(--font-mono);">STEP 1 / 4</span>
+                    </div>
+                    <h3 id="quizQuestionTitle" style="font-size:20px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary); margin:0;">
+                        평소 가장 편안하게 느껴지는 향은?
+                    </h3>
+                </div>
+
+                <!-- 선택지 버튼 목록 -->
+                <div id="quizOptions" style="display:flex; flex-direction:column; gap:10px; margin-bottom:24px;">
+                    <!-- JS로 렌더링 -->
+                </div>
+            </div>
+
+            <!-- 결과 처방전 화면 -->
+            <div id="quizResultContainer" style="display:none; text-align:center;">
+                <span style="font-size:10px; font-weight:800; font-family:var(--font-mono); color:var(--accent-brass); letter-spacing:2px;">DIAGNOSIS RESULT</span>
+                <h3 style="font-size:22px; font-weight:900; font-family:var(--font-serif); margin:8px 0 16px; color:var(--text-primary);">
+                    당신을 위한 마패 조향 처방전
+                </h3>
+
+                <!-- 맞춤 분석 설명 박스 -->
+                <div id="resultReasonBox" style="background:rgba(202,138,4,0.08); border-left:3px solid var(--accent-brass); padding:10px 14px; margin-bottom:14px; text-align:left; font-size:12.5px; line-height:1.6; color:var(--text-primary); border-radius:2px;">
+                    <span id="resultReasonText"></span>
+                </div>
+
+                <div style="background:var(--bg-linen); border:1px solid var(--border-line); border-radius:4px; padding:24px; text-align:left; margin-bottom:24px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                        <span id="resultBadge" class="product-badge product-badge-1mapae">1마패 · DAILY BASE</span>
+                        <span id="resultSubBadge" style="font-size:11px; font-weight:800; color:var(--accent-brass); font-family:var(--font-mono);">RECOMMENDED BASE</span>
+                    </div>
+                    <h4 id="resultTitle" style="font-size:18px; font-weight:900; font-family:var(--font-serif); margin-bottom:6px; color:var(--text-primary);">
+                        01. 유자 청송 (柚子 靑松)
+                    </h4>
+                    <p id="resultDesc" style="font-size:13px; color:var(--text-secondary); line-height:1.7; margin-bottom:14px;">
+                        경남 하동 청유자의 싱그러운 과즙과 청송 소나무의 서늘함이 하루의 맑은 시작을 열어줍니다.
+                    </p>
+                    <div style="border-top:1px dashed var(--border-line); padding-top:12px; font-size:12px; color:var(--text-muted);">
+                        <strong style="color:var(--text-primary);">[추천 레이어링]</strong> <span id="resultLayering">손목에 01. 유자 청송(1마패) 2회 분사 후, 오후에 04. 적송 홍화(2마패) 1회를 덧뿌려 분위기를 전환해 보세요. (2:1 시그니처 배합)</span>
+                    </div>
+                </div>
+
+                <div style="display:flex; flex-direction:column; gap:10px;">
+                    <a id="resultProductLink" href="카테고리.html" class="btn-black" style="width:100%; padding:12px; font-size:13px; text-decoration:none; text-align:center;">
+                        추천 상품 [01. 유자 청송] 바로 보러가기 &gt;
+                    </a>
+                    <a href="카테고리.html?tab=gift#sec-gift" class="btn-outline" style="width:100%; padding:12px; font-size:12.5px; text-decoration:none; text-align:center; border-color:var(--accent-brass); color:var(--accent-brass);">
+                        고민된다면? 19,000원 웰컴 크레딧 디스커버리 킷으로 먼저 시향 &gt;
+                    </a>
+                    <button type="button" onclick="restartQuiz()" style="background:transparent; border:none; color:var(--text-muted); font-size:11.5px; cursor:pointer; text-decoration:underline; padding-top:8px;">
+                        처음부터 다시 진단하기
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Olfactive Diagnosis Quiz Data
+        const quizData = [
+            {
+                q: "Q1. 평소 가장 편안하고 기분 좋게 느껴지는 향의 인상은?",
+                options: [
+                    { text: "하동 청유자의 싱그러운 과즙과 지리산 청송 솔잎 향", score: "1mapae", kw: "싱그러운 시트러스 & 솔잎" },
+                    { text: "서늘한 소나무 송진 위에 덧입혀진 붉은 홍화의 매혹적인 향", score: "2mapae", kw: "스파이시 플로럴 & 송진" },
+                    { text: "그윽한 백단 원목의 온기와 조선 서재의 정갈한 먹향", score: "3mapae", kw: "깊고 그윽한 백단 묵향" }
+                ]
+            },
+            {
+                q: "Q2. 향수를 주로 사용하는 시간대와 목적은?",
+                options: [
+                    { text: "출근 전 아침 & 맑은 일상의 시작", score: "1mapae", kw: "출근 전 아침 데일리" },
+                    { text: "나른한 오후 & 분위기 전환(리프레시)이 필요할 때", score: "2mapae", kw: "오후·저녁 분위기 전환" },
+                    { text: "특별한 저녁 모임 & 깊은 인상이 필요한 자리", score: "3mapae", kw: "격식 있는 비즈니스 미팅" }
+                ]
+            },
+            {
+                q: "Q3. 내가 원하는 향의 존재감(밀도)은?",
+                options: [
+                    { text: "내 살결처럼 은은하게 스며드는 가벼운 밀도", score: "1mapae", kw: "은은하고 맑은 살결 밀도" },
+                    { text: "스쳐 지나갈 때 은은한 여운을 남기는 감각적 포인트", score: "2mapae", kw: "여운을 남기는 감각적 포인트" },
+                    { text: "공간을 채우며 하루 종일 지속되는 묵직한 서명", score: "3mapae", kw: "하루 종일 머무는 묵직한 존재감" }
+                ]
+            },
+            {
+                q: "Q4. 향수를 즐기는 나만의 방식은?",
+                options: [
+                    { text: "가방에 툭 걸고 다니며 가볍게 자주 사용하기", score: "1mapae", kw: "가벼운 수시 착향" },
+                    { text: "시간과 기분에 따라 2가지 향을 덧입는 레이어링", score: "2mapae", kw: "시간대별 레이어링" },
+                    { text: "변함없는 나만의 단 하나의 시그니처 소장하기", score: "3mapae", kw: "소장형 시그니처" }
+                ]
+            }
+        ];
+
+        let currentStep = 0;
+        let answers = [];
+        let selectedBrandKeywords = [];
+
+        function openDiagnosisModal() {
+            document.getElementById('diagnosisModal').style.display = 'flex';
+            currentStep = 0;
+            answers = [];
+            selectedBrandKeywords = [];
+            renderQuizStep();
+        }
+
+        function closeDiagnosisModal() {
+            document.getElementById('diagnosisModal').style.display = 'none';
+        }
+
+        function renderQuizStep() {
+            document.getElementById('quizContainer').style.display = 'block';
+            document.getElementById('quizResultContainer').style.display = 'none';
+
+            const step = quizData[currentStep];
+            document.getElementById('quizStepIndicator').innerText = `STEP ${currentStep + 1} / ${quizData.length}`;
+            document.getElementById('quizQuestionTitle').innerText = step.q;
+
+            const optContainer = document.getElementById('quizOptions');
+            optContainer.innerHTML = '';
+
+            step.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'btn-outline';
+                btn.style.cssText = 'width:100%; text-align:left; padding:14px 18px; font-size:13px; line-height:1.5; border-radius:4px; transition:all 0.2s; background:#fff; cursor:pointer;';
+                btn.innerHTML = `<span style="font-family:var(--font-mono); font-weight:800; color:var(--accent-brass); margin-right:8px;">0${idx+1}.</span> ${opt.text}`;
+                btn.onmouseover = () => { btn.style.background = 'var(--bg-linen)'; btn.style.borderColor = 'var(--accent-brass)'; };
+                btn.onmouseout = () => { btn.style.background = '#fff'; btn.style.borderColor = 'var(--border-line)'; };
+                btn.onclick = () => selectOption(opt.score, opt.kw);
+                optContainer.appendChild(btn);
+            });
+        }
+
+        function selectOption(score, kw) {
+            answers.push(score);
+            selectedBrandKeywords.push(kw);
+            if (currentStep < quizData.length - 1) {
+                currentStep++;
+                renderQuizStep();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.getElementById('quizResultContainer').style.display = 'block';
+
+            const count1 = answers.filter(a => a === '1mapae').length;
+            const count2 = answers.filter(a => a === '2mapae').length;
+            const count3 = answers.filter(a => a === '3mapae').length;
+
+            const kwTime = selectedBrandKeywords[1] || '아침 시간대';
+            const kwDensity = selectedBrandKeywords[2] || '편안한 밀도';
+
+            if (count1 === 2 && count2 === 2) {
+                document.getElementById('resultBadge').className = 'product-badge product-badge-2mapae';
+                document.getElementById('resultBadge').innerText = '1·2마패 · 시그니처 레이어링 듀오';
+                document.getElementById('resultSubBadge').innerText = 'PERFECT LAYERING DUO';
+                document.getElementById('resultTitle').innerText = '01. 유자 청송 × 04. 적송 홍화';
+                document.getElementById('resultReasonText').innerText = `[${kwTime}]와 [${kwDensity}]를 함께 즐기시는 고객님을 위해, 맑은 베이스 위에 감각적인 포인트를 덧입히는 밀도의 시그니처 듀오를 처방합니다.`;
+                document.getElementById('resultDesc').innerText = '아침을 깨우는 하동 청유자의 싱그러움과 오후의 나른함을 환기시키는 지리산 적송 홍화의 온기가 피부 위에서 가장 이상적인 조화를 이룹니다.';
+                document.getElementById('resultLayering').innerText = '손목에 01. 유자 청송(1마패) 2회 분사 후, 오후 3~4시경 04. 적송 홍화(2마패) 1회를 덧뿌려 분위기를 전환하세요. (2:1 추천 배합)';
+                document.getElementById('resultProductLink').href = '카테고리.html?tab=1mapae&targetProd=p1#sec-1mapae';
+                document.getElementById('resultProductLink').innerText = '추천 듀오 상품 [01. 유자 청송] 바로 보기 >';
+            } else if (count2 === 2 && count3 === 2) {
+                document.getElementById('resultBadge').className = 'product-badge product-badge-3mapae';
+                document.getElementById('resultBadge').innerText = '2·3마패 · 마스터 레이어링 듀오';
+                document.getElementById('resultSubBadge').innerText = 'MASTER LAYER DUO';
+                document.getElementById('resultTitle').innerText = '04. 적송 홍화 × 08. 백단 묵향';
+                document.getElementById('resultReasonText').innerText = `[${kwTime}]와 [${kwDensity}]를 중요하게 생각하시는 고객님께, 화려한 포인트와 묵직한 카리스마를 결합한 마스터 듀오를 처방합니다.`;
+                document.getElementById('resultDesc').innerText = '붉은 홍화 꽃잎의 화려한 스파이시함에 그윽한 백단 원목과 묵향을 받쳐주어 잊히지 않는 깊은 품격과 여운을 완성합니다.';
+                document.getElementById('resultLayering').innerText = '손목에 04. 적송 홍화(2마패) 2회 분사 후, 08. 백단 묵향(3마패) 1회를 가볍게 레이어링하여 깊이를 더하세요.';
+                document.getElementById('resultProductLink').href = '카테고리.html?tab=2mapae&targetProd=p4#sec-2mapae';
+                document.getElementById('resultProductLink').innerText = '추천 듀오 상품 [04. 적송 홍화] 바로 보기 >';
+            } else if (count1 === 2 && count3 === 2) {
+                document.getElementById('resultBadge').className = 'product-badge product-badge-3mapae';
+                document.getElementById('resultBadge').innerText = '1·3마패 · 클래식 레이어링 듀오';
+                document.getElementById('resultSubBadge').innerText = 'CLASSIC DUO';
+                document.getElementById('resultTitle').innerText = '01. 유자 청송 × 08. 백단 묵향';
+                document.getElementById('resultReasonText').innerText = `[${kwTime}]의 맑은 시작과 [${kwDensity}]의 오랜 지속력을 모두 원하시는 고객님께, 맑음과 묵직함의 조화를 이루는 듀오를 처방합니다.`;
+                document.getElementById('resultDesc').innerText = '티 없이 맑은 유자 청송의 산뜻함 아래로 정갈한 조선 묵향이 잔잔하게 깔려 반전의 매력을 선사합니다.';
+                document.getElementById('resultLayering').innerText = '01. 유자 청송 2회 베이스 착향 후, 08. 백단 묵향 1회를 가슴이나 옷깃 안쪽에 분무하세요.';
+                document.getElementById('resultProductLink').href = '카테고리.html?tab=1mapae&targetProd=p1#sec-1mapae';
+                document.getElementById('resultProductLink').innerText = '추천 듀오 상품 [01. 유자 청송] 바로 보기 >';
+            } else if (count1 >= 2) {
+                document.getElementById('resultBadge').className = 'product-badge product-badge-1mapae';
+                document.getElementById('resultBadge').innerText = '1마패 · DAILY BASE';
+                document.getElementById('resultSubBadge').innerText = 'RECOMMENDED BASE';
+                document.getElementById('resultTitle').innerText = '01. 유자 청송 (柚子 靑松)';
+                document.getElementById('resultReasonText').innerText = `[${kwTime}] 시간대에 [${kwDensity}]를 선호하시는 고객님께, 부담 없이 매일 착향할 수 있는 일상 베이스 [01. 유자 청송]을 추천합니다.`;
+                document.getElementById('resultDesc').innerText = '경남 하동 청유자의 싱그러운 과즙과 청송 소나무의 서늘한 솔잎 향이 일상의 맑고 든든한 밑바탕을 완성합니다.';
+                document.getElementById('resultLayering').innerText = '아침 샤워 후 손목/목덜미에 2회 분사하세요. 오후에 04. 적송 홍화(2마패)를 덧뿌리면 따뜻하고 생기 있는 무드로 전환됩니다.';
+                document.getElementById('resultProductLink').href = '카테고리.html?tab=1mapae&targetProd=p1#sec-1mapae';
+                document.getElementById('resultProductLink').innerText = '추천 상품 [01. 유자 청송] 바로 보기 >';
+            } else if (count2 >= 2) {
+                document.getElementById('resultBadge').className = 'product-badge product-badge-2mapae';
+                document.getElementById('resultBadge').innerText = '2마패 · POINT MOOD';
+                document.getElementById('resultSubBadge').innerText = 'RECOMMENDED POINT';
+                document.getElementById('resultTitle').innerText = '04. 적송 홍화 (赤松 紅花)';
+                document.getElementById('resultReasonText').innerText = `[${kwTime}]와 [${kwDensity}]를 원하시는 고객님께, 감각적인 무드 체인지를 선사하는 [04. 적송 홍화]를 추천합니다.`;
+                document.getElementById('resultDesc').innerText = '지리산 적송의 묵직한 솔잎 위에 붉은 홍화의 온기를 덧입혀 나른함을 깨우고 감각적인 개성을 표현합니다.';
+                document.getElementById('resultLayering').innerText = '오후 3~4시경 맥박 부위에 1~2회 분사하여 기분을 전환하세요. (1마패 베이스와 2:1 조합 추천)';
+                document.getElementById('resultProductLink').href = '카테고리.html?tab=2mapae&targetProd=p4#sec-2mapae';
+                document.getElementById('resultProductLink').innerText = '추천 상품 [04. 적송 홍화] 바로 보기 >';
+            } else {
+                document.getElementById('resultBadge').className = 'product-badge product-badge-3mapae';
+                document.getElementById('resultBadge').innerText = '3마패 · ALL-DAY MASTER';
+                document.getElementById('resultSubBadge').innerText = 'RECOMMENDED MASTER';
+                document.getElementById('resultTitle').innerText = '08. 백단 묵향 (白檀 墨香)';
+                document.getElementById('resultReasonText').innerText = `[${kwTime}] 및 [${kwDensity}]를 중시하시는 고객님께, 기품 있는 존재감을 드러내는 마스터피스 [08. 백단 묵향]을 추천합니다.`;
+                document.getElementById('resultDesc').innerText = '그윽한 백단 원목의 온기와 조선 서재의 정갈한 먹향, 전통 방짜유기 놋쇠 캡이 품격 있는 자리를 하루 종일 은은하게 채웁니다.';
+                document.getElementById('resultLayering').innerText = '1마패 맑은 베이스 위에 3마패를 단 1회 분무하여 독보적인 기품과 지속력을 완성하세요.';
+                document.getElementById('resultProductLink').href = '카테고리.html?tab=3mapae&targetProd=p8#sec-3mapae';
+                document.getElementById('resultProductLink').innerText = '추천 상품 [08. 백단 묵향] 바로 보기 >';
+            }
+        }
+
+        function restartQuiz() {
+            currentStep = 0;
+            answers = [];
+            renderQuizStep();
+        }
+
+        // ESC 키로 모달 및 카트 드로어 닫기
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeDiagnosisModal();
+                closeCartDrawer();
+                closeUserMenuModal();
+                closePackagingModal();
+                closeAtelierModal();
+            }
+        });
+
+        // ========================================================
+        // [CART ENGINE] LocalStorage Synchronization & Drawer Logic
+        // ========================================================
+        const productPriceMap = {
+            '01. 유자 청송': { price: 39000, spec: '20ml EDP · 1마패 Base' },
+            '02. 백합 한지': { price: 39000, spec: '20ml EDP · 1마패 Base' },
+            '03. 옥로 다원': { price: 39000, spec: '20ml EDP · 1마패 Base' },
+            '04. 적송 홍화': { price: 49000, spec: '50ml EDP · 2마패 Point' },
+            '05. 달맞이꽃 야화': { price: 49000, spec: '50ml EDP · 2마패 Point' },
+            '06. 매화 설원': { price: 49000, spec: '50ml EDP · 2마패 Point' },
+            '07. 치자 노을': { price: 49000, spec: '50ml EDP · 2마패 Point' },
+            '08. 백단 묵향': { price: 69000, spec: '75ml EDP + 놋쇠 캡 · 3마패 Master' },
+            '09. 침향 흑호': { price: 69000, spec: '75ml EDP + 놋쇠 캡 · 3마패 Master' },
+            '10. 자개 영롱': { price: 69000, spec: '75ml EDP + 놋쇠 캡 · 3마패 Master' },
+            '11. 궁중 향낭': { price: 69000, spec: '75ml EDP + 놋쇠 캡 · 3마패 Master' },
+            '놋쇠 마패 롤온 오일': { price: 32000, spec: '10ml 롤온 + 놋쇠 참 · 웰니스 오브제' },
+            '흑도자기 룸 미스트': { price: 38000, spec: '200ml 여주 흑도자기 · 웰니스 미스트' },
+            '흑도자기 룸 & 패브릭 미스트': { price: 38000, spec: '200ml 여주 흑도자기 · 웰니스 미스트' },
+            '흑도자기 룸미스트': { price: 38000, spec: '200ml 여주 흑도자기 · 웰니스 미스트' },
+            '13. 흑도자기 룸 & 패브릭 미스트': { price: 38000, spec: '200ml 여주 흑도자기 · 웰니스 미스트' },
+            '방짜유기 마패 인센스 스틱': { price: 45000, spec: '30 Sticks + 방짜유기 놋쇠 홀더' },
+            '밀도 3종 디스커버리 킷': { price: 19000, spec: '5ml x 3종 + 19,000원 웰컴 크레딧' },
+            '3종 디스커버리 킷': { price: 19000, spec: '5ml x 3종 + 19,000원 웰컴 크레딧' },
+            '옻칠 오동나무 3마패 세트': { price: 248000, spec: '75ml 풀패키지 + 옻칠 보관함 + VIP 패스 (기획안)' },
+            '12. 놋쇠 마패 롤온 오일': { price: 32000, spec: '10ml 롤온 + 놋쇠 참 · 웰니스 오브제' },
+            '13. 흑도자기 룸 미스트': { price: 38000, spec: '200ml 여주 흑도자기 · 웰니스 미스트' },
+            '14. 방짜유기 마패 인센스 스틱': { price: 45000, spec: '30 Sticks + 방짜유기 놋쇠 홀더' },
+            '15. 밀도 3종 디스커버리 킷': { price: 19000, spec: '5ml x 3종 + 19,000원 웰컴 크레딧' },
+            '16. 옻칠 오동나무 3마패 세트': { price: 248000, spec: '75ml 풀패키지 + 옻칠 보관함 + VIP 패스 (기획안)' }
+        };
+
+        let cart = [];
+        try {
+            cart = JSON.parse(localStorage.getItem('mildo_cart') || localStorage.getItem('sadan_cart') || '[]');
+        } catch(e) {
+            cart = [];
+        }
+
+        function saveCart() {
+            try {
+                localStorage.setItem('mildo_cart', JSON.stringify(cart));
+            } catch(e) {}
+            updateCartUI();
+        }
+
+        function addToCart(itemName) {
+            const cleanTitle = itemName.replace(' (柚子 靑松)', '').replace(' (百合 韓紙)', '').replace(' (玉露 茶園)', '').replace(' (赤松 紅花)', '').replace(' (月下 夜花)', '').replace(' (梅花 雪原)', '').replace(' (梔子 晚霞)', '').replace(' (白檀 墨香)', '').replace(' (沈香 黑虎)', '').replace(' (螺鈿 玲瓏)', '').replace(' (宮中 香囊)', '').trim();
+            const matchedKey = Object.keys(productPriceMap).find(k => cleanTitle.includes(k) || k.includes(cleanTitle)) || cleanTitle;
+            const meta = productPriceMap[matchedKey] || { price: 49000, spec: '밀도 시그니처 에디션' };
+
+            const existing = cart.find(i => i.title === matchedKey);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({
+                    title: matchedKey,
+                    price: meta.price,
+                    spec: meta.spec,
+                    qty: 1
+                });
+            }
+            saveCart();
+            openCartDrawer();
+        }
+
+        function updateCartQty(title, delta) {
+            const item = cart.find(i => i.title === title);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.title !== title);
+                }
+                saveCart();
+            }
+        }
+
+        function removeCartItem(title) {
+            cart = cart.filter(i => i.title !== title);
+            saveCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            saveCart();
+        }
+
+        function updateCartUI() {
+            const totalCount = cart.reduce((sum, i) => sum + i.qty, 0);
+            const totalPrice = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            const formattedPrice = totalPrice.toLocaleString() + ' KRW';
+
+            const headerCount = document.getElementById('headerCartCount');
+            if (headerCount) headerCount.innerText = totalCount;
+
+            const floatingBadge = document.getElementById('floatingCartBadge');
+            const floatingTotal = document.getElementById('floatingCartTotal');
+            if (floatingBadge) floatingBadge.innerText = totalCount;
+            if (floatingTotal) floatingTotal.innerText = formattedPrice;
+
+            const drawerCount = document.getElementById('drawerCartCount');
+            const drawerTotal = document.getElementById('drawerTotalAmount');
+            const drawerList = document.getElementById('drawerItemList');
+            const drawerEmpty = document.getElementById('drawerEmptyState');
+            const drawerFooter = document.getElementById('drawerFooter');
+
+            if (drawerCount) drawerCount.innerText = totalCount;
+            if (drawerTotal) drawerTotal.innerText = formattedPrice;
+
+            if (totalCount === 0) {
+                if (drawerEmpty) drawerEmpty.style.display = 'flex';
+                if (drawerList) drawerList.style.display = 'none';
+                if (drawerFooter) drawerFooter.style.opacity = '0.5';
+            } else {
+                if (drawerEmpty) drawerEmpty.style.display = 'none';
+                if (drawerList) {
+                    drawerList.style.display = 'flex';
+                    drawerList.innerHTML = cart.map(item => `
+                        <div style="background:var(--bg-surface); border:1px solid var(--border-line); border-radius:4px; padding:14px; display:flex; justify-content:space-between; align-items:center; gap:12px;">
+                            <div style="flex:1;">
+                                <div style="font-size:13.5px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary); margin-bottom:3px;">${item.title}</div>
+                                <div style="font-size:10.5px; color:var(--text-muted); font-family:var(--font-mono); margin-bottom:6px;">${item.spec}</div>
+                                <div style="font-size:12.5px; font-weight:900; color:var(--accent-brass); font-family:var(--font-mono);">${(item.price * item.qty).toLocaleString()} KRW</div>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <div style="display:flex; align-items:center; border:1px solid var(--border-line); border-radius:3px; background:#fff;">
+                                    <button type="button" onclick="updateCartQty('${item.title}', -1)" style="border:none; background:transparent; padding:4px 8px; font-size:12px; cursor:pointer; font-weight:900;">-</button>
+                                    <span style="font-size:11.5px; font-weight:800; font-family:var(--font-mono); padding:0 6px;">${item.qty}</span>
+                                    <button type="button" onclick="updateCartQty('${item.title}', 1)" style="border:none; background:transparent; padding:4px 8px; font-size:12px; cursor:pointer; font-weight:900;">+</button>
+                                </div>
+                                <button type="button" onclick="removeCartItem('${item.title}')" style="border:none; background:transparent; color:var(--text-muted); font-size:16px; cursor:pointer; padding:4px;">&times;</button>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+                if (drawerFooter) drawerFooter.style.opacity = '1';
+            }
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const backdrop = document.getElementById('cartDrawerBackdrop');
+            if (!drawer || !backdrop) return;
+
+            const isOpened = drawer.getAttribute('data-open') === 'true';
+            if (isOpened) {
+                closeCartDrawer();
+            } else {
+                openCartDrawer();
+            }
+        }
+
+        function openCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const backdrop = document.getElementById('cartDrawerBackdrop');
+            if (!drawer || !backdrop) return;
+            drawer.setAttribute('data-open', 'true');
+            backdrop.style.display = 'block';
+            setTimeout(() => {
+                backdrop.style.opacity = '1';
+                drawer.style.transform = 'translateX(0%)';
+            }, 10);
+        }
+
+        function closeCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const backdrop = document.getElementById('cartDrawerBackdrop');
+            if (!drawer || !backdrop) return;
+            drawer.setAttribute('data-open', 'false');
+            drawer.style.transform = 'translateX(100%)';
+            backdrop.style.opacity = '0';
+            setTimeout(() => { backdrop.style.display = 'none'; }, 300);
+        }
+
+        function checkoutOrder() {
+            if (cart.length === 0) {
+                alert('장바구니에 담긴 상품이 없습니다.');
+                return;
+            }
+            const totalCount = cart.reduce((sum, i) => sum + i.qty, 0);
+            const totalPrice = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            alert(`[밀도 HAUTE PERFUMERY 안전 주문서]\n\n총 ${totalCount}개 품목 (합계: ${totalPrice.toLocaleString()} KRW)\n전액 무료 배송 VIP 패키지로 안전하게 결제 단계로 이동합니다.`);
+        }
+
+        function openUserMenuModal() {
+            const modal = document.getElementById('userMenuModal');
+            if (modal) modal.style.display = 'flex';
+        }
+
+        function closeUserMenuModal() {
+            const modal = document.getElementById('userMenuModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        let currentMainPkgChoice = 'basic';
+
+        function openPackagingModal() {
+            const modal = document.getElementById('packagingModal');
+            if (modal) modal.style.display = 'flex';
+        }
+
+        function closePackagingModal() {
+            const modal = document.getElementById('packagingModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function setMainPackagingChoice(type) {
+            currentMainPkgChoice = type;
+            const cardBasic = document.getElementById('pkgSelectBasic');
+            const cardPremium = document.getElementById('pkgSelectPremium');
+            const radioBasic = document.getElementById('radioPkgBasic');
+            const radioPremium = document.getElementById('radioPkgPremium');
+
+            if (type === 'basic') {
+                if (radioBasic) radioBasic.checked = true;
+                if (radioPremium) radioPremium.checked = false;
+                if (cardBasic) {
+                    cardBasic.style.borderColor = 'var(--text-primary)';
+                    cardBasic.style.background = 'var(--bg-linen)';
+                }
+                if (cardPremium) {
+                    cardPremium.style.borderColor = 'var(--border-line)';
+                    cardPremium.style.background = '#ffffff';
+                }
+            } else {
+                if (radioBasic) radioBasic.checked = false;
+                if (radioPremium) radioPremium.checked = true;
+                if (cardPremium) {
+                    cardPremium.style.borderColor = 'var(--accent-brass)';
+                    cardPremium.style.background = '#fffcf8';
+                }
+                if (cardBasic) {
+                    cardBasic.style.borderColor = 'var(--border-line)';
+                    cardBasic.style.background = '#ffffff';
+                }
+            }
+        }
+
+        function goToCategoryWithSelectedPkg() {
+            sessionStorage.setItem('mildo_selected_packaging', currentMainPkgChoice);
+            sessionStorage.setItem('sadan_selected_packaging', currentMainPkgChoice);
+            closePackagingModal();
+            window.location.href = `카테고리.html?tab=gift&openProd=p16&pkg=${currentMainPkgChoice}#sec-gift`;
+        }
+
+        function openVipPreorderModal() {
+            sessionStorage.setItem('mildo_selected_packaging', currentMainPkgChoice);
+            sessionStorage.setItem('sadan_selected_packaging', currentMainPkgChoice);
+            closePackagingModal();
+            const pkgNameText = currentMainPkgChoice === 'premium' ? '[프리미엄] 전통 수제 보자기 & 노리개 (+5,000 KRW)' : '[기본] 능화창 슬리브 상자 & 한지 엽서 (무료)';
+            const pkgDisplay = document.getElementById('vipPkgSelectedDisplay');
+            if (pkgDisplay) {
+                pkgDisplay.textContent = pkgNameText;
+            }
+            const modal = document.getElementById('vipPreorderModal');
+            if (modal) modal.style.display = 'flex';
+        }
+
+        function closeVipPreorderModal() {
+            const modal = document.getElementById('vipPreorderModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function submitVipPreorder(e) {
+            if (e) e.preventDefault();
+            const nameInput = document.getElementById('vipPreorderName');
+            const name = nameInput ? nameInput.value.trim() : '';
+            const pkgName = currentMainPkgChoice === 'premium' ? '수제 보자기 포장' : '기본 능화창 상자';
+            closeVipPreorderModal();
+            alert(`${name ? name + ' 님, ' : ''}옻칠 오동나무 3마패 세트(${pkgName}) VIP 사전 오픈 알림 등록이 완료되었습니다. (10% 얼리버드 혜택 적용)`);
+        }
+
+        function openAtelierModal() {
+            const modal = document.getElementById('atelierModal');
+            if (modal) modal.style.display = 'flex';
+        }
+
+        function closeAtelierModal() {
+            const modal = document.getElementById('atelierModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function submitAtelierAlert(e) {
+            if (e) e.preventDefault();
+            const nameInput = document.getElementById('atelierName');
+            const name = nameInput ? nameInput.value.trim() : '';
+            closeAtelierModal();
+            alert(`${name ? name + ' 님, ' : ''}밀도 프라이빗 아틀리에 사전 오픈 알림 등록이 완료되었습니다.`);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            updateCartUI();
+        });
+    </script>
+
+    <!-- ========================================================
+         [USER & NAVIGATION MENU MODAL] 사용자 마이페이지 & 전체 메뉴 모달
+         ======================================================== -->
+    <div id="userMenuModal" onclick="if(event.target === this) closeUserMenuModal();" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); z-index:1600; align-items:center; justify-content:center;">
+        <div style="background:#ffffff; border:1px solid var(--border-line); border-radius:4px; max-width:440px; width:92%; padding:28px 24px; position:relative; box-shadow:0 20px 48px rgba(0,0,0,0.2);">
+            <button type="button" onclick="closeUserMenuModal()" style="position:absolute; top:16px; right:18px; background:transparent; border:none; font-size:24px; cursor:pointer; color:var(--text-secondary);">&times;</button>
+            
+            <!-- User Profile Summary -->
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px; padding-bottom:14px; border-bottom:1px solid var(--border-line);">
+                <div style="width:40px; height:40px; border-radius:50%; background:var(--bg-dark); color:#ffffff; display:flex; align-items:center; justify-content:center; font-weight:900; font-family:var(--font-serif); font-size:16px;">密</div>
+                <div>
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <span style="font-size:16px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary);">밀도 회원</span>
+                        <span class="product-badge product-badge-3mapae" style="font-size:9.5px; padding:2px 6px;">VIP 멤버</span>
+                    </div>
+                    <div style="font-size:11.5px; color:var(--text-muted); font-family:var(--font-mono);">mildo.secret@mape.kr</div>
+                </div>
+            </div>
+
+            <!-- Page Navigation Links -->
+            <div style="margin-bottom:16px;">
+                <div style="font-size:10px; font-weight:800; color:var(--text-muted); letter-spacing:1.5px; margin-bottom:8px; font-family:var(--font-mono);">SITE NAVIGATION</div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <a href="메인_페이지.html" style="display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:var(--bg-linen); border-radius:4px; text-decoration:none; color:var(--text-primary); font-size:13px; font-weight:700; transition:all 0.15s;">
+                        <span>🏠 메인 홈</span>
+                        <span style="font-size:11px; color:var(--text-muted);">&gt;</span>
+                    </a>
+                    <a href="브랜드_소개.html" style="display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:var(--bg-linen); border-radius:4px; text-decoration:none; color:var(--text-primary); font-size:13px; font-weight:700; transition:all 0.15s;">
+                        <span>📖 브랜드 소개 (스토리 &amp; 철학)</span>
+                        <span style="font-size:11px; color:var(--text-muted);">&gt;</span>
+                    </a>
+                    <a href="카테고리.html" style="display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:var(--bg-linen); border-radius:4px; text-decoration:none; color:var(--text-primary); font-size:13px; font-weight:700; transition:all 0.15s;">
+                        <span>📦 밀도 16종 전 상품 카탈로그</span>
+                        <span style="font-size:11px; color:var(--text-muted);">&gt;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Member Benefit Info -->
+            <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:20px;">
+                <div style="background:var(--bg-surface); border:1px solid var(--border-line); border-radius:4px; padding:10px 14px; display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:12px; font-weight:700; color:var(--text-secondary);">보유 19,000원 웰컴 크레딧</span>
+                    <span style="font-size:12.5px; font-weight:900; color:var(--accent-brass); font-family:var(--font-mono);">19,000 KRW</span>
+                </div>
+                <div style="background:var(--bg-surface); border:1px solid var(--border-line); border-radius:4px; padding:10px 14px; display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:12px; font-weight:700; color:var(--text-secondary);">30초 맞춤 향 진단</span>
+                    <button type="button" onclick="closeUserMenuModal(); openDiagnosisModal();" class="btn-brass" style="padding:4px 10px; font-size:10.5px;">진단하기</button>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" class="btn-black" onclick="closeUserMenuModal(); toggleCartDrawer();" style="width:100%; padding:12px; font-size:12.5px; cursor:pointer;">장바구니 확인 &gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         [FLOATING WIDGET] 우측 하단 스티키 플로팅 장바구니 바
+         ======================================================== -->
+    <div id="floatingCartWidget" class="floating-cart-pill" onclick="toggleCartDrawer()">
+        <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:11px; font-weight:900; font-family:var(--font-mono); letter-spacing:1px; color:#ffffff;">CART</span>
+            <span id="floatingCartBadge" style="background:var(--accent-brass); color:#ffffff; font-size:10px; font-weight:900; padding:2px 7px; border-radius:12px; font-family:var(--font-mono);">0</span>
+        </div>
+        <div style="width:1px; height:14px; background:#3f3f46;"></div>
+        <div id="floatingCartTotal" style="font-size:12.5px; font-weight:900; font-family:var(--font-mono); color:#fef08a;">0 KRW</div>
+        <span style="font-size:10.5px; color:#a1a1aa; font-weight:700;">주문 확인 &gt;</span>
+    </div>
+
+    <!-- ========================================================
+         [CART DRAWER] 우측 슬라이드형 실시간 장바구니 서랍 (한눈에 보기)
+         ======================================================== -->
+    <div id="cartDrawerBackdrop" onclick="closeCartDrawer()" style="position:fixed; inset:0; background:rgba(0,0,0,0.5); backdrop-filter:blur(3px); z-index:1500; display:none; opacity:0; transition:opacity 0.3s ease;"></div>
+    <div id="cartDrawer" data-open="false" style="position:fixed; top:0; right:0; width:420px; max-width:92vw; height:100vh; background:#ffffff; z-index:1501; box-shadow:-8px 0 32px rgba(0,0,0,0.18); display:flex; flex-direction:column; transform:translateX(100%); transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+        
+        <!-- Drawer Header -->
+        <div style="padding:22px 24px; border-bottom:1px solid var(--border-line); display:flex; justify-content:space-between; align-items:center; background:var(--bg-linen);">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div style="width:28px; height:28px; border:1.5px solid var(--text-primary); display:flex; align-items:center; justify-content:center; font-weight:900; font-family:var(--font-serif); font-size:13px;">密</div>
+                <h3 style="font-size:17px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary); margin:0;">
+                    선택 상품 장바구니 (<span id="drawerCartCount" style="color:var(--accent-brass); font-family:var(--font-mono);">0</span>)
+                </h3>
+            </div>
+            <button type="button" onclick="closeCartDrawer()" style="background:transparent; border:none; font-size:22px; cursor:pointer; line-height:1; color:var(--text-secondary);">&times;</button>
+        </div>
+
+        <!-- Drawer Content / Item List -->
+        <div id="drawerItemList" style="flex:1; overflow-y:auto; padding:20px 24px; display:flex; flex-direction:column; gap:12px;">
+            <!-- Dynamic Items rendered here -->
+        </div>
+
+        <!-- Empty State in Drawer -->
+        <div id="drawerEmptyState" style="flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:32px 24px; color:var(--text-muted);">
+            <div style="font-size:12px; font-weight:800; font-family:var(--font-mono); color:var(--accent-brass); margin-bottom:8px;">CART IS EMPTY</div>
+            <div style="font-size:16px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary); margin-bottom:8px;">장바구니가 비어 있습니다</div>
+            <p style="font-size:12.5px; color:var(--text-secondary); line-height:1.6; margin-bottom:20px;">
+                밀도의 마패 향수와 헤리티지 라인을 둘러보고<br>나만의 시그니처 조합을 담아보세요.
+            </p>
+            <a href="카테고리.html" class="btn-black" onclick="closeCartDrawer()" style="padding:10px 22px; font-size:12px; text-decoration:none;">16종 상품 둘러보기</a>
+        </div>
+
+        <!-- Drawer Footer / Summary & Checkout -->
+        <div id="drawerFooter" style="padding:22px 24px; border-top:1px solid var(--border-line); background:var(--bg-linen);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; font-size:12px; color:var(--text-secondary);">
+                <span>배송비</span>
+                <span style="font-weight:800; color:var(--accent-pine);">무료 배송 (VIP 전액 지원)</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
+                <span style="font-size:14px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary);">총 결제 예상 금액</span>
+                <span id="drawerTotalAmount" style="font-size:20px; font-weight:900; font-family:var(--font-mono); color:var(--accent-brass);">0 KRW</span>
+            </div>
+            <div style="display:grid; grid-template-columns: 1fr 1.4fr; gap:10px;">
+                <button type="button" class="btn-outline" onclick="clearCart()" style="padding:12px; font-size:12px;">전체 비우기</button>
+                <button type="button" class="btn-black" onclick="checkoutOrder()" style="padding:12px; font-size:12.5px;">주문 결제하기 &gt;</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ========================================================
+         [PACKAGING MODAL] 밀도 전통 선물 패키징 선택 모달
+         ======================================================== -->
+    <div id="packagingModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); z-index:1600; align-items:center; justify-content:center; padding:16px;">
+        <div style="background:#ffffff; border:1px solid var(--border-line); border-radius:4px; max-width:480px; width:100%; max-height:90vh; overflow-y:auto; padding:28px 24px; position:relative; box-shadow:0 20px 48px rgba(0,0,0,0.2);">
+            <button type="button" onclick="closePackagingModal()" style="position:absolute; top:16px; right:18px; background:transparent; border:none; font-size:24px; cursor:pointer; color:var(--text-secondary);">&times;</button>
+            
+            <div style="margin-bottom:14px;">
+                <span class="section-tag" style="margin:0 0 8px;">GIFT PACKAGING SELECTION</span>
+                <h3 style="font-size:18px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary); margin:0;">
+                    밀도(MILDO) 전통 선물 패키징 선택
+                </h3>
+            </div>
+
+            <p style="font-size:12.5px; color:var(--text-secondary); line-height:1.6; margin-bottom:14px;">
+                원하시는 포장 방식을 선택하신 후 아래 버튼을 누르면, <strong>선택하신 옵션이 반영된 [옻칠 오동나무 3마패 세트] VIP 사전 오픈 알림 신청</strong>으로 연결됩니다.
+            </p>
+
+            <!-- Option 1: Basic Free Box -->
+            <div id="pkgSelectBasic" onclick="setMainPackagingChoice('basic')" style="background:var(--bg-linen); border:2px solid var(--text-primary); border-radius:4px; padding:16px; margin-bottom:12px; cursor:pointer; box-sizing:border-box; transition:background-color 0.2s, border-color 0.2s;">
+                <div style="margin-bottom:8px;">
+                    <label style="display:flex; align-items:flex-start; gap:8px; cursor:pointer; margin:0;">
+                        <input type="radio" id="radioPkgBasic" name="mainPkgChoice" value="basic" checked style="accent-color:var(--text-primary); width:16px; height:16px; margin-top:2px; cursor:pointer; flex-shrink:0;">
+                        <strong style="font-size:14px; color:var(--text-primary); font-family:var(--font-serif); line-height:1.4;">1. [기본] 능화창 슬리브 상자 &amp; 한지 엽서</strong>
+                    </label>
+                </div>
+                <div style="font-size:12px; color:var(--text-secondary); line-height:1.7; padding-left:24px; margin-bottom:10px;">
+                    <div>· <strong>포장 구성:</strong> 조선 창호 꽃살문 하드 상자 + 붉은 한지 띠지</div>
+                    <div>· <strong>동봉 혜택:</strong> 캘리그라피 감사 메시지 한지 엽서 동봉</div>
+                    <div>· <strong>적용 대상:</strong> 전 등급(20ml·50ml·75ml) 본품 및 전 선물 세트 무료 기본 제공</div>
+                </div>
+                <div style="display:flex; justify-content:flex-end; align-items:center; border-top:1px solid rgba(0,0,0,0.06); padding-top:8px; padding-left:24px;">
+                    <span style="font-size:12px; font-weight:800; color:var(--accent-pine); font-family:var(--font-mono);">추가 비용: 0 KRW (무료 기본 제공)</span>
+                </div>
+            </div>
+
+            <!-- Option 2: Premium Bojagi Wrapping -->
+            <div id="pkgSelectPremium" onclick="setMainPackagingChoice('premium')" style="background:#ffffff; border:2px solid var(--border-line); border-radius:4px; padding:16px; margin-bottom:18px; cursor:pointer; box-sizing:border-box; transition:background-color 0.2s, border-color 0.2s;">
+                <div style="margin-bottom:8px;">
+                    <label style="display:flex; align-items:flex-start; gap:8px; cursor:pointer; margin:0;">
+                        <input type="radio" id="radioPkgPremium" name="mainPkgChoice" value="premium" style="accent-color:var(--accent-brass); width:16px; height:16px; margin-top:2px; cursor:pointer; flex-shrink:0;">
+                        <strong style="font-size:14px; color:var(--accent-brass); font-family:var(--font-serif); line-height:1.4;">2. [프리미엄] 전통 수제 보자기 &amp; 노리개</strong>
+                    </label>
+                </div>
+                <div style="font-size:12px; color:var(--text-secondary); line-height:1.7; padding-left:24px; margin-bottom:10px;">
+                    <div>· <strong>포장 구성:</strong> 옥색·홍색 전통 수제 패브릭 보자기 래핑</div>
+                    <div>· <strong>오브제 장식:</strong> 방짜유기 놋쇠 마패 태슬 노리개 장식 결합</div>
+                    <div>· <strong>추천 대상:</strong> 은사님 선물, 격식 있는 예단 및 명절 추천</div>
+                </div>
+                <div style="display:flex; justify-content:flex-end; align-items:center; border-top:1px solid rgba(180,83,9,0.12); padding-top:8px; padding-left:24px;">
+                    <span style="font-size:12px; font-weight:900; color:var(--accent-brass); font-family:var(--font-mono);">추가 비용: +5,000 KRW (선택 옵션)</span>
+                </div>
+            </div>
+
+            <!-- Single Action Button (VIP Pre-order trigger) -->
+            <button type="button" class="btn-black" onclick="openVipPreorderModal()" style="width:100%; padding:14px; font-size:13px; font-weight:800; cursor:pointer; letter-spacing:0.5px; background:var(--accent-brass-dark); border-color:var(--accent-brass-dark);">
+                선택한 포장으로 VIP 사전 오픈 알림 신청 &gt;
+            </button>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         [VIP PRE-ORDER MODAL] 옻칠 오동나무 3마패 세트 VIP 한정 사전 오픈 알림 모달
+         ======================================================== -->
+    <div id="vipPreorderModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); z-index:1600; align-items:center; justify-content:center; padding:16px;">
+        <div style="background:#ffffff; border:1px solid var(--border-line); border-radius:4px; max-width:480px; width:100%; max-height:90vh; overflow-y:auto; padding:28px 24px; position:relative; box-shadow:0 20px 48px rgba(0,0,0,0.2);">
+            <button type="button" onclick="closeVipPreorderModal()" style="position:absolute; top:16px; right:18px; background:transparent; border:none; font-size:24px; cursor:pointer; color:var(--text-secondary);">&times;</button>
+            
+            <div style="margin-bottom:16px;">
+                <div style="display:flex; gap:6px; align-items:center; margin-bottom:6px;">
+                    <span class="section-tag" style="margin:0;">VIP PRE-ORDER</span>
+                    <span style="font-size:10px; font-weight:800; color:var(--accent-brass); background:rgba(202,138,4,0.1); padding:2px 6px; border-radius:2px;">1차 수량 50세트 한정</span>
+                </div>
+                <h3 style="font-size:18px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary); margin:0 0 6px;">
+                    16. 옻칠 오동나무 3마패 세트 사전 예약 &amp; 오픈 알림
+                </h3>
+                <p style="font-size:12px; color:var(--text-secondary); line-height:1.6; margin:0;">
+                    국가 무형문화재 목공예 장인의 100% 수제 공정으로 소량 한정 제작되는 밀도(MILDO) 최고급 마스터피스입니다. 사전 알림을 등록하신 분께만 <strong>1차 제작 수량 우선 예약 링크</strong>와 <strong>10% 얼리버드 바우처</strong>를 문자로 안내해 드립니다.
+                </p>
+            </div>
+
+            <!-- 선택된 포장 옵션 안내 배너 -->
+            <div style="background:var(--bg-linen); border:1px solid var(--border-line); border-radius:3px; padding:12px 14px; margin-bottom:16px; font-size:12px;">
+                <div style="font-size:11px; font-weight:800; color:var(--accent-brass); margin-bottom:4px; font-family:var(--font-mono);">선택된 희망 선물 포장</div>
+                <div id="vipPkgSelectedDisplay" style="font-weight:700; color:var(--text-primary);">[기본] 능화창 슬리브 상자 &amp; 한지 엽서 (무료)</div>
+            </div>
+
+            <form id="vipPreorderForm" onsubmit="submitVipPreorder(event)" style="display:flex; flex-direction:column; gap:14px; margin-bottom:18px;">
+                <!-- 성함 & 연락처 -->
+                <div style="display:grid; grid-template-columns: 1fr 1.4fr; gap:8px;">
+                    <div>
+                        <label style="display:block; font-size:11.5px; font-weight:800; color:var(--text-primary); margin-bottom:4px;">신청자 성함</label>
+                        <input type="text" id="vipPreorderName" placeholder="홍길동" required style="width:100%; box-sizing:border-box; padding:9px 10px; border:1px solid var(--border-line); border-radius:3px; font-size:12px;">
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:11.5px; font-weight:800; color:var(--text-primary); margin-bottom:4px;">알림 수신 번호</label>
+                        <input type="tel" id="vipPreorderPhone" placeholder="010-1234-5678" required style="width:100%; box-sizing:border-box; padding:9px 10px; border:1px solid var(--border-line); border-radius:3px; font-size:12px;">
+                    </div>
+                </div>
+
+                <!-- 개인정보 수집 동의 -->
+                <label style="display:flex; align-items:flex-start; gap:8px; font-size:11px; color:var(--text-muted); cursor:pointer; line-height:1.5;">
+                    <input type="checkbox" id="vipPrivacyAgree" required style="margin-top:2px;">
+                    <span>[필수] 옻칠 오동나무 3마패 세트 1차 제작 오픈 소식 및 얼리버드 바우처 발송을 위한 개인정보(성함, 연락처) 수집 및 이용에 동의합니다.</span>
+                </label>
+
+                <button type="submit" class="btn-brass" style="width:100%; padding:13px; font-size:13px; font-weight:800; cursor:pointer;">
+                    VIP 사전 오픈 알림 등록 완료 &gt;
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         [ATELIER ALERT MODAL] 밀도 프라이빗 아틀리에 기획안 & 사전 알림 신청 모달
+         ======================================================== -->
+    <div id="atelierModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); z-index:1600; align-items:center; justify-content:center; padding:16px;">
+        <div style="background:#ffffff; border:1px solid var(--border-line); border-radius:4px; max-width:480px; width:100%; max-height:90vh; overflow-y:auto; padding:28px 24px; position:relative; box-shadow:0 20px 48px rgba(0,0,0,0.2);">
+            <button type="button" onclick="closeAtelierModal()" style="position:absolute; top:16px; right:18px; background:transparent; border:none; font-size:24px; cursor:pointer; color:var(--text-secondary);">&times;</button>
+            
+            <div style="margin-bottom:16px;">
+                <div style="display:flex; gap:6px; align-items:center; margin-bottom:6px;">
+                    <span class="section-tag" style="margin:0;">SHOWROOM CONCEPT</span>
+                    <span style="font-size:10px; font-weight:800; color:var(--accent-brass); background:rgba(202,138,4,0.1); padding:2px 6px; border-radius:2px;">사전 기획</span>
+                </div>
+                <h3 style="font-size:18px; font-weight:900; font-family:var(--font-serif); color:var(--text-primary); margin:0 0 6px;">
+                    밀도 프라이빗 아틀리에 사전 오픈 알림
+                </h3>
+                <p style="font-size:12px; color:var(--text-secondary); line-height:1.6; margin:0;">
+                    북촌 한옥·성수 쇼룸에서 펼쳐질 1:1 몰입형 조향 도슨트 프로그램입니다. 오픈 2주 전 우선 예약 링크를 전송해 드립니다.
+                </p>
+            </div>
+
+            <form id="atelierAlertForm" onsubmit="submitAtelierAlert(event)" style="display:flex; flex-direction:column; gap:14px; margin-bottom:18px;">
+                <!-- 희망 지역 선택 -->
+                <div>
+                    <label style="display:block; font-size:12px; font-weight:800; color:var(--text-primary); margin-bottom:6px;">
+                        1. 희망 방문 지역
+                    </label>
+                    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:6px;">
+                        <label style="background:var(--bg-linen); border:1px solid var(--border-line); border-radius:3px; padding:8px; font-size:11.5px; text-align:center; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px;">
+                            <input type="radio" name="brandAtelierLocation" value="bukchon" checked> 북촌 한옥
+                        </label>
+                        <label style="background:var(--bg-linen); border:1px solid var(--border-line); border-radius:3px; padding:8px; font-size:11.5px; text-align:center; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px;">
+                            <input type="radio" name="brandAtelierLocation" value="seongsu"> 성수 쇼룸
+                        </label>
+                        <label style="background:var(--bg-linen); border:1px solid var(--border-line); border-radius:3px; padding:8px; font-size:11.5px; text-align:center; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px;">
+                            <input type="radio" name="brandAtelierLocation" value="samcheong"> 삼청동
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 방문 인원 선택 -->
+                <div>
+                    <label style="display:block; font-size:12px; font-weight:800; color:var(--text-primary); margin-bottom:6px;">
+                        2. 동반 방문 인원
+                    </label>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px;">
+                        <label style="background:var(--bg-linen); border:1px solid var(--border-line); border-radius:3px; padding:8px; font-size:11.5px; text-align:center; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px;">
+                            <input type="radio" name="brandAtelierParty" value="1" checked> 1인 프라이빗 도슨트
+                        </label>
+                        <label style="background:var(--bg-linen); border:1px solid var(--border-line); border-radius:3px; padding:8px; font-size:11.5px; text-align:center; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px;">
+                            <input type="radio" name="brandAtelierParty" value="2"> 2인 동반 조향 체험
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 성함 & 연락처 -->
+                <div style="display:grid; grid-template-columns: 1fr 1.4fr; gap:8px;">
+                    <div>
+                        <label style="display:block; font-size:11.5px; font-weight:800; color:var(--text-primary); margin-bottom:4px;">신청자 성함</label>
+                        <input type="text" id="atelierName" placeholder="홍길동" required style="width:100%; box-sizing:border-box; padding:9px 10px; border:1px solid var(--border-line); border-radius:3px; font-size:12px;">
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:11.5px; font-weight:800; color:var(--text-primary); margin-bottom:4px;">알림 수신 번호</label>
+                        <input type="tel" id="atelierPhone" placeholder="010-1234-5678" required style="width:100%; box-sizing:border-box; padding:9px 10px; border:1px solid var(--border-line); border-radius:3px; font-size:12px;">
+                    </div>
+                </div>
+
+                <!-- 개인정보 수집 동의 -->
+                <label style="display:flex; align-items:flex-start; gap:8px; font-size:11px; color:var(--text-muted); cursor:pointer; line-height:1.5;">
+                    <input type="checkbox" id="atelierPrivacyAgree" required style="margin-top:2px;">
+                    <span>[필수] 아틀리에 쇼룸 오픈 소식 및 우선 예약 링크 발송을 위한 개인정보(성함, 연락처) 수집 및 이용에 동의합니다.</span>
+                </label>
+
+                <button type="submit" class="btn-brass" style="width:100%; padding:13px; font-size:13px; font-weight:800; cursor:pointer;">
+                    오픈 사전 알림 신청 완료 &gt;
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

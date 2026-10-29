@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "original_audio_count": 7,
+  "completed_transcript_count": 7,
+  "interview_count": 8,
+  "counseling_header_count": 8,
+  "original_bodies_preserved": true,
+  "scope": "UTF-8, 추가 상담 양식과 사용자 지정 값, 기존 본문 바이트 보존, 제목 및 문단 형식, 학생 식별, 빈 범주, 원본 MP3 SHA-256 보존, 전사 완료 여부. 음성 청취나 의미 정확성을 자동 검증한 것은 아님.",
+  "files": [
+    {
+      "student": "강애란",
+      "path": "강애란\\면담 일지.md",
+      "bytes": 2982,
+      "sha256": "7129cf0a8b6451865ae4de60a41c1e9dd76e653c74438d0ce9bf3612bd99a43e"
+    },
+    {
+      "student": "김규린",
+      "path": "김규린\\면담 일지.md",
+      "bytes": 2642,
+      "sha256": "a228984318d15945d6cf64f3bc5021697158691c9d68185d646119dc1dc673db"
+    },
+    {
+      "student": "김형관",
+      "path": "김형관\\면담 일지.md",
+      "bytes": 3226,
+      "sha256": "00d41a99648147be75ca1950f6452213ecd08c1bb7a42ea11a6cdc4f8f016be0"
+    },
+    {
+      "student": "박선환",
+      "path": "박선환\\면담 일지.md",
+      "bytes": 2603,
+      "sha256": "dab49fc4f061a61932ea1c676e100d99dfd79a1ff51cea8b8e62d93942ae613b"
+    },
+    {
+      "student": "신윤아",
+      "path": "신윤아\\면담 일지.md",
+      "bytes": 3284,
+      "sha256": "7896de51afa4c9d9db646ef5a40d61da655dfc39867a3f1b366b0cc033473b30"
+    },
+    {
+      "student": "이주원",
+      "path": "이주원\\면담 일지.md",
+      "bytes": 2862,
+      "sha256": "e480a87a7b48ea7538362fb4f1ba950875931b233cfcb44b68c4b6cabf1a4deb"
+    },
+    {
+      "student": "홍석경",
+      "path": "홍석경\\면담 일지.md",
+      "bytes": 2852,
+      "sha256": "f4be29541fb9095189470c99cbffde4652f1618faa9df0e839a4579329bea536"
+    },
+    {
+      "student": "전해주",
+      "path": "전해주\\면담 일지.md",
+      "bytes": 2803,
+      "sha256": "652d707503f60681134983546fa69254b629af4f3a6ff944a28d2b838b22d66e"
+    }
+  ],
+  "errors": []
+}

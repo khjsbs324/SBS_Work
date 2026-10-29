@@ -1,0 +1,19 @@
+{
+    "student":  "이은경",
+    "Sid":  "sbsartdj1119",
+    "url":  "sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/evalC/answer.php?Pcode=300002\u0026Lcode=12\u0026AppCode=B\u0026FollowNo=1\u0026Sid=sbsartdj1119",
+    "requestedAt":  "2026-10-23T04:38:20.1366192Z",
+    "scores":  [
+                   9,
+                   9,
+                   8,
+                   9,
+                   7,
+                   9,
+                   8,
+                   7,
+                   9,
+                   8
+               ],
+    "feedbackSha256":  "d3ca45817d9f308c8f50eedbb4b1a7dd1638355cdbd5aec26d4d32127d5d31da"
+}

@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-10-29T02:35:21.492Z",
+  "unit": "시각디자인 리서치 조사",
+  "lcode": "4",
+  "unchanged": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=4",
+  "students": [
+    {
+      "name": "이은수",
+      "score": "79",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1123"
+    },
+    {
+      "name": "강민경",
+      "score": "75",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1114"
+    },
+    {
+      "name": "이지희",
+      "score": "69",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1120"
+    },
+    {
+      "name": "김정은",
+      "score": "64",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1115"
+    },
+    {
+      "name": "김지선",
+      "score": "64",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=3&Sid=sbsartdj1116"
+    },
+    {
+      "name": "임연우",
+      "score": "63",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1121"
+    },
+    {
+      "name": "박찬미",
+      "score": "62",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=2&Sid=sbsartdj1118"
+    },
+    {
+      "name": "이은경",
+      "score": "61",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1119"
+    },
+    {
+      "name": "박주연",
+      "score": "60",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1117"
+    },
+    {
+      "name": "최지혜",
+      "score": "60",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1124"
+    },
+    {
+      "name": "허지민",
+      "score": "60",
+      "teacher": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1122"
+    }
+  ],
+  "summary": "평가정보\n돌아가기\n구분\t본평가\t결석자평가\t재평가\t사전평가\t능력단위\n\n\n평가날짜\n\n평가시간\n\n커트라인\n\n패널티\n\n\t\n\n2026-06-05\n\n16:00~18:50\n\n60점\n\n0점\n\n\t\n\n2026-06-08\n\n18:50~22:00\n\n60점\n\n10점\n\n\t\n\n2026-06-10\n\n18:50~21:50\n\n0점\n\n10점\n\n\t84.85\t65.18\n평가인원\t10\t1\t1"
+}

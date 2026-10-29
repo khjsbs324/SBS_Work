@@ -1,0 +1,71 @@
+{
+  "group": "C",
+  "save": {
+    "status": 200,
+    "ok": true,
+    "redirect": "/teacher/curri/ver4/bbs/list.php?Pcode=300002&BoardCode=85"
+  },
+  "id": "1041",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1041",
+  "title": "[능력단위평가_지원내역] 시각디자인 리서치 조사 C그룹 지원자료",
+  "dateRow": "작성자\t김혜지\t작성일\t2026-06-08",
+  "contentMatches": true,
+  "headings": 11,
+  "tables": 13,
+  "navigation": {
+    "count": 10,
+    "valid": true
+  },
+  "images": [
+    {
+      "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792723909_7f896919.png",
+      "loaded": true
+    },
+    {
+      "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792723909_e3e5fee3.png",
+      "loaded": true
+    }
+  ],
+  "referenceLinks": [
+    {
+      "title": "정성, 정량 조사를 병행하여 퍼소나에 설득력 부여하기",
+      "url": "https://story.pxd.co.kr/1343"
+    },
+    {
+      "title": "사용자의 목소리로부터 보다 효과적으로 정보를 얻는 방법",
+      "url": "https://story.pxd.co.kr/341"
+    },
+    {
+      "title": "멘탈모델(2)-행동중심의 디자인접근법",
+      "url": "https://story.pxd.co.kr/176"
+    },
+    {
+      "title": "현직 UXUI 디자이너 포트폴리오 공개합니다",
+      "url": "https://www.youtube.com/watch?v=8HzYbvzoPqw"
+    }
+  ],
+  "style": {
+    "maxWidth": "980px",
+    "fontSize": "17px",
+    "lineHeight": "33.15px"
+  },
+  "cellPadding": "14px 16px",
+  "overflow": false,
+  "attachment": {
+    "status": 200,
+    "bytes": 281628,
+    "sameAsOriginal": true
+  },
+  "uploaded": {
+    "C-record.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792723909_e3e5fee3.png",
+    "C-steps.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792723909_7f896919.png"
+  },
+  "pdfPages": 10,
+  "worksheetTables": 6,
+  "checkedAt": "2026-10-23",
+  "commonCheck": {
+    "passed": false,
+    "existingError": "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완"
+  },
+  "navigationJumpVerified": true
+}

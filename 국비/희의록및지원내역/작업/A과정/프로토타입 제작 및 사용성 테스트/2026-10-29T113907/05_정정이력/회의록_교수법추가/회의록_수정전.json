@@ -1,0 +1,29 @@
+{
+  "unit": "프로토타입 제작 및 사용성 테스트",
+  "lcode": "15",
+  "unit_end_date": "2026-11-03",
+  "evaluation_date": "-",
+  "reassessment_date": "-",
+  "view": {
+    "회의제목": [
+      "평가결과 분석 회의",
+      "회의일시",
+      ""
+    ],
+    "평가결과 분석내용": [
+      ""
+    ],
+    "개선사항": [
+      ""
+    ]
+  },
+  "form": {
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=15",
+    "date": "",
+    "analysis": "",
+    "improvement": "",
+    "Pcode": "300002",
+    "Lcode": "15"
+  },
+  "checked_at": "2026-10-29T02:41:02.834Z"
+}

@@ -1,0 +1,102 @@
+[     860ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=4:591:1
+[    1183ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=2:530:1
+[    1452ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=5:523:1
+[    1641ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=3:524:1
+[    1910ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=6:549:1
+[    2137ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=7:557:1
+[    2301ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=8:543:1
+[    2468ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=9:494:1
+[    2605ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=10:494:1
+[    2723ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=11:494:1
+[    2878ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=12:494:1
+[    3037ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=14:494:1
+[    3170ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=13:494:1
+[  194593ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=4:591:1
+[  197240ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=4:583:1
+[  197680ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=2:530:1
+[  199344ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=2:522:1
+[  199951ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=5:523:1
+[  201717ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=5:515:1
+[  202261ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=3:524:1
+[  204135ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=3:516:1
+[  217640ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=6:549:1
+[  219563ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=6:541:1
+[  220173ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=7:557:1
+[  222075ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=7:549:1
+[  222652ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=8:543:1
+[  224385ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=8:535:1
+[  224977ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=9:494:1
+[  226747ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=9:482:1
+[  239179ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=10:494:1
+[  244611ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=10:482:1
+[  245159ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=11:494:1
+[  250469ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=11:482:1
+[  251045ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=12:494:1
+[  256590ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=12:482:1
+[  257153ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=14:494:1
+[  262437ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=14:482:1
+[  263012ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=13:494:1
+[  268262ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=13:482:1
+[  387824ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=9:482:1
+[  393129ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=9:482:1
+[  393708ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=10:482:1
+[  396251ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=10:482:1
+[  396782ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=11:482:1
+[  398467ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=11:482:1
+[  398950ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=12:482:1
+[  400622ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=12:482:1
+[  401103ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=14:482:1
+[  402724ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=14:482:1
+[  403247ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=13:482:1
+[  404895ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=13:482:1

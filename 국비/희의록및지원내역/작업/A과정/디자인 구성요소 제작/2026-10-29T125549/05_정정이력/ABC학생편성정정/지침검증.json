@@ -1,0 +1,32 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "ce029f",
+      "wall_time_seconds": 1.8403041,
+      "exit_code": 1,
+      "original_token_count": 95,
+      "output": "{\r\n  \"ok\": false,\r\n  \"summary\": {\r\n    \"instruction_files\": 37,\r\n    \"skills\": [\r\n      \"ncs-exam-production\",\r\n      \"ncs-learning-support\",\r\n      \"ncs-timetable\",\r\n      \"student-interview\"\r\n    ],\r\n    \"custom_agents\": 0,\r\n    \"hooks\": 0\r\n  },\r\n  \"errors\": [\r\n    \"능력단위평가\\\\수정 보완\\\\CLAUDE.md: Missing link/import: 수정 보완\"\r\n  ],\r\n  \"warnings\": []\r\n}\r\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "e2ab50",
+      "wall_time_seconds": 1.5431323,
+      "exit_code": 0,
+      "original_token_count": 30,
+      "output": "..............\r\n----------------------------------------------------------------------\r\nRan 14 tests in 0.235s\r\n\r\nOK\r\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "ec9bfa",
+      "wall_time_seconds": 9.1795354,
+      "exit_code": 0,
+      "original_token_count": 32,
+      "output": "........................\r\n----------------------------------------------------------------------\r\nRan 24 tests in 7.889s\r\n\r\nOK\r\n"
+    }
+  }
+]

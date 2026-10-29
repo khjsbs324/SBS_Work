@@ -1,0 +1,23 @@
+{
+  "course_id": "A",
+  "unit": "수정 보완",
+  "lcode": "8",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-29T01:25:41.462Z",
+  "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+  "unit_end_date": "2026-08-18",
+  "screen_confirmed": true,
+  "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=8",
+  "support_list_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/list.php?Pcode=300002&BoardCode=85",
+  "duplicate_checked": true,
+  "support_list_pages": 1,
+  "existing_posts": [],
+  "meeting_original": {
+    "date": "",
+    "analysis": "",
+    "improvement": ""
+  },
+  "meeting_form_observed": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=8"
+}

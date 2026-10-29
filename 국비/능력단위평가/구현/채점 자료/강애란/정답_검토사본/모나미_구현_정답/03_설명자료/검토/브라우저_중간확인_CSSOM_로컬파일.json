@@ -1,0 +1,188 @@
+{
+  "scope": "desktop_html_css",
+  "browser": "local isolated headless Chrome through Playwright",
+  "mcpFallbackReason": "Playwright MCP browser profile already in use; existing profile not closed or changed",
+  "pages": [
+    {
+      "kind": "combined_1920",
+      "title": "MONAMI | 전체 통합 정답",
+      "contentWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 110
+    },
+    {
+      "kind": "MON-01",
+      "title": "MONAMI | MON-01 상단",
+      "contentWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 31
+    },
+    {
+      "kind": "MON-02",
+      "title": "MONAMI | MON-02 비주얼",
+      "contentWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 18
+    },
+    {
+      "kind": "MON-03",
+      "title": "MONAMI | MON-03 신제품",
+      "contentWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 26
+    },
+    {
+      "kind": "MON-04",
+      "title": "MONAMI | MON-04 인기상품",
+      "contentWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 31
+    },
+    {
+      "kind": "MON-05",
+      "title": "MONAMI | MON-05 영상영역",
+      "contentWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 13
+    },
+    {
+      "kind": "MON-06",
+      "title": "MONAMI | MON-06 하단정보",
+      "contentWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 37
+    },
+    {
+      "kind": "MON-07",
+      "title": "MONAMI | MON-07 푸터",
+      "contentWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 26
+    },
+    {
+      "kind": "single_html",
+      "title": "MONAMI | HTML·CSS 한 파일 정답",
+      "contentWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 110
+    },
+    {
+      "kind": "combined_1440",
+      "title": "MONAMI | 전체 통합 정답",
+      "contentWidth": 1440,
+      "scrollWidth": 1440,
+      "broken": [],
+      "fontsLoaded": true,
+      "scripts": 0,
+      "stylesheetRules": 110
+    }
+  ],
+  "sections": [
+    {
+      "sid": "MON-01",
+      "elementsCompared": 34,
+      "contentWidth": 1920,
+      "geometryAndStylesMatch": true,
+      "brokenImages": 0,
+      "fontsLoaded": true
+    },
+    {
+      "sid": "MON-02",
+      "elementsCompared": 11,
+      "contentWidth": 1920,
+      "geometryAndStylesMatch": true,
+      "brokenImages": 0,
+      "fontsLoaded": true
+    },
+    {
+      "sid": "MON-03",
+      "elementsCompared": 21,
+      "contentWidth": 1920,
+      "geometryAndStylesMatch": true,
+      "brokenImages": 0,
+      "fontsLoaded": true
+    },
+    {
+      "sid": "MON-04",
+      "elementsCompared": 86,
+      "contentWidth": 1920,
+      "geometryAndStylesMatch": true,
+      "brokenImages": 0,
+      "fontsLoaded": true
+    },
+    {
+      "sid": "MON-05",
+      "elementsCompared": 2,
+      "contentWidth": 1920,
+      "geometryAndStylesMatch": true,
+      "brokenImages": 0,
+      "fontsLoaded": true
+    },
+    {
+      "sid": "MON-06",
+      "elementsCompared": 40,
+      "contentWidth": 1920,
+      "geometryAndStylesMatch": true,
+      "brokenImages": 0,
+      "fontsLoaded": true
+    },
+    {
+      "sid": "MON-07",
+      "elementsCompared": 20,
+      "contentWidth": 1920,
+      "geometryAndStylesMatch": true,
+      "brokenImages": 0,
+      "fontsLoaded": true
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "external": [],
+  "nativeKeyboardScroll": {
+    "scrollLeft": 2,
+    "scrollWidth": 3016,
+    "clientWidth": 1920
+  },
+  "lastCardReachable": true,
+  "singleFileMatchesCombined": true,
+  "fixedWidthConstraint": {
+    "viewportWidth": 1280,
+    "title": "MONAMI | 전체 통합 정답",
+    "contentWidth": 1280,
+    "scrollWidth": 1401,
+    "broken": [],
+    "fontsLoaded": true,
+    "scripts": 0,
+    "stylesheetRules": 110,
+    "expectedHorizontalOverflow": true
+  },
+  "ok": false,
+  "error": "Page.evaluate: SecurityError: Failed to read the 'cssRules' property from 'CSSStyleSheet': Cannot access rules\n    at eval (eval at evaluate (:370:30), <anonymous>:7:81)\n    at Array.reduce (<anonymous>)\n    at eval (eval at evaluate (:370:30), <anonymous>:7:46)\n    at UtilityScript.evaluate (<anonymous>:377:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+}

@@ -1,0 +1,133 @@
+{
+  "purpose": "피드백 CSS 예시를 브라우저 메모리에만 적용한 검증이며 제출물 원본·평가 점수를 변경하지 않습니다.",
+  "css": ".topheader-wrap,.bottomheader{width:1400px;margin-left:auto;margin-right:auto;padding-left:0;padding-right:0}.navlist li:hover{color:#c81939}main>section:first-child{padding:88px 0 90px}.newwrap{width:1200px;margin:0 auto;padding:0;gap:22px}.newwraptext{height:360px;display:flex;flex-direction:column}.roundboxwrap{margin-top:auto}.roundbox1{height:205px}.roundbox1 img{display:block;width:100%;height:100%;object-fit:cover}.roundbox2{flex:0 0 786px}.new2{width:1200px;margin:22px auto 0;padding:0;gap:22px}.roundbox1,.roundbox2,.roundbox3{border-radius:22px;overflow:hidden}",
+  "measurements": [
+    {
+      "viewport": 1920,
+      "boxes": [
+        {
+          "selector": ".topheader-wrap",
+          "x": 252.5,
+          "width": 1400,
+          "height": 59
+        },
+        {
+          "selector": ".bottomheader",
+          "x": 252.5,
+          "width": 1400,
+          "height": 89
+        },
+        {
+          "selector": ".newwrap",
+          "x": 352.5,
+          "width": 1200,
+          "height": 360
+        },
+        {
+          "selector": ".roundbox1",
+          "x": 352.5,
+          "width": 392,
+          "height": 205
+        },
+        {
+          "selector": ".roundbox2",
+          "x": 766.5,
+          "width": 786,
+          "height": 360
+        },
+        {
+          "selector": ".new2",
+          "x": 352.5,
+          "width": 1200,
+          "height": 439
+        }
+      ],
+      "images": [
+        {
+          "w": 392,
+          "h": 205
+        },
+        {
+          "w": 786,
+          "h": 360
+        },
+        {
+          "w": 392,
+          "h": 292
+        },
+        {
+          "w": 450,
+          "h": 439
+        },
+        {
+          "w": 314,
+          "h": 292
+        }
+      ]
+    },
+    {
+      "viewport": 1440,
+      "boxes": [
+        {
+          "selector": ".topheader-wrap",
+          "x": 12.5,
+          "width": 1400,
+          "height": 59
+        },
+        {
+          "selector": ".bottomheader",
+          "x": 12.5,
+          "width": 1400,
+          "height": 89
+        },
+        {
+          "selector": ".newwrap",
+          "x": 112.5,
+          "width": 1200,
+          "height": 360
+        },
+        {
+          "selector": ".roundbox1",
+          "x": 112.5,
+          "width": 392,
+          "height": 205
+        },
+        {
+          "selector": ".roundbox2",
+          "x": 526.5,
+          "width": 786,
+          "height": 360
+        },
+        {
+          "selector": ".new2",
+          "x": 112.5,
+          "width": 1200,
+          "height": 439
+        }
+      ],
+      "images": [
+        {
+          "w": 392,
+          "h": 205
+        },
+        {
+          "w": 786,
+          "h": 360
+        },
+        {
+          "w": 392,
+          "h": 292
+        },
+        {
+          "w": 450,
+          "h": 439
+        },
+        {
+          "w": 314,
+          "h": 292
+        }
+      ]
+    }
+  ],
+  "hoverColor": "rgb(200, 25, 57)"
+}

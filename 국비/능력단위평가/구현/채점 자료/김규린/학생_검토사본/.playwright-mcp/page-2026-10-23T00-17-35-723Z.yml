@@ -1,0 +1,276 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - link:
+      - /url: https://smartstore.naver.com/monamimall
+    - link:
+      - /url: https://www.youtube.com/channel/UC7lJDw-5bYXnAGNHh1uUG3A
+    - link:
+      - /url: https://www.instagram.com/monami_official/
+    - link:
+      - /url: https://www.facebook.com/monami1960
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - img "모나미몰" [ref=e5]
+      - generic [ref=e6]:
+        - text: 브랜드
+        - emphasis [ref=e7]: 스토어
+      - link "바로가기" [ref=e8] [cursor=pointer]:
+        - /url: https://brand.naver.com/monami
+      - link "대량 구매 문의" [ref=e10] [cursor=pointer]:
+        - /url: /customer/inquiry.php?bluk=10
+      - link "예약하기 버튼 닫기" [ref=e12] [cursor=pointer]:
+        - /url: "#"
+    - list:
+      - listitem:
+        - link "본문 바로가기(Skip Contents)":
+          - /url: "#contents"
+    - generic [ref=e14]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - generic [ref=e19]: KOR
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "ENG" [ref=e23] [cursor=pointer]:
+                  - /url: /en
+          - list [ref=e25]:
+            - listitem [ref=e26]:
+              - link [ref=e27] [cursor=pointer]:
+                - /url: https://www.facebook.com/monami1960
+                - img "모나미 페이스북 바로가기" [ref=e28]
+            - listitem [ref=e29]:
+              - link [ref=e30] [cursor=pointer]:
+                - /url: https://www.instagram.com/monami_official/
+                - img "모나미 인스타그램 바로가기" [ref=e31]
+            - listitem [ref=e32]:
+              - link [ref=e33] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UC7lJDw-5bYXnAGNHh1uUG3A
+                - img "모나미 유튜브 바로가기" [ref=e34]
+        - list [ref=e36]:
+          - listitem [ref=e37]:
+            - link "HOME" [ref=e38] [cursor=pointer]:
+              - /url: /index.php
+          - listitem [ref=e39]:
+            - link "SITE MAP" [ref=e40] [cursor=pointer]:
+              - /url: /sitemap.php
+          - listitem [ref=e41]:
+            - link "CONTACT US" [ref=e42] [cursor=pointer]:
+              - /url: /customer/inquiry.php
+      - generic [ref=e44]:
+        - heading [level=1] [ref=e45]:
+          - link [ref=e46] [cursor=pointer]:
+            - /url: /index.php
+        - list [ref=e48]:
+          - listitem [ref=e49]:
+            - link "모나미소개" [ref=e50] [cursor=pointer]:
+              - /url: /about/ceo.php
+          - listitem [ref=e51]:
+            - link "모나미제품" [ref=e52] [cursor=pointer]:
+              - /url: /product/product_list.php?ccode=005
+          - listitem [ref=e53]:
+            - link "NEWS & VIDEO" [ref=e54] [cursor=pointer]:
+              - /url: /board/board.php?bo_table=bodo
+          - listitem [ref=e55]:
+            - link "브랜드스토어" [ref=e56] [cursor=pointer]:
+              - /url: https://brand.naver.com/monami
+          - listitem [ref=e57]:
+            - link "모나미 미술대회" [ref=e58] [cursor=pointer]:
+              - /url: https://artcontest.monami.com/w/main.do
+          - listitem [ref=e59]:
+            - link "고객지원" [ref=e60] [cursor=pointer]:
+              - /url: /customer/faq.php
+          - listitem [ref=e61]:
+            - link "기업 구매 / 개발" [ref=e62] [cursor=pointer]:
+              - /url: /customer/inquiry.php
+        - generic [ref=e63]:
+          - generic [ref=e64] [cursor=pointer]
+          - generic [ref=e68]:
+            - textbox
+            - link [ref=e69] [cursor=pointer]:
+              - /url: /search.php
+    - generic [ref=e70]:
+      - list [ref=e71]:
+        - listitem [ref=e72]
+      - generic [ref=e74]:
+        - heading "어쩌면 삶은 인생이라는 종이 위에 써 내려가는 펜의 기록 같습니다." [level=3] [ref=e75]
+        - paragraph [ref=e76]: 그중에서도 지우고 싶지 않은 기록이 있습니다. 모나미는 언제나 당신의 행복한 기록과 함께 합니다.
+      - list
+    - generic [ref=e78]:
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - heading "NEW ARRIVALS" [level=2] [ref=e82]: NEWARRIVALS
+          - paragraph [ref=e83]: 가장 먼저 만나는 설레는 기다림
+        - generic [ref=e84]:
+          - link "PEN FX ZETA C3" [ref=e86] [cursor=pointer]:
+            - /url: http://www.monami.com/product/product_view.php?ccode=005002&idx=188
+            - generic [ref=e88]:
+              - generic [ref=e89]: PEN
+              - generic [ref=e90]: FX ZETA C3
+          - link "NOTE 지퀀스" [ref=e95] [cursor=pointer]:
+            - /url: http://www.monami.com/product/product_view.php?ccode=001005&idx=186
+            - generic [ref=e97]:
+              - generic [ref=e98]: NOTE
+              - generic [ref=e99]: 지퀀스
+        - generic [ref=e103]:
+          - link "PREMIUM PEN 프러스펜3000프라임" [ref=e105] [cursor=pointer]:
+            - /url: http://www.monami.com/product/product_view.php?ccode=005&idx=248
+            - generic [ref=e107]:
+              - generic [ref=e108]: PREMIUM PEN
+              - generic [ref=e109]: 프러스펜3000프라임
+          - link "FOUNTAIN PEN 153 아이디 만년필" [ref=e114] [cursor=pointer]:
+            - /url: http://www.monami.com/product/product_view.php?ccode=005&idx=204
+            - generic [ref=e116]:
+              - generic [ref=e117]: FOUNTAIN PEN
+              - generic [ref=e118]: 153 아이디 만년필
+          - link "WATER-BASED MARKER 프러스펜 3000" [ref=e123] [cursor=pointer]:
+            - /url: http://www.monami.com/product/product_view.php?ccode=003&idx=168
+            - generic [ref=e125]:
+              - generic [ref=e126]: WATER-BASED MARKER
+              - generic [ref=e127]: 프러스펜 3000
+      - generic [ref=e131]:
+        - generic [ref=e132]: BEST PRODUCT
+        - paragraph [ref=e133]: 언제 어디서나 생활 속에 함께하는 모나미
+        - list [ref=e135]:
+          - listitem [ref=e136]:
+            - link "프리미엄 펜" [ref=e137] [cursor=pointer]:
+              - /url: /index.php?ccode=005#our_product
+          - listitem [ref=e138]:
+            - link "펜·펜슬" [ref=e139] [cursor=pointer]:
+              - /url: /index.php?ccode=003#our_product
+          - listitem [ref=e140]:
+            - link "마카·컬러링" [ref=e141] [cursor=pointer]:
+              - /url: /index.php?ccode=004#our_product
+          - listitem [ref=e142]:
+            - link "노트·사무용품" [ref=e143] [cursor=pointer]:
+              - /url: /index.php?ccode=002#our_product
+        - list [ref=e145]:
+          - listitem [ref=e146]:
+            - link "프리미엄 펜 프러스펜 3000 프라임" [ref=e147] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=248&ccode=005005
+              - generic [ref=e149]:
+                - generic [ref=e150]: 프리미엄 펜
+                - generic [ref=e151]: 프러스펜 3000 프라임
+          - listitem [ref=e152]:
+            - link "프리미엄펜 153 리스펙트 리파인" [ref=e153] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=213&ccode=005005
+              - generic [ref=e155]:
+                - generic [ref=e156]: 프리미엄펜
+                - generic [ref=e157]: 153 리스펙트 리파인
+          - listitem [ref=e158]:
+            - link "만년필 153 아이디 만년필" [ref=e159] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=204&ccode=005006
+              - generic [ref=e161]:
+                - generic [ref=e162]: 만년필
+                - generic [ref=e163]: 153 아이디 만년필
+          - listitem [ref=e164]:
+            - link "만년필 153 네오 만년필 EF" [ref=e165] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=160&ccode=005006
+              - generic [ref=e167]:
+                - generic [ref=e168]: 만년필
+                - generic [ref=e169]: 153 네오 만년필 EF
+          - listitem [ref=e170]:
+            - link "프리미엄펜 153 블랙 & 화이트" [ref=e171] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=19&ccode=005005
+              - generic [ref=e173]:
+                - generic [ref=e174]: 프리미엄펜
+                - generic [ref=e175]: 153 블랙 & 화이트
+          - listitem [ref=e176]:
+            - link "프리미엄펜 153 골드" [ref=e177] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=24&ccode=005005
+              - generic [ref=e179]:
+                - generic [ref=e180]: 프리미엄펜
+                - generic [ref=e181]: 153 골드
+          - listitem [ref=e182]:
+            - link "프리미엄펜 153 아이디" [ref=e183] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=15&ccode=005005
+              - generic [ref=e185]:
+                - generic [ref=e186]: 프리미엄펜
+                - generic [ref=e187]: 153 아이디
+          - listitem [ref=e188]:
+            - link "프리미엄펜 60주년 프러스펜 3000 데스크펜 스페셜 에디션" [ref=e189] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=157&ccode=005005
+              - generic [ref=e191]:
+                - generic [ref=e192]: 프리미엄펜
+                - generic [ref=e193]: 60주년 프러스펜 3000 데스크펜 스페셜 에디션
+          - listitem [ref=e194]:
+            - link "고급샤프 153 아이디 샤프" [ref=e195] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=18&ccode=005002
+              - generic [ref=e197]:
+                - generic [ref=e198]: 고급샤프
+                - generic [ref=e199]: 153 아이디 샤프
+          - listitem [ref=e200]:
+            - link "프리미엄펜 153 네오" [ref=e201] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=17&ccode=005005
+              - generic [ref=e203]:
+                - generic [ref=e204]: 프리미엄펜
+                - generic [ref=e205]: 153 네오
+          - listitem [ref=e206]:
+            - link "프리미엄펜 153 리스펙트" [ref=e207] [cursor=pointer]:
+              - /url: /product/product_view.php?idx=16&ccode=005005
+              - generic [ref=e209]:
+                - generic [ref=e210]: 프리미엄펜
+                - generic [ref=e211]: 153 리스펙트
+        - generic [ref=e212]: DRAG & SCROLL
+      - generic [ref=e221]:
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - heading "MONAMI NEWS" [level=2] [ref=e224]
+            - link "MORE" [ref=e225] [cursor=pointer]:
+              - /url: /board/board.php?bo_table=bodo
+          - list [ref=e226]:
+            - listitem [ref=e227]:
+              - link [ref=e229] [cursor=pointer]:
+                - /url: /board/board.php?bo_table=bodo&idx=208
+              - link "모나미, 지워지는 중성펜 리쥼 3·리쥼 S 신제.. 모나미, 지워지는 중성펜 리쥼 3·리쥼 S 신제품 출시■ 60도 마찰열에 지워지는 특수잉크 적용해 손쉽게 지울 수 .. 2025-12-15" [ref=e232] [cursor=pointer]:
+                - /url: /board/board.php?bo_table=bodo&idx=208
+                - generic [ref=e233]: 모나미, 지워지는 중성펜 리쥼 3·리쥼 S 신제..
+                - paragraph [ref=e234]: 모나미, 지워지는 중성펜 리쥼 3·리쥼 S 신제품 출시■ 60도 마찰열에 지워지는 특수잉크 적용해 손쉽게 지울 수 ..
+                - generic [ref=e235]: 2025-12-15
+            - listitem [ref=e236]:
+              - link "- ‘쓰는 펜’과 ‘그리는 펜’ 직접 경험해보세요! 모나미, 갤러리아.." [ref=e237] [cursor=pointer]:
+                - /url: /board/board.php?bo_table=bodo&idx=207
+              - generic [ref=e238]: 2025-12-11
+            - listitem [ref=e239]:
+              - link "- 주방 필수품 키친마카 라인업 확대.. 모나미, ‘실리콘 전용 키친마.." [ref=e240] [cursor=pointer]:
+                - /url: /board/board.php?bo_table=bodo&idx=206
+              - generic [ref=e241]: 2025-11-17
+            - listitem [ref=e242]:
+              - link "- 10월 25일 독도의 날 기념 모나미 ‘153 독도’ 수익금 기부 및 특별 .." [ref=e243] [cursor=pointer]:
+                - /url: /board/board.php?bo_table=bodo&idx=205
+              - generic [ref=e244]: 2025-10-24
+        - generic [ref=e245]:
+          - heading "INQUIRY" [level=2] [ref=e247]
+          - paragraph [ref=e248]: 언제나 소중한 의견에 귀 기울이겠습니다.궁금한 사항은 문의하세요.
+          - link "INQUIRY NOW" [ref=e249] [cursor=pointer]:
+            - /url: /customer/inquiry.php
+        - generic [ref=e250]:
+          - heading "모나미 네이버 브랜드스토어" [level=2] [ref=e252]
+          - paragraph [ref=e253]: 모나미 공식 쇼핑몰입니다.공식몰만의 다양한 혜택을 만나보세요.
+          - link "BUY NOW" [ref=e254] [cursor=pointer]:
+            - /url: https://brand.naver.com/monami
+    - generic [ref=e256]:
+      - generic [ref=e257]:
+        - heading [level=1] [ref=e258]:
+          - img "푸터 모나미 로고" [ref=e259]
+        - list [ref=e260]:
+          - listitem [ref=e261]:
+            - link "회사소개" [ref=e262] [cursor=pointer]:
+              - /url: /about/ceo.php
+          - listitem [ref=e263]: 개인정보처리방침
+          - listitem [ref=e264]: 이메일무단수집거부
+      - generic [ref=e265]:
+        - generic [ref=e266]:
+          - generic [ref=e267]: INFO
+          - generic [ref=e268]:
+            - text: "ADDRESS : 경기도 용인시 수지구 손곡로 17"
+            - generic [ref=e269]: l
+            - text: "TEL : 031-216-0153"
+            - generic [ref=e270]: l
+            - text: "FAX : 031-270-5154"
+          - paragraph [ref=e271]: COPYRIGHT(C) MONAMI.CO.,LTD. ALL RIGHTS RESERVED.
+        - generic [ref=e272]:
+          - generic [ref=e273]: CUSTOMER CENTER
+          - generic [ref=e274]: 080-022-0153
+          - link "카카오톡 문의" [ref=e275] [cursor=pointer]:
+            - /url: http://pf.kakao.com/_xjViFC/chat
+        - generic [ref=e276]: FAMILY SITE

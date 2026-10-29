@@ -1,0 +1,17 @@
+[
+  {
+    "path": "학생_검토사본\\EXAM\\index.html",
+    "bytes": 804,
+    "text": "<!DOCTYPE html>\r\n<html lang=\"ko\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>모나미 와이어프레임</title>\r\n  <link rel=\"stylesheet\" href=\"style.css\">\r\n</head>\r\n<body>\r\n  <div class=\"utility-menu\">\r\n    <div class=\"con utility-con\">\r\n      <nav>\r\n        <ul>\r\n          <li>HOME</li>\r\n          <li>SITE MAP</li>\r\n          <li>CONTACT US</li>\r\n        </ul>\r\n      </nav>\r\n    </div>\r\n    <div class=\"main-header\">\r\n      <div class=\"m-header-con\">\r\n      <div class=\"logo\">\r\n        <img src=\"./img/logo-transparent.png\" alt=\"모나미 로고\" width=\"162\" height=\"89\">\r\n      </div>\r\n      <div class=\"menu\">메뉴</div>\r\n      <div class=\"icon\">아이콘</div>\r\n    </div>\r\n    </div>\r\n  </div>\r\n  \r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "path": "학생_검토사본\\EXAM\\style.css",
+    "bytes": 549,
+    "text": "@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');\r\n\r\nbody {font-family: 'Noto Sans KR', sans-serif;}\r\n\r\n ul, li {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n.con {\r\n  width: 1050px; height: 58px;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  display: flex;\r\n}\r\n.utility-con {\r\n  justify-content: flex-end;\r\n  align-items: center;\r\n}\r\n.con>nav>ul {\r\n  display: flex;\r\n  gap: 22px;\r\n  font-size: 11px;\r\n color: #9b9a9a;\r\n}\r\n.main-header {\r\n  border: 1px solid red;\r\n  height: 89px;\r\n}\r\n.m-header-con {\r\n  display: flex;\r\n}"
+  },
+  {
+    "path": "학생_검토사본\\README.md",
+    "bytes": 10,
+    "text": "# EXAM_KGR"
+  }
+]

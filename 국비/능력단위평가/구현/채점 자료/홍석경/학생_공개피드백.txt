@@ -1,0 +1,103 @@
+홍석경 학생은 상단의 언어·SNS·유틸리티를 1400px 부모 안에 배치했습니다. SNS 이미지 크기와 간격, 오른쪽 메뉴의 글자 크기를 세밀하게 작성한 점이 확인됩니다. 메인 비주얼의 대표 사진도 정상적으로 표시됩니다. 현재 89px 메뉴 공간에는 내용이 없고, 사진 위의 브랜드 제목과 설명도 작성되지 않았습니다. 실제 콘텐츠가 있는 상단과 메인 비주얼 두 영역을 평가 대상으로 보았습니다.
+
+1. 상단 > 빈 공간을 실제 메인헤더로 바꾸기
+
+[학생 코드 — index.html]
+```html
+<div class="menu-space"></div>
+```
+
+[메인헤더 구조 예시]
+```html
+<div class="menu-space">
+  <div class="menu-inner">
+    <img src="./image/logo.jpg" alt="MONAMI 모나미">
+    <nav class="main-nav">
+      <ul>
+        <li>모나미소개</li><li>모나미제품</li><li>NEWS & VIDEO</li>
+        <li>브랜드스토어</li><li>모나미 미술대회</li><li>고객지원</li>
+        <li>기업 구매 / 개발</li>
+      </ul>
+    </nav>
+    <div class="menu-actions"><!-- 검색과 전체 메뉴 표시 --></div>
+  </div>
+</div>
+```
+
+위 예시의 `logo.jpg`는 현재 첨부에 들어 있는 파일이 아니므로 제공 정답 자료의 로고 이미지를 추가한 뒤 연결해야 합니다. 빈 상자의 높이만 맞추면 실제 로고·메뉴가 있는 것과는 결과가 다릅니다. 이미 유틸리티에서 사용한 부모 정렬 방식을 이 줄에도 적용하세요.
+
+```css
+.menu-inner {
+  width: 1400px;
+  height: 89px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-inner > img { width: 162px; height: 89px; }
+.main-nav ul { display: flex; gap: 24px; }
+.main-nav li:hover { color: #c81939; }
+```
+
+2. 메인 비주얼 > 사진만 있는 구조에 브랜드 문구 추가
+
+[학생 코드]
+```html
+<div class="main-banner">
+  <img src="./image/banner.jpg" alt="main-banner">
+</div>
+```
+
+[수정 구조 예시]
+```html
+<div class="main-banner">
+  <div class="banner-inner">
+    <div class="banner-copy">
+      <div class="banner-title">
+        <p>어쩌면 삶은</p><p>인생이라는 종이 위에</p>
+        <p>써 내려가는</p><p>펜의 기록 같습니다.</p>
+      </div>
+      <div class="banner-desc">
+        <p>그중에서도 지우고 싶지 않은 기록이 있습니다.</p>
+        <p>모나미는 언제나 당신의 행복한 기록과 함께 합니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+사진은 정답의 대표 이미지와 일치합니다. 다만 현재 사진에는 글자가 들어 있지 않으므로 브랜드 메시지는 별도의 HTML 텍스트로 작성해야 합니다. 사진을 배경으로 두고 그 안의 텍스트 부모를 Flex로 정렬하면 수업에서 배운 배치 방식으로 구성할 수 있습니다.
+
+3. 메인 비주얼 > 데스크톱 기준 높이 유지
+
+[학생 코드]
+```css
+.main-banner img { width: 100%; display: block; }
+```
+
+[위 HTML 구조와 함께 적용할 수정 예시]
+```css
+.main-banner {
+  height: 652px;
+  background: #222 url('./image/banner.jpg') center / cover no-repeat;
+}
+.banner-inner {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 120px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.banner-copy { color: #fff; }
+.banner-copy p { margin: 0; }
+.banner-title { padding-bottom: 24px; }
+.banner-title p { font-size: 50px; height: 63px; }
+.banner-desc p { font-size: 15px; color: #ddd; padding-bottom: 5px; }
+```
+
+현재 이미지는 비율을 유지하며 잘 줄어들지만, 1440px 화면에서는 영역 높이도 489px로 작아집니다. 이번 데스크톱 완성 예시는 높이 652px을 유지하므로 위처럼 영역 높이를 정하고 배경을 `cover`로 맞추세요. 이 예시는 기존 `<img>`를 텍스트가 들어 있는 배경 구조로 교체하는 방법입니다. 두 방식을 동시에 넣어 같은 사진이 두 번 보이지 않도록 확인하세요.
+
+최종점수는 88점입니다. 유틸리티의 세밀한 간격은 유지하면서, 비어 있는 메뉴 줄과 사진 위의 브랜드 문구를 먼저 채우세요.

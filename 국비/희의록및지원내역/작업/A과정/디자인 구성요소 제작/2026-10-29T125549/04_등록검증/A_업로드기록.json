@@ -1,0 +1,16 @@
+{
+  "uploaded": {
+    "비교예시.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1793246726_b2749e2e.png"
+  },
+  "preflight": {
+    "Pcode": "300002",
+    "BoardCode": "85",
+    "title": "[능력단위평가_지원내역] 디자인 구성요소 제작 A그룹 지원자료",
+    "date": "2026-08-21",
+    "images": 1,
+    "anchors": 6,
+    "refs": 2,
+    "file": "학습자료.zip",
+    "attachment_sha256": "e86dcb69064c84e2be445fb7e3fb5c1ebe7eeac7b097936abb38879e8b14ab62"
+  }
+}

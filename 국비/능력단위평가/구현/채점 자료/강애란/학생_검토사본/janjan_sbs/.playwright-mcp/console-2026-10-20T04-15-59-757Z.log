@@ -1,0 +1,39 @@
+[    6924ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://www.notion.com/_next/static/chunks/39bwqb2-2887v.js:5
+[    6924ms] [INFO] 2026-10-20T04:16:06.681Z [error] eventTrailApiHelpers: trackFailure {error: Object, data: Object} @ https://www.notion.com/_next/static/chunks/39bwqb2-2887v.js:5
+[    7790ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://www.notion.com/_next/static/chunks/39bwqb2-2887v.js:5
+[    7791ms] [ERROR] Not signed in with the identity provider. @ https://www.notion.com/ko:0
+[    8157ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://www.notion.com/_next/static/chunks/39bwqb2-2887v.js:5
+[   10967ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/login?from=marketing&pathname=%2Fko&tid=8f660115837d431992dabd2246c280c5:38
+[   11379ms] [INFO] 2026-10-20T04:16:11.136Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-31aac002d32f7f8a.js:6
+[   11491ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.com/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-e26aca47694c9e16.js:37
+[   11691ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-c10e52679154a6bb.js:0
+[   12018ms] [INFO] 2026-10-20T04:16:11.775Z [info] sqliteSchemaHelpers: attemptFastForwardMigration {data: Object} @ https://app.notion.com/_assets/app-31aac002d32f7f8a.js:6
+[   12046ms] [INFO] 2026-10-20T04:16:11.803Z [info] sqliteSchemaHelpers: successfulFastForwardMigration {data: Object} @ https://app.notion.com/_assets/app-31aac002d32f7f8a.js:6
+[   12084ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://accounts.google.com/gsi/client:86
+[   12087ms] [ERROR] Not signed in with the identity provider. @ https://app.notion.com/login?from=marketing&pathname=%2Fko:0
+[   13524ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[   15895ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://app.notion.com/_assets/UISpacePermissionGroupToken-34590779dd69e4b4.js:37
+[   15895ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://app.notion.com/_assets/UISpacePermissionGroupToken-34590779dd69e4b4.js:37
+[   19810ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472

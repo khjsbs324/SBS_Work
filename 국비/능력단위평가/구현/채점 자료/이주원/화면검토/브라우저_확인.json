@@ -1,0 +1,723 @@
+{
+  "student": "이주원",
+  "url": "http://127.0.0.1:8766/%EC%9D%B4%EC%A3%BC%EC%9B%90/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/261023_Test/index.html",
+  "status": 200,
+  "browser": "155.0.8059.85",
+  "measurements": [
+    {
+      "innerWidth": 1920,
+      "clientWidth": 1905,
+      "scrollWidth": 1905,
+      "boxes": [
+        {
+          "selector": "header",
+          "x": 8,
+          "y": 8,
+          "width": 1889,
+          "height": 150,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1889,
+          "clientWidth": 1889
+        },
+        {
+          "selector": ".conwrap",
+          "x": 232.5,
+          "y": 8,
+          "width": 1440,
+          "height": 44,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "selector": ".m-nav-inner",
+          "x": 252.5,
+          "y": 68,
+          "width": 1400,
+          "height": 89,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1400,
+          "clientWidth": 1400
+        },
+        {
+          "selector": ".list-con",
+          "x": 464.5,
+          "y": 68,
+          "width": 145,
+          "height": 89,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "17px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(48, 48, 48)",
+          "scrollWidth": 145,
+          "clientWidth": 145
+        },
+        {
+          "selector": ".new-arrivals",
+          "x": 8,
+          "y": 235,
+          "width": 1889,
+          "height": 999,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "77px 0px 0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1889,
+          "clientWidth": 1889
+        },
+        {
+          "selector": ".top-area",
+          "x": 352.5,
+          "y": 235,
+          "width": 1200,
+          "height": 383,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 22px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        },
+        {
+          "selector": ".top-products-left",
+          "x": 352.5,
+          "y": 235,
+          "width": 392,
+          "height": 383,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 392,
+          "clientWidth": 392
+        },
+        {
+          "selector": ".top-products-right",
+          "x": 744.5,
+          "y": 253,
+          "width": 808,
+          "height": 365,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "18px 0px 0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 808,
+          "clientWidth": 808
+        },
+        {
+          "selector": ".top-product-l",
+          "x": 352.5,
+          "y": 408,
+          "width": 392,
+          "height": 210,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "36px 0px 0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 392,
+          "clientWidth": 392
+        },
+        {
+          "selector": ".top-products-r",
+          "x": 766.5,
+          "y": 253,
+          "width": 786,
+          "height": 365,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 0px 22px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 786,
+          "clientWidth": 786
+        },
+        {
+          "selector": ".bot-img",
+          "x": 352.5,
+          "y": 640,
+          "width": 1200,
+          "height": 444,
+          "display": "flex",
+          "gap": "22px",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        }
+      ],
+      "images": [
+        {
+          "src": "./image/icon/lang_kor.gif",
+          "alt": "태극기",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "./image/icon/sns_facebook.gif",
+          "alt": "페이스북 아이콘",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/sns_insta.gif",
+          "alt": "인스타그램 아이콘",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/sns_youtube.png",
+          "alt": "유튜브 아이콘",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/logo.jpg",
+          "alt": "모나미 로고",
+          "complete": true,
+          "naturalWidth": 162,
+          "naturalHeight": 89,
+          "width": 162,
+          "height": 89
+        },
+        {
+          "src": "./image/products/file1_1699945409grwui60w6u.jpg",
+          "alt": "볼펜",
+          "complete": true,
+          "naturalWidth": 392,
+          "naturalHeight": 205,
+          "width": 392,
+          "height": 205
+        },
+        {
+          "src": "./image/products/file1_169994521784nzg4whv7.jpg",
+          "alt": "다이어리",
+          "complete": true,
+          "naturalWidth": 786,
+          "naturalHeight": 360,
+          "width": 786,
+          "height": 360
+        },
+        {
+          "src": "./image/products/file1_1715318030bhfwnjum09.jpg",
+          "alt": "볼펜과필통",
+          "complete": true,
+          "naturalWidth": 392,
+          "naturalHeight": 292,
+          "width": 392,
+          "height": 292
+        },
+        {
+          "src": "./image/products/file1_1681087061mb8i5l6zdx.jpg",
+          "alt": "만년필",
+          "complete": true,
+          "naturalWidth": 450,
+          "naturalHeight": 439,
+          "width": 450,
+          "height": 439
+        },
+        {
+          "src": "./image/products/file1_1715319042z7nuju2l3p.jpg",
+          "alt": "볼펜묶음",
+          "complete": true,
+          "naturalWidth": 314,
+          "naturalHeight": 292,
+          "width": 314,
+          "height": 292
+        }
+      ],
+      "text": "KOR\nstat_minus_1\n  \nHOME\nSITE MAP\nCONTACT US\n모나미소개\n모나미제품\nNEWS & VIDEO\n브랜드스토어\n모나미 미술대회\n고객지원\n기업 구매 / 개발\nsearch\nmenu\nNEW\nARRIVALS\n\n가장 먼저 만나는 설레는 기다림",
+      "fontStatus": "loaded"
+    },
+    {
+      "innerWidth": 1440,
+      "clientWidth": 1425,
+      "scrollWidth": 1425,
+      "boxes": [
+        {
+          "selector": "header",
+          "x": 8,
+          "y": -146,
+          "width": 1409,
+          "height": 150,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1409,
+          "clientWidth": 1409
+        },
+        {
+          "selector": ".conwrap",
+          "x": 8,
+          "y": -146,
+          "width": 1409,
+          "height": 44,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1409,
+          "clientWidth": 1409
+        },
+        {
+          "selector": ".m-nav-inner",
+          "x": 12.5,
+          "y": -86,
+          "width": 1400,
+          "height": 89,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1400,
+          "clientWidth": 1400
+        },
+        {
+          "selector": ".list-con",
+          "x": 224.5,
+          "y": -86,
+          "width": 145,
+          "height": 89,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "17px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(48, 48, 48)",
+          "scrollWidth": 145,
+          "clientWidth": 145
+        },
+        {
+          "selector": ".new-arrivals",
+          "x": 8,
+          "y": 81,
+          "width": 1409,
+          "height": 999,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "77px 0px 0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1409,
+          "clientWidth": 1409
+        },
+        {
+          "selector": ".top-area",
+          "x": 112.5,
+          "y": 81,
+          "width": 1200,
+          "height": 383,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 22px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        },
+        {
+          "selector": ".top-products-left",
+          "x": 112.5,
+          "y": 81,
+          "width": 392,
+          "height": 383,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 392,
+          "clientWidth": 392
+        },
+        {
+          "selector": ".top-products-right",
+          "x": 504.5,
+          "y": 99,
+          "width": 808,
+          "height": 365,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "18px 0px 0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 808,
+          "clientWidth": 808
+        },
+        {
+          "selector": ".top-product-l",
+          "x": 112.5,
+          "y": 254,
+          "width": 392,
+          "height": 210,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "36px 0px 0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 392,
+          "clientWidth": 392
+        },
+        {
+          "selector": ".top-products-r",
+          "x": 526.5,
+          "y": 99,
+          "width": 786,
+          "height": 365,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 0px 22px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 786,
+          "clientWidth": 786
+        },
+        {
+          "selector": ".bot-img",
+          "x": 112.5,
+          "y": 486,
+          "width": 1200,
+          "height": 444,
+          "display": "flex",
+          "gap": "22px",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1200,
+          "clientWidth": 1200
+        }
+      ],
+      "images": [
+        {
+          "src": "./image/icon/lang_kor.gif",
+          "alt": "태극기",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "./image/icon/sns_facebook.gif",
+          "alt": "페이스북 아이콘",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/sns_insta.gif",
+          "alt": "인스타그램 아이콘",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/sns_youtube.png",
+          "alt": "유튜브 아이콘",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/logo.jpg",
+          "alt": "모나미 로고",
+          "complete": true,
+          "naturalWidth": 162,
+          "naturalHeight": 89,
+          "width": 162,
+          "height": 89
+        },
+        {
+          "src": "./image/products/file1_1699945409grwui60w6u.jpg",
+          "alt": "볼펜",
+          "complete": true,
+          "naturalWidth": 392,
+          "naturalHeight": 205,
+          "width": 392,
+          "height": 205
+        },
+        {
+          "src": "./image/products/file1_169994521784nzg4whv7.jpg",
+          "alt": "다이어리",
+          "complete": true,
+          "naturalWidth": 786,
+          "naturalHeight": 360,
+          "width": 786,
+          "height": 360
+        },
+        {
+          "src": "./image/products/file1_1715318030bhfwnjum09.jpg",
+          "alt": "볼펜과필통",
+          "complete": true,
+          "naturalWidth": 392,
+          "naturalHeight": 292,
+          "width": 392,
+          "height": 292
+        },
+        {
+          "src": "./image/products/file1_1681087061mb8i5l6zdx.jpg",
+          "alt": "만년필",
+          "complete": true,
+          "naturalWidth": 450,
+          "naturalHeight": 439,
+          "width": 450,
+          "height": 439
+        },
+        {
+          "src": "./image/products/file1_1715319042z7nuju2l3p.jpg",
+          "alt": "볼펜묶음",
+          "complete": true,
+          "naturalWidth": 314,
+          "naturalHeight": 292,
+          "width": 314,
+          "height": 292
+        }
+      ],
+      "text": "KOR\nstat_minus_1\n  \nHOME\nSITE MAP\nCONTACT US\n모나미소개\n모나미제품\nNEWS & VIDEO\n브랜드스토어\n모나미 미술대회\n고객지원\n기업 구매 / 개발\nsearch\nmenu\nNEW\nARRIVALS\n\n가장 먼저 만나는 설레는 기다림",
+      "fontStatus": "loaded"
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "hover": {
+    "selector": ".list-con",
+    "before": "rgb(48, 48, 48)",
+    "after": "rgb(196, 15, 57)",
+    "changed": true
+  },
+  "css": [
+    {
+      "href": "http://127.0.0.1:8766/%EC%9D%B4%EC%A3%BC%EC%9B%90/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/261023_Test/style.css",
+      "rules": [
+        {
+          "selector": "body",
+          "css": "font-family: sans-serif;"
+        },
+        {
+          "selector": "ul, li",
+          "css": "margin: 0px; padding: 0px; list-style: none;"
+        },
+        {
+          "selector": "h1, h2, h3, h4, h5, h6, p",
+          "css": "margin: 0px; padding: 0px; font-size: inherit; font-weight: inherit;"
+        },
+        {
+          "selector": ".head-top",
+          "css": "height: 59px; display: flex; justify-content: center;"
+        },
+        {
+          "selector": ".conwrap",
+          "css": "width: 1440px; height: 44px; display: flex; align-items: flex-end; justify-content: space-between;"
+        },
+        {
+          "selector": ".social-links",
+          "css": "margin: 0px; display: flex;"
+        },
+        {
+          "selector": ".lang-but",
+          "css": "border: 1px solid rgb(234, 234, 234); border-radius: 10px; width: 88px; height: 30px; display: flex; align-items: center; gap: 7px; margin-right: 12px;"
+        },
+        {
+          "selector": ".lang-but > img",
+          "css": "width: 13px; height: 11px; margin-left: 10px;"
+        },
+        {
+          "selector": ".lang-ko",
+          "css": "font-size: 11px; color: rgb(0, 0, 0);"
+        },
+        {
+          "selector": ".head-icon",
+          "css": "font-size: 15px;"
+        },
+        {
+          "selector": ".img-con > img",
+          "css": "gap: 7px; width: 30px; height: 30px;"
+        },
+        {
+          "selector": ".head-nav",
+          "css": "margin-bottom: 10px;"
+        },
+        {
+          "selector": ".head-nav > nav > ul",
+          "css": "gap: 22px; display: flex; font-size: 11px; color: rgb(155, 154, 154);"
+        },
+        {
+          "selector": ".top-line",
+          "css": "background-color: rgb(155, 154, 154); height: 1px;"
+        },
+        {
+          "selector": ".main-nav",
+          "css": "height: 89px; display: flex; justify-content: center;"
+        },
+        {
+          "selector": ".m-nav-inner",
+          "css": "width: 1400px; height: 89px; box-sizing: border-box; display: flex;"
+        },
+        {
+          "selector": ".m-nav-list",
+          "css": "display: flex; align-items: center;"
+        },
+        {
+          "selector": ".main-logo",
+          "css": "margin-right: 50px;"
+        },
+        {
+          "selector": ".list-con",
+          "css": "width: 145px; height: 89px; font-size: 17px; color: rgb(48, 48, 48); box-sizing: border-box; display: flex; justify-content: center; align-items: center;"
+        },
+        {
+          "selector": ".list-con:hover",
+          "css": "color: rgb(196, 15, 57); cursor: pointer;"
+        },
+        {
+          "selector": ".serch",
+          "css": "width: 162px; gap: 18px; display: flex; justify-content: flex-end; align-items: center;"
+        },
+        {
+          "selector": ".search-icon",
+          "css": "font-size: 30px;"
+        },
+        {
+          "selector": ".menu-icon",
+          "css": "font-size: 30px;"
+        },
+        {
+          "selector": ".bot-line",
+          "css": "background-color: rgb(155, 154, 154); height: 1px;"
+        },
+        {
+          "selector": ".new-arrivals",
+          "css": "height: 999px; margin-top: 77px; display: flex; flex-direction: column; align-items: center;"
+        },
+        {
+          "selector": ".top-area",
+          "css": "display: flex; margin-bottom: 22px;"
+        },
+        {
+          "selector": ".top-products-l",
+          "css": "display: flex; flex-direction: column;"
+        },
+        {
+          "selector": ".section-title > h2",
+          "css": "font-size: 32px; color: rgb(0, 0, 0); font-weight: 600;"
+        },
+        {
+          "selector": ".title-bg",
+          "css": "width: 24px; height: 6px; background-color: rgb(196, 15, 57); margin-top: 10px; margin-bottom: 10px;"
+        },
+        {
+          "selector": ".section-title > p",
+          "css": "font-size: 13px; color: rgb(110, 110, 110);"
+        },
+        {
+          "selector": ".top-product-l",
+          "css": "border-radius: 20px; margin-top: 36px; overflow: hidden;"
+        },
+        {
+          "selector": ".top-product-l > img",
+          "css": "width: 100%;"
+        },
+        {
+          "selector": ".top-products-right",
+          "css": "margin-top: 18px;"
+        },
+        {
+          "selector": ".top-products-r",
+          "css": "border-radius: 20px; overflow: hidden; margin-left: 22px;"
+        },
+        {
+          "selector": ".bot-img",
+          "css": "gap: 22px; display: flex; align-items: flex-start;"
+        },
+        {
+          "selector": ".bot-img-con",
+          "css": "border-radius: 20px; overflow: hidden;"
+        }
+      ]
+    }
+  ],
+  "verifiedAt": "2026-10-26T04:25:39.837Z"
+}

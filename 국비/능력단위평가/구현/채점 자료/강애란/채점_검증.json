@@ -1,0 +1,48 @@
+{
+  "student": "강애란",
+  "reviewedAt": "2026-10-26T13:02:08+09:00",
+  "scope": "상단과 NEW ARRIVALS 두 섹션",
+  "sourceArchivesIntact": true,
+  "submissionMemberHashesVerified": 530,
+  "githubBlobMatches": true,
+  "subitemSumsMatch": true,
+  "rawTotal": 84,
+  "registeredTotal": 94,
+  "scoreCalculation": {
+    "rawTotal": 84,
+    "registeredTotal": 94,
+    "rows": [
+      {
+        "id": "MON-01",
+        "max": 50,
+        "raw": 43,
+        "registered": 47
+      },
+      {
+        "id": "MON-03",
+        "max": 50,
+        "raw": 41,
+        "registered": 47
+      }
+    ]
+  },
+  "publicFeedbackContainsFinalScore": true,
+  "publicFeedbackHasNoInternalScoreOrCriterionId": true,
+  "sourceFilesModified": false,
+  "lmsSaved": true,
+  "genericHarnessScope": "기존 문항별_채점.json은 Exam IM-01~09와 동일해야 하는 형식입니다. 이번 선택 2섹션 기록은 모나미_2섹션_채점.json에 저장하고 공통 calculate_scores 및 submission_check와 별도 합계·근거 검증을 적용했습니다.",
+  "existingHarnessErrors": [
+    "수정 보완/CLAUDE.md의 기존 연결 누락",
+    "수정 보완/Exam.md의 기존 문항 제목 형식 오류"
+  ],
+  "selectedSectionRecordChecksPassed": true,
+  "allSubmissionHashesReverified": true,
+  "genericHarnessExecutedAfterGrading": true,
+  "genericHarnessNewErrors": [],
+  "genericHarnessExistingErrorCount": 2,
+  "lmsVerifiedAt": "2026-10-26T04:17:16.851Z",
+  "lmsTotal": 94,
+  "lmsScoresAllInteger": true,
+  "lmsFeedbackExactMatch": true,
+  "lmsProofFile": "사이트_등록확인.json"
+}

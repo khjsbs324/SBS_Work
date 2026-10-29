@@ -1,0 +1,327 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link [ref=e7] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e11]:
+            - link "추천 폰트" [ref=e12] [cursor=pointer]:
+              - /url: /
+            - link "무료 폰트" [ref=e13] [cursor=pointer]:
+              - /url: /index
+            - link "눈누마켓" [ref=e14] [cursor=pointer]:
+              - /url: /market
+            - link "무슨 폰트?" [ref=e15] [cursor=pointer]:
+              - /url: /posts
+        - generic [ref=e17]:
+          - generic [ref=e18]: 검색
+          - generic [ref=e19]:
+            - searchbox "검색" [ref=e21]
+            - button [ref=e22] [cursor=pointer]
+        - generic [ref=e26]:
+          - button [ref=e27] [cursor=pointer]
+          - button "User menu" [ref=e32] [cursor=pointer]
+          - link "로그인" [ref=e37] [cursor=pointer]:
+            - /url: /users/sign_in
+          - button "User menu" [ref=e45] [cursor=pointer]
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - heading "본고딕 (Noto Sans)" [level=2] [ref=e51]
+            - generic [ref=e52]:
+              - generic [ref=e53]:
+                - generic [ref=e54]: 제작
+                - generic [ref=e55]: GoogleXAdobe
+              - generic [ref=e56]:
+                - generic [ref=e57]: 조회수
+                - generic [ref=e58]: 1.33M
+              - generic [ref=e59]:
+                - generic [ref=e60]: 형태
+                - generic [ref=e61]: 고딕
+            - generic [ref=e62]:
+              - link "기본 고딕" [ref=e63] [cursor=pointer]:
+                - /url: /index?search=%EA%B8%B0%EB%B3%B8+%EA%B3%A0%EB%94%95
+              - link "문서용" [ref=e64] [cursor=pointer]:
+                - /url: /index?search=%EB%AC%B8%EC%84%9C%EC%9A%A9
+          - generic [ref=e66]:
+            - link "다운로드 페이지로 이동" [ref=e68] [cursor=pointer]:
+              - /url: https://fonts.google.com/specimen/Noto+Sans+KR
+            - generic [ref=e70]: 즐겨찾기
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - heading "미리 써보기" [level=3] [ref=e76]
+            - generic [ref=e77]:
+              - searchbox "문구 적고 폰트 미리보기" [ref=e79]
+              - generic [ref=e85]:
+                - generic [ref=e86]: 크기
+                - generic [ref=e87]:
+                  - button [ref=e88] [cursor=pointer]
+                  - generic [ref=e90]:
+                    - spinbutton [ref=e91]: "24"
+                    - generic: px
+                  - button [ref=e92] [cursor=pointer]
+            - generic [ref=e95]:
+              - textbox "니편내편이 어딨어 세상 다 혼자 사는거지" [ref=e96]
+              - generic [ref=e97]: normal
+            - insertion [ref=e99]:
+              - iframe [ref=e101]:
+                - generic [ref=f9e1]:
+                  - link "WPS Free Download DOWNLOAD" [ref=f9e6] [cursor=pointer]:
+                    - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=Cbvowqa_aavf9NJ6Iid4PptSCiAqBjMWHigGiz7DcyxXap73VlA4QASDG2r9sYJvL6YSwKaAB2Yabkz_IAQGoAwHIA8sEqgTPAU_QaPl42m7uQbkqQDjVlXyPmDk_EZIbE8U6Y7Nv46S6Wv2tm350zvcPo3fgQotJ0i-n0ANe25NWU_hDp81mla8TgN_UUhXFAf6Ct_hMSgv5u4JgrbE-LzRw2Rrzvg1SvYMkZiLAx7Qrux7PT99SloX3FAxbMynOM1cMNQxvcAcVEr7-KUdRoVsWrWiWS7Jrfy5aMxJ0Nc1S21cYVg6e1_NvMC4ALx4sF4d4EiSVYg1Q1Mck6CQJSlztnqKLB8MgXbmjYhUrS7XGtLWk8cZ45cAE0OK2kvIFiAWAkNahWoAH2b7r8hmoB6nrsQKoB6fMsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwHSCDMIgGEQARifAzIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAGEi9_cE6WPfJppf2zpcDYAGxCadzInp96U2SgAoBigq3AWh0dHBzOi8vYWQuYWRtaXRhZC5jb20vZy9udjVxYzc1YmQ5YmNiNThhMjE5YjBlMTBiNmI3Y2EvP3JlZGlyZWN0aW9uX3VybD1odHRwcyUzQSUyRiUyRnd3dy53cHMuY29tJTJGYWQlMkZvZmZpY2Utc3VpdGUlM0Z1dG1fc291cmNlJTNEYWZmaWxpYXRlJTI2dXRtX21lZGl1bSUzRGFkbWl0YWQmcHQ9MSZ1bHA9e2xwdXJsfZgLAcgLAeALAaoNAktSyA0B6g0TCNj6ppf2zpcDFR5EwgUdJqoAofANAogOCdgTDNAVAcoWAgoA-BYBgBcBshcQGAEqCjY0NjExMjk5NzFQBroXAjgBqhgXCQAAAAA4xixBEgo2NDYxMTI5OTcxGAGyGAkSArFfGAEiAQDQGAHCGQIIAQ&ae=1&gclid=EAIaIQobChMIt_aml_bOlwMVHkTCBR0mqgChEAEYASAAEgIGE_D_BwE&num=1&cid=CAQSmgIAQM4h3L4rg5WdCSyiKWoLZ54REVN2Sdyz3gQdk0xgRUWIZshVHQkRaT0Vy-9_5Knz25a73ipY151IxrO4L0T4gKrmH8kRddX23yqTchP7FOuSPCO5vh1u6NrjRARykopedGvV22bakVzD48onll7Sj2YxWBzUO74JHplQUwt4wp_egto-TbF0eAcOvhROlcYhs54Yaw9odspWzvjngmRN1ynzrTaTbXeKNyJ-qr-VACzL1efmnInxCUcEkUxNy9MWJXSB_DxkVEXd9gt1BaHtip5epuWkUie-YwYVLsABI6c58o-b0GrMX1VwZ28lZJTvQzxgzsWM6o4DNBBTEjmznsbILR6ntBcYE3pzOM2ZqhaDkYMxkJGIn8MYAQ&sig=AOD64_2gHtEn-uijmx_Zu53IBwUagKNI0w&rf=1&nb=2&adurl=https://www.wps.com/ad/office-suite/%3Futm_source%3Daffiliate%26utm_medium%3Dadmitad%26%26traffic_source_name%3Dpartner%26MediaId%3D2549519%26irclickid%3DEAIaIQobChMIt_aml_bOlwMVHkTCBR0mqgChEAEYASAAEgIGE_D_BwE%26gad_source%3D5%26gad_campaignid%3D24229808128%26gclid%3DEAIaIQobChMIt_aml_bOlwMVHkTCBR0mqgChEAEYASAAEgIGE_D_BwE
+                    - generic [ref=f9e7]:
+                      - generic [ref=f9e10]:
+                        - generic "WPS" [ref=f9e11]
+                        - generic "WPS" [ref=f9e12]: Free Download
+                      - generic [ref=f9e14]: DOWNLOAD
+                  - generic [ref=f9e17] [cursor=pointer]
+                  - button [ref=f9e22] [cursor=pointer]
+                  - iframe
+            - generic [ref=e102]:
+              - text: 라이선스 본문
+              - article [ref=e103]:
+                - paragraph [ref=e104]: 본 폰트 소프트웨어는 SIL 오픈 폰트 라이선스 버전 1.1에 따라 라이선스 취득을 하였습니다. 본 라이선스는 하단에 복사되었고 http://scripts.sil.org/OFL의 FAQ란 에서도 열람가능 합니다.
+                - paragraph [ref=e105]: SIL 오픈 폰트 라이선스 버전 1.1 (2007년 2월 26일)
+                - paragraph [ref=e106]: 본 폰트 소프트웨어를 사용하도록 허가 받은 개인/기업/단체 누구라도 다음 명시된 조건에 따라 폰트 소프트웨어의 수정 혹은 수정되지 않은 복사본을 무료로 사용, 연구, 복사, 통합, 삽입, 수정, 재배포할 수 있도록 허가합니다.
+                - paragraph [ref=e107]: 본 폰트 소프트웨어의 원본 혹은 수정본은 상기 저작권 안내와 본 라이선스에 대한 내용을 포함하는 경우에는 다른 소프트웨어와 함께 묶이거나 재배포 혹은 판매가 가능합니다. 이는 독립 텍스트 파일과 가독성이 있는 헤더 혹은 유저가 용이하게 열람 가능한 이상 텍스트파일 혹은 이진파일 내 기계가 읽을 수 있는 메타데이터 형태를 모두 의미 합니다.
+                - paragraph [ref=e108]: 본 폰트 소프트웨어의 어떠한 수정본도 동일한 저작권자가 명시적 허가서를 부여하지 않는 한 저작권이 있는 폰트명을 사용해서는 안 됩니다. 본 제한 사항은 유저들에게 제공된 기존 폰트명을 뜻합니다.
+                - paragraph [ref=e109]: 본 폰트 소프트웨어의 저작권자 혹은 저자의 이름은 그들의 명시적 서면 허가가 있거나 또는 그들의 공헌을 인정하기 위한 경우를 제외하고는 수정본에 대한 사용을 유도,추천 혹은 광고하기 위한 목적으로 사용할 수 없습니다.
+                - paragraph [ref=e110]: 본 폰트 소프트웨어는 전체나 부분, 혹은 수정 여부에 상관없이 본 라이선스 하에 배포가 되어야 하며 기타 다른 라이선스 하에서는 배포를 할 수 없습니다. 폰트에 대한 요구조건은 이 라이선스 하에서만 유효하며 이 라이선스 하에 있기 위한 폰트에 대한 요구사항은 본 폰트 소프트웨어를 사용해 제작한 어떠한 문서에도 적용되지 않습니다.
+            - generic [ref=e111]:
+              - text: 라이선스 요약표
+              - table [ref=e116]:
+                - rowgroup [ref=e117]:
+                  - row [ref=e118]:
+                    - columnheader "카테고리" [ref=e119]
+                    - columnheader "사용 범위" [ref=e120]
+                    - columnheader "허용 여부" [ref=e121]
+                - rowgroup [ref=e122]:
+                  - row [ref=e123]:
+                    - cell "인쇄" [ref=e124]
+                    - cell "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등" [ref=e125]
+                    - cell "사용 가능" [ref=e126]
+                  - row [ref=e127]:
+                    - cell "웹사이트" [ref=e128]
+                    - cell "웹페이지, 광고 배너, 메일, E-브로슈어 등" [ref=e129]
+                    - cell "사용 가능" [ref=e130]
+                  - row [ref=e131]:
+                    - cell "포장지" [ref=e132]
+                    - cell "판매용 상품의 패키지" [ref=e133]
+                    - cell "사용 가능" [ref=e134]
+                  - row [ref=e135]:
+                    - cell "영상" [ref=e136]
+                    - cell "유튜브, CF, 상업영화, 뮤직비디오, 영상 자막, 영상 오프닝/엔딩 크레딧 등" [ref=e137]
+                    - cell "사용 가능" [ref=e138]
+                  - row [ref=e139]:
+                    - cell "임베딩" [ref=e140]
+                    - cell "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작" [ref=e141]
+                    - cell "사용 가능" [ref=e142]
+                  - row [ref=e143]:
+                    - cell "BI/CI" [ref=e144]
+                    - cell "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈" [ref=e145]
+                    - cell "사용 가능" [ref=e146]
+                  - row [ref=e147]:
+                    - cell "OFL" [ref=e148]
+                    - cell "폰트 파일 수정·복제·배포 가능 단, 폰트 파일의 유료 판매는 금지" [ref=e149]
+                    - cell [ref=e150]
+              - paragraph [ref=e151]: ※ 위 사용범위는 참고용으로, 정확한 사용범위는 이용 전 폰트 저작권자에게 확인바랍니다.사용범위는 저작권자의 규정에 따라 달라질 수 있습니다. 조건부 허용의 경우, 사용 조건을 꼭 원본 라이선스 내용에서 확인 후 이용하세요.저작권자는 페이지 상단의 폰트 이름 밑에 있습니다.
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - generic [ref=e154]: 비슷한 폰트
+              - generic [ref=e157]:
+                - link "HCL 들리는글자 마켓" [ref=e158] [cursor=pointer]:
+                  - /url: https://noonnu.cc/market/fonts/8ndvgp
+                  - generic [ref=e159]:
+                    - img "HCL 들리는글자" [ref=e161]
+                    - generic [ref=e162]: 마켓
+                - link "HCL 보이는소리 마켓" [ref=e167] [cursor=pointer]:
+                  - /url: https://noonnu.cc/market/fonts/806768
+                  - generic [ref=e168]:
+                    - img "HCL 보이는소리" [ref=e170]
+                    - generic [ref=e171]: 마켓
+                - link [ref=e176] [cursor=pointer]:
+                  - /url: https://noonnu.cc/font_page/805
+                  - img "강원교육튼튼체" [ref=e179]
+                - link [ref=e184] [cursor=pointer]:
+                  - /url: https://noonnu.cc/font_page/1549
+                  - img "KOROAD" [ref=e187]
+                - link [ref=e192] [cursor=pointer]:
+                  - /url: https://noonnu.cc/font_page/820
+                  - img "레페리포인트 Special" [ref=e195]
+                - link [ref=e200] [cursor=pointer]:
+                  - /url: https://noonnu.cc/font_page/1794
+                  - img "Mona12Emoji" [ref=e203]
+                - link [ref=e208] [cursor=pointer]:
+                  - /url: https://noonnu.cc/font_page/1506
+                  - img "플라이트 산스 Title" [ref=e211]
+                - link [ref=e216] [cursor=pointer]:
+                  - /url: https://noonnu.cc/font_page/654
+                  - img "함초롬바탕체" [ref=e219]
+                - link [ref=e224] [cursor=pointer]:
+                  - /url: https://noonnu.cc/font_page/941
+                  - img "밀양아리랑고딕체" [ref=e227]
+            - generic [ref=e232]:
+              - generic [ref=e234]:
+                - generic [ref=e235]: 같은 제작사
+                - link "더보기 →" [ref=e236] [cursor=pointer]:
+                  - /url: /search/GoogleXAdobe
+              - link [ref=e238] [cursor=pointer]:
+                - /url: https://noonnu.cc/font_page/35
+                - img "본명조 (Source Han Serif)" [ref=e241]
+            - generic [ref=e246]:
+              - generic [ref=e248]:
+                - generic [ref=e249]: 웹폰트로 사용
+                - generic [ref=e250] [cursor=pointer]
+              - generic [ref=e255]: "@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');"
+            - generic [ref=e257]:
+              - generic [ref=e259]:
+                - generic [ref=e260]: 무슨 폰트?
+                - link "더보기 →" [ref=e261] [cursor=pointer]:
+                  - /url: /search/%EB%B3%B8%EA%B3%A0%EB%94%95%20(Noto%20Sans)#posts
+              - generic [ref=e262]:
+                - generic [ref=e263]:
+                  - link [ref=e264] [cursor=pointer]:
+                    - /url: /posts/63438
+                  - generic [ref=e266]: 답변 1개
+                  - link [ref=e267] [cursor=pointer]:
+                    - /url: /posts/63438
+                    - paragraph [ref=e269]: 여기에 사용된 숫자와 한글폰트가 무엇인가요 ? 나눔바른고딕이랑 숫자가 거의 90%이상 동일한데 ,가 점 콤마로 되어있어서 안 맞더라구요
+                  - generic [ref=e270]:
+                    - generic [ref=e271]:
+                      - generic [ref=e272]: 15시간 전
+                      - generic [ref=e273]: "|"
+                      - generic [ref=e274]: 조회 80
+                    - link "r*bin" [ref=e275] [cursor=pointer]:
+                      - /url: /app/users/pl1d16
+                - generic [ref=e277]:
+                  - link [ref=e278] [cursor=pointer]:
+                    - /url: /posts/63208
+                  - generic [ref=e280]: 답변 2개
+                  - link [ref=e281] [cursor=pointer]:
+                    - /url: /posts/63208
+                    - paragraph [ref=e283]: 이거 도대체 무슨... 폰트일라나요...
+                  - generic [ref=e284]:
+                    - generic [ref=e285]:
+                      - generic [ref=e286]: 2시간 전
+                      - generic [ref=e287]: "|"
+                      - generic [ref=e288]: 조회 30
+                    - link "어굳진" [ref=e289] [cursor=pointer]:
+                      - /url: /app/users/43zyen
+                - generic [ref=e291]:
+                  - link [ref=e292] [cursor=pointer]:
+                    - /url: /posts/62365
+                  - generic [ref=e294]: 답변 1개
+                  - link [ref=e295] [cursor=pointer]:
+                    - /url: /posts/62365
+                    - paragraph [ref=e297]: 한글폰트 숫자
+                  - generic [ref=e298]:
+                    - generic [ref=e299]:
+                      - generic [ref=e300]: 16일 전
+                      - generic [ref=e301]: "|"
+                      - generic [ref=e302]: 조회 165
+                    - link "a*yje" [ref=e303] [cursor=pointer]:
+                      - /url: /app/users/4qgokq
+      - insertion [ref=e307]:
+        - iframe [ref=e309]:
+          - generic [ref=f11e1]:
+            - generic [ref=f11e5]:
+              - link [ref=f11e6] [cursor=pointer]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=C3-GLqa_aaszvNPTIid4Pq8mE2QX95eyYigH-_fzztxajp7K1kA4QASDG2r9sYJvL6YSwKaABwsXp1gPIAQmpAlGK89LN6Ak-qAMByAPLBKoEyQFP0JORv-rIaIW4i4oTpI9ICEHFEAzMPqF7TqWCb7DynEYSrBYy6QpCOC1Io_xnfJYDWrgOx0wtZAQW4kHuhS-LaHDK1mhNx64zZDi74XpHLTRs6Y_AVymsrVVUy2GnrGLsfd2G7-lFIomjJeFawFcQjqGz4886lgToWUXCsFVUN4n81PB0-YNfOfTbT2o1npHLP81jqTv0NGNggyps-MoaCw25LWLW_n_0gO1C4n1uyepsjrlQ0avxkWgiy_SidF2zlexD3x72cATABJWXjNDkBYgF5_2z4lmgBi6AB87TmcEeqAep67ECqAenzLECqAfi2LECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAf-6LECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAef4bECqAem67ECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrEC2AcA0ggzCIBhEAEYnwMyCIqCgICAgIAIOg-AQIDAgICAgKiAAqiDgBhIvf3BOli5xqaX9s6XA2ABsQkTKsKniFy3eIAKAZgLAcgLAYAMAaIMRCoKCgiO37ECleKxAmIYChZjb20uYWRvYmUuQWRvYmUtUmVhZGVyahQKEmNvbS5hZG9iZS5scm1vYmlsZXgBiAEBkAEBqg0CS1LIDQHqDRMI4uuml_bOlwMVdGTCBR2rJCFb8A0CiA4JuBPkA9gTDYgUAdAVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjYyODU1MTQ5MzJQBroXAjgBqhgXCQAAAAAwQfJAEgo2Mjg1NTE0OTMyGAGyGAkSAuhYGC4iAQDQGAHoGAHCGQIIAQ&ae=1&gclid=EAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE&num=1&cid=CAQShgIAQM4h3LuvHncuhSuFdbR0mn57VyujA7iBuyuPDvKClEO85RVH_SJkKRw7FUWIvCyzfgh5OW5U_s6uT0pGZUEKDwwfUPo1YndKOpQsGMmAgmKMwURRill44AAxCtbTbkWDupMnCQPNFiHeEwXNJn07A9ckXiAmrs3-dTRVz5j-VN1K0uq57J8oJnat2vpchKe8FenUQG_-HiEepVP1SBCb-ZBbZ7_1mvrzOBWSx14W1rF3e-TaMFqDIW616s1lFz2TgA6gx1oJvM65AaeMqe-HxzSo2Y-g1fStsCd4EMJzve4IkasS--Ovz3DQIM9YoRvKT3bVPO48wau7HE2bUjxgyDmHwO4zGAE&sig=AOD64_37fAl9shYZMavDuzfkKBWwrTDPIg&rf=1&nb=9&adurl=https://www.adobe.com/kr/products/firefly/plans.html%3Fsdid%3DVKW3JZ68%26mv%3Ddisplay%26mv2%3Ddisplay%26gad_source%3D5%26gad_campaignid%3D24097128167%26gclid%3DEAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE
+              - generic [ref=f11e8]:
+                - link "Adobe 생성형 AI를 무제한으로" [ref=f11e10] [cursor=pointer]:
+                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=C3-GLqa_aaszvNPTIid4Pq8mE2QX95eyYigH-_fzztxajp7K1kA4QASDG2r9sYJvL6YSwKaABwsXp1gPIAQmpAlGK89LN6Ak-qAMByAPLBKoEyQFP0JORv-rIaIW4i4oTpI9ICEHFEAzMPqF7TqWCb7DynEYSrBYy6QpCOC1Io_xnfJYDWrgOx0wtZAQW4kHuhS-LaHDK1mhNx64zZDi74XpHLTRs6Y_AVymsrVVUy2GnrGLsfd2G7-lFIomjJeFawFcQjqGz4886lgToWUXCsFVUN4n81PB0-YNfOfTbT2o1npHLP81jqTv0NGNggyps-MoaCw25LWLW_n_0gO1C4n1uyepsjrlQ0avxkWgiy_SidF2zlexD3x72cATABJWXjNDkBYgF5_2z4lmgBi6AB87TmcEeqAep67ECqAenzLECqAfi2LECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAf-6LECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAef4bECqAem67ECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrEC2AcA0ggzCIBhEAEYnwMyCIqCgICAgIAIOg-AQIDAgICAgKiAAqiDgBhIvf3BOli5xqaX9s6XA2ABsQkTKsKniFy3eIAKAZgLAcgLAYAMAaIMRCoKCgiO37ECleKxAmIYChZjb20uYWRvYmUuQWRvYmUtUmVhZGVyahQKEmNvbS5hZG9iZS5scm1vYmlsZXgBiAEBkAEBqg0CS1LIDQHqDRMI4uuml_bOlwMVdGTCBR2rJCFb8A0CiA4JuBPkA9gTDYgUAdAVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjYyODU1MTQ5MzJQBroXAjgBqhgXCQAAAAAwQfJAEgo2Mjg1NTE0OTMyGAGyGAkSAuhYGC4iAQDQGAHoGAHCGQIIAQ&ae=1&gclid=EAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE&num=1&cid=CAQShgIAQM4h3LuvHncuhSuFdbR0mn57VyujA7iBuyuPDvKClEO85RVH_SJkKRw7FUWIvCyzfgh5OW5U_s6uT0pGZUEKDwwfUPo1YndKOpQsGMmAgmKMwURRill44AAxCtbTbkWDupMnCQPNFiHeEwXNJn07A9ckXiAmrs3-dTRVz5j-VN1K0uq57J8oJnat2vpchKe8FenUQG_-HiEepVP1SBCb-ZBbZ7_1mvrzOBWSx14W1rF3e-TaMFqDIW616s1lFz2TgA6gx1oJvM65AaeMqe-HxzSo2Y-g1fStsCd4EMJzve4IkasS--Ovz3DQIM9YoRvKT3bVPO48wau7HE2bUjxgyDmHwO4zGAE&sig=AOD64_37fAl9shYZMavDuzfkKBWwrTDPIg&rf=1&nb=0&adurl=https://www.adobe.com/kr/products/firefly/plans.html%3Fsdid%3DVKW3JZ68%26mv%3Ddisplay%26mv2%3Ddisplay%26gad_source%3D5%26gad_campaignid%3D24097128167%26gclid%3DEAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE
+                  - text: Adobe생성형 AI를무제한으로
+                - link [ref=f11e11] [cursor=pointer]:
+                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=C3-GLqa_aaszvNPTIid4Pq8mE2QX95eyYigH-_fzztxajp7K1kA4QASDG2r9sYJvL6YSwKaABwsXp1gPIAQmpAlGK89LN6Ak-qAMByAPLBKoEyQFP0JORv-rIaIW4i4oTpI9ICEHFEAzMPqF7TqWCb7DynEYSrBYy6QpCOC1Io_xnfJYDWrgOx0wtZAQW4kHuhS-LaHDK1mhNx64zZDi74XpHLTRs6Y_AVymsrVVUy2GnrGLsfd2G7-lFIomjJeFawFcQjqGz4886lgToWUXCsFVUN4n81PB0-YNfOfTbT2o1npHLP81jqTv0NGNggyps-MoaCw25LWLW_n_0gO1C4n1uyepsjrlQ0avxkWgiy_SidF2zlexD3x72cATABJWXjNDkBYgF5_2z4lmgBi6AB87TmcEeqAep67ECqAenzLECqAfi2LECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAf-6LECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAef4bECqAem67ECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrEC2AcA0ggzCIBhEAEYnwMyCIqCgICAgIAIOg-AQIDAgICAgKiAAqiDgBhIvf3BOli5xqaX9s6XA2ABsQkTKsKniFy3eIAKAZgLAcgLAYAMAaIMRCoKCgiO37ECleKxAmIYChZjb20uYWRvYmUuQWRvYmUtUmVhZGVyahQKEmNvbS5hZG9iZS5scm1vYmlsZXgBiAEBkAEBqg0CS1LIDQHqDRMI4uuml_bOlwMVdGTCBR2rJCFb8A0CiA4JuBPkA9gTDYgUAdAVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjYyODU1MTQ5MzJQBroXAjgBqhgXCQAAAAAwQfJAEgo2Mjg1NTE0OTMyGAGyGAkSAuhYGC4iAQDQGAHoGAHCGQIIAQ&ae=1&gclid=EAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE&num=1&cid=CAQShgIAQM4h3LuvHncuhSuFdbR0mn57VyujA7iBuyuPDvKClEO85RVH_SJkKRw7FUWIvCyzfgh5OW5U_s6uT0pGZUEKDwwfUPo1YndKOpQsGMmAgmKMwURRill44AAxCtbTbkWDupMnCQPNFiHeEwXNJn07A9ckXiAmrs3-dTRVz5j-VN1K0uq57J8oJnat2vpchKe8FenUQG_-HiEepVP1SBCb-ZBbZ7_1mvrzOBWSx14W1rF3e-TaMFqDIW616s1lFz2TgA6gx1oJvM65AaeMqe-HxzSo2Y-g1fStsCd4EMJzve4IkasS--Ovz3DQIM9YoRvKT3bVPO48wau7HE2bUjxgyDmHwO4zGAE&sig=AOD64_37fAl9shYZMavDuzfkKBWwrTDPIg&rf=1&nb=19&adurl=https://www.adobe.com/kr/products/firefly/plans.html%3Fsdid%3DVKW3JZ68%26mv%3Ddisplay%26mv2%3Ddisplay%26gad_source%3D5%26gad_campaignid%3D24097128167%26gclid%3DEAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE
+                - link "떠오른 아이디어를 Firefly에서 다양한 방식으로 표현하세요." [ref=f11e14] [cursor=pointer]:
+                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=C3-GLqa_aaszvNPTIid4Pq8mE2QX95eyYigH-_fzztxajp7K1kA4QASDG2r9sYJvL6YSwKaABwsXp1gPIAQmpAlGK89LN6Ak-qAMByAPLBKoEyQFP0JORv-rIaIW4i4oTpI9ICEHFEAzMPqF7TqWCb7DynEYSrBYy6QpCOC1Io_xnfJYDWrgOx0wtZAQW4kHuhS-LaHDK1mhNx64zZDi74XpHLTRs6Y_AVymsrVVUy2GnrGLsfd2G7-lFIomjJeFawFcQjqGz4886lgToWUXCsFVUN4n81PB0-YNfOfTbT2o1npHLP81jqTv0NGNggyps-MoaCw25LWLW_n_0gO1C4n1uyepsjrlQ0avxkWgiy_SidF2zlexD3x72cATABJWXjNDkBYgF5_2z4lmgBi6AB87TmcEeqAep67ECqAenzLECqAfi2LECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAf-6LECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAef4bECqAem67ECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrEC2AcA0ggzCIBhEAEYnwMyCIqCgICAgIAIOg-AQIDAgICAgKiAAqiDgBhIvf3BOli5xqaX9s6XA2ABsQkTKsKniFy3eIAKAZgLAcgLAYAMAaIMRCoKCgiO37ECleKxAmIYChZjb20uYWRvYmUuQWRvYmUtUmVhZGVyahQKEmNvbS5hZG9iZS5scm1vYmlsZXgBiAEBkAEBqg0CS1LIDQHqDRMI4uuml_bOlwMVdGTCBR2rJCFb8A0CiA4JuBPkA9gTDYgUAdAVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjYyODU1MTQ5MzJQBroXAjgBqhgXCQAAAAAwQfJAEgo2Mjg1NTE0OTMyGAGyGAkSAuhYGC4iAQDQGAHoGAHCGQIIAQ&ae=1&gclid=EAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE&num=1&cid=CAQShgIAQM4h3LuvHncuhSuFdbR0mn57VyujA7iBuyuPDvKClEO85RVH_SJkKRw7FUWIvCyzfgh5OW5U_s6uT0pGZUEKDwwfUPo1YndKOpQsGMmAgmKMwURRill44AAxCtbTbkWDupMnCQPNFiHeEwXNJn07A9ckXiAmrs3-dTRVz5j-VN1K0uq57J8oJnat2vpchKe8FenUQG_-HiEepVP1SBCb-ZBbZ7_1mvrzOBWSx14W1rF3e-TaMFqDIW616s1lFz2TgA6gx1oJvM65AaeMqe-HxzSo2Y-g1fStsCd4EMJzve4IkasS--Ovz3DQIM9YoRvKT3bVPO48wau7HE2bUjxgyDmHwO4zGAE&sig=AOD64_37fAl9shYZMavDuzfkKBWwrTDPIg&rf=1&nb=7&adurl=https://www.adobe.com/kr/products/firefly/plans.html%3Fsdid%3DVKW3JZ68%26mv%3Ddisplay%26mv2%3Ddisplay%26gad_source%3D5%26gad_campaignid%3D24097128167%26gclid%3DEAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE
+                  - text: 떠오른 아이디어를Firefly에서 다양한방식으로표현하세요.
+                - link [ref=f11e15] [cursor=pointer]:
+                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=C3-GLqa_aaszvNPTIid4Pq8mE2QX95eyYigH-_fzztxajp7K1kA4QASDG2r9sYJvL6YSwKaABwsXp1gPIAQmpAlGK89LN6Ak-qAMByAPLBKoEyQFP0JORv-rIaIW4i4oTpI9ICEHFEAzMPqF7TqWCb7DynEYSrBYy6QpCOC1Io_xnfJYDWrgOx0wtZAQW4kHuhS-LaHDK1mhNx64zZDi74XpHLTRs6Y_AVymsrVVUy2GnrGLsfd2G7-lFIomjJeFawFcQjqGz4886lgToWUXCsFVUN4n81PB0-YNfOfTbT2o1npHLP81jqTv0NGNggyps-MoaCw25LWLW_n_0gO1C4n1uyepsjrlQ0avxkWgiy_SidF2zlexD3x72cATABJWXjNDkBYgF5_2z4lmgBi6AB87TmcEeqAep67ECqAenzLECqAfi2LECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAf-6LECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAef4bECqAem67ECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrEC2AcA0ggzCIBhEAEYnwMyCIqCgICAgIAIOg-AQIDAgICAgKiAAqiDgBhIvf3BOli5xqaX9s6XA2ABsQkTKsKniFy3eIAKAZgLAcgLAYAMAaIMRCoKCgiO37ECleKxAmIYChZjb20uYWRvYmUuQWRvYmUtUmVhZGVyahQKEmNvbS5hZG9iZS5scm1vYmlsZXgBiAEBkAEBqg0CS1LIDQHqDRMI4uuml_bOlwMVdGTCBR2rJCFb8A0CiA4JuBPkA9gTDYgUAdAVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjYyODU1MTQ5MzJQBroXAjgBqhgXCQAAAAAwQfJAEgo2Mjg1NTE0OTMyGAGyGAkSAuhYGC4iAQDQGAHoGAHCGQIIAQ&ae=1&gclid=EAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE&num=1&cid=CAQShgIAQM4h3LuvHncuhSuFdbR0mn57VyujA7iBuyuPDvKClEO85RVH_SJkKRw7FUWIvCyzfgh5OW5U_s6uT0pGZUEKDwwfUPo1YndKOpQsGMmAgmKMwURRill44AAxCtbTbkWDupMnCQPNFiHeEwXNJn07A9ckXiAmrs3-dTRVz5j-VN1K0uq57J8oJnat2vpchKe8FenUQG_-HiEepVP1SBCb-ZBbZ7_1mvrzOBWSx14W1rF3e-TaMFqDIW616s1lFz2TgA6gx1oJvM65AaeMqe-HxzSo2Y-g1fStsCd4EMJzve4IkasS--Ovz3DQIM9YoRvKT3bVPO48wau7HE2bUjxgyDmHwO4zGAE&sig=AOD64_37fAl9shYZMavDuzfkKBWwrTDPIg&rf=1&nb=8&adurl=https://www.adobe.com/kr/products/firefly/plans.html%3Fsdid%3DVKW3JZ68%26mv%3Ddisplay%26mv2%3Ddisplay%26gad_source%3D5%26gad_campaignid%3D24097128167%26gclid%3DEAIaIQobChMIjOiml_bOlwMVdGTCBR2rJCFbEAEYASAAEgIDMfD_BwE
+            - generic [ref=f11e19] [cursor=pointer]
+            - button [ref=f11e24] [cursor=pointer]
+            - iframe
+    - insertion [ref=e313]:
+      - iframe [ref=e315]:
+        - generic [ref=f13e1]:
+          - generic [ref=f13e6]:
+            - generic [ref=f13e7]:
+              - generic "클립아트코리아" [ref=f13e9]:
+                - link "활용도 만점 폰트 바로 다운로드" [ref=f13e10] [cursor=pointer]:
+                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CixSFqa_aatuUNceRid4PoPWqyAXqsqqnigH788qv5RXlgOqroxEQASDG2r9sYJvL6YSwKaABzPPoxQPIAQGpAsilGGKn5wk-qAMByAPLBKoEzAFP0NYpCJEZQM33mAphrCwW49PVKO12mx4UrFmzgHr8rA1q5jqe3yipOssrNYB1ElPlTbPpRoYlXaZJk2aTzw3TKIm4-PZHa6cBVbTE0NOTJiI0tCsHz6_YE8gd5LkTVdEkcBTrgOIWClRdla2cKjWr6LaxIfiJT9zFT3uQykiYN4zt86hf0Z2qSAZaXX8Wo3Y5OAKdF_b4-RqK3yI2KscEXKJn1tt0RgH0MIp9RSBY8P7jReEAhdXU3FQMm9UMOQWACckgimyr_jyKapHABMLzhu7dBYgFn8aBmCmAB5yMlzqoB6nrsQKoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwHSCDMIgGEQARifAzIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAGEi9_cE6WLPYppf2zpcDYAGxCR3v9E93ZQG3gAoBmAsByAsBogwLKgYKBJnusQKQAQGqDQJLUsgNAeoNEwjxkKeX9s6XAxXHSMIFHaC6ClnwDQKIDgnYEwyIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgoyNjk4NDAyNTYyUAa6FwI4AaoYFwkAAAAA18RAQRIKMjY5ODQwMjU2MhgBshgJEgKdYxgBIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIm42nl_bOlwMVx0jCBR2gugpZEAEYASAAEgIW-PD_BwE&num=1&cid=CAQShwIAQM4h3GWt6-ED79NvU7TQp1uXNgSPi_uPiM-CSjoOzy0qgiFkrN9Xl8CsL3man_9AFnrZRkFmEDERh5sQqiUfDm_xHcfa7yMzzIoZ1QPUbn4_u_DdK580Qa8TLPlpOpAichyhnaiIeb-fcn14kUKJNKG8uxuosQWncGMJh9sIgPx5TvuEnjcBhDLPQNqFGTFrcdyzFgb57IUTC_IZQVj1n6YaQv5T3Ayh1LhZw2Az2m1SLWoaC24Il1v7YKGerMnnQ9BjZBjO4zZAv6WekbC7fLMnKkgt7yP09oDZIxWTP78ui4R5aW6NAPtPlUwiGKPHvxPlymI9g0q0mItrG8GamaR2CgsbGxgB&sig=AOD64_0L7kW-8Dbkddizn3cws1loq0Q2RQ&rf=1&nb=0&adurl=https://www.clipartkorea.co.kr/sub/font%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3DDA_google%26utm_content%3D2511_B_font_type1%26gad_source%3D5%26gad_campaignid%3D11056210719%26gclid%3DEAIaIQobChMIm42nl_bOlwMVx0jCBR2gugpZEAEYASAAEgIW-PD_BwE
+              - generic [ref=f13e11]:
+                - link "클립아트코리아 폰트부터 무료/영문/유명 폰트까지 무제한 다운로드!" [ref=f13e13] [cursor=pointer]:
+                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CixSFqa_aatuUNceRid4PoPWqyAXqsqqnigH788qv5RXlgOqroxEQASDG2r9sYJvL6YSwKaABzPPoxQPIAQGpAsilGGKn5wk-qAMByAPLBKoEzAFP0NYpCJEZQM33mAphrCwW49PVKO12mx4UrFmzgHr8rA1q5jqe3yipOssrNYB1ElPlTbPpRoYlXaZJk2aTzw3TKIm4-PZHa6cBVbTE0NOTJiI0tCsHz6_YE8gd5LkTVdEkcBTrgOIWClRdla2cKjWr6LaxIfiJT9zFT3uQykiYN4zt86hf0Z2qSAZaXX8Wo3Y5OAKdF_b4-RqK3yI2KscEXKJn1tt0RgH0MIp9RSBY8P7jReEAhdXU3FQMm9UMOQWACckgimyr_jyKapHABMLzhu7dBYgFn8aBmCmAB5yMlzqoB6nrsQKoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwHSCDMIgGEQARifAzIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAGEi9_cE6WLPYppf2zpcDYAGxCR3v9E93ZQG3gAoBmAsByAsBogwLKgYKBJnusQKQAQGqDQJLUsgNAeoNEwjxkKeX9s6XAxXHSMIFHaC6ClnwDQKIDgnYEwyIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgoyNjk4NDAyNTYyUAa6FwI4AaoYFwkAAAAA18RAQRIKMjY5ODQwMjU2MhgBshgJEgKdYxgBIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIm42nl_bOlwMVx0jCBR2gugpZEAEYASAAEgIW-PD_BwE&num=1&cid=CAQShwIAQM4h3GWt6-ED79NvU7TQp1uXNgSPi_uPiM-CSjoOzy0qgiFkrN9Xl8CsL3man_9AFnrZRkFmEDERh5sQqiUfDm_xHcfa7yMzzIoZ1QPUbn4_u_DdK580Qa8TLPlpOpAichyhnaiIeb-fcn14kUKJNKG8uxuosQWncGMJh9sIgPx5TvuEnjcBhDLPQNqFGTFrcdyzFgb57IUTC_IZQVj1n6YaQv5T3Ayh1LhZw2Az2m1SLWoaC24Il1v7YKGerMnnQ9BjZBjO4zZAv6WekbC7fLMnKkgt7yP09oDZIxWTP78ui4R5aW6NAPtPlUwiGKPHvxPlymI9g0q0mItrG8GamaR2CgsbGxgB&sig=AOD64_0L7kW-8Dbkddizn3cws1loq0Q2RQ&rf=1&nb=7&adurl=https://www.clipartkorea.co.kr/sub/font%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3DDA_google%26utm_content%3D2511_B_font_type1%26gad_source%3D5%26gad_campaignid%3D11056210719%26gclid%3DEAIaIQobChMIm42nl_bOlwMVx0jCBR2gugpZEAEYASAAEgIW-PD_BwE
+                - link [ref=f13e14] [cursor=pointer]:
+                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CixSFqa_aatuUNceRid4PoPWqyAXqsqqnigH788qv5RXlgOqroxEQASDG2r9sYJvL6YSwKaABzPPoxQPIAQGpAsilGGKn5wk-qAMByAPLBKoEzAFP0NYpCJEZQM33mAphrCwW49PVKO12mx4UrFmzgHr8rA1q5jqe3yipOssrNYB1ElPlTbPpRoYlXaZJk2aTzw3TKIm4-PZHa6cBVbTE0NOTJiI0tCsHz6_YE8gd5LkTVdEkcBTrgOIWClRdla2cKjWr6LaxIfiJT9zFT3uQykiYN4zt86hf0Z2qSAZaXX8Wo3Y5OAKdF_b4-RqK3yI2KscEXKJn1tt0RgH0MIp9RSBY8P7jReEAhdXU3FQMm9UMOQWACckgimyr_jyKapHABMLzhu7dBYgFn8aBmCmAB5yMlzqoB6nrsQKoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwHSCDMIgGEQARifAzIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAGEi9_cE6WLPYppf2zpcDYAGxCR3v9E93ZQG3gAoBmAsByAsBogwLKgYKBJnusQKQAQGqDQJLUsgNAeoNEwjxkKeX9s6XAxXHSMIFHaC6ClnwDQKIDgnYEwyIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgoyNjk4NDAyNTYyUAa6FwI4AaoYFwkAAAAA18RAQRIKMjY5ODQwMjU2MhgBshgJEgKdYxgBIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIm42nl_bOlwMVx0jCBR2gugpZEAEYASAAEgIW-PD_BwE&num=1&cid=CAQShwIAQM4h3GWt6-ED79NvU7TQp1uXNgSPi_uPiM-CSjoOzy0qgiFkrN9Xl8CsL3man_9AFnrZRkFmEDERh5sQqiUfDm_xHcfa7yMzzIoZ1QPUbn4_u_DdK580Qa8TLPlpOpAichyhnaiIeb-fcn14kUKJNKG8uxuosQWncGMJh9sIgPx5TvuEnjcBhDLPQNqFGTFrcdyzFgb57IUTC_IZQVj1n6YaQv5T3Ayh1LhZw2Az2m1SLWoaC24Il1v7YKGerMnnQ9BjZBjO4zZAv6WekbC7fLMnKkgt7yP09oDZIxWTP78ui4R5aW6NAPtPlUwiGKPHvxPlymI9g0q0mItrG8GamaR2CgsbGxgB&sig=AOD64_0L7kW-8Dbkddizn3cws1loq0Q2RQ&rf=1&nb=8&adurl=https://www.clipartkorea.co.kr/sub/font%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3DDA_google%26utm_content%3D2511_B_font_type1%26gad_source%3D5%26gad_campaignid%3D11056210719%26gclid%3DEAIaIQobChMIm42nl_bOlwMVx0jCBR2gugpZEAEYASAAEgIW-PD_BwE
+            - generic "클립아트코리아" [ref=f13e17]:
+              - link "클립아트코리아" [ref=f13e18] [cursor=pointer]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CixSFqa_aatuUNceRid4PoPWqyAXqsqqnigH788qv5RXlgOqroxEQASDG2r9sYJvL6YSwKaABzPPoxQPIAQGpAsilGGKn5wk-qAMByAPLBKoEzAFP0NYpCJEZQM33mAphrCwW49PVKO12mx4UrFmzgHr8rA1q5jqe3yipOssrNYB1ElPlTbPpRoYlXaZJk2aTzw3TKIm4-PZHa6cBVbTE0NOTJiI0tCsHz6_YE8gd5LkTVdEkcBTrgOIWClRdla2cKjWr6LaxIfiJT9zFT3uQykiYN4zt86hf0Z2qSAZaXX8Wo3Y5OAKdF_b4-RqK3yI2KscEXKJn1tt0RgH0MIp9RSBY8P7jReEAhdXU3FQMm9UMOQWACckgimyr_jyKapHABMLzhu7dBYgFn8aBmCmAB5yMlzqoB6nrsQKoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwHSCDMIgGEQARifAzIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAGEi9_cE6WLPYppf2zpcDYAGxCR3v9E93ZQG3gAoBmAsByAsBogwLKgYKBJnusQKQAQGqDQJLUsgNAeoNEwjxkKeX9s6XAxXHSMIFHaC6ClnwDQKIDgnYEwyIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgoyNjk4NDAyNTYyUAa6FwI4AaoYFwkAAAAA18RAQRIKMjY5ODQwMjU2MhgBshgJEgKdYxgBIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIm42nl_bOlwMVx0jCBR2gugpZEAEYASAAEgIW-PD_BwE&num=1&cid=CAQShwIAQM4h3GWt6-ED79NvU7TQp1uXNgSPi_uPiM-CSjoOzy0qgiFkrN9Xl8CsL3man_9AFnrZRkFmEDERh5sQqiUfDm_xHcfa7yMzzIoZ1QPUbn4_u_DdK580Qa8TLPlpOpAichyhnaiIeb-fcn14kUKJNKG8uxuosQWncGMJh9sIgPx5TvuEnjcBhDLPQNqFGTFrcdyzFgb57IUTC_IZQVj1n6YaQv5T3Ayh1LhZw2Az2m1SLWoaC24Il1v7YKGerMnnQ9BjZBjO4zZAv6WekbC7fLMnKkgt7yP09oDZIxWTP78ui4R5aW6NAPtPlUwiGKPHvxPlymI9g0q0mItrG8GamaR2CgsbGxgB&sig=AOD64_0L7kW-8Dbkddizn3cws1loq0Q2RQ&rf=1&nb=1&adurl=https://www.clipartkorea.co.kr/sub/font%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3DDA_google%26utm_content%3D2511_B_font_type1%26gad_source%3D5%26gad_campaignid%3D11056210719%26gclid%3DEAIaIQobChMIm42nl_bOlwMVx0jCBR2gugpZEAEYASAAEgIW-PD_BwE
+          - generic [ref=f13e19] [cursor=pointer]
+          - button [ref=f13e24] [cursor=pointer]
+          - iframe
+    - generic [ref=e316] [cursor=pointer]
+  - contentinfo [ref=e321]:
+    - generic [ref=e323]:
+      - generic [ref=e324]:
+        - link "눈누" [ref=e325] [cursor=pointer]:
+          - /url: /
+        - navigation [ref=e329]:
+          - generic [ref=e330]:
+            - paragraph [ref=e331]: 눈누
+            - generic [ref=e332]:
+              - link "무료 폰트 제보" [ref=e333] [cursor=pointer]:
+                - /url: /font_candidates/new
+              - link "자주 묻는 질문" [ref=e336] [cursor=pointer]:
+                - /url: /questions
+          - generic [ref=e337]:
+            - paragraph [ref=e338]: 눈누마켓
+            - generic [ref=e339]:
+              - link "입점 신청" [ref=e340] [cursor=pointer]:
+                - /url: /market/designer_requests/new#apply
+              - link "폰트 둘러보기" [ref=e343] [cursor=pointer]:
+                - /url: /market
+          - generic [ref=e344]:
+            - paragraph [ref=e345]: 광고·제휴
+            - generic [ref=e346]:
+              - link "기업 광고 문의" [ref=e347] [cursor=pointer]:
+                - /url: /about
+              - link "team@noonnu.cc" [ref=e350] [cursor=pointer]:
+                - /url: mailto:team@noonnu.cc
+      - generic [ref=e351]:
+        - generic [ref=e352]:
+          - generic [ref=e353]:
+            - paragraph [ref=e354]:
+              - link "눈누레터" [ref=e355] [cursor=pointer]:
+                - /url: https://maily.so/noonnu
+            - paragraph [ref=e358]: 새로 나온 무료 폰트와 눈누 소식을 메일로 보내드려요.
+          - generic [ref=e360]:
+            - generic [ref=e361]:
+              - generic [ref=e362]: 이메일
+              - textbox "이메일" [ref=e363]:
+                - /placeholder: 이메일 주소
+              - button "구독하기" [ref=e364] [cursor=pointer]
+            - paragraph [ref=e365]:
+              - text: 구독하면 뉴스레터 수신과 이메일 수집·이용(
+              - link "개인정보처리방침" [ref=e366] [cursor=pointer]:
+                - /url: /privacy_agreement
+              - text: )에 동의하게 됩니다. 언제든 해지할 수 있어요.
+        - generic [ref=e367]:
+          - link "눈누레터" [ref=e368] [cursor=pointer]:
+            - /url: https://maily.so/noonnu
+          - link "Instagram" [ref=e372] [cursor=pointer]:
+            - /url: https://www.instagram.com/noonnu_official/
+          - link "Facebook" [ref=e376] [cursor=pointer]:
+            - /url: https://www.facebook.com/projectnoonnu/
+      - generic [ref=e380]:
+        - paragraph [ref=e381]: 모든 폰트의 저작권은 모두 각 폰트의 저작권자에게 있습니다.폰트 사용에 대한 라이센스 문의는 저작권자에게 문의해주세요.
+        - generic [ref=e383]:
+          - link "이용약관" [ref=e384] [cursor=pointer]:
+            - /url: /user_agreement
+          - generic [ref=e385]: "|"
+          - link "개인정보처리방침" [ref=e386] [cursor=pointer]:
+            - /url: /privacy_agreement
+          - generic [ref=e387]: "|"
+          - button "눈누 사업자 정보" [ref=e388] [cursor=pointer]
+        - paragraph [ref=e391]: © 2026 Project Noonnu Corp. All rights reserved.

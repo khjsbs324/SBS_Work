@@ -1,0 +1,50 @@
+{
+  "student": "홍석경",
+  "Sid": "sbsartdj1170",
+  "Pcode": "500000",
+  "Lcode": "8",
+  "unit": "구현",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1170",
+  "saved": true,
+  "alreadyCorrect": false,
+  "total": 88,
+  "scores": [
+    11,
+    9,
+    9,
+    11,
+    9,
+    10,
+    10,
+    9,
+    10
+  ],
+  "siteMaxima": [
+    12,
+    10,
+    10,
+    12,
+    10,
+    12,
+    12,
+    10,
+    12
+  ],
+  "criterionIds": [
+    "55",
+    "56",
+    "57",
+    "58",
+    "59",
+    "60",
+    "61",
+    "62",
+    "63"
+  ],
+  "allIntegers": true,
+  "feedbackSHA256": "c1054327a6943e84218222bcaf9308007a6dd8559a70b3aa7420be83d103a46a",
+  "feedbackChars": 2735,
+  "feedbackExactMatch": true,
+  "verifiedAt": "2026-10-26T04:41:25.878Z",
+  "dialogs": []
+}

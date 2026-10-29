@@ -1,0 +1,34 @@
+{
+  "student": "박선환",
+  "passed": true,
+  "purpose": "원본 채점과 구분한 메모리 내 수정 예시 검증입니다. 학생 제출 파일은 수정하지 않습니다.",
+  "proposedCss": ".actions{gap:6px}#actions span{display:flex;justify-content:center;align-items:center;box-sizing:border-box}#actions .tab_premium{border-color:#c81939;color:#c81939}.products_con{height:auto}.product_list{width:100%;overflow-x:auto}.product_list_image>ul{display:flex;width:3016px;gap:9px}.product_list_image>ul>li{flex:0 0 266px;width:266px;height:505px;display:block;padding-top:0;border-radius:16px;overflow:hidden;background:#fff}.product_list_image>ul>li>img{display:block;width:100%;height:390px;object-fit:cover}",
+  "boxes": [
+    {
+      "viewport": 1920,
+      "width": 157,
+      "height": 36,
+      "display": "flex"
+    },
+    {
+      "viewport": 1440,
+      "width": 157,
+      "height": 36,
+      "display": "flex"
+    }
+  ],
+  "readability": {
+    "title": "박선환 모나미 구현 피드백",
+    "headings": [
+      "1. 상단 > 유틸리티 아래의 메인헤더",
+      "2. BEST PRODUCT > 카테고리 span에 크기가 적용되지 않는 이유",
+      "3. BEST PRODUCT > 가로 목록의 부모에 Flex 적용",
+      "4. BEST PRODUCT > 이미지 아래 상품 정보와 나머지 카드"
+    ],
+    "codeBlocks": 6,
+    "viewport": 1440,
+    "documentWidth": 1425,
+    "characters": 2646
+  },
+  "verifiedAt": "2026-10-26T04:37:36.755Z"
+}

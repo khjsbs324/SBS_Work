@@ -1,0 +1,4 @@
+[   52322ms] [INFO] Autofocus processing was blocked because a document already has a focused element. @ https://www.google.com/search?q=%EB%AA%A8%EB%82%98%EB%AF%B8&oq=%EB%AA%A8%EB%82%98%EB%AF%B8&gs_lcrp=EgZjaHJvbWUqDQgAEAAY4wIYsQMYgAQyDQgAEAAY4wIYsQMYgAQyEAgBEC4YxwEYsQMY0QMYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyDQgJEC4YrwEYxwEYgATSAQgxOTUyajBqMqgCALACAA&sourceid=chrome&ie=UTF-8&sei=TKfaauzGIJTY1e8PtND1yQg:0
+[   53402ms] [ERROR] Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID @ https://www.monami.co.kr/familyShop/images/close.png:0
+[ 4161631ms] [ERROR] Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID @ https://www.monami.co.kr/familyShop/images/close.png:0
+[ 4163569ms] [ERROR] Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID @ https://www.monami.co.kr/familyShop/images/close.png:0

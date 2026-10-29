@@ -29,6 +29,17 @@ async function supportBrowser(page, task) {
   fail(task.post && task.group && /^[ABC]$/.test(task.group), 'Post and group required');
   const expectedTitle = '[능력단위평가_지원내역] ' + task.unit + ' ' + task.group + '그룹 지원자료';
   fail(task.post.title === expectedTitle && task.post.group === task.group, 'Post identity mismatch');
+  if (task.action === 'prepare-post' || task.action === 'submit-post') {
+    const gate=task.meeting_gate;
+    fail(gate && gate.course_id===task.course_id && gate.unit===task.unit && gate.lcode===task.lcode
+      && gate.group===task.group && gate.post_date===task.post.date
+      && /^[a-f0-9]{64}$/.test(gate.meeting_sha256 || '')
+      && /^[a-f0-9]{64}$/.test(gate.support_plan_sha256 || '')
+      && gate.support_plan_sha256===task.post.support_plan_sha256
+      && /^[a-f0-9]{64}$/.test(gate.attachment_sha256 || ''),
+      'Run registration-check against the verified meeting and group materials first');
+    if(task.action==='prepare-post')fail(gate.attachment_sha256===task.attachment_sha256,'Meeting gate attachment differs');
+  }
   if (task.action === 'prepare-post') {
     fail(task.authorized_action === 'register' && task.request, 'Actual registration request required');
     fail(/^[a-f0-9]{64}$/.test(task.attachment_sha256 || ''), 'Reviewed attachment SHA-256 required');
@@ -65,7 +76,7 @@ async function supportBrowser(page, task) {
     },{html,post:task.post});
     fail(preflight.images===task.post.images.length && preflight.anchors===task.post.sections && preflight.refs===task.post.source_urls.length && preflight.file, 'Preflight structure mismatch');
     fail(preflight.attachment_sha256===task.attachment_sha256, 'Selected attachment differs from reviewed ZIP');
-    await page.locator('#bbsWriteForm').evaluate((f,v)=>{f.dataset.supportPrepared=JSON.stringify(v);},{title:task.post.title,date:task.post.date,html,group:task.group,attachment_sha256:task.attachment_sha256});
+    await page.locator('#bbsWriteForm').evaluate((f,v)=>{f.dataset.supportPrepared=JSON.stringify(v);},{title:task.post.title,date:task.post.date,html,group:task.group,attachment_sha256:task.attachment_sha256,meeting_gate:task.meeting_gate});
     return {uploaded, html, preflight, saved:false};
   }
   if (task.action === 'submit-post') {
@@ -73,6 +84,7 @@ async function supportBrowser(page, task) {
     await assertCourse(page);
     const prepared = await page.locator('#bbsWriteForm').evaluate(f=>JSON.parse(f.dataset.supportPrepared || 'null'));
     fail(prepared && prepared.html === task.reviewed_html && prepared.title===task.post.title && prepared.date===task.post.date && prepared.group===task.group, 'Prepared form changed; inspect before saving');
+    fail(Object.keys(task.meeting_gate).every(k=>prepared.meeting_gate?.[k]===task.meeting_gate[k]),'Meeting plan changed after preparation; prepare the form again');
     const result = await page.evaluate(async ({html,course,title,date,attachment_sha256})=>{
       const f=document.querySelector('#bbsWriteForm'),d=new FormData(f);
       if(d.get('Pcode')!==course.Pcode || d.get('BoardCode')!==course.BoardCode || d.get('strTitle')!==title || d.get('strRegDate')!==date) throw Error('Form target changed');

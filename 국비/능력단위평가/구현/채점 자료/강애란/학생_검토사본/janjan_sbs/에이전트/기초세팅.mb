@@ -1,0 +1,24 @@
+[Node]
+Start-Process "https://nodejs.org/en/download"
+
+Test-Path "C:\Program Files\nodejs\node.exe"
+
+$env:Path += ";C:\Program Files\nodejs"
+
+node --version
+
+
+
+[Git]
+Start-Process "https://git-scm.com/download/win"
+
+git --version
+
+
+
+[npm]
+npm --version
+
+오류 발생시: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Y

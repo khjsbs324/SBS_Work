@@ -1,0 +1,19 @@
+{
+  "id": 13,
+  "guid": "748e1bef-a39a-441b-a573-ddeab67f682e",
+  "current_path": "C:\\Users\\SBS\\AppData\\Local\\Temp\\playwright-artifacts-ZhHVHc\\748e1bef-a39a-441b-a573-ddeab67f682e",
+  "target_path": "C:\\Users\\SBS\\AppData\\Local\\Temp\\playwright-artifacts-ZhHVHc\\748e1bef-a39a-441b-a573-ddeab67f682e",
+  "tab_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/evalC/answer.php?Pcode=300002&Lcode=12&AppCode=B&FollowNo=1&Sid=sbsartdj1123",
+  "total_bytes": 3264797,
+  "received_bytes": 3264797,
+  "student": "이은수",
+  "unit": "서비스ㆍ경험디자인 시나리오 개발",
+  "Sid": "sbsartdj1123",
+  "fileNameInDownloadURL": "1790673836_ecb78791.pdf",
+  "localPath": "원본\\1790673836_ecb78791.pdf",
+  "bytes": 3264797,
+  "sha256": "23a8f788de98038cfaa7afdb0865d1cb9301f251d487e346432f535f01faa2be",
+  "downloadedFrom": "https://sbsartdj.maniaro.net/uflist/download.php?type=project_appraisal&pcode=300002&lcode=12&file=1790673836_ecb78791.pdf",
+  "receivedAt": "2026-10-23T04:11:31.423909+00:00",
+  "note": "Downloaded by invoking the file link on the verified student answer page in the logged-in browser. Original filename in Content-Disposition was not available; URL filename preserved."
+}

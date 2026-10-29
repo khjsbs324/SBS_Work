@@ -1,0 +1,75 @@
+{
+  "course_id": "A",
+  "unit": "수정 보완",
+  "lcode": "8",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-29T01:40:49.294Z",
+  "status": "complete",
+  "actual_work_date": "2026-10-29",
+  "post_date": "2026-08-19",
+  "meeting_date": "2026-10-29",
+  "retrospective": true,
+  "meeting_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=8",
+  "meeting_exact": true,
+  "scores_unchanged": true,
+  "score_count": 10,
+  "duplicate_posts": false,
+  "anchors": [
+    {
+      "group": "A",
+      "post_id": "1067",
+      "anchors_clicked": 7
+    },
+    {
+      "group": "B",
+      "post_id": "1068",
+      "anchors_clicked": 8
+    },
+    {
+      "group": "C",
+      "post_id": "1069",
+      "anchors_clicked": 7
+    }
+  ],
+  "scanned_list_urls": 4,
+  "posts": [
+    {
+      "group": "A",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1067",
+      "post_id": "1067",
+      "pdf_pages": 7,
+      "zip_sha256": "aeea02e50476fa0d86a6588825cd0730848135a56b5c6252706c6d285322a1b7"
+    },
+    {
+      "group": "B",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1068",
+      "post_id": "1068",
+      "pdf_pages": 8,
+      "zip_sha256": "3bfaf5a4e132a61ef445b1d20a29f862a32792e0d7f8e1deba26e3fe7bd3a877"
+    },
+    {
+      "group": "C",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1069",
+      "post_id": "1069",
+      "pdf_pages": 7,
+      "zip_sha256": "4334a043aebca24954e7fc284e20438918f430fcab01f82d8690cd4cdf48919a"
+    }
+  ],
+  "scope_note": "수정 보완 한 단위만 수행. C자료는 선택 기초학습용. 학생 성적·시험·제출물 수정 없음.",
+  "checks": {
+    "group_material_validation": "3 groups passed",
+    "common_unit_tests": 14,
+    "support_unit_tests": 24,
+    "harness_check": {
+      "ok": false,
+      "pre_existing_error": "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완",
+      "current_change_errors": 0
+    }
+  },
+  "limitations": [
+    "DOCX는 XML·압축 무결성 검증을 수행했고 Word 앱 렌더 검증은 수행하지 않음.",
+    "현재 LMS에 저장된 평가·피드백을 분석했으며 학생 저장소를 다시 채점하지 않음."
+  ]
+}

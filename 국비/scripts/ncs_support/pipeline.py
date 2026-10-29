@@ -13,17 +13,19 @@ def next_step(run):
     guidance = {
         'target_confirmed': '현재 LMS 과정·단위·종료일과 기존 게시글을 확인하고 증빙을 record한다.',
         'sources_collected': '실제 평가·피드백·회의록을 읽고 원문 확인 범위와 한계를 기록한다.',
-        'meeting_resolved': '기존 회의록을 확인한다. 없으면 기존 양식으로 작성하고 날짜·두 본문을 재확인한다.',
+        'meeting_resolved': '회의록.json의 전체 양식·ABC 실제 명단·지원계획을 검수한다. 등록 작업은 LMS 날짜·두 본문을 대조하여 record한다. 기존 회의록도 동일하게 검수한다.',
     }
     for stage in GLOBAL_STAGES:
         if stage not in state['global'] or stage in result.get('stale_global', []):
             return {**base, 'stage': stage, 'instruction': guidance[stage]}
+    if state['global']['meeting_resolved'].get('contract_version') != 1:
+        return {**base, 'stage': 'meeting_resolved', 'instruction': guidance['meeting_resolved']}
     for group in GROUPS:
         stages = state['groups'][group]
         if group in result['stale_groups'] or 'materials_verified' not in stages:
             if 'registered' in stages and not stages.get('revision', {}).get('open'):
                 return {**base, 'group': group, 'stage': 'inspect_changed_materials',
-                        'instruction': '등록 후 파일이 변경됨. 보존된 검수본과 현재 게시글을 확인한다. 상태를 직접 덮어쓰지 않는다.'}
+                        'instruction': '자료 또는 그룹 지원계획이 변경됨. 최신 회의록과 기존 자료를 대조하고 revise로 해당 그룹 재검수를 연다. 상태를 직접 덮어쓰지 않는다.'}
             return {**base, 'group': group, 'stage': 'materials_verified',
                     'instruction': 'content·이미지 작성 → build → PDF 출력·판독 → package → validate → 검수 증빙 record.'}
         if job['action'] == 'register':
@@ -64,6 +66,12 @@ def start_unit(unit, course='A', action='prepare', request='', meeting='ensure',
         job = load_run(row['run'])[1]
         require(job['action'] == action and job['meeting_mode'] == meeting,
                 'Existing run mode differs; inspect before starting a replacement')
+        state = load_run(row['run'])[2]
+        if ('meeting_resolved' in state['global']
+                and state['global']['meeting_resolved'].get('contract_version') != 1):
+            return {'run': row['run'], 'resumed': True,
+                    'next': {'stage': 'meeting_resolved',
+                             'instruction': '기존 완료 기록을 보존한다. 이번 재개는 전체 회의록·ABC 편성·지원계획을 새 기준으로 검수한 뒤 진행한다.'}}
         return {'run': row['run'], 'resumed': True, 'next': next_step(row['run'])}
     observation = item['observation']
     return initialize(course, unit, observation['unit_end_date'], observation['lcode'],

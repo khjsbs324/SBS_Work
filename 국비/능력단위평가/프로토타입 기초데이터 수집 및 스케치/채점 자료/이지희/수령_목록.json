@@ -1,0 +1,57 @@
+{
+  "student": "이지희",
+  "received": "2026-10-23",
+  "files": [
+    {
+      "path": "열람\\00.리포지터리 주소.txt",
+      "size": 139,
+      "sha256": "f9e8bb06a5e6f60829cd82bf74a41273c8c8fc59485c4867648df44bcc354907"
+    },
+    {
+      "path": "열람\\01.레퍼런스 링크.txt",
+      "size": 20833,
+      "sha256": "88edcf75e7d5410019d5ee8f6983b7ab1c80651b3e0f33dbf2f18ed54c15e813"
+    },
+    {
+      "path": "열람\\02.보고서.md",
+      "size": 86808,
+      "sha256": "91e1ad66e1ee4c8b227ad647178fa7336cd9df7b0b25bd442c58b2e0fe551ed0"
+    },
+    {
+      "path": "열람\\03.브랜드AI초안.html.html",
+      "size": 390363,
+      "sha256": "2fc0a30cb885e2008fe1f6734a989167d9a51a21644a7d2ed386a75dc26dca67"
+    },
+    {
+      "path": "열람\\03.서브AI초안.html.html",
+      "size": 391041,
+      "sha256": "55d1cfe51a63362849b982b6173ba42e2648dac29c5db240859cbf500f7f60ad"
+    },
+    {
+      "path": "열람\\04.브랜드AI수정안.html.html",
+      "size": 350722,
+      "sha256": "ead1a69eb1990b3a501fface6cdc61508e2686f4636a77005049ab42a27e1693"
+    },
+    {
+      "path": "열람\\04.서브AI수정안.html.html",
+      "size": 310092,
+      "sha256": "d6383cc37cec53e5083550d9df1b8206aa6426e0b92f583b05969a5c0be93423"
+    },
+    {
+      "path": "열람\\05.메인페이지.pdf",
+      "size": 1157928,
+      "sha256": "cef912b2caf629a656168c7ef99e0fc95783cf1cf4d585af2ad0a5c16f094885",
+      "pages": 2
+    },
+    {
+      "path": "열람\\스토리 보드.jpg",
+      "size": 207934,
+      "sha256": "a54303ebb3932bc26c3f85ae330869c766e8a3ab933ea6d7821931ac796323f6"
+    },
+    {
+      "path": "원본\\1792584781_92d957a3.zip",
+      "size": 1301114,
+      "sha256": "c84ae4bfa798627ee1a5a0fd28a917cd39f837ee6c67204f748e584e6b2285df"
+    }
+  ]
+}

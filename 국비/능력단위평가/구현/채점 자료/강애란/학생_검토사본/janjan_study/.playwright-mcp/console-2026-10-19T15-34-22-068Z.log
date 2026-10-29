@@ -1,0 +1,89 @@
+[  130137ms] [ERROR] Failed to load resource: the server responded with a status of 429 () @ https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D%25EB%25A7%2588%25EC%25BC%2593%25EC%25BB%25AC%25EB%25A6%25AC%26oq%3D%25EB%25A7%2588%25EC%25BC%2593%25EC%25BB%25AC%25EB%25A6%25AC%26gs_lcrp%3DEgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEwgBEC4YgwEYxwEYsQMY0QMYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzNDQwajBqMqgCALACAQ%26sourceid%3Dchrome%26ie%3DUTF-8%26sei%3DAznWavzOFr-wrfcP98akgA0&q=EgR9inhyGIPy2NYGIjCbeLVGmHqpIB8zwF9AxkGr4bxN7VO-1e1MUs8BlpQoZrO075ueXX1c42bIrPzlgXUyAnJSWgFDYOqcuu7E7ajb4QE:0
+[  130647ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LfwuyUTAAAAAOAmoS0fdqijC2PbbdH4kjq62Y1b&co=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbTo0NDM.&hl=ko&v=4EDjxXf4knsx6UBM1L2V6cv8&size=normal&s=-jVuC8d0tivsiit--eu8Idvbvy2X-XOaabeo-GQ6CWbuNE8DjcZPujI8V-d7sj1IerlQnwd0EwHicCCIRMvh7wxcuQIopQMc5Tlm0zrH0-0SqbUk9tHWo3qWxE4rfQIEoMqM8BT0e4a4w41UlIaYrO8sGNcURL7VTaWA2juiqkS7SiYbopPkuFg-mzA_IVmyo4ILHNBJBhn1fN3WnzFQEk2PJH01xDyKyvJOy3OrQbEr25sSNBYl0eQlzNIEt8kFdLmzQImDLUAaWjV9CX7niLOSCTDTZtY&anchor-ms=20000&execute-ms=30000&cb=78a2k7btnwm5:0
+[  130918ms] ReferenceError: solveSimpleChallenge is not defined
+    at onload (https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D%25EB%25A7%2588%25EC%25BC%2593%25EC%25BB%25AC%25EB%25A6%25AC%26oq%3D%25EB%25A7%2588%25EC%25BC%2593%25EC%25BB%25AC%25EB%25A6%25AC%26gs_lcrp%3DEgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEwgBEC4YgwEYxwEYsQMY0QMYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzNDQwajBqMqgCALACAQ%26sourceid%3Dchrome%26ie%3DUTF-8%26sei%3DAznWavzOFr-wrfcP98akgA0&q=EgR9inhyGIPy2NYGIjCbeLVGmHqpIB8zwF9AxkGr4bxN7VO-1e1MUs8BlpQoZrO075ueXX1c42bIrPzlgXUyAnJSWgFDYOqcuu7E7ajb4QE:4:316)
+[  131177ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://www.google.com/recaptcha/enterprise/bframe?hl=ko&v=4EDjxXf4knsx6UBM1L2V6cv8&k=6LfwuyUTAAAAAOAmoS0fdqijC2PbbdH4kjq62Y1b&bft=0dAFcWeA5QIdJwfTCDODDSCiB3n_OCfGSnHkDTMfiRCNh8ZF3xZYY7fKXJKHRqwZLte-DaEZTTWzPmrVWxUbcYOrZBnoJIeBafLg:0
+[  134421ms] [WARNING] Blocked aria-hidden on an element because its descendant retained focus. The focus must not be hidden from assistive technology users. Avoid using aria-hidden on a focused element or its ancestor. Consider using the inert attribute instead, which will also prevent focus. For more details, see the aria-hidden section of the WAI-ARIA specification at https://w3c.github.io/aria/#aria-hidden.
+Element with focus: <td.rc-imageselect-tile#9>
+Ancestor with aria-hidden: <div.rc-imageselect-target#rc-imageselect-target> @ https://www.google.com/recaptcha/enterprise/bframe?hl=ko&v=4EDjxXf4knsx6UBM1L2V6cv8&k=6LfwuyUTAAAAAOAmoS0fdqijC2PbbdH4kjq62Y1b&bft=0dAFcWeA5QIdJwfTCDODDSCiB3n_OCfGSnHkDTMfiRCNh8ZF3xZYY7fKXJKHRqwZLte-DaEZTTWzPmrVWxUbcYOrZBnoJIeBafLg:0
+[  138183ms] [INFO] Autofocus processing was blocked because a document already has a focused element. @ https://www.google.com/search?q=%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC&oq=%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC&gs_lcrp=EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEwgBEC4YgwEYxwEYsQMY0QMYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzNDQwajBqMqgCALACAQ&sourceid=chrome&ie=UTF-8&sei=AznWavzOFr-wrfcP98akgA0:0
+[  139308ms] [LOG] 
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀＼　　ヽ　　　　i　　|　　　　 /　　　/　
+　　　＼　
+      %c🚀 Kurly Careers
+       %chttps://kurly.career.greetinghr.com/
+
+             O
+　　　-　　　　　　°.  ;' ':;,　　 　　　 ,;'':;,
+　　　　　　　　　　　　　;'　　 ':;,.,..,,,;'　　　';,
+　　ー　　　　　　　　 ,:'　　　　　　　　 　　　　::::::::､
+　_＿　　　　　　　　,:' ／ 　 　　　　＼ 　　　　　::::::::',
+　　　　　二　　　　:'　 ●　　　　　 ●　 　　　　　　::::::::i.
+　　￣　　　　　　　i　'''　(_人__)　　''''　　 ::::::::::i
+　　　　-‐　　　　　 :　 　　　　　　　　　 　　　　　::::::::i
+　　　　　　　　　　　`:,､ 　　　　　 　 　　　 :::::::::: /
+　　　　／　　　　　　 ,:'　　　　　　　 : ::::::::::::｀:､
+　　　　　　　　　　　 ,:'　　　　　　　　 : : ::::::::::｀:､
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+
+
+
+ color: #a864d8; font-weight: bold; font-size: 14px; font-size: 12px; @ https://res.kurly.com/dist/kurlymall-nx/_next/static/chunks/main-87e57826961a72ae.js:4
+[  140028ms] [LOG] Service Worker registration successful with scope:  https://www.kurly.com/ @ https://res.kurly.com/dist/kurlymall-nx/_next/static/chunks/main-87e57826961a72ae.js:4
+[  140456ms] [WARNING] [Meta Pixel] - Invalid parameter format for currency. Please refer https://developers.facebook.com/docs/meta-pixel/reference/ for valid parameter specifications. @ https://res.kurly.com/dist/kurlymall-nx/_next/static/chunks/main-87e57826961a72ae.js:4
+[  521722ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ https://cdn.growthbook.io/sub/sdk-hgeMnhohPsVFwuj:0
+[ 4058785ms] Uncaught (in promise) TypeError: Cannot read properties of null (reading 'sequence')
+    at <anonymous> (https://scripts.clarity.ms/0.8.72-beta/clarity.js:1:49742)
+    at <anonymous> (https://scripts.clarity.ms/0.8.72-beta/clarity.js:1:6522)
+    at <anonymous> (https://scripts.clarity.ms/0.8.72-beta/clarity.js:1:6627)
+    at o (https://scripts.clarity.ms/0.8.72-beta/clarity.js:1:5344)
+[23819396ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ https://cdn.growthbook.io/sub/sdk-hgeMnhohPsVFwuj:0
+[24873975ms] [LOG] 
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⡠⠶⠲⣷⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡰⠋⠀⠀⢠⣿⡏⠀⠀⠀⠀⢀⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡼⠁⠀⠀⠀⣾⡿⠀⠀⠀⣀⣴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢰⡇⠀⠀⠀⣸⣿⣃⣠⣴⠾⠋⠁⠀⢀⣶⡆⠀⠀⢰⣶⠀⠀⢀⣶⡆⣠⣶⣶⡄⢠⣿⡏⠀⢀⣶⡆⠀⠀⢰⣶⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⠳⠀⠀⢠⣿⡟⢻⣿⡀⠀⠀⠀⠀⣼⡿⠁⠀⢠⣿⡏⠀⠀⣼⣿⠟⠁⠈⠛⢀⣾⡿⠀⠀⣼⡿⠁⠀⢠⣿⡟⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⡟⠀⠈⢿⣷⡀⠀⠀⢰⣿⠇⠀⢀⣾⡿⠀⠀⣰⣿⠇⠀⠀⠀⠀⣸⣿⠁⠀⣸⣿⠃⠀⢀⣾⣿⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣼⣿⠃⠀⠀⠈⢿⣷⡀⠀⢻⣿⣀⡠⠺⣿⣇⡠⢴⣿⡏⠀⠀⠀⠀⠀⣿⣿⣀⠔⢻⣏⣀⡠⢺⣿⡇⠤⢤⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠙⠛⠀⠀⠀⠀⠈⠻⣷⣄⣀⣈⣁⠀⠀⠈⠁⠀⠀⠉⠀⠀⠀⠀⠀⠀⠈⠉⠀⠀⠀⠈⢉⣠⣾⡏⠀⠀⠀⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠋⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠎⠀⣰⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠶⠾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+     %c🚀 Kurly Careers
+    %chttps://kurly.career.greetinghr.com/
+
+
+
+
+
+
+ color: #a864d8; font-weight: bold; font-size: 14px; font-size: 12px; @ https://res.kurly.com/dist/kurlymall-nx/_next/static/chunks/main-87e57826961a72ae.js:4
+[24874544ms] [LOG] Service Worker registration successful with scope:  https://www.kurly.com/ @ https://res.kurly.com/dist/kurlymall-nx/_next/static/chunks/main-87e57826961a72ae.js:4
+[24875026ms] [WARNING] [Meta Pixel] - Invalid parameter format for currency. Please refer https://developers.facebook.com/docs/meta-pixel/reference/ for valid parameter specifications. @ https://res.kurly.com/dist/kurlymall-nx/_next/static/chunks/main-87e57826961a72ae.js:4
+[24875860ms] [ERROR] Failed to load resource: the server responded with a status of 429 () @ https://o504158.ingest.us.sentry.io/api/5920463/envelope/?sentry_version=7&sentry_key=85c17d02a54d4d19a97d45bf142467a9&sentry_client=sentry.javascript.nextjs%2F10.51.0:0

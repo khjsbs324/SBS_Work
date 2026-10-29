@@ -1,0 +1,17 @@
+[레퍼런스 사이트]
+브랜드 소개
+1. https://framacph.com/blogs/landing-pages/landing-page-brand
+2. https://www.binu-binu.com/pages/about
+
+서브
+1. https://framacph.com/collections/self-care
+2. https://www.binu-binu.com/collections/all
+3. https://fermliving.com/collections/the-bathroom
+
+
+
+[리포지터리 링크]
+https://github.com/duathdktl98-netizen/test05.git
+
+[깃허브 링크]
+https://duathdktl98-netizen.github.io/test05/

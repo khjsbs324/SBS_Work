@@ -1,0 +1,25 @@
+{
+  "unit": "서비스ㆍ경험디자인 시나리오 개발",
+  "lcode": "12",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=12",
+  "after": {
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=12",
+    "date": "2026-10-29",
+    "analysis": "*평가결과 분석내용\n\n작성일 : 2026-10-29 (평가결과 사후 정리)\n능력단위 : 서비스ㆍ경험디자인 시나리오 개발\n평가일 : 2026-10-02\n\n1. 주제\n서비스ㆍ경험디자인 시나리오 개발 평가결과 분석 및 수업 개선\n\n2. 평가결과\n구체적인 기능과 흐름은 있지만 대표 사용자 조건·예외 경로·평가와 수정의 연결을 더 확인할 필요가 있음.\n\n3. 지도 방향\n대표 사용자의 조건과 예외 상황을 보완하고, 검토 의견 가운데 반영한 내용과 남은 과제를 구분하도록 지도하기로 함.",
+    "improvement": "교수법 개선 및 학생 지도\n작성일 : 2026-10-29 (평가결과 사후 정리)\n\n1. 학생 변화 및 보완사항\n관찰조사에서 정리한 사용자 요구가 시나리오의 장면으로 구체화됨. 이은수는 생활 맥락을 향·소리·괄사 루틴으로 발전시켰으나 대표 사용자의 조건과 중단·복귀 과정, 평가 후 수정 내용을 보완할 필요가 있음. 강민경은 교차 검토와 IA 수정 과정을 정리했으나 반영·보류·추가 확인 항목을 더 명확히 구분할 필요가 있음.\n\n2. 교수법 개선\n대표 사용자 한 명의 목표와 이용 조건을 정한 뒤 시작부터 완료, 예외 상황과 복귀까지 순서대로 따라가도록 지도하기로 함. 사용자와 서비스 제공자의 역할을 나누어 모의 평가하고, 문제가 발생한 장면에 수정 내용과 다시 확인한 결과를 함께 기록하도록 함.\n\n3. 후속 지도\n스마트문화앱 UI 디자인에서는 시나리오의 목적과 상태가 화면 제목, 메뉴, 선택 표시로 드러나는지 살펴보고 글자와 버튼의 가독성을 점검하기로 함.",
+    "Pcode": "300002",
+    "Lcode": "12"
+  },
+  "checks": {
+    "exact_readback": true,
+    "date_preserved": true,
+    "original_prefix_preserved": true,
+    "original_analysis_preserved": null,
+    "codes_removed": true,
+    "footer_removed": true,
+    "reassessment_preserved": true
+  },
+  "dialogs": [],
+  "screenshot": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/서비스ㆍ경험디자인 시나리오 개발/2026-10-29T121103/05_정정이력/회의록_문체정정/수정후화면.png",
+  "checked_at": "2026-10-29T03:18:22.000Z"
+}

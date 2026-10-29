@@ -1,0 +1,5386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[와이어프레임] 플로뜰리에 (Flottelier) | 4차 정련 순면 소창 에코 리추얼</title>
+  <meta name="description" content="플로뜰리에 4차 정련 순면 소창 타월 UI/UX 무채색 완전 와이어프레임 (100% Achromatic Monochrome Wireframe)">
+
+  <!-- Google Fonts & Pretendard -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Noto+Serif+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+  <style>
+    /* ==========================================================================
+       1. 100% Achromatic (무채색) Wireframe Design System Tokens
+       ========================================================================== */
+    :root {
+      /* Pure Achromatic Palette: White -> Grays -> Black */
+      --gray-0: #FFFFFF;
+      --gray-50: #FAFAFA;
+      --gray-100: #F4F4F5;
+      --gray-200: #E4E4E7;
+      --gray-300: #D4D4D8;
+      --gray-400: #A1A1AA;
+      --gray-500: #71717A;
+      --gray-600: #52525B;
+      --gray-700: #3F3F46;
+      --gray-800: #27272A;
+      --gray-900: #18181B;
+      --gray-950: #09090B;
+      --black: #000000;
+
+      /* Semantic Wireframe Tokens */
+      --wf-bg-main: var(--gray-0);
+      --wf-bg-sub: var(--gray-50);
+      --wf-bg-card: var(--gray-0);
+      --wf-bg-muted: var(--gray-100);
+      --wf-bg-contrast: var(--gray-900);
+
+      --wf-text-main: var(--gray-950);
+      --wf-text-sub: var(--gray-700);
+      --wf-text-muted: var(--gray-500);
+      --wf-text-inverse: var(--gray-0);
+
+      --wf-border-light: var(--gray-200);
+      --wf-border: var(--gray-300);
+      --wf-border-dark: var(--gray-900);
+      --wf-border-strong: var(--black);
+
+      --font-sans: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-serif: 'Cormorant Garamond', 'Noto Serif KR', Georgia, serif;
+      --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+      --radius-sm: 2px;
+      --radius-md: 4px;
+      --radius-lg: 6px;
+      --radius-full: 9999px;
+
+      --shadow-wireframe: 3px 3px 0px var(--gray-900);
+      --shadow-wireframe-subtle: 2px 2px 0px var(--gray-300);
+
+      --transition-fast: all 0.15s ease;
+      --font-scale: 1rem;
+    }
+
+    /* 시니어 큰 글씨 모드 */
+    body.senior-mode {
+      --font-scale: 1.18rem;
+      --wf-text-sub: var(--gray-900);
+    }
+    body.senior-mode p, body.senior-mode span, body.senior-mode button, body.senior-mode input {
+      font-size: calc(1em * 1.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: var(--font-scale);
+      background-color: var(--wf-bg-main);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--wf-bg-main);
+      color: var(--wf-text-main);
+      line-height: 1.75;
+      letter-spacing: -0.015em;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+    }
+
+    /* Accessibility Skip Link */
+    .skip-to-content {
+      position: absolute;
+      top: -60px;
+      left: 20px;
+      background: var(--black);
+      color: var(--gray-0);
+      padding: 8px 18px;
+      z-index: 10000;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 12px;
+      font-family: var(--font-mono);
+    }
+    .skip-to-content:focus {
+      top: 20px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(100%) contrast(0.95);
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Universal SVG Icon Styling (Achromatic) */
+    .wf-icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      fill: currentColor;
+      stroke: currentColor;
+    }
+
+    /* ==========================================================================
+       2. Top Utility Notice Bar (Achromatic)
+       ========================================================================== */
+    .top-utility-bar {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      font-size: 12px;
+      padding: 7px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 101;
+      border-bottom: 1px solid var(--gray-800);
+    }
+
+    .top-utility-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-top-guarantee {
+      background: var(--gray-800);
+      color: var(--gray-0);
+      border: 1px solid var(--gray-600);
+      padding: 2px 8px;
+      border-radius: 2px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .top-utility-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .btn-utility-toggle {
+      background: var(--gray-800);
+      color: var(--gray-0);
+      border: 1px solid var(--gray-600);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-fast);
+      font-family: var(--font-mono);
+    }
+    .btn-utility-toggle:hover {
+      background: var(--gray-700);
+    }
+
+    .top-audio-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: var(--gray-0);
+      font-size: 11.5px;
+      transition: var(--transition-fast);
+    }
+    .top-audio-pill:hover {
+      opacity: 0.8;
+    }
+    .audio-wave-icon {
+      display: inline-flex;
+      gap: 2px;
+      align-items: center;
+      height: 12px;
+    }
+    .audio-wave-icon span {
+      width: 2px;
+      height: 100%;
+      background: var(--gray-0);
+      border-radius: 1px;
+      animation: waveQuiet 1.2s infinite ease-in-out;
+    }
+    .audio-wave-icon span:nth-child(2) { animation-delay: 0.2s; height: 60%; }
+    .audio-wave-icon span:nth-child(3) { animation-delay: 0.4s; height: 80%; }
+    @keyframes waveQuiet {
+      0%, 100% { transform: scaleY(0.4); }
+      50% { transform: scaleY(1); }
+    }
+
+    /* ==========================================================================
+       3. Main Header (Achromatic Wireframe)
+       ========================================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: var(--gray-0);
+      border-bottom: 2px solid var(--wf-border-dark);
+    }
+
+    .header-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 16px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-symbol {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      background: var(--gray-900);
+      color: var(--gray-0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 800;
+      border: 1px solid var(--black);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo {
+      font-family: var(--font-sans);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .logo-sub {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: var(--gray-500);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .gnb {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .gnb a {
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--gray-700);
+      transition: var(--transition-fast);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .gnb a:hover, .gnb a.active {
+      color: var(--black);
+    }
+
+    .gnb a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--black);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .btn-header-trial {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--gray-900);
+      transition: var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-header-trial:hover {
+      background: var(--gray-700);
+      border-color: var(--gray-700);
+    }
+
+    .btn-icon-cart {
+      position: relative;
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: var(--gray-0);
+      border: 1.5px solid var(--wf-border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-900);
+      transition: var(--transition-fast);
+    }
+    .btn-icon-cart:hover {
+      background: var(--gray-100);
+    }
+
+    .cart-badge-count {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background: var(--black);
+      color: var(--gray-0);
+      border: 1.5px solid var(--gray-0);
+      font-size: 10px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       4. Hero Section (Achromatic Wireframe)
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 90px 24px 80px 24px;
+      text-align: center;
+      background-color: var(--gray-50);
+      background-image:
+        linear-gradient(var(--gray-200) 1px, transparent 1px),
+        linear-gradient(90deg, var(--gray-200) 1px, transparent 1px);
+      background-size: 36px 36px;
+      background-position: center center;
+      border-bottom: 2px solid var(--wf-border-dark);
+      overflow: hidden;
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.72) 60%, rgba(255, 255, 255, 0.42) 100%);
+      backdrop-filter: blur(1.5px);
+      z-index: 1;
+    }
+
+    .hero-container {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      background: var(--gray-100);
+      border: 1.5px solid var(--gray-700);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-family: var(--font-mono);
+      color: var(--gray-900);
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 4.5vw, 50px);
+      font-weight: 800;
+      line-height: 1.32;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 24px;
+      word-break: keep-all;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 6px;
+      color: var(--black);
+    }
+
+    .hero-description {
+      font-size: 16px;
+      color: var(--gray-700);
+      font-weight: 400;
+      line-height: 1.85;
+      max-width: 720px;
+      margin: 0 auto 38px auto;
+      word-break: keep-all;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .btn-primary-hero {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      padding: 15px 36px;
+      border-radius: var(--radius-sm);
+      font-size: 14.5px;
+      font-weight: 700;
+      border: 1.5px solid var(--gray-900);
+      transition: var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-primary-hero:hover {
+      background: var(--gray-700);
+      border-color: var(--gray-700);
+    }
+
+    .btn-secondary-hero {
+      background: var(--gray-0);
+      color: var(--gray-900);
+      padding: 15px 32px;
+      border-radius: var(--radius-sm);
+      font-size: 14.5px;
+      font-weight: 700;
+      border: 1.5px solid var(--wf-border-dark);
+      transition: var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-secondary-hero:hover {
+      background: var(--gray-100);
+    }
+
+    .hero-proof-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      max-width: 880px;
+      margin: 0 auto;
+      padding-top: 30px;
+      border-top: 1px solid var(--wf-border);
+    }
+
+    .proof-item {
+      text-align: center;
+      border: 1px dashed var(--wf-border);
+      padding: 16px 12px;
+      background: var(--gray-50);
+      border-radius: var(--radius-sm);
+    }
+
+    .proof-num {
+      font-family: var(--font-mono);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .proof-label {
+      font-size: 12px;
+      color: var(--gray-600);
+      font-weight: 600;
+    }
+
+    /* Hero Visual Image Showcase */
+    .hero-image-showcase {
+      position: relative;
+      max-width: 960px;
+      margin: 40px auto 0 auto;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 2px solid var(--wf-border-dark);
+      box-shadow: var(--shadow-wireframe);
+      background: var(--gray-900);
+    }
+
+    .hero-banner-image {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(100%) contrast(0.95);
+      transition: filter 0.3s ease, transform 0.6s ease;
+    }
+    .hero-image-showcase:hover .hero-banner-image {
+      filter: grayscale(0%) contrast(1);
+      transform: scale(1.02);
+    }
+
+    .image-float-badge {
+      position: absolute;
+      background: var(--gray-0);
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--wf-border-dark);
+      box-shadow: 2px 2px 0px var(--gray-900);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 5;
+    }
+
+    .image-float-badge.top-left {
+      top: 20px;
+      left: 20px;
+    }
+
+    .image-float-badge.bottom-right {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .badge-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius-sm);
+      background: var(--gray-900);
+      color: var(--gray-0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 12px;
+      font-family: var(--font-mono);
+    }
+
+    .badge-content {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .badge-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1.2;
+    }
+
+    .badge-desc {
+      font-size: 10.5px;
+      color: var(--gray-600);
+      font-family: var(--font-mono);
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       5. Wireframe Showcase (4無 안심 철학 & 4차 정련 완제품)
+       ========================================================================== */
+    .section-feedback-showcase {
+      width: 100%;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      border-bottom: 2px solid var(--wf-border-dark);
+    }
+
+    .feedback-full-section {
+      width: 100%;
+      min-height: 75vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 24px;
+      overflow: hidden;
+      background-color: var(--gray-50);
+    }
+
+    /* 1. 4無 철학 섹션 (4개 이미지가 경계선 없이 자연스럽게 이어지는 심리스 파노라마 배경) */
+    .section-bg-assurance {
+      position: relative;
+      background-color: var(--gray-50);
+      min-height: 80vh;
+      overflow: hidden;
+    }
+
+    /* 4분할 심리스 그라데이션 블렌딩 레이어 */
+    .four-split-bg-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .split-quarter-col {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      background-color: var(--gray-50);
+      transition: all 0.5s ease;
+    }
+
+    /* 4개 분할 와이어프레임 배경 (이미지 제거 및 텍스트/라벨 완벽 보존) */
+    .split-quarter-col.bg-fluorescent {
+      left: 0;
+      width: 25%;
+      background-color: #FAFAF8;
+      border-right: 1px dashed var(--wf-border);
+    }
+
+    .split-quarter-col.bg-bleach {
+      left: 25%;
+      width: 25%;
+      background-color: #F5F5F2;
+      border-right: 1px dashed var(--wf-border);
+    }
+
+    .split-quarter-col.bg-dye {
+      left: 50%;
+      width: 25%;
+      background-color: #EFEFEA;
+      border-right: 1px dashed var(--wf-border);
+    }
+
+    .split-quarter-col.bg-fragrance {
+      left: 75%;
+      width: 25%;
+      background-color: #EAEAE4;
+    }
+
+    /* 전체 배경을 은은하고 조화롭게 묶어주며 텍스트 가독성을 높이는 소프트 앰비언트 오버레이 */
+    .four-split-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0.40) 0%,
+        rgba(255, 255, 255, 0.60) 60%,
+        rgba(255, 255, 255, 0.75) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @media (max-width: 960px) {
+      .split-quarter-col.bg-fluorescent { left: 0; top: 0; width: 50%; height: 50%; }
+      .split-quarter-col.bg-bleach { left: 50%; top: 0; width: 50%; height: 50%; }
+      .split-quarter-col.bg-dye { left: 0; top: 50%; width: 50%; height: 50%; }
+      .split-quarter-col.bg-fragrance { left: 50%; top: 50%; width: 50%; height: 50%; }
+    }
+
+    /* 2. 4차 정련 완제품 섹션 (와이어프레임 배경) */
+    .section-bg-refining {
+      position: relative;
+      background-color: var(--gray-50);
+      min-height: 84vh;
+      overflow: hidden;
+    }
+
+    /* 동적 배경 전환 레이어 (이미지 미노출 와이어프레임) */
+    .refining-bg-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--gray-50);
+      background-image:
+        linear-gradient(var(--gray-300) 1px, transparent 1px),
+        linear-gradient(90deg, var(--gray-300) 1px, transparent 1px);
+      background-size: 36px 36px;
+      background-position: center center;
+      z-index: 2;
+    }
+
+    /* 텍스트 가독성을 위한 부드러운 앰비언트 오버레이 */
+    .section-bg-refining::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0.52) 0%,
+        rgba(255, 255, 255, 0.68) 60%,
+        rgba(255, 255, 255, 0.80) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* 4단계 정련 공정 인터랙티브 STEP 네비게이션 버튼 */
+    .refining-step-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .btn-refining-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1.5px solid var(--gray-900);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: var(--transition-fast);
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.18);
+    }
+    .btn-refining-step:hover {
+      background: var(--gray-900);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+    }
+    .btn-refining-step:hover .step-num {
+      background: #FFFFFF;
+      color: #000000;
+    }
+    .btn-refining-step.active {
+      background: var(--gray-900);
+      color: #FFFFFF;
+      box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
+      transform: translateY(-1px);
+    }
+    .btn-refining-step .step-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      background: var(--gray-900);
+      color: #FFFFFF;
+      padding: 2px 6px;
+      border-radius: 2px;
+      letter-spacing: 0.5px;
+      transition: var(--transition-fast);
+    }
+    .btn-refining-step.active .step-num {
+      background: #FFFFFF;
+      color: #000000;
+    }
+    .btn-refining-step .step-label {
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+    }
+
+    /* 모달 내부 4단계 공정 STEP 탭 버튼 스타일 */
+    .btn-modal-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 14px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--gray-800);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all 0.2s ease;
+      flex: 1;
+      justify-content: center;
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    }
+    .btn-modal-step:hover {
+      background: var(--gray-900);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+    .btn-modal-step:hover .m-step-num {
+      background: #FFFFFF;
+      color: #000000;
+    }
+    .btn-modal-step.active {
+      background: var(--gray-900);
+      color: #FFFFFF;
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    }
+    .btn-modal-step .m-step-num {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      background: var(--gray-900);
+      color: #FFFFFF;
+      padding: 2px 5px;
+      border-radius: 2px;
+      transition: all 0.2s ease;
+    }
+    .btn-modal-step.active .m-step-num {
+      background: #FFFFFF;
+      color: #000000;
+    }
+    .btn-modal-step .m-step-txt {
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 680px) {
+      .modal-refining-display-card {
+        grid-template-columns: 1fr !important;
+      }
+      .modal-step-img-wrap {
+        height: 200px !important;
+      }
+    }
+
+    .full-content-container {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .layout-assurance {
+      align-items: center;
+    }
+    .layout-refining {
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    /* --------------------------------------------------------------------------
+       [피드백반영] 4無 안심 철학 & 4차 정련 완제품 레이아웃 (브랜드 문장 우선 + 이미지 자리 역할 안내)
+       -------------------------------------------------------------------------- */
+    /* --------------------------------------------------------------------------
+       [피드백반영] 4無 안심 철학 (원칙 우선 + 정돈된 핵심 근거 + 넓은 여백과 큰 이미지 자리)
+       -------------------------------------------------------------------------- */
+    .assurance-layout-wrapper {
+      max-width: 1300px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* 1. 상단: 전달하고자 하는 원칙과 서술 (넓은 여백 + 절제된 타이포그래피) */
+    .assurance-principle-header {
+      max-width: 840px;
+      margin: 0 auto 36px auto;
+      text-align: center;
+    }
+
+    .assurance-principle-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--gray-900);
+      background: var(--gray-200);
+      border: 1px solid var(--gray-400);
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .assurance-principle-title {
+      font-size: clamp(24px, 2.7vw, 35px);
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      word-break: keep-all;
+    }
+
+    .assurance-principle-desc {
+      font-size: 15.5px;
+      color: var(--gray-700);
+      line-height: 1.85;
+      margin: 0 auto 20px auto;
+      max-width: 680px;
+      word-break: keep-all;
+      font-weight: 500;
+    }
+
+    /* 2. 핵심 근거 바: 뒤에서 단정하게 받쳐주는 1~2개 공인 인증 팩트 */
+    .assurance-evidence-support {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 18px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--wf-border-dark);
+      border-radius: var(--radius-sm);
+      padding: 10px 20px;
+      box-shadow: var(--shadow-wireframe-subtle);
+    }
+
+    .assurance-evidence-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+    .assurance-evidence-item::before {
+      content: '✓';
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .assurance-evidence-sep {
+      width: 1px;
+      height: 12px;
+      background: var(--gray-400);
+    }
+    @media (max-width: 600px) {
+      .assurance-evidence-sep {
+        display: none;
+      }
+    }
+
+    /* 3. 하단: 넓은 여백과 큰 이미지 자리 (4대 시각 증명 대형 프레임) */
+    .assurance-large-slots {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 100%;
+      margin-top: 14px;
+    }
+    @media (max-width: 960px) {
+      .assurance-large-slots {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+    @media (max-width: 520px) {
+      .assurance-large-slots {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .assurance-large-slot-card {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-md);
+      padding: 24px 18px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 280px;
+      box-shadow: var(--shadow-wireframe-subtle);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .assurance-large-slot-card:hover {
+      border-color: var(--gray-900);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-wireframe);
+    }
+
+    .slot-visual-canvas {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--gray-50);
+      border: 1.5px dashed var(--gray-400);
+      border-radius: var(--radius-sm);
+      padding: 20px 14px;
+      margin: 14px 0;
+    }
+
+    /* 4차 정련 완제품 2열 레이아웃: 좌측(브랜드 문장 & 4단계 실측 근거) + 우측(이미지 연출 자리) */
+    .refining-flow-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: stretch;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+    }
+    @media (max-width: 960px) {
+      .refining-flow-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    .refining-evidence-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 580px) {
+      .refining-evidence-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .refining-image-slot-frame {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-wireframe);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      min-height: 420px;
+    }
+
+    .corner-visual-label {
+      position: absolute;
+      top: 0;
+      z-index: 2;
+    }
+    .corner-label-left {
+      left: 0;
+    }
+    .corner-label-right {
+      right: 0;
+      text-align: right;
+    }
+
+    .corner-label-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+      background: var(--gray-0);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--gray-900);
+    }
+    .corner-label-title {
+      font-size: clamp(24px, 2.6vw, 34px);
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .corner-label-right .corner-label-title {
+      justify-content: flex-end;
+    }
+    .corner-label-sub {
+      font-size: 13.5px;
+      color: var(--gray-700);
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .floating-content-overlay {
+      position: relative;
+      z-index: 2;
+      max-width: 740px;
+      width: 100%;
+      margin-top: 100px;
+      background: var(--gray-0);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      box-shadow: var(--shadow-wireframe);
+    }
+    .layout-assurance .floating-content-overlay {
+      text-align: left;
+    }
+
+    .overlay-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--gray-600);
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .overlay-title {
+      font-size: clamp(22px, 2.4vw, 30px);
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+
+    .overlay-desc {
+      font-size: 15px;
+      color: var(--gray-800);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      word-break: keep-all;
+      font-weight: 400;
+    }
+
+    .overlay-mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .overlay-mini-card {
+      background: var(--gray-50);
+      border: 1px solid var(--wf-border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .overlay-step-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--gray-900);
+      background: var(--gray-200);
+      border: 1px solid var(--gray-300);
+      padding: 2px 6px;
+      border-radius: 2px;
+      margin-bottom: 4px;
+    }
+
+    .overlay-mini-content h4 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    .overlay-mini-content p {
+      font-size: 12px;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    .cert-unified-line {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-900);
+      border: 1px dashed var(--gray-700);
+      padding: 10px 14px;
+      background: var(--gray-50);
+      border-radius: var(--radius-sm);
+      margin-bottom: 18px;
+    }
+
+    .btn-cert-unified-modal {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      border: 1px solid var(--gray-900);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-cert-unified-modal:hover {
+      background: var(--gray-700);
+    }
+
+    .overlay-guarantee-bar {
+      background: var(--gray-100);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+    }
+    .overlay-guarantee-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    .overlay-guarantee-text p {
+      font-size: 12.5px;
+      color: var(--gray-700);
+      line-height: 1.5;
+    }
+
+    /* Achromatic Wireframe Divider Bar */
+    .image-style-divider-bar {
+      width: 100%;
+      height: 22px;
+      background: var(--gray-800);
+      margin: 0;
+      border-top: 2px solid var(--black);
+      border-bottom: 2px solid var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-style-divider-bar::after {
+      content: '[ SECTION SEPARATOR RULE ]';
+      color: var(--gray-0);
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       6. Section Header & Layout Utility
+       ========================================================================== */
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 48px auto;
+    }
+
+    .section-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--gray-900);
+      background: var(--gray-200);
+      border: 1px solid var(--gray-400);
+      padding: 3px 10px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      font-weight: 800;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(26px, 3.2vw, 36px);
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1.3;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      font-size: 14.5px;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       6.5. Best Top 3 - LEEL UPPERHOUSE Legacy Style (1:1 Photo & Text Split)
+       ========================================================================== */
+    .section-legacy-best {
+      padding: 0;
+      background: var(--gray-0);
+      border-bottom: 2px solid var(--wf-border-dark);
+      position: relative;
+    }
+
+    .legacy-area1 {
+      padding: 80px 24px 50px 24px;
+      text-align: center;
+      background: var(--gray-0);
+      border-bottom: 1.5px solid var(--wf-border-dark);
+    }
+
+    .legacy-tit-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .legacy-top-tag {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray-900);
+      background: var(--gray-100);
+      padding: 4px 12px;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      margin-bottom: 14px;
+    }
+
+    .legacy-top-title {
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .legacy-top-sub {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* 본문 2분할 지그재그 박스 (50% : 50%) */
+    .legacy-area2 {
+      width: 100%;
+      position: relative;
+    }
+
+    .legacy-box {
+      width: 100%;
+      min-height: 580px;
+      display: flex;
+      border-bottom: 2px solid var(--wf-border-dark);
+    }
+    .legacy-box:last-child {
+      border-bottom: none;
+    }
+
+    .legacy-item {
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+    }
+
+    /* 사진(이미지) 50% 영역 (1:1 균형 분할 및 정비율 스케일링) */
+    .legacy-item-img {
+      width: 50%;
+      background-color: var(--gray-100);
+      background-image:
+        linear-gradient(var(--gray-300) 1px, transparent 1px),
+        linear-gradient(90deg, var(--gray-300) 1px, transparent 1px);
+      background-size: 32px 32px;
+      background-position: center center;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      min-height: 560px;
+    }
+
+    .legacy-img-frame {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .legacy-img-placeholder {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 1 / 1;
+      border: 2px dashed var(--gray-600);
+      border-radius: var(--radius-md);
+      background: var(--gray-0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: var(--shadow-wireframe);
+      box-sizing: border-box;
+    }
+
+    .legacy-cloth-num {
+      font-family: var(--font-mono);
+      font-size: 54px;
+      font-weight: 900;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .legacy-cloth-sub {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--gray-600);
+      letter-spacing: 2px;
+      margin-top: 6px;
+      margin-bottom: 14px;
+    }
+
+    .legacy-cloth-tag {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--gray-500);
+      border-top: 1px dashed var(--gray-300);
+      padding-top: 10px;
+      width: 100%;
+    }
+
+    .legacy-img-overlay-tag {
+      position: absolute;
+      left: 28px;
+      bottom: 22px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gray-800);
+      background: var(--gray-0);
+      padding: 5px 12px;
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-sm);
+      z-index: 2;
+    }
+
+    /* 글(텍스트) 50% 영역 */
+    .legacy-item-txt {
+      width: 50%;
+      padding: 56px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .legacy-color-1 {
+      background-color: var(--gray-900);
+      color: var(--gray-0);
+    }
+    .legacy-color-2 {
+      background-color: var(--gray-800);
+      color: var(--gray-0);
+    }
+    .legacy-color-3 {
+      background-color: var(--gray-950);
+      color: var(--gray-0);
+    }
+
+    .legacy-t-wrap {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .legacy-t1 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .badge-leel-rank {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 900;
+      background: transparent;
+      color: var(--gray-0);
+      border: 1.5px solid var(--gray-0);
+      padding: 4px 14px;
+      border-radius: 2px;
+      letter-spacing: 2px;
+    }
+
+    .legacy-t2 {
+      margin: 30px 0;
+    }
+
+    .legacy-serif-eng {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .legacy-t3 dl dt {
+      font-size: clamp(22px, 2.4vw, 30px);
+      font-weight: 800;
+      color: var(--gray-0);
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+
+    .legacy-price-line {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid var(--gray-700);
+      padding-bottom: 14px;
+    }
+
+    .legacy-price-num {
+      font-family: var(--font-mono);
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--gray-0);
+    }
+
+    .legacy-price-desc {
+      font-size: 13px;
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+
+    .legacy-btn-line {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-legacy-buy {
+      background: var(--gray-0);
+      color: var(--gray-950);
+      border: 1.5px solid var(--gray-0);
+      padding: 11px 26px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .btn-legacy-buy:hover {
+      background: var(--gray-200);
+    }
+
+    .btn-legacy-custom-link {
+      background: transparent;
+      color: var(--gray-0);
+      border: 1px solid var(--gray-600);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .btn-legacy-custom-link:hover {
+      border-color: var(--gray-0);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    @media (max-width: 992px) {
+      .legacy-box {
+        flex-direction: column;
+        min-height: auto;
+      }
+      .legacy-box:nth-child(even) {
+        flex-direction: column-reverse;
+      }
+      .legacy-item {
+        width: 100%;
+      }
+      .legacy-item-img {
+        width: 100%;
+        min-height: auto;
+        padding: 40px 20px;
+      }
+      .legacy-img-frame {
+        padding: 0;
+      }
+      .legacy-img-placeholder {
+        width: 100%;
+        max-width: 420px;
+        aspect-ratio: 1 / 1;
+        padding: 30px 20px;
+      }
+      .legacy-item-txt {
+        width: 100%;
+        padding: 40px 24px;
+      }
+    }
+
+    /* ==========================================================================
+      }
+    }
+
+    @media (max-width: 640px) {
+      .space-grid-gallery {
+        grid-template-columns: 1fr;
+      }
+      .space-con-img {
+        min-height: 280px;
+      }
+    }
+
+    /* ==========================================================================
+       7. Interactive Simulator Section (Achromatic)
+       ========================================================================== */
+    .section-simulator {
+      padding: 80px 24px;
+      background: var(--gray-0);
+      border-bottom: 1px solid var(--wf-border);
+    }
+
+    .simulator-wrapper {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      background: var(--gray-0);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      box-shadow: var(--shadow-wireframe);
+    }
+
+    .sim-tab-controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .btn-sim-tab {
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 700;
+      background: var(--gray-50);
+      color: var(--gray-700);
+      border: 1.5px solid var(--wf-border);
+      transition: var(--transition-fast);
+      font-family: var(--font-mono);
+    }
+    .btn-sim-tab.active {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      border-color: var(--gray-900);
+    }
+
+    .sim-content-pane {
+      display: none;
+    }
+    .sim-content-pane.active {
+      display: block;
+      animation: fadeIn 0.3s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .compare-bar-group {
+      margin-bottom: 20px;
+    }
+
+    .compare-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .bar-track {
+      height: 14px;
+      background: var(--gray-200);
+      border: 1px solid var(--gray-300);
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-fill-sochang {
+      height: 100%;
+      background: var(--black);
+      width: 30%;
+      transition: width 0.6s ease;
+    }
+
+    .bar-fill-terry {
+      height: 100%;
+      background: var(--gray-400);
+      width: 100%;
+    }
+
+    .timeline-range-slider {
+      width: 100%;
+      margin: 16px 0;
+      accent-color: var(--gray-900);
+      cursor: pointer;
+    }
+
+    .timeline-stage-info {
+      background: var(--gray-50);
+      border: 1px solid var(--wf-border);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    .stage-badge-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gray-900);
+      background: var(--gray-200);
+      border: 1px solid var(--gray-300);
+      padding: 2px 8px;
+      border-radius: 2px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .stage-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .stage-desc {
+      font-size: 13px;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    .sim-visual-box {
+      background: var(--gray-50);
+      border: 1.5px dashed var(--gray-400);
+      border-radius: var(--radius-sm);
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .sim-cloth-preview {
+      width: 200px;
+      height: 200px;
+      background: var(--gray-0);
+      border: 2px solid var(--gray-900);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: var(--shadow-wireframe-subtle);
+    }
+    .sim-cloth-preview::before,
+    .sim-cloth-preview::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+    .sim-cloth-preview::before {
+      border-bottom: 1px dashed var(--gray-300);
+      transform: translateY(-50%) rotate(45deg);
+      transform-origin: center;
+      top: 50%;
+    }
+    .sim-cloth-preview::after {
+      border-bottom: 1px dashed var(--gray-300);
+      transform: translateY(-50%) rotate(-45deg);
+      transform-origin: center;
+      top: 50%;
+    }
+
+    /* ==========================================================================
+       8. Signature Collection Section (LEEL UPPERHOUSE space.php Structure)
+       ========================================================================== */
+    .section-collection {
+      padding: 100px 0 120px 0;
+      background: var(--gray-0);
+      border-bottom: 2px solid var(--wf-border-dark);
+    }
+
+    .space-line-divider {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 40px 0 50px 0;
+    }
+    .space-line-divider span {
+      flex-grow: 1;
+      height: 1px;
+      background-color: var(--gray-300);
+    }
+    .space-line-divider p {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      color: var(--gray-500);
+      text-transform: uppercase;
+    }
+
+    .space-product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px 36px;
+    }
+
+    .space-product-item {
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+      border: none;
+      padding: 0;
+      box-shadow: none;
+      transition: var(--transition-fast);
+    }
+
+    .space-product-img {
+      position: relative;
+      aspect-ratio: 16 / 10.5;
+      width: 100%;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: none;
+      transition: border-color 0.3s ease;
+    }
+    .space-product-img:hover {
+      border-color: var(--gray-900);
+    }
+
+    .space-product-placeholder {
+      text-align: center;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .space-product-img:hover .space-product-placeholder {
+      transform: scale(1.04);
+    }
+
+    .space-product-num {
+      font-family: var(--font-mono);
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--gray-300);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .space-product-placeholder-title {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--gray-800);
+      letter-spacing: 1px;
+    }
+
+    .space-product-ori {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--gray-600);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 3px 8px;
+      border: 1px solid var(--gray-300);
+      border-radius: 2px;
+      letter-spacing: 1px;
+    }
+
+    .space-product-badge-group {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: flex;
+      gap: 6px;
+      z-index: 2;
+    }
+    .space-badge-ply {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      font-size: 10px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      padding: 3px 7px;
+      border-radius: 2px;
+      letter-spacing: 0.5px;
+    }
+    .space-badge-feature {
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--gray-900);
+      border: 1px solid var(--gray-900);
+      font-size: 10px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      padding: 3px 7px;
+      border-radius: 2px;
+    }
+
+    .space-product-meta-box {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .space-product-real-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1.35;
+    }
+    .space-product-desc {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.6;
+      word-break: keep-all;
+      min-height: 42px;
+    }
+    .space-product-price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-top: 4px;
+    }
+    .space-product-price {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--black);
+    }
+    .space-product-unit {
+      font-size: 12px;
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    .space-product-btn-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .space-product-btn-row .btn-quick-detail {
+      background: #F4F4F5;
+      color: #18181B;
+      border: 1.5px solid #D4D4D8;
+      padding: 9px 2px;
+      border-radius: var(--radius-sm);
+      font-size: 11.5px;
+      font-weight: 700;
+      transition: var(--transition-fast);
+      font-family: var(--font-mono);
+      cursor: pointer;
+      text-align: center;
+    }
+    .space-product-btn-row .btn-quick-detail:hover {
+      background: #E4E4E7;
+      border-color: #18181B;
+    }
+
+    .space-product-btn-row .btn-quick-custom {
+      background: var(--gray-0);
+      color: var(--gray-900);
+      border: 1.5px solid var(--gray-900);
+      padding: 9px 2px;
+      border-radius: var(--radius-sm);
+      font-size: 11.5px;
+      font-weight: 700;
+      transition: var(--transition-fast);
+      font-family: var(--font-mono);
+      cursor: pointer;
+      text-align: center;
+    }
+    .space-product-btn-row .btn-quick-custom:hover {
+      background: var(--gray-900);
+      color: var(--gray-0);
+    }
+
+    .space-product-btn-row .btn-quick-cart {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      border: 1.5px solid var(--gray-900);
+      padding: 9px 2px;
+      border-radius: var(--radius-sm);
+      font-size: 11.5px;
+      font-weight: 700;
+      transition: var(--transition-fast);
+      font-family: var(--font-mono);
+      cursor: pointer;
+      text-align: center;
+    }
+    .space-product-btn-row .btn-quick-cart:hover {
+      background: var(--black);
+    }
+
+    @media (max-width: 992px) {
+      .space-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 24px;
+      }
+    }
+    @media (max-width: 640px) {
+      .space-product-grid {
+        grid-template-columns: 1fr;
+        gap: 36px 0;
+      }
+    }
+
+    /* ==========================================================================
+       9. 1-Piece Trial Pack Section (Achromatic)
+       ========================================================================== */
+    .section-trial {
+      padding: 80px 24px;
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--wf-border);
+    }
+
+    .trial-box {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      border: 2px solid var(--black);
+      border-radius: var(--radius-md);
+      padding: 50px 60px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+    }
+
+    .trial-content-left .badge-trial-rebate {
+      background: var(--gray-800);
+      color: var(--gray-0);
+      border: 1px solid var(--gray-600);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 2px;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .trial-title {
+      font-size: clamp(24px, 2.5vw, 32px);
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .trial-desc {
+      font-size: 14px;
+      color: var(--gray-300);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+
+    .trial-steps-list {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .trial-step-mini {
+      background: var(--gray-800);
+      border: 1px dashed var(--gray-600);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 12px;
+      flex: 1;
+    }
+
+    .trial-step-mini strong {
+      display: block;
+      font-family: var(--font-mono);
+      color: var(--gray-400);
+      font-size: 10px;
+      margin-bottom: 2px;
+    }
+
+    .btn-apply-trial {
+      background: var(--gray-0);
+      color: var(--gray-900);
+      border: 2px solid var(--gray-0);
+      font-size: 14.5px;
+      font-weight: 800;
+      padding: 14px 30px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-apply-trial:hover {
+      background: var(--gray-200);
+    }
+
+    .trial-visual-card {
+      background: var(--gray-800);
+      border: 1.5px dashed var(--gray-400);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      text-align: center;
+    }
+
+    .trial-visual-tag {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--gray-300);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .trial-price-big {
+      font-family: var(--font-mono);
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--gray-0);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .trial-price-sub {
+      font-size: 12px;
+      color: var(--gray-400);
+    }
+
+    /* ==========================================================================
+       10. Custom Embroidery Atelier (HTML5 Canvas Achromatic)
+       ========================================================================== */
+    .section-embroidery {
+      padding: 80px 24px;
+      background: var(--gray-0);
+      border-bottom: 1px solid var(--wf-border);
+    }
+
+    .atelier-workspace {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      background: var(--gray-0);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      box-shadow: var(--shadow-wireframe);
+    }
+
+    .canvas-preview-container {
+      background: var(--gray-50);
+      border: 1px dashed var(--gray-400);
+      border-radius: var(--radius-sm);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      min-height: 380px;
+    }
+
+    #liveEmbroideryCanvas {
+      max-width: 100%;
+      background: var(--gray-0);
+      border: 1.5px solid var(--gray-900);
+      border-radius: 2px;
+    }
+
+    .canvas-badge-info {
+      position: absolute;
+      bottom: 12px;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--gray-600);
+      background: var(--gray-0);
+      padding: 2px 8px;
+      border-radius: 2px;
+      border: 1px solid var(--wf-border);
+    }
+
+    .atelier-controls {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .control-group {
+      margin-bottom: 18px;
+    }
+
+    .control-label {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .input-embroidery-text {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+    }
+
+    .font-choice-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .btn-font-choice {
+      padding: 8px;
+      border: 1px solid var(--wf-border);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      background: var(--gray-0);
+      color: var(--gray-700);
+      transition: var(--transition-fast);
+      text-align: center;
+      font-family: var(--font-mono);
+    }
+    .btn-font-choice.active {
+      border-color: var(--black);
+      background: var(--gray-900);
+      color: var(--gray-0);
+      font-weight: 800;
+    }
+
+    .color-swatch-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-swatch {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      border: 2px solid var(--gray-400);
+      cursor: pointer;
+      position: relative;
+      transition: var(--transition-fast);
+    }
+    .btn-swatch.active {
+      border-color: var(--black);
+      outline: 2px solid var(--black);
+      outline-offset: 2px;
+    }
+
+    .swatch-1 { background: #000000; }
+    .swatch-2 { background: #333333; }
+    .swatch-3 { background: #666666; }
+    .swatch-4 { background: #999999; }
+    .swatch-5 { background: #CCCCCC; }
+    .swatch-6 { background: #FFFFFF; border-color: #000000; }
+
+    .position-choice-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .btn-pos-choice {
+      padding: 8px;
+      border: 1px solid var(--wf-border);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      background: var(--gray-0);
+      color: var(--gray-700);
+      transition: var(--transition-fast);
+      font-family: var(--font-mono);
+    }
+    .btn-pos-choice.active {
+      border-color: var(--black);
+      background: var(--gray-900);
+      color: var(--gray-0);
+      font-weight: 800;
+    }
+
+    .btn-save-embroidery {
+      width: 100%;
+      background: var(--gray-900);
+      color: var(--gray-0);
+      font-size: 14px;
+      font-weight: 800;
+      padding: 13px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--gray-900);
+      transition: var(--transition-fast);
+      margin-top: 10px;
+    }
+    .btn-save-embroidery:hover {
+      background: var(--gray-700);
+    }
+
+
+    /* ==========================================================================
+       12. B2B Enterprise & Hospitality Center (100% Achromatic Wireframe)
+       ========================================================================== */
+    .section-b2b-compact {
+      padding: 56px 24px;
+      background: var(--gray-50);
+      border-bottom: 2px solid var(--wf-border-dark);
+    }
+
+    .b2b-compact-bar {
+      background: var(--gray-0);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-md);
+      padding: 30px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      box-shadow: var(--shadow-wireframe-subtle);
+      flex-wrap: wrap;
+    }
+
+    .b2b-compact-text h4 {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--black);
+      margin: 8px 0 6px 0;
+    }
+
+    .b2b-compact-text p {
+      font-size: 13.5px;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    .b2b-price-badge-strip {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .b2b-price-pill {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 800;
+      background: var(--gray-100);
+      color: var(--gray-900);
+      border: 1px solid var(--gray-400);
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    .b2b-price-pill.best {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      border-color: var(--gray-900);
+    }
+
+    /* Modal 2-Column Grid for B2B Quote & Phone Reservation */
+    .b2b-modal-dialog-large {
+      max-width: 960px !important;
+      width: 95% !important;
+      padding: 32px 36px !important;
+    }
+
+    .b2b-modal-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    .b2b-modal-col {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .b2b-unit-price-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      background: var(--gray-0);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .b2b-unit-price-table th {
+      background: var(--gray-100);
+      padding: 8px 10px;
+      font-weight: 800;
+      color: var(--black);
+      border-bottom: 1.5px solid var(--wf-border-dark);
+      text-align: left;
+      font-size: 11.5px;
+    }
+
+    .b2b-unit-price-table td {
+      padding: 7px 10px;
+      border-bottom: 1px solid var(--wf-border);
+      color: var(--gray-800);
+    }
+
+    .b2b-unit-price-table tr.highlight-row {
+      background: #F4F4F5;
+      font-weight: 700;
+    }
+
+    .b2b-unit-price-table tr.highlight-row td {
+      border-top: 1.5px solid var(--gray-900);
+      border-bottom: 1.5px solid var(--gray-900);
+      color: var(--black);
+    }
+
+    .badge-tier-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      padding: 1px 5px;
+      border-radius: 2px;
+      background: var(--gray-200);
+      color: var(--gray-900);
+    }
+
+    .badge-tier-tag.best {
+      background: var(--gray-900);
+      color: var(--gray-0);
+    }
+
+    .btn-qty-preset {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--gray-100);
+      color: var(--gray-800);
+      border: 1px solid var(--gray-300);
+      border-radius: 3px;
+      padding: 4px 8px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-qty-preset:hover {
+      background: var(--gray-200);
+      border-color: var(--gray-500);
+    }
+
+    .btn-qty-preset.active {
+      background: var(--gray-900);
+      color: var(--gray-0);
+      border-color: var(--gray-900);
+    }
+
+    .b2b-quote-calc-box {
+      background: var(--gray-50);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+    }
+
+    .b2b-calc-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      font-size: 12.5px;
+      border-bottom: 1px dashed var(--gray-300);
+    }
+
+    .b2b-calc-line.total-line {
+      border-top: 1.5px solid var(--wf-border-dark);
+      border-bottom: none;
+      padding-top: 10px;
+      margin-top: 4px;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .b2b-consult-form-box {
+      background: var(--gray-0);
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-wireframe-subtle);
+    }
+
+    .b2b-consult-form-box h4 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .b2b-consult-form-box p {
+      font-size: 12px;
+      color: var(--gray-600);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 860px) {
+      .b2b-modal-grid {
+        grid-template-columns: 1fr;
+      }
+      .b2b-modal-dialog-large {
+        padding: 24px 18px !important;
+      }
+    }
+
+    /* ==========================================================================
+       14. Cart Drawer & Toast (Achromatic)
+       ========================================================================== */
+    .cart-drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .cart-drawer-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -450px;
+      width: 100%;
+      max-width: 420px;
+      height: 100vh;
+      background: var(--gray-0);
+      border-left: 2px solid var(--wf-border-dark);
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
+      transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cart-drawer.active {
+      right: 0;
+    }
+
+    .cart-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1.5px solid var(--wf-border-dark);
+    }
+
+    .cart-drawer-header h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .btn-close-cart {
+      font-size: 24px;
+      color: var(--gray-700);
+      cursor: pointer;
+    }
+
+    .cart-items-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 0;
+    }
+
+    .cart-empty-message {
+      text-align: center;
+      color: var(--gray-500);
+      padding: 40px 0;
+      font-size: 13.5px;
+      font-family: var(--font-mono);
+    }
+
+    .cart-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--wf-border);
+    }
+
+    .cart-item-name {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 2px;
+    }
+
+    .cart-item-opt {
+      font-size: 11px;
+      color: var(--gray-500);
+    }
+
+    .cart-drawer-footer {
+      padding-top: 16px;
+      border-top: 1.5px solid var(--wf-border-dark);
+    }
+
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 17px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      color: var(--black);
+      margin-bottom: 14px;
+    }
+
+    .btn-checkout-fast {
+      width: 100%;
+      background: var(--gray-900);
+      color: var(--gray-0);
+      font-size: 14px;
+      font-weight: 800;
+      padding: 13px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--gray-900);
+      font-family: var(--font-mono);
+    }
+
+    .toast-popup {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--gray-900);
+      color: var(--gray-0);
+      border: 1.5px solid var(--gray-0);
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 2000;
+      transform: translateY(80px);
+      opacity: 0;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+    }
+    .toast-popup.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       15. Modals System (Achromatic)
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1500;
+      opacity: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: opacity 0.2s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-dialog {
+      background: var(--gray-0);
+      border: 2px solid var(--wf-border-dark);
+      border-radius: var(--radius-md);
+      width: 100%;
+      max-width: 640px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 36px;
+      position: relative;
+      box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+      transform: scale(0.97);
+      transition: transform 0.2s ease;
+    }
+    .modal-overlay.active .modal-dialog {
+      transform: scale(1);
+    }
+
+    .btn-close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      color: var(--gray-700);
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-header {
+      margin-bottom: 20px;
+    }
+
+    .modal-header h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .modal-header p {
+      font-size: 13px;
+      color: var(--gray-700);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--wf-border-dark);
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-family: inherit;
+      background: var(--gray-0);
+    }
+
+    /* ==========================================================================
+       16. Footer (Achromatic)
+       ========================================================================== */
+    .footer {
+      background: var(--gray-0);
+      border-top: 2px solid var(--wf-border-dark);
+      padding: 60px 24px 30px 24px;
+    }
+
+    .footer-top {
+      max-width: 1360px;
+      margin: 0 auto 40px auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 36px;
+    }
+
+    .footer-brand h4 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--black);
+      margin-bottom: 10px;
+      font-family: var(--font-mono);
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      color: var(--gray-700);
+      line-height: 1.7;
+      max-width: 320px;
+    }
+
+    .footer-col h5 {
+      font-size: 13px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      color: var(--black);
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      font-size: 13px;
+      color: var(--gray-700);
+    }
+    .footer-links-list li {
+      margin-bottom: 8px;
+    }
+    .footer-links-list a:hover {
+      color: var(--black);
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid var(--wf-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--gray-500);
+      flex-wrap: wrap;
+      gap: 14px;
+      font-family: var(--font-mono);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .header-inner { padding: 14px 20px; }
+      .gnb { display: none; }
+      .corner-visual-label { position: static; margin-bottom: 20px; width: 100%; }
+      .floating-content-overlay { margin-top: 0; max-width: 100%; padding: 24px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .simulator-wrapper, .atelier-workspace, .o2o-grid, .b2b-wrapper, .trial-box { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .hero-proof-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .top-utility-bar { flex-direction: column; gap: 6px; text-align: center; }
+      .overlay-mini-grid, .product-grid { grid-template-columns: 1fr; }
+      .trial-box { padding: 30px 20px; }
+      .trial-steps-list { flex-direction: column; }
+      .footer-top { grid-template-columns: 1fr; }
+      .persona-detail-display { grid-template-columns: 1fr; }
+    }
+
+    /* 요청된 3개 콘텐츠 섹션만 노출 */
+    .skip-to-content,
+    .top-utility-bar,
+    .header,
+    .hero-section,
+    .section-feedback-showcase,
+    .section-simulator,
+    .section-embroidery,
+    .section-b2b-compact,
+    .footer {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <main id="main-content">
+
+    <!-- Best Top 3 Showcase -->
+    <section class="section-legacy-best" id="bestSellers" aria-label="플로뜰리에 베스트 상품 TOP 3">
+
+      <!-- 상단 헤더 (area1) -->
+      <div class="legacy-area1">
+        <div class="legacy-tit-wrap">
+          <span class="legacy-top-tag">[ SIGNATURE HERITAGE TOP 3 ]</span>
+          <h2 class="legacy-top-title">플로뜰리에 베스트 상품 TOP 3</h2>
+          <p class="legacy-top-sub">4차 정련으로 번거로운 삶기 없이 첫날부터 뽀송하게, 가장 사랑받는 시그니처 3선</p>
+        </div>
+      </div>
+
+      <!-- 본문 1:1 분할 지그재그 박스 영역 (area2) -->
+      <div class="legacy-area2">
+
+        <!-- BOX 01: [좌측: 사진 50%] + [우측: 글 50%] -->
+        <div class="legacy-box legacy-box1">
+          <!-- 사진(이미지) 50% 영역 -->
+          <div class="legacy-item legacy-item-img">
+            <div class="legacy-img-frame">
+              <div class="legacy-img-placeholder">
+                <span class="legacy-cloth-num">01</span>
+                <span class="legacy-cloth-sub">DAILY 3-PLY</span>
+                <span class="legacy-cloth-tag" style="font-weight: 800; color: var(--black); margin-bottom: 6px;">[ 대표 1 이미지 연출 가이드 ]</span>
+                <p style="font-size: 13px; color: var(--gray-700); line-height: 1.6; word-break: keep-all; margin: 0 10px;">
+                  제품 전체 형태 + 세안 후 얼굴을 눌러 닦는 사용 장면
+                </p>
+              </div>
+            </div>
+            <div class="legacy-img-overlay-tag left_bot">[ PURE ORGANIC 100% COTTON · 35×85cm ]</div>
+          </div>
+          <!-- 글(텍스트) 50% 영역 -->
+          <div class="legacy-item legacy-item-txt legacy-color-1">
+            <div class="legacy-t-wrap">
+              <div class="legacy-t1">
+                <span class="badge-leel-rank">BEST 01</span>
+              </div>
+              <div class="legacy-t2">
+                <span class="legacy-serif-eng">FLOTTELIER SIGNATURE</span>
+              </div>
+              <div class="legacy-t3">
+                <dl>
+                  <dt><span>4차 정련 3겹 데일리 소창 타월</span></dt>
+                  <dd>
+                    <div class="legacy-price-line">
+                      <strong class="legacy-price-num">18,000원</strong>
+                      <span class="legacy-price-desc">1장 단품 / 4차 정련 완료 완제품</span>
+                    </div>
+                    <div class="legacy-btn-line">
+                      <button class="btn-legacy-buy" onclick="addToCart('P001')">장바구니 담기</button>
+                      <button class="btn-legacy-custom-link" onclick="openEmbroideryWithProduct('P001')">자수 각인 커스텀 &rarr;</button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOX 02: [좌측: 글 50%] + [우측: 사진 50%] (지그재그 반전 레이아웃) -->
+        <div class="legacy-box legacy-box2">
+          <!-- 글(텍스트) 50% 영역 -->
+          <div class="legacy-item legacy-item-txt legacy-color-2">
+            <div class="legacy-t-wrap">
+              <div class="legacy-t1">
+                <span class="badge-leel-rank">BEST 02</span>
+              </div>
+              <div class="legacy-t2">
+                <span class="legacy-serif-eng">SENSITIVE & BABY CARE</span>
+              </div>
+              <div class="legacy-t3">
+                <dl>
+                  <dt><span>4차 정련 2겹 가제 세안 와입스</span></dt>
+                  <dd>
+                    <div class="legacy-price-line">
+                      <strong class="legacy-price-num">12,000원</strong>
+                      <span class="legacy-price-desc">30 × 30 cm (2장 세트) / 4차 정련 완료 완제품</span>
+                    </div>
+                    <div class="legacy-btn-line">
+                      <button class="btn-legacy-buy" onclick="addToCart('P006')">장바구니 담기</button>
+                      <button class="btn-legacy-custom-link" onclick="openEmbroideryWithProduct('P006')">자수 각인 커스텀 &rarr;</button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <!-- 사진(이미지) 50% 영역 -->
+          <div class="legacy-item legacy-item-img">
+            <div class="legacy-img-frame">
+              <div class="legacy-img-placeholder">
+                <span class="legacy-cloth-num">02</span>
+                <span class="legacy-cloth-sub">GAUZE 2-PLY</span>
+                <span class="legacy-cloth-tag" style="font-weight: 800; color: var(--black); margin-bottom: 6px;">[ 대표 2 이미지 연출 가이드 ]</span>
+                <p style="font-size: 13px; color: var(--gray-700); line-height: 1.6; word-break: keep-all; margin: 0 10px;">
+                  2겹 가제 와입스 전체 형태 + 민감 피부 세안 및 아기 얼굴을 부드럽게 닦아내는 사용 장면
+                </p>
+              </div>
+            </div>
+            <div class="legacy-img-overlay-tag left_bot">[ DERMATEST EXCELLENT · 2-PLY GAUZE · 30×30cm ]</div>
+          </div>
+        </div>
+
+        <!-- BOX 03: [좌측: 사진 50%] + [우측: 글 50%] -->
+        <div class="legacy-box legacy-box3">
+          <!-- 사진(이미지) 50% 영역 -->
+          <div class="legacy-item legacy-item-img">
+            <div class="legacy-img-frame">
+              <div class="legacy-img-placeholder">
+                <span class="legacy-cloth-num">03</span>
+                <span class="legacy-cloth-sub">10-PACK BUNDLE</span>
+                <span class="legacy-cloth-tag" style="font-weight: 800; color: var(--black); margin-bottom: 6px;">[ 대표 3 이미지 연출 가이드 ]</span>
+                <p style="font-size: 13px; color: var(--gray-700); line-height: 1.6; word-break: keep-all; margin: 0 10px;">
+                  욕실 선반의 수납 전후 + 세탁건조 로테이션 장면 + 10장 세트 실제 구성
+                </p>
+              </div>
+            </div>
+            <div class="legacy-img-overlay-tag left_bot">[ 45% BUNDLE DISCOUNT · 10-PACK · 35×85cm ]</div>
+          </div>
+          <!-- 글(텍스트) 50% 영역 -->
+          <div class="legacy-item legacy-item-txt legacy-color-3">
+            <div class="legacy-t-wrap">
+              <div class="legacy-t1">
+                <span class="badge-leel-rank">BEST 03</span>
+              </div>
+              <div class="legacy-t2">
+                <span class="legacy-serif-eng">LIFESTYLE INNOVATION</span>
+              </div>
+              <div class="legacy-t3">
+                <dl>
+                  <dt><span>4차 정련 3겹 10장 올체인지 데일리 팩</span></dt>
+                  <dd>
+                    <div class="legacy-price-line">
+                      <strong class="legacy-price-num">99,000원</strong>
+                      <span class="legacy-price-desc">35 × 85 cm (10장 세트) / 45% 번들 기획 특가 (4차 정련 완제품)</span>
+                    </div>
+                    <div class="legacy-btn-line">
+                      <button class="btn-legacy-buy" onclick="addToCart('P012')">장바구니 담기</button>
+                      <button class="btn-legacy-custom-link" onclick="openEmbroideryWithProduct('P012')">자수 각인 커스텀 &rarr;</button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Signature Collection Section -->
+    <section class="section-collection" id="collection" aria-label="시그니처 상품 컬렉션">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ Signature Lineup ]</span>
+          <h2 class="section-title">일상을 바꾸는 플로뜰리에 컬렉션</h2>
+          <p class="section-subtitle">3겹 데일리(5종), 2겹 세안·베이비(3종), 4겹 바스·가운(3종), 세트·번들(3종), 선물·기프트(1종)의 15종 라인업을 라이프스타일에 맞게 한눈에 비교하고 선택하세요.</p>
+        </div>
+
+        <div class="collection-tabs">
+          <button class="btn-cat-filter active" data-filter="all">전체 15</button>
+          <button class="btn-cat-filter" data-filter="daily">3겹 데일리 5</button>
+          <button class="btn-cat-filter" data-filter="face">2겹 세안·베이비 케어 3</button>
+          <button class="btn-cat-filter" data-filter="bath">4겹 바스·가운 3</button>
+          <button class="btn-cat-filter" data-filter="bundle">세트·번들 3</button>
+          <button class="btn-cat-filter" data-filter="gift">선물·기프트 1</button>
+        </div>
+
+        <!-- space.php 스타일 상단 디바이더 라인 -->
+        <div class="space-line-divider">
+          <span></span>
+          <p>FLOTTELIER COLLECTIONS</p>
+        </div>
+
+        <div class="space-product-grid" id="mainProductGrid">
+
+        <article class="space-product-item product-card" id="card-P001" data-id="P001" data-category="3겹 데일리" onclick="if(window.selectHeroProduct) selectHeroProduct('P001')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">3겹</span>
+              <span class="space-badge-feature">BEST</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">01</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">데일리 소창 타월</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">35 × 85 cm</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+                <strong style="display: block; margin-bottom: 2px; color: #000000;">[ 대표 1 이미지 연출 가이드 ]</strong>
+                <span style="color: #4B5563;">제품 전체 형태 + 세안 후 얼굴을 눌러 닦는 사용 장면</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">데일리 소창 타월</h3>
+            <p class="space-product-desc">3겹 데일리 · 35 × 85 cm (1장 단품)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">18,000원</strong>
+              <span class="space-product-unit">1장 단품</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P001')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P001')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P002" data-id="P002" data-category="3겹 데일리" onclick="if(window.selectHeroProduct) selectHeroProduct('P002')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">3겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">02</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">스포츠러닝 롱타월</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">20 × 110 cm</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">목에 걸친 슬림 롱 비율 + 땀 흡수 러닝 야외 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">스포츠러닝 롱타월</h3>
+            <p class="space-product-desc">3겹 데일리 · 20 × 110 cm (1장 단품)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">16,000원</strong>
+              <span class="space-product-unit">1장 단품</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P002')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P002')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P003" data-id="P003" data-category="3겹 데일리" onclick="if(window.selectHeroProduct) selectHeroProduct('P003')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">3겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">03</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">콤팩트 핸드타월</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">30 × 45 cm</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">주방 식기 건조 매트 및 욕실 고리 거치 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">콤팩트 핸드타월</h3>
+            <p class="space-product-desc">3겹 데일리 · 30 × 45 cm (1장 단품)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">11,000원</strong>
+              <span class="space-product-unit">1장 단품</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P003')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P003')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P004" data-id="P004" data-category="3겹 데일리" onclick="if(window.selectHeroProduct) selectHeroProduct('P004')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">3겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">04</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">와이드 페이스타월</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">40 × 90 cm</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">긴 머리를 감싸 올린 와이드 헤어 드라이 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">와이드 페이스타월</h3>
+            <p class="space-product-desc">3겹 데일리 · 40 × 90 cm (1장 단품)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">22,000원</strong>
+              <span class="space-product-unit">1장 단품</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P004')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P004')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P005" data-id="P005" data-category="3겹 데일리" onclick="if(window.selectHeroProduct) selectHeroProduct('P005')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">3겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">05</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">데일리 3장 스타터 팩</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">35 × 85 cm (3장)</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">1인 가구 3장 로테이션 정갈한 거치 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">데일리 3장 스타터 팩</h3>
+            <p class="space-product-desc">3겹 데일리 · 35 × 85 cm (3장) (3장 세트)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">49,000원</strong>
+              <span class="space-product-unit">3장 세트</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P005')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P005')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P006" data-id="P006" data-category="2겹 세안·베이비 케어" onclick="if(window.selectHeroProduct) selectHeroProduct('P006')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">2겹</span>
+              <span class="space-badge-feature">BEST</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">06</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">4차 정련 2겹 가제 세안 와입스</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">30 × 30 cm (2장 세트)</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+                <strong style="display: block; margin-bottom: 2px; color: #000000;">[ 대표 2 이미지 연출 가이드 ]</strong>
+                <span style="color: #4B5563;">2겹 가제 와입스 전체 형태 + 민감 피부 세안 및 아기 얼굴을 부드럽게 닦아내는 사용 장면</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">4차 정련 2겹 가제 세안 와입스</h3>
+            <p class="space-product-desc">30 × 30 cm (2장 세트) / 4차 정련 완료 완제품</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">12,000원</strong>
+              <span class="space-product-unit">2장 세트</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P006')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P006')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P007" data-id="P007" data-category="2겹 세안·베이비 케어" onclick="if(window.selectHeroProduct) selectHeroProduct('P007')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">2겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">07</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">베이비 손수건 5장</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">35 × 35 cm</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">신생아 수유·목욕 부드러운 터치 안심 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">베이비 손수건 5장</h3>
+            <p class="space-product-desc">2겹 세안·베이비 케어 · 35 × 35 cm (5장 세트)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">19,000원</strong>
+              <span class="space-product-unit">5장 세트</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P007')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P007')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P008" data-id="P008" data-category="2겹 세안·베이비 케어" onclick="if(window.selectHeroProduct) selectHeroProduct('P008')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">2겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">08</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">필링클렌징 패드 4장</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">15 × 15 cm</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">토너를 적셔 피부결을 닦아내는 클렌징 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">필링클렌징 패드 4장</h3>
+            <p class="space-product-desc">2겹 세안·베이비 케어 · 15 × 15 cm (4장 세트)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">10,000원</strong>
+              <span class="space-product-unit">4장 세트</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" disabled style="opacity: 0.5; cursor: not-allowed;">자수 불가</button>
+              <button class="btn-quick-cart" onclick="addToCart('P008')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P009" data-id="P009" data-category="4겹 바스·가운" onclick="if(window.selectHeroProduct) selectHeroProduct('P009')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">4겹</span>
+              <span class="space-badge-feature">BEST</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">09</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">전신용 바스타월</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">70 × 140 cm</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">샤워 후 전신을 포근하게 감싸는 호텔 바스 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">전신용 바스타월</h3>
+            <p class="space-product-desc">4겹 바스·가운 · 70 × 140 cm (1장 단품)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">34,000원</strong>
+              <span class="space-product-unit">1장 단품</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P009')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P009')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P010" data-id="P010" data-category="4겹 바스·가운" onclick="if(window.selectHeroProduct) selectHeroProduct('P010')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">4겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">10</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">패밀리 빅 바스시트</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">90 × 160 cm</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">특대형 160cm 바스시트 & 여름 홑이불 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">패밀리 빅 바스시트</h3>
+            <p class="space-product-desc">4겹 바스·가운 · 90 × 160 cm (1장 단품)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">46,000원</strong>
+              <span class="space-product-unit">1장 단품</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P010')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P010')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P011" data-id="P011" data-category="4겹 바스·가운" onclick="if(window.selectHeroProduct) selectHeroProduct('P011')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">4겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">11</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">후드 베이비 바스가운</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">75 × 75 cm</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">아기 머리부터 씌운 삼각 후드 바스가운 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">후드 베이비 바스가운</h3>
+            <p class="space-product-desc">4겹 바스·가운 · 75 × 75 cm (1장 단품)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">39,000원</strong>
+              <span class="space-product-unit">1장 단품</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P011')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P011')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P012" data-id="P012" data-category="세트·번들" onclick="if(window.selectHeroProduct) selectHeroProduct('P012')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">3겹</span>
+              <span class="space-badge-feature">BEST</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">12</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">4차 정련 3겹 10장 올체인지 데일리 팩</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">35 × 85 cm (10장 세트)</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+                <strong style="display: block; margin-bottom: 2px; color: #000000;">[ 대표 3 이미지 연출 가이드 ]</strong>
+                <span style="color: #4B5563;">욕실 선반의 수납 전후 + 세탁건조 로테이션 장면 + 10장 세트 실제 구성</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">4차 정련 3겹 10장 올체인지 데일리 팩</h3>
+            <p class="space-product-desc">35 × 85 cm (10장 세트) / 45% 번들 기획 특가 (4차 정련 완제품)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">99,000원</strong>
+              <span class="space-product-unit">10장 세트</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P012')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P012')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P013" data-id="P013" data-category="세트·번들" onclick="if(window.selectHeroProduct) selectHeroProduct('P013')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">3겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">13</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">6장 하프체인지 데일리 팩</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">35 × 85 cm (6장)</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">2인 신혼 욕실 6장 슬림 수납 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">6장 하프체인지 데일리 팩</h3>
+            <p class="space-product-desc">세트·번들 · 35 × 85 cm (6장) (6장 세트)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">64,000원</strong>
+              <span class="space-product-unit">6장 세트</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P013')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P013')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P014" data-id="P014" data-category="세트·번들" onclick="if(window.selectHeroProduct) selectHeroProduct('P014')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">3겹</span>
+              <span class="space-badge-feature">판매중</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">14</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">올인원 패밀리 마스터 번들</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">데일리10 + 바스2 + 세안4 (16장)</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">데일리10+바스2+세안4 16장 풀 번들 박스 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">올인원 패밀리 마스터 번들</h3>
+            <p class="space-product-desc">세트·번들 · 데일리10 + 바스2 + 세안4 (16장) (16장 풀세트)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">158,000원</strong>
+              <span class="space-product-unit">16장 풀세트</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P014')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P014')">담기</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="space-product-item product-card" id="card-P015" data-id="P015" data-category="선물·기프트" onclick="if(window.selectHeroProduct) selectHeroProduct('P015')" style="cursor: pointer;">
+          <div class="space-product-img">
+            <div class="space-product-badge-group">
+              <span class="space-badge-ply">3겹</span>
+              <span class="space-badge-feature">BEST</span>
+            </div>
+            <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+              <span class="space-product-num">15</span>
+              <span class="space-product-placeholder-title" style="font-weight: 700;">신혼 혼수답례 선물세트</span>
+              <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">35 × 85 cm (5장)</span>
+              <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+
+                <span style="color: #4B5563;">전통 패브릭 보자기와 노리개 매듭 선물 패키징 연출</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-product-meta-box">
+            <h3 class="space-product-real-title">신혼 혼수답례 선물세트</h3>
+            <p class="space-product-desc">선물·기프트 · 35 × 85 cm (5장) (3겹 5장 + 보자기 & 노리개 포장)</p>
+            <div class="space-product-price-row">
+              <strong class="space-product-price">58,000원</strong>
+              <span class="space-product-unit">3겹 5장 + 보자기 & 노리개 포장</span>
+            </div>
+            <div class="space-product-btn-row" onclick="event.stopPropagation()">
+              <button class="btn-quick-custom" onclick="openEmbroideryWithProduct('P015')">자수 각인</button>
+              <button class="btn-quick-cart" onclick="addToCart('P015')">담기</button>
+            </div>
+          </div>
+        </article>
+
+        </div>
+
+        <div style="text-align: center;">
+          <a href="chlwlgP/category.html" class="btn-secondary-hero">
+            <span>카테고리 전체 상품 카탈로그 (P-04) 상세 보기 &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1-Piece Handkerchief Trial Section -->
+    <section class="section-trial" id="trial" aria-label="3,000원 손수건 안심 체험">
+      <div class="container">
+        <div class="trial-box">
+          <div class="trial-content-left">
+            <span class="badge-trial-rebate">[ 100% 안심 환불 보장 프로그램 ]</span>
+            <h2 class="trial-title">3,000원에 순면 손수건 먼저 써보세요</h2>
+            <p class="trial-desc">
+              4차 정련 순면 소창 손수건(35×35cm)을 3,000원 체험 쿠폰가로 먼저 부담 없이 경험해 보세요. 직접 써보시고 내 피부에 맞지 않거나 불만족 시 <strong>결제하신 3,000원을 100% 전액 환불</strong>해 드립니다.
+            </p>
+
+            <div class="trial-steps-list">
+              <div class="trial-step-mini">
+                <strong>STEP 01</strong>
+                3,000원 손수건 신청
+              </div>
+              <div class="trial-step-mini">
+                <strong>STEP 02</strong>
+                4차 정련 완제품 배송
+              </div>
+              <div class="trial-step-mini">
+                <strong>STEP 03</strong>
+                써보고 안 맞으면 100% 환불
+              </div>
+            </div>
+
+
+            <button class="btn-apply-trial" id="btnOpenTrialModalBody">
+              <span>3,000원 손수건 안심 체험 신청하기 &rarr;</span>
+            </button>
+          </div>
+
+          <div class="trial-visual-card">
+            <div class="trial-visual-tag">[ 3,000원 손수건 안심 체험 ]</div>
+            <div class="trial-price-big">3,000원</div>
+            <div class="trial-price-sub">4차 정련 순면 소창 손수건 (35×35cm) · 써보고 안 맞으면 100% 전액 환불</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cart Drawer (Slide-in) -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="장바구니">
+    <div class="cart-drawer-header">
+      <h3>장바구니 (<span id="cartCountDrawer">0</span>)</h3>
+      <button class="btn-close-cart" id="btnCloseCart" aria-label="장바구니 닫기">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <div class="cart-empty-message">[ 장바구니가 비어 있습니다 ]</div>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>총 결제금액</span>
+        <span id="cartTotalSum">0원</span>
+      </div>
+      <button class="btn-checkout-fast" id="btnFastCheckout">
+
+              <div style="font-size: 11px; color: var(--gray-500); text-align: center; margin-top: 8px; font-family: var(--font-mono);">
+                * 예약 확정 시 등록하신 연락처로 카카오 알림톡이 자동 발송됩니다.
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M-05: 3,000원 손수건 안심 체험 신청 모달 -->
+  <div class="modal-overlay" id="modalTrialApply">
+    <div class="modal-dialog">
+      <button class="btn-close-modal" data-close="modalTrialApply">&times;</button>
+      <div class="modal-header">
+        <h3>3,000원 소창 손수건 안심 체험 신청</h3>
+        <p>4차 정련 순면 소창 손수건(35×35cm)을 3,000원에 체험해보세요. 직접 사용 후 피부에 안 맞으면 100% 전액 환불해 드립니다.</p>
+      </div>
+      <form id="trialOrderForm" onsubmit="handleTrialSubmit(event)">
+        <div class="form-group">
+          <label for="trialName">받으시는 분 성함</label>
+          <input type="text" id="trialName" class="form-control" placeholder="홍길동" required>
+        </div>
+        <div class="form-group">
+          <label for="trialPhone">연락처</label>
+          <input type="tel" id="trialPhone" class="form-control" placeholder="010-0000-0000" required>
+        </div>
+        <div class="form-group">
+          <label for="trialAddr">배송지 주소</label>
+          <input type="text" id="trialAddr" class="form-control" placeholder="서울시 강남구 테헤란로 123" required>
+        </div>
+        <button type="submit" class="btn-apply-trial" style="width: 100%; justify-content: center; margin-top: 10px;">
+          3,000원 결제하고 손수건 받기 (안 맞으면 100% 환불)
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- M-06: 실시간 자수 각인 전용 팝업 모달 (Real-Time Canvas Custom Embroidery Modal) -->
+  <div class="modal-overlay" id="modalEmbroideryCustom">
+    <div class="modal-dialog" style="max-width: 760px; padding: 28px;">
+      <button class="btn-close-modal" data-close="modalEmbroideryCustom">&times;</button>
+      <div class="modal-header" style="margin-bottom: 20px;">
+        <span style="font-size: 11px; letter-spacing: 1.5px; font-family: var(--font-mono, monospace); font-weight: 700; color: #52525B;">[ CUSTOM EMBROIDERY ATELIER ]</span>
+        <h3 id="modalEmbProdName" style="font-size: 20px; font-weight: 700; margin-top: 4px; color: #18181B;">자수 각인 커스텀 에디터</h3>
+        <p id="modalEmbProdSub" style="font-size: 13px; color: #71717A; margin-top: 2px;">선택하신 순면 소창 타월에 나만의 감성 이니셜을 실시간으로 수놓아보세요.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <!-- Left: Canvas Rendering Area -->
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FAFAFA; border: 1.5px dashed #D4D4D8; border-radius: 8px; padding: 16px;">
+          <canvas id="modalEmbCanvas" width="320" height="240" style="max-width: 100%; border: 1px solid #18181B; background: #FFFFFF;"></canvas>
+          <span style="font-size: 11px; color: #71717A; margin-top: 8px; font-family: var(--font-mono, monospace);">[ Canvas 0.05s Live Rendering ]</span>
+        </div>
+
+        <!-- Right: Inputs & Controls -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; margin-bottom: 5px;">자수 각인 문구 (최대 12자)</label>
+            <input type="text" id="modalEmbTextInput" value="Flottelier" maxlength="12" style="width: 100%; padding: 9px 12px; font-size: 13.5px; border: 1.5px solid #18181B; border-radius: 6px; box-sizing: border-box;" placeholder="새길 문구를 입력하세요">
+          </div>
+
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; margin-bottom: 5px;">서체 선택 (Typography)</label>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+              <button type="button" class="modal-font-btn active" data-font="Georgia, serif" style="padding: 7px 4px; font-size: 11px; border: 1.5px solid #18181B; background: #18181B; color: #FFF; border-radius: 4px; cursor: pointer;">영문 이탤릭</button>
+              <button type="button" class="modal-font-btn" data-font="Noto Serif KR, serif" style="padding: 7px 4px; font-size: 11px; border: 1.5px solid #D4D4D8; background: #FFF; color: #18181B; border-radius: 4px; cursor: pointer;">전통 명조</button>
+              <button type="button" class="modal-font-btn" data-font="Noto Sans KR, sans-serif" style="padding: 7px 4px; font-size: 11px; border: 1.5px solid #D4D4D8; background: #FFF; color: #18181B; border-radius: 4px; cursor: pointer;">모던 고딕</button>
+            </div>
+          </div>
+
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; margin-bottom: 5px;">무채색 실 톤 (Thread Tone)</label>
+            <div style="display: flex; gap: 8px;">
+              <button type="button" class="modal-color-btn active" data-color="#000000" style="width: 26px; height: 26px; border-radius: 50%; background: #000000; border: 2px solid #18181B; cursor: pointer;" title="블랙"></button>
+              <button type="button" class="modal-color-btn" data-color="#333333" style="width: 26px; height: 26px; border-radius: 50%; background: #333333; border: 2px solid transparent; cursor: pointer;" title="차콜"></button>
+              <button type="button" class="modal-color-btn" data-color="#666666" style="width: 26px; height: 26px; border-radius: 50%; background: #666666; border: 2px solid transparent; cursor: pointer;" title="다크그레이"></button>
+              <button type="button" class="modal-color-btn" data-color="#999999" style="width: 26px; height: 26px; border-radius: 50%; background: #999999; border: 2px solid transparent; cursor: pointer;" title="미드그레이"></button>
+              <button type="button" class="modal-color-btn" data-color="#CCCCCC" style="width: 26px; height: 26px; border-radius: 50%; background: #CCCCCC; border: 2px solid transparent; cursor: pointer;" title="라이트그레이"></button>
+            </div>
+          </div>
+
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; margin-bottom: 5px;">자수 위치</label>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+              <button type="button" class="modal-pos-btn active" data-pos="bottom-right" style="padding: 6px; font-size: 11px; border: 1.5px solid #18181B; background: #18181B; color: #FFF; border-radius: 4px; cursor: pointer;">우측 하단</button>
+              <button type="button" class="modal-pos-btn" data-pos="center" style="padding: 6px; font-size: 11px; border: 1.5px solid #D4D4D8; background: #FFF; color: #18181B; border-radius: 4px; cursor: pointer;">중앙</button>
+              <button type="button" class="modal-pos-btn" data-pos="top-right" style="padding: 6px; font-size: 11px; border: 1.5px solid #D4D4D8; background: #FFF; color: #18181B; border-radius: 4px; cursor: pointer;">우측 상단</button>
+            </div>
+          </div>
+
+          <div style="background: #F4F4F5; border: 1px solid #E4E4E7; border-radius: 6px; padding: 10px 12px; font-size: 11.5px; color: #52525B;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #18181B; margin-bottom: 4px;">
+              <span id="modalEmbCostLabel">자수 각인 추가 공임 (장당 +2,000원)</span>
+              <span id="modalEmbCostValue" style="color: #000000; font-family: var(--font-mono, monospace);">+ 2,000원</span>
+            </div>
+            <div style="font-size: 11px; color: #71717A; margin-bottom: 4px; display: flex; justify-content: space-between;">
+              <span id="modalEmbBasePrice">기본 상품 가격: 18,000원</span>
+              <span id="modalEmbTotalPrice" style="font-weight: 700; color: #18181B;">총 결제금액: 20,000원</span>
+            </div>
+            <span id="modalEmbNote" style="font-size: 10.5px; color: #71717A; display: block;">* 1:1 핸드메이드 자수 각인 후 개별 포장 출고</span>
+          </div>
+
+          <button type="button" id="btnModalAddCustomToCart" style="width: 100%; padding: 11px; background: #18181B; color: #FFFFFF; font-size: 13px; font-weight: 700; border: none; border-radius: 6px; cursor: pointer; transition: 0.2s;">
+            자수 옵션 적용하여 장바구니 담기
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M-07: 15종 상품 상세 스펙 & 묶음 세부 구성 안내 팝업 모달 (Product Detail & Composition Modal) -->
+  <div class="modal-overlay" id="modalProductDetail">
+    <div class="modal-dialog" style="max-width: 680px; padding: 28px;">
+      <button class="btn-close-modal" data-close="modalProductDetail">&times;</button>
+      <div class="modal-header" style="margin-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+          <span id="detailProdBadge" class="space-badge-ply" style="display: inline-block; padding: 3px 8px; background: #18181B; color: #FFF; font-size: 11px; font-weight: 700; border-radius: 3px;">3겹</span>
+          <span id="detailProdStatus" class="space-badge-feature" style="display: inline-block; padding: 3px 8px; background: #E4E4E7; color: #18181B; font-size: 11px; font-weight: 700; border-radius: 3px;">BEST</span>
+          <span id="detailProdId" style="font-family: var(--font-mono, monospace); font-size: 11px; color: #71717A; font-weight: 700;">#P001</span>
+        </div>
+        <h3 id="detailProdName" style="font-size: 22px; font-weight: 800; color: #18181B; margin: 4px 0;">데일리 소창 타월</h3>
+        <p id="detailProdCategory" style="font-size: 13px; color: #52525B; margin: 0;">3겹 데일리 · 35 × 85 cm</p>
+      </div>
+
+      <div style="background: #FAFAFA; border: 1px solid #E4E4E7; border-radius: 8px; padding: 18px; margin-bottom: 18px;">
+        <h4 style="font-size: 13px; font-weight: 700; color: #18181B; margin-bottom: 10px; border-bottom: 1px solid #E4E4E7; padding-bottom: 6px;">[ 10개 통합 스펙 & 세부 구성 안내 ]</h4>
+        <dl style="display: grid; grid-template-columns: 110px 1fr; row-gap: 8px; font-size: 12.5px; line-height: 1.6; margin: 0;">
+          <dt style="color: #71717A; font-weight: 600;">• 정식 상품명</dt>
+          <dd id="detailFullName" style="color: #18181B; font-weight: 700; margin: 0;">데일리 소창 타월</dd>
+
+          <dt style="color: #71717A; font-weight: 600;">• 카테고리/겹수</dt>
+          <dd id="detailCatPly" style="color: #18181B; margin: 0;">3겹 데일리 (3겹 순면 직조)</dd>
+
+          <dt style="color: #71717A; font-weight: 600;">• 규격/크기</dt>
+          <dd id="detailSize" style="color: #18181B; font-family: var(--font-mono, monospace); font-weight: 700; margin: 0;">35 × 85 cm</dd>
+
+          <dt style="color: #71717A; font-weight: 600;">• 세트 구성 상세</dt>
+          <dd id="detailComposition" style="color: #000000; background: #FFFFFF; border: 1px solid #D4D4D8; border-radius: 4px; padding: 6px 8px; font-weight: 600; margin: 0;">데일리 소창 타월 (35 × 85 cm) × 1장 단품</dd>
+
+          <dt style="color: #71717A; font-weight: 600;">• 판매 가격</dt>
+          <dd id="detailPrice" style="color: #18181B; font-weight: 800; font-size: 14px; margin: 0;">18,000원</dd>
+
+          <dt style="color: #71717A; font-weight: 600;">• 자수 가능 여부</dt>
+          <dd id="detailEmbroidery" style="color: #18181B; margin: 0;">1:1 핸드메이드 실시간 자수 각인 지원 (+2,000원)</dd>
+
+          <dt style="color: #71717A; font-weight: 600;">• 정련/안전 인증</dt>
+          <dd style="color: #18181B; margin: 0;">4차 가마솥 열탕 정련 완료 (삶기 불필요) · KC 4無 안심 인증</dd>
+        </dl>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px dashed #CBD5E1; border-radius: 6px; padding: 12px 14px; margin-bottom: 20px;">
+        <span style="display: block; font-size: 11px; font-weight: 700; color: #475569; margin-bottom: 3px;">[ 이미지 연출 가이드 & 라이프스타일 씬 ]</span>
+        <p id="detailSceneDesc" style="font-size: 12px; color: #334155; line-height: 1.5; margin: 0;">제품 전체 형태 + 세안 후 얼굴을 눌러 닦는 사용 장면</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        <span>(주)플로뜰리에 아틀리에 | 대표: 연우 | 사업자등록번호: 120-88-99412</span><br>
+        <span>통신판매업신고: 제2026-서울성동-0192호 | KC안전인증: KATRI-2026-FL092</span>
+      </div>
+      <div>
+        <span>&copy; 2026 Flottelier Atelier. 100% Achromatic Monochrome Wireframe Edition.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Javascript Engine (100% Achromatic & Wireframe Compatible)
+       ========================================================================== -->
+  <script src="js/products-data.js"></script>
+  <script>
+    /* --------------------------------------------------------------------------
+       1. Senior Big-Font Mode Toggle
+       -------------------------------------------------------------------------- */
+    const btnSeniorMode = document.getElementById('btnSeniorModeToggle');
+    btnSeniorMode.addEventListener('click', () => {
+      document.body.classList.toggle('senior-mode');
+      const isSenior = document.body.classList.contains('senior-mode');
+      btnSeniorMode.innerHTML = isSenior ? '[-] 일반 글씨 모드' : '[+] 큰 글씨 모드';
+      showToast(isSenior ? '시니어 큰 글씨 모드가 켜졌습니다.' : '일반 글씨 모드로 전환되었습니다.');
+    });
+
+    /* --------------------------------------------------------------------------
+       2. Web Audio API 1-Min Wellness Meditation Audio
+       -------------------------------------------------------------------------- */
+    let audioCtx = null;
+    let isPlayingMeditation = false;
+    let meditationTimer = null;
+    const btnToggleMeditation = document.getElementById('btnToggleMeditation');
+    const topAudioPillBtn = document.getElementById('topAudioPillBtn');
+    const breathCircle = document.getElementById('breathCircle');
+    const breathText = document.getElementById('breathText');
+    const topAudioLabel = document.getElementById('topAudioLabel');
+
+    function startMeditationAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      const osc1 = audioCtx.createOscillator();
+      const osc2 = audioCtx.createOscillator();
+      const gainNode = audioCtx.createGain();
+
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(432, audioCtx.currentTime);
+      osc2.type = 'sine';
+      osc2.frequency.setValueAtTime(216, audioCtx.currentTime);
+
+      gainNode.gain.setValueAtTime(0.001, audioCtx.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.12, audioCtx.currentTime + 3);
+
+      osc1.connect(gainNode);
+      osc2.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+
+      osc1.start();
+      osc2.start();
+
+      isPlayingMeditation = true;
+      document.getElementById('meditationPlayText').innerText = '명상 진행 중 (중지)';
+      document.getElementById('meditationPlayIcon').innerText = '[ || ]';
+      topAudioLabel.innerText = '명상 진행 중...';
+
+      let breathState = 0;
+      breathText.innerText = '숨 들이마시기 (4초)';
+      breathCircle.classList.add('inhale');
+
+      meditationTimer = setInterval(() => {
+        breathState = (breathState + 1) % 2;
+        if (breathState === 0) {
+          breathText.innerText = '숨 들이마시기 (4초)';
+          breathCircle.classList.add('inhale');
+        } else {
+          breathText.innerText = '숨 내쉬기 (4초)';
+          breathCircle.classList.remove('inhale');
+        }
+      }, 4000);
+
+      setTimeout(() => {
+        if (isPlayingMeditation) stopMeditationAudio(osc1, osc2, gainNode);
+      }, 60000);
+    }
+
+    function stopMeditationAudio() {
+      if (audioCtx) {
+        audioCtx.close();
+        audioCtx = null;
+      }
+      clearInterval(meditationTimer);
+      isPlayingMeditation = false;
+      document.getElementById('meditationPlayText').innerText = '1분 명상 시작하기';
+      document.getElementById('meditationPlayIcon').innerText = '[ ▶ ]';
+      topAudioLabel.innerText = '1분 세안 명상 오디오';
+      breathText.innerText = '호흡 준비';
+      breathCircle.classList.remove('inhale');
+      showToast('1분 세안 호흡 명상이 종료되었습니다.');
+    }
+
+    function toggleMeditation() {
+      if (isPlayingMeditation) {
+        stopMeditationAudio();
+      } else {
+        startMeditationAudio();
+        showToast('맑은 호흡과 함께 1분 리추얼을 시작합니다.');
+      }
+    }
+
+    if (btnToggleMeditation) btnToggleMeditation.addEventListener('click', toggleMeditation);
+    if (topAudioPillBtn) topAudioPillBtn.addEventListener('click', toggleMeditation);
+
+    /* --------------------------------------------------------------------------
+       3. Interactive Simulator Tabs & Timeline Scrub
+       -------------------------------------------------------------------------- */
+    const simTabs = document.querySelectorAll('.btn-sim-tab');
+    const simPanes = document.querySelectorAll('.sim-content-pane');
+    const simClothText = document.getElementById('simClothText');
+    const simVisualSub = document.getElementById('simVisualSub');
+
+    simTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        simTabs.forEach(t => t.classList.remove('active'));
+        simPanes.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetId = 'pane-' + tab.dataset.tab;
+        document.getElementById(targetId).classList.add('active');
+
+        if (tab.dataset.tab === 'dry') {
+          simClothText.innerText = '[ 55분 쾌속 건조 ]';
+          simVisualSub.innerText = '[ 3x Fast Drying Structure ]';
+        } else if (tab.dataset.tab === 'storage') {
+          simClothText.innerText = '[ 1/3 슬림 수납 ]';
+          simVisualSub.innerText = '[ 6.5cm Slim Storage Volume ]';
+        } else if (tab.dataset.tab === 'aging') {
+          updateAgingTimeline(document.getElementById('timelineRange').value);
+        }
+      });
+    });
+
+    const agingStages = [
+      {
+        day: 'DAY 1 : 첫 만남',
+        title: '4차 정련 완료 완제품의 뽀송함',
+        desc: '택배 상자에서 꺼내어 삶을 필요 없이 바로 사용합니다. 맑고 깨끗한 첫 순면의 감촉입니다.',
+        previewText: 'Day 1 : 뽀송한 순면'
+      },
+      {
+        day: 'DAY 15 : 10회 세탁 후',
+        title: '자연 수축과 톡톡한 엠보싱 형성',
+        desc: '조직이 자연스럽게 안착하며 흡수 속도가 200% 상승하고 부드러운 쿠션감이 생겨납니다.',
+        previewText: 'Day 15 : 엠보싱 형성'
+      },
+      {
+        day: 'DAY 45 : 30회 세탁 후',
+        title: '물기에 닿자마자 1초 흡수',
+        desc: '원사 사이사이에 미세 공기층이 촘촘히 자리 잡아 피부에 닿자마자 물기를 싹 흡수합니다.',
+        previewText: 'Day 45 : 1초 즉각 흡수'
+      },
+      {
+        day: 'DAY 90+ : 50회 이상 세탁',
+        title: '구름을 만지듯 극상의 에코 리추얼',
+        desc: '섬유 올이 완벽히 길들여져 나만의 평생 반려 타월이 완성됩니다. 3년 이상 오래 쓰는 지속가능성.',
+        previewText: 'Day 90+ : 구름 같은 감촉'
+      }
+    ];
+
+    const timelineRange = document.getElementById('timelineRange');
+    function updateAgingTimeline(val) {
+      const idx = parseInt(val, 10) - 1;
+      const stage = agingStages[idx];
+      document.getElementById('stageTag').innerText = stage.day;
+      document.getElementById('stageTitle').innerText = stage.title;
+      document.getElementById('stageDesc').innerText = stage.desc;
+      simClothText.innerText = stage.previewText;
+      simVisualSub.innerText = `[ ${stage.title} ]`;
+    }
+
+    timelineRange.addEventListener('input', (e) => {
+      updateAgingTimeline(e.target.value);
+    });
+
+    /* --------------------------------------------------------------------------
+       4. Product Category Filter & Dynamic Rendering (15 MASTER PRODUCTS SSOT)
+       -------------------------------------------------------------------------- */
+    const MASTER_PRODUCTS_DETAIL_MAP = {
+      'P001': {
+        id: 'P001',
+        name: '데일리 소창 타월',
+        category: '3겹 데일리',
+        ply: 3,
+        size: '35 × 85 cm',
+        setComposition: '1장 단품',
+        compositionDetail: '3겹 데일리 소창 타월 (35 × 85 cm) × 1장 단품',
+        price: 18000,
+        status: 'BEST',
+        embroideryAvailable: true,
+        image: 'images/p001_daily.jpg',
+        description: '매일 아침저녁 세안 후 피부에 닿는 시그니처 3겹 데일리 소창 타월. 4차 가마솥 열탕 정련으로 번거로운 삶기 없이 첫날부터 뽀송합니다.',
+        scene: '제품 전체 형태 + 세안 후 얼굴을 눌러 닦는 사용 장면'
+      },
+      'P002': {
+        id: 'P002',
+        name: '스포츠러닝 롱타월',
+        category: '3겹 데일리',
+        ply: 3,
+        size: '20 × 110 cm',
+        setComposition: '1장 단품',
+        compositionDetail: '3겹 스포츠러닝 롱타월 (20 × 110 cm) × 1장 단품',
+        price: 16000,
+        status: '판매중',
+        embroideryAvailable: true,
+        image: 'images/p002_sports.jpg',
+        description: '목에 두르기 편한 슬림 롱 비율로 러닝, 요가, 피트니스 및 야외 활동 시 즉각적인 땀 흡수와 쾌속 건조를 선사합니다.',
+        scene: '목에 걸친 슬림 롱 비율 + 땀 흡수 러닝 야외 연출'
+      },
+      'P003': {
+        id: 'P003',
+        name: '콤팩트 핸드타월',
+        category: '3겹 데일리',
+        ply: 3,
+        size: '30 × 45 cm',
+        setComposition: '1장 단품',
+        compositionDetail: '3겹 콤팩트 핸드타월 (30 × 45 cm) × 1장 단품',
+        price: 11000,
+        status: '판매중',
+        embroideryAvailable: true,
+        image: 'images/p003_hand.jpg',
+        description: '주방 식기 건조 매트 및 욕실 고리 거치용 콤팩트 핸드타월. 물기를 닿자마자 흡수하고 빠르게 말라 세균 번식과 냄새를 차단합니다.',
+        scene: '주방 식기 건조 매트 및 욕실 고리 거치 연출'
+      },
+      'P004': {
+        id: 'P004',
+        name: '와이드 페이스타월',
+        category: '3겹 데일리',
+        ply: 3,
+        size: '40 × 90 cm',
+        setComposition: '1장 단품',
+        compositionDetail: '3겹 와이드 페이스타월 (40 × 90 cm) × 1장 단품',
+        price: 22000,
+        status: '판매중',
+        embroideryAvailable: true,
+        image: 'images/p004_wide.jpg',
+        description: '긴 머리를 감싸 올리거나 넉넉한 세안을 원하는 분들을 위한 와이드 규격 페이스타월.',
+        scene: '긴 머리를 감싸 올린 와이드 헤어 드라이 연출'
+      },
+      'P005': {
+        id: 'P005',
+        name: '데일리 3장 스타터 팩',
+        category: '3겹 데일리',
+        ply: 3,
+        size: '35 × 85 cm (3장)',
+        setComposition: '3장 세트',
+        compositionDetail: '3겹 데일리 소창 타월 (35 × 85 cm) × 3장 세트',
+        price: 49000,
+        status: '판매중',
+        embroideryAvailable: true,
+        image: 'images/p005_starter.jpg',
+        description: '1인 가구 3일 로테이션에 최적화된 스타터 번들. 장당 정가 대비 할인 혜택으로 소창 입문자에게 가장 추천합니다.',
+        scene: '1인 가구 3장 로테이션 정갈한 거치 연출'
+      },
+      'P006': {
+        id: 'P006',
+        name: '4차 정련 2겹 가제 세안 와입스',
+        category: '2겹 세안·베이비 케어',
+        ply: 2,
+        size: '30 × 30 cm (2장 세트)',
+        setComposition: '2장 세트',
+        compositionDetail: '30 × 30 cm (2장 세트) / 4차 정련 완료 완제품',
+        price: 12000,
+        status: 'BEST',
+        embroideryAvailable: true,
+        image: 'images/p006_gauze.jpg',
+        description: '피부 마찰 자극 0%를 추구하는 극초부드러움 가제 와입스. 민감성 피부 및 신생아 세안용으로 최적입니다.',
+        scene: '2겹 가제 와입스 전체 형태 + 민감 피부 세안 및 아기 얼굴을 부드럽게 닦아내는 사용 장면'
+      },
+      'P007': {
+        id: 'P007',
+        name: '베이비 손수건 5장',
+        category: '2겹 세안·베이비 케어',
+        ply: 2,
+        size: '35 × 35 cm',
+        setComposition: '5장 세트',
+        compositionDetail: '2겹 순면 베이비 손수건 (35 × 35 cm) × 5장 세트',
+        price: 19000,
+        status: '판매중',
+        embroideryAvailable: true,
+        image: 'images/p007_baby.jpg',
+        description: '신생아 수유, 침받이, 목욕 수건으로 안심하고 매일 사용하는 2겹 순면 무형광 손수건 5장 실속 세트.',
+        scene: '신생아 수유·목욕 부드러운 터치 안심 연출'
+      },
+      'P008': {
+        id: 'P008',
+        name: '필링클렌징 패드 4장',
+        category: '2겹 세안·베이비 케어',
+        ply: 2,
+        size: '15 × 15 cm',
+        setComposition: '4장 세트',
+        compositionDetail: '2겹 친환경 필링클렌징 패드 (15 × 15 cm) × 4장 세트',
+        price: 10000,
+        status: '판매중',
+        embroideryAvailable: false,
+        image: 'images/p008_pad.jpg',
+        description: '토너를 적셔 피부결을 정돈하고 메이크업 잔여물을 자극 없이 닦아내는 친환경 제로웨이스트 클렌징 패드 4장.',
+        scene: '토너를 적셔 피부결을 닦아내는 클렌징 연출'
+      },
+      'P009': {
+        id: 'P009',
+        name: '전신용 바스타월',
+        category: '4겹 바스·가운',
+        ply: 4,
+        size: '70 × 140 cm',
+        setComposition: '1장 단품',
+        compositionDetail: '4겹 전신용 대형 바스타월 (70 × 140 cm) × 1장 단품',
+        price: 34000,
+        status: 'BEST',
+        embroideryAvailable: true,
+        image: 'images/p009_bath.jpg',
+        description: '샤워 후 온몸을 포근하게 감싸는 4겹 도톰 볼륨 바스타월. 55분 쾌속 건조로 꿉꿉함 없는 쾌적함을 유지합니다.',
+        scene: '샤워 후 전신을 포근하게 감싸는 호텔 바스 연출'
+      },
+      'P010': {
+        id: 'P010',
+        name: '패밀리 빅 바스시트',
+        category: '4겹 바스·가운',
+        ply: 4,
+        size: '90 × 160 cm',
+        setComposition: '1장 단품',
+        compositionDetail: '4겹 패밀리 빅 바스시트 (90 × 160 cm) × 1장 단품 (비치/홑이불 겸용)',
+        price: 46000,
+        status: '판매중',
+        embroideryAvailable: true,
+        image: 'images/p010_sheet.jpg',
+        description: '특대형 160cm 규격으로 호텔 바스시트, 수영장 비치타월, 여름철 아기 순면 홑이불로 다용도 활용 가능합니다.',
+        scene: '특대형 160cm 바스시트 & 여름 홑이불 연출'
+      },
+      'P011': {
+        id: 'P011',
+        name: '후드 베이비 바스가운',
+        category: '4겹 바스·가운',
+        ply: 4,
+        size: '75 × 75 cm',
+        setComposition: '1장 단품',
+        compositionDetail: '4겹 삼각 후드 베이비 바스가운 (75 × 75 cm) × 1장 단품',
+        price: 39000,
+        status: '판매중',
+        embroideryAvailable: true,
+        image: 'images/p011_hood.jpg',
+        description: '목욕 후 아기 머리부터 씌워 체온을 보호하고 물기를 즉각 흡수하는 프리미엄 삼각 후드 바스가운.',
+        scene: '아기 머리부터 씌운 삼각 후드 바스가운 연출'
+      },
+      'P012': {
+        id: 'P012',
+        name: '4차 정련 3겹 10장 올체인지 데일리 팩',
+        category: '세트·번들',
+        ply: 3,
+        size: '35 × 85 cm (10장 세트)',
+        setComposition: '10장 세트',
+        compositionDetail: '35 × 85 cm (10장 세트) / 45% 번들 기획 특가 (4차 정련 완제품)',
+        price: 99000,
+        status: 'BEST',
+        embroideryAvailable: true,
+        image: 'images/p012_bundle10.jpg',
+        description: '집안의 모든 낡은 수건을 한번에 교체하는 45% 파격 특가 10장 풀체인지 패키지. 욕실 수납이 3배 슬림해집니다.',
+        scene: '욕실 선반의 수납 전후 + 세탁건조 로테이션 장면 + 10장 세트 실제 구성'
+      },
+      'P013': {
+        id: 'P013',
+        name: '6장 하프체인지 데일리 팩',
+        category: '세트·번들',
+        ply: 3,
+        size: '35 × 85 cm (6장)',
+        setComposition: '6장 세트',
+        compositionDetail: '3겹 데일리 소창 타월 (35 × 85 cm) × 6장 세트 (2인 신혼팩)',
+        price: 64000,
+        status: '판매중',
+        embroideryAvailable: true,
+        image: 'images/p013_bundle6.jpg',
+        description: '2인 신혼부부 및 슬림 수납을 원하는 가구를 위한 6장 하프 체인지 로테이션 패키지.',
+        scene: '2인 신혼 욕실 6장 슬림 수납 연출'
+      },
+      'P014': {
+        id: 'P014',
+        name: '올인원 패밀리 마스터 번들',
+        category: '세트·번들',
+        ply: 3,
+        size: '데일리10 + 바스2 + 세안4 (16장)',
+        setComposition: '16장 풀세트',
+        compositionDetail: '3겹 데일리(35×85cm) 10장 + 4겹 바스타월(70×140cm) 2장 + 2겹 세안와입스(30×30cm) 4장 (총 16장 풀세트)',
+        price: 158000,
+        status: '판매중',
+        embroideryAvailable: true,
+        image: 'images/p014_family.jpg',
+        description: '플로뜰리에의 대표 제품군을 총망라한 16장 패밀리 마스터 번들. 전 가족의 완벽한 소창 라이프스타일을 완성합니다.',
+        scene: '데일리10+바스2+세안4 16장 풀 번들 박스 연출'
+      },
+      'P015': {
+        id: 'P015',
+        name: '신혼 혼수답례 선물세트',
+        category: '선물·기프트',
+        ply: 3,
+        size: '35 × 85 cm (5장)',
+        setComposition: '3겹 5장 + 보자기 & 노리개 포장',
+        compositionDetail: '3겹 데일리 타월(35×85cm) 5장 + 전통 패브릭 보자기 포장 + 핸드메이드 노리개 매듭 (자수 각인 지원)',
+        price: 58000,
+        status: 'BEST',
+        embroideryAvailable: true,
+        image: 'images/p015_gift.jpg',
+        description: '전통 한복 패브릭 보자기 포장과 노리개 매듭으로 정성을 담은 프리미엄 답례 & 신혼 혼수 선물세트.',
+        scene: '전통 패브릭 보자기와 노리개 매듭 선물 패키징 연출'
+      }
+    };
+
+    const FILTER_IDS_MAP = {
+      'all': ['P001', 'P002', 'P003', 'P004', 'P005', 'P006', 'P007', 'P008', 'P009', 'P010', 'P011', 'P012', 'P013', 'P014', 'P015'],
+      'daily': ['P001', 'P002', 'P003', 'P004', 'P005'],
+      'face': ['P006', 'P007', 'P008'],
+      'bath': ['P009', 'P010', 'P011'],
+      'bundle': ['P012', 'P013', 'P014'],
+      'gift': ['P015']
+    };
+
+    window.openProductDetail = function(productId) {
+      const prod = MASTER_PRODUCTS_DETAIL_MAP[productId] || (typeof FlottelierProductManager !== 'undefined' ? FlottelierProductManager.getById(productId) : null);
+      if (!prod) return;
+
+      const plyText = prod.ply ? `${prod.ply}겹` : prod.category;
+      document.getElementById('detailProdBadge').innerText = plyText;
+      document.getElementById('detailProdStatus').innerText = prod.status || '판매중';
+      document.getElementById('detailProdId').innerText = `#${prod.id}`;
+      document.getElementById('detailProdName').innerText = prod.name;
+      document.getElementById('detailProdCategory').innerText = `${prod.category} · ${prod.size}`;
+      document.getElementById('detailFullName').innerText = prod.name;
+      document.getElementById('detailCatPly').innerText = `${prod.category} (${prod.ply ? prod.ply + '겹 순면 직조' : '특수 가공'})`;
+      document.getElementById('detailSize').innerText = prod.size;
+      document.getElementById('detailComposition').innerText = prod.compositionDetail || `${prod.name} (${prod.size}) · ${prod.setComposition}`;
+      document.getElementById('detailPrice').innerText = `${Number(prod.price).toLocaleString('ko-KR')}원 (${prod.setComposition})`;
+      document.getElementById('detailEmbroidery').innerText = prod.embroideryAvailable ? '1:1 핸드메이드 실시간 자수 각인 지원 (+2,000원)' : '자수 각인 불가 품목';
+
+      document.getElementById('detailSceneDesc').innerText = prod.scene || prod.description || '플로뜰리에 4차 정련 순면 소창 타월';
+
+      const embBtn = document.getElementById('btnDetailOpenEmb');
+      if (embBtn) {
+        if (prod.embroideryAvailable) {
+          embBtn.style.display = 'block';
+          embBtn.onclick = function() {
+            closeModal('modalProductDetail');
+            openEmbroideryWithProduct(prod.id);
+          };
+        } else {
+          embBtn.style.display = 'none';
+        }
+      }
+
+      const cartBtn = document.getElementById('btnDetailAddToCart');
+      if (cartBtn) {
+        cartBtn.onclick = function() {
+          closeModal('modalProductDetail');
+          addToCart(prod.id);
+        };
+      }
+
+      openModal('modalProductDetail');
+    };
+
+    function renderMainProducts(filter = 'all') {
+      const grid = document.getElementById('mainProductGrid');
+      if (!grid) return;
+
+      const targetIds = FILTER_IDS_MAP[filter] || FILTER_IDS_MAP['all'];
+
+      grid.innerHTML = targetIds.map((id, idx) => {
+        const item = MASTER_PRODUCTS_DETAIL_MAP[id];
+        if (!item) return '';
+
+        const numStr = (idx + 1) < 10 ? `0${idx + 1}` : `${idx + 1}`;
+        const plyLabel = item.ply ? `${item.ply}겹` : item.category;
+        const statusBadge = item.status || '판매중';
+
+        return `
+          <article class="space-product-item product-card" id="card-${item.id}" data-id="${item.id}" data-category="${item.category}" onclick="openProductDetail('${item.id}')" style="cursor: pointer;">
+            <div class="space-product-img">
+              <div class="space-product-badge-group">
+                <span class="space-badge-ply">${plyLabel}</span>
+                <span class="space-badge-feature">${statusBadge}</span>
+              </div>
+              <div class="space-product-placeholder" style="padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                <span class="space-product-num">${numStr}</span>
+                <span class="space-product-placeholder-title" style="font-weight: 700;">${item.name}</span>
+                <span style="font-size: 11px; color: var(--gray-600, #555); margin-top: 2px; font-family: var(--font-mono, monospace); font-weight: 700;">${item.size}</span>
+                <div class="space-product-scene-box" style="margin-top: 8px; font-size: 10.5px; line-height: 1.45; color: #18181B; background: rgba(0,0,0,0.035); padding: 6px 8px; border-radius: 4px; border: 1px dashed rgba(0,0,0,0.2); word-break: keep-all; width: 100%; box-sizing: border-box;">
+                  ${item.id === 'P001' ? '<strong style="display: block; margin-bottom: 2px; color: #000000;">[ 대표 1 이미지 연출 가이드 ]</strong>' : ''}
+                  ${item.id === 'P006' ? '<strong style="display: block; margin-bottom: 2px; color: #000000;">[ 대표 2 이미지 연출 가이드 ]</strong>' : ''}
+                  ${item.id === 'P012' ? '<strong style="display: block; margin-bottom: 2px; color: #000000;">[ 대표 3 이미지 연출 가이드 ]</strong>' : ''}
+                  <span style="color: #4B5563;">${item.scene}</span>
+                </div>
+              </div>
+            </div>
+            <div class="space-product-meta-box">
+              <h3 class="space-product-real-title">${item.name}</h3>
+              <p class="space-product-desc" style="color: #4B5563; font-size: 11.5px; line-height: 1.4; word-break: keep-all; margin: 3px 0 6px 0;">${item.compositionDetail}</p>
+              <div class="space-product-price-row">
+                <strong class="space-product-price">${Number(item.price).toLocaleString('ko-KR')}원</strong>
+                <span class="space-product-unit">${item.setComposition}</span>
+              </div>
+              <div class="space-product-btn-row" onclick="event.stopPropagation()">
+                <button class="btn-quick-detail" onclick="openProductDetail('${item.id}')">상세보기</button>
+                ${item.embroideryAvailable ? `<button class="btn-quick-custom" onclick="openEmbroideryWithProduct('${item.id}')">자수 각인</button>` : `<button class="btn-quick-custom" disabled style="opacity: 0.4; cursor: not-allowed;">자수 불가</button>`}
+                <button class="btn-quick-cart" onclick="addToCart('${item.id}')">담기</button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    const catFilters = document.querySelectorAll('.btn-cat-filter');
+    catFilters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catFilters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        renderMainProducts(filter);
+      });
+    });
+
+    // Initial render
+    renderMainProducts('all');
+
+    /* --------------------------------------------------------------------------
+       5. HTML5 Canvas Live Custom Embroidery (100% Achromatic)
+       -------------------------------------------------------------------------- */
+    const embCanvas = document.getElementById('liveEmbroideryCanvas');
+    const embCtx = embCanvas.getContext('2d');
+
+    let embState = {
+      text: 'Flottelier Ritual',
+      font: 'Georgia, serif',
+      color: '#000000',
+      position: 'bottom-right'
+    };
+
+    function renderLiveEmbroidery() {
+      // Wireframe Canvas Background
+      embCtx.fillStyle = '#FFFFFF';
+      embCtx.fillRect(0, 0, embCanvas.width, embCanvas.height);
+
+      // Wireframe Grid Lines
+      embCtx.strokeStyle = '#EEEEEE';
+      embCtx.lineWidth = 1;
+      for (let x = 0; x < embCanvas.width; x += 14) {
+        embCtx.beginPath();
+        embCtx.moveTo(x, 0);
+        embCtx.lineTo(x, embCanvas.height);
+        embCtx.stroke();
+      }
+      for (let y = 0; y < embCanvas.height; y += 14) {
+        embCtx.beginPath();
+        embCtx.moveTo(0, y);
+        embCtx.lineTo(embCanvas.width, y);
+        embCtx.stroke();
+      }
+
+      // Outer Wireframe Towel Border
+      embCtx.strokeStyle = '#18181B';
+      embCtx.lineWidth = 1.5;
+      embCtx.strokeRect(16, 16, embCanvas.width - 32, embCanvas.height - 32);
+
+      // Inner Dashed Hem Line
+      embCtx.setLineDash([4, 4]);
+      embCtx.strokeStyle = '#A1A1AA';
+      embCtx.strokeRect(22, 22, embCanvas.width - 44, embCanvas.height - 44);
+      embCtx.setLineDash([]);
+
+      // Stitched Text Rendering
+      embCtx.save();
+      embCtx.font = `bold 22px ${embState.font}`;
+      embCtx.fillStyle = embState.color;
+
+      let textX = embCanvas.width - 40;
+      let textY = embCanvas.height - 40;
+      embCtx.textAlign = 'right';
+
+      if (embState.position === 'center') {
+        textX = embCanvas.width / 2;
+        textY = embCanvas.height / 2 + 8;
+        embCtx.textAlign = 'center';
+      } else if (embState.position === 'top-right') {
+        textX = embCanvas.width - 40;
+        textY = 54;
+        embCtx.textAlign = 'right';
+      }
+
+      embCtx.fillText(embState.text || 'Flottelier', textX, textY);
+      embCtx.restore();
+    }
+
+    renderLiveEmbroidery();
+
+    // Input handlers
+    const embInput = document.getElementById('embroideryTextInput');
+    embInput.addEventListener('input', (e) => {
+      embState.text = e.target.value;
+      renderLiveEmbroidery();
+    });
+
+    document.querySelectorAll('.btn-font-choice').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.btn-font-choice').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        embState.font = btn.dataset.font;
+        renderLiveEmbroidery();
+      });
+    });
+
+    document.querySelectorAll('.btn-swatch').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.btn-swatch').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        embState.color = btn.dataset.color;
+        renderLiveEmbroidery();
+      });
+    });
+
+    document.querySelectorAll('.btn-pos-choice').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.btn-pos-choice').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        embState.position = btn.dataset.pos;
+        renderLiveEmbroidery();
+      });
+    });
+
+    // Modal Embroidery Canvas & State
+    const modalEmbCanvas = document.getElementById('modalEmbCanvas');
+    const modalEmbCtx = modalEmbCanvas ? modalEmbCanvas.getContext('2d') : null;
+    let modalEmbState = {
+      text: 'Flottelier',
+      font: 'Georgia, serif',
+      color: '#000000',
+      position: 'bottom-right'
+    };
+
+    function renderModalEmbroidery() {
+      if (!modalEmbCanvas || !modalEmbCtx) return;
+
+      // Fabric Background
+      modalEmbCtx.fillStyle = '#FAFAFA';
+      modalEmbCtx.fillRect(0, 0, modalEmbCanvas.width, modalEmbCanvas.height);
+
+      // Micro Weave Simulation
+      modalEmbCtx.strokeStyle = '#EEEEEE';
+      modalEmbCtx.lineWidth = 1;
+      for (let x = 0; x < modalEmbCanvas.width; x += 10) {
+        modalEmbCtx.beginPath();
+        modalEmbCtx.moveTo(x, 0);
+        modalEmbCtx.lineTo(x, modalEmbCanvas.height);
+        modalEmbCtx.stroke();
+      }
+      for (let y = 0; y < modalEmbCanvas.height; y += 10) {
+        modalEmbCtx.beginPath();
+        modalEmbCtx.moveTo(0, y);
+        modalEmbCtx.lineTo(modalEmbCanvas.width, y);
+        modalEmbCtx.stroke();
+      }
+
+      // Outer & Inner Towel Hem
+      modalEmbCtx.strokeStyle = '#18181B';
+      modalEmbCtx.lineWidth = 1.5;
+      modalEmbCtx.strokeRect(12, 12, modalEmbCanvas.width - 24, modalEmbCanvas.height - 24);
+
+      modalEmbCtx.setLineDash([4, 4]);
+      modalEmbCtx.strokeStyle = '#A1A1AA';
+      modalEmbCtx.strokeRect(18, 18, modalEmbCanvas.width - 36, modalEmbCanvas.height - 36);
+      modalEmbCtx.setLineDash([]);
+
+      // Stitched Text
+      modalEmbCtx.save();
+      modalEmbCtx.font = `bold 18px ${modalEmbState.font}`;
+      modalEmbCtx.fillStyle = modalEmbState.color;
+
+      let textX = modalEmbCanvas.width - 30;
+      let textY = modalEmbCanvas.height - 30;
+      modalEmbCtx.textAlign = 'right';
+
+      if (modalEmbState.position === 'center') {
+        textX = modalEmbCanvas.width / 2;
+        textY = modalEmbCanvas.height / 2 + 6;
+        modalEmbCtx.textAlign = 'center';
+      } else if (modalEmbState.position === 'top-right') {
+        textX = modalEmbCanvas.width - 30;
+        textY = 44;
+        modalEmbCtx.textAlign = 'right';
+      }
+
+      modalEmbCtx.fillText(modalEmbState.text || 'Flottelier', textX, textY);
+      modalEmbCtx.restore();
+    }
+
+    // Modal Control Listeners
+    const modalEmbInput = document.getElementById('modalEmbTextInput');
+    if (modalEmbInput) {
+      modalEmbInput.addEventListener('input', (e) => {
+        modalEmbState.text = e.target.value;
+        renderModalEmbroidery();
+      });
+    }
+
+    document.querySelectorAll('.modal-font-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.modal-font-btn').forEach(b => {
+          b.classList.remove('active');
+          b.style.background = '#FFF';
+          b.style.color = '#18181B';
+          b.style.borderColor = '#D4D4D8';
+        });
+        btn.classList.add('active');
+        btn.style.background = '#18181B';
+        btn.style.color = '#FFF';
+        btn.style.borderColor = '#18181B';
+        modalEmbState.font = btn.dataset.font;
+        renderModalEmbroidery();
+      });
+    });
+
+    document.querySelectorAll('.modal-color-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.modal-color-btn').forEach(b => {
+          b.classList.remove('active');
+          b.style.borderColor = 'transparent';
+        });
+        btn.classList.add('active');
+        btn.style.borderColor = '#18181B';
+        modalEmbState.color = btn.dataset.color;
+        renderModalEmbroidery();
+      });
+    });
+
+    document.querySelectorAll('.modal-pos-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.modal-pos-btn').forEach(b => {
+          b.classList.remove('active');
+          b.style.background = '#FFF';
+          b.style.color = '#18181B';
+          b.style.borderColor = '#D4D4D8';
+        });
+        btn.classList.add('active');
+        btn.style.background = '#18181B';
+        btn.style.color = '#FFF';
+        btn.style.borderColor = '#18181B';
+        modalEmbState.position = btn.dataset.pos;
+        renderModalEmbroidery();
+      });
+    });
+
+    function getProductPieceCount(product) {
+      if (!product) return 1;
+      const str = (product.setComposition || '') + ' ' + (product.size || '') + ' ' + (product.name || '');
+      const match = str.match(/(\d+)장/);
+      if (match) {
+        return parseInt(match[1], 10);
+      }
+      return 1;
+    }
+
+    const btnModalAddCustomToCart = document.getElementById('btnModalAddCustomToCart');
+    if (btnModalAddCustomToCart) {
+      btnModalAddCustomToCart.addEventListener('click', () => {
+        let prod = activeEmbroideryProduct;
+        if (!prod && typeof MASTER_PRODUCTS_DETAIL_MAP !== 'undefined') {
+          prod = MASTER_PRODUCTS_DETAIL_MAP['P001'];
+        }
+        const prodId = prod ? prod.id : 'P001';
+        const pieceCount = getProductPieceCount(prod);
+        const embroideryFee = 2000 * pieceCount;
+        const basePrice = prod ? prod.price : 18000;
+        const customPrice = basePrice + embroideryFee;
+
+        addToCart(prodId, customPrice, {
+          text: modalEmbState.text,
+          font: modalEmbState.font,
+          color: modalEmbState.color,
+          pos: modalEmbState.position,
+          count: pieceCount,
+          embroideryFee: embroideryFee
+        });
+        closeModal('modalEmbroideryCustom');
+        showToast(`'${prod ? prod.name : "상품"}' (자수 ${pieceCount}장 각인 포함)이 장바구니에 담겼습니다.`);
+        toggleCart(true);
+      });
+    }
+
+    // 본문 실시간 자수 아틀리에 섹션의 [이 자수 옵션으로 장바구니에 담기] 버튼 연동
+    const btnApplyEmbroideryToCart = document.getElementById('btnApplyEmbroideryToCart');
+    if (btnApplyEmbroideryToCart) {
+      btnApplyEmbroideryToCart.addEventListener('click', () => {
+        let prod = (typeof MASTER_PRODUCTS_DETAIL_MAP !== 'undefined') ? MASTER_PRODUCTS_DETAIL_MAP['P001'] : null;
+        const prodId = prod ? prod.id : 'P001';
+        const customPrice = (prod ? prod.price : 18000) + 2000;
+        addToCart(prodId, customPrice, {
+          text: embState.text,
+          font: embState.font,
+          color: embState.color,
+          pos: embState.position,
+          count: 1,
+          embroideryFee: 2000
+        });
+        showToast(`'${prod ? prod.name : "데일리 소창 타월"}' 자수 커스텀이 장바구니에 담겼습니다.`);
+        toggleCart(true);
+      });
+    }
+
+    let activeEmbroideryProduct = null;
+
+    window.openEmbroideryWithProduct = function(productIdOrName) {
+      let product = null;
+      if (typeof MASTER_PRODUCTS_DETAIL_MAP !== 'undefined') {
+        product = MASTER_PRODUCTS_DETAIL_MAP[productIdOrName];
+        if (!product) {
+          for (const key in MASTER_PRODUCTS_DETAIL_MAP) {
+            if (MASTER_PRODUCTS_DETAIL_MAP[key].name === productIdOrName) {
+              product = MASTER_PRODUCTS_DETAIL_MAP[key];
+              break;
+            }
+          }
+        }
+      }
+      if (!product && typeof FlottelierProductManager !== 'undefined') {
+        product = FlottelierProductManager.getById(productIdOrName) || FlottelierProductManager.getByName(productIdOrName);
+      }
+      if (!product) {
+        product = { id: 'P001', name: '데일리 소창 타월', price: 18000, category: '3겹 데일리', size: '35 × 85 cm', setComposition: '1장 단품' };
+      }
+      activeEmbroideryProduct = product;
+
+      const pieceCount = getProductPieceCount(product);
+      const embroideryFeePerPiece = 2000;
+      const totalEmbroideryFee = embroideryFeePerPiece * pieceCount;
+      const basePrice = product.price || 18000;
+      const totalPrice = basePrice + totalEmbroideryFee;
+
+      // Update Modal Header
+      const nameEl = document.getElementById('modalEmbProdName');
+      if (nameEl) nameEl.textContent = `[${product.name}] 실시간 자수 각인 시뮬레이터`;
+
+      const subEl = document.getElementById('modalEmbProdSub');
+      if (subEl) subEl.textContent = `${product.category} · ${product.size} (${product.setComposition || '단품'}) 순면 타월에 나만의 감성 문구를 새겨보세요.`;
+
+      // Update Price Breakdown in Modal
+      const costLabelEl = document.getElementById('modalEmbCostLabel');
+      if (costLabelEl) {
+        costLabelEl.textContent = pieceCount > 1 
+          ? `자수 각인 추가 공임 (${pieceCount}장 세트 전수 각인 · 장당 2,000원)`
+          : `자수 각인 추가 공임 (장당 2,000원)`;
+      }
+      const costValueEl = document.getElementById('modalEmbCostValue');
+      if (costValueEl) {
+        costValueEl.textContent = `+ ${totalEmbroideryFee.toLocaleString()}원`;
+      }
+      const basePriceEl = document.getElementById('modalEmbBasePrice');
+      if (basePriceEl) {
+        basePriceEl.textContent = `기본 상품 가격: ${basePrice.toLocaleString()}원`;
+      }
+      const totalPriceEl = document.getElementById('modalEmbTotalPrice');
+      if (totalPriceEl) {
+        totalPriceEl.textContent = `총 결제금액: ${totalPrice.toLocaleString()}원`;
+      }
+
+      // Set Default Initial Text
+      const defaultText = (product.name.split(' ')[0] || 'Ritual') + ' Ritual';
+      modalEmbState.text = defaultText;
+      if (modalEmbInput) modalEmbInput.value = defaultText;
+
+      const btnAdd = document.getElementById('btnModalAddCustomToCart');
+      if (btnAdd) {
+        btnAdd.textContent = `[${product.name}] 자수 적용 담기 (${totalPrice.toLocaleString()}원)`;
+      }
+
+      // Open Modal directly on screen!
+      openModal('modalEmbroideryCustom');
+      renderModalEmbroidery();
+    };
+
+    /* --------------------------------------------------------------------------
+       6. B2B Instant Price Calculator (Synchronized with Master Product DB)
+       -------------------------------------------------------------------------- */
+    const b2bSelect = document.getElementById('b2bProductSelect');
+    const b2bQty = document.getElementById('b2bQtyInput');
+    const b2bDiscountRate = document.getElementById('b2bDiscountRate');
+    const b2bTotalPrice = document.getElementById('b2bTotalPrice');
+
+    function initB2BSelector() {
+      if (typeof FlottelierProductManager !== 'undefined' && b2bSelect) {
+        b2bSelect.innerHTML = FlottelierProductManager.renderB2BSelectOptionsHtml();
+      }
+      calculateB2BQuote();
+    }
+
+    function calculateB2BQuote() {
+      if (!b2bSelect) return;
+      const basePrice = parseInt(b2bSelect.value, 10) || 18000;
+      const qty = parseInt(b2bQty.value, 10) || 10;
+
+      let rate = 0;
+      if (qty >= 100) rate = 0.20;
+      else if (qty >= 50) rate = 0.10;
+      else if (qty >= 30) rate = 0.05;
+
+      const subtotal = basePrice * qty;
+      const total = Math.round(subtotal * (1 - rate));
+
+      if (b2bDiscountRate) b2bDiscountRate.innerText = (rate * 100) + '% 대량 할인';
+      if (b2bTotalPrice) b2bTotalPrice.innerText = total.toLocaleString() + '원';
+    }
+
+    if (b2bSelect) b2bSelect.addEventListener('change', calculateB2BQuote);
+    if (b2bQty) b2bQty.addEventListener('input', calculateB2BQuote);
+    initB2BSelector();
+
+        /* --------------------------------------------------------------------------
+       7. 13 Persona Guide Switcher (13인 클라이언트 실전 맞춤 솔루션)
+       -------------------------------------------------------------------------- */
+    const personas = [
+      {
+        idTag: '[ P-01 ]',
+        name: '김예민 (29세)',
+        role: '초민감성 피부 & 트러블 케어',
+        quote: '"수건 먼지나 화학 잔여물 때문에 세안 후 얼굴이 붉어지곤 했어요."',
+        solution: '플로뜰리에는 4無(무형광·무표백·무염색·무향료) 공정과 독일 더마테스트 Excellent 인증으로 자극 없는 순수 자연 목화만을 피부에 닿게 합니다.'
+      },
+      {
+        idTag: '[ P-02 ]',
+        name: '김마미 (34세)',
+        role: '영유아 육아맘 & 패밀리 케어',
+        quote: '"아기 목욕 수건을 매번 가마솥에 삶는 게 너무 번거롭고 힘들었어요."',
+        solution: '플로뜰리에가 4차 정련을 100% 완료해 공급하므로, 받자마자 번거롭게 삶을 필요 없이 첫날부터 아기 피부에 안심하고 사용할 수 있습니다.'
+      },
+      {
+        idTag: '[ P-03 ]',
+        name: '김살림 (38세)',
+        role: '미니멀 살림러 & 욕실 정리',
+        quote: '"장마철에 수건에서 꿉꿉한 냄새가 나고 욕실 상부장이 너무 좁았어요."',
+        solution: '일반 테리 타월 대비 3배 빠른 55분 쾌속 건조로 세균 번식을 차단하고, 1/3 슬림 수납으로 수납장 공간이 3배로 넓어집니다.'
+      },
+      {
+        idTag: '[ P-04 ]',
+        name: '김다꾸 (25세)',
+        role: '이니셜 커스텀 & 감성 다이어리',
+        quote: '"나만의 이니셜이나 기념 문구가 정갈하게 수놓아진 타월을 갖고 싶어요."',
+        solution: 'HTML5 Canvas 실시간 자수 아틀리에를 통해 5가지 무채색 실 컬러와 서체, 자수 위치를 실시간 시뮬레이션하여 1:1 핸드메이드 각인 타월을 완성합니다.'
+      },
+      {
+        idTag: '[ P-05 ]',
+        name: '김환경 (31세)',
+        role: '제로웨이스트 & 친환경 라이프',
+        quote: '"플라스틱 비닐 쓰레기 없이 100% 생분해 에코 패키징을 원해요."',
+        solution: '플로뜰리에는 일체의 비닐 포장을 배제하고 100% 무비닐 재생 크라프트지와 순면 소창 끈으로만 묶어 친환경 종이 테이프로 출고합니다.'
+      },
+      {
+        idTag: '[ P-06 ]',
+        name: '김스테이 (42세)',
+        role: '감성 한옥 & 스테이 대표',
+        quote: '"숙소만의 브랜드 가치를 높이는 고급 어메니티 소창 타월을 찾고 있어요."',
+        solution: 'B2B 전용 센터를 통해 숙소 로고 각인, 수량별 최대 45% 할인 혜택, 실시간 직인 견적서 즉시 다운로드를 제공합니다.'
+      },
+      {
+        idTag: '[ P-07 ]',
+        name: '김웨딩 (30세)',
+        role: '신혼 혼수 & 프리미엄 답례품',
+        quote: '"양가 어르신과 하객분들께 격식 있는 전통 보자기 선물세트를 전하고 싶어요."',
+        solution: '전통 패브릭 보자기 포장과 신랑신부 이니셜 자수 각인, 신혼 혼수답례 전용 세트(P015)로 감사의 마음을 정성껏 전합니다.'
+      },
+      {
+        idTag: '[ P-08 ]',
+        name: '김시니어 (65세)',
+        role: '실버 세대 & 전화 주문 선호',
+        quote: '"작은 스마트폰 글씨가 잘 안 보이고 온라인 결제가 복잡해요."',
+        solution: '상단 [+] 큰 글씨 모드 토글로 시니어 전용 1.18배 가독성을 지원하며, 1588-7241 직통 간편 전화 주문 시스템을 완비했습니다.'
+      },
+      {
+        idTag: '[ P-09 ]',
+        name: '김웰니스 (33세)',
+        role: '마인드풀니스 & 웰니스 리추얼',
+        quote: '"아침 세안 시간이 단순한 씻기가 아니라 하루를 정돈하는 명상 시간이 되었으면 해요."',
+        solution: '상단 1분 세안 명상 오디오(Web Audio API)를 통해 세안하는 동안 고요한 사운드 리추얼을 경험할 수 있습니다.'
+      },
+      {
+        idTag: '[ P-10 ]',
+        name: '김에스테틱 (36세)',
+        role: '피부관리 에스테틱 원장',
+        quote: '"피부 시술 후 거즈 해면 대신 쓸 자극 없는 전문가용 세안 패드가 필요해요."',
+        solution: '2겹 가제 세안 와입스(P006)와 필링클렌징 패드(P008)로 스킨케어 흡수율을 높이고 마찰 자극을 0%로 줄여줍니다.'
+      },
+      {
+        idTag: '[ P-11 ]',
+        name: '김사우나 (45세)',
+        role: '스파 & 사우나 매니아',
+        quote: '"온몸을 푹 감싸면서도 물기를 순식간에 흡수하고 무겁지 않은 샤워 타월을 원해요."',
+        solution: '4겹 전신용 바스타월(P009)과 빅 바스시트(P010)로 대형 사이즈임에도 가볍고 폭포수 같은 흡수력과 빠른 건조를 제공합니다.'
+      },
+      {
+        idTag: '[ P-12 ]',
+        name: '김운동 (28세)',
+        role: '러닝 & 피트니스 매니아',
+        quote: '"운동 중 목에 편하게 걸치고 땀을 닦아도 냄새나 피부 쓸림이 없는 타월이 필요해요."',
+        solution: '스포츠러닝 롱타월(P002)의 슬림한 20×100cm 규격으로 목에 두르기 편하며 격렬한 유산소 운동 중에도 즉시 땀을 흡수합니다.'
+      },
+      {
+        idTag: '[ P-13 ]',
+        name: '김기업 (48세)',
+        role: '기업 총무 & 임직원 복지 담당',
+        quote: '"회사 창립기념일 및 VIP 고객용으로 공인 직인이 찍힌 정식 견적서와 세금계산서가 필요합니다."',
+        solution: 'B2B 특판 센터에서 수량별 견적을 실시간 계산하고, 대표이사 공인 직인이 날인된 정식 견적서 PDF를 즉시 발행합니다.'
+      }
+    ];
+
+    const personaChips = document.querySelectorAll('.btn-persona-chip');
+    personaChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        personaChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        const p = personas[parseInt(chip.dataset.pindex, 10)];
+        document.getElementById('pName').innerText = p.name;
+        document.getElementById('pRole').innerText = p.role;
+        document.getElementById('pQuote').innerText = p.quote;
+        document.getElementById('pSolution').innerText = p.solution;
+        document.querySelector('.persona-avatar-icon').innerText = p.idTag;
+      });
+    });
+
+    /* --------------------------------------------------------------------------
+       8. Shopping Cart & Drawer Engine
+       -------------------------------------------------------------------------- */
+    let cart = [];
+    const cartOverlay = document.getElementById('cartOverlay');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartBadgeCount = document.getElementById('cartBadgeCount');
+    const cartCountDrawer = document.getElementById('cartCountDrawer');
+    const cartItemsList = document.getElementById('cartItemsList');
+    const cartTotalSum = document.getElementById('cartTotalSum');
+
+    function toggleCart(open) {
+      if (open) {
+        cartOverlay.classList.add('active');
+        cartDrawer.classList.add('active');
+      } else {
+        cartOverlay.classList.remove('active');
+        cartDrawer.classList.remove('active');
+      }
+    }
+
+    document.getElementById('btnOpenCartDrawer').addEventListener('click', () => toggleCart(true));
+    document.getElementById('btnCloseCart').addEventListener('click', () => toggleCart(false));
+    cartOverlay.addEventListener('click', () => toggleCart(false));
+
+    window.addToCart = function(productIdOrTitle, customPrice = null, customOptions = null) {
+      let product = (typeof MASTER_PRODUCTS_DETAIL_MAP !== 'undefined') ? MASTER_PRODUCTS_DETAIL_MAP[productIdOrTitle] : null;
+      if (!product && typeof FlottelierProductManager !== 'undefined') {
+        product = FlottelierProductManager.getById(productIdOrTitle) || FlottelierProductManager.getByName(productIdOrTitle);
+      }
+
+      const itemTitle = product ? product.name : (productIdOrTitle || '데일리 소창 타월');
+      const itemPrice = customPrice !== null ? customPrice : (product ? product.price : 18000);
+      const itemId = product ? product.id : 'CUSTOM';
+      const itemUnit = product ? (product.compositionDetail || `${product.size} (${product.setComposition})`) : '4차 정련 완료 / 무비닐 에코 포장';
+
+      cart.push({
+        id: itemId,
+        title: itemTitle,
+        price: itemPrice,
+        unit: itemUnit,
+        custom: customOptions
+      });
+
+      updateCartUI();
+      showToast(`'${itemTitle}' 상품이 장바구니에 담겼습니다.`);
+      toggleCart(true);
+    };
+
+    function updateCartUI() {
+      cartBadgeCount.innerText = cart.length;
+      cartCountDrawer.innerText = cart.length;
+
+      if (cart.length === 0) {
+        cartItemsList.innerHTML = '<div class="cart-empty-message">[ 장바구니가 비어 있습니다 ]</div>';
+        cartTotalSum.innerText = '0원';
+        return;
+      }
+
+      let html = '';
+      let sum = 0;
+      cart.forEach((item, idx) => {
+        sum += item.price;
+        const customText = item.custom ? (item.custom.text || item.custom) : '';
+        const customCountInfo = (item.custom && item.custom.count) 
+          ? ` (${item.custom.count}장 각인 +${(item.custom.embroideryFee || (item.custom.count * 2000)).toLocaleString()}원)` 
+          : '';
+        const customBadge = item.custom ? ` · 자수 [${customText}]${customCountInfo}` : '';
+
+        html += `
+          <div class="cart-item-row">
+            <div>
+              <div class="cart-item-name">${item.title}</div>
+              <div class="cart-item-opt">${item.unit}${customBadge}</div>
+            </div>
+            <div style="text-align: right;">
+              <strong style="color: #000000; font-family: var(--font-mono);">${item.price.toLocaleString()}원</strong><br>
+              <button onclick="removeFromCart(${idx})" style="font-size: 11px; color: #000000; text-decoration: underline; margin-top: 4px; background: none; border: none; cursor: pointer;">삭제</button>
+            </div>
+          </div>
+        `;
+      });
+
+      cartItemsList.innerHTML = html;
+      cartTotalSum.innerText = sum.toLocaleString() + '원';
+    }
+
+    window.removeFromCart = function(idx) {
+      cart.splice(idx, 1);
+      updateCartUI();
+    };
+
+    document.getElementById('btnFastCheckout').addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('장바구니가 비어 있습니다.');
+        return;
+      }
+      alert('1초 간편결제 시스템으로 이동합니다. (네이버페이 / 카카오페이)');
+      cart = [];
+      updateCartUI();
+      toggleCart(false);
+      showToast('주문 결제가 성공적으로 완료되었습니다.');
+    });
+
+    /* --------------------------------------------------------------------------
+       9. Modal Controllers (안전 바인딩 및 모달 열기/닫기)
+       -------------------------------------------------------------------------- */
+    window.openModal = function(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+
+    window.closeModal = function(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    };
+
+    // 모달 닫기 버튼 공통 이벤트
+    document.querySelectorAll('.btn-close-modal').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeModal(btn.dataset.close);
+      });
+    });
+
+    // 오버레이 클릭 시 닫기
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal(overlay.id);
+      });
+    });
+
+    // 모달 열기 버튼 안전 바인딩 헬퍼 함수
+    function bindModalTrigger(btnId, modalId) {
+      const btn = document.getElementById(btnId);
+      if (btn) {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal(modalId);
+        });
+      }
+    }
+
+    bindModalTrigger('btnOpenTrialModalHeader', 'modalTrialApply');
+    bindModalTrigger('btnHeroTrial', 'modalTrialApply');
+    bindModalTrigger('btnOpenTrialModalBody', 'modalTrialApply');
+    bindModalTrigger('btnOpenCertModal', 'modalCertZoom');
+    bindModalTrigger('btnOpenRefiningModal', 'modalRefiningProcess');
+    bindModalTrigger('btnOpenPopupModal', 'modalPopupReservation');
+    bindModalTrigger('btnDownloadQuoteModal', 'modalQuoteView');
+
+    window.handlePopupSubmit = function(e) {
+      e.preventDefault();
+      closeModal('modalPopupReservation');
+      showToast('성수 쇼룸 예약이 확정되었습니다. 카카오 알림톡으로 티켓이 발송됩니다.');
+    };
+
+    window.handleTrialSubmit = function(e) {
+      e.preventDefault();
+      closeModal('modalTrialApply');
+      showToast('3,000원 소창 손수건 안심 체험 신청이 완료되었습니다. (써보고 안 맞으면 100% 환불 보장)');
+    };
+
+    window.downloadCertPdf = function() {
+      alert('KC 공인 4無 시험성적서 원본 PDF가 다운로드되었습니다.');
+    };
+
+    /* --------------------------------------------------------------------------
+       9-0. B2B & Hospitality 전화 상담 예약 및 장당 단가 실시간 계산기
+       -------------------------------------------------------------------------- */
+    window.setModalQuoteQty = function(val) {
+      const qtyInput = document.getElementById('modalQuoteQtyInput');
+      if (qtyInput) {
+        qtyInput.value = val;
+        updateModalQuoteCalculation();
+      }
+    };
+
+    window.updateModalQuoteCalculation = function() {
+      const prodSelect = document.getElementById('modalQuoteProductSelect');
+      const qtyInput = document.getElementById('modalQuoteQtyInput');
+      if (!prodSelect || !qtyInput) return;
+
+      const basePrice = parseInt(prodSelect.value, 10) || 13000;
+      let qty = parseInt(qtyInput.value, 10);
+      if (isNaN(qty) || qty < 1) qty = 1;
+
+      const prodName = prodSelect.options[prodSelect.selectedIndex]?.text.split(' (')[0] || '4차 정련 3겹 데일리 소창 타월';
+
+      // 할인율 구간 계산
+      let discountRate = 0;
+      let discountLabel = '0% (정가)';
+      let nextTierMsg = '20장 이상 주문 시 25% 할인이 적용됩니다!';
+      let activeTierId = '';
+
+      if (qty >= 300) {
+        discountRate = 0.45;
+        discountLabel = '45% 최대 특판 할인 적용!';
+        nextTierMsg = '★ 최대 할인 구간 (45% OFF)이 적용되었습니다!';
+        activeTierId = 'tierRow300';
+      } else if (qty >= 100) {
+        discountRate = 0.40;
+        discountLabel = '40% 대량 할인 적용!';
+        nextTierMsg = `300장까지 ${300 - qty}장 더 추가 시 45% 최대 할인 적용!`;
+        activeTierId = 'tierRow100';
+      } else if (qty >= 50) {
+        discountRate = 0.35;
+        discountLabel = '35% 대량 할인 적용! (BEST 1위)';
+        nextTierMsg = `100장까지 ${100 - qty}장 더 추가 시 40% 추가 할인!`;
+        activeTierId = 'tierRow50';
+      } else if (qty >= 20) {
+        discountRate = 0.25;
+        discountLabel = '25% 스타터 할인 적용!';
+        nextTierMsg = `50장까지 ${50 - qty}장 더 추가 시 35% 파격 할인!`;
+        activeTierId = 'tierRow20';
+      } else if (qty >= 10) {
+        discountRate = 0.10;
+        discountLabel = '10% 소량 할인 적용!';
+        nextTierMsg = `20장까지 ${20 - qty}장 더 추가 시 25% 추가 할인!`;
+      } else {
+        discountRate = 0;
+        discountLabel = '정가 (10장 이상부터 할인 적용)';
+        nextTierMsg = '20장 주문 시 25% 대량 할인이 적용됩니다!';
+      }
+
+      const unitPrice = Math.round(basePrice * (1 - discountRate));
+      const unitNet = Math.round(unitPrice / 1.1);
+      const totalPrice = unitPrice * qty;
+      const origTotal = basePrice * qty;
+      const discountAmt = origTotal - totalPrice;
+
+      // 빠른 수량 선택 버튼 active 클래스 토글
+      document.querySelectorAll('.btn-qty-preset').forEach(btn => {
+        if (parseInt(btn.dataset.qty, 10) === qty) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // 테이블 구간 하이라이팅
+      ['tierRow20', 'tierRow50', 'tierRow100', 'tierRow300'].forEach(id => {
+        const row = document.getElementById(id);
+        if (row) {
+          if (id === activeTierId) {
+            row.classList.add('highlight-row');
+          } else {
+            row.classList.remove('highlight-row');
+          }
+        }
+      });
+
+      // 할인율 및 금액 배너 실시간 업데이트
+      const elPercent = document.getElementById('modalDiscountPercentDisplay');
+      const elNextTier = document.getElementById('modalNextTierHint');
+      const elUnitPrice = document.getElementById('modalSummaryUnitPrice');
+      const elUnitNet = document.getElementById('modalSummaryUnitNet');
+      const elOrigTotal = document.getElementById('modalSummaryOrigTotal');
+      const elDiscountAmt = document.getElementById('modalSummaryDiscountAmt');
+      const elCards = document.getElementById('modalSummaryCards');
+      const elTotalPrice = document.getElementById('modalSummaryTotalPrice');
+
+      if (elPercent) elPercent.innerText = discountLabel;
+      if (elNextTier) elNextTier.innerText = nextTierMsg;
+      if (elUnitPrice) elUnitPrice.innerText = `장당 ${unitPrice.toLocaleString()}원 (VAT 포함)`;
+      if (elUnitNet) elUnitNet.innerText = `공급가 ${unitNet.toLocaleString()}원 (VAT 별도)`;
+      if (elOrigTotal) elOrigTotal.innerText = `${origTotal.toLocaleString()}원`;
+      if (elDiscountAmt) {
+        elDiscountAmt.innerText = discountRate > 0 
+          ? `-${discountAmt.toLocaleString()}원 (${Math.round(discountRate * 100)}% OFF)`
+          : '0원';
+      }
+      if (elCards) elCards.innerText = `${qty}매`;
+      if (elTotalPrice) elTotalPrice.innerText = `${totalPrice.toLocaleString()}원`;
+
+      // 직인 날인 공식 견적서 문서 실시간 업데이트
+      const qItem = document.getElementById('quoteItemDisplay');
+      const qQty = document.getElementById('quoteQtyDisplay');
+      const qPerUnit = document.getElementById('quotePerUnitDisplay');
+      const qOrig = document.getElementById('quoteOrigDisplay');
+      const qDiscount = document.getElementById('quoteDiscountDisplay');
+      const qCards = document.getElementById('quoteCardsDisplay');
+      const qTotal = document.getElementById('quoteTotalDisplay');
+
+      if (qItem) qItem.innerText = prodName;
+      if (qQty) qQty.innerText = qty;
+      if (qPerUnit) qPerUnit.innerText = `${unitPrice.toLocaleString()}원`;
+      if (qOrig) qOrig.innerText = `${origTotal.toLocaleString()}원`;
+      if (qDiscount) {
+        qDiscount.innerText = discountRate > 0
+          ? `-${Math.round(discountRate * 100)}% 대량 할인 (-${discountAmt.toLocaleString()}원)`
+          : '할인 없음 (정가 적용)';
+      }
+      if (qCards) qCards.innerText = `${qty}매 (무상 증정)`;
+      if (qTotal) qTotal.innerText = `${totalPrice.toLocaleString()}원`;
+    };
+
+    // 실시간 수신처 상호명/호스트명 연동
+    const consultStayInput = document.getElementById('consultStayName');
+    const consultHostInput = document.getElementById('consultHostName');
+    function syncQuoteCustomerName() {
+      const qCustomer = document.getElementById('quoteCustomerDisplay');
+      if (qCustomer) {
+        const stay = consultStayInput?.value.trim() || '스테이 제주';
+        const host = consultHostInput?.value.trim() || '정우진 호스트';
+        qCustomer.innerText = `${stay} (${host}님) 귀하`;
+      }
+    }
+    consultStayInput?.addEventListener('input', syncQuoteCustomerName);
+    consultHostInput?.addEventListener('input', syncQuoteCustomerName);
+
+    // 전화 상담 예약 폼 제출 핸들러
+    window.handleB2BConsultSubmit = function(e) {
+      e.preventDefault();
+      const stayName = document.getElementById('consultStayName')?.value || '스테이 제주';
+      const hostName = document.getElementById('consultHostName')?.value || '호스트';
+      const consultDate = document.getElementById('consultDate')?.value || '2026-09-10';
+      const consultTime = document.getElementById('consultTime')?.value || '14:00~15:30';
+
+      closeModal('modalQuoteView');
+      showToast(`[✓] ${stayName} (${hostName}님)의 1:1 전화 상담 예약이 완료되었습니다. (${consultDate} ${consultTime.split(' ')[0]}) 전담 매니저가 연락드립니다.`);
+    };
+
+    window.downloadB2BQuotePdf = function() {
+      alert('대표이사 직인이 공식 날인된 플로뜰리에 B2B 공식 견적서가 PDF/인쇄용으로 준비되었습니다.');
+      window.print();
+    };
+
+    // 견적 모달 트리거 버튼 클릭 시 즉시 최신 계산 수행
+    document.getElementById('btnDownloadQuoteModal')?.addEventListener('click', () => {
+      setTimeout(updateModalQuoteCalculation, 50);
+    });
+
+    /* --------------------------------------------------------------------------
+       9-1. 4차 정련 공정 과정 단계별 인터랙티브 스위처 (메인 섹션)
+       -------------------------------------------------------------------------- */
+    const refiningStepData = {
+      1: {
+        badge: '[ 1차 정련 ]',
+        cornerTitle: '1차 정련: 50℃ 온수 침지 (Soaking)',
+        cornerSub: '강화도 50℃ 청정 지하수 · 12시간 침지 · 호화 전 저온 팽윤(Swelling)',
+        mainTitle: '1차 정련: 50℃ 온수 침지 (Soaking)',
+        desc: '강화도 50℃ 청정 지하수에 12시간 동안 담가, 전분이 고온에서 굳기 전에 부드럽게 수화 팽윤시켜 원단 손상 없이 직조 옥수수 풀기를 자연스럽게 불려냅니다.',
+        image: 'images/refining_step1_soak.jpg'
+      },
+      2: {
+        badge: '[ 2차 정련 ]',
+        cornerTitle: '2차 정련: 100℃ 가마솥 열탕 삶음 (Boiling)',
+        cornerSub: '전통 무쇠 가마솥 · 목화 천연 왁스(70~80℃+) 용융 및 전분 85%+ 고온 박리',
+        mainTitle: '2차 정련: 100℃ 가마솥 열탕 삶음 (Boiling)',
+        desc: '전통 무쇠 가마솥에서 100℃ 끓는 물로 푹 삶아 목화 원사의 천연 왁스막을 녹여내고 잔류 전분을 85% 이상 시원하게 고온 박리·살균합니다.',
+        image: 'images/refining_step2_boil.jpg'
+      },
+      3: {
+        badge: '[ 3차 정련 ]',
+        cornerTitle: '3차 정련: 고압 청정수 린스 (Rinsing)',
+        cornerSub: '강화도 청정 암반수 · 3회 고압 회전 린스 · 요오드 검사 전분 불검출(ND)',
+        mainTitle: '3차 정련: 고압 청정수 린스 (Rinsing)',
+        desc: '강화도 청정 암반수로 3차례에 걸친 고압 회전 세척 린스를 통해 잔류 찌꺼기를 완전 배출하며, KS K 0210 시험 기준 요오드 전분 반응 불검출(Not Detected)을 달성합니다.',
+        image: 'images/refining_step3_rinse.jpg'
+      },
+      4: {
+        badge: '[ 4차 정련 완제품 ]',
+        cornerTitle: '4차 정련: 자연 건조 & 에어 텀블링 (Drying & Tumbling)',
+        cornerSub: '화학 유연제 0% · 에어 텀블링 미세 공기층 형성 · 100% 완제품 (Ready-to-Use)',
+        mainTitle: '삶는 수고를 플로뜰리에가 대신한 4차 정련 공정 과정 전체',
+        desc: '맑은 자연 바람 건조 후 고속 공기 기류(Air Tumbling) 물리 가공으로 섬유 조직 사이사이에 뽀송한 미세 공기층을 살려내어, 번거롭게 삶을 필요 없는 100% 완제품으로 출고합니다.',
+        image: 'images/refining_step4_dry.jpg'
+      }
+    };
+
+    window.setRefiningStep = function(stepNum) {
+      const data = refiningStepData[stepNum];
+      if (!data) return;
+
+      // 배경 이미지 부드러운 전환
+      const bgLayer = document.getElementById('refiningBgLayer');
+      if (bgLayer) {
+        bgLayer.style.backgroundImage = `url('${data.image}')`;
+      }
+
+      // 우측 상단 코너 라벨 텍스트 변경
+      const badge = document.getElementById('refiningStepBadge');
+      const cornerTitle = document.getElementById('refiningStepCornerTitle');
+      const cornerSub = document.getElementById('refiningStepCornerSub');
+      if (badge) badge.innerText = data.badge;
+      if (cornerTitle) cornerTitle.innerText = data.cornerTitle;
+      if (cornerSub) cornerSub.innerText = data.cornerSub;
+
+      // 좌측 하단 메인 타이틀 및 본문 설명 변경
+      const mainTitle = document.getElementById('refiningStepMainTitle');
+      const desc = document.getElementById('refiningStepDesc');
+      if (mainTitle) mainTitle.innerText = data.mainTitle;
+      if (desc) desc.innerText = data.desc;
+
+      // 정련 버튼 활성/비활성 스타일 토글
+      document.querySelectorAll('.btn-refining-step').forEach((btn, idx) => {
+        if (idx + 1 === stepNum) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    };
+
+    /* --------------------------------------------------------------------------
+       9-2. 모달 내부 [Craftsmanship Process] 4단계 공정 인터랙티브 뷰어
+       -------------------------------------------------------------------------- */
+    const modalRefiningData = {
+      1: {
+        badge: '1차 정련',
+        title: '50℃ 온수 침지 (Soaking)',
+        desc: '강화도 50℃ 청정 지하수에 12시간 동안 정성스럽게 담가, 전분 호화 전 원단 손상 없이 직조 천연 풀기를 부드럽게 수화 팽윤(Swelling)시켜 1차 자연 불림을 완료합니다.',
+        spec: '• <strong>온도 / 시간</strong>: 50℃ 지하수 / 12시간 침지<br>• <strong>핵심 팩트</strong>: 전분 호화(굳음) 방지를 위한 50℃ 저온 팽윤 및 원단 손상 방지 1차 불림',
+        imgBadge: '[ 1차 온수 침지 ]',
+        caption: '강화도 50℃ 청정 지하수 대야에 순면이 12시간 동안 침지되어 전분이 부드럽게 불어나는 1차 공정 영역'
+      },
+      2: {
+        badge: '2차 정련',
+        title: '100℃ 가마솥 열탕 삶음 (Boiling)',
+        desc: '전통 무쇠 가마솥에서 100℃ 끓는 물로 푹 삶아 목화 원사의 천연 왁스(융점 70~80℃)를 완전 용융시키고, 호화된 전분을 85% 이상 고온 박리·살균합니다.',
+        spec: '• <strong>온도 / 방식</strong>: 100℃ 전통 무쇠 가마솥 고온 열탕<br>• <strong>핵심 팩트</strong>: 화학 약품 0% 순수 열수로 목화 천연 왁스막 용융 및 잔류 전분 85%+ 고온 박리',
+        imgBadge: '[ 2차 100℃ 열탕 ]',
+        caption: '100℃ 끓는 전통 무쇠 가마솥에서 천연 왁스와 전분이 시원하게 박리되는 열탕 공정 영역'
+      },
+      3: {
+        badge: '3차 정련',
+        title: '청정 지하수 고압 린스 (Rinsing)',
+        desc: '강화도 청정 암반수로 3회 연속 고압 회전 린스 세척을 거쳐 섬유 올 사이사이에 끼어있는 미세 잔여물까지 맑고 깨끗하게 헹궈냅니다.',
+        spec: '• <strong>수질 / 횟수</strong>: 강화도 청정 암반수 / 3회 연속 고압 회전 린스<br>• <strong>핵심 팩트</strong>: KS K 0210 시험 기준 요오드 전분 반응 불검출(ND) 판정, 신생아 구강 접촉 안심',
+        imgBadge: '[ 3차 청정 린스 ]',
+        caption: '맑은 청정 암반수 수조에서 3차례에 걸쳐 미세 찌꺼기를 완전 헹궈내는 고압 린스 세척 공정 영역'
+      },
+      4: {
+        badge: '4차 정련',
+        title: '자연 건조 & 에어 텀블링 (Drying & Tumbling)',
+        desc: '맑은 자연 바람 건조 후 고속 공기 기류(Air Tumbling) 물리 가공으로 섬유 조직 사이사이에 뽀송한 미세 공기층을 살려내어 완벽한 부드러움을 완성합니다.',
+        spec: '• <strong>공정 방식</strong>: 청정 자연 바람 건조 + 화학유연제 0% 에어 텀블링<br>• <strong>핵심 팩트</strong>: 물리적 공기 기류로 미세 공기층 형성 ➔ 번거로운 삶기 없는 100% 완제품 (Ready-to-Use)',
+        imgBadge: '[ 4차 정련 완제품 ]',
+        caption: '청정 바람 건조 및 에어 텀블링으로 뽀송한 미세 공기층이 완성된 완제품 소창 타월 영역'
+      }
+    };
+
+    window.setModalRefiningStep = function(stepNum) {
+      const d = modalRefiningData[stepNum];
+      if (!d) return;
+
+      const img = document.getElementById('modalStepImg');
+      const imgBadge = document.getElementById('modalStepImgBadge');
+      const caption = document.getElementById('modalStepImgCaption');
+      const badge = document.getElementById('modalStepBadge');
+      const title = document.getElementById('modalStepTitle');
+      const desc = document.getElementById('modalStepDesc');
+      const spec = document.getElementById('modalStepSpec');
+
+      if (img && d.image) img.src = d.image;
+      if (imgBadge) imgBadge.innerText = d.imgBadge;
+      if (caption) caption.innerText = d.caption;
+      if (badge) badge.innerText = d.badge;
+      if (title) title.innerText = d.title;
+      if (desc) desc.innerText = d.desc;
+      if (spec) spec.innerHTML = d.spec;
+
+      document.querySelectorAll('.btn-modal-step').forEach((btn, idx) => {
+        if (idx + 1 === stepNum) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    };
+
+    /* --------------------------------------------------------------------------
+       10. Toast System
+       -------------------------------------------------------------------------- */
+    const toastBox = document.getElementById('toastBox');
+    const toastMessage = document.getElementById('toastMessage');
+    let toastTimeout = null;
+
+    function showToast(msg) {
+      toastMessage.innerText = msg;
+      toastBox.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toastBox.classList.remove('show');
+      }, 3500);
+    }
+  </script>
+</body>
+</html>

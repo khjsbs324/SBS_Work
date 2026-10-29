@@ -1,0 +1,144 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - generic [ref=f6e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f6e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f6e8]:
+    - generic [ref=f6e9]:
+      - generic [ref=f6e10]:
+        - generic [ref=f6e11]: 김혜지
+        - generic [ref=f6e12]:
+          - button "정보수정" [ref=f6e13] [cursor=pointer]
+          - button "비번변경" [ref=f6e14] [cursor=pointer]
+          - button "PIN변경" [ref=f6e15] [cursor=pointer]
+      - list [ref=f6e16]:
+        - listitem [ref=f6e17] [cursor=pointer]:
+          - generic [ref=f6e18]:
+            - generic [aria-hidden] [ref=f6e19]: 
+            - text: 훈련과정
+        - listitem [ref=f6e20] [cursor=pointer]:
+          - generic [ref=f6e21]:
+            - generic [aria-hidden] [ref=f6e22]: 
+            - text: 공지사항
+      - list [ref=f6e23]:
+        - listitem [ref=f6e24] [cursor=pointer]:
+          - generic [ref=f6e25]:
+            - paragraph [ref=f6e26]:
+              - generic [aria-hidden] [ref=f6e27]: 
+            - paragraph [ref=f6e28]: 고객센터
+        - listitem [ref=f6e29] [cursor=pointer]:
+          - generic [ref=f6e30]:
+            - paragraph [ref=f6e31]:
+              - generic [aria-hidden] [ref=f6e32]: 
+            - paragraph [ref=f6e33]: 카톡문의
+    - generic [ref=f6e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) B (1회차) 처음으로" [ref=f6e35]:
+        - caption [ref=f6e36]:
+          - generic [ref=f6e37]:
+            - generic [ref=f6e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) B (1회차)"
+            - link "처음으로" [ref=f6e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f6e48]:
+          - row [ref=f6e49]:
+            - cell "개강일" [ref=f6e50]
+            - cell "2026-10-13" [ref=f6e51]
+            - cell "종강일" [ref=f6e52]
+            - cell "2027-04-28" [ref=f6e53]
+            - cell "강사" [ref=f6e54]
+            - cell "김가경, 김혜지" [ref=f6e55]
+          - row [ref=f6e56]:
+            - cell "실시인원" [ref=f6e57]
+            - cell "9" [ref=f6e58]
+            - cell "수강인원" [ref=f6e59]
+            - cell "9" [ref=f6e60]
+            - cell "수강포기인원" [ref=f6e61]
+            - cell "0" [ref=f6e62]
+      - list [ref=f6e63]:
+        - listitem [ref=f6e64] [cursor=pointer]:
+          - generic [ref=f6e65]: 집체훈련
+        - listitem [ref=f6e66] [cursor=pointer]:
+          - generic [ref=f6e67]: 시간표
+        - listitem [ref=f6e68] [cursor=pointer]:
+          - generic [ref=f6e69]: 훈련생
+        - listitem [ref=f6e70] [cursor=pointer]:
+          - generic [ref=f6e71]: 사전평가
+        - listitem [ref=f6e72] [cursor=pointer]:
+          - generic [ref=f6e73]: 오리엔테이션
+        - listitem [ref=f6e74] [cursor=pointer]:
+          - generic [ref=f6e75]: 출석현황
+        - listitem [ref=f6e76] [cursor=pointer]:
+          - generic [ref=f6e77]: 능력단위평가
+        - listitem [ref=f6e78] [cursor=pointer]:
+          - generic [ref=f6e79]: 훈련생평가
+        - listitem [ref=f6e80] [cursor=pointer]:
+          - generic [ref=f6e81]: 보충수업
+        - listitem [ref=f6e82] [cursor=pointer]:
+          - generic [ref=f6e83]: 훈련일지
+        - listitem [ref=f6e84] [cursor=pointer]:
+          - generic [ref=f6e85]: 교재관리
+        - listitem [ref=f6e86] [cursor=pointer]:
+          - generic [ref=f6e87]: 상담일지
+        - listitem [ref=f6e88] [cursor=pointer]:
+          - generic [ref=f6e89]: 과정회의록
+        - listitem [ref=f6e90] [cursor=pointer]:
+          - generic [ref=f6e91]: 과정공지사항
+        - listitem [ref=f6e92] [cursor=pointer]:
+          - generic [ref=f6e93]: 지원내역
+        - listitem [ref=f6e94] [cursor=pointer]:
+          - generic [ref=f6e95]: 과제
+        - listitem [ref=f6e96] [cursor=pointer]:
+          - generic [ref=f6e97]: 서식공유
+        - listitem [ref=f6e98] [cursor=pointer]:
+          - generic [ref=f6e99]: 게시판생성
+        - listitem [ref=f6e100] [cursor=pointer]:
+          - generic [ref=f6e101]: 게시판순서변경
+      - table "평가정보 돌아가기" [ref=f6e102]:
+        - caption [ref=f6e103]:
+          - generic [ref=f6e104]:
+            - generic [ref=f6e105]: 평가정보
+            - link "돌아가기" [ref=f6e107] [cursor=pointer]:
+              - /url: ../app/appraisal.php?Pcode=500000&Lcode=8&AppCode=D
+        - rowgroup [ref=f6e114]:
+          - row [ref=f6e115]:
+            - cell "능력단위명" [ref=f6e116]
+            - cell "구현" [ref=f6e117]
+            - cell "평가일시" [ref=f6e118]
+            - cell "2026-10-23" [ref=f6e119]
+            - cell [ref=f6e120]:
+              - paragraph [ref=f6e121]: 94 / 100
+              - paragraph [ref=f6e122]: "패널티 : 0점"
+          - row [ref=f6e123]:
+            - cell "훈련강사" [ref=f6e124]
+            - cell "김*지" [ref=f6e125]
+            - cell "훈련생명" [ref=f6e126]
+            - cell "강애란" [ref=f6e127]
+      - table "평가내역 평가점수 일괄등록" [ref=f6e129]:
+        - caption [ref=f6e130]:
+          - generic [ref=f6e131]:
+            - generic [ref=f6e132]: 평가내역
+            - link "평가점수 일괄등록" [ref=f6e134] [cursor=pointer]:
+              - /url: "#"
+        - rowgroup [ref=f6e142]:
+          - row [ref=f6e143]:
+            - columnheader "문항" [ref=f6e144]
+            - columnheader "문제" [ref=f6e145]
+            - columnheader "모범답안" [ref=f6e146]
+            - columnheader "제출답안" [ref=f6e147]
+            - columnheader "파일" [ref=f6e148]
+            - columnheader "링크" [ref=f6e149]
+        - rowgroup [ref=f6e150]:
+          - row [ref=f6e151]:
+            - cell "1" [ref=f6e152]
+            - cell "정보설계와 디자인 방향성을 기반으로 콘텐츠·기능 요소를 구현하고, 개발 협업을 통해 최적화된 디지털 결과물을 제출해 주세요." [ref=f6e153]
+            - cell [ref=f6e154]:
+              - button "모범답안" [ref=f6e155] [cursor=pointer]
+            - cell [ref=f6e156]:
+              - button "제출답안" [ref=f6e157] [cursor=pointer]
+            - cell [ref=f6e158]:
+              - link "다운로드" [ref=f6e159] [cursor=pointer]:
+                - /url: /uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725272_45ad1b41.zip
+            - cell "-" [ref=f6e160]
+        - rowgroup [ref=f6e161]:
+          - row [ref=f6e162]:
+            - cell [ref=f6e163]

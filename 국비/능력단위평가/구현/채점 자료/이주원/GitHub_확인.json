@@ -1,0 +1,32 @@
+{
+  "student": "이주원",
+  "repository": "LJW8178/261023_Test",
+  "requestedCommit": "4e687bd441d335a1827703dab256f1968f41e79a",
+  "commit": "4e687bd441d335a1827703dab256f1968f41e79a",
+  "createdAt": "2026-10-23T03:12:10Z",
+  "title": "20261023",
+  "url": "https://github.com/LJW8178/261023_Test/commit/4e687bd441d335a1827703dab256f1968f41e79a",
+  "files": [
+    ".playwright-mcp/console-2026-10-23T00-15-24-556Z.log",
+    ".playwright-mcp/page-2026-10-23T00-15-24-604Z.yml",
+    ".playwright-mcp/page-2026-10-23T01-43-57-839Z.yml",
+    ".playwright-mcp/page-2026-10-23T01-53-43-667Z.yml",
+    "image/icon/lang_kor.gif",
+    "image/icon/logo.jpg",
+    "image/icon/sns_facebook.gif",
+    "image/icon/sns_insta.gif",
+    "image/icon/sns_youtube.png",
+    "image/image/file1_1681087061mb8i5l6zdx.jpg",
+    "image/image/file1_1715318030bhfwnjum09.jpg",
+    "image/image/file1_1715319042z7nuju2l3p.jpg",
+    "image/products/file1_1681087061mb8i5l6zdx.jpg",
+    "image/products/file1_169994521784nzg4whv7.jpg",
+    "image/products/file1_1699945409grwui60w6u.jpg",
+    "image/products/file1_1715318030bhfwnjum09.jpg",
+    "image/products/file1_1715319042z7nuju2l3p.jpg",
+    "index.html",
+    "memo.md",
+    "style.css"
+  ],
+  "isError": false
+}

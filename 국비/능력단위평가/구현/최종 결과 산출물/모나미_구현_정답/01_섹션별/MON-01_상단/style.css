@@ -1,0 +1,219 @@
+/* ============================================================
+   공통 CSS — 모든 섹션에서 사용하는 수업 코드
+   참고: UIUXB_2610 / 1코딩/마켓컬리/와이어프레임/style.css
+   원본의 초기화, .con, Flex, 이미지 규칙을 모나미 화면에 맞게 적용했습니다.
+   협업: 이 부분을 바꾸면 모든 섹션에 영향이 있습니다.
+   통합: 초기화와 @font-face는 한 번만 둡니다.
+   글꼴: 원본에서 사용한 Pretendard의 400/500/700을 로컬 파일로 연결합니다.
+   ============================================================ */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../font/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../font/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../font/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* .con은 전체 폭이 아니라 내부 콘텐츠 폭입니다.
+   원본 .con의 1050px을 모나미 데스크톱 기준 1400px로 조정했습니다. */
+.con {
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* img의 기본 아래쪽 글자 간격을 없애고 블록으로 배치합니다. */
+img {
+  display: block;
+}
+
+/* 원본 products-title / products-desc를 재사용한 제목 패턴입니다. */
+.section-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #111;
+}
+
+.section-desc {
+  font-size: 13px;
+  color: #777;
+}
+
+.title-line {
+  width: 26px;
+  height: 3px;
+  background-color: #c81939;
+}
+
+
+
+/* MON-01 시작 — 상단 전용. utility-nav와 main-nav를 구분해 목록 규칙이 섞이지 않게 합니다. */
+.utility-menu {
+  border: 1px solid #eee;
+}
+
+.utility-con {
+  height: 56px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utility-left {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.language {
+  width: 86px;
+  height: 28px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+.social-list {
+  display: flex;
+  gap: 6px;
+}
+
+.social-list img {
+  width: 30px;
+  height: 30px;
+}
+
+.utility-nav ul {
+  display: flex;
+  gap: 12px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.main-header {
+  border: 1px solid #eee;
+}
+
+.m-header-con {
+  height: 89px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  width: 162px;
+}
+
+.brand img {
+  width: 162px;
+  height: 89px;
+}
+
+.main-nav {
+  width: 1070px;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav li {
+  font-size: 16px;
+  color: #333;
+}
+
+/* 원본 #actions 아이콘의 :hover 패턴으로 글자 색만 바꿉니다. */
+.main-nav li:hover {
+  color: #c81939;
+}
+
+/* 검색 이미지와 전체 메뉴 아이콘을 담은 바깥 부모입니다.
+   display:flex: 두 자식을 기본 방향인 가로로 나란히 놓습니다.
+   gap:28px: 검색 이미지와 메뉴 아이콘 사이를 28px 띄웁니다.
+   align-items:center: 높이가 다른 두 아이콘의 세로 중심을 맞춥니다. */
+.actions {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+/* 검색은 실제 이미지 파일이므로 이미지의 표시 크기를 지정합니다. */
+.actions img {
+  width: 19px;
+  height: 18px;
+}
+
+/* 메뉴 아이콘의 부모: 안쪽 div 3개의 배치 방법을 정합니다.
+   width:20px: 메뉴 아이콘 묶음의 너비입니다.
+   display:flex: 안쪽 자식들을 Flex 방식으로 배치합니다.
+   flex-direction:column: 자식의 배치 방향을 가로에서 세로로 바꿉니다.
+   gap:5px: 첫째·둘째 선 사이와 둘째·셋째 선 사이에 각각 5px 간격을 둡니다.
+   선 3개의 높이 6px + 간격 두 곳 10px = 아이콘 전체 높이 16px입니다. */
+.menu-lines {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* 메뉴 아이콘의 자식: .menu-lines 안에 있는 div 모두에 적용합니다.
+   빈 div도 너비 20px·높이 2px·회색 배경을 가지면 얇은 가로선으로 보입니다.
+   이 규칙 하나가 자식 3개에 공통 적용되어 같은 모양의 선 3개가 만들어집니다.
+   다른 곳의 div에는 이 규칙이 적용되지 않습니다. */
+.menu-lines div {
+  width: 20px;
+  height: 2px;
+  background-color: #555;
+}
+
+/* MON-01 끝 */

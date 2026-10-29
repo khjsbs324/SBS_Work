@@ -1,0 +1,221 @@
+{
+  "course": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) B (1회차)",
+  "Pcode": "500000",
+  "BoardCode": "1",
+  "version": "ver5",
+  "abilityUnit": "구현",
+  "unitEndDate": "2026-10-23",
+  "postingDate": "2026-10-26",
+  "meetingChanged": false,
+  "sameMaterialsAsCourseA": true,
+  "registration": [
+    {
+      "group": "A",
+      "preflight": {
+        "valid": true,
+        "Pcode": "500000",
+        "BoardCode": "1",
+        "title": "[능력단위평가_지원내역] 구현 A그룹 지원자료",
+        "date": "2026-10-26",
+        "images": 3,
+        "anchors": 10,
+        "codeBlocks": 6,
+        "placeholder": false,
+        "file": "구현_A그룹_학습자료.zip"
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver5\\/bbs\\/list.php?Pcode=500000\\u0026BoardCode=1\"}"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t1\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 A그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-10-26\n\t\t\t\t\t\t\t\t\t",
+          "id": "11",
+          "onclick": "location.href='./view.php?Pcode=500000&BoardCode=1&no=11'"
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "preflight": {
+        "valid": true,
+        "Pcode": "500000",
+        "BoardCode": "1",
+        "title": "[능력단위평가_지원내역] 구현 B그룹 지원자료",
+        "date": "2026-10-26",
+        "images": 3,
+        "anchors": 10,
+        "codeBlocks": 6,
+        "placeholder": false,
+        "file": "구현_B그룹_학습자료.zip"
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver5\\/bbs\\/list.php?Pcode=500000\\u0026BoardCode=1\"}"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t2\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 B그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-10-26\n\t\t\t\t\t\t\t\t\t",
+          "id": "12",
+          "onclick": "location.href='./view.php?Pcode=500000&BoardCode=1&no=12'"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "preflight": {
+        "valid": true,
+        "Pcode": "500000",
+        "BoardCode": "1",
+        "title": "[능력단위평가_지원내역] 구현 C그룹 지원자료",
+        "date": "2026-10-26",
+        "images": 3,
+        "anchors": 10,
+        "codeBlocks": 7,
+        "placeholder": false,
+        "file": "구현_C그룹_학습자료.zip"
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver5\\/bbs\\/list.php?Pcode=500000\\u0026BoardCode=1\"}"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t3\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 C그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-10-26\n\t\t\t\t\t\t\t\t\t",
+          "id": "13",
+          "onclick": "location.href='./view.php?Pcode=500000&BoardCode=1&no=13'"
+        }
+      ]
+    }
+  ],
+  "verification": [
+    {
+      "group": "A",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/bbs/view.php?Pcode=500000&BoardCode=1&no=11",
+      "course": true,
+      "textMatches": true,
+      "metadata": [
+        "\n\t\t\t\t제목\n\t\t\t\t[능력단위평가_지원내역] 구현 A그룹 지원자료\n\t\t\t",
+        "\n\t\t\t\t작성자\n\t\t\t\t김혜지\n\t\t\t\t작성일\n\t\t\t\t2026-10-26\n\t\t\t"
+      ],
+      "images": [
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724948_b874cd06.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724948_9e459563.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724925_7ff2a0fe.png",
+          "loaded": true
+        }
+      ],
+      "anchors": true,
+      "codeBlocks": 6,
+      "style": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "padding": "14px 16px"
+      },
+      "attachment": {
+        "status": 200,
+        "bytes": 316854,
+        "exact": true
+      },
+      "anchorScroll": true
+    },
+    {
+      "group": "B",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/bbs/view.php?Pcode=500000&BoardCode=1&no=12",
+      "course": true,
+      "textMatches": true,
+      "metadata": [
+        "\n\t\t\t\t제목\n\t\t\t\t[능력단위평가_지원내역] 구현 B그룹 지원자료\n\t\t\t",
+        "\n\t\t\t\t작성자\n\t\t\t\t김혜지\n\t\t\t\t작성일\n\t\t\t\t2026-10-26\n\t\t\t"
+      ],
+      "images": [
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724987_0040eb6d.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724987_855324f3.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792724987_1bdf8b9c.png",
+          "loaded": true
+        }
+      ],
+      "anchors": true,
+      "codeBlocks": 6,
+      "style": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "padding": "14px 16px"
+      },
+      "attachment": {
+        "status": 200,
+        "bytes": 318687,
+        "exact": true
+      },
+      "anchorScroll": true
+    },
+    {
+      "group": "C",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/bbs/view.php?Pcode=500000&BoardCode=1&no=13",
+      "course": true,
+      "textMatches": true,
+      "metadata": [
+        "\n\t\t\t\t제목\n\t\t\t\t[능력단위평가_지원내역] 구현 C그룹 지원자료\n\t\t\t",
+        "\n\t\t\t\t작성자\n\t\t\t\t김혜지\n\t\t\t\t작성일\n\t\t\t\t2026-10-26\n\t\t\t"
+      ],
+      "images": [
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792725007_4734f6f1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792725010_fbebe879.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792725013_47d28e47.png",
+          "loaded": true
+        }
+      ],
+      "anchors": true,
+      "codeBlocks": 7,
+      "style": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "padding": "14px 16px"
+      },
+      "attachment": {
+        "status": 200,
+        "bytes": 299391,
+        "exact": true
+      },
+      "anchorScroll": true
+    }
+  ],
+  "finalList": [
+    {
+      "text": "3\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 C그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-10-26",
+      "id": "13"
+    },
+    {
+      "text": "2\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 B그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-10-26",
+      "id": "12"
+    },
+    {
+      "text": "1\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 A그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-10-26",
+      "id": "11"
+    }
+  ]
+}

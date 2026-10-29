@@ -1,0 +1,28 @@
+{
+  "student": "박선환",
+  "repository": "gugu99-seon/hawn-10.23-",
+  "requestedCommit": "3f539cb3a4c2a0cc380e91d5a4ed914802e18a5f",
+  "commit": "3f539cb3a4c2a0cc380e91d5a4ed914802e18a5f",
+  "createdAt": "2026-10-23T03:08:56Z",
+  "title": "10.23 시험",
+  "url": "https://github.com/gugu99-seon/hawn-10.23-/commit/3f539cb3a4c2a0cc380e91d5a4ed914802e18a5f",
+  "files": [
+    "monami 시험/image/banner/visual1.jpg",
+    "monami 시험/image/icon/lang_kor.gif",
+    "monami 시험/image/icon/sns_facebook.gif",
+    "monami 시험/image/icon/sns_insta.gif",
+    "monami 시험/image/icon/sns_youtube.png",
+    "monami 시험/image/icon/tm_bar.gif",
+    "monami 시험/image/list/product-01.jpg",
+    "monami 시험/image/list/product-02.jpg",
+    "monami 시험/image/list/product-03.jpg",
+    "monami 시험/image/list/product-04.jpg",
+    "monami 시험/image/list/product-05.jpg",
+    "monami 시험/image/list/product-06.jpg",
+    "monami 시험/image/list/product-07.jpg",
+    "monami 시험/index.html",
+    "monami 시험/memo.md",
+    "monami 시험/style.css"
+  ],
+  "isError": false
+}

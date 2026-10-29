@@ -1,0 +1,48 @@
+{
+  "name": "박선환",
+  "Sid": "sbsartdj1167",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1167",
+  "downloads": [
+    {
+      "filename": "1792725263_d1be2f2d.zip",
+      "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725263_d1be2f2d.zip",
+      "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/박선환/원본/1792725263_d1be2f2d.zip"
+    }
+  ],
+  "currentScore": "0 / 100",
+  "submittedAnswer": "",
+  "submittedLinks": [
+    {
+      "href": "https://github.com/gugu99-seon/hawn-10.23-.git",
+      "onclick": null
+    }
+  ],
+  "receivedAt": "2026-10-26T04:22:17.133Z",
+  "archiveBytes": 717666,
+  "sha256": "a22974e4e56520a204717a28880bc2d1ffd50c7aa59797d9497eb23b0274fd3f",
+  "memberCount": 77,
+  "codeFiles": [
+    {
+      "path": "학생_검토사본\\monami 시험\\index.html",
+      "bytes": 3383,
+      "monami": true
+    },
+    {
+      "path": "학생_검토사본\\monami 시험\\memo.md",
+      "bytes": 2407,
+      "monami": true
+    },
+    {
+      "path": "학생_검토사본\\monami 시험\\style.css",
+      "bytes": 4059,
+      "monami": false
+    }
+  ],
+  "git": [
+    {
+      "directory": "학생_검토사본",
+      "head": "ref: refs/heads/main",
+      "commit": "3f539cb3a4c2a0cc380e91d5a4ed914802e18a5f"
+    }
+  ]
+}

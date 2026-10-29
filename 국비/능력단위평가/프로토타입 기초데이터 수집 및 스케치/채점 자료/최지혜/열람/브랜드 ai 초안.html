@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>브랜드 스토리 - 플로뜰리에 (Flottelier) | 4차 정련 소창 리추얼 (와이어프레임 에디션)</title>
+  
+  <!-- Typography (Google Fonts: Noto Serif KR, Cormorant Garamond, Noto Sans KR) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #18181B;          /* Pure Charcoal Black */
+      --color-primary-light: #F4F4F5;    /* Light Neutral Gray */
+      --color-accent-terracotta: #52525B;/* Muted Dark Neutral */
+      --color-accent-sage: #71717A;      /* Mid Gray */
+      --color-accent-gold: #27272A;      /* Dark Charcoal */
+      --color-bg-main: #FFFFFF;          /* Pure White */
+      --color-bg-card: #FFFFFF;
+      --color-bg-surface: #FAFAFA;
+      --color-text-main: #18181B;        /* High Contrast Charcoal */
+      --color-text-sub: #52525B;         /* Slate Neutral Grey */
+      --color-text-muted: #71717A;       /* Soft Wireframe Grey */
+      --color-border: #E4E4E7;           /* Crisp Wireframe Border */
+      --wf-border-dashed: 1px dashed #D4D4D8;
+      
+      --font-serif: 'Noto Serif KR', 'Cormorant Garamond', serif;
+      --font-sans: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'Courier New', Courier, monospace;
+      --transition-smooth: all 0.2s ease;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg-main);
+      color: var(--color-text-main);
+      line-height: 1.85;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; border: none; background: none; cursor: pointer; }
+
+    /* Sticky Header (100% Achromatic Wireframe) */
+    .header {
+      position: sticky; top: 0; left: 0; width: 100%;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+      z-index: 100;
+      transition: var(--transition-smooth);
+    }
+    .header-inner {
+      max-width: 1240px; margin: 0 auto;
+      padding: 14px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand-logo-wrap { display: flex; align-items: center; gap: 12px; }
+    .logo-emblem { width: 30px; height: 30px; }
+    .brand-logo {
+      font-family: var(--font-serif);
+      font-size: 22px; font-weight: 700;
+      color: var(--color-primary); letter-spacing: -0.3px;
+    }
+    .brand-logo small {
+      font-family: var(--font-sans);
+      font-size: 11px; font-weight: 600;
+      color: var(--color-text-muted); margin-left: 6px; letter-spacing: 0.5px;
+    }
+
+    .nav-menu { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-item a {
+      font-size: 13px; font-weight: 500;
+      color: var(--color-text-sub); transition: var(--transition-smooth);
+      position: relative; padding: 6px 0;
+    }
+    .nav-item a:hover, .nav-item.active a { color: var(--color-primary); font-weight: 700; }
+    .nav-item a::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 2px; background: var(--color-primary); transition: width 0.2s ease;
+    }
+    .nav-item a:hover::after, .nav-item.active a::after { width: 100%; }
+
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .btn-header-cta {
+      background: var(--color-primary); color: #FFFFFF;
+      font-size: 12px; font-weight: 700; padding: 8px 16px; border-radius: 4px;
+      transition: var(--transition-smooth); border: 1px solid var(--color-primary);
+    }
+    .btn-header-cta:hover { background: #000000; }
+
+    /* Page Container */
+    .main-content {
+      position: relative; z-index: 10;
+      max-width: 1180px; margin: 0 auto;
+      padding: 0 24px 120px;
+    }
+
+    .section-wrap { margin-top: 90px; position: relative; }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 11.5px; font-weight: 700; color: var(--color-text-muted);
+      margin-bottom: 8px; display: inline-block; letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .section-title {
+      font-family: var(--font-serif); font-size: 32px; font-weight: 700;
+      color: var(--color-primary); line-height: 1.4; margin-bottom: 14px; letter-spacing: -0.5px;
+    }
+    .section-desc {
+      font-size: 14.5px; color: var(--color-text-sub);
+      max-width: 700px; line-height: 1.85; margin-bottom: 36px; word-break: keep-all;
+    }
+
+    /* Hero */
+    .hero-section { padding: 70px 0 50px; text-align: center; position: relative; }
+    .hero-badge-wrap {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--color-bg-surface); border: 1px solid var(--color-border);
+      padding: 6px 16px; border-radius: 4px;
+      font-size: 11.5px; font-weight: 700; color: var(--color-primary);
+      margin-bottom: 24px; font-family: var(--font-mono);
+    }
+    .hero-title {
+      font-family: var(--font-serif); font-size: 44px; font-weight: 700;
+      color: var(--color-primary); line-height: 1.35; margin-bottom: 18px; letter-spacing: -1px;
+    }
+    .hero-subtitle {
+      font-size: 16px; font-weight: 400; color: var(--color-text-sub);
+      max-width: 720px; margin: 0 auto 36px; line-height: 1.9; word-break: keep-all;
+    }
+    .hero-btn-group { display: flex; align-items: center; justify-content: center; gap: 12px; }
+    .btn-main {
+      padding: 12px 26px; border-radius: 4px; font-size: 13.5px; font-weight: 700;
+      background: var(--color-primary); color: #FFFFFF; border: 1.5px solid var(--color-primary);
+      transition: var(--transition-smooth); cursor: pointer;
+    }
+    .btn-main:hover { background: #000000; border-color: #000000; }
+    .btn-secondary {
+      padding: 12px 24px; border-radius: 4px; font-size: 13.5px; font-weight: 700;
+      background: #FFFFFF; color: var(--color-primary); border: 1.5px solid var(--color-border);
+      transition: var(--transition-smooth); cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: var(--color-primary); background: var(--color-primary-light); }
+
+    /* Manifesto */
+    .manifesto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 46px; }
+    .manifesto-card {
+      background: var(--color-bg-surface); border: 1px solid var(--color-border);
+      border-radius: 8px; padding: 32px 24px; transition: var(--transition-smooth);
+      text-align: left;
+    }
+    .manifesto-card:hover {
+      border-color: var(--color-primary);
+    }
+    .card-num { font-family: var(--font-mono); font-size: 20px; font-weight: 800; color: var(--color-text-muted); margin-bottom: 12px; }
+    .card-heading { font-family: var(--font-serif); font-size: 19px; font-weight: 700; color: var(--color-primary); margin-bottom: 10px; }
+    .card-body { font-size: 13.5px; color: var(--color-text-sub); line-height: 1.8; word-break: keep-all; }
+
+    /* Process */
+    .process-container {
+      background: var(--color-bg-card); border: 1px solid var(--color-border);
+      border-radius: 8px; padding: 32px;
+    }
+    .process-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+    .tab-btn {
+      padding: 14px 12px; background: var(--color-bg-surface);
+      border: 1px solid var(--color-border); border-radius: 6px;
+      text-align: left; transition: var(--transition-smooth); cursor: pointer;
+    }
+    .tab-btn.active {
+      background: var(--color-primary); color: #FFFFFF;
+      border-color: var(--color-primary);
+    }
+    .tab-step-badge { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; opacity: 0.8; display: block; margin-bottom: 3px; }
+    .tab-step-title { font-size: 13.5px; font-weight: 700; }
+
+    .process-display-area {
+      display: grid; grid-template-columns: 1fr 1.1fr; gap: 30px; align-items: center;
+      background: var(--color-bg-surface); border: var(--wf-border-dashed); border-radius: 6px; padding: 28px;
+    }
+    .process-visual-box {
+      background: #FFFFFF; border-radius: 6px; height: 240px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      border: 1px solid var(--color-border); text-align: center; padding: 20px;
+    }
+    .process-visual-icon { font-size: 40px; margin-bottom: 10px; }
+    .process-detail-info h4 { font-family: var(--font-serif); font-size: 20px; font-weight: 700; color: var(--color-primary); margin-bottom: 10px; }
+    .process-detail-info p { font-size: 13.5px; color: var(--color-text-sub); line-height: 1.85; margin-bottom: 16px; word-break: keep-all; }
+    .process-feature-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+    .feature-pill { background: #FFFFFF; color: var(--color-primary); border: 1px solid var(--color-border); font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 4px; font-family: var(--font-mono); }
+
+    /* Certifications */
+    .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 24px; }
+    .cert-card {
+      background: var(--color-bg-surface); border: 1px solid var(--color-border);
+      border-radius: 6px; padding: 22px 16px; text-align: center; transition: var(--transition-smooth);
+    }
+    .cert-card:hover { border-color: var(--color-primary); }
+    .cert-icon-circle {
+      width: 40px; height: 40px; margin: 0 auto 10px; border-radius: 4px;
+      background: #FFFFFF; border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: var(--color-primary); font-family: var(--font-mono); font-weight: 800;
+    }
+    .cert-card h4 { font-size: 14.5px; font-weight: 700; color: var(--color-primary); margin-bottom: 6px; }
+    .cert-card p { font-size: 12px; color: var(--color-text-sub); line-height: 1.6; word-break: keep-all; }
+
+    .kc-banner-box {
+      background: var(--color-bg-surface); border: 1.5px solid var(--color-primary);
+      color: var(--color-primary); border-radius: 6px; padding: 28px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .kc-banner-box h3 { font-family: var(--font-serif); font-size: 20px; font-weight: 700; margin-bottom: 4px; color: var(--color-primary); }
+    .kc-banner-box p { font-size: 13px; color: var(--color-text-sub); line-height: 1.7; word-break: keep-all; }
+    .btn-kc-modal {
+      background: var(--color-primary); color: #FFFFFF; font-size: 12.5px; font-weight: 700;
+      padding: 10px 20px; border-radius: 4px; transition: var(--transition-smooth); white-space: nowrap; border: 1px solid var(--color-primary);
+    }
+    .btn-kc-modal:hover { background: #000000; }
+
+    /* Comparison */
+    .comparison-section {
+      background: var(--color-bg-card); border: 1px solid var(--color-border);
+      border-radius: 8px; padding: 32px; margin-top: 40px;
+    }
+    .slider-box-container {
+      position: relative; height: 260px; border-radius: 6px;
+      overflow: hidden; border: 1px solid var(--color-border);
+      margin: 20px 0 16px; background: #FFFFFF;
+    }
+    .comparison-layer {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; font-weight: 600; user-select: none;
+    }
+    .layer-before { background: #FAFAFA; color: #52525B; }
+    .layer-after {
+      background: #F4F4F5; color: var(--color-primary); width: 50%;
+      border-right: 2px solid var(--color-primary); z-index: 2; overflow: hidden;
+    }
+    .layer-content {
+      min-width: 900px; text-align: center; display: flex;
+      flex-direction: column; align-items: center; gap: 8px;
+    }
+    .layer-badge { font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; padding: 4px 12px; border-radius: 4px; }
+    .slider-range-input {
+      width: 100%; height: 6px; border-radius: 3px; background: #E4E4E7;
+      outline: none; -webkit-appearance: none; cursor: pointer; accent-color: var(--color-primary);
+    }
+
+    /* Studio */
+    .studio-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      background: var(--color-bg-card); border: 1px solid var(--color-border);
+      border-radius: 8px; padding: 32px;
+    }
+    .canvas-preview-frame {
+      background: #FAFAFA; border: var(--wf-border-dashed);
+      border-radius: 6px; height: 260px; position: relative;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .towel-woven-pattern {
+      position: absolute; width: 100%; height: 100%; opacity: 0.05;
+      background: repeating-linear-gradient(45deg, #000, #000 1px, transparent 1px, transparent 4px);
+    }
+    #liveEmbroideryText {
+      position: relative; font-size: 32px; font-weight: 700;
+      color: #18181B; font-family: var(--font-serif);
+      transition: var(--transition-smooth);
+    }
+    .studio-control-panel label { display: block; font-size: 12.5px; font-weight: 700; color: var(--color-text-main); margin-bottom: 5px; }
+    .studio-input {
+      width: 100%; padding: 9px 12px; font-size: 13.5px;
+      border: 1px solid var(--color-border); border-radius: 4px; margin-bottom: 14px;
+      outline: none; transition: var(--transition-smooth);
+    }
+    .studio-input:focus { border-color: var(--color-primary); }
+    .color-chips-row { display: flex; gap: 8px; margin-bottom: 18px; }
+    .color-chip-btn {
+      width: 28px; height: 28px; border-radius: 4px; border: 1.5px solid #D4D4D8;
+      cursor: pointer; transition: var(--transition-smooth);
+    }
+    .color-chip-btn:hover, .color-chip-btn.active { border-color: #000000; transform: scale(1.1); }
+
+    /* CTA Grid */
+    .cta-banner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+    .cta-card {
+      background: var(--color-bg-surface); border: 1px solid var(--color-border);
+      border-radius: 8px; padding: 30px 24px; position: relative;
+    }
+    .cta-card.highlight { background: #FFFFFF; border: 1.5px solid var(--color-primary); }
+    .cta-card h3 { font-family: var(--font-serif); font-size: 20px; font-weight: 700; color: var(--color-primary); margin: 6px 0 10px; }
+    .cta-card p { font-size: 13px; color: var(--color-text-sub); line-height: 1.8; margin-bottom: 18px; word-break: keep-all; }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(2px);
+      display: none; align-items: center; justify-content: center;
+      z-index: 1000; padding: 20px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: #FFFFFF; border-radius: 8px; max-width: 580px; width: 100%;
+      max-height: 90vh; overflow-y: auto; padding: 30px; position: relative;
+      border: 1px solid var(--color-border); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+    .modal-close-btn {
+      position: absolute; top: 16px; right: 16px; width: 28px; height: 28px;
+      border-radius: 4px; background: #F4F4F5; font-size: 15px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; color: #52525B; cursor: pointer;
+      border: 1px solid #E4E4E7;
+    }
+    .modal-close-btn:hover { background: #E4E4E7; color: #18181B; }
+
+    /* Footer */
+    .footer {
+      background: #FAFAFA; border-top: 1px solid var(--color-border);
+      padding: 44px 24px; font-size: 11.5px; color: var(--color-text-sub);
+      line-height: 1.85; text-align: center; position: relative; z-index: 10;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 18px; margin-bottom: 14px; flex-wrap: wrap; }
+    .footer-links a:hover { color: var(--color-primary); text-decoration: underline; }
+
+    @media (max-width: 960px) {
+      .manifesto-grid { grid-template-columns: 1fr; }
+      .process-tabs { grid-template-columns: repeat(2, 1fr); }
+      .process-display-area { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      .studio-grid { grid-template-columns: 1fr; }
+      .cta-banner-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 32px; }
+      .kc-banner-box { flex-direction: column; text-align: center; gap: 14px; }
+    }
+    @media (max-width: 640px) {
+      .nav-menu { display: none; }
+      .hero-title { font-size: 26px; }
+      .hero-btn-group { flex-direction: column; }
+      .process-tabs { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand-logo-wrap">
+        <svg class="logo-emblem" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="#18181B" stroke-width="1.5" stroke-dasharray="2 2"/>
+          <path d="M20 6C14 14 10 18 10 24C10 29.5 14.5 34 20 34C25.5 34 30 29.5 30 24C30 18 26 14 20 6Z" fill="#F4F4F5" stroke="#18181B" stroke-width="1.8"/>
+          <path d="M20 12C17 17 15 20 15 24C15 26.8 17.2 29 20 29C22.8 29 25 26.8 25 24C25 20 23 17 20 12Z" stroke="#71717A" stroke-width="1.2"/>
+          <circle cx="20" cy="24" r="2.5" fill="#18181B"/>
+        </svg>
+        <a href="index.html" class="brand-logo" title="메인 홈으로 이동">
+          FLOTTELLIER <small>[ BRAND STORY ]</small>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item active"><a href="#philosophy">브랜드 철학</a></li>
+          <li class="nav-item"><a href="#refining">4차 정련 공정</a></li>
+          <li class="nav-item"><a href="#safety">4無 안전성 인증</a></li>
+          <li class="nav-item"><a href="#ritual">길들이기 타임라인</a></li>
+          <li class="nav-item"><a href="#custom">자수 스튜디오</a></li>
+          <li class="nav-item"><a href="#popup">성수 팝업</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="category.html" class="btn-secondary" style="padding: 7px 14px; font-size: 12px;">카탈로그</a>
+        <a href="index.html" class="btn-header-cta">스토어 가기 ➔</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Section 1: Hero & Philosophy -->
+    <section class="hero-section" id="philosophy">
+      <div class="hero-badge-wrap">
+        <span>[ 강화도 100% 국산 순면 소창 ]</span>
+        <span>•</span>
+        <span>[ 4차 정련 완료 완제품 ]</span>
+      </div>
+      <h1 class="hero-title">
+        시간과 정성의 손길로 짓는<br>
+        고요한 에코 리추얼 (Eco Ritual)
+      </h1>
+      <p class="hero-subtitle">
+        <strong>플로뜰리에 (Flottelier)</strong>는 꽃 피는 뜰의 평온함과 아틀리에의 정성 어린 시간을 엮어냅니다.<br>
+        매일 피부에 가장 먼저 닿는 수건을 사용하는 시간이 나를 온전히 돌보는 맑은 의식이 되도록,<br>
+        번거로운 삶기와 길들이기 없이 <strong>받아서 바로 쓰는 4차 정련 완제품</strong>을 전합니다.
+      </p>
+
+      <div class="hero-btn-group" style="display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 16px;">
+        <a href="#refining" class="btn-main">4차 정련 전통 공정 탐색하기 ↓</a>
+        <a href="index.html#collection" class="btn-secondary">15종 컬렉션 라인업 보기</a>
+      </div>
+      <p style="font-size: 12px; color: var(--color-text-muted); font-family: var(--font-mono); margin-bottom: 24px;">
+        [ * 하단에서 3,000원 소창 손수건 안심 체험(써보고 안 맞으면 100% 환불)을 신청하실 수 있습니다 ]
+      </p>
+
+      <div class="manifesto-grid">
+        <div class="manifesto-card">
+          <div class="card-num">[ 01 ]</div>
+          <h3 class="card-heading">Purity &amp; Safety (순수와 안전)</h3>
+          <p class="card-body">
+            형광증백제, 염소표백제, 인공염료, 합성향료를 단 0.1%도 넣지 않은 <strong>4無 순수 자연 가공</strong>을 고집합니다. 국가 공인 KC 인증과 독일 더마테스트 최고 등급으로 증명된 순면입니다.
+          </p>
+        </div>
+        <div class="manifesto-card">
+          <div class="card-num">[ 02 ]</div>
+          <h3 class="card-heading">Effortless Comfort (번거로움 제로)</h3>
+          <p class="card-body">
+            전통 소창의 최대 불편함이었던 '풀기 빼기 및 수차례 삶기'를 플로뜰리에 공방에서 <strong>4차 고온 정련으로 100% 완료</strong>하여, 택배를 여는 순간부터 뽀송하게 사용할 수 있습니다.
+          </p>
+        </div>
+        <div class="manifesto-card">
+          <div class="card-num">[ 03 ]</div>
+          <h3 class="card-heading">3-Year Longevity (지속가능한 가치)</h3>
+          <p class="card-body">
+            세탁할수록 직조가 도톰해지고 흡수력이 살아납니다. 일반 타월보다 <strong>3배 빠른 55분 쾌속 건조</strong>로 세균 번식을 막고, 3년 이상 오래 쓰는 지속가능한 욕실 라이프를 만듭니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: 4-Stage Refining Process -->
+    <section class="section-wrap" id="refining">
+      <span class="section-label">[ 4-Step Refining Process ]</span>
+      <h2 class="section-title">왜 플로뜰리에 소창은 받자마자 바로 쓸 수 있을까요?</h2>
+      <p class="section-desc">
+        원단에 묻어있는 옥수수 전분 풀기와 자연 불순물을 제거하기 위해 집에서 냄비에 삶고 말려야 했던 번거로움을 공방의 정성 어린 4단계 전통 공정으로 완벽히 해결했습니다.
+      </p>
+
+      <div class="process-container">
+        <div class="process-tabs">
+          <div class="tab-btn active" onclick="switchStep(1)">
+            <span class="tab-step-badge">Step 01</span>
+            <div class="tab-step-title">50℃ 온수 침지 (불림)</div>
+          </div>
+          <div class="tab-btn" onclick="switchStep(2)">
+            <span class="tab-step-badge">Step 02</span>
+            <div class="tab-step-title">100℃ 가마솥 열탕 삶음</div>
+          </div>
+          <div class="tab-btn" onclick="switchStep(3)">
+            <span class="tab-step-badge">Step 03</span>
+            <div class="tab-step-title">3회 고압수 린스 세척</div>
+          </div>
+          <div class="tab-btn" onclick="switchStep(4)">
+            <span class="tab-step-badge">Step 04</span>
+            <div class="tab-step-title">에어 텀블링 공기 가공</div>
+          </div>
+        </div>
+
+        <div class="process-display-area" id="processDisplayArea">
+          <div class="process-visual-box">
+            <div class="process-visual-icon" id="stepIcon">[ 01 ]</div>
+            <div id="stepVisualText" style="font-size: 14px; font-weight: 700; color: var(--color-primary);">Step 1: 옥수수 풀기 50℃ 저온 팽윤 공정</div>
+            <div id="stepVisualSub" style="font-size: 11px; color: var(--color-text-muted); margin-top: 4px; font-family: var(--font-mono);">전분 호화 전 섬유 손상 없는 1차 저온 수화</div>
+          </div>
+
+          <div class="process-detail-info">
+            <h4 id="stepTitle">1차 온수 침지 (Soaking)</h4>
+            <p id="stepDesc">
+              강화도 50℃ 청정 지하수에 12시간 동안 담가, 전분이 고온에서 굳기 전에 부드럽게 수화 팽윤(Swelling)시켜 원단 손상 없이 직조 옥수수 풀기를 자연스럽게 불려냅니다.
+            </p>
+            <div class="process-feature-pills" id="stepPills">
+              <span class="feature-pill">호화 전 50℃ 저온 팽윤</span>
+              <span class="feature-pill">원단 손상 없는 12h 침지</span>
+              <span class="feature-pill">강화도 맑은 지하수 사용</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: 4-Free Safety Certification -->
+    <section class="section-wrap" id="safety">
+      <span class="section-label">[ Absolute Transparency ]</span>
+      <h2 class="section-title">민감한 피부와 신생아를 위한 4無 안심 보증</h2>
+      <p class="section-desc">
+        화학 가공을 일절 배제하여 연약한 아기 피부와 아토피·초민감 피부도 안심하고 쓸 수 있는 시험성적서 원본을 투명하게 공개합니다.
+      </p>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon-circle">0%</div>
+          <h4>무형광 (No Optical)</h4>
+          <p>피부 트러블과 알레르기를 유발하는 형광증백제 0.0% 검출</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon-circle">0%</div>
+          <h4>무표백 (No Bleach)</h4>
+          <p>인위적인 백색을 내기 위한 염소계 화학 표백제 완전 배제</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon-circle">0%</div>
+          <h4>무염색 (No Dye)</h4>
+          <p>원사 본연의 따스한 자연 아이보리 빛을 그대로 보존</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon-circle">0%</div>
+          <h4>무향료 (No Fragrance)</h4>
+          <p>인공 향료와 계면활성제 잔여물이 없는 깨끗한 순면</p>
+        </div>
+      </div>
+
+      <div class="kc-banner-box">
+        <div>
+          <h3>[ KC 공인 인증 ] 한국의류시험연구원(KATRI) 안전 인증 완료</h3>
+          <p>독일 더마테스트 엑설런트(Excellent) 최고 안전 등급 획득 · 유해물질 0% 검증 보고서</p>
+        </div>
+        <button class="btn-kc-modal" onclick="openModal('modal-kc')">KC 성적서 원문 보기 ➔</button>
+      </div>
+    </section>
+
+    <!-- Section 4: Aging Timeline Interactive Simulator -->
+    <section class="section-wrap" id="ritual">
+      <span class="section-label">[ Evolution of Comfort ]</span>
+      <h2 class="section-title">세탁할수록 부드러워지는 소창 길들이기 타임라인</h2>
+      <p class="section-desc">
+        소창은 쓸수록 진가를 발휘합니다. 슬라이더를 움직여 50회 세탁 후 촘촘해진 조직감과 부드러운 수축 변화를 확인해 보세요.
+      </p>
+
+      <div class="comparison-section">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h4 style="font-family: var(--font-serif); font-size: 17px; color: var(--color-primary); font-weight: 700;">1:1 세탁 전/후 수축 &amp; 질감 비교 슬라이더</h4>
+          <span style="font-size: 11.5px; color: var(--color-text-muted); font-family: var(--font-mono);">[ 좌우 드래그 비교 ]</span>
+        </div>
+
+        <div class="slider-box-container">
+          <div class="comparison-layer layer-before">
+            <div class="layer-content">
+              <span class="layer-badge" style="background: #E4E4E7; color: #18181B;">세탁 전 (신품 규격: 40 × 80 cm)</span>
+              <div class="img-placeholder" style="border: 1px dashed #D4D4D8; background: #FFFFFF; padding: 12px 24px; border-radius: 4px; margin: 8px 0; font-size: 12.5px; color: #71717A; font-family: var(--font-mono);">
+                [ 이미지 영역 : 세탁 전 빳빳하고 정돈된 신품 소창 직조 이미지 ]
+              </div>
+              <p style="font-size: 13px; color: #52525B;">정돈되고 빳빳한 성근 직조 상태</p>
+            </div>
+          </div>
+          <div class="comparison-layer layer-after" id="shrinkHandle" style="width: 50%;">
+            <div class="layer-content">
+              <span class="layer-badge" style="background: var(--color-primary); color: #FFFFFF;">세탁 50회 후 (길들여진 규격: 35 × 72 cm)</span>
+              <div class="img-placeholder" style="border: 1px dashed var(--color-primary); background: #FFFFFF; padding: 12px 24px; border-radius: 4px; margin: 8px 0; font-size: 12.5px; color: var(--color-primary); font-weight: 600; font-family: var(--font-mono);">
+                [ 이미지 영역 : 소창의 부드러움과 도톰함 구름같은 감촉이 드는 이미지 ]
+              </div>
+              <p style="font-size: 13px; color: var(--color-primary); font-weight: 700;">공기층이 차올라 도톰하고 압도적인 흡수력의 구름 감촉</p>
+            </div>
+          </div>
+        </div>
+
+        <input type="range" class="slider-range-input" min="10" max="90" value="50" oninput="updateShrink(this.value)">
+      </div>
+    </section>
+
+    <!-- Section 5: Live Custom Embroidery Studio -->
+    <section class="section-wrap" id="custom">
+      <span class="section-label">[ Artisan Personalization ]</span>
+      <h2 class="section-title">나만의 문구와 감성을 새기는 실시간 자수 스튜디오</h2>
+      <p class="section-desc">
+        정갈한 무채색 실 컬러와 서체로 나만의 소창 리추얼 타월 또는 소중한 분을 위한 답례품을 직접 시뮬레이션하세요.
+      </p>
+
+      <div class="studio-grid">
+        <div class="canvas-preview-frame">
+          <div class="towel-woven-pattern"></div>
+          <div id="liveEmbroideryText">Flottelier Ritual</div>
+        </div>
+
+        <div class="studio-control-panel">
+          <label for="embroideryInput">자수 각인 문구 입력 (최대 15자)</label>
+          <input type="text" id="embroideryInput" class="studio-input" value="Flottelier Ritual" maxlength="15" oninput="onEmbroideryTextChange(this.value)">
+
+          <label>실 색상 선택 (Achromatic Tones)</label>
+          <div class="color-chips-row">
+            <button class="color-chip-btn active" style="background: #18181B;" title="블랙" onclick="setStudioColor('#18181B', this)"></button>
+            <button class="color-chip-btn" style="background: #52525B;" title="차콜" onclick="setStudioColor('#52525B', this)"></button>
+            <button class="color-chip-btn" style="background: #71717A;" title="미드 그레이" onclick="setStudioColor('#71717A', this)"></button>
+            <button class="color-chip-btn" style="background: #A1A1AA;" title="라이트 그레이" onclick="setStudioColor('#A1A1AA', this)"></button>
+            <button class="color-chip-btn" style="background: #E4E4E7;" title="소프트 실버" onclick="setStudioColor('#E4E4E7', this)"></button>
+          </div>
+
+          <label>마감 및 디자인 옵션</label>
+          <div style="font-size: 12.5px; color: var(--color-text-sub); margin-bottom: 20px; font-family: var(--font-mono);">
+            [✓] 순면 행잉 고리 추가 &nbsp;|&nbsp; [✓] 무라벨(Label-free) 부드러운 코튼 테두리
+          </div>
+
+          <a href="index.html#collection" class="btn-main" style="display: block; text-align: center;">이 자수 디자인으로 주문하기 ➔</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: O2O Pop-up & Trial Pack -->
+    <section class="section-wrap" id="popup">
+      <div class="cta-banner-grid">
+        <div class="cta-card">
+          <span class="section-label">[ O2O Offline Experience ]</span>
+          <h3>성수 팝업스토어 '시간을 짓는 공간'</h3>
+          <p>
+            성수동 연무장길 45에서 4차 정련 소창의 부드러운 감촉을 직접 만져보고 향기로운 티 리추얼을 경험하세요. 사전예약 시 미니 소창 와입스를 선물합니다.
+          </p>
+          <button class="btn-main" onclick="openModal('modal-popup')">타임슬롯 사전예약 하기 ➔</button>
+        </div>
+
+        <div class="cta-card highlight">
+          <span class="section-label">[ 100% Satisfaction Guarantee ]</span>
+          <h3>3,000원 소창 손수건 안심 체험</h3>
+          <p>
+            소창이 내 피부에 맞을지 고민되시나요? 4차 정련 순면 손수건(35×35cm)을 3,000원에 먼저 사용해 보세요. 직접 써보시고 피부에 안 맞으면 결제하신 3,000원을 100% 전액 환불해 드립니다.
+          </p>
+          <button class="btn-secondary" onclick="openModal('modal-trial')" style="font-weight: 700; border-color: var(--color-primary);">3,000원 손수건 체험 신청하기 ➔</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODALS -->
+  <div id="modal-kc" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal('modal-kc')">✕</button>
+      <span class="section-label">[ 기획 시제품 / 공인 시험 예정안 ]</span>
+      <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--color-primary); margin: 6px 0 16px;">
+        KC 공인 안전성 인증서 &amp; 4無 시험성적서 예시안
+      </h3>
+      <div style="background: #FAFAFA; border: var(--wf-border-dashed); border-radius: 6px; padding: 20px; text-align: center; margin-bottom: 16px;">
+        <div style="font-size: 32px; margin-bottom: 6px;">[ KATRI ]</div>
+        <p style="font-size: 13px; font-weight: 700; color: #18181B;">한국의류시험연구원(KATRI) 시험성적서 규격안</p>
+        <p style="font-size: 11px; color: #71717A; margin-top: 4px; font-family: var(--font-mono);">접수 예정 번호: KATRI-2026-FL0814-SAMPLE | 판정 목표: 적합 (Pass)</p>
+        <div style="margin-top: 14px; text-align: left; font-size: 12px; line-height: 1.8; color: #18181B; background: #FFFFFF; padding: 12px; border-radius: 4px; border: 1px solid #E4E4E7; font-family: var(--font-mono);">
+          • 폼알데하이드(Formaldehyde): 불검출 (기준치 이하 목표)<br>
+          • 아릴아민(Arylamine): 불검출 [기획 목표안]<br>
+          • 형광증백제: 불검출 [4無 무첨가 공정 기획안]<br>
+          • 피부 자극성 시험: 비자극성 (독일 Dermatest Excellent 취득 목표)
+        </div>
+      </div>
+      <button class="btn-main" style="width: 100%;" onclick="closeModal('modal-kc')">[시제품] 확인 완료</button>
+    </div>
+  </div>
+
+  <div id="modal-popup" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal('modal-popup')">✕</button>
+      <span class="section-label">[ 가상 시제품 Prototype / 쇼룸 기획안 ]</span>
+      <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--color-primary); margin: 6px 0 16px;">
+        성수 쇼룸 '시간을 짓는 공간' 사전예약 UI 시제품
+      </h3>
+      <div style="margin-bottom: 14px;">
+        <label style="font-size: 12px; font-weight: 700;">방문 희망 날짜 (예시 일정)</label>
+        <input type="date" value="2026-09-05" class="studio-input" style="margin-top: 4px;">
+      </div>
+      <div style="margin-bottom: 18px;">
+        <label style="font-size: 12px; font-weight: 700;">타임슬롯 선택 (예시)</label>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 6px;">
+          <button class="btn-secondary" style="padding: 8px; font-size: 11.5px; background: #18181B; border-color: #18181B; color: #FFFFFF; font-weight: 700;">14:00 (3석)</button>
+          <button class="btn-secondary" style="padding: 8px; font-size: 11.5px;">15:30 (1석)</button>
+          <button class="btn-secondary" style="padding: 8px; font-size: 11.5px; opacity: 0.4;" disabled>17:00 (매진)</button>
+        </div>
+      </div>
+      <button class="btn-main" style="width: 100%;" onclick="alert('[시제품] 성수 쇼룸 사전예약 신청 시뮬레이션이 완료되었습니다. (실제 예약이 발생하지 않는 가상 프로토타입입니다)'); closeModal('modal-popup');">[가상 시제품] 사전예약 완료하기</button>
+    </div>
+  </div>
+
+  <div id="modal-trial" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal('modal-trial')">✕</button>
+      <span class="section-label">[ 100% Refund Guarantee ]</span>
+      <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--color-primary); margin: 6px 0 16px;">
+        3,000원 소창 손수건 안심 체험 신청
+      </h3>
+      <p style="font-size: 13px; color: var(--color-text-sub); line-height: 1.7; margin-bottom: 16px;">
+        4차 정련 순면 소창 손수건(35×35cm)을 3,000원 체험 쿠폰가로 배송해 드립니다. <strong>직접 사용해보신 후 피부에 맞지 않거나 불만족 시 결제하신 3,000원을 100% 전액 환불</strong>해 드립니다.
+      </p>
+      <div style="margin-bottom: 14px;">
+        <label style="font-size: 12px; font-weight: 700;">받으실 배송지 주소</label>
+        <input type="text" placeholder="도로명 주소를 입력해 주세요" class="studio-input" style="margin-top: 4px;" value="서울특별시 성동구 연무장길 45">
+      </div>
+      <button class="btn-main" style="width: 100%;" onclick="alert('3,000원 소창 손수건 안심 체험 신청이 완료되었습니다! (써보고 안 맞으면 100% 환불 보장)'); closeModal('modal-trial');">3,000원 결제하고 손수건 받기 (안 맞으면 100% 환불) ➔</button>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">홈 메인 스토어</a>
+      <a href="피드백반영1.html">메인 와이어프레임</a>
+      <a href="#philosophy">브랜드 철학</a>
+      <a href="#refining">4차 정련 공정</a>
+      <a href="#safety">4無 인증 성적서</a>
+      <a href="category.html">카탈로그 컬렉션</a>
+      <a href="사이트맵.html">공식 사이트맵</a>
+    </div>
+    <p><strong>플로뜰리에 (Flottelier)</strong> | 4차 정련 순면 소창 리추얼 커머스 | 대표 디렉터: 연우</p>
+    <p>사업자등록번호: 123-45-67890 | 통신판매업신고: 제2026-서울성동-0192호 | 소재지: 서울특별시 성동구 연무장길 45 플로뜰리에 아뜰리에</p>
+    <p style="margin-top: 8px; color: #71717A;">Copyright &copy; 2026 Flottelier Co. All rights reserved. 100% 국산 순면 소창 · 100% Achromatic Monochrome Edition.</p>
+  </footer>
+
+  <!-- Script Engine -->
+  <script>
+    const processData = {
+      1: {
+        icon: "[ 01 ]",
+        visualTitle: "Step 1: 옥수수 풀기 50℃ 저온 팽윤 공정",
+        visualSub: "전분 호화 전 섬유 손상 없는 1차 자연 불림",
+        title: "1차 온수 침지 (Soaking)",
+        desc: "강화도 50℃ 청정 지하수에 12시간 동안 담가, 전분이 고온에서 굳기 전에 부드럽게 수화 팽윤(Swelling)시켜 원단 손상 없이 직조 옥수수 풀기를 자연스럽게 불려냅니다.",
+        pills: ["호화 전 50℃ 저온 팽윤", "원단 손상 없는 12h 침지", "강화도 맑은 지하수 사용"]
+      },
+      2: {
+        icon: "[ 02 ]",
+        visualTitle: "Step 2: 100℃ 고온 열탕 & 왁스 용융 공정",
+        visualSub: "목화 천연 왁스(70~80℃+) 용융 및 전분 고온 박리",
+        title: "2차 100℃ 가마솥 열탕 삶음 (Boiling)",
+        desc: "전통 무쇠 가마솥 방식으로 100℃ 고온 열탕 삶기를 진행하여 목화 원사의 천연 왁스막(융점 70~80℃)을 녹이고, 잔류 전분을 85% 이상 시원하게 박리·살균합니다.",
+        pills: ["100℃ 열탕 왁스 용융", "화학약품 0% 순수 열수 살균", "전분 85% 이상 고온 박리"]
+      },
+      3: {
+        icon: "[ 03 ]",
+        visualTitle: "Step 3: 3회 고압 청정수 회전 린스 세척",
+        visualSub: "요오드 검사 전분 불검출(ND) · 잔여물 제로화",
+        title: "3차 고압 청정수 린스 (Rinsing)",
+        desc: "강화도 청정 암반수로 3차례에 걸친 고압 회전 린스를 거쳐 박리된 전분 찌꺼기를 완전 배출하며, KS K 0210 시험 기준 요오드 전분 반응 '불검출(Not Detected)'을 달성합니다.",
+        pills: ["3단계 고압 회전 린스", "요오드 시험 전분 불검출(ND)", "신생아 구강 접촉 안심"]
+      },
+      4: {
+        icon: "[ 04 ]",
+        visualTitle: "Step 4: 에어 텀블링 미세 공기층 완성",
+        visualSub: "화학 유연제 0% · 물리적 기류 가공 (100% 완제품)",
+        title: "4차 자연 건조 & 에어 텀블링 (Drying & Tumbling)",
+        desc: "맑은 바람 건조 후 고속 공기 기류(Air Tumbling) 물리 가공으로 섬유 조직 사이사이에 뽀송한 미세 공기층을 형성하여, 삶을 필요 없는 100% 완제품(Ready-to-Use)으로 출고합니다.",
+        pills: ["화학유연제 0% 에어텀블링", "뽀송한 미세 공기층 형성", "받자마자 즉시 사용 100%"]
+      }
+    };
+
+    function switchStep(stepNum) {
+      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+        btn.classList.toggle('active', idx + 1 === stepNum);
+      });
+
+      const data = processData[stepNum];
+      document.getElementById('stepIcon').textContent = data.icon;
+      document.getElementById('stepVisualText').textContent = data.visualTitle;
+      const subEl = document.getElementById('stepVisualSub');
+      if (subEl && data.visualSub) subEl.textContent = data.visualSub;
+      document.getElementById('stepTitle').textContent = data.title;
+      document.getElementById('stepDesc').textContent = data.desc;
+
+      const pillsContainer = document.getElementById('stepPills');
+      pillsContainer.innerHTML = '';
+      data.pills.forEach(pill => {
+        const span = document.createElement('span');
+        span.className = 'feature-pill';
+        span.textContent = pill;
+        pillsContainer.appendChild(span);
+      });
+    }
+
+    function updateShrink(val) {
+      document.getElementById('shrinkHandle').style.width = val + '%';
+    }
+
+    function onEmbroideryTextChange(val) {
+      const target = document.getElementById('liveEmbroideryText');
+      target.textContent = val.trim() ? val : "Flottelier";
+    }
+
+    function setStudioColor(color, btn) {
+      document.getElementById('liveEmbroideryText').style.color = color;
+      document.querySelectorAll('.color-chip-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function openModal(modalId) {
+      const m = document.getElementById(modalId);
+      if (m) m.classList.add('active');
+    }
+    function closeModal(modalId) {
+      const m = document.getElementById(modalId);
+      if (m) m.classList.remove('active');
+    }
+
+    // Modal background click handling
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,604 @@
+{
+  "global": {
+    "target_confirmed": {
+      "course_id": "A",
+      "unit": "수정 보완",
+      "lcode": "8",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "checked_at": "2026-10-29T01:25:41.462Z",
+      "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+      "unit_end_date": "2026-08-18",
+      "screen_confirmed": true,
+      "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=8",
+      "support_list_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/list.php?Pcode=300002&BoardCode=85",
+      "duplicate_checked": true,
+      "support_list_pages": 1,
+      "existing_posts": [],
+      "meeting_original": {
+        "date": "",
+        "analysis": "",
+        "improvement": ""
+      },
+      "meeting_form_observed": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=8",
+      "recorded_at": "2026-10-29T10:25:42+09:00"
+    },
+    "sources_collected": {
+      "course_id": "A",
+      "unit": "수정 보완",
+      "lcode": "8",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "checked_at": "2026-10-29T01:25:41.462Z",
+      "scores_read": true,
+      "feedback_read": true,
+      "meeting_read": true,
+      "task_read": true,
+      "task_basis": "original",
+      "original_task_full_text_available": true,
+      "source_urls": [
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/evalC/question.php?Pcode=300002&Lcode=8&AppCode=AH&FollowNo=1",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1119",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1123",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1115",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1121",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1117",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1120",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1118",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1122",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1114",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1124",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/list.php?Pcode=300002&BoardCode=85"
+      ],
+      "local_sources": [
+        "능력단위평가/수정 보완/Exam.md",
+        "능력단위평가/수정 보완/피드백.md",
+        "능력단위평가/수정 보완/수정 보완 시험 출제.html"
+      ],
+      "group_basis": "현재 수정 보완 점수에 같은 과정의 기존 분석회의록(Lcode=7)에서 확인한 학습지원 기준 A>=80, B70~79, C60~69, F<60을 적용. 수정 보완 자체의 그룹 기준은 아직 빈 회의록에 없어 동일 과정 기준을 채택했음을 명시.",
+      "group_reference_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+      "groups": {
+        "A": [
+          "이은경",
+          "이은수"
+        ],
+        "B": [
+          "김정은",
+          "임연우",
+          "박주연",
+          "이지희",
+          "박찬미",
+          "허지민",
+          "강민경",
+          "최지혜"
+        ],
+        "C": [],
+        "F": []
+      },
+      "score_statistics": {
+        "count": 10,
+        "total": 790,
+        "average": 79,
+        "min": 76,
+        "max": 90
+      },
+      "limitations": [
+        "현재 저장된 평가와 피드백을 분석했으며 이번 지원작업에서 학생 저장소나 과거 화면검사를 다시 채점한 것은 아님.",
+        "김지선은 현재 단위 평가일·점수가 비어 있어 평가인원 10명 분석에서 제외.",
+        "로컬 피드백.md 제목은 구현 응용으로 남아 있어 수정 보완 원문·현재 평가·Exam.md를 우선함.",
+        "로컬 학생용 과제안내서의 CSS 파일명이 .css로만 표시된 표는 사용하지 않고 LMS 실제 원문으로 확인함."
+      ],
+      "recorded_at": "2026-10-29T10:25:42+09:00"
+    },
+    "meeting_resolved": {
+      "course_id": "A",
+      "unit": "수정 보완",
+      "lcode": "8",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "checked_at": "2026-10-29T01:27:53.546Z",
+      "mode": "created",
+      "reason": "기존 회의일시·두 본문이 비어 있어 실제 평가·10명 피드백과 동일 과정의 기존 양식에 따라 2026-10-29 사후 분석 작성 후 저장 전문 확인",
+      "exact_readback": true,
+      "date_exact": true,
+      "analysis_exact": true,
+      "improvement_exact": true,
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=8",
+      "readback": {
+        "회의제목": [
+          "평가결과 분석 회의",
+          "회의일시",
+          "2026-10-29"
+        ],
+        "평가결과 분석내용": [
+          "*평가결과 분석내용\n\n회의 참석자 : 별도 확인 필요(당시 회의 개최·참석 기록은 확인되지 않음)\n작성 구분 : 2026-08-18 본평가의 현재 등록점수·평가문제·개별 피드백을 바탕으로 2026-10-29 사후 작성한 학습지원 분석 기록임. 당시 회의 또는 보충지도 완료 사실을 의미하지 않음.\n\n1. 주제 : ‘수정 보완’ 평가결과에 대한 분석 및 의견\n\n2. 목적 : ‘수정 보완’ 평가결과에서 부족한 부분과 잘 되는 부분을 확인하여 앞으로 수업하는 데 활용하기 위함.\n\n3. 결과 :\n\nA등급 : [이은경, 이은수]\n\nB등급 : [김정은, 임연우, 박주연, 이지희, 박찬미, 허지민, 강민경, 최지혜]\n\nC등급 : [해당 없음]\n\nF등급 : [해당 없음]\n\n※ 현재 단위 회의록에 그룹 기준이 없어 동일 A과정의 기존 ‘디자인 구성요소 설계’ 분석회의록에서 확인한 학습지원 기준(A 80점 이상, B 70~79점, C 60~69점, F 60점 미만)을 현재 ‘수정 보완’ 표시점수에 적용함. A 2명, B 8명이며 현재 평가인원 10명의 평균은 79점임. 김지선은 이 단위의 평가일·점수가 비어 있어 이번 평가 분석에 포함하지 않음. 기존 평가점수나 이수 판정을 변경하는 구분이 아님.\n\n* 능력단위요소 ‘심미적 디자인 요소 수정 보완하기’에 대한 보완 필요 : [이은수, 김정은, 임연우, 박주연, 이지희, 박찬미, 허지민, 강민경, 최지혜]\n\n- 조치사항 : 현재 피드백에 기록된 컨테이너 변수명 불일치, Grid 선언 무효 또는 Flex 우회, body 고정 최소 폭, 5개 너비 검증 부족을 중심으로 ‘증상→Styles·Computed의 원인→원래 파일 수정→같은 조건 재검증’ 학습자료와 결함 추적 양식을 제공할 계획임. 이은수는 일부 반응형 전환이 정상이어도 기본 데스크톱과 480px에서 남은 문제가 있다는 피드백을 출발점으로 함. 임연우는 미디어쿼리로 덮은 변수 오타를 원인 파일에서 정리하도록 안내하고, 박찬미는 이미 수정한 Grid와 최소 폭을 보존하면서 컨테이너 변수와 진단 기록을 보완하도록 함. 김정은·박주연·이지희·허지민은 보고서의 설명과 최종 코드 반영 여부를 대조하고, 강민경·최지혜는 CSS 로드·파싱 상태를 먼저 확인한 뒤 화면을 점검하도록 함.\n- A그룹은 잔존 결함 여부를 먼저 확인한 뒤 연결 순서·컨테이너·Grid·폭과 증빙의 일치까지 심화 검수함. B그룹은 자신의 피드백에 해당하는 결함을 하나씩 수정하고 1920·1600·1024·768·480px의 결과를 확정함. C그룹은 대상자가 없어 선택 기초활동으로만 제공함. 확인 기준은 수정 전후 동일 선택자·너비의 계산값과 실제 캡처가 연결되고, 미확인 너비는 미확인으로 기록되는 것임.\n\n* 능력단위요소 ‘콘텐츠 사용성 수정 보완하기’에 대한 보완 필요 : [이은경, 이은수, 김정은, 임연우, 박주연, 이지희, 박찬미, 허지민, 강민경, 최지혜]\n\n- 조치사항 : 현재 평가에서 확인한 8개 CSS 역할과 연결 순서를 기준으로 파일·경로·책임·중복·접근성 점검표를 제공할 계획임. 이은경은 item_cpn.css와 layout_cpn.css 연결 순서 및 접근성 점검 기록을, 이지희·최지혜는 style.css 중복 연결을, 강민경은 실제 폴더와 CSS 링크 경로의 일치를 우선 점검함. 최지혜는 HTTP 요청 성공 여부와 별개로 주석 문법 때문에 CSS 규칙이 파싱되지 않았다는 피드백을 확인하도록 함. 허지민은 기본 outline 제거 후 대체 키보드 포커스가 없는 부분을, 나머지 학습자는 alt·링크/버튼 역할·키보드 포커스·작은 화면 조작성을 실제 위치와 연결해 기록하도록 함.\n- A그룹은 재사용 규칙과 연결 순서가 같은 우선순위에서 어떤 영향을 주는지 설명하고 접근성·증빙 누락을 보완함. B그룹은 CSS 8개 요청·실제 적용·중복 링크를 확인한 뒤 콘텐츠를 보존하며 자신의 누락 기록을 작성함. C그룹은 HTML과 CSS 한 쌍의 연결·저장·새로고침부터 확인하는 선택 활동으로 구성함. Network 성공만으로 완료하지 않고 실제 스타일 적용과 원본 콘텐츠 보존을 함께 확인할 계획임.\n\n* 능력단위요소 ‘매체 기능적 요소 수정 보완하기’에 대한 보완 필요 : [이은경, 이은수, 김정은, 임연우, 박주연, 이지희, 박찬미, 허지민, 강민경, 최지혜]\n\n- 조치사항 : Styles·Computed·Layout·Network·Console에서 확인할 항목, 수정 전후 결과표, 최종 커밋·실제 개별 Pull Request·ZIP의 연결을 기록하는 양식을 제공할 계획임. 현재 피드백에 기록된 자리표시자 테스트, 실제 코드와 상충하는 완료 문구, 확인되지 않는 PR 또는 최종 해시 불일치를 복습하도록 함. 이은경은 정상 동작한 결과에 빠진 1600·768px 증빙과 최종 해시·PR을 연결하고, 이은수는 현재 피드백의 실패 수치와 보고서를 대조함. B그룹은 구현 정도가 서로 다르므로 각자의 미수정 코드·문법·경로·테스트 기록 가운데 실제 해당 항목만 선택함.\n- A그룹은 동일 커밋의 5개 너비·접근성·회귀 확인을 하나의 검수 묶음으로 정리함. B그룹은 결함별 작은 수정과 실제값 기록을 먼저 완료한 뒤 목적이 드러나는 커밋과 개별 PR에 연결함. C그룹은 한 파일의 작은 수정 한 건과 화면 변화 한 건을 연결하는 선택 활동으로 시작함. 확인 기준은 수행한 검사만 통과/실패로 확정하고, 최신 코드·보고서·캡처·PR·ZIP이 같은 제출 상태를 가리키는 것임.\n\n* 공통 보완사항 :\n\n실제 LMS 원문은 MALBON 반응형 페이지 CSS 8개 분리, 핵심 결함 3건 수정, 5개 너비 확인, 의미 있는 커밋 4개 이상과 PR·ZIP·전후 증빙 제출을 요구함. 이번 분석은 현재 등록된 10명 피드백을 읽은 결과이며 학생 저장소나 과거 Chrome 검사를 새로 수행한 것은 아님. 이전 피드백의 측정 결과는 ‘당시 피드백에 기록됨’으로 해석하고 후속 활동에서 재확인함. 로컬 피드백.md에는 ‘구현 응용’ 제목이 남아 있고 학생용 안내서 일부 파일명 표도 불완전하므로 실제 LMS 원문을 우선함. 학생용 지원자료에는 이름·점수·등급 편성 인원·내부 판단을 포함하지 않음.\n\nF등급 : [해당 없음]\n\n* 조치사항 : 현재 표시점수에 F등급 대상자는 없음. C등급 역시 대상자가 없으므로 C자료는 누군가의 결함을 전제하지 않은 선택 기초학습용으로 제공함. 모든 그룹은 자기 피드백에서 확인한 항목부터 선택하며, A등급에도 남은 기본 결함은 우선 보완하도록 함.\n\n4. 종합 의견 :\n\nCSS 역할 분리와 HTML 콘텐츠 보존, 핵심 오류의 이론적 설명은 여러 피드백에서 강점으로 확인됨. 다만 분석한 수정안이 최종 코드에 반영되지 않거나, 코드·화면·테스트 표·Git 기록이 서로 다른 상태를 가리키는 문제가 나타남. 이은경은 핵심 화면 수정이 안정적이므로 증빙과 협업 기록을 확장하고, 이은수는 A그룹이더라도 잔존 기본 선언을 먼저 수정하도록 함. B그룹은 같은 등급 안에서도 이미 수정한 부분과 미반영 부분이 달라 개별 피드백을 출발점으로 선택 학습을 진행함. 이후 관련 수업에서 실제 파일·계산값·전후 화면·최종 커밋을 나란히 설명하도록 하여 ‘설명한 수정’이 ‘실제로 검증한 수정’으로 이어지는지 확인할 계획임.\n\n*개선사항\n\n1. 건의사항 :\n\n학습자가 직접 제출한 별도 건의사항이나 당시 회의 참석 기록은 확인되지 않음. 교사의 수업 보완 제안으로 독립 제작한 소규모 CSS 실습 예시, 진단 흐름 시각자료, 파일·원인·수정·재검증·제출 일치 양식과 한국어 공개 학습자료를 제공하고, 한 건 수정 후 같은 조건에서 확인하는 습관을 수업에 반영할 것을 제안함."
+        ],
+        "개선사항": [
+          "2. 조치사항 :\n\n‘지원내역’ 게시판에 ‘수정 보완’ A·B·C그룹 자료를 각각 제공할 계획임. 지원 게시일은 단위 종료일(2026-08-18)의 다음 평일인 2026-08-19로 설정하고, 실제 사후 분석·자료 제작·등록일은 별도 기록함. 2026-08-19에 지도가 이루어졌다는 의미로 사용하지 않음.\n\nA그룹은 현재 자기 피드백의 잔존 결함을 먼저 확인한 다음, CSS 연결 책임·캐스케이드·원인 위치 수정·5개 너비 회귀·접근성·최종 커밋과 증빙 일치까지 심화 검수하는 자료를 제공함. 이미 정상인 부분도 실제 캡처와 PR에 연결되었는지 확인하도록 함. 완료 기준은 기본 오류를 남긴 채 심화로 넘어가지 않고, 동일 최종 코드의 테스트·보고서·제출물로 수정 이유를 설명하는 것임.\n\nB그룹은 CSS 경로와 파싱 확인, 변수·Grid·최소 폭의 원인 진단, 중복 링크 정리, 파일별 역할 및 수정 전후 기록을 차례로 연습하는 자료를 제공함. 이미 고친 항목은 유지하고 자신의 피드백에 남은 부분만 선택해 보완하도록 함. 완료 기준은 한 결함마다 실제 파일과 선택자, 수정 이유, 같은 너비의 전후 결과를 연결하고 5개 너비의 통과·실패·미확인을 사실대로 확정하는 것임.\n\nC그룹은 현재 대상자가 없어 선택 기초학습용으로 제공함. 원본과 연습 사본 구분, HTML·CSS 파일 열기, 링크 경로·저장·새로고침 확인, 작은 카드 예시의 스타일 한 건 변경과 화면 관찰부터 진행하도록 함. 완료 기준은 자신의 파일에서 수정한 위치와 결과를 말하고, 경로·Grid·너비 점검을 작은 단위로 따라 할 수 있는 것임. 특정 학생의 결함이나 지도 완료를 전제하지 않음.\n\n각 자료에는 개념 설명, 직접 제작한 시각 예시, 독립 연습 파일, 편집 가능한 실습 양식과 한국어 참고자료의 읽을 범위·적용 활동·완료 기준을 포함할 계획임. 평가 정답 전체나 학생 파일을 배포하지 않음.\n\n자료 제공 후 다음 관련 수업에서 학습자의 실제 변경 파일·브라우저 계산값·전후 캡처·최종 커밋·개별 PR·제출 ZIP을 대조하고, 여전히 확인되지 않는 항목은 추가 확인 과제로 남길 계획임. 실제 수행하지 않은 테스트·지도·회의를 완료로 기록하지 않음."
+        ]
+      },
+      "recorded_at": "2026-10-29T10:27:54+09:00"
+    }
+  },
+  "groups": {
+    "A": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "checked_at": "2026-10-29T01:35:54.880Z",
+        "group": "A",
+        "post_date": "2026-08-19",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "pdf_page_count": 7,
+        "reviewed_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "reviewed_images": [
+          "A그룹/process.png"
+        ],
+        "pdf_review_evidence": "04_등록검증/PDF검수/A_전체.png",
+        "notes": [
+          "PDF 전 페이지 렌더 접촉표와 B8·C4 상세 판독; 빈 페이지·페이지 밖 텍스트·표/코드 잘림 없음",
+          "이미지 직접 판독 및 학생용 텍스트·PDF·DOCX XML·CSV·HTML·CSS에서 학생 이름·점수 비노출 확인",
+          "참고자료는 공개 본문과 명시한 범위 검토. 영상 시청 완료로 기록하지 않음",
+          "연습 파일 1024·480px 확인. B 예시는 의도적 오류 포함으로 넘침·무효 열 정의를 확인",
+          "DOCX는 XML·압축 무결성 확인, Word 앱에서의 실제 페이지 렌더 검증은 수행하지 않음"
+        ],
+        "snapshot": {
+          "article.html": "07d4f97fc7b800ea6bb1afecd2f64dfe3485a9e991a9bc395f04b42b9e35fb86",
+          "content.json": "1f5e933e07ea6bf0f51089b0bd2167de49bb3e49226fccf95d56d9b7e59b8032",
+          "guide.html": "f66830ff7ba5bc02eccbb940de877c2a47512eb0004a8e846bfb6187c8c39897",
+          "lab/index.html": "0ec69b5fb981b36f11dce34e937b139fc83e1059c97313aa4933cf92b8c2b567",
+          "lab/layout.css": "6342e2b74b4f71ec4d60cfcfa6c3b9602926544f705c4f53a60c9b021619a2fd",
+          "lab/responsive.css": "fce702779fd92b8f21986894bafb2a4ece08e117f8f02db19fdcd21b1bac3cf1",
+          "lab/tokens.css": "6fe0162350fe16b289e0231c34dcc086e4b3294bad94d82af7b34570735baded",
+          "post.json": "86ce1daeab86275ac5719600b0d648e3e80a7c8ba06dd482983b4d0af335a543",
+          "process.png": "904497ab3dde479c9a2df04256c50d466bbf480f8f44175da51197e1af7a9201",
+          "빈칸양식/01_실습.csv": "e0e23d9c85cb1fdc09aa435c2bc3118b6db84d95b68d77c1f2a33df79c656ebd",
+          "빈칸양식/02_실습.csv": "72284269e3544f63e3941da9a2e16b7eb06a971120967ed43a32ced139e2e6db",
+          "빈칸양식/03_실습.csv": "f18250098f0f881447a636bd2a3a0f323a5109da34ba295de269236d2d6bf54c",
+          "실습양식.docx": "995adcff496b0f90adc1781e987615806d19ed4cbda516658965e680c91add3d",
+          "읽는순서.txt": "3ce4ce33e13062ad50dfb8158a0dd7f4c5c2ee61c9d99681ab20b6ebcc589834",
+          "학습자료.pdf": "2e0771975bb0864de252933d857e08ef5ea9185e95bd452d723ae3f5f8f4b505",
+          "학습자료.zip": "aeea02e50476fa0d86a6588825cd0730848135a56b5c6252706c6d285322a1b7"
+        },
+        "recorded_at": "2026-10-29T10:35:58+09:00"
+      },
+      "registered": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "A",
+        "post_date": "2026-08-19",
+        "title": "[능력단위평가_지원내역] 수정 보완 A그룹 지원자료",
+        "post_id": "1067",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1067",
+        "checked_at": "2026-10-29T01:37:51.160Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://opentutorials.org/course/3086/18327",
+          "https://developer.chrome.com/docs/devtools/css/reference?hl=ko",
+          "https://docs.github.com/ko/pull-requests/how-tos/create-pull-requests/creating-a-pull-request"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "aeea02e50476fa0d86a6588825cd0730848135a56b5c6252706c6d285322a1b7",
+        "course_confirmed": true,
+        "observed_in_list": true,
+        "recorded_at": "2026-10-29T10:38:17+09:00"
+      },
+      "verified": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "A",
+        "post_date": "2026-08-19",
+        "title": "[능력단위평가_지원내역] 수정 보완 A그룹 지원자료",
+        "post_id": "1067",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1067",
+        "checked_at": "2026-10-29T01:37:51.160Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://opentutorials.org/course/3086/18327",
+          "https://developer.chrome.com/docs/devtools/css/reference?hl=ko",
+          "https://docs.github.com/ko/pull-requests/how-tos/create-pull-requests/creating-a-pull-request"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "aeea02e50476fa0d86a6588825cd0730848135a56b5c6252706c6d285322a1b7",
+        "course_confirmed": true,
+        "observed_in_list": true,
+        "references_checked": true,
+        "layout_reviewed": true,
+        "layout_evidence": "04_등록검증/A_등록화면.png",
+        "recorded_at": "2026-10-29T10:38:19+09:00"
+      }
+    },
+    "B": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "checked_at": "2026-10-29T01:35:54.881Z",
+        "group": "B",
+        "post_date": "2026-08-19",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "pdf_page_count": 8,
+        "reviewed_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "reviewed_images": [
+          "B그룹/process.png"
+        ],
+        "pdf_review_evidence": "04_등록검증/PDF검수/B_전체.png",
+        "notes": [
+          "PDF 전 페이지 렌더 접촉표와 B8·C4 상세 판독; 빈 페이지·페이지 밖 텍스트·표/코드 잘림 없음",
+          "이미지 직접 판독 및 학생용 텍스트·PDF·DOCX XML·CSV·HTML·CSS에서 학생 이름·점수 비노출 확인",
+          "참고자료는 공개 본문과 명시한 범위 검토. 영상 시청 완료로 기록하지 않음",
+          "연습 파일 1024·480px 확인. B 예시는 의도적 오류 포함으로 넘침·무효 열 정의를 확인",
+          "DOCX는 XML·압축 무결성 확인, Word 앱에서의 실제 페이지 렌더 검증은 수행하지 않음"
+        ],
+        "snapshot": {
+          "article.html": "b18ebe5f4ab1bd27875e39927f422daaa00e4ba4cf95d57a8987c88c010c8a4a",
+          "content.json": "4973c754757c072b65b778f7f6b4df35b9bb68e261e6179b6c4bb23974877f34",
+          "guide.html": "80edd37b0558a4b211662d9f59cb093d3df15e17c2c2c155ee9471df27c8a882",
+          "lab/index.html": "ab57a3303d7714a0a871769d8c4451a56e2148f470709b3b8afd0c7c8f43098d",
+          "lab/styles.css": "05625e167c3efa4d1e8d90ff7a1ccf883deda62e9e518992bacb9f1513de1aaf",
+          "post.json": "1b942f65aa4633feb4e4365fc35b3934ba016e848215a01bc971ce8d5a83b149",
+          "process.png": "197b2ad32e47278f0a27b78ced3d708814add83aa642fe7e47bc143802f3f3d9",
+          "빈칸양식/01_실습.csv": "cd3920c88f95dc3106bcd5ba0ab5acf34fbe5153554b23769d5c496b3eb7c053",
+          "빈칸양식/02_실습.csv": "c6a7e0006801c3cfe815497894de336e12e0399bc994696d1279cc6794104b40",
+          "빈칸양식/03_실습.csv": "9a66808631804ca274946dc8a6681ff40f79a6c5acd158516f8beee8321652b6",
+          "빈칸양식/04_실습.csv": "02925a3b7d90d34ffafc5920afc5a8e04e569f9612ef1555f5916aa558ddc793",
+          "실습양식.docx": "b9920a81ec181d569de4cba20791cc1b39a69a9fa5f9f8918d4000fff807e7c2",
+          "읽는순서.txt": "f802bbc1de9310681d21d771eeaea7b36a64738dbbe869e33c1135aa1ea7aa53",
+          "학습자료.pdf": "28b0a71ae6cfbc9baa9eba2cc77fabe5ad1074d26f1edd5b36b6573f872d5489",
+          "학습자료.zip": "3bfaf5a4e132a61ef445b1d20a29f862a32792e0d7f8e1deba26e3fe7bd3a877"
+        },
+        "recorded_at": "2026-10-29T10:36:00+09:00"
+      },
+      "registered": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "B",
+        "post_date": "2026-08-19",
+        "title": "[능력단위평가_지원내역] 수정 보완 B그룹 지원자료",
+        "post_id": "1068",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1068",
+        "checked_at": "2026-10-29T01:38:54.783Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://opentutorials.org/course/3086/18327",
+          "https://developer.chrome.com/docs/devtools/css/reference?hl=ko",
+          "https://developer.mozilla.org/ko/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties",
+          "https://docs.github.com/ko/pull-requests/how-tos/create-pull-requests/creating-a-pull-request"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "3bfaf5a4e132a61ef445b1d20a29f862a32792e0d7f8e1deba26e3fe7bd3a877",
+        "course_confirmed": true,
+        "observed_in_list": true,
+        "recorded_at": "2026-10-29T10:39:35+09:00"
+      },
+      "verified": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "B",
+        "post_date": "2026-08-19",
+        "title": "[능력단위평가_지원내역] 수정 보완 B그룹 지원자료",
+        "post_id": "1068",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1068",
+        "checked_at": "2026-10-29T01:38:54.783Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://opentutorials.org/course/3086/18327",
+          "https://developer.chrome.com/docs/devtools/css/reference?hl=ko",
+          "https://developer.mozilla.org/ko/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties",
+          "https://docs.github.com/ko/pull-requests/how-tos/create-pull-requests/creating-a-pull-request"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "3bfaf5a4e132a61ef445b1d20a29f862a32792e0d7f8e1deba26e3fe7bd3a877",
+        "course_confirmed": true,
+        "observed_in_list": true,
+        "references_checked": true,
+        "layout_reviewed": true,
+        "layout_evidence": [
+          "04_등록검증/B_등록화면.png",
+          "04_등록검증/B_코드예시화면.png"
+        ],
+        "recorded_at": "2026-10-29T10:39:36+09:00"
+      }
+    },
+    "C": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "checked_at": "2026-10-29T01:35:54.881Z",
+        "group": "C",
+        "post_date": "2026-08-19",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "pdf_page_count": 7,
+        "reviewed_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "reviewed_images": [
+          "C그룹/process.png"
+        ],
+        "pdf_review_evidence": "04_등록검증/PDF검수/C_전체.png",
+        "notes": [
+          "PDF 전 페이지 렌더 접촉표와 B8·C4 상세 판독; 빈 페이지·페이지 밖 텍스트·표/코드 잘림 없음",
+          "이미지 직접 판독 및 학생용 텍스트·PDF·DOCX XML·CSV·HTML·CSS에서 학생 이름·점수 비노출 확인",
+          "참고자료는 공개 본문과 명시한 범위 검토. 영상 시청 완료로 기록하지 않음",
+          "연습 파일 1024·480px 확인. B 예시는 의도적 오류 포함으로 넘침·무효 열 정의를 확인",
+          "DOCX는 XML·압축 무결성 확인, Word 앱에서의 실제 페이지 렌더 검증은 수행하지 않음"
+        ],
+        "snapshot": {
+          "article.html": "a3ef414e5d8df042f61a3bbf35b726312f440ef63404761fcebce98755f466fc",
+          "content.json": "0d4c8d4bf9d9fc9fefca5eeb0914fbd627041326a1e02c413d9918e864cc7efe",
+          "guide.html": "d9355ee3890a858872f8d9d67a6da640ac03ade1ccf1511e721f11dce1aedb38",
+          "lab/index.html": "fa5d8ceaa1c2c5ffc741eeb9823f33a257460825f60fe34bb203e4e5213052aa",
+          "lab/styles.css": "a6b362d9e70a654b98d8f78bef5c512a4f398ddecd969f8c998e0d81fa2e4dd0",
+          "post.json": "706c7e4e873dc7571169334652923284ec299d6195a97049a1fcfb1202d50dce",
+          "process.png": "96fe2ad90ab2bacd7c472e5fdddcc6106ef97acafde00166f1a73630b41c63d5",
+          "빈칸양식/01_실습.csv": "99c4deda27842c9c22b277eb64fb32f0ba21b8e414c8d9e32042f34cecc87fad",
+          "빈칸양식/02_실습.csv": "4c9800d578995a57e3200d86e3acef09cbffdb462b56f0e257dcb6d9f2fd449d",
+          "빈칸양식/03_실습.csv": "eeaeff2c3cceedb91784cb35c150b63a8b1e1d3ddb4c80338a900aa0d3cb95ce",
+          "실습양식.docx": "870d056dcb2656bde3ea69c70612cd5fd93a5f9815976b124b027c671b3082b1",
+          "읽는순서.txt": "8fa899bc5e785d1a0a47053e4260c22cbb70a8f2e24344f23703b090360f6cc2",
+          "학습자료.pdf": "52758c8bf1f8003387f914495079008d7a96934cbb0fbcef338084d0a74d390d",
+          "학습자료.zip": "4334a043aebca24954e7fc284e20438918f430fcab01f82d8690cd4cdf48919a"
+        },
+        "recorded_at": "2026-10-29T10:36:02+09:00"
+      },
+      "registered": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "C",
+        "post_date": "2026-08-19",
+        "title": "[능력단위평가_지원내역] 수정 보완 C그룹 지원자료",
+        "post_id": "1069",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1069",
+        "checked_at": "2026-10-29T01:39:51.612Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://opentutorials.org/course/3086/18327",
+          "https://web.dev/learn/css/grid?hl=ko",
+          "https://developer.chrome.com/docs/devtools/css/reference?hl=ko"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "4334a043aebca24954e7fc284e20438918f430fcab01f82d8690cd4cdf48919a",
+        "course_confirmed": true,
+        "observed_in_list": true,
+        "recorded_at": "2026-10-29T10:40:26+09:00"
+      },
+      "verified": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "C",
+        "post_date": "2026-08-19",
+        "title": "[능력단위평가_지원내역] 수정 보완 C그룹 지원자료",
+        "post_id": "1069",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1069",
+        "checked_at": "2026-10-29T01:39:51.612Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://opentutorials.org/course/3086/18327",
+          "https://web.dev/learn/css/grid?hl=ko",
+          "https://developer.chrome.com/docs/devtools/css/reference?hl=ko"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "4334a043aebca24954e7fc284e20438918f430fcab01f82d8690cd4cdf48919a",
+        "course_confirmed": true,
+        "observed_in_list": true,
+        "references_checked": true,
+        "layout_reviewed": true,
+        "layout_evidence": "04_등록검증/C_등록화면.png",
+        "recorded_at": "2026-10-29T10:40:28+09:00"
+      }
+    }
+  },
+  "history": [
+    {
+      "stage": "target_confirmed",
+      "group": null,
+      "recorded_at": "2026-10-29T10:25:42+09:00",
+      "evidence_sha256": "c5a8c9067b4cf70ac9ee13e4c0f85e853110ec55a8213a087187849dff227996"
+    },
+    {
+      "stage": "sources_collected",
+      "group": null,
+      "recorded_at": "2026-10-29T10:25:42+09:00",
+      "evidence_sha256": "aa52f3925aa34f70c8d0fcd452efba547fa82b624c01406dffd0ed21375c2d9a"
+    },
+    {
+      "stage": "meeting_resolved",
+      "group": null,
+      "recorded_at": "2026-10-29T10:27:54+09:00",
+      "evidence_sha256": "88455304619144e852c0cb471a6ca44068b72508f474441c88a197594518e7aa"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "A",
+      "recorded_at": "2026-10-29T10:35:58+09:00",
+      "evidence_sha256": "345a99f859e886cb5bf2d77046044cf6cb775c723e15a3921749b0f62fc07541"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "B",
+      "recorded_at": "2026-10-29T10:36:00+09:00",
+      "evidence_sha256": "5d26acd2ad5a89fa69ecc9a65a739c16e31eee1728a4e3bd89cc1be2c8245455"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "C",
+      "recorded_at": "2026-10-29T10:36:02+09:00",
+      "evidence_sha256": "e8b5ee0352c8d7d4f2f3777fa192641f464fa6f80ce4e2ad7cbf400953edf3f4"
+    },
+    {
+      "stage": "registered",
+      "group": "A",
+      "recorded_at": "2026-10-29T10:38:17+09:00",
+      "evidence_sha256": "0ac76c2341bc549121811668aa76d4173ff2a6145de14f6b8050e92ad37871ab"
+    },
+    {
+      "stage": "verified",
+      "group": "A",
+      "recorded_at": "2026-10-29T10:38:19+09:00",
+      "evidence_sha256": "283486a24eb0bf037a59fd70a0e52d0109e22e6d1c596d2051a08fddfc293292"
+    },
+    {
+      "stage": "registered",
+      "group": "B",
+      "recorded_at": "2026-10-29T10:39:35+09:00",
+      "evidence_sha256": "afcdaf1abce9df02a421bfe92fa7742817c87cda6adfe8685deac81c316ec68d"
+    },
+    {
+      "stage": "verified",
+      "group": "B",
+      "recorded_at": "2026-10-29T10:39:36+09:00",
+      "evidence_sha256": "9b139c893854fbf94a3c9f4bd3a3498b4d54c6f4fc1386118fe2fa8419d778b5"
+    },
+    {
+      "stage": "registered",
+      "group": "C",
+      "recorded_at": "2026-10-29T10:40:26+09:00",
+      "evidence_sha256": "41a46f2a1ca7920d8c7f9464a69f533b2934b3547294ccc25882d6c9e606479c"
+    },
+    {
+      "stage": "verified",
+      "group": "C",
+      "recorded_at": "2026-10-29T10:40:28+09:00",
+      "evidence_sha256": "bc1036ad01b98b34decbac231121031baf96bbde1a8eae722ce0748fd2f8befc"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "group": "A",
+    "pdfPages": 10,
+    "worksheets": 6,
+    "csv": 6,
+    "vectorExamples": 5,
+    "zipEntries": 19,
+    "zipBytes": 480358,
+    "sha256": "993b4060a9f94d620898e761c3f4d713fb4c463f1b91d9e2eda0fdd6026b5718"
+  },
+  {
+    "group": "B",
+    "pdfPages": 10,
+    "worksheets": 6,
+    "csv": 6,
+    "vectorExamples": 5,
+    "zipEntries": 19,
+    "zipBytes": 479266,
+    "sha256": "82109185af0c019c748fa81f6de5304a58b50c19d6f1b351111190030b362b1d"
+  },
+  {
+    "group": "C",
+    "pdfPages": 10,
+    "worksheets": 6,
+    "csv": 6,
+    "vectorExamples": 5,
+    "zipEntries": 19,
+    "zipBytes": 476386,
+    "sha256": "23c0b6319b564ad73ccf21bac4621e9e4032fe0470496bb8d74d02ecde88c8f1"
+  }
+]

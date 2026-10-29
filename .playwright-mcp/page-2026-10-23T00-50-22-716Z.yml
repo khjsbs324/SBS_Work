@@ -1,0 +1,421 @@
+- generic [ref=f17e1]:
+  - banner [ref=f17e2]:
+    - generic [ref=f17e3]:
+      - generic [ref=f17e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f17e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f17e8]:
+    - generic [ref=f17e9]:
+      - generic [ref=f17e10]:
+        - generic [ref=f17e11]: 김혜지
+        - generic [ref=f17e12]:
+          - button "정보수정" [ref=f17e13] [cursor=pointer]
+          - button "비번변경" [ref=f17e14] [cursor=pointer]
+          - button "PIN변경" [ref=f17e15] [cursor=pointer]
+      - list [ref=f17e16]:
+        - listitem [ref=f17e17] [cursor=pointer]:
+          - generic [ref=f17e18]:
+            - generic [aria-hidden] [ref=f17e19]: 
+            - text: 훈련과정
+        - listitem [ref=f17e20] [cursor=pointer]:
+          - generic [ref=f17e21]:
+            - generic [aria-hidden] [ref=f17e22]: 
+            - text: 공지사항
+      - list [ref=f17e23]:
+        - listitem [ref=f17e24] [cursor=pointer]:
+          - generic [ref=f17e25]:
+            - paragraph [ref=f17e26]:
+              - generic [aria-hidden] [ref=f17e27]: 
+            - paragraph [ref=f17e28]: 고객센터
+        - listitem [ref=f17e29] [cursor=pointer]:
+          - generic [ref=f17e30]:
+            - paragraph [ref=f17e31]:
+              - generic [aria-hidden] [ref=f17e32]: 
+            - paragraph [ref=f17e33]: 카톡문의
+    - generic [ref=f17e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f17e35]:
+        - caption [ref=f17e36]:
+          - generic [ref=f17e37]:
+            - generic [ref=f17e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f17e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f17e48]:
+          - row [ref=f17e49]:
+            - cell "개강일" [ref=f17e50]
+            - cell "2026-05-20" [ref=f17e51]
+            - cell "종강일" [ref=f17e52]
+            - cell "2026-12-04" [ref=f17e53]
+            - cell "강사" [ref=f17e54]
+            - cell "김가경, 김혜지" [ref=f17e55]
+          - row [ref=f17e56]:
+            - cell "실시인원" [ref=f17e57]
+            - cell "11" [ref=f17e58]
+            - cell "수강인원" [ref=f17e59]
+            - cell "9" [ref=f17e60]
+            - cell "수강포기인원" [ref=f17e61]
+            - cell "2" [ref=f17e62]
+      - list [ref=f17e63]:
+        - listitem [ref=f17e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f17e65]
+        - listitem [ref=f17e66] [cursor=pointer]:
+          - generic "시간표" [ref=f17e67]
+        - listitem [ref=f17e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f17e69]
+        - listitem [ref=f17e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f17e71]
+        - listitem [ref=f17e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f17e73]
+        - listitem [ref=f17e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f17e75]
+        - listitem [ref=f17e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f17e77]
+        - listitem [ref=f17e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f17e79]
+        - listitem [ref=f17e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f17e81]
+        - listitem [ref=f17e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f17e83]
+        - listitem [ref=f17e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f17e85]
+        - listitem [ref=f17e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f17e87]
+        - listitem [ref=f17e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f17e89]
+        - listitem [ref=f17e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f17e91]
+        - listitem [ref=f17e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f17e93]
+        - listitem [ref=f17e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f17e95]
+        - listitem [ref=f17e96] [cursor=pointer]:
+          - generic "과제" [ref=f17e97]
+        - listitem [ref=f17e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f17e99]
+        - listitem [ref=f17e100] [cursor=pointer]:
+          - generic [ref=f17e101]: 게시판생성
+        - listitem [ref=f17e102] [cursor=pointer]:
+          - generic [ref=f17e103]: 게시판순서변경
+      - list [ref=f17e104]:
+        - listitem [ref=f17e105]:
+          - table [ref=f17e106]:
+            - caption [ref=f17e107]:
+              - list [ref=f17e110]:
+                - listitem [ref=f17e111] [cursor=pointer]: 평가내역
+                - listitem [ref=f17e112] [cursor=pointer]: 평가결과 분석회의록
+            - rowgroup [ref=f17e118]:
+              - row [ref=f17e119]:
+                - cell "과정명" [ref=f17e120]
+                - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차" [ref=f17e121]
+              - row [ref=f17e122]:
+                - cell "교과목" [ref=f17e123]
+                - cell "(전공)프로토타입 수집 및 제작" [ref=f17e124]
+              - row [ref=f17e125]:
+                - cell "능력단위" [ref=f17e126]
+                - cell "프로토타입 기초데이터 수집 및 스케치" [ref=f17e127]:
+                  - combobox [ref=f17e128]:
+                    - option "선택하세요"
+                    - option "구현"
+                    - option "구현 응용"
+                    - option "시각디자인 리서치 조사"
+                    - option "시각디자인 리서치 분석"
+                    - option "시안 디자인 개발 심화"
+                    - option "디자인 구성요소 설계"
+                    - option "수정 보완"
+                    - option "디자인 구성요소 제작"
+                    - option "디지털디자인 사후관리"
+                    - option "서비스ㆍ경험디자인 관찰조사"
+                    - option "서비스ㆍ경험디자인 시나리오 개발"
+                    - option "프로토타입 기초데이터 수집 및 스케치" [selected]
+                    - option "스마트문화앱 UI 디자인"
+                    - option "프로토타입 제작 및 사용성 테스트"
+                    - option "(비NCS 실기)AI 기획과 발상"
+                    - option "(비NCS 실기)취업포트폴리오 제작"
+              - row [ref=f17e129]:
+                - cell "개강일" [ref=f17e130]
+                - cell "2026-10-06" [ref=f17e131]
+                - cell "종강일" [ref=f17e132]
+                - cell "2026-10-22" [ref=f17e133]
+              - row [ref=f17e134]:
+                - cell "평가도구" [ref=f17e135]
+                - cell "구두발표" [ref=f17e136]
+        - listitem [ref=f17e137]:
+          - table "평가정보 돌아가기" [ref=f17e138]:
+            - caption [ref=f17e139]:
+              - generic [ref=f17e140]:
+                - generic [ref=f17e141]: 평가정보
+                - link "돌아가기" [ref=f17e143] [cursor=pointer]:
+                  - /url: ../index.php?Pcode=300002
+            - rowgroup [ref=f17e151]:
+              - row [ref=f17e152]:
+                - columnheader "구분" [ref=f17e153]
+                - columnheader "본평가" [ref=f17e154]
+                - columnheader "결석자평가" [ref=f17e155]
+                - columnheader "재평가" [ref=f17e156]
+                - columnheader "사전평가" [ref=f17e157]
+                - columnheader "능력단위" [ref=f17e158]
+            - rowgroup [ref=f17e159]:
+              - row [ref=f17e160]:
+                - cell [ref=f17e161]:
+                  - paragraph [ref=f17e162]: 평가날짜
+                  - paragraph [ref=f17e163]: 평가시간
+                  - paragraph [ref=f17e164]: 커트라인
+                  - paragraph [ref=f17e165]: 패널티
+                - cell [ref=f17e166]:
+                  - link [ref=f17e167] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f17e168]: 2026-10-22
+                    - paragraph [ref=f17e169]: 14:00~19:00
+                    - paragraph [ref=f17e170]: 60점
+                    - paragraph [ref=f17e171]: 0점
+                - cell [ref=f17e172]:
+                  - generic [ref=f17e173]:
+                    - paragraph [ref=f17e174]: 평가문제미등록
+                    - paragraph [ref=f17e175]: (0/100)
+                - cell [ref=f17e176]:
+                  - generic [ref=f17e177]:
+                    - paragraph [ref=f17e178]: 평가문제미등록
+                    - paragraph [ref=f17e179]: (0/100)
+                - cell "81.82" [ref=f17e180]
+                - cell "0" [ref=f17e181]
+              - row [ref=f17e182]:
+                - cell "평가인원" [ref=f17e183]
+                - cell "9" [ref=f17e184]
+                - cell "0" [ref=f17e185]
+                - cell "0" [ref=f17e186]
+      - table [ref=f17e188]:
+        - caption [ref=f17e189]:
+          - generic [ref=f17e190]:
+            - list [ref=f17e192]:
+              - listitem [ref=f17e193] [cursor=pointer]: 본평가문제
+              - listitem [ref=f17e194] [cursor=pointer]: 결석자문제
+              - listitem [ref=f17e195] [cursor=pointer]: 재평가문제
+            - link "돌아가기" [ref=f17e198] [cursor=pointer]:
+              - /url: ../app/appraisal.php?Pcode=300002&Lcode=13&AppCode=AF
+        - rowgroup [ref=f17e207]:
+          - row [ref=f17e208]:
+            - columnheader [ref=f17e209]:
+              - checkbox [ref=f17e210]
+            - columnheader "번호" [ref=f17e211]
+            - columnheader "문제" [ref=f17e212]
+            - columnheader "파일" [ref=f17e213]
+            - columnheader "링크" [ref=f17e214]
+            - columnheader "배점" [ref=f17e215]
+            - columnheader "상세정보" [ref=f17e216]
+        - rowgroup [ref=f17e217]:
+          - row [ref=f17e218]:
+            - cell [ref=f17e219]:
+              - checkbox [ref=f17e220]
+            - cell "1" [ref=f17e221]
+            - cell "기초데이터와 레퍼런스를 분석하여 제작한 스토리보드 및 프로토타입 스케치를 제출해 주세요" [ref=f17e222]
+            - cell "사용" [ref=f17e223]
+            - cell "사용" [ref=f17e224]
+            - cell "100" [ref=f17e225]
+            - cell [ref=f17e226]:
+              - button "상세정보" [expanded] [active] [ref=f17e227] [cursor=pointer]
+          - row [ref=f17e231]:
+            - cell [ref=f17e232]:
+              - table "문제 상세정보 수정하기" [ref=f17e233]:
+                - caption [ref=f17e234]:
+                  - generic [ref=f17e235]:
+                    - generic [ref=f17e236]: 문제 상세정보
+                    - link "수정하기" [ref=f17e238] [cursor=pointer]:
+                      - /url: ./write.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&no=1379
+                - rowgroup [ref=f17e242]:
+                  - row [ref=f17e243]:
+                    - cell "문제" [ref=f17e244]
+                    - cell "기초데이터와 레퍼런스를 분석하여 제작한 스토리보드 및 프로토타입 스케치를 제출해 주세요" [ref=f17e245]
+                  - row [ref=f17e246]:
+                    - cell "내용" [ref=f17e247]
+                    - cell [ref=f17e248]:
+                      - paragraph [ref=f17e249]:
+                        - strong [ref=f17e250]: 과제 목표
+                      - paragraph [ref=f17e251]: 서비스 브리프를 바탕으로 프로토타입 제작에 필요한 기초데이터와 레퍼런스를 수집·분석합니다. 핵심 과업을 스토리보드로 구성하고 여러 썸네일 스케치에서 대안을 비교한 뒤 저충실도 시안으로 구체화합니다. 간단한 사용성 점검으로 문제를 찾아 스케치를 수정하고, 다음 제작자가 이해할 수 있도록 결과를 정리합니다.
+                      - paragraph [ref=f17e252]
+                      - paragraph [ref=f17e253]:
+                        - strong [ref=f17e254]: 평가 조건
+                      - paragraph [ref=f17e255]: "- 평가 방식: 개인 포트폴리오"
+                      - paragraph [ref=f17e256]: "- 입력자료: 강사 제공 또는 이전 단계에서 확정한 서비스 브리프"
+                      - paragraph [ref=f17e257]: "- 대상: 디지털 서비스의 핵심 과업 1개 이상"
+                      - paragraph [ref=f17e258]
+                      - paragraph [ref=f17e259]:
+                        - strong [ref=f17e260]: 필수 제출물
+                      - paragraph [ref=f17e261]: "1. `이름_프로토타입_기초데이터_스케치.pdf`"
+                      - paragraph [ref=f17e262]: 2. 편집 가능한 디자인·스토리보드 원본 또는 평가자가 열 수 있는 공유 링크
+                      - paragraph [ref=f17e263]
+                      - paragraph [ref=f17e264]: 보고서에는 기초데이터와 출처, 레퍼런스 비교, 스토리보드, 다안 스케치, 저충실도 시안, 사용성 점검과 수정 전후가 모두 포함되어야 합니다. 손 스케치는 화면 번호와 내용이 선명한 스캔·사진으로 제출할 수 있습니다.
+                      - paragraph [ref=f17e265]
+                      - paragraph [ref=f17e266]:
+                        - strong [ref=f17e267]: 작업 순서
+                      - paragraph [ref=f17e268]: 1. 브리프에서 사용자, 문제, 목표, 콘셉트, 핵심 기능과 대상 매체를 정리합니다.
+                      - paragraph [ref=f17e269]: 2. 필요한 텍스트·이미지·영상·음성·통계 등의 기초데이터를 정의합니다.
+                      - paragraph [ref=f17e270]: 3. 자료마다 출처, 확인일, 제작자, 이용 조건 또는 권리 상태와 사용 목적을 기록합니다.
+                      - paragraph [ref=f17e271]: 4. 유사 서비스와 다른 분야의 레퍼런스를 같은 기준으로 비교합니다.
+                      - paragraph [ref=f17e272]: 5. 장점·단점과 우리 프로젝트에 적용·변형·제외할 원리를 결정합니다.
+                      - paragraph [ref=f17e273]: 6. 핵심 과업의 시작·진행·완료를 스토리보드로 구성합니다.
+                      - paragraph [ref=f17e274]: 7. 화면별로 구조·위계·조작 방식이 다른 썸네일 대안을 만듭니다.
+                      - paragraph [ref=f17e275]: 8. 비교 기준에 따라 대안을 선택·조합하고 저충실도 세부 시안을 제작합니다.
+                      - paragraph [ref=f17e276]: 9. 화면 번호, 요소, 기능, 상태, 전환과 미결정 사항을 주석으로 설명합니다.
+                      - paragraph [ref=f17e277]: 10. 동료 또는 강사가 지정한 점검자에게 핵심 과업을 수행하게 하고 관찰 사실을 기록합니다.
+                      - paragraph [ref=f17e278]: 11. 사용성 문제의 영향과 우선순위를 정해 스케치를 수정하고 전후를 비교합니다.
+                      - paragraph [ref=f17e279]: 12. 보고서·원본·링크 권한과 파일명을 최종 확인합니다.
+                      - paragraph [ref=f17e280]
+                      - paragraph [ref=f17e281]:
+                        - strong [ref=f17e282]: 최소 포함 범위
+                      - paragraph [ref=f17e283]: "*기초데이터·레퍼런스"
+                      - paragraph [ref=f17e284]: "- 필요한 데이터 유형과 수집 목적"
+                      - paragraph [ref=f17e285]: "- 출처 URL 또는 서지정보, 확인일, 제작자, 이용 조건"
+                      - paragraph [ref=f17e286]: "- 레퍼런스별 정보구조·내비게이션·인터페이스·비주얼·콘텐츠 비교"
+                      - paragraph [ref=f17e287]: "- 장단점과 적용·변형·제외 결정"
+                      - paragraph [ref=f17e288]
+                      - paragraph [ref=f17e289]:
+                        - strong [ref=f17e290]: 스토리보드·스케치
+                      - paragraph [ref=f17e291]: "- 핵심 과업의 시작·진행·완료와 필요한 분기·상태"
+                      - paragraph [ref=f17e292]: "- 화면 전환, 입력, 결과 피드백과 필요한 모션"
+                      - paragraph [ref=f17e293]: "- 핵심 화면별 복수 썸네일 대안"
+                      - paragraph [ref=f17e294]: "- 대안 비교와 최종 방향 선정 이유"
+                      - paragraph [ref=f17e295]: "- 저충실도 세부 시안과 구현 주석"
+                      - paragraph [ref=f17e296]
+                      - paragraph [ref=f17e297]:
+                        - strong [ref=f17e298]: 사용성 점검·수정
+                      - paragraph [ref=f17e299]: "- 점검 목적, 수행자 역할, 과업과 성공 조건"
+                      - paragraph [ref=f17e300]: "- 수행 중 관찰 사실과 수행자 발언"
+                      - paragraph [ref=f17e301]: "- 문제 진술, 영향 화면·과업, 원인 가설과 우선순위"
+                      - paragraph [ref=f17e302]: "- 수정 전후 스케치와 변경 이유"
+                      - paragraph [ref=f17e303]
+                      - paragraph [ref=f17e304]:
+                        - strong [ref=f17e305]: 주의사항
+                      - paragraph [ref=f17e306]: "- 검색 결과의 제목이나 이미지만 복사하지 말고 원출처와 이용 조건을 확인합니다."
+                      - paragraph [ref=f17e307]: "- 저작권을 확인할 수 없는 자료는 최종 시안에 직접 사용하지 않고 대체 계획을 적습니다."
+                      - paragraph [ref=f17e308]: "- 레퍼런스를 그대로 복제하지 말고 추출한 원리와 프로젝트 적용 이유를 설명합니다."
+                      - paragraph [ref=f17e309]: "- 스케치는 미려한 그림보다 아이디어의 차이와 화면 흐름이 읽히는 것이 중요합니다."
+                      - paragraph [ref=f17e310]: "- 사용성 기록에서 관찰한 사실과 자신의 해석을 구분합니다."
+                      - paragraph [ref=f17e311]: "- 완성형 인터랙티브 프로토타입, 코드 구현과 서비스 배포는 요구하지 않습니다."
+                      - paragraph [ref=f17e312]
+                      - paragraph [ref=f17e313]:
+                        - strong [ref=f17e314]: 제출 전 확인
+                      - paragraph [ref=f17e315]: "- [ ] 데이터와 레퍼런스마다 출처와 이용 조건이 있습니다."
+                      - paragraph [ref=f17e316]: "- [ ] 레퍼런스를 같은 기준으로 비교하고 적용 판단을 남겼습니다."
+                      - paragraph [ref=f17e317]: "- [ ] 스토리보드에서 핵심 과업의 시작·진행·완료가 연결됩니다."
+                      - paragraph [ref=f17e318]: "- [ ] 핵심 화면별로 의미 있는 복수 스케치 대안이 있습니다."
+                      - paragraph [ref=f17e319]: "- [ ] 화면 번호와 주석으로 구현 방향을 설명할 수 있습니다."
+                      - paragraph [ref=f17e320]: "- [ ] 과업 기반 사용성 점검 기록과 수정 전후가 있습니다."
+                      - paragraph [ref=f17e321]: "- [ ] 보고서와 원본에서 같은 화면·스케치 번호를 사용했습니다."
+                      - paragraph [ref=f17e322]: "- [ ] 파일명과 공유 링크 권한을 확인했습니다."
+                  - row [ref=f17e323]:
+                    - cell "정답" [ref=f17e324]
+                    - cell [ref=f17e325]:
+                      - paragraph [ref=f17e326]: "*기초데이터·레퍼런스 분석 결과, 핵심 과업 스토리보드, 복수의 아이디어 스케치, 저충실도 프로토타입 시안 및 사용성 점검에 따른 수정 결과"
+                      - paragraph [ref=f17e327]: pdf 확장자로 제출
+                  - row [ref=f17e328]:
+                    - cell "채점기준" [ref=f17e329]
+                    - cell [ref=f17e330]:
+                      - paragraph [ref=f17e331]: 01. 기초데이터·레퍼런스 수집과 장단점 분석 — 10점
+                      - paragraph [ref=f17e332]: "- 9~10점: 프로젝트 목적에 필요한 데이터와 다양한 레퍼런스를 출처·이용 조건과 함께 체계적으로 수집하고 공통 기준으로 장단점과 적용 판단을 도출했다."
+                      - paragraph [ref=f17e333]: "- 6~8점: 필요한 자료와 장단점 분석은 있으나 일부 출처, 권리 상태, 비교 기준 또는 적용 판단이 부족하다."
+                      - paragraph [ref=f17e334]: "- 3~5점: 자료를 모았지만 프로젝트 연결과 비교 기준이 약하고 장단점이 일반적인 인상에 머문다."
+                      - paragraph [ref=f17e335]: "- 0~2점: 기초데이터·레퍼런스 수집 또는 장단점 분석을 확인하기 어렵다."
+                      - paragraph [ref=f17e336]
+                      - paragraph [ref=f17e337]: 02. 디자인 기획 기반 스케치 — 10점
+                      - paragraph [ref=f17e338]: "- 9~10점: 디자인 기획의 사용자·목표·콘셉트·정보 우선순위를 각 스케치의 화면 목적과 구성으로 일관되게 전환했다."
+                      - paragraph [ref=f17e339]: "- 6~8점: 기획과 스케치의 전반적 연결은 타당하지만 일부 화면 목적·콘텐츠 위계 또는 선택 근거가 부족하다."
+                      - paragraph [ref=f17e340]: "- 3~5점: 스케치는 있으나 기획 결과와 연결이 약하거나 화면 구성이 취향 중심이다."
+                      - paragraph [ref=f17e341]: "- 0~2점: 디자인 기획을 바탕으로 한 스케치를 확인할 수 없다."
+                      - paragraph [ref=f17e342]
+                      - paragraph [ref=f17e343]: 03. 스케치 결과의 구현 가능성 설명 — 10점
+                      - paragraph [ref=f17e344]: "- 9~10점: 모든 핵심 스케치에 화면·요소·기능·상태·전환과 제약을 명확히 주석 처리하여 다른 제작자가 구현 방향을 이해할 수 있다."
+                      - paragraph [ref=f17e345]: "- 6~8점: 주요 기능과 전환 설명은 가능하지만 일부 상태, 콘텐츠 규칙, 제약 또는 미결정 사항이 빠졌다."
+                      - paragraph [ref=f17e346]: "- 3~5점: 화면 설명은 있으나 요소의 동작과 연결이 모호하여 추가 질의 없이는 구현하기 어렵다."
+                      - paragraph [ref=f17e347]: "- 0~2점: 스케치의 구현 가능성을 설명하는 주석이나 설명이 없다."
+                      - paragraph [ref=f17e348]
+                      - paragraph [ref=f17e349]: 04. 스토리보드와 인터렉션·모션 표현 — 10점
+                      - paragraph [ref=f17e350]: "- 9~10점: 핵심 과업의 시작·진행·완료를 화면 순서로 구성하고 조작·전환·피드백·상태와 필요한 모션을 빠짐없이 표현했다."
+                      - paragraph [ref=f17e351]: "- 6~8점: 전체 흐름과 주요 인터렉션은 이해되지만 일부 분기, 상태, 피드백 또는 모션 설명이 부족하다."
+                      - paragraph [ref=f17e352]: "- 3~5점: 화면 나열은 있으나 전환 조건과 상호작용 결과가 모호하거나 흐름이 일부 끊긴다."
+                      - paragraph [ref=f17e353]: "- 0~2점: 프로토타입 제작에 사용할 스토리보드를 확인할 수 없다."
+                      - paragraph [ref=f17e354]
+                      - paragraph [ref=f17e355]: 05. 사용성 테스트 방법론 적용 — 10점
+                      - paragraph [ref=f17e356]: "- 9~10점: 저충실도 결과물에 적합한 과업·성공 조건·절차·관찰 항목을 설계하고 수행 과정과 원자료를 일관되게 기록했다."
+                      - paragraph [ref=f17e357]: "- 6~8점: 점검을 수행하고 기록했으나 일부 성공 조건, 진행 절차, 관찰 항목 또는 원자료가 부족하다."
+                      - paragraph [ref=f17e358]: "- 3~5점: 의견을 받았지만 과업 기반 절차와 관찰 기준이 약해 방법론 적용을 판단하기 어렵다."
+                      - paragraph [ref=f17e359]: "- 0~2점: 프로토타입을 이용한 사용성 점검 계획·실행 증빙이 없다."
+                      - paragraph [ref=f17e360]
+                      - paragraph [ref=f17e361]: 06. 사용성 정의와 문제점 도출 — 10점
+                      - paragraph [ref=f17e362]: "- 9~10점: 프로젝트에 맞는 사용성 기준을 정의하고 관찰 사실과 해석을 구분하여 구체적 문제·영향·원인 가설·우선순위를 도출했다."
+                      - paragraph [ref=f17e363]: "- 6~8점: 주요 문제와 근거는 타당하지만 일부 사용성 기준, 영향 범위, 원인 또는 우선순위가 부족하다."
+                      - paragraph [ref=f17e364]: "- 3~5점: 불편 의견을 나열했으나 관찰 근거와 문제 정의가 모호하거나 해결안과 혼재한다."
+                      - paragraph [ref=f17e365]: "- 0~2점: 사용성 정의나 테스트 기반 문제 도출을 확인할 수 없다."
+                      - paragraph [ref=f17e366]
+                      - paragraph [ref=f17e367]: 07. 테스트 결과 기반 스케치 수정 — 10점
+                      - paragraph [ref=f17e368]: "- 9~10점: 테스트 문제를 우선순위에 따라 수정 결정으로 연결하고 전후 스케치·변경 이유·보류 판단·재확인을 명확히 제시했다."
+                      - paragraph [ref=f17e369]: "- 6~8점: 주요 문제가 스케치 수정에 반영됐지만 일부 전후 비교, 보류 이유 또는 재확인이 부족하다."
+                      - paragraph [ref=f17e370]: "- 3~5점: 수정본은 있으나 테스트 결과와 변경 내용의 연결이 약하거나 단순 미화에 머문다."
+                      - paragraph [ref=f17e371]: "- 0~2점: 테스트 결과를 바탕으로 한 스케치 수정을 확인할 수 없다."
+                      - paragraph [ref=f17e372]
+                      - paragraph [ref=f17e373]: 08. 콘셉트·스토리보드 기반 썸네일 스케치 — 10점
+                      - paragraph [ref=f17e374]: "- 9~10점: 콘셉트와 스토리보드를 유지하면서 구조·위계·조작 방식이 다른 복수 대안을 빠르게 전개하고 비교하여 최종 방향을 선정했다."
+                      - paragraph [ref=f17e375]: "- 6~8점: 핵심 화면의 대안과 선택은 있으나 대안 차이, 비교 기준 또는 일부 화면의 탐색 폭이 부족하다."
+                      - paragraph [ref=f17e376]: "- 3~5점: 썸네일은 있으나 한 아이디어의 반복에 가깝고 콘셉트·스토리보드 연결이나 비교가 약하다."
+                      - paragraph [ref=f17e377]: "- 0~2점: 평가 가능한 썸네일 스케치 과정이 없다."
+                      - paragraph [ref=f17e378]
+                      - paragraph [ref=f17e379]: 09. 전달 매체에 맞는 시각·모션 구체화 — 10점
+                      - paragraph [ref=f17e380]: "- 9~10점: 대상 매체와 사용 맥락을 기준으로 스타일·컬러·텍스처·레이아웃과 필요한 모션을 일관되게 구체화하고 선택 근거를 설명했다."
+                      - paragraph [ref=f17e381]: "- 6~8점: 주요 시각 방향과 모션은 적절하지만 일부 매체 조건, 일관성, 가독성 또는 대체 표현이 부족하다."
+                      - paragraph [ref=f17e382]: "- 3~5점: 색과 스타일 예시는 있으나 전달 매체·콘셉트·기능과 연결되지 않거나 모션이 장식적이다."
+                      - paragraph [ref=f17e383]: "- 0~2점: 전달 매체에 맞춘 시각·모션 구체화를 확인할 수 없다."
+                      - paragraph [ref=f17e384]
+                      - paragraph [ref=f17e385]: 10. 세부 시안과 종합 패키지 제작 — 10점
+                      - paragraph [ref=f17e386]: "- 9~10점: 전체 스토리보드의 핵심 화면·상태를 일관된 세부 시안으로 정리하고 데이터·주석·대응표·파일 구조를 포함한 재사용 가능한 패키지로 제출했다."
+                      - paragraph [ref=f17e387]: "- 6~8점: 주요 세부 시안과 패키지는 갖췄으나 일부 화면·상태, 대응 관계, 파일 정리 또는 버전 정보가 부족하다."
+                      - paragraph [ref=f17e388]: "- 3~5점: 일부 시안은 있으나 스토리보드 전체를 설명하지 못하거나 자료가 흩어져 활용하기 어렵다."
+                      - paragraph [ref=f17e389]: "- 0~2점: 세부 시안 또는 종합 패키지를 확인할 수 없다."
+              - table [ref=f17e390]:
+                - caption [ref=f17e391]: 평가기준
+                - rowgroup [ref=f17e396]:
+                  - row [ref=f17e397]:
+                    - columnheader "능력단위명" [ref=f17e398]
+                    - columnheader "수행준거" [ref=f17e399]
+                    - columnheader "점수" [ref=f17e400]
+                - rowgroup [ref=f17e401]:
+                  - row [ref=f17e402]:
+                    - cell "기초데이터 수집하기" [ref=f17e403]
+                    - cell "프로토타입 제작을 위한 기초데이터와 레퍼런스 데이터를 수집하여 장 단점을 분석할 수 있다." [ref=f17e404]
+                    - cell "10" [ref=f17e405]
+                  - row [ref=f17e406]:
+                    - cell "기초데이터 수집하기" [ref=f17e407]
+                    - cell "아이디어를 시각화하기 위한 디자인 기획을 바탕으로 스케치를 할 수 있다." [ref=f17e408]
+                    - cell "10" [ref=f17e409]
+                  - row [ref=f17e410]:
+                    - cell "기초데이터 수집하기" [ref=f17e411]
+                    - cell "아이디어 스케치한 결과물을 구현이 가능하도록 설명할 수 있다." [ref=f17e412]
+                    - cell "10" [ref=f17e413]
+                  - row [ref=f17e414]:
+                    - cell "레퍼런스 조사‧분석하기" [ref=f17e415]
+                    - cell "프로토타입 제작을 위한 스토리보드 구성과 인터렉션, 모션그래픽 또는 애니메이션을 제작 할 수 있다." [ref=f17e416]
+                    - cell "10" [ref=f17e417]
+                  - row [ref=f17e418]:
+                    - cell "레퍼런스 조사‧분석하기" [ref=f17e419]
+                    - cell "프로토타입 제작물을 바탕으로 사용성 테스트를 하기위한 방법론을 적용할 수 있다." [ref=f17e420]
+                    - cell "10" [ref=f17e421]
+                  - row [ref=f17e422]:
+                    - cell "레퍼런스 조사‧분석하기" [ref=f17e423]
+                    - cell "사용성 테스트를 통한 사용성에 대한 정의와 문제점을 도출 할 수 있다." [ref=f17e424]
+                    - cell "10" [ref=f17e425]
+                  - row [ref=f17e426]:
+                    - cell "레퍼런스 조사‧분석하기" [ref=f17e427]
+                    - cell "사용성 테스트 결과를 바탕으로 프로토타입 스케치를 수정 할 수 있다." [ref=f17e428]
+                    - cell "10" [ref=f17e429]
+                  - row [ref=f17e430]:
+                    - cell "아이디어 스케치하기" [ref=f17e431]
+                    - cell "디자인 콘셉트에 따라 아이디어를 스토리보드에 맞게 썸네일 스케치(thumbnail sketch)할 수 있다." [ref=f17e432]
+                    - cell "10" [ref=f17e433]
+                  - row [ref=f17e434]:
+                    - cell "아이디어 스케치하기" [ref=f17e435]
+                    - cell "실제 전달 매체에 맞추어 디자인 스타일, 컬러, 텍스쳐, 모션을 구체화시킬 수 있다." [ref=f17e436]
+                    - cell "10" [ref=f17e437]
+                  - row [ref=f17e438]:
+                    - cell "아이디어 스케치하기" [ref=f17e439]
+                    - cell "필요에 따라 전체 스토리보드에 대한 세부 시안과 종합 패키지를 제작할 수 있다." [ref=f17e440]
+                    - cell "10" [ref=f17e441]
+        - rowgroup [ref=f17e228]:
+          - row [ref=f17e229]:
+            - cell "100 / 100" [ref=f17e230]

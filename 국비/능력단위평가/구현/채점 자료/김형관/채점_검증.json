@@ -1,0 +1,30 @@
+{
+  "student": "김형관",
+  "sourceHashesVerified": true,
+  "browserTwoDesktopWidthsVerified": true,
+  "publicFeedbackReviewed": true,
+  "rawTotal": 77,
+  "registeredTotal": 91,
+  "sumOfSiteIntegerScores": 91,
+  "siteIntegerScores": [
+    11,
+    9,
+    9,
+    11,
+    9,
+    11,
+    11,
+    9,
+    11
+  ],
+  "lmsSaved": true,
+  "studentSourceModified": false,
+  "feedbackCodeProposalsChecked": true,
+  "scoreAndIdentityChecksPassed": true,
+  "strictSubmissionHashesPassed": true,
+  "lmsVerifiedAt": "2026-10-26T04:39:31.982Z",
+  "lmsTotal": 91,
+  "lmsIntegerScoresVerified": true,
+  "lmsFeedbackExactMatch": true,
+  "lmsProofFile": "사이트_등록확인.json"
+}

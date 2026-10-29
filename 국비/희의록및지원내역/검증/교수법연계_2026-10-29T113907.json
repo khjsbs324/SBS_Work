@@ -1,0 +1,529 @@
+{
+  "schema": "meeting_pedagogy_chain_audit_v1",
+  "request": "그 다음에 교수법 실행해",
+  "course": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+  "Pcode": "300002",
+  "run_id": "2026-10-29T113907",
+  "saved_meetings": [
+    {
+      "unit": "시각디자인 리서치 조사",
+      "lcode": "4",
+      "ordinal": 1,
+      "isNew": false,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=4",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:58:35.459Z"
+    },
+    {
+      "unit": "구현",
+      "lcode": "2",
+      "ordinal": 2,
+      "isNew": false,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=2",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:58:39.698Z"
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "lcode": "5",
+      "ordinal": 3,
+      "isNew": false,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=5",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:58:46.850Z"
+    },
+    {
+      "unit": "구현 응용",
+      "lcode": "3",
+      "ordinal": 4,
+      "isNew": false,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=3",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:58:54.009Z"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "lcode": "6",
+      "ordinal": 5,
+      "isNew": false,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=6",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:59:27.828Z"
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "lcode": "7",
+      "ordinal": 6,
+      "isNew": false,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:59:30.338Z"
+    },
+    {
+      "unit": "수정 보완",
+      "lcode": "8",
+      "ordinal": 7,
+      "isNew": false,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=8",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:59:32.852Z"
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "lcode": "9",
+      "ordinal": 8,
+      "isNew": true,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=9",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:59:41.484Z"
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "lcode": "10",
+      "ordinal": 9,
+      "isNew": true,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=10",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:59:45.208Z"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "lcode": "11",
+      "ordinal": 10,
+      "isNew": true,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=11",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:59:47.947Z"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "lcode": "12",
+      "ordinal": 11,
+      "isNew": true,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=12",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:59:57.152Z"
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "lcode": "14",
+      "ordinal": 12,
+      "isNew": true,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=14",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T02:59:59.791Z"
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "lcode": "13",
+      "ordinal": 13,
+      "isNew": true,
+      "view_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=13",
+      "checks": {
+        "date_exact": true,
+        "analysis_exact": true,
+        "improvement_exact": true,
+        "original_improvement_preserved": true,
+        "pedagogy_marker_once": true,
+        "reassessment_records_preserved": true
+      },
+      "checked_at": "2026-10-29T03:00:02.442Z"
+    }
+  ],
+  "assessment_preservation": [
+    {
+      "unit": "시각디자인 리서치 조사",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=4",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:47.034Z"
+    },
+    {
+      "unit": "구현",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=2",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:47.197Z"
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=5",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:47.371Z"
+    },
+    {
+      "unit": "구현 응용",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=3",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:47.604Z"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=6",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:47.801Z"
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=7",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:47.975Z"
+    },
+    {
+      "unit": "수정 보완",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=8",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:48.141Z"
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=9",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:48.348Z"
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=10",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:48.512Z"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=11",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:48.684Z"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=12",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:48.841Z"
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=14",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:48.986Z"
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=13",
+      "checks": {
+        "summary_unchanged": true,
+        "scores_and_targets_unchanged": true
+      },
+      "checked_at": "2026-10-29T03:00:49.139Z"
+    }
+  ],
+  "future_unit": {
+    "unit": "프로토타입 제작 및 사용성 테스트",
+    "lcode": "15",
+    "planned_end_date": "2026-11-03",
+    "status": "awaiting_evaluation",
+    "previous_unit": "프로토타입 기초데이터 수집 및 스케치",
+    "previous_method": "과업별 원자료와 수정 전후를 직접 연결하는 지도",
+    "next_checks": "핵심 과업 프로토타입과 실제 테스트 원자료, 관찰·문제·우선순위·수정·재확인이 연결되는지 평가 후 확인함. 2026-11-03 종료 예정 단위의 효과와 결과는 현재 완료로 기재하지 않음.",
+    "live_meeting_written": false,
+    "preservation": {
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "unchanged": true,
+      "form": {
+        "date": "",
+        "analysis": "",
+        "improvement": ""
+      },
+      "checked_at": "2026-10-29T03:00:49.412Z"
+    }
+  },
+  "visual_review": {
+    "reviewed_units": [
+      "시각디자인 리서치 조사",
+      "구현",
+      "시각디자인 리서치 분석",
+      "구현 응용",
+      "시안 디자인 개발 심화",
+      "디자인 구성요소 설계",
+      "수정 보완",
+      "디자인 구성요소 제작",
+      "디지털디자인 사후관리",
+      "서비스ㆍ경험디자인 관찰조사",
+      "서비스ㆍ경험디자인 시나리오 개발",
+      "스마트문화앱 UI 디자인",
+      "프로토타입 기초데이터 수집 및 스케치"
+    ],
+    "method": "저장 후 실제 LMS 화면 캡처 13건을 직접 판독",
+    "result": "원문 뒤 추가 내용 표시, 연결 단위, 사후작성 구분 확인"
+  },
+  "automated_checks": [
+    {
+      "kind": "harness_check",
+      "chunk_id": "5feec8",
+      "wall_time_seconds": 1.8817507999999998,
+      "exit_code": 1,
+      "original_token_count": 95,
+      "output": "{\r\n  \"ok\": false,\r\n  \"summary\": {\r\n    \"instruction_files\": 37,\r\n    \"skills\": [\r\n      \"ncs-exam-production\",\r\n      \"ncs-learning-support\",\r\n      \"ncs-timetable\",\r\n      \"student-interview\"\r\n    ],\r\n    \"custom_agents\": 0,\r\n    \"hooks\": 0\r\n  },\r\n  \"errors\": [\r\n    \"능력단위평가\\\\수정 보완\\\\CLAUDE.md: Missing link/import: 수정 보완\"\r\n  ],\r\n  \"warnings\": []\r\n}\r\n"
+    },
+    {
+      "kind": "common_tests",
+      "chunk_id": "21d5b2",
+      "wall_time_seconds": 1.5341211000000001,
+      "exit_code": 0,
+      "original_token_count": 30,
+      "output": "..............\r\n----------------------------------------------------------------------\r\nRan 14 tests in 0.231s\r\n\r\nOK\r\n"
+    },
+    {
+      "kind": "support_tests",
+      "chunk_id": "fbc7cb",
+      "wall_time_seconds": 9.1847744,
+      "exit_code": 0,
+      "original_token_count": 32,
+      "output": "........................\r\n----------------------------------------------------------------------\r\nRan 24 tests in 7.887s\r\n\r\nOK\r\n"
+    }
+  ],
+  "scope_limits": [
+    "학생 변화는 현재 평가 피드백의 대표 사례와 기존 회의록 및 확인 가능한 훈련일지에 근거한다.",
+    "실제 교수법 적용 시점이 확인되지 않은 절차는 향후 실행 계획으로 구분했다.",
+    "서로 다른 과제·제출본·관측 조건의 비교이며 교수법의 인과 효과를 확정하지 않는다.",
+    "동일 종료일 및 수업기간 중첩은 시간상 한계를 표시했다.",
+    "2026-11-03 종료 예정 단위는 평가 결과가 없어 LMS 회의록을 작성하지 않았다."
+  ],
+  "guideline_additions": [
+    "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/AGENTS.md",
+    "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/템플릿/회의록/개선.txt"
+  ],
+  "historical_support_state_modified": false,
+  "existing_harness_error": "능력단위평가\\수정 보완\\CLAUDE.md: Missing link/import: 수정 보완",
+  "status": "complete",
+  "completed_at": "2026-10-29T03:03:33.973656+00:00",
+  "totals": {
+    "saved": 13,
+    "append_only_existing": 7,
+    "new_retrospective": 6,
+    "future_pending": 1,
+    "unit_tests_passed": 38
+  },
+  "completion_records": [
+    {
+      "unit": "시각디자인 리서치 조사",
+      "ordinal": 1,
+      "isNew": false,
+      "unit_end_date": "2026-06-05",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\시각디자인 리서치 조사\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "1d827b7e3a0eca82cbc1ee888b8637a92b0f2aba2650778e4096c8f23448dfb7"
+    },
+    {
+      "unit": "구현",
+      "ordinal": 2,
+      "isNew": false,
+      "unit_end_date": "2026-06-12",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\구현\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "05396f11f80abf2885e07644924a9935846c5f2eda23484255dacaa90d9f4746"
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "ordinal": 3,
+      "isNew": false,
+      "unit_end_date": "2026-06-19",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\시각디자인 리서치 분석\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "5a0d05b16baed8f5cba51d7bed6bdafd2d6c16b1ca01d556457f50782adcc7f1"
+    },
+    {
+      "unit": "구현 응용",
+      "ordinal": 4,
+      "isNew": false,
+      "unit_end_date": "2026-07-03",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\구현 응용\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "c67035517d4e06b3d96cf9623d4903a5084927d3f1c3c2a011e3a12825e712a4"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "ordinal": 5,
+      "isNew": false,
+      "unit_end_date": "2026-07-03",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\시안 디자인 개발 심화\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "9376f2aec1c8b539a3fde4692902557bb9938392c86dce368278d69a56f1327b"
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "ordinal": 6,
+      "isNew": false,
+      "unit_end_date": "2026-07-24",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\디자인 구성요소 설계\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "c350026e3f11b3d0252b555a647896ecbbb5af11c96372e90f461866f5f3c88b"
+    },
+    {
+      "unit": "수정 보완",
+      "ordinal": 7,
+      "isNew": false,
+      "unit_end_date": "2026-08-18",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\수정 보완\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "84228bad8ffa3c69c4983e3d86ff897fd04a466557adda050381b5301cc135bb"
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "ordinal": 8,
+      "isNew": true,
+      "unit_end_date": "2026-08-20",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\디자인 구성요소 제작\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "3750f0937f2d699c046e06f45e1e396d8b69d5479464f5ce4d0f7cfc2e545249"
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "ordinal": 9,
+      "isNew": true,
+      "unit_end_date": "2026-08-28",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\디지털디자인 사후관리\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "4a75b414d18283e28055a3279496d96836e6dfcf9a51f1df3a7f13cad852724b"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "ordinal": 10,
+      "isNew": true,
+      "unit_end_date": "2026-09-09",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\서비스ㆍ경험디자인 관찰조사\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "7fccf07858b421a018a5f15d363a40390369d04363656ad5cd00657dae0191c1"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "ordinal": 11,
+      "isNew": true,
+      "unit_end_date": "2026-10-02",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\서비스ㆍ경험디자인 시나리오 개발\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "f650f8842702d03f34694afb046a69bab194c2319f0de9299d33f0be59ec87c8"
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "ordinal": 12,
+      "isNew": true,
+      "unit_end_date": "2026-10-19",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\스마트문화앱 UI 디자인\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "b05028b1323d89ee442e20138b65a8f4cf0b02dfee4fd43c78a1cb730a0bde0a"
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "ordinal": 13,
+      "isNew": true,
+      "unit_end_date": "2026-10-22",
+      "revision_path": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\프로토타입 기초데이터 수집 및 스케치\\2026-10-29T113907\\05_정정이력\\회의록_교수법추가",
+      "completion_sha256": "5508920b7dc4b78be929ae4d9915dd60b36af3e74c69bef2d55d915ad2258826"
+    }
+  ]
+}

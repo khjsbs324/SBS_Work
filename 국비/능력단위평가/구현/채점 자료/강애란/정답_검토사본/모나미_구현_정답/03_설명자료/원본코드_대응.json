@@ -1,0 +1,66 @@
+{
+  "repository": "https://github.com/khjsbs324/UIUXB_2610",
+  "commit": "93673783dbea20b814985532778af348cb0e75d9",
+  "sources": [
+    {
+      "url": "https://github.com/khjsbs324/UIUXB_2610/blob/93673783dbea20b814985532778af348cb0e75d9/1%EC%BD%94%EB%94%A9/%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC/%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84/index.html",
+      "sha256": "abf0f0ba15bf1a0bd2580b9a3e18866e7291080fa6b3df270053aa6288ea1461"
+    },
+    {
+      "url": "https://github.com/khjsbs324/UIUXB_2610/blob/93673783dbea20b814985532778af348cb0e75d9/1%EC%BD%94%EB%94%A9/%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC/%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84/style.css",
+      "sha256": "26503a8c80eec218a46e682b8a88b440956854c5a50af59afe5640d4e6c2554a"
+    },
+    {
+      "url": "https://github.com/khjsbs324/UIUXB_2610/blob/93673783dbea20b814985532778af348cb0e75d9/1%EC%BD%94%EB%94%A9/HTML%EA%B8%B0%EC%B4%88/index.html",
+      "sha256": "2817b51b4e781c22ff6612049e320cd5366d693c772b8bc5f90f745a853c69b7"
+    },
+    {
+      "url": "https://github.com/khjsbs324/UIUXB_2610/blob/93673783dbea20b814985532778af348cb0e75d9/1%EC%BD%94%EB%94%A9/HTML%EA%B8%B0%EC%B4%88/style.css",
+      "sha256": "802ea0629bb32e5919880b64130f74a4fd15b4cd8c8092c24468c5c8867d3060"
+    }
+  ],
+  "sections": [
+    {
+      "id": "MON-01",
+      "title": "상단",
+      "source": "utility-menu / utility-con / main-header / brand / nav / actions",
+      "notes": "SNS·언어·검색·주 메뉴·전체 메뉴는 정적인 표시입니다. hover는 글자 색만 변경합니다."
+    },
+    {
+      "id": "MON-02",
+      "title": "비주얼",
+      "source": "banner / banner img / products-title / products-desc",
+      "notes": "배경 사진은 원사이트 이미지입니다. 화면 전환·자동 슬라이드는 추가하지 않았습니다."
+    },
+    {
+      "id": "MON-03",
+      "title": "신제품",
+      "source": "products / products-header / product-list / product-card / product-image",
+      "notes": "원사이트의 비대칭 이미지 배치를 Flex로 구성합니다. 상품 상세 이동과 이미지 hover 오버레이는 포함하지 않습니다."
+    },
+    {
+      "id": "MON-04",
+      "title": "인기상품",
+      "source": "brand-tabs / active / product-list / product-card / product-image / product-info",
+      "notes": "11개 상품이 브라우저 기본 가로 스크롤로 표시됩니다. 카테고리 전환·마우스 드래그 스크립트·상품 상세 이동은 포함하지 않습니다."
+    },
+    {
+      "id": "MON-05",
+      "title": "영상영역",
+      "source": "banner / banner img",
+      "notes": "원사이트의 브랜드 영상 배경 이미지를 표시합니다. 영상 파일, 자동 재생, 재생 제어 기능은 포함하지 않습니다."
+    },
+    {
+      "id": "MON-06",
+      "title": "하단정보",
+      "source": "products-header / product-image / product-info / add-btn / Flex",
+      "notes": "뉴스와 안내 내용을 표시합니다. MORE·문의·스토어의 외부 이동과 문의 전송 기능은 포함하지 않습니다."
+    },
+    {
+      "id": "MON-07",
+      "title": "푸터",
+      "source": "utility-con / nav / Flex / products-desc / button",
+      "notes": "회사 정보와 고객센터·패밀리 사이트 표시를 구성합니다. 팝업·드롭다운·채팅 연결 기능은 포함하지 않습니다."
+    }
+  ]
+}

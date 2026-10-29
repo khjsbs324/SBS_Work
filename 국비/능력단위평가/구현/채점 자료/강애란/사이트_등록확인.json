@@ -1,0 +1,61 @@
+{
+  "student": "강애란",
+  "Pcode": "500000",
+  "Lcode": "8",
+  "unit": "구현",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1172",
+  "displayedScore": "94 / 100",
+  "scores": [
+    11,
+    10,
+    10,
+    11,
+    10,
+    11,
+    11,
+    9,
+    11
+  ],
+  "total": 94,
+  "allIntegers": true,
+  "feedbackChars": 4882,
+  "feedbackSHA256": "46dfa4f3f2f452f52737f863cadfa014a0ed257b8ab37ca53a3b21fb848825db",
+  "feedbackExactMatch": true,
+  "displayedFeedback": [
+    {
+      "tag": "TD",
+      "class": "border-top-0",
+      "chars": 4592,
+      "htmlStart": "강애란 학생은 상단과 NEW ARRIVALS에서 필요한 콘텐츠를 빠짐없이 배치했습니다. 상단은 언어 선택 표시, SNS, 로고, 일곱 개 주 메뉴와 검색·메뉴 아이콘이 구분되어 있고, Flex를 활용해 가로 배치와 세로 정렬을 잡은 점이 좋았습니다. 신제품 영역도 제목과 설명, 빨간 강조선, 제품 이미지 다섯 개를 정해진 순서대로 구성했습니다.<br>\n<br>\n가장 먼저 보완할 부분은 화면 전체 폭과 안쪽 콘텐츠 폭을 구분하는 것입니다. 현재는 두 영역 모두 화면 너비를 따라 내용이 넓어집니다. 특히 1920px 화면에서 신제품의 큰 이미지가 786px 대신 1248px로 표시되어 사진의 위아래가 크게 잘리고, 아래쪽 이미지도 함께 확대됩니다. 상단은 1400px, 신제품은 1200px의 내부 폭을 기준으로"
+    }
+  ],
+  "verifiedAt": "2026-10-26T04:17:16.851Z",
+  "saveResponse": {
+    "httpStatus": 200,
+    "ok": true,
+    "redirect": "../app/appraisal.php?Pcode=500000&Lcode=8&AppCode=D"
+  },
+  "siteMaxima": [
+    12,
+    10,
+    10,
+    12,
+    10,
+    12,
+    12,
+    10,
+    12
+  ],
+  "criterionIds": [
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "screenshot": "화면검토/사이트_저장후_항목점수.png"
+}

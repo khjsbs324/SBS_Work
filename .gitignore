@@ -1,2 +1,10 @@
 # Local Playwright Chrome profile (contains sessions, cookies, and generated browser data)
 .playwright-sbs-eval-profile/
+
+# Downloaded local models and installed runtime dependencies
+.codex-temp/interview-models/
+.codex-temp/interview-venv/
+.tmp/ncs-support-pdf/
+.tmp/ncs-tools/
+.tmp/monami-playwright/
+tmp/support-validation-deps/

@@ -1,0 +1,87 @@
+{
+  "student": "박주연",
+  "received": "2026-10-23",
+  "files": [
+    {
+      "path": "공유열람\\Test_1021-b2d1dc32875375534667fd7bd67aa225edbdeabd\\03_학생_제출_산출물.md",
+      "size": 6129,
+      "sha256": "726da61475b530257f35e64ba6b03953351f8750bf1844ffe28e7d3b0593cecb"
+    },
+    {
+      "path": "공유열람\\Test_1021-b2d1dc32875375534667fd7bd67aa225edbdeabd\\메인페이지.html",
+      "size": 152418,
+      "sha256": "a4bfcd5623a90e11a1992369f9dbab7ba71750d20fc324f89e5f7e39fe45ac2c"
+    },
+    {
+      "path": "공유열람\\Test_1021-b2d1dc32875375534667fd7bd67aa225edbdeabd\\브랜드소개페이지_수정안.html",
+      "size": 17493,
+      "sha256": "4fbc72a04d5062fd1a26dc38ce0a5994de4057d0895a4245be899e8b9d14dd0b"
+    },
+    {
+      "path": "공유열람\\Test_1021-b2d1dc32875375534667fd7bd67aa225edbdeabd\\브랜드소개페이지_초안.html",
+      "size": 19720,
+      "sha256": "d733260e607536daeeaad01a46fec0a8fea53f510c19a0a6a700bd37523c7159"
+    },
+    {
+      "path": "공유열람\\Test_1021-b2d1dc32875375534667fd7bd67aa225edbdeabd\\카테고리페이지_수정안.html",
+      "size": 23943,
+      "sha256": "18317e6e360647a634c1d2ca9ce608f2a964864b646876ff62c4dfd132862663"
+    },
+    {
+      "path": "공유열람\\Test_1021-b2d1dc32875375534667fd7bd67aa225edbdeabd\\카테고리페이지_초안.html",
+      "size": 28807,
+      "sha256": "01e02fa32b488318327ceb9613387e444d07511f167e33127d96f670825087bf"
+    },
+    {
+      "path": "공유원본\\b2d1dc32875375534667fd7bd67aa225edbdeabd.zip",
+      "size": 46261,
+      "sha256": "32e9a4d1dfaed94d7279f03ada5c082fc735ef0cd35a00c76df5a2c8a051c925"
+    },
+    {
+      "path": "공유원본\\접근기록.json",
+      "size": 384,
+      "sha256": "34753537e76dc55fd022e5531888901ff9a150285b95b1c9a40ffcd9a4761415"
+    },
+    {
+      "path": "열람\\03_학생_제출_산출물.md",
+      "size": 6209,
+      "sha256": "a833c6e9f1a0f8de41ad906103b1082988d043cf68c330df5bafc0f665a03c19"
+    },
+    {
+      "path": "열람\\링크.txt",
+      "size": 662,
+      "sha256": "4d2715d05034cb172d69f3e91a371f14b30700ece279e5a9ef400a9ccb104b75"
+    },
+    {
+      "path": "열람\\메인페이지.pdf",
+      "size": 7093827,
+      "sha256": "47ea1550d4676a64af3ccfeb1e848149e6cae185885dea3c4d1f915cb54a1494",
+      "pages": 1
+    },
+    {
+      "path": "열람\\브랜드소개페이지_수정안.html",
+      "size": 18098,
+      "sha256": "a7301c3a6ae3d6ff07ed364b2bf6b5e7118a6cf77f10e0259fd361c91e29fd6c"
+    },
+    {
+      "path": "열람\\브랜드소개페이지_초안.html",
+      "size": 20355,
+      "sha256": "177786e96ac0e5f8b0f67d64253fffd3d64306db6c505112500dcf8097432fdb"
+    },
+    {
+      "path": "열람\\카테고리페이지_수정안.html",
+      "size": 24700,
+      "sha256": "3318cbf7c0ddc7db4f57a94cba9f363d977915c8c00a1d54ddc0f687bf3d3120"
+    },
+    {
+      "path": "열람\\카테고리페이지_초안.html",
+      "size": 29697,
+      "sha256": "89f39d2e69e7c939734afb5425d1fa2fa31b97d5ce4db2855f2e7fba71aca976"
+    },
+    {
+      "path": "원본\\1792584209_727230da.zip",
+      "size": 4899963,
+      "sha256": "4ad77937cb4da49f4a3a1ca03418f1d95bbb67bbc40070c4db59931ee8653dcc"
+    }
+  ]
+}

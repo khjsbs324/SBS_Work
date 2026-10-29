@@ -1,0 +1,34 @@
+{
+  "student": "김형관",
+  "passed": true,
+  "purpose": "원본 채점과 구분한 메모리 내 수정 예시 검증입니다. 학생 제출 파일은 수정하지 않습니다.",
+  "proposedCss": ".new{width:1200px;margin:0 auto;padding:88px 0 90px}.toparea,.btnarea{display:flex;gap:22px;align-items:flex-start}.new-left{width:392px}.new-heading{height:155px}.btnarea{margin-top:22px}.new img{display:block;border-radius:22px}.new h2{margin:0;font-size:32px;font-weight:500}.title-line{width:26px;height:3px;background:#c81939;margin:12px 0 10px}.new-heading p{margin:0;font-size:13px}",
+  "boxes": [
+    {
+      "viewport": 1920,
+      "width": 1200,
+      "height": 360,
+      "display": "flex"
+    },
+    {
+      "viewport": 1440,
+      "width": 1200,
+      "height": 360,
+      "display": "flex"
+    }
+  ],
+  "readability": {
+    "title": "김형관 모나미 구현 피드백",
+    "headings": [
+      "1. 상단 > 메뉴 문구 확인",
+      "2. NEW ARRIVALS > 제목과 이미지를 같은 부모 안에 배치",
+      "3. NEW ARRIVALS > Flex 값과 행의 간격",
+      "4. NEW ARRIVALS > 이미지 파일과 설명을 함께 확인"
+    ],
+    "codeBlocks": 7,
+    "viewport": 1440,
+    "documentWidth": 1425,
+    "characters": 2802
+  },
+  "verifiedAt": "2026-10-26T04:37:34.879Z"
+}

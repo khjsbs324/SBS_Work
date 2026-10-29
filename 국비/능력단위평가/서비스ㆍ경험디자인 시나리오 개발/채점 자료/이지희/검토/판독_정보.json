@@ -1,0 +1,14 @@
+{
+  "student": "이지희",
+  "pages": [
+    {
+      "page": 1,
+      "width": 13440.0,
+      "height": 24240.0,
+      "lines": 4121,
+      "characters": 38682
+    }
+  ],
+  "method": "PyMuPDF get_texttrace Unicode glyphs, line origin and bounding boxes; original PDF unchanged",
+  "visualReview": "Overview rendered; text content and figures require subsequent human/model visual review before scoring."
+}

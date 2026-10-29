@@ -1,0 +1,69 @@
+{
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/app/appraisal.php?Pcode=500000&Lcode=8&AppCode=D",
+  "students": [
+    {
+      "student": "강애란",
+      "Sid": "sbsartdj1172",
+      "text": " 강애란\n구분\t본평가\t결석자평가\t재평가\n점수\t94\t-\t-\n평가일\t2026-10-23\t-\t-\n서명\tPIN 인증\t-\t-",
+      "hasGradeLink": true
+    },
+    {
+      "student": "권현진",
+      "Sid": "sbsartdj1164",
+      "text": " 권현진\n구분\t본평가\t결석자평가\t재평가\n점수\t평가중\t-\t-\n평가일\t2026-10-23\t-\t-\n서명\t-\t-\t-",
+      "hasGradeLink": false
+    },
+    {
+      "student": "김규린",
+      "Sid": "sbsartdj1165",
+      "text": " 김규린\n구분\t본평가\t결석자평가\t재평가\n점수\t70\t-\t-\n평가일\t2026-10-23\t-\t-\n서명\tPIN 인증\t-\t-",
+      "hasGradeLink": true
+    },
+    {
+      "student": "김형관",
+      "Sid": "sbsartdj1166",
+      "text": " 김형관\n구분\t본평가\t결석자평가\t재평가\n점수\t91\t-\t-\n평가일\t2026-10-23\t-\t-\n서명\tPIN 인증\t-\t-",
+      "hasGradeLink": true
+    },
+    {
+      "student": "박선환",
+      "Sid": "sbsartdj1167",
+      "text": " 박선환\n구분\t본평가\t결석자평가\t재평가\n점수\t82\t-\t-\n평가일\t2026-10-23\t-\t-\n서명\tPIN 인증\t-\t-",
+      "hasGradeLink": true
+    },
+    {
+      "student": "신윤아",
+      "Sid": "sbsartdj1168",
+      "text": " 신윤아\n구분\t본평가\t결석자평가\t재평가\n점수\t96\t-\t-\n평가일\t2026-10-23\t-\t-\n서명\tPIN 인증\t-\t-",
+      "hasGradeLink": true
+    },
+    {
+      "student": "이주원",
+      "Sid": "sbsartdj1171",
+      "text": " 이주원\n구분\t본평가\t결석자평가\t재평가\n점수\t97\t-\t-\n평가일\t2026-10-23\t-\t-\n서명\tPIN 인증\t-\t-",
+      "hasGradeLink": true
+    },
+    {
+      "student": "전해주",
+      "Sid": "sbsartdj1169",
+      "text": " 전해주\n구분\t본평가\t결석자평가\t재평가\n점수\t79\t-\t-\n평가일\t2026-10-23\t-\t-\n서명\tPIN 인증\t-\t-",
+      "hasGradeLink": true
+    },
+    {
+      "student": "홍석경",
+      "Sid": "sbsartdj1170",
+      "text": " 홍석경\n구분\t본평가\t결석자평가\t재평가\n점수\t88\t-\t-\n평가일\t2026-10-23\t-\t-\n서명\tPIN 인증\t-\t-",
+      "hasGradeLink": true
+    }
+  ],
+  "gradedCount": 8,
+  "pending": [
+    {
+      "student": "권현진",
+      "Sid": "sbsartdj1164",
+      "status": "평가중",
+      "hasGradeLink": false
+    }
+  ],
+  "verifiedAt": "2026-10-26T04:42:12.982Z"
+}

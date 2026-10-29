@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "unit": "디자인 구성요소 제작",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=9",
+  "completed_at": "2026-10-29T03:19:40.791776+00:00",
+  "exact_readback": true,
+  "previous_prefix_preserved": true,
+  "date_preserved": true,
+  "reassessment_preserved": true,
+  "visual_reviewed": true,
+  "hashes": {
+    "최종수정안.json": "0541b800e95fc1b81569d44bdab2ada63982673791f311f0376418fa34af3b86",
+    "최종저장확인.json": "cd208e2fbb80eba974869938b77960baaca782fc7ab626bd4232d52531e4ca4e",
+    "회의록_수정전.json": "b33d741b7aca571fd871decc0e626865cd4cd9b9248f044006f9e3e9ee495be8",
+    "수정후화면.png": "59331d44706192b3346cb4bb3cb6b48ff31217bc6b157f8b35dc35d64bf314d0"
+  }
+}

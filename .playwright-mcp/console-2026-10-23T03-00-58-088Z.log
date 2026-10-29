@@ -1,0 +1,16 @@
+[     141ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=2:504:1
+[ 2102837ms] ReferenceError: parseImageDisplaySpecsFromHtml is not defined
+    at restoreImageDisplaySpecsFromHtml (https://sbsartdj.maniaro.net/js/toast-editor/lms-toast-editor.js:2522:17)
+    at https://sbsartdj.maniaro.net/js/toast-editor/lms-toast-editor.js:2590:27
+[ 2102839ms] ReferenceError: parseImageDisplaySpecsFromHtml is not defined
+    at restoreImageDisplaySpecsFromHtml (https://sbsartdj.maniaro.net/js/toast-editor/lms-toast-editor.js:2522:17)
+    at https://sbsartdj.maniaro.net/js/toast-editor/lms-toast-editor.js:2590:27
+[ 3478224ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=3:459:1
+[ 3596714ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=3:504:1
+[ 4313783ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=6:466:1
+[ 4442692ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=6:517:1

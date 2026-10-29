@@ -1,0 +1,680 @@
+{
+  "course": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+  "unit": "시안 디자인 개발 심화",
+  "Pcode": "300002",
+  "Lcode": "6",
+  "unitEndDate": "2026-07-03",
+  "postDate": "2026-07-06",
+  "meeting": {
+    "original": {
+      "date": "",
+      "analysis": "",
+      "improvement": ""
+    },
+    "result": {
+      "status": 200,
+      "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/appraisal\\/analysis\\/index.php?Pcode=300002\\u0026Lcode=6\"}"
+    },
+    "exact": true,
+    "saved": {
+      "date": "2026-10-23",
+      "analysis": "시안 디자인 개발 심화 평가결과 분석 및 A·B·C그룹별 학습지원 계획\n\n기록 작성일: 2026-10-23\n평가일: 2026-07-03 / 능력단위 종강일: 2026-07-03\n분석 작성: 김혜지 강사\n기록 구분: 현재 등록된 평가점수와 개별 피드백을 검토하여 사후 작성한 분석·지원계획임. 과거 회의의 실제 개최일·참석자 확인자료는 없어 임의로 기재하지 않음.\n\n1. 분석 목적\n마인드맵·자료 수집·이미지 분석·라인 드로잉·레퍼런스·최종 시안·브랜딩 보고서가 하나의 콘셉트로 연결되도록 지원함. 자료의 양을 늘리는 것에서 나아가 최종안의 선택 이유를 실제 결과물로 설명하고, 로고타입·컬러·서체·매체별 적용과 검수 결과를 구체화하고자 함.\n\n2. 근거 범위와 확인 한계\n현재 전체점수표의 표시점수와 각 행에 등록된 피드백을 기준으로 검토함. 일부 행은 재평가 자료로 연결되어 있으므로 본평가·재평가 점수를 재계산하거나 바꾸지 않음.\n일부 피드백에는 편집용 문구나 표의 학생명과 다른 이름이 포함되어 있음. 해당 문구를 다른 학생의 제출 증빙이나 수정 지시로 취급하지 않고, 개별 제출내용을 단정하는 근거에서 제외함.\n박찬미 행에는 빈 폴더 제출에 따른 재평가라는 짧은 기록만 있고, 김정은 행에는 세부 피드백이 비어 있음. 두 학습자의 특정 조형·색채·서체 결함을 새로 추정하지 않으며, 먼저 현재 파일의 내용과 보완 필요 항목을 확인하는 지원을 제공함.\n\n3. 학습지원 그룹\n지원자료 선택을 위한 기준으로 현재 표시점수 80점 이상을 A, 70~79점을 B, 70점 미만을 C로 구분함. 공식 성적등급·재평가 결과·기존 점수를 변경하는 구분이 아님.\n\nA그룹(5명): 이은경(94점), 최지혜(91점), 이은수(84점), 이지희(84점), 허지민(83점)\nB그룹(4명): 강민경(76점), 박주연(75점), 김지선(74점), 임연우(72점)\nC그룹(2명): 박찬미(68점), 김정은(63점)\n\n4. A그룹 분석 및 지원 방향\n콘셉트와 시각 자료 전개, 로고 시도와 기획 보고서의 연결이 상대적으로 안정적임. 공통적으로 실제 최종안을 하나로 명확히 지정하고, 로고 선택 이유·로고타입·색상 코드와 역할·서체의 실제 적용·매체별 시안·축소 및 단색·반전 점검 결과를 시각 산출물로 구체화할 필요가 있음.\n- 지원자료: 최종안 비교 판단표, 레퍼런스→추출 원리→조형 규칙 도식, 로고·타입·컬러 사용 기준, 매체별 변형 비교, 출력·축소 검수와 변경 기록 양식.\n- 활동: 자신의 핵심 콘셉트를 유지하며 선택·배제 이유를 정리하고, 말로 적은 계획을 실제 시안과 연결함. 매체에 따라 바뀌는 배치와 유지할 브랜드 요소를 분리함.\n- 완료 기준: 실제 시안·파일·검수 결과를 열어 선택 이유, 시스템 규칙, 적용 조건과 보완 전후를 설명할 수 있는지 확인함.\n\n5. B그룹 분석 및 지원 방향\n자료 수집과 시안 제작 과정은 확인되나 결과물과 보고서의 대응, 브랜드 고유 메시지, 최종 선택안, 컬러·서체의 실제 적용, 매체별 결과와 검수 증빙을 우선 보완할 필요가 있음. 일부 피드백의 이름 불일치는 개별 사실로 확정하지 않음.\n- 지원자료: 현재 결과물 누락 점검표, 이미지 분석·형태 선택 문장 틀, 최종안 지정표, 컬러·서체 역할표, 실제 결과물을 설명하는 보고서 캡션 틀, 매체 적용·제출 전 확인 양식.\n- 활동: 이미 만든 산출물을 먼저 확인하고, 가장 중요한 연결이 끊긴 부분부터 보완함. “확인 필요”로 남은 부분은 실제 파일을 열어 확인한 내용으로 바꾸고, 확인하지 못한 사항은 미확인으로 남김.\n- 완료 기준: 최종안과 보고서가 일치하고, 자료·조형·색·서체·매체 선택의 이유를 구체적인 이미지와 연결할 수 있는지 확인함.\n\n6. C그룹 분석 및 지원 방향\n세부 피드백이 제한되어 있으므로 능력 부족을 단정하지 않고 파일 실재·내용·열림·내보내기 여부를 먼저 확인함. 그 다음 브랜드 한 문장, 참고자료와 형태의 연결, 최종안 하나, 브랜드명과 서체·색 역할, 매체 적용 한 장과 검수 기록을 순차적으로 완성하도록 지원함.\n- 지원자료: 파일 목록·열림 점검표, 콘셉트 한 문장과 참고자료 카드, 기본형 구성도, 빈 컬러·서체 카드, 단계별 매체 적용 예시, 짧은 보고서 작성과 제출 점검 양식.\n- 활동: 한 단계에서 실제 파일과 화면을 확인한 뒤 다음 단계로 이동함. 빈 폴더·빈 문서가 없는지 확인하고, 확인한 범위와 질문을 기록함.\n- 완료 기준: 자신의 파일을 열어 내용을 설명하고, 기본 시안에서 적용안으로 무엇을 유지·변경했는지 말하며, 검수와 저장 결과를 확인할 수 있는지 점검함.\n\n7. 공통 지원 원칙\n자료의 분위기를 그대로 복제하기보다 선·면·비례·여백·정보 위계 등 참고할 원리를 추출함. 최종안·사용 조건·변형 범위를 실제 시각 결과물과 연결하고, 취향 표현만으로 정답을 정하지 않음.\n연습 도식과 가상 문구 브랜드 예시는 별도 제작하며, 학생 작업이나 강사용 정답을 복제하지 않음. 예제의 색·크기·매체 수는 연습 조건이고 원래 평가의 지정 조건을 대체하지 않음.\n모니터 미리보기와 실물 인쇄·색상 교정 결과를 구분하고, 확인하지 않은 색상 재현·인쇄 품질·사용권·제작 가능성을 통과로 기록하지 않음. 기존 점수·학생 제출물·피드백 원문은 수정하지 않음.",
+      "improvement": "8. 지원자료 제공 및 후속 계획\n① 지원내역에 시안 디자인 개발 심화 A·B·C그룹 자료를 각각 별도 글로 등록할 계획임. 작성일은 능력단위 종강일 2026-07-03 다음 첫 평일인 2026-07-06으로 설정함.\n② 국내 디자이너의 공개 자료와 한국어 공식 도움말을 읽는 목적·실습 질문에 연결함. 단순 링크 나열 대신 자신의 시안에 적용할 판단 기준을 제시함.\n③ 그룹별 설명 본문, 콘셉트·브랜드 체계·매체 적용 도식, 출력용 학습자료, 편집 가능한 실습 양식과 독립 제작한 벡터 예제를 제공함. 폰트 파일·외부 유료 자산은 무단 배포하지 않음.\n④ 파일 실재·열림·레이아웃·이미지·내보내기와 PDF 잘림을 확인함. 가상 예시의 화면 검토를 실제 인쇄 교정·학생 보완 완료로 기록하지 않음.\n⑤ 학습자는 자신의 현재 파일을 바탕으로 관찰한 문제, 콘셉트와의 차이, 수정 이유, 보완 전후·검수 조건·남은 질문을 작성함. 실제 확인한 학습자 제출이나 후속 피드백만 별도로 기록함.\n\n9. 종합 의견\nA그룹은 이미 형성된 방향을 일관된 사용 체계와 검수 결과로 발전시키고, B그룹은 산출물과 보고서의 연결·선택 이유·실제 적용을 보완하며, C그룹은 파일과 내용을 확인한 뒤 작은 시안 하나씩 완성하는 흐름에 중점을 둠. 공통 목표는 수집 자료부터 최종안·매체별 변형·점검·보완까지의 선택 이유를 실제 결과물로 설명하는 능력을 기르는 것임."
+    }
+  },
+  "meetingExpected": {
+    "date": "2026-10-23",
+    "analysis": "시안 디자인 개발 심화 평가결과 분석 및 A·B·C그룹별 학습지원 계획\n\n기록 작성일: 2026-10-23\n평가일: 2026-07-03 / 능력단위 종강일: 2026-07-03\n분석 작성: 김혜지 강사\n기록 구분: 현재 등록된 평가점수와 개별 피드백을 검토하여 사후 작성한 분석·지원계획임. 과거 회의의 실제 개최일·참석자 확인자료는 없어 임의로 기재하지 않음.\n\n1. 분석 목적\n마인드맵·자료 수집·이미지 분석·라인 드로잉·레퍼런스·최종 시안·브랜딩 보고서가 하나의 콘셉트로 연결되도록 지원함. 자료의 양을 늘리는 것에서 나아가 최종안의 선택 이유를 실제 결과물로 설명하고, 로고타입·컬러·서체·매체별 적용과 검수 결과를 구체화하고자 함.\n\n2. 근거 범위와 확인 한계\n현재 전체점수표의 표시점수와 각 행에 등록된 피드백을 기준으로 검토함. 일부 행은 재평가 자료로 연결되어 있으므로 본평가·재평가 점수를 재계산하거나 바꾸지 않음.\n일부 피드백에는 편집용 문구나 표의 학생명과 다른 이름이 포함되어 있음. 해당 문구를 다른 학생의 제출 증빙이나 수정 지시로 취급하지 않고, 개별 제출내용을 단정하는 근거에서 제외함.\n박찬미 행에는 빈 폴더 제출에 따른 재평가라는 짧은 기록만 있고, 김정은 행에는 세부 피드백이 비어 있음. 두 학습자의 특정 조형·색채·서체 결함을 새로 추정하지 않으며, 먼저 현재 파일의 내용과 보완 필요 항목을 확인하는 지원을 제공함.\n\n3. 학습지원 그룹\n지원자료 선택을 위한 기준으로 현재 표시점수 80점 이상을 A, 70~79점을 B, 70점 미만을 C로 구분함. 공식 성적등급·재평가 결과·기존 점수를 변경하는 구분이 아님.\n\nA그룹(5명): 이은경(94점), 최지혜(91점), 이은수(84점), 이지희(84점), 허지민(83점)\nB그룹(4명): 강민경(76점), 박주연(75점), 김지선(74점), 임연우(72점)\nC그룹(2명): 박찬미(68점), 김정은(63점)\n\n4. A그룹 분석 및 지원 방향\n콘셉트와 시각 자료 전개, 로고 시도와 기획 보고서의 연결이 상대적으로 안정적임. 공통적으로 실제 최종안을 하나로 명확히 지정하고, 로고 선택 이유·로고타입·색상 코드와 역할·서체의 실제 적용·매체별 시안·축소 및 단색·반전 점검 결과를 시각 산출물로 구체화할 필요가 있음.\n- 지원자료: 최종안 비교 판단표, 레퍼런스→추출 원리→조형 규칙 도식, 로고·타입·컬러 사용 기준, 매체별 변형 비교, 출력·축소 검수와 변경 기록 양식.\n- 활동: 자신의 핵심 콘셉트를 유지하며 선택·배제 이유를 정리하고, 말로 적은 계획을 실제 시안과 연결함. 매체에 따라 바뀌는 배치와 유지할 브랜드 요소를 분리함.\n- 완료 기준: 실제 시안·파일·검수 결과를 열어 선택 이유, 시스템 규칙, 적용 조건과 보완 전후를 설명할 수 있는지 확인함.\n\n5. B그룹 분석 및 지원 방향\n자료 수집과 시안 제작 과정은 확인되나 결과물과 보고서의 대응, 브랜드 고유 메시지, 최종 선택안, 컬러·서체의 실제 적용, 매체별 결과와 검수 증빙을 우선 보완할 필요가 있음. 일부 피드백의 이름 불일치는 개별 사실로 확정하지 않음.\n- 지원자료: 현재 결과물 누락 점검표, 이미지 분석·형태 선택 문장 틀, 최종안 지정표, 컬러·서체 역할표, 실제 결과물을 설명하는 보고서 캡션 틀, 매체 적용·제출 전 확인 양식.\n- 활동: 이미 만든 산출물을 먼저 확인하고, 가장 중요한 연결이 끊긴 부분부터 보완함. “확인 필요”로 남은 부분은 실제 파일을 열어 확인한 내용으로 바꾸고, 확인하지 못한 사항은 미확인으로 남김.\n- 완료 기준: 최종안과 보고서가 일치하고, 자료·조형·색·서체·매체 선택의 이유를 구체적인 이미지와 연결할 수 있는지 확인함.\n\n6. C그룹 분석 및 지원 방향\n세부 피드백이 제한되어 있으므로 능력 부족을 단정하지 않고 파일 실재·내용·열림·내보내기 여부를 먼저 확인함. 그 다음 브랜드 한 문장, 참고자료와 형태의 연결, 최종안 하나, 브랜드명과 서체·색 역할, 매체 적용 한 장과 검수 기록을 순차적으로 완성하도록 지원함.\n- 지원자료: 파일 목록·열림 점검표, 콘셉트 한 문장과 참고자료 카드, 기본형 구성도, 빈 컬러·서체 카드, 단계별 매체 적용 예시, 짧은 보고서 작성과 제출 점검 양식.\n- 활동: 한 단계에서 실제 파일과 화면을 확인한 뒤 다음 단계로 이동함. 빈 폴더·빈 문서가 없는지 확인하고, 확인한 범위와 질문을 기록함.\n- 완료 기준: 자신의 파일을 열어 내용을 설명하고, 기본 시안에서 적용안으로 무엇을 유지·변경했는지 말하며, 검수와 저장 결과를 확인할 수 있는지 점검함.\n\n7. 공통 지원 원칙\n자료의 분위기를 그대로 복제하기보다 선·면·비례·여백·정보 위계 등 참고할 원리를 추출함. 최종안·사용 조건·변형 범위를 실제 시각 결과물과 연결하고, 취향 표현만으로 정답을 정하지 않음.\n연습 도식과 가상 문구 브랜드 예시는 별도 제작하며, 학생 작업이나 강사용 정답을 복제하지 않음. 예제의 색·크기·매체 수는 연습 조건이고 원래 평가의 지정 조건을 대체하지 않음.\n모니터 미리보기와 실물 인쇄·색상 교정 결과를 구분하고, 확인하지 않은 색상 재현·인쇄 품질·사용권·제작 가능성을 통과로 기록하지 않음. 기존 점수·학생 제출물·피드백 원문은 수정하지 않음.",
+    "improvement": "8. 지원자료 제공 및 후속 계획\n① 지원내역에 시안 디자인 개발 심화 A·B·C그룹 자료를 각각 별도 글로 등록할 계획임. 작성일은 능력단위 종강일 2026-07-03 다음 첫 평일인 2026-07-06으로 설정함.\n② 국내 디자이너의 공개 자료와 한국어 공식 도움말을 읽는 목적·실습 질문에 연결함. 단순 링크 나열 대신 자신의 시안에 적용할 판단 기준을 제시함.\n③ 그룹별 설명 본문, 콘셉트·브랜드 체계·매체 적용 도식, 출력용 학습자료, 편집 가능한 실습 양식과 독립 제작한 벡터 예제를 제공함. 폰트 파일·외부 유료 자산은 무단 배포하지 않음.\n④ 파일 실재·열림·레이아웃·이미지·내보내기와 PDF 잘림을 확인함. 가상 예시의 화면 검토를 실제 인쇄 교정·학생 보완 완료로 기록하지 않음.\n⑤ 학습자는 자신의 현재 파일을 바탕으로 관찰한 문제, 콘셉트와의 차이, 수정 이유, 보완 전후·검수 조건·남은 질문을 작성함. 실제 확인한 학습자 제출이나 후속 피드백만 별도로 기록함.\n\n9. 종합 의견\nA그룹은 이미 형성된 방향을 일관된 사용 체계와 검수 결과로 발전시키고, B그룹은 산출물과 보고서의 연결·선택 이유·실제 적용을 보완하며, C그룹은 파일과 내용을 확인한 뒤 작은 시안 하나씩 완성하는 흐름에 중점을 둠. 공통 목표는 수집 자료부터 최종안·매체별 변형·점검·보완까지의 선택 이유를 실제 결과물로 설명하는 능력을 기르는 것임."
+  },
+  "groupCounts": {
+    "A": 5,
+    "B": 4,
+    "C": 2
+  },
+  "groupBasis": "현재 화면 표시 점수: A 80점 이상, B 70~79점, C 70점 미만. 기존 평가·재평가 성적은 변경하지 않음.",
+  "registrations": [
+    {
+      "group": "A",
+      "title": "[능력단위평가_지원내역] 시안 디자인 개발 심화 A그룹 지원자료",
+      "date": "2026-07-06",
+      "uploaded": {
+        "process.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729515_30f600fd.png",
+        "system.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729515_927632be.png",
+        "variation.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729516_b1961845.png",
+        "checks.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729516_f73b08bd.png"
+      },
+      "preflight": {
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "date": "2026-07-06",
+        "images": 4,
+        "anchors": 10,
+        "refs": 4,
+        "headings": 11,
+        "placeholder": false
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t16\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시안 디자인 개발 심화 A그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06\n\t\t\t\t\t\t\t\t\t",
+          "id": "1051"
+        }
+      ],
+      "verification": {
+        "group": "A",
+        "id": "1051",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1051",
+        "exactText": true,
+        "title": true,
+        "date": true,
+        "images": [
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729515_30f600fd.png",
+            "loaded": true
+          },
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729515_927632be.png",
+            "loaded": true
+          },
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729516_b1961845.png",
+            "loaded": true
+          },
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729516_f73b08bd.png",
+            "loaded": true
+          }
+        ],
+        "anchors": 10,
+        "anchorTargets": true,
+        "references": [
+          "https://design.samsung.com/kr/contents/design-career-1/vcd.html",
+          "https://design.samsung.com/kr/contents/blue-story/",
+          "https://spoqa.github.io/2012/12/03/Typography.html",
+          "https://helpx.adobe.com/kr/illustrator/using/pdf-options.html"
+        ],
+        "headings": 11,
+        "styles": {
+          "maxWidth": "980px",
+          "font": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "placeholder": false,
+        "anchorNavigation": {
+          "hash": "#a-learning-1",
+          "targetTop": 0.28125,
+          "scrollY": 1138
+        },
+        "attachment": {
+          "status": 200,
+          "bytes": 480358,
+          "exactBytes": true
+        }
+      }
+    },
+    {
+      "group": "B",
+      "title": "[능력단위평가_지원내역] 시안 디자인 개발 심화 B그룹 지원자료",
+      "date": "2026-07-06",
+      "uploaded": {
+        "process.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729535_59eb6208.png",
+        "system.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729536_20a1a0bb.png",
+        "variation.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729537_534b37d4.png",
+        "checks.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729537_f5039367.png"
+      },
+      "preflight": {
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "date": "2026-07-06",
+        "images": 4,
+        "anchors": 10,
+        "refs": 4,
+        "headings": 11,
+        "placeholder": false
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t17\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시안 디자인 개발 심화 B그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06\n\t\t\t\t\t\t\t\t\t",
+          "id": "1052"
+        }
+      ],
+      "verification": {
+        "group": "B",
+        "id": "1052",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1052",
+        "exactText": true,
+        "title": true,
+        "date": true,
+        "images": [
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729535_59eb6208.png",
+            "loaded": true
+          },
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729536_20a1a0bb.png",
+            "loaded": true
+          },
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729537_534b37d4.png",
+            "loaded": true
+          },
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729537_f5039367.png",
+            "loaded": true
+          }
+        ],
+        "anchors": 10,
+        "anchorTargets": true,
+        "references": [
+          "https://design.samsung.com/kr/contents/design-career-1/vcd.html",
+          "https://design.samsung.com/kr/contents/blue-story/",
+          "https://spoqa.github.io/2012/12/03/Typography.html",
+          "https://helpx.adobe.com/kr/illustrator/using/pdf-options.html"
+        ],
+        "headings": 11,
+        "styles": {
+          "maxWidth": "980px",
+          "font": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "placeholder": false,
+        "anchorNavigation": {
+          "hash": "#b-learning-1",
+          "targetTop": 0.28125,
+          "scrollY": 1138
+        },
+        "attachment": {
+          "status": 200,
+          "bytes": 479266,
+          "exactBytes": true
+        }
+      }
+    },
+    {
+      "group": "C",
+      "title": "[능력단위평가_지원내역] 시안 디자인 개발 심화 C그룹 지원자료",
+      "date": "2026-07-06",
+      "uploaded": {
+        "process.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729539_cc975570.png",
+        "system.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729540_27e35028.png",
+        "variation.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729540_60eb9eca.png",
+        "checks.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729541_3f7fe9cd.png"
+      },
+      "preflight": {
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "date": "2026-07-06",
+        "images": 4,
+        "anchors": 10,
+        "refs": 4,
+        "headings": 11,
+        "placeholder": false
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t18\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시안 디자인 개발 심화 C그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06\n\t\t\t\t\t\t\t\t\t",
+          "id": "1053"
+        }
+      ],
+      "verification": {
+        "group": "C",
+        "id": "1053",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1053",
+        "exactText": true,
+        "title": true,
+        "date": true,
+        "images": [
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729539_cc975570.png",
+            "loaded": true
+          },
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729540_27e35028.png",
+            "loaded": true
+          },
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729540_60eb9eca.png",
+            "loaded": true
+          },
+          {
+            "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729541_3f7fe9cd.png",
+            "loaded": true
+          }
+        ],
+        "anchors": 10,
+        "anchorTargets": true,
+        "references": [
+          "https://design.samsung.com/kr/contents/design-career-1/vcd.html",
+          "https://design.samsung.com/kr/contents/blue-story/",
+          "https://spoqa.github.io/2012/12/03/Typography.html",
+          "https://helpx.adobe.com/kr/illustrator/using/pdf-options.html"
+        ],
+        "headings": 11,
+        "styles": {
+          "maxWidth": "980px",
+          "font": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "placeholder": false,
+        "anchorNavigation": {
+          "hash": "#c-learning-1",
+          "targetTop": 0.28125,
+          "scrollY": 1138
+        },
+        "attachment": {
+          "status": 200,
+          "bytes": 476386,
+          "exactBytes": true
+        }
+      }
+    }
+  ],
+  "layout": [
+    {
+      "group": "A",
+      "vectors": [
+        {
+          "name": "01_기본형.svg",
+          "textElements": 3,
+          "paths": 2,
+          "width": 640,
+          "height": 240,
+          "externalImages": 0
+        },
+        {
+          "name": "02_포스터.svg",
+          "textElements": 7,
+          "paths": 4,
+          "width": 600,
+          "height": 840,
+          "externalImages": 0
+        },
+        {
+          "name": "03_정사각형.svg",
+          "textElements": 4,
+          "paths": 2,
+          "width": 720,
+          "height": 720,
+          "externalImages": 0
+        },
+        {
+          "name": "04_라벨.svg",
+          "textElements": 5,
+          "paths": 2,
+          "width": 600,
+          "height": 360,
+          "externalImages": 0
+        },
+        {
+          "name": "05_축소_단색_반전.svg",
+          "textElements": 10,
+          "paths": 12,
+          "width": 1160,
+          "height": 730,
+          "externalImages": 0
+        }
+      ],
+      "gallery": [
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_A%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/01_%EA%B8%B0%EB%B3%B8%ED%98%95.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_A%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/02_%ED%8F%AC%EC%8A%A4%ED%84%B0.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_A%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/03_%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_A%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/04_%EB%9D%BC%EB%B2%A8.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_A%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/05_%EC%B6%95%EC%86%8C_%EB%8B%A8%EC%83%89_%EB%B0%98%EC%A0%84.svg",
+          "loaded": true
+        }
+      ],
+      "pages": [
+        {
+          "n": 1,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 2,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 4,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 5,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 6,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 7,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 8,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 9,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 10,
+          "h": 1122.515625,
+          "overflow": false
+        }
+      ],
+      "imagesLoaded": true,
+      "errors": []
+    },
+    {
+      "group": "B",
+      "vectors": [
+        {
+          "name": "01_기본형.svg",
+          "textElements": 3,
+          "paths": 2,
+          "width": 640,
+          "height": 240,
+          "externalImages": 0
+        },
+        {
+          "name": "02_포스터.svg",
+          "textElements": 7,
+          "paths": 4,
+          "width": 600,
+          "height": 840,
+          "externalImages": 0
+        },
+        {
+          "name": "03_정사각형.svg",
+          "textElements": 4,
+          "paths": 2,
+          "width": 720,
+          "height": 720,
+          "externalImages": 0
+        },
+        {
+          "name": "04_라벨.svg",
+          "textElements": 5,
+          "paths": 2,
+          "width": 600,
+          "height": 360,
+          "externalImages": 0
+        },
+        {
+          "name": "05_축소_단색_반전.svg",
+          "textElements": 10,
+          "paths": 12,
+          "width": 1160,
+          "height": 730,
+          "externalImages": 0
+        }
+      ],
+      "gallery": [
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_B%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/01_%EA%B8%B0%EB%B3%B8%ED%98%95.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_B%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/02_%ED%8F%AC%EC%8A%A4%ED%84%B0.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_B%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/03_%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_B%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/04_%EB%9D%BC%EB%B2%A8.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_B%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/05_%EC%B6%95%EC%86%8C_%EB%8B%A8%EC%83%89_%EB%B0%98%EC%A0%84.svg",
+          "loaded": true
+        }
+      ],
+      "pages": [
+        {
+          "n": 1,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 2,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 4,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 5,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 6,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 7,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 8,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 9,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 10,
+          "h": 1122.515625,
+          "overflow": false
+        }
+      ],
+      "imagesLoaded": true,
+      "errors": []
+    },
+    {
+      "group": "C",
+      "vectors": [
+        {
+          "name": "01_기본형.svg",
+          "textElements": 3,
+          "paths": 2,
+          "width": 640,
+          "height": 240,
+          "externalImages": 0
+        },
+        {
+          "name": "02_포스터.svg",
+          "textElements": 7,
+          "paths": 4,
+          "width": 600,
+          "height": 840,
+          "externalImages": 0
+        },
+        {
+          "name": "03_정사각형.svg",
+          "textElements": 4,
+          "paths": 2,
+          "width": 720,
+          "height": 720,
+          "externalImages": 0
+        },
+        {
+          "name": "04_라벨.svg",
+          "textElements": 5,
+          "paths": 2,
+          "width": 600,
+          "height": 360,
+          "externalImages": 0
+        },
+        {
+          "name": "05_축소_단색_반전.svg",
+          "textElements": 10,
+          "paths": 12,
+          "width": 1160,
+          "height": 730,
+          "externalImages": 0
+        }
+      ],
+      "gallery": [
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_C%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/01_%EA%B8%B0%EB%B3%B8%ED%98%95.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_C%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/02_%ED%8F%AC%EC%8A%A4%ED%84%B0.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_C%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/03_%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_C%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/04_%EB%9D%BC%EB%B2%A8.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:6226/2026-07-06_C%EA%B7%B8%EB%A3%B9/%EB%B2%A1%ED%84%B0%EC%98%88%EC%8B%9C/05_%EC%B6%95%EC%86%8C_%EB%8B%A8%EC%83%89_%EB%B0%98%EC%A0%84.svg",
+          "loaded": true
+        }
+      ],
+      "pages": [
+        {
+          "n": 1,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 2,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 4,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 5,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 6,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 7,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 8,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 9,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 10,
+          "h": 1122.515625,
+          "overflow": false
+        }
+      ],
+      "imagesLoaded": true,
+      "errors": []
+    }
+  ],
+  "pdfReview": {
+    "A": {
+      "pages": 10,
+      "renderedPage": 4,
+      "visualReview": true
+    },
+    "B": {
+      "pages": 10,
+      "renderedPage": 6,
+      "visualReview": true
+    },
+    "C": {
+      "pages": 10,
+      "renderedPage": 7,
+      "visualReview": true
+    }
+  },
+  "harness": {
+    "ok": false,
+    "changeRelated": false,
+    "error": "능력단위평가\\수정 보완\\CLAUDE.md: Missing link/import: 수정 보완"
+  },
+  "limitations": [
+    "실제 평가의 브랜딩 과제와 기존 피드백에 근거함",
+    "이름이 불일치하는 피드백은 개인별 사실로 단정하지 않음",
+    "C그룹의 구체적 조형 결함은 확인되지 않아 파일 존재·열림·실제 내용 확인부터 지원",
+    "교육 예시이며 실제 인쇄 교정이나 디자인 도구별 가져오기 검증 결과는 아님"
+  ]
+}

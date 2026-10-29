@@ -1,0 +1,141 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: 김혜지
+        - generic [ref=e12]:
+          - button "정보수정" [ref=e13] [cursor=pointer]
+          - button "비번변경" [ref=e14] [cursor=pointer]
+          - button "PIN변경" [ref=e15] [cursor=pointer]
+      - list [ref=e16]:
+        - listitem [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]:
+            - generic [aria-hidden] [ref=e19]: 
+            - text: 훈련과정
+        - listitem [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]:
+            - generic [aria-hidden] [ref=e22]: 
+            - text: 공지사항
+      - list [ref=e23]:
+        - listitem [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]:
+            - paragraph [ref=e26]:
+              - generic [aria-hidden] [ref=e27]: 
+            - paragraph [ref=e28]: 고객센터
+        - listitem [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]:
+            - paragraph [ref=e31]:
+              - generic [aria-hidden] [ref=e32]: 
+            - paragraph [ref=e33]: 카톡문의
+    - generic [ref=e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) B (1회차) 처음으로" [ref=e35]:
+        - caption [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) B (1회차)"
+            - link "처음으로" [ref=e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=e48]:
+          - row [ref=e49]:
+            - cell "개강일" [ref=e50]
+            - cell "2026-10-13" [ref=e51]
+            - cell "종강일" [ref=e52]
+            - cell "2027-04-28" [ref=e53]
+            - cell "강사" [ref=e54]
+            - cell "김가경, 김혜지" [ref=e55]
+          - row [ref=e56]:
+            - cell "실시인원" [ref=e57]
+            - cell "9" [ref=e58]
+            - cell "수강인원" [ref=e59]
+            - cell "9" [ref=e60]
+            - cell "수강포기인원" [ref=e61]
+            - cell "0" [ref=e62]
+      - list [ref=e63]:
+        - listitem [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]: 집체훈련
+        - listitem [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 시간표
+        - listitem [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: 훈련생
+        - listitem [ref=e70] [cursor=pointer]:
+          - generic [ref=e71]: 사전평가
+        - listitem [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 오리엔테이션
+        - listitem [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: 출석현황
+        - listitem [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 능력단위평가
+        - listitem [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: 훈련생평가
+        - listitem [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: 보충수업
+        - listitem [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 훈련일지
+        - listitem [ref=e84] [cursor=pointer]:
+          - generic [ref=e85]: 교재관리
+        - listitem [ref=e86] [cursor=pointer]:
+          - generic [ref=e87]: 상담일지
+        - listitem [ref=e88] [cursor=pointer]:
+          - generic [ref=e89]: 과정회의록
+        - listitem [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]: 과정공지사항
+        - listitem [ref=e92] [cursor=pointer]:
+          - generic [ref=e93]: 지원내역
+        - listitem [ref=e94] [cursor=pointer]:
+          - generic [ref=e95]: 과제
+        - listitem [ref=e96] [cursor=pointer]:
+          - generic [ref=e97]: 서식공유
+        - listitem [ref=e98] [cursor=pointer]:
+          - generic [ref=e99]: 게시판생성
+        - listitem [ref=e100] [cursor=pointer]:
+          - generic [ref=e101]: 게시판순서변경
+      - table "평가정보 돌아가기" [ref=e102]:
+        - caption [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105]: 평가정보
+            - link "돌아가기" [ref=e107] [cursor=pointer]:
+              - /url: ../app/appraisal.php?Pcode=500000&Lcode=8&AppCode=D
+        - rowgroup [ref=e114]:
+          - row [ref=e115]:
+            - cell "능력단위명" [ref=e116]
+            - cell "구현" [ref=e117]
+            - cell "평가일시" [ref=e118]
+            - cell "2026-10-23" [ref=e119]
+            - cell [ref=e120]:
+              - paragraph [ref=e121]: 0 / 100
+              - paragraph [ref=e122]: "패널티 : 0점"
+          - row [ref=e123]:
+            - cell "훈련강사" [ref=e124]
+            - cell "김*지" [ref=e125]
+            - cell "훈련생명" [ref=e126]
+            - cell "강애란" [ref=e127]
+      - table "평가내역 평가점수 일괄등록" [ref=e129]:
+        - caption [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: 평가내역
+            - link "평가점수 일괄등록" [ref=e134] [cursor=pointer]:
+              - /url: "#"
+        - rowgroup [ref=e142]:
+          - row [ref=e143]:
+            - columnheader "문항" [ref=e144]
+            - columnheader "문제" [ref=e145]
+            - columnheader "모범답안" [ref=e146]
+            - columnheader "제출답안" [ref=e147]
+            - columnheader "파일" [ref=e148]
+            - columnheader "링크" [ref=e149]
+        - rowgroup [ref=e150]:
+          - row [ref=e151]:
+            - cell "1" [ref=e152]
+            - cell "정보설계와 디자인 방향성을 기반으로 콘텐츠·기능 요소를 구현하고, 개발 협업을 통해 최적화된 디지털 결과물을 제출해 주세요." [ref=e153]
+            - cell [ref=e154]:
+              - button "모범답안" [ref=e155] [cursor=pointer]
+            - cell [ref=e156]:
+              - button "제출답안" [ref=e157] [cursor=pointer]
+            - cell [ref=e158]:
+              - link "다운로드" [ref=e159] [cursor=pointer]:
+                - /url: /uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725272_45ad1b41.zip
+            - cell "-" [ref=e160]

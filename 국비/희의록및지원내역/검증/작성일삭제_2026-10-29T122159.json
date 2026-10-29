@@ -1,0 +1,254 @@
+{
+  "status": "complete",
+  "request": "추가 기록일·작성일 및 사후 정리 설명 삭제",
+  "units": 13,
+  "removed_lines": 30,
+  "date_fields_preserved": true,
+  "remaining_content_preserved": true,
+  "results": [
+    {
+      "unit": "시각디자인 리서치 조사",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=4",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "보완 작성일 : 2026-10-23"
+        },
+        {
+          "field": "improvement",
+          "line": "추가 기록일 : 2026-10-29 (현재 LMS 등록자료를 확인하여 사후 추가함)"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:23:22.508Z"
+    },
+    {
+      "unit": "구현",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=2",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "보완 작성일 : 2026-10-23"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:23:24.972Z"
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=5",
+      "removed": [
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:23:27.390Z"
+    },
+    {
+      "unit": "구현 응용",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=3",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "기록 작성일: 2026-10-23"
+        },
+        {
+          "field": "analysis",
+          "line": "기록 구분: 현재 등록된 평가점수와 개별 피드백을 검토하여 사후 작성한 분석·지원계획임. 과거 회의의 실제 개최일·참석자 확인자료는 없어 임의로 기재하지 않음."
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:23:29.891Z"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=6",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "기록 작성일: 2026-10-23"
+        },
+        {
+          "field": "analysis",
+          "line": "기록 구분: 현재 등록된 평가점수와 개별 피드백을 검토하여 사후 작성한 분석·지원계획임. 과거 회의의 실제 개최일·참석자 확인자료는 없어 임의로 기재하지 않음."
+        },
+        {
+          "field": "improvement",
+          "line": "추가 기록일 : 2026-10-29 (현재 LMS 등록자료를 확인하여 사후 추가함)"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:23:32.904Z"
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "작성 구분 : 2026-07-24 평가의 현재 등록 결과와 피드백을 바탕으로 2026-10-23 사후 작성함."
+        },
+        {
+          "field": "improvement",
+          "line": "추가 기록일 : 2026-10-29 (현재 LMS 등록자료를 확인하여 사후 추가함)"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:23:35.391Z"
+    },
+    {
+      "unit": "수정 보완",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=8",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "작성 구분 : 2026-08-18 본평가의 현재 등록점수·평가문제·개별 피드백을 바탕으로 2026-10-29 사후 작성한 학습지원 분석 기록임. 당시 회의 또는 보충지도 완료 사실을 의미하지 않음."
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:23:38.732Z"
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=9",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:25:26.028Z"
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=10",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:25:26.680Z"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=11",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:25:28.263Z"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=12",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:25:28.845Z"
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=14",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:25:30.463Z"
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=13",
+      "removed": [
+        {
+          "field": "analysis",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        },
+        {
+          "field": "improvement",
+          "line": "작성일 : 2026-10-29 (평가결과 사후 정리)"
+        }
+      ],
+      "checked_at": "2026-10-29T03:25:32.047Z"
+    }
+  ],
+  "checks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "b0079a",
+        "wall_time_seconds": 1.8519512,
+        "exit_code": 1,
+        "original_token_count": 95,
+        "output": "{\r\n  \"ok\": false,\r\n  \"summary\": {\r\n    \"instruction_files\": 37,\r\n    \"skills\": [\r\n      \"ncs-exam-production\",\r\n      \"ncs-learning-support\",\r\n      \"ncs-timetable\",\r\n      \"student-interview\"\r\n    ],\r\n    \"custom_agents\": 0,\r\n    \"hooks\": 0\r\n  },\r\n  \"errors\": [\r\n    \"능력단위평가\\\\수정 보완\\\\CLAUDE.md: Missing link/import: 수정 보완\"\r\n  ],\r\n  \"warnings\": []\r\n}\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "a1a798",
+        "wall_time_seconds": 1.5152242999999999,
+        "exit_code": 0,
+        "original_token_count": 30,
+        "output": "..............\r\n----------------------------------------------------------------------\r\nRan 14 tests in 0.239s\r\n\r\nOK\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "3ea3b0",
+        "wall_time_seconds": 8.5848205,
+        "exit_code": 0,
+        "original_token_count": 32,
+        "output": "........................\r\n----------------------------------------------------------------------\r\nRan 24 tests in 7.293s\r\n\r\nOK\r\n"
+      }
+    }
+  ],
+  "known_preexisting_error": "능력단위평가/수정 보완/CLAUDE.md 링크 오류"
+}

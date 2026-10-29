@@ -1,0 +1,30 @@
+{
+  "student": "전해주",
+  "sourceHashesVerified": true,
+  "browserTwoDesktopWidthsVerified": true,
+  "publicFeedbackReviewed": true,
+  "rawTotal": 48,
+  "registeredTotal": 79,
+  "sumOfSiteIntegerScores": 79,
+  "siteIntegerScores": [
+    10,
+    8,
+    8,
+    10,
+    8,
+    9,
+    9,
+    8,
+    9
+  ],
+  "lmsSaved": true,
+  "studentSourceModified": false,
+  "feedbackCodeProposalsChecked": true,
+  "scoreAndIdentityChecksPassed": true,
+  "strictSubmissionHashesPassed": true,
+  "lmsVerifiedAt": "2026-10-26T04:41:21.562Z",
+  "lmsTotal": 79,
+  "lmsIntegerScoresVerified": true,
+  "lmsFeedbackExactMatch": true,
+  "lmsProofFile": "사이트_등록확인.json"
+}

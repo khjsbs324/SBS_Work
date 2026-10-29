@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    
+}
+.head-top {
+    border-bottom: 1px solid #dce2e2;
+    padding-bottom: 14px;
+}
+.top-banner{
+    max-width: 1400px;  margin: 0 auto;
+    display: flex;  justify-content: space-between;
+    align-items: flex-start;
+
+}
+.topmenu {
+     padding-top: 20px;
+}
+.topmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    color: #9babab;
+    font-size: 11px;
+}
+.topmenu li {
+    margin-left: 10px;
+    padding-left: 12px;
+}
+.sns{
+    display: flex;
+    gap: 7px;
+    
+
+}
+
+.links {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    padding-top: 14px;
+}
+.lang {
+width: 88px;
+height: 30px;
+padding : 0;
+border: 1px solid #eaeaea;
+border-radius: 10px;
+background: url(./image/logo/lang_kor.gif) 10px center no-repeat;
+font: inherit;
+text-align: left;
+cursor: pointer;
+}
+.lang span {
+    display: block;
+    width: 38px;
+    margin-left: 30px;
+    font-size: 11px;
+    color: #000;
+    background: url(./image/logo/lang_arr.gif) right center no-repeat;
+}
+.utility-menu {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.utility-menu h1 {
+    margin: 0;
+}
+.utility-menu img {
+    display: block;
+    cursor: pointer;
+}
+.utility-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+   
+}
+.utility-menu li{
+    width: 146px;
+    text-align:  center;
+    line-height: 89px;
+    font-size: 17px;
+    color: #303030;
+    cursor: pointer;
+}
+.utility-menu li:hover {
+    color: #c40f39;
+}
+.search {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.search img {
+    display: block;
+}
+
+.btn_all {
+    width: 19px;
+    cursor: pointer;
+}
+
+.btn_all div{
+    height: 2px;
+    margin-bottom: 5px;
+    background: #303030;
+}
+
+.visual {
+    display: block;
+    width: 100%;
+    height: 652px;
+    object-fit: cover;
+}
+
+.new {
+ position: relative;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 75px 0 90px;
+}
+
+.toparea {
+    display: flexbox;
+    align-items: center;
+}

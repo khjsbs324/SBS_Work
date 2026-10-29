@@ -1,0 +1,727 @@
+{
+  "student": "박선환",
+  "url": "http://127.0.0.1:8766/%EB%B0%95%EC%84%A0%ED%99%98/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/monami%20%EC%8B%9C%ED%97%98/index.html",
+  "status": 200,
+  "browser": "155.0.8059.85",
+  "measurements": [
+    {
+      "innerWidth": 1920,
+      "clientWidth": 1905,
+      "scrollWidth": 1905,
+      "boxes": [
+        {
+          "selector": "header",
+          "x": 0,
+          "y": 0,
+          "width": 1905,
+          "height": 1805,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1905,
+          "clientWidth": 1905
+        },
+        {
+          "selector": ".head_top",
+          "x": 277.5,
+          "y": 0,
+          "width": 1350,
+          "height": 60,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 277.5px",
+          "fontSize": "11px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1350,
+          "clientWidth": 1350
+        },
+        {
+          "selector": ".main_banner",
+          "x": 0,
+          "y": 60,
+          "width": 1905,
+          "height": 652,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1920,
+          "clientWidth": 1905
+        },
+        {
+          "selector": ".products",
+          "x": 0,
+          "y": 712,
+          "width": 1905,
+          "height": 1093,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1905,
+          "clientWidth": 1905
+        },
+        {
+          "selector": ".products_con",
+          "x": 0,
+          "y": 712,
+          "width": 1905,
+          "height": 1093,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "70px 0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1905,
+          "clientWidth": 1905
+        },
+        {
+          "selector": ".product_head",
+          "x": 833.53125,
+          "y": 782,
+          "width": 237.9375,
+          "height": 114,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 238,
+          "clientWidth": 238
+        },
+        {
+          "selector": ".actions",
+          "x": 762.453125,
+          "y": 896,
+          "width": 380.09375,
+          "height": 19,
+          "display": "flex",
+          "gap": "40px",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 380,
+          "clientWidth": 380
+        },
+        {
+          "selector": ".tab_premium",
+          "x": 762.453125,
+          "y": 896,
+          "width": 68.015625,
+          "height": 20,
+          "display": "inline",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "14px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 0,
+          "clientWidth": 0
+        },
+        {
+          "selector": ".product_list",
+          "x": 819.5,
+          "y": 915,
+          "width": 266,
+          "height": 3010,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 266,
+          "clientWidth": 266
+        },
+        {
+          "selector": ".product_list_image > ul",
+          "x": 819.5,
+          "y": 915,
+          "width": 266,
+          "height": 3010,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 266,
+          "clientWidth": 266
+        },
+        {
+          "selector": ".product_list_image > ul > li:first-child",
+          "x": 819.5,
+          "y": 915,
+          "width": 266,
+          "height": 430,
+          "display": "flex",
+          "gap": "18px",
+          "padding": "40px 0px 0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 266,
+          "clientWidth": 266
+        },
+        {
+          "selector": ".product_scroll",
+          "x": 952.5,
+          "y": 3925,
+          "width": 0,
+          "height": 0,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 0,
+          "clientWidth": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "./image/icon/lang_kor.gif",
+          "alt": "국기",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "./image/icon/sns_facebook.gif",
+          "alt": "페이스북",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/sns_insta.gif",
+          "alt": "인스타그램",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/sns_youtube.png",
+          "alt": "유튜브",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/banner/visual1.jpg",
+          "alt": "배너이미지",
+          "complete": true,
+          "naturalWidth": 1920,
+          "naturalHeight": 652,
+          "width": 1920,
+          "height": 652
+        },
+        {
+          "src": "./image/list/product-01.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-02.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-03.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 456,
+          "naturalHeight": 692,
+          "width": 256.984375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-04.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-05.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-06.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-07.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        }
+      ],
+      "text": "KOR\nkeyboard_arrow_down\nHOME\nSITE MAP\nCONTACT US\nBEST PRODUCT\n\n언제 어디서나 생활 속에 함께하는 모나미\n\n프리미엄 펜\n펜·펜슬\n마카·컬러링\n노트·사무용품",
+      "fontStatus": "loaded"
+    },
+    {
+      "innerWidth": 1440,
+      "clientWidth": 1425,
+      "scrollWidth": 1425,
+      "boxes": [
+        {
+          "selector": "header",
+          "x": 0,
+          "y": -712,
+          "width": 1425,
+          "height": 1805,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        {
+          "selector": ".head_top",
+          "x": 37.5,
+          "y": -712,
+          "width": 1350,
+          "height": 60,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px 37.5px",
+          "fontSize": "11px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1350,
+          "clientWidth": 1350
+        },
+        {
+          "selector": ".main_banner",
+          "x": 0,
+          "y": -652,
+          "width": 1425,
+          "height": 652,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1920,
+          "clientWidth": 1425
+        },
+        {
+          "selector": ".products",
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 1093,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        {
+          "selector": ".products_con",
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 1093,
+          "display": "flex",
+          "gap": "normal",
+          "padding": "70px 0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        {
+          "selector": ".product_head",
+          "x": 593.53125,
+          "y": 70,
+          "width": 237.9375,
+          "height": 114,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 238,
+          "clientWidth": 238
+        },
+        {
+          "selector": ".actions",
+          "x": 522.453125,
+          "y": 184,
+          "width": 380.09375,
+          "height": 19,
+          "display": "flex",
+          "gap": "40px",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 380,
+          "clientWidth": 380
+        },
+        {
+          "selector": ".tab_premium",
+          "x": 522.453125,
+          "y": 184,
+          "width": 68.015625,
+          "height": 20,
+          "display": "inline",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "14px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 0,
+          "clientWidth": 0
+        },
+        {
+          "selector": ".product_list",
+          "x": 579.5,
+          "y": 203,
+          "width": 266,
+          "height": 3010,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 266,
+          "clientWidth": 266
+        },
+        {
+          "selector": ".product_list_image > ul",
+          "x": 579.5,
+          "y": 203,
+          "width": 266,
+          "height": 3010,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 266,
+          "clientWidth": 266
+        },
+        {
+          "selector": ".product_list_image > ul > li:first-child",
+          "x": 579.5,
+          "y": 203,
+          "width": 266,
+          "height": 430,
+          "display": "flex",
+          "gap": "18px",
+          "padding": "40px 0px 0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 266,
+          "clientWidth": 266
+        },
+        {
+          "selector": ".product_scroll",
+          "x": 712.5,
+          "y": 3213,
+          "width": 0,
+          "height": 0,
+          "display": "block",
+          "gap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "fontSize": "16px",
+          "fontFamily": "Pretendard, sans-serif",
+          "color": "rgb(0, 0, 0)",
+          "scrollWidth": 0,
+          "clientWidth": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "./image/icon/lang_kor.gif",
+          "alt": "국기",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 11,
+          "width": 13,
+          "height": 11
+        },
+        {
+          "src": "./image/icon/sns_facebook.gif",
+          "alt": "페이스북",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/sns_insta.gif",
+          "alt": "인스타그램",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/icon/sns_youtube.png",
+          "alt": "유튜브",
+          "complete": true,
+          "naturalWidth": 30,
+          "naturalHeight": 30,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "src": "./image/banner/visual1.jpg",
+          "alt": "배너이미지",
+          "complete": true,
+          "naturalWidth": 1920,
+          "naturalHeight": 652,
+          "width": 1920,
+          "height": 652
+        },
+        {
+          "src": "./image/list/product-01.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-02.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-03.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 456,
+          "naturalHeight": 692,
+          "width": 256.984375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-04.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-05.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-06.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        },
+        {
+          "src": "./image/list/product-07.jpg",
+          "alt": "상품이미지",
+          "complete": true,
+          "naturalWidth": 447,
+          "naturalHeight": 656,
+          "width": 265.734375,
+          "height": 390
+        }
+      ],
+      "text": "KOR\nkeyboard_arrow_down\nHOME\nSITE MAP\nCONTACT US\nBEST PRODUCT\n\n언제 어디서나 생활 속에 함께하는 모나미\n\n프리미엄 펜\n펜·펜슬\n마카·컬러링\n노트·사무용품",
+      "fontStatus": "loaded"
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "hover": {
+    "selector": ".tab_premium",
+    "before": "rgb(0, 0, 0)",
+    "after": "rgb(196, 15, 57)",
+    "changed": true
+  },
+  "css": [
+    {
+      "href": "http://127.0.0.1:8766/%EB%B0%95%EC%84%A0%ED%99%98/%ED%95%99%EC%83%9D_%EA%B2%80%ED%86%A0%EC%82%AC%EB%B3%B8/monami%20%EC%8B%9C%ED%97%98/style.css",
+      "rules": [
+        {
+          "selector": "body",
+          "css": "font-family: Pretendard, sans-serif; margin: 0px;"
+        },
+        {
+          "selector": "ul, li",
+          "css": "margin: 0px; padding: 0px; list-style: none;"
+        },
+        {
+          "selector": "h1, h2, h3, h4, h5, h6, p",
+          "css": "font-size: inherit; font-weight: normal; margin: auto;"
+        },
+        {
+          "selector": ".con",
+          "css": "margin-left: auto; margin-right: auto; display: flex;"
+        },
+        {
+          "selector": ".head_top",
+          "css": "width: 1350px; height: 59px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgb(234, 234, 234); font-size: 11px; margin: auto;"
+        },
+        {
+          "selector": ".head_left",
+          "css": "display: flex;"
+        },
+        {
+          "selector": ".lang_btn",
+          "css": "width: 86px; height: 30px; border: 1px solid rgb(234, 234, 234); border-radius: 10px; color: rgb(0, 0, 0); display: flex; align-items: center;"
+        },
+        {
+          "selector": ".lang_btn_image",
+          "css": "width: 13px; height: 11px; margin: 0px; padding-left: 10px; padding-right: 7px;"
+        },
+        {
+          "selector": ".arrow",
+          "css": "padding-left: 6px; font-size: 11px;"
+        },
+        {
+          "selector": ".top_sns",
+          "css": "display: flex; justify-content: flex-start; align-items: center; gap: 7px; padding-left: 12px;"
+        },
+        {
+          "selector": ".top_utility > nav > ul",
+          "css": "display: flex; align-items: center; color: rgb(155, 154, 154); gap: 22px;"
+        },
+        {
+          "selector": ".main_banner",
+          "css": "height: 652px; width: 100%; overflow: hidden;"
+        },
+        {
+          "selector": ".products_con",
+          "css": "height: 953px; background-color: rgb(238, 238, 238); padding-top: 70px; padding-bottom: 70px; flex-direction: column; align-items: center;"
+        },
+        {
+          "selector": ".product_title",
+          "css": "font-size: 32px; font-weight: 600; color: rgb(0, 0, 0); text-align: center;"
+        },
+        {
+          "selector": ".product_desc",
+          "css": "font-size: 13.5px; color: rgb(85, 85, 85); padding-top: 20px; padding-bottom: 40px;"
+        },
+        {
+          "selector": ".actions",
+          "css": "display: flex; justify-content: center; text-align: center; gap: 40px;"
+        },
+        {
+          "selector": "#actions .tab_premium, #actions .tab_pen, #actions .tab_coloring, #actions .tab_office",
+          "css": "width: 157px; height: 36px; font-size: 14px; cursor: pointer; border: 2px solid rgb(188, 188, 188); border-radius: 50px;"
+        },
+        {
+          "selector": "#actions .tab_premium:hover, #actions .tab_pen:hover, #actions .tab_coloring:hover, #actions .tab_office:hover",
+          "css": "color: rgb(196, 15, 57);"
+        },
+        {
+          "selector": ".product_list",
+          "css": ""
+        },
+        {
+          "selector": ".product_list_image > ul > li",
+          "css": "width: 266px; height: 390px; gap: 18px; display: flex; padding-top: 40px;"
+        }
+      ]
+    }
+  ],
+  "verifiedAt": "2026-10-26T04:25:34.886Z"
+}

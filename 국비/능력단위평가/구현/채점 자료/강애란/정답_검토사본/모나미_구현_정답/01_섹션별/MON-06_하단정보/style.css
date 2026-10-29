@@ -1,0 +1,237 @@
+/* ============================================================
+   공통 CSS — 모든 섹션에서 사용하는 수업 코드
+   참고: UIUXB_2610 / 1코딩/마켓컬리/와이어프레임/style.css
+   원본의 초기화, .con, Flex, 이미지 규칙을 모나미 화면에 맞게 적용했습니다.
+   협업: 이 부분을 바꾸면 모든 섹션에 영향이 있습니다.
+   통합: 초기화와 @font-face는 한 번만 둡니다.
+   글꼴: 원본에서 사용한 Pretendard의 400/500/700을 로컬 파일로 연결합니다.
+   ============================================================ */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../font/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../font/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../font/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* .con은 전체 폭이 아니라 내부 콘텐츠 폭입니다.
+   원본 .con의 1050px을 모나미 데스크톱 기준 1400px로 조정했습니다. */
+.con {
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* img의 기본 아래쪽 글자 간격을 없애고 블록으로 배치합니다. */
+img {
+  display: block;
+}
+
+/* 원본 products-title / products-desc를 재사용한 제목 패턴입니다. */
+.section-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #111;
+}
+
+.section-desc {
+  font-size: 13px;
+  color: #777;
+}
+
+.title-line {
+  width: 26px;
+  height: 3px;
+  background-color: #c81939;
+}
+
+
+
+/* MON-06 시작 — 각 칸에 box-sizing을 주어 padding 때문에 1400px을 넘지 않게 합니다. */
+.information {
+  background-color: #f7f7f7;
+}
+
+.information-con {
+  height: 355px;
+}
+
+.news {
+  width: 700px;
+  padding: 45px 49px 25px 0;
+  box-sizing: border-box;
+}
+
+.news-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-heading h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.news-heading span {
+  font-size: 11px;
+  color: #888;
+}
+
+.news > .title-line {
+  margin: 10px 0 24px;
+}
+
+.news-feature {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 18px;
+}
+
+.news-feature > img {
+  width: 164px;
+  height: 116px;
+  object-fit: cover;
+}
+
+.news-copy {
+  width: 467px;
+}
+
+.news-copy h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #222;
+  padding-bottom: 9px;
+}
+
+.news-copy > p {
+  font-size: 13px;
+  color: #888;
+}
+
+.news-copy .news-date {
+  padding-top: 25px;
+  text-align: right;
+  font-size: 12px;
+}
+
+.news-rule {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.news-list {
+  padding-top: 10px;
+}
+
+.news-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  font-size: 12px;
+  color: #888;
+}
+
+.info-panel {
+  width: 350px;
+  padding-top: 65px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inquiry {
+  background: #f5f5f5 url('../../image/inquiry-bg.jpg') center top / 350px 355px no-repeat;
+}
+
+.shop {
+  background: #f5f5f5 url('../../image/shop-bg.png') center top / 350px 365px no-repeat;
+}
+
+.panel-icon {
+  width: 60px;
+  height: 53px;
+  object-fit: contain;
+  margin: 0 0 22px;
+}
+
+.info-panel h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.info-panel .title-line {
+  margin: 10px 0 16px;
+}
+
+.panel-desc {
+  text-align: center;
+}
+
+.panel-desc p {
+  font-size: 13px;
+  color: #888;
+  padding-bottom: 4px;
+}
+
+.outline-btn {
+  width: 170px;
+  height: 38px;
+  border: 2px solid #c81939;
+  border-radius: 24px;
+  color: #c81939;
+  font-size: 12px;
+  margin: 30px 0 0;
+}
+
+/* MON-06 끝 */

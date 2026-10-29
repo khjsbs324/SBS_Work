@@ -1,0 +1,198 @@
+{
+  "unit": "서비스ㆍ경험디자인 시나리오 개발",
+  "students": [
+    {
+      "student": "강민경",
+      "Sid": "sbsartdj1114",
+      "rawTotal": 73,
+      "registeredTotal": 89,
+      "registeredRows": [
+        9,
+        9,
+        8,
+        9,
+        8,
+        9,
+        10,
+        9,
+        10,
+        8
+      ],
+      "feedbackChars": 1137,
+      "siteStatus": "verified",
+      "verifiedAt": "2026-10-23T04:37:49.3912118Z"
+    },
+    {
+      "student": "박주연",
+      "Sid": "sbsartdj1117",
+      "rawTotal": 47,
+      "registeredTotal": 79,
+      "registeredRows": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        8,
+        8,
+        7,
+        8,
+        7
+      ],
+      "feedbackChars": 1107,
+      "siteStatus": "verified",
+      "verifiedAt": "2026-10-23T04:38:05.9462735Z"
+    },
+    {
+      "student": "박찬미",
+      "Sid": "sbsartdj1118",
+      "rawTotal": 45,
+      "registeredTotal": 78,
+      "registeredRows": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        8,
+        7,
+        7,
+        8,
+        7
+      ],
+      "feedbackChars": 1085,
+      "siteStatus": "verified",
+      "verifiedAt": "2026-10-23T04:38:11.3368789Z"
+    },
+    {
+      "student": "이은경",
+      "Sid": "sbsartdj1119",
+      "rawTotal": 57,
+      "registeredTotal": 83,
+      "registeredRows": [
+        9,
+        9,
+        8,
+        9,
+        7,
+        9,
+        8,
+        7,
+        9,
+        8
+      ],
+      "feedbackChars": 1039,
+      "siteStatus": "verified",
+      "verifiedAt": "2026-10-23T04:38:22.7817167Z"
+    },
+    {
+      "student": "이은수",
+      "Sid": "sbsartdj1123",
+      "rawTotal": 55,
+      "registeredTotal": 82,
+      "registeredRows": [
+        9,
+        9,
+        8,
+        9,
+        7,
+        9,
+        9,
+        7,
+        8,
+        7
+      ],
+      "feedbackChars": 1072,
+      "siteStatus": "verified",
+      "verifiedAt": "2026-10-23T04:38:28.0402784Z"
+    },
+    {
+      "student": "이지희",
+      "Sid": "sbsartdj1120",
+      "rawTotal": 62,
+      "registeredTotal": 85,
+      "registeredRows": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        9,
+        9,
+        8,
+        10,
+        8
+      ],
+      "feedbackChars": 1096,
+      "siteStatus": "verified",
+      "verifiedAt": "2026-10-23T04:38:33.2913773Z"
+    },
+    {
+      "student": "임연우",
+      "Sid": "sbsartdj1121",
+      "rawTotal": 71,
+      "registeredTotal": 88,
+      "registeredRows": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        9,
+        9,
+        9,
+        11,
+        9
+      ],
+      "feedbackChars": 1099,
+      "siteStatus": "verified",
+      "verifiedAt": "2026-10-23T04:38:51.8610072Z"
+    },
+    {
+      "student": "최지혜",
+      "Sid": "sbsartdj1124",
+      "rawTotal": 49,
+      "registeredTotal": 80,
+      "registeredRows": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        9,
+        8,
+        7,
+        8,
+        7
+      ],
+      "feedbackChars": 1073,
+      "siteStatus": "verified",
+      "verifiedAt": "2026-10-23T04:38:57.4036494Z"
+    },
+    {
+      "student": "허지민",
+      "Sid": "sbsartdj1122",
+      "rawTotal": 42,
+      "registeredTotal": 77,
+      "registeredRows": [
+        9,
+        9,
+        6,
+        8,
+        7,
+        8,
+        8,
+        7,
+        8,
+        7
+      ],
+      "feedbackChars": 1026,
+      "siteStatus": "verified",
+      "verifiedAt": "2026-10-23T04:39:02.7234984Z"
+    }
+  ],
+  "status": "completed_and_site_verified",
+  "completedAt": "2026-10-23T04:40:08.942921+00:00",
+  "criteriaPerStudent": 10,
+  "verifiedStudentCount": 9
+}

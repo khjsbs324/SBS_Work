@@ -6,12 +6,12 @@
 2. Playwright MCP의 로그인된 작업 탭에서 과정·단위 목록·종료일과 지원 게시판 전체 페이지를 확인한다. 후보 목록에 빠진 실제 단위가 있으면 추가하고, 해당하지 않는 후보는 enabled=false와 사유를 남긴다. 관측 전 Lcode나 날짜를 채우지 않는다. 현재 화면 구조를 읽고 추출하며 검증하지 않은 셀렉터를 공통 코드에 고정하지 않는다.
 3. 대상 증빙을 `설정/관측자료/관측일시_단위.json`에 보존하고 `confirm-target --evidence ...`로 반영한다. source_url은 실제 과정 페이지이며 공통 필드·course_name·unit_end_date·screen_confirmed를 포함한다. 과거 관측은 새 관측으로 간주하지 않는다.
 4. `start --unit ... --course A`로 실행을 열거나 재개한다. 등록 요청을 받은 경우에만 `--action register --request '실제 요청'`을 사용한다. 반환된 실행에서 `next RUN`을 호출하고 단계별 작업을 수행한다. 확인 결과는 `record`로 기록한다. 단계명이 반환됐다는 사실은 그 작업을 수행했다는 증거가 아니다.
-5. `target_confirmed → sources_collected → meeting_resolved → 그룹별 materials_verified → registered → verified`를 진행한다. 자료 제작은 [자료 기준](materials.md), 회의록은 [회의록 절차](meeting.md), 실제 등록은 [등록 절차](registration.md)를 읽는다.
+5. `target_confirmed → sources_collected → 회의록 전문·ABC 편성 작성 → meeting-check·내용 검수·저장 확인 → meeting_resolved → meeting-plan → 그룹별 자료 작성·materials_verified → registration-check → registered → verified`를 진행한다. 회의록 검수 전 build·package·등록은 차단된다. 자료 제작은 [자료 기준](materials.md), 회의록은 [회의록 절차](meeting.md), 실제 등록은 [등록 절차](registration.md)를 읽는다.
 6. 한 단위가 완료되면 `report --course A`와 `next --course A`를 다시 호출한다. 사용자의 전체 실행 요청 범위 안에서는 단위마다 같은 허가를 다시 묻지 않는다. 실제 접근 실패·자료 부족은 해당 단위의 원인과 관측 결과를 남기고, 독립적으로 진행 가능한 다른 단위는 명시적으로 선택해 진행한다.
 
 ## 기존 작업 처리
 
-- complete: 검수 파일 해시가 유지된 과거 완료 기록이다. 일괄 신규 작업에서 건너뛴다. 수정 요청이면 현재 글부터 읽는다.
+- complete: 검수 파일 해시가 유지된 과거 완료 기록이다. 일괄 신규 작업에서 건너뛴다. 이전 완료 기록은 보존하며 새 검수 통과로 해석하지 않는다. 명시적으로 재개·수정할 때는 현재 글과 회의록을 읽고 새 회의록 검수를 먼저 기록한다.
 - in_progress: 해당 실행에서 `next RUN`으로 재개한다. 현재 LMS 저장 결과를 먼저 확인하여 응답 유실로 인한 중복 등록을 막는다.
 - prepared: 로컬 제작 완료다. 등록 요청을 받았다면 기존 검수본을 보존하고 등록 실행을 만든 뒤 현재 대상·증빙을 재확인한다. 상태 파일의 action을 수동으로 바꾸지 않는다.
 - inspect_existing: 이전 목록에 글은 있지만 현재 실행 증빙이 없다. 원래 자료와 현재 게시글·첨부를 확인한다. 새 실행에 실제 원본 자료를 연결/복사해 검수하고, 등록 단계는 기존 글을 조회한 사실로 기록한다. 새 글을 제출하지 않는다. 현재 템플릿과 다른 기존 자료를 억지로 재생성해 일치했다고 기록하지 않는다. 호환되지 않는 자료는 확인 한계를 남겨 정정 대상 여부를 판단한다.

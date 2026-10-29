@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "request": "그 다음에 교수법 실행해",
+  "completed_at": "2026-10-29T03:03:33.973656+00:00",
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "Lcode": "11",
+  "ordinal": 10,
+  "scope": "new_retrospective_meeting",
+  "meeting_date": "2026-10-29",
+  "unit_end_date": "2026-09-09",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=11",
+  "exact_readback": true,
+  "original_preserved": true,
+  "reassessment_record_preserved": true,
+  "assessment_preservation": {
+    "summary_unchanged": true,
+    "scores_and_targets_unchanged": true
+  },
+  "screen_read": true,
+  "source_scope": [
+    "학생 변화는 현재 평가 피드백의 대표 사례와 기존 회의록 및 확인 가능한 훈련일지에 근거한다.",
+    "실제 교수법 적용 시점이 확인되지 않은 절차는 향후 실행 계획으로 구분했다.",
+    "서로 다른 과제·제출본·관측 조건의 비교이며 교수법의 인과 효과를 확정하지 않는다.",
+    "동일 종료일 및 수업기간 중첩은 시간상 한계를 표시했다.",
+    "2026-11-03 종료 예정 단위는 평가 결과가 없어 LMS 회의록을 작성하지 않았다."
+  ],
+  "historical_support_state_modified": false,
+  "file_sha256": {
+    "회의록_수정전.json": "fa87fd0d2d1076969de4eced1f0061f291c1c2d2d31a2ebc85a117b0499132c3",
+    "회의록_추가안.json": "788dd974d98de881211cbd60fc258a7fe148ea4141a2eb565d04690218ee1bd1",
+    "교수법_근거자료.json": "c85ab64d8a6a996d5f741d4082a2d5507ab2667133ff3d345de1e79cf1d6b614",
+    "저장확인.json": "813b8f1536a1bad351844eb0e3d0497a298d469ff137fd84f03c7f5d74654107",
+    "평가보존확인.json": "58758c59fff5ff7dcce8f85a1358dcb3c926dd90fa547dca1d71eb94f30be7f4",
+    "추가후화면.png": "21385a7e36699cf66d23915d9ea1eec51fd9dfe99b2dbb5df994f23f3782bf29"
+  },
+  "checks_ref": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\검증\\교수법연계_2026-10-29T113907.json"
+}

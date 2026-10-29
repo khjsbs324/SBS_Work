@@ -1,0 +1,17 @@
+{
+  "example": true,
+  "course_id": "A",
+  "unit": "실제 능력단위명",
+  "lcode": "실제 Lcode",
+  "source_url": "현재 평가 화면 URL(Pcode와 Lcode 포함)",
+  "checked_at": "실제 관측 ISO 시각과 시간대",
+  "unit_elements": [
+    "원본에서 확인한 실제 능력단위요소명"
+  ],
+  "students": [
+    {
+      "id": "실제 학생 식별값",
+      "name": "실제 학생 이름"
+    }
+  ]
+}

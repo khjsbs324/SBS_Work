@@ -1,0 +1,164 @@
+{
+  "student": "이은경",
+  "received": "2026-10-23",
+  "files": [
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\index.html",
+      "size": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙.zip",
+      "size": 9548469,
+      "sha256": "7d5cc54ba7f5d76956e29c0af3f06bc374320751e0cd47b907326f54d65d98a5"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\evidence\\storyboard_after.png",
+      "size": 4623318,
+      "sha256": "b92671909bcb2b748cc2361f784f8094f39ff975a821c779791fd61d178021fc"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\evidence\\storyboard_before.png",
+      "size": 4739784,
+      "sha256": "ba231c05f434ae8eee8adcaded2b52518234eafb28433b25ec3e35d68d678d11"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\html\\SOAPHE_brand (1)(1).html",
+      "size": 128954,
+      "sha256": "af42bbcaa7582646489ecb9cedfdafd3b55e786d123db4ae7406aa5ff88d7d5e"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\html\\SOAPHE_category(1).html",
+      "size": 160264,
+      "sha256": "98489ae895c95432b4d753347ede656b7a732168073eace7dfcbf51896c0874a"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\html\\브랜드소개페이지_와이어프레임.html",
+      "size": 125276,
+      "sha256": "9211a1fcfdd3ae4eea93260d943e91356aca084e05ce788d121f4db24c38431b"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\html\\카테고리 페이지(1).html",
+      "size": 160647,
+      "sha256": "61b976b415b00699a109473a55a21aead75c53ec7aa2cf105b783ef41ee71ca9"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\SOAPHE_브랜드소개_간략와이어프레임.svg",
+      "size": 18857,
+      "sha256": "ce1cd5713efaf90b075d5bb3a0d1881c6df5aceda3d3fb044f48b4c89cdc3411"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\SOAPHE_브랜드소개_카테고리_간략와이어프레임.svg",
+      "size": 13421,
+      "sha256": "62979187a9cc6d907490f92f37baf9349ad711ca147119b70abf90616fe063bd"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\SOAPHE_카테고리_간략와이어프레임.svg",
+      "size": 17091,
+      "sha256": "0c728f74e421eab505d66bd9c41e87d73df0dc03f90b3694695862e8e6a1a878"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\SOAPHE_프로토타입_제출보고서.md",
+      "size": 43715,
+      "sha256": "53711fa407d2dc2581c080c8dd65a6fb11fc635dba4488359bf17d9578e0133f"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\SOAPHE_제출보고서_최종본_증빙_열람\\SOAPHE_프로토타입_제출보고서.pdf",
+      "size": 192516,
+      "sha256": "11eeb7c8fbc608d35cd061124775db48129b3b5733bdf520691893cb5ad85d70",
+      "pages": 31
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\링크.txt",
+      "size": 439,
+      "sha256": "58db781348030b9b059d892203ee3fb2288c03d6c4ea7ebd4a2fb18f7ee9270b"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\메인페이지.pdf",
+      "size": 6387694,
+      "sha256": "61d6382b4d504e74fe0e74fc75cc1197398982d2b327177d94615b4b5db01a78",
+      "pages": 1
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\보고서.md",
+      "size": 43715,
+      "sha256": "53711fa407d2dc2581c080c8dd65a6fb11fc635dba4488359bf17d9578e0133f"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\브랜드AI수정안.html",
+      "size": 128954,
+      "sha256": "af42bbcaa7582646489ecb9cedfdafd3b55e786d123db4ae7406aa5ff88d7d5e"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\브랜드AI초안.html",
+      "size": 121335,
+      "sha256": "ff47dc003940272dd38757f68db78ba3d55445636e8d7b09e209018da03a70f4"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\서브AI수정안.html",
+      "size": 160264,
+      "sha256": "98489ae895c95432b4d753347ede656b7a732168073eace7dfcbf51896c0874a"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\서브AI초안.html",
+      "size": 155817,
+      "sha256": "25cf2143be3149cdbd37791063c6b4d204f4b308939e3ad32f2366d5f349120d"
+    },
+    {
+      "path": "공유열람\\test05-4ecd3d1c5adf80cf361b763809efb6cbf1a11433\\이은경.zip",
+      "size": 5981591,
+      "sha256": "cc83cc6a1d396c4778d196ff35db977dca7c1bee06d8bfb72bfc962498dad4f8"
+    },
+    {
+      "path": "공유원본\\4ecd3d1c5adf80cf361b763809efb6cbf1a11433.zip",
+      "size": 21510027,
+      "sha256": "26e0258b3846d8de9073f2f9038ff3a717edd04d0da31fed27a348f146aa1596"
+    },
+    {
+      "path": "공유원본\\접근기록.json",
+      "size": 395,
+      "sha256": "8cb7394e1d438679cc55f57c862baee15b57cf4748e03518c63aa1e240fd1c80"
+    },
+    {
+      "path": "열람\\링크.txt",
+      "size": 455,
+      "sha256": "3c525fad130ddac1eb7888c95b5a9752ccd88bf79c417d50d710e54dfdbc05d3"
+    },
+    {
+      "path": "열람\\메인페이지.pdf",
+      "size": 6387694,
+      "sha256": "61d6382b4d504e74fe0e74fc75cc1197398982d2b327177d94615b4b5db01a78",
+      "pages": 1
+    },
+    {
+      "path": "열람\\보고서.md",
+      "size": 44068,
+      "sha256": "73d78383893bcbb758ff12e53d018bd7009f53ed089a88d274f75a8be8b2cd52"
+    },
+    {
+      "path": "열람\\브랜드AI수정안.html",
+      "size": 132931,
+      "sha256": "64968476561908797fb6fd702832032e6b08088a77c4938a5ad9ce96a7974c35"
+    },
+    {
+      "path": "열람\\브랜드AI초안.html",
+      "size": 125276,
+      "sha256": "9211a1fcfdd3ae4eea93260d943e91356aca084e05ce788d121f4db24c38431b"
+    },
+    {
+      "path": "열람\\서브AI수정안.html",
+      "size": 165135,
+      "sha256": "bc55bd77d79fcca3d1a3872ba1b364ef2a1f884db10520220298b3e568f1e69b"
+    },
+    {
+      "path": "열람\\서브AI초안.html",
+      "size": 160647,
+      "sha256": "61b976b415b00699a109473a55a21aead75c53ec7aa2cf105b783ef41ee71ca9"
+    },
+    {
+      "path": "원본\\1792588415_cc2cf4fc.zip",
+      "size": 5981591,
+      "sha256": "cc83cc6a1d396c4778d196ff35db977dca7c1bee06d8bfb72bfc962498dad4f8"
+    }
+  ]
+}

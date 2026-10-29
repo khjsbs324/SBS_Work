@@ -1,0 +1,64 @@
+{
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=11",
+  "checks": {
+    "summary_unchanged": true,
+    "scores_and_targets_unchanged": true
+  },
+  "current": {
+    "summary": "평가정보\n돌아가기\n구분\t본평가\t결석자평가\t재평가\t사전평가\t능력단위\n\n\n평가날짜\n\n평가시간\n\n커트라인\n\n패널티\n\n\t\n\n2026-09-09\n\n16:00~18:50\n\n60점\n\n0점\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t87.88\t89.9\n평가인원\t10\t0\t0",
+    "scores": [
+      {
+        "name": "박찬미",
+        "score": "94",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1118"
+      },
+      {
+        "name": "김정은",
+        "score": "91",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1115"
+      },
+      {
+        "name": "박주연",
+        "score": "91",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1117"
+      },
+      {
+        "name": "강민경",
+        "score": "90",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1114"
+      },
+      {
+        "name": "임연우",
+        "score": "90",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1121"
+      },
+      {
+        "name": "이은경",
+        "score": "89",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1119"
+      },
+      {
+        "name": "최지혜",
+        "score": "89",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1124"
+      },
+      {
+        "name": "허지민",
+        "score": "89",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1122"
+      },
+      {
+        "name": "이은수",
+        "score": "88",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1123"
+      },
+      {
+        "name": "이지희",
+        "score": "88",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=11&FollowNo=1&Sid=sbsartdj1120"
+      }
+    ]
+  },
+  "checked_at": "2026-10-29T03:00:48.684Z"
+}

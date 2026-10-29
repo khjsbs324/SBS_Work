@@ -1,0 +1,92 @@
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+ul, li {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.head-top {
+    height: 59px;
+    border-bottom: 1px solid #eaeaea;
+    box-sizing: border-box;
+}
+.conwrap {
+  width: 1400px;
+    height: 100%;
+    margin-left: 217px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lang {
+  width: 88px;
+  height: 30px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-sizing: border-box;
+  font-size: 11px;
+}
+/* SNS 아이콘 */
+.sns ul {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  list-style: none;
+}
+.sns img {
+  width: 30px;
+  height: 30px;
+}
+.utility-menu {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.utility-con {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+}
+.utility-con ul {
+  display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.utility-con li {
+  font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: #9b9a9a;
+}
+.main-banner {
+    width: 100%;
+}
+.main-banner img {
+    width: 100%;
+    display: block;
+}
+.menu-space {
+    height: 89px;
+    background-color: white;
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "name": "logo.jpg",
+    "url": "https://www.monami.com/images/common/logo.jpg",
+    "bytes": 3578,
+    "mime": "image/jpeg",
+    "sha256": "7df0a887fa758c52e27ba6c378e1b72c287811295f02c9403ead57f3f12fee6f"
+  },
+  {
+    "name": "footer-logo.jpg",
+    "url": "https://www.monami.com/images/common/foot_logo.jpg",
+    "bytes": 2424,
+    "mime": "image/jpeg",
+    "sha256": "907bff56c12656ed66c5e0fe3124bfdf68a1850c05b505a87e415191cd9b17c7"
+  },
+  {
+    "name": "facebook.gif",
+    "url": "https://www.monami.com/images/common/sns_facebook.gif",
+    "bytes": 1372,
+    "mime": "image/gif",
+    "sha256": "211ba02c9dbfc3482a0f25aa3f7044d5a5593d6464cafe848e645cd9ac992751"
+  },
+  {
+    "name": "instagram.gif",
+    "url": "https://www.monami.com/images/common/sns_insta.gif",
+    "bytes": 1583,
+    "mime": "image/gif",
+    "sha256": "a14caae98a3fece92c3910c5b333fff3b37c365abad1cd3eea74acd5f70dd4c8"
+  },
+  {
+    "name": "youtube.png",
+    "url": "https://www.monami.com/images/common/sns_youtube.png",
+    "bytes": 799,
+    "mime": "image/png",
+    "sha256": "df04d4af2fd0540467424ccc737ef6d223e92a2fd67529929c6b1944feb30574"
+  },
+  {
+    "name": "search.gif",
+    "url": "https://www.monami.com/images/common/btn_search.gif",
+    "bytes": 1429,
+    "mime": "image/gif",
+    "sha256": "9bce8f3fbc277e5231684f9daa42ca24a296316ee64dfa459d00edfa8dc6aa9c"
+  },
+  {
+    "name": "hero.jpg",
+    "url": "https://www.monami.com/images/main/visual1.jpg",
+    "bytes": 219987,
+    "mime": "image/jpeg",
+    "sha256": "87787a03d651106db37dfe80f79f91cda31f1073efb07b5c8c97308b5f0d49ee"
+  },
+  {
+    "name": "video-poster.jpg",
+    "url": "https://www.monami.com/images/main/bg_video.jpg",
+    "bytes": 317910,
+    "mime": "image/jpeg",
+    "sha256": "3252fe418e2975da62c1e7feb01a2595c9f26050dedf8c357d87639c76663fc6"
+  },
+  {
+    "name": "inquiry-bg.jpg",
+    "url": "https://www.monami.com/images/main/inquiry_bg.jpg",
+    "bytes": 52707,
+    "mime": "image/jpeg",
+    "sha256": "5b4d6dcaa9cb3aff66f380b4a0ef723865a15fb52677cef715c69860ab45b1c0"
+  },
+  {
+    "name": "shop-bg.png",
+    "url": "https://www.monami.com/images/main/shop_bg.png",
+    "bytes": 2602,
+    "mime": "image/png",
+    "sha256": "947938fb882de5decfd56caf673de49a01460ca38cef260ac4b414f9d0690fc2"
+  },
+  {
+    "name": "arrow-left.gif",
+    "url": "https://www.monami.com/images/main/p_arr1.gif",
+    "bytes": 1172,
+    "mime": "image/gif",
+    "sha256": "724713cee34ef30505b93f691697732a5cfcfbd32cc8e277ab86ac04596688dd"
+  },
+  {
+    "name": "arrow-right.gif",
+    "url": "https://www.monami.com/images/main/p_arr2.gif",
+    "bytes": 1172,
+    "mime": "image/gif",
+    "sha256": "eb6547cf0ada498bda3d20cff61a27a5ad83cd7c4be260958d861b36577824d6"
+  },
+  {
+    "name": "scroll-cursor.gif",
+    "url": "https://www.monami.com/images/main/p_cursor.gif",
+    "bytes": 1715,
+    "mime": "image/gif",
+    "sha256": "a59fe69bb524626d9463b7d9c955a19cc4719cb6717783bac8e6e5e683bd6674"
+  },
+  {
+    "name": "new-01.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_1699945409grwui60w6u.jpg",
+    "bytes": 32065,
+    "mime": "image/jpeg",
+    "sha256": "c35556219dff6872747f50e48581b5ce366a099d6be91ccb9d775d87626b24af"
+  },
+  {
+    "name": "new-02.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_169994521784nzg4whv7.jpg",
+    "bytes": 48792,
+    "mime": "image/jpeg",
+    "sha256": "46d0ac10f27db27b9ae5578c82c7d6351579414119768c2326319c22bc0df2c2"
+  },
+  {
+    "name": "new-03.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_1715318030bhfwnjum09.jpg",
+    "bytes": 31651,
+    "mime": "image/jpeg",
+    "sha256": "47d6f6a7e2e33aef9825773a25259f2c8ce13dbd14a3976a6ddb9f088c1007b2"
+  },
+  {
+    "name": "new-04.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_1681087061mb8i5l6zdx.jpg",
+    "bytes": 57015,
+    "mime": "image/jpeg",
+    "sha256": "54d3d769152999fc553d460bab6d54bb0789e556bbe285f53539f4401929a0f6"
+  },
+  {
+    "name": "new-05.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_1715319042z7nuju2l3p.jpg",
+    "bytes": 31964,
+    "mime": "image/jpeg",
+    "sha256": "2901767d308e51fb1a741b781f372831362ca3507ee3cd8e2ad2309afabc689f"
+  },
+  {
+    "name": "best-01.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2040136001_file6_1713138750ujw6qaj97g.jpg",
+    "bytes": 20561,
+    "mime": "image/jpeg",
+    "sha256": "7293b1a74216a57e871bb745ff4a0beaa469def1a9d7ddd7520b3cd2c7a3148a"
+  },
+  {
+    "name": "best-02.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/8801067962537_file6_16993368522ze8t9y6ul.jpg",
+    "bytes": 25462,
+    "mime": "image/jpeg",
+    "sha256": "e7ba534f28d71f39fd6e3b9b6d318a6183b49f75482aaf62e411f68a2f0a34f9"
+  },
+  {
+    "name": "best-03.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2040048020_file6_1681086837wink3y4zfr.jpg",
+    "bytes": 29601,
+    "mime": "image/jpeg",
+    "sha256": "5a0298acff7237f1fe2599129c7915927082a6d3bd3c49f558181f312258c4bf"
+  },
+  {
+    "name": "best-04.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2040048012_file6_1583298386d4wy0fw22t.jpg",
+    "bytes": 13542,
+    "mime": "image/jpeg",
+    "sha256": "4defa97f22df93d494be92b9958075876cf9de3f852534ac2a5da3ec5ecae76a"
+  },
+  {
+    "name": "best-05.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2010209001_file6_15106474920b1lr1fhnf.jpg",
+    "bytes": 12475,
+    "mime": "image/jpeg",
+    "sha256": "ba91e324b3af77332331e26d019a49b1261062c536e9924a6272e0bc6503f2d7"
+  },
+  {
+    "name": "best-06.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/0file6_15106488276b3copnqua.jpg",
+    "bytes": 20400,
+    "mime": "image/jpeg",
+    "sha256": "f23e9b9112122801f7a40b47b521e5703151aa5596f509c8cdc96030431286c3"
+  },
+  {
+    "name": "best-07.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2010204001_file6_1510645904wfwu2dzbh8.jpg",
+    "bytes": 13010,
+    "mime": "image/jpeg",
+    "sha256": "35466334c9a0cd17c4b3f61752888df3b12b3b79242dc6f40b5fdafedb9221bc"
+  },
+  {
+    "name": "best-08.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/%202040012000_file6_1581983504aiqk5l95cs.jpg",
+    "bytes": 15777,
+    "mime": "image/jpeg",
+    "sha256": "5124d2071929f325625c4ada451dc160361934123b89c410fce9f40294b56530"
+  },
+  {
+    "name": "best-09.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2100013001_file6_1510646729quxjpnwxv2.jpg",
+    "bytes": 16134,
+    "mime": "image/jpeg",
+    "sha256": "0abc6d4c2a2fcfc2c961b60d15b9dec770ae54607916c139b66386d23c109310"
+  },
+  {
+    "name": "best-10.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2010207001_file6_15106464990pucf68uao.jpg",
+    "bytes": 14441,
+    "mime": "image/jpeg",
+    "sha256": "666c0b7a5b8e14113ea59fa210cb6c6a0c16366628a8f6dacb1b73420fcbdcd4"
+  },
+  {
+    "name": "best-11.jpg",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2010205004_file6_15106462368v88izo2ui.jpg",
+    "bytes": 12294,
+    "mime": "image/jpeg",
+    "sha256": "c111586503c0a0f03973bf641a3afebe9d85f48953decc1c97339031c2ef24d3"
+  },
+  {
+    "name": "news.png",
+    "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/board/bodo/b_file_1768790167lxyus9qzvj.png",
+    "bytes": 1645105,
+    "mime": "image/png",
+    "sha256": "cf44a9559ff6accfcf870a0e9f985d9b225277610eeb3e5ea3b0f7538e937198"
+  },
+  {
+    "name": "inquiry-icon.png",
+    "url": "https://www.monami.com/images/main/inquiry_tit_bg.png",
+    "bytes": 1740,
+    "mime": "image/png",
+    "sha256": "cfdc66153741455450ada77c6bdfb0d6fd39f71520780a0eada4a19f33470844"
+  },
+  {
+    "name": "shop-icon.png",
+    "url": "https://www.monami.com/images/main/brandstore_tit_bg.png",
+    "bytes": 1949,
+    "mime": "image/png",
+    "sha256": "9b25fdb759fef5d2f1926713121b0cb5ea1f5202d2908768446c03820d8e1a7f"
+  }
+]

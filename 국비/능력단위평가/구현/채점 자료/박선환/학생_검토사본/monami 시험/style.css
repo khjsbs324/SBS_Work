@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+body {
+  font-family: 'Pretendard', sans-serif;
+  margin: 0;
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit; font-weight: normal;
+  margin: auto;
+}
+.con {
+  margin-left: auto; margin-right: auto;
+  display: flex;
+}
+.head_top {
+  width: 1350px; height: 59px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 11px;
+  margin: auto;
+}
+.head_left {
+  display: flex;
+}
+.lang_btn {
+  width: 86px; height: 30px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+.lang_btn_image {
+  width: 13px; height: 11px;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 7px;
+}
+.arrow {
+  padding-left: 6px;
+  font-size: 11px;
+}
+.top_sns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+  padding-left: 12px;
+}
+.top_utility>nav>ul {
+  display: flex;
+  align-items: center;
+  color: #9b9a9a;
+  gap: 22px;
+}
+.main_banner {
+  height: 652px;
+  width: 100%;
+  overflow: hidden;
+}
+.products_con {
+  height: 953px;
+  background-color: #eeeeee;
+  padding-top: 70px; padding-bottom: 70px;
+  flex-direction: column;
+  align-items: center;
+}
+.product_title {
+  font-size: 32px; font-weight: 600;
+  color: #000;
+  text-align: center;
+}
+.product_desc {
+  font-size: 13.5px;
+  color: #555;
+  padding-top: 20px; padding-bottom: 40px;
+}
+.actions {
+  display: flex; justify-content: center;
+  text-align: center;
+  gap: 40px;
+}
+
+#actions .tab_premium,
+#actions .tab_pen,
+#actions .tab_coloring,
+#actions .tab_office {
+  width: 157px; height: 36px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid #bcbcbc;
+  border-radius: 50px;
+}
+#actions .tab_premium:hover,
+#actions .tab_pen:hover,
+#actions .tab_coloring:hover,
+#actions .tab_office:hover {
+  color: #C40F39;
+}
+.product_list {
+}
+.product_list_image>ul>li {
+  width: 266px; height: 390px;
+  gap: 18px;
+  display: flex;
+  padding-top: 40px;
+  border-radius: ;  
+}

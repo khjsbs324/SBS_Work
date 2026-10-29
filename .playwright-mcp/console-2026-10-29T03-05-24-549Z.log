@@ -1,0 +1,26 @@
+[     418ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=4:591:1
+[     650ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=2:530:1
+[     809ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=5:523:1
+[     988ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=3:524:1
+[    1257ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=6:549:1
+[    1892ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=7:557:1
+[    2132ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=8:543:1
+[    2414ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=9:494:1
+[    2602ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=10:494:1
+[    2811ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=11:494:1
+[    3003ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=12:494:1
+[    3170ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=14:494:1
+[    3320ms] ReferenceError: $ is not defined
+    at https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=13:494:1

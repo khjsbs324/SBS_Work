@@ -1,0 +1,35 @@
+{
+  "student": "전해주",
+  "passed": true,
+  "purpose": "원본 채점과 구분한 메모리 내 수정 예시 검증입니다. 학생 제출 파일은 수정하지 않습니다.",
+  "proposedCss": ".head-left{width:auto;gap:14px}.language{flex:0 0 86px;width:86px;height:28px;padding:0;box-sizing:border-box}.sns{width:auto;padding:0}body{font-weight:400}.product{height:auto;padding-bottom:70px}.product-scroll{overflow-x:auto}.product-list{display:flex;gap:9px;width:3016px}.product-card{flex:0 0 266px;height:505px;border-radius:16px;overflow:hidden;background:#fff}.product-card>img{display:block;width:266px;height:390px;object-fit:cover}.product-info{padding:30px 28px 18px}",
+  "boxes": [
+    {
+      "viewport": 1920,
+      "width": 266,
+      "height": 505,
+      "display": "block"
+    },
+    {
+      "viewport": 1440,
+      "width": 266,
+      "height": 505,
+      "display": "block"
+    }
+  ],
+  "readability": {
+    "title": "전해주 모나미 구현 피드백",
+    "headings": [
+      "1. 상단 > 언어 상자의 축소와 실제 메뉴 문구",
+      "2. 상단 > 로고와 주 메뉴 줄 추가",
+      "3. BEST PRODUCT > 준비한 이미지 파일을 HTML 카드로 연결",
+      "4. BEST PRODUCT > 가로 카드 목록과 실제 높이",
+      "5. 코드 문법 정리"
+    ],
+    "codeBlocks": 7,
+    "viewport": 1440,
+    "documentWidth": 1425,
+    "characters": 2678
+  },
+  "verifiedAt": "2026-10-26T04:37:41.549Z"
+}

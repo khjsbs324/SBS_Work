@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "unit": "구현",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=2",
+  "completed_at": "2026-10-29T03:19:40.785811+00:00",
+  "exact_readback": true,
+  "previous_prefix_preserved": true,
+  "date_preserved": true,
+  "reassessment_preserved": true,
+  "visual_reviewed": true,
+  "hashes": {
+    "최종수정안.json": "d5307898a65efa27ca432a87787fb61b5d25ac06bac007152fbda4ce9e087f7d",
+    "저장확인.json": "d6ff3bde6c2db9145d1f58826f2596b70c829f6b52a83d912a636ee84056e882",
+    "회의록_수정전.json": "1a71edbc01b5a50aed8f6804d3da23679206b621df87cc1576ba70c6c64eda23",
+    "수정후화면.png": "458c6e11cbdabc7a3c342198e5fbf6188f5a64648699856fa4cf544047b66c05"
+  }
+}

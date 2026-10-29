@@ -1,0 +1,50 @@
+{
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1035",
+  "textMatches": true,
+  "titleAndDate": [
+    "제목 [능력단위평가_지원내역] 시각디자인 리서치 조사 A그룹 지원자료",
+    "작성자 김혜지 작성일 2026-06-08"
+  ],
+  "headings": 11,
+  "tables": 12,
+  "links": [
+    {
+      "title": "정성, 정량 조사를 병행하여 퍼소나에 설득력 부여하기",
+      "url": "https://story.pxd.co.kr/1343"
+    },
+    {
+      "title": "사용자의 목소리로부터 보다 효과적으로 정보를 얻는 방법",
+      "url": "https://story.pxd.co.kr/341"
+    },
+    {
+      "title": "멘탈모델(2)-행동중심의 디자인접근법",
+      "url": "https://story.pxd.co.kr/176"
+    },
+    {
+      "title": "현직 UXUI 디자이너 포트폴리오 공개합니다",
+      "url": "https://www.youtube.com/watch?v=8HzYbvzoPqw"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792722999_535b1b6f.png",
+      "loaded": true
+    },
+    {
+      "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792723000_b2fa8c81.png",
+      "loaded": true
+    }
+  ],
+  "attachment": {
+    "status": 200,
+    "bytes": 375008,
+    "sameAsOriginal": true
+  },
+  "pdfPages": 10,
+  "worksheetTables": 6,
+  "checkedAt": "2026-10-23",
+  "commonCheck": {
+    "passed": false,
+    "existingError": "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완"
+  }
+}

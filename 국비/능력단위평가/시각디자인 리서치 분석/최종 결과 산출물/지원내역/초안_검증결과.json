@@ -1,0 +1,39 @@
+{
+  "packs": [
+    {
+      "group": "A",
+      "pdfPages": 10,
+      "docxWorksheets": 6,
+      "csvWorksheets": 6,
+      "diagrams": 2,
+      "zipEntries": 14,
+      "zipBytes": 273491,
+      "published": false
+    },
+    {
+      "group": "B",
+      "pdfPages": 10,
+      "docxWorksheets": 6,
+      "csvWorksheets": 6,
+      "diagrams": 2,
+      "zipEntries": 14,
+      "zipBytes": 271033,
+      "published": false
+    },
+    {
+      "group": "C",
+      "pdfPages": 10,
+      "docxWorksheets": 6,
+      "csvWorksheets": 6,
+      "diagrams": 2,
+      "zipEntries": 14,
+      "zipBytes": 270444,
+      "published": false
+    }
+  ],
+  "targetCoursePending": true,
+  "harness": {
+    "ok": false,
+    "existingError": "능력단위평가\\수정 보완\\CLAUDE.md: Missing link/import: 수정 보완"
+  }
+}

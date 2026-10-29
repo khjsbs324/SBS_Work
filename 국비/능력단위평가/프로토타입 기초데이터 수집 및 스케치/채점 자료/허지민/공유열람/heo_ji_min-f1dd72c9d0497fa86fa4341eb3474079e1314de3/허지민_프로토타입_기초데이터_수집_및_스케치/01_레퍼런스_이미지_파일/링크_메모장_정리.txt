@@ -1,0 +1,18 @@
+[이미지]
+
+- 브랜드소개_레퍼런스01: https://bodyluv.kr/event/detail.html?product_no=647&cate_no=1&display_group=22
+- 브랜드소개_레퍼런스02: https://wellkinmall.co.kr/service/story_brand
+- 서브페이지_레퍼런스01: https://illumiel.co.kr/
+- 서브페이지_레퍼런스02: https://www.estien.com/product_info?idx=56
+- 서브페이지_레퍼런스03: https://illumiel.co.kr/product/list.html?cate_no=117
+- 서브페이지_레퍼런스04: https://illumiel.co.kr/product/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EB%8B%88%EB%93%9C%EC%83%B7-%EC%97%91%EC%86%8C%EC%A2%80-%EB%AF%B8%EA%B0%84%ED%8C%A8%EC%B9%98-4%EB%A7%A4/62/category/54/display/1/
+- 서브페이지_레퍼런스05: https://pilly.kr/survey
+- 서브페이지_레퍼런스06: https://wellkinmall.co.kr/goods/goods_view.php?goodsNo=1000000084
+
+[리포지터리]
+
+https://95raon-alt.github.io/heo_ji_min/
+
+[github]
+
+https://github.com/95raon-alt/heo_ji_min

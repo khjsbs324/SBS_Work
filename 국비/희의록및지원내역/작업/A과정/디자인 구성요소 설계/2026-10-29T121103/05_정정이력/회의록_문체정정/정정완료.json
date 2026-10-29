@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "unit": "디자인 구성요소 설계",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+  "completed_at": "2026-10-29T03:19:40.789860+00:00",
+  "exact_readback": true,
+  "previous_prefix_preserved": true,
+  "date_preserved": true,
+  "reassessment_preserved": true,
+  "visual_reviewed": true,
+  "hashes": {
+    "최종수정안.json": "c8fa7faba41e9f7d2d0b1c1738fcc2ed5f8656c035aea2cf64689266609634e2",
+    "저장확인.json": "592313bb304759dc23dfebdd35681b928b99604e6c6188fa151b63d65e2951b6",
+    "회의록_수정전.json": "4d1a7e8fce7ab9b15c983577fe6de82984466db29ba53a91197cf0d0f546f17e",
+    "수정후화면.png": "04ddde26ce9c87e4b84720f6cf778c4ed093df4a0e68f6dcf0e01418f5559e5d"
+  }
+}

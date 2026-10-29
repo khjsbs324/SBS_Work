@@ -1,0 +1,32 @@
+{
+  "course_id": "A",
+  "unit": "테스트 단위",
+  "lcode": "6",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-29T13:49:56+09:00",
+  "mode": "existing",
+  "reason": "isolated test fixture",
+  "meeting_path": "02_회의록/회의록.json",
+  "meeting_sha256": "fb2fc395f6955b2cd702f9dc942857e745d9f2215416bea170d71ead6ae5ff1e",
+  "roster_sha256": "83ef30f7c03a2edccb622c0089ba5c0ff1b7cc2467bf5eace7d440a0b979602e",
+  "review_checks": {
+    "feedback_alignment": true,
+    "group_allocation": true,
+    "teaching_continuity": true,
+    "natural_language": true,
+    "support_alignment": true
+  },
+  "review_notes": "Fixture manual review",
+  "local_reviewed": true,
+  "exclusion_request": "",
+  "exact_readback": true,
+  "readback": {
+    "analysis": "주제\n목적\n결과\nA그룹 : [학생A]\nB그룹 : [학생B]\nC그룹 : [학생C]\n실제 요소 제작하기\n종합 의견\n건의사항",
+    "improvement": "조치사항\nA그룹 : [학생A]\nB그룹 : [학생B]\nC그룹 : [학생C]\n학생 변화\n교수법 개선\n후속 지도",
+    "meeting_date": "2026-10-29",
+    "checked_at": "2026-10-29T13:49:56+09:00",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=6"
+  }
+}

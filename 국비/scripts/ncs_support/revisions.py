@@ -8,6 +8,8 @@ from .records import group_dir, load_run, post_identity, snapshot, status
 
 def begin_revision(run, group, evidence, reason, request):
     run, job, state = load_run(run)
+    from .meeting import require_meeting
+    require_meeting(run, job, state)
     require(job['action'] == 'register' and request.strip() and reason.strip(), 'Correction request and reason required')
     folder = group_dir(run, group)
     stages = state['groups'][group]

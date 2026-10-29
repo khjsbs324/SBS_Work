@@ -1,0 +1,222 @@
+- generic [ref=f9e1]:
+  - banner [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - generic [ref=f9e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f9e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f9e8]:
+    - generic [ref=f9e9]:
+      - generic [ref=f9e10]:
+        - generic [ref=f9e11]: 김혜지
+        - generic [ref=f9e12]:
+          - button "정보수정" [ref=f9e13] [cursor=pointer]
+          - button "비번변경" [ref=f9e14] [cursor=pointer]
+          - button "PIN변경" [ref=f9e15] [cursor=pointer]
+      - list [ref=f9e16]:
+        - listitem [ref=f9e17] [cursor=pointer]:
+          - generic [ref=f9e18]:
+            - generic [aria-hidden] [ref=f9e19]: 
+            - text: 훈련과정
+        - listitem [ref=f9e20] [cursor=pointer]:
+          - generic [ref=f9e21]:
+            - generic [aria-hidden] [ref=f9e22]: 
+            - text: 공지사항
+      - list [ref=f9e23]:
+        - listitem [ref=f9e24] [cursor=pointer]:
+          - generic [ref=f9e25]:
+            - paragraph [ref=f9e26]:
+              - generic [aria-hidden] [ref=f9e27]: 
+            - paragraph [ref=f9e28]: 고객센터
+        - listitem [ref=f9e29] [cursor=pointer]:
+          - generic [ref=f9e30]:
+            - paragraph [ref=f9e31]:
+              - generic [aria-hidden] [ref=f9e32]: 
+            - paragraph [ref=f9e33]: 카톡문의
+    - generic [ref=f9e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f9e35]:
+        - caption [ref=f9e36]:
+          - generic [ref=f9e37]:
+            - generic [ref=f9e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f9e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f9e48]:
+          - row [ref=f9e49]:
+            - cell "개강일" [ref=f9e50]
+            - cell "2026-05-20" [ref=f9e51]
+            - cell "종강일" [ref=f9e52]
+            - cell "2026-12-04" [ref=f9e53]
+            - cell "강사" [ref=f9e54]
+            - cell "김가경, 김혜지" [ref=f9e55]
+          - row [ref=f9e56]:
+            - cell "실시인원" [ref=f9e57]
+            - cell "11" [ref=f9e58]
+            - cell "수강인원" [ref=f9e59]
+            - cell "9" [ref=f9e60]
+            - cell "수강포기인원" [ref=f9e61]
+            - cell "2" [ref=f9e62]
+      - list [ref=f9e63]:
+        - listitem [ref=f9e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f9e65]
+        - listitem [ref=f9e66] [cursor=pointer]:
+          - generic "시간표" [ref=f9e67]
+        - listitem [ref=f9e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f9e69]
+        - listitem [ref=f9e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f9e71]
+        - listitem [ref=f9e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f9e73]
+        - listitem [ref=f9e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f9e75]
+        - listitem [ref=f9e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f9e77]
+        - listitem [ref=f9e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f9e79]
+        - listitem [ref=f9e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f9e81]
+        - listitem [ref=f9e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f9e83]
+        - listitem [ref=f9e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f9e85]
+        - listitem [ref=f9e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f9e87]
+        - listitem [ref=f9e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f9e89]
+        - listitem [ref=f9e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f9e91]
+        - listitem [ref=f9e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f9e93]
+        - listitem [ref=f9e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f9e95]
+        - listitem [ref=f9e96] [cursor=pointer]:
+          - generic "과제" [ref=f9e97]
+        - listitem [ref=f9e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f9e99]
+        - listitem [ref=f9e100] [cursor=pointer]:
+          - generic [ref=f9e101]: 게시판생성
+        - listitem [ref=f9e102] [cursor=pointer]:
+          - generic [ref=f9e103]: 게시판순서변경
+      - list [ref=f9e104]:
+        - listitem [ref=f9e105]:
+          - table [ref=f9e106]:
+            - caption [ref=f9e107]:
+              - list [ref=f9e110]:
+                - listitem [ref=f9e111] [cursor=pointer]: 평가내역
+                - listitem [ref=f9e112] [cursor=pointer]: 평가결과 분석회의록
+            - rowgroup [ref=f9e118]:
+              - row [ref=f9e119]:
+                - cell "과정명" [ref=f9e120]
+                - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차" [ref=f9e121]
+              - row [ref=f9e122]:
+                - cell "교과목" [ref=f9e123]
+                - cell "(전공)시안 디자인 개발" [ref=f9e124]
+              - row [ref=f9e125]:
+                - cell "능력단위" [ref=f9e126]
+                - cell "시각디자인 리서치 조사" [ref=f9e127]:
+                  - combobox [ref=f9e128]:
+                    - option "선택하세요"
+                    - option "구현"
+                    - option "구현 응용"
+                    - option "시각디자인 리서치 조사" [selected]
+                    - option "시각디자인 리서치 분석"
+                    - option "시안 디자인 개발 심화"
+                    - option "디자인 구성요소 설계"
+                    - option "수정 보완"
+                    - option "디자인 구성요소 제작"
+                    - option "디지털디자인 사후관리"
+                    - option "서비스ㆍ경험디자인 관찰조사"
+                    - option "서비스ㆍ경험디자인 시나리오 개발"
+                    - option "프로토타입 기초데이터 수집 및 스케치"
+                    - option "스마트문화앱 UI 디자인"
+                    - option "프로토타입 제작 및 사용성 테스트"
+                    - option "(비NCS 실기)AI 기획과 발상"
+                    - option "(비NCS 실기)취업포트폴리오 제작"
+              - row [ref=f9e129]:
+                - cell "개강일" [ref=f9e130]
+                - cell "2026-05-21" [ref=f9e131]
+                - cell "종강일" [ref=f9e132]
+                - cell "2026-06-05" [ref=f9e133]
+              - row [ref=f9e134]:
+                - cell "평가도구" [ref=f9e135]
+                - cell "평가자체크리스트" [ref=f9e136]
+        - listitem [ref=f9e137]:
+          - table "평가정보 돌아가기" [ref=f9e138]:
+            - caption [ref=f9e139]:
+              - generic [ref=f9e140]:
+                - generic [ref=f9e141]: 평가정보
+                - link "돌아가기" [ref=f9e143] [cursor=pointer]:
+                  - /url: ../index.php?Pcode=300002
+            - rowgroup [ref=f9e151]:
+              - row [ref=f9e152]:
+                - columnheader "구분" [ref=f9e153]
+                - columnheader "본평가" [ref=f9e154]
+                - columnheader "결석자평가" [ref=f9e155]
+                - columnheader "재평가" [ref=f9e156]
+                - columnheader "사전평가" [ref=f9e157]
+                - columnheader "능력단위" [ref=f9e158]
+            - rowgroup [ref=f9e159]:
+              - row [ref=f9e160]:
+                - cell [ref=f9e161]:
+                  - paragraph [ref=f9e162]: 평가날짜
+                  - paragraph [ref=f9e163]: 평가시간
+                  - paragraph [ref=f9e164]: 커트라인
+                  - paragraph [ref=f9e165]: 패널티
+                - cell [ref=f9e166]:
+                  - link [ref=f9e167] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f9e168]: 2026-06-05
+                    - paragraph [ref=f9e169]: 16:00~18:50
+                    - paragraph [ref=f9e170]: 60점
+                    - paragraph [ref=f9e171]: 0점
+                - cell [ref=f9e172]:
+                  - link [ref=f9e173] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f9e174]: 2026-06-08
+                    - paragraph [ref=f9e175]: 18:50~22:00
+                    - paragraph [ref=f9e176]: 60점
+                    - paragraph [ref=f9e177]: 10점
+                - cell [ref=f9e178]:
+                  - link [ref=f9e179] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f9e180]: 2026-06-10
+                    - paragraph [ref=f9e181]: 18:50~21:50
+                    - paragraph [ref=f9e182]: 0점
+                    - paragraph [ref=f9e183]: 10점
+                - cell "84.85" [ref=f9e184]
+                - cell "65.18" [ref=f9e185]
+              - row [ref=f9e186]:
+                - cell "평가인원" [ref=f9e187]
+                - cell "10" [ref=f9e188]
+                - cell "1" [ref=f9e189]
+                - cell "1" [ref=f9e190]
+      - table "평가결과분석회의록 돌아가기" [ref=f9e192]:
+        - caption [ref=f9e193]:
+          - generic [ref=f9e194]:
+            - generic [ref=f9e195]: 평가결과분석회의록
+            - link "돌아가기" [ref=f9e197] [cursor=pointer]:
+              - /url: ./index.php?Pcode=300002&Lcode=4
+        - rowgroup [ref=f9e201]:
+          - row [ref=f9e202]:
+            - cell "회의일자" [ref=f9e203]
+            - cell [ref=f9e204]:
+              - textbox [ref=f9e205]: 2026-06-08
+          - row [ref=f9e226]:
+            - cell "평가결과 분석내용" [ref=f9e207]
+            - cell [ref=f9e227]:
+              - textbox [ref=f9e209]: "*평가결과 분석내용 회의제목 : 시각디자인 리서치 조사 평가결과 분석 및 A·B·C그룹별 학습지원 계획 회의 참석자 : 김봉섭 부원장, 김혜지 강사, 김지수 사원 보완 작성일 : 2026-10-23 보완 기준 : 현재 등록된 본평가·결석자평가·재평가 결과와 개별 피드백을 반영하여 기존 2026-06-08 회의록의 분석 및 학습지원 계획을 보완함. 1. 주제 ‘시각디자인 리서치 조사’ 평가결과와 개별 피드백을 검토하여 학습자의 수행 수준 및 보완 항목을 파악하고, A·B·C그룹별 지원자료와 후속 학습 방향을 수립함. 2. 목적 시장 및 디자인 트렌드 조사, 사용자 조사, 경쟁사 비교, 조사 결과 정리 과정에서 나타난 부족한 부분을 보완하고자 함. 조사자료를 수집하는 단계에서 나아가, 자료의 신뢰성을 확인하고 조사 결과를 자신의 디자인 방향과 연결하여 설명할 수 있도록 수준별 학습을 지원함. 3. 평가결과 및 학습지원 그룹 편성 현재 등록된 평가점수, 기존 종합의견, 개별 피드백의 보완 요구를 함께 검토하여 다음과 같이 편성함. 아래 구분은 학습지원 목적의 그룹이며, 평가점수에 따른 공식 성적등급과 구분함. A그룹(2명) : 이은수(79점), 강민경(75점) 지원 방향 : 조사 근거의 정교화 및 디자인 방향 도출 심화 B그룹(4명) : 이지희(69점), 김정은(64점), 김지선(64점), 임연우(63점) 지원 방향 : 조사 항목별 누락 보완 및 자료 구조화 C그룹(5명) : 박찬미(62점), 이은경(61점), 박주연(60점), 최지혜(60점), 허지민(60점) 지원 방향 : 기초 조사 절차와 근거자료 정리부터 단계별 보완 가. A그룹 분석 및 지원계획 시장·트렌드 자료를 브랜드 콘셉트와 연결하는 수행이 상대적으로 양호함. 이은수는 경쟁사 비교와 포지셔닝을 시도하였고, 강민경은 사용자 니즈를 디지털·아날로그·공통 니즈로 구분하여 정리함. 다만 주 사용자와 부 사용자의 구분, 사용자 특성에 대한 근거 정리, 프로젝트 개발 범위의 구체화가 필요함. 강민경은 거시·미시 환경과 경쟁사별 디자인 특징을 비교하는 구조도 추가 보완이 필요함. - 지원자료 : 사용자 우선순위 설정표, 경쟁사 디자인 비교표, 조사 근거와 디자인 방향 연결 사례, 단계별 개발 범위 작성 양식을 제공할 계획임. - 보완 활동 : 자신의 조사자료를 바탕으로 주·부 사용자를 구분하고, 핵심 니즈와 선정 근거를 작성하도록 함. 경쟁사 비교에서 확인한 차별화 기회를 정리하고, 1차 개발 범위와 후속 확장 범위를 구분하도록 함. - 학습 방향 : 조사한 내용이 어떤 디자인 결정을 뒷받침하는지 설명하는 연습에 중점을 둠. - 확인 기준 : 사용자 선정, 차별화 방향, 개발 범위가 조사 근거와 연결되는지 확인함. 나. B그룹 분석 및 지원계획 브랜드 주제와 사용자 문제를 제시하고 시장 흐름을 콘셉트와 연결하려는 수행이 확인됨. 그러나 조사 항목별 구체성과 정리 수준에 차이가 있음. 이지희는 시장 수치와 출처, 김정은과 임연우는 디자인의 형태·색상·소재 등 조형적 분석, 김지선은 재평가 피드백에 나타난 경쟁사 디자인 비교와 패키지 구성 분석을 우선 보완할 필요가 있음. 공통적으로 주·부 사용자 구분과 개발 범위 정리가 필요함. - 지원자료 : 출처를 포함한 시장조사 정리표, 시장 트렌드와 디자인 트렌드 비교 예시, 경쟁사별 형태·색상·재질·레이아웃 분석 양식, 사용자 구분표를 제공할 계획임. - 보완 활동 : 자신의 결과물을 항목별로 점검한 후 누락된 근거와 분석을 추가하도록 함. 자료마다 출처·발행시점·핵심 내용·프로젝트와의 관련성을 기록하고, 경쟁사 자료를 동일한 기준으로 비교하도록 함. - 학습 방향 : ‘자료 수집 → 항목별 분류 → 비교 → 디자인 시사점 작성’ 순서로 학습하도록 안내함. 부족한 항목을 먼저 보완한 뒤 전체 조사 흐름을 정리하도록 함. - 확인 기준 : 조사 목적에 맞는 근거를 제시했는지, 동일한 비교 기준을 적용했는지, 조사 결과를 자신의 말로 설명할 수 있는지 확인함. 다. C그룹 분석 및 지원계획 개별 브랜드 콘셉트와 사용자 니즈를 제안한 점은 확인되나, 이를 뒷받침하는 근거자료와 디자인 분석을 체계적으로 정리하는 데 추가 지도가 필요함. 박찬미는 시장 가능성과 실제 사용자 니즈의 근거, 이은경과 박주연은 시장 수치·출처 및 디자인 트렌드, 최지혜는 미완성 항목과 경쟁사 비교, 허지민은 경쟁사별 디자인 특징과 차별화 전략을 우선 보완할 필요가 있음. - 지원자료 : 조사 절차 안내서, 완성 예시와 빈칸 양식이 함께 있는 조사 기록지, 출처 표기 예시, 이미지에 분석 내용을 표시한 경쟁사 비교 예시, 단계별 체크리스트를 제공할 계획임. - 보완 활동 : 먼저 자신의 프로젝트에서 확인해야 할 질문을 작성하도록 함. 질문에 맞는 자료를 찾아 출처와 핵심 내용을 기록하고, 경쟁사 자료를 형태·색상·재질·사용 방식 등 정해진 기준에 따라 비교하도록 함. - 학습 방향 : ‘무엇을 조사할 것인가 → 어디서 찾을 것인가 → 무엇을 기록할 것인가 → 디자인에 어떻게 활용할 것인가’를 작은 단계로 나누어 반복 학습하도록 함. 예시를 따라 작성한 뒤 자신의 주제로 적용하도록 지도함. - 확인 기준 : 필수 조사 항목을 빠짐없이 작성했는지, 주장에 근거와 출처가 있는지, 관찰한 사실과 자신의 해석을 구분했는지 확인함. 4. 공통 보완사항 전 학습자를 대상으로 조사 결과를 단순히 나열하는 방식에서 벗어나, 자료를 분류하고 핵심 내용을 도출하는 학습을 지원할 필요가 있음. 조사자료를 주제별로 묶는 그룹핑 및 어피니티 다이어그램 예시를 제공하고, 다음 순서로 정리하도록 안내함. 조사 근거 → 공통적으로 나타나는 특징 → 사용자 문제 또는 기회 → 디자인 방향 설문·인터뷰가 필요한 경우에는 조사 목적과 대상자 조건을 먼저 정하고, 목적에 맞는 질문을 작성하도록 함. 실제 조사자료와 학습용 예시자료를 구분하여 기록하도록 지도함."
+          - row [ref=f9e228]:
+            - cell "개선사항" [ref=f9e211]
+            - cell [ref=f9e229]:
+              - textbox [ref=f9e213]: 5. 개선사항 및 후속 조치계획 ① ‘지원내역’ 게시판에 A·B·C그룹별 지원자료를 각각 등록할 계획임. ② 국내 전문가의 공개 자료, 한국어 유튜브 영상, 무료 공개강의를 선정하여 학습 순서를 안내할 계획임. 각 자료에는 참고할 내용과 시청·열람 후 수행할 활동을 함께 제시함. ③ 그룹별 자료에 개념 설명, 시각적 예시, 작성 양식, 보완 실습, 자기점검 기준을 포함할 계획임. ④ 보완 결과물은 원본과 수정본을 비교하여 확인함. 수정한 항목, 추가한 근거, 변경한 디자인 방향을 학습자가 설명하도록 하여 이해 여부를 점검함. ⑤ 공통 오류는 전체 피드백으로 안내하고, 개인별 미흡 항목은 개별 피드백으로 보완함. 보완 후 수행 수준에 따라 다음 학습자료의 난이도와 지원 범위를 조정할 계획임. 6. 종합 의견 학습자별로 조사 수행 수준과 보완 요구가 다르므로 A그룹은 근거의 정교화와 심화 적용, B그룹은 누락 항목 보완과 자료 구조화, C그룹은 기초 절차와 단계별 수행에 중점을 두어 지원하고자 함. 모든 그룹의 공통 목표는 자신의 디자인 방향을 조사 근거에 기반하여 설명할 수 있도록 하는 것임. 그룹별 지원자료와 보완 실습을 연계하고, 수정 결과물을 통해 학습 효과를 확인할 계획임.
+          - row [ref=f9e214]:
+            - cell "회의사진" [ref=f9e215]
+            - cell [ref=f9e216]:
+              - button "Choose File" [ref=f9e218] [cursor=pointer]
+        - rowgroup [ref=f9e219]:
+          - row [ref=f9e220]:
+            - cell "0B 100MB 등록하기" [ref=f9e221]:
+              - generic [ref=f9e222]:
+                - generic [ref=f9e223]: 0B
+                - generic [ref=f9e224]: 100MB
+                - button "등록하기" [active] [ref=f9e225] [cursor=pointer]
+  - progressbar [ref=f9e232]:
+    - generic: 저장 중…

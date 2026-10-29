@@ -1,0 +1,23 @@
+[
+  {
+    "file": "font/Pretendard-Regular.woff2",
+    "weight": 400,
+    "url": "https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2",
+    "bytes": 765892,
+    "sha256": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63"
+  },
+  {
+    "file": "font/Pretendard-Medium.woff2",
+    "weight": 500,
+    "url": "https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2",
+    "bytes": 778432,
+    "sha256": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c"
+  },
+  {
+    "file": "font/Pretendard-Bold.woff2",
+    "weight": 700,
+    "url": "https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2",
+    "bytes": 791156,
+    "sha256": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362"
+  }
+]

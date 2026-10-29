@@ -1,0 +1,79 @@
+{
+  "instruction": "기존 MD 파일의 본문과 양식을 유지하고 상단에 근태 및 학습상담 양식만 추가함.",
+  "fixed_values_source": "사용자 지정: 수업 의지 상, 수업 태도 상, 라포 형성 중. 이 값으로 실제 관찰 근거를 역으로 생성하지 않음.",
+  "level_basis": "면담에서 드러난 현재 개념 이해와 수업 수행에 관한 진술에 한정한 잠정 분류. 실기 평가나 제출물 채점 결과가 아님.",
+  "files": [
+    {
+      "student": "강애란",
+      "path": "강애란\\면담 일지.md",
+      "prefix_bytes": 685,
+      "original_body_sha256": "6ea56584a9f6a777aef401736d78f39a9106ae6eaaeffacd8042c9c28bd299cb",
+      "original_body_preserved": true,
+      "level": "중",
+      "level_reason": "디자인 관련 학습·업무 경험이 있으나 CSS와 JavaScript 및 기획 과정에 어려움이 있다고 스스로 설명함. 독립 수행 수준은 확인되지 않아 면담 진술 범위에서 중으로 잠정 분류함."
+    },
+    {
+      "student": "김규린",
+      "path": "김규린\\면담 일지.md",
+      "prefix_bytes": 738,
+      "original_body_sha256": "cc5445c6e2ca986b11a940cad3245d358f97b700a469ca8d6eacc99aed76be27",
+      "original_body_preserved": true,
+      "level": "중",
+      "level_reason": "기초 용어와 학습 방법을 질문하고 이전 디자인 학습 경험 및 기획 흥미를 설명함. 구체적인 코딩 수행 결과가 없어 상·하를 확정할 근거가 부족하며 중으로 잠정 분류함."
+    },
+    {
+      "student": "김형관",
+      "path": "김형관\\면담 일지.md",
+      "prefix_bytes": 782,
+      "original_body_sha256": "97ebf0f984aa048505abd3477af61bb55a228e0346136bae2fd5bd8c91288710",
+      "original_body_preserved": true,
+      "level": "중",
+      "level_reason": "기존 디자인 도구 학습 경험이 있고 수업과 별도 코딩 학습을 병행하나 CSS 배치와 리서치 주제 판단에 어려움을 설명하여 중으로 잠정 분류함."
+    },
+    {
+      "student": "박선환",
+      "path": "박선환\\면담 일지.md",
+      "prefix_bytes": 718,
+      "original_body_sha256": "7b3bfbc89874de6f957bb9e6889a80545641b4b8025ab46644e47a6a975de1a6",
+      "original_body_preserved": true,
+      "level": "중",
+      "level_reason": "수업을 따라가며 누락 부분을 영상으로 보완하고 GPT를 활용해 주제를 진행하고 있으나 코딩 및 초기 주제 선정에 어려움이 있다고 설명하여 중으로 잠정 분류함. 기획 흥미의 높낮이는 수준 판정 기준으로 사용하지 않음."
+    },
+    {
+      "student": "신윤아",
+      "path": "신윤아\\면담 일지.md",
+      "prefix_bytes": 772,
+      "original_body_sha256": "d460b89e11cc2c9b516ad60c720e73627e9dd28d7c7c409fc4f7b7b2ba6019f6",
+      "original_body_preserved": true,
+      "level": "중",
+      "level_reason": "수업 수강에는 큰 문제가 없으나 코딩은 AI 에이전트의 도움을 많이 받고 코드 이해와 자료 정리에 어려움을 스스로 설명하여 중으로 잠정 분류함."
+    },
+    {
+      "student": "이주원",
+      "path": "이주원\\면담 일지.md",
+      "prefix_bytes": 740,
+      "original_body_sha256": "1de92acff293e98f6b7921aa294dbb8ac3b5c10e9fa5d71e0435d4497f221307",
+      "original_body_preserved": true,
+      "level": "중",
+      "level_reason": "기존 C++ 및 프로젝트 보조 경험으로 코딩 환경에는 비교적 쉽게 접근하나 초기 페이지 디자인과 기획 방향 판단에 어려움을 설명함. 독립적인 과제 수행 결과가 확인되지 않아 전체 수준을 중으로 잠정 분류함."
+    },
+    {
+      "student": "홍석경",
+      "path": "홍석경\\면담 일지.md",
+      "prefix_bytes": 764,
+      "original_body_sha256": "4d2cbfcec34e4f0913041fc1bcf18db0ff3145bf974f7bce6d303b37187a5249",
+      "original_body_preserved": true,
+      "level": "하",
+      "level_reason": "코딩 개념을 많이 알지 못한 채 설명을 따라 코드를 작성하는 수준이라고 직접 말하고 반복 학습의 효과를 질문하여, 현재 개념 이해와 수행 진술에 한정해 하로 잠정 분류함."
+    },
+    {
+      "student": "전해주",
+      "path": "전해주\\면담 일지.md",
+      "prefix_bytes": 754,
+      "original_body_sha256": "8bf6ab7cf2bd9bb1699210857e7bfb4f92e8b358ca8cb1c621b98a37c69e6d88",
+      "original_body_preserved": true,
+      "level": "중",
+      "level_reason": "수업과 복습에 특별한 문제는 없다고 답하나 코딩이 어렵고 자료 조사 방식 및 실무 적용 수준에 확신이 부족하다고 설명하여 중으로 잠정 분류함."
+    }
+  ]
+}

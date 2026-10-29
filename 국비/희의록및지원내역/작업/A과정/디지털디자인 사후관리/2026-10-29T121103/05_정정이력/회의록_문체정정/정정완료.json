@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "unit": "디지털디자인 사후관리",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=10",
+  "completed_at": "2026-10-29T03:19:40.793707+00:00",
+  "exact_readback": true,
+  "previous_prefix_preserved": true,
+  "date_preserved": true,
+  "reassessment_preserved": true,
+  "visual_reviewed": true,
+  "hashes": {
+    "최종수정안.json": "a4dfc08d1576b1b025aff1bb921de6f52df120597a1e1570383480ea7714177f",
+    "최종저장확인.json": "6466de8b30b7a0e66699f1513080fdb69ac876e7d56b0e1d4d9a02d4e2992b1f",
+    "회의록_수정전.json": "85595aeb3e4f1fbdaffed6de671393c1becf22ed35d814554f26135bc408175f",
+    "수정후화면.png": "722277d7903a7445bd0e72ad5787ca497d5f5406fb9597c3e1dbb038ad81cf6b"
+  }
+}

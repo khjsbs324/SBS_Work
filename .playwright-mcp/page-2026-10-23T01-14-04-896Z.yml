@@ -1,0 +1,470 @@
+- generic [active] [ref=f91e1]:
+  - banner [ref=f91e2]:
+    - generic [ref=f91e3]:
+      - generic [ref=f91e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f91e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f91e8]:
+    - generic [ref=f91e9]:
+      - generic [ref=f91e10]:
+        - generic [ref=f91e11]: 김혜지
+        - generic [ref=f91e12]:
+          - button "정보수정" [ref=f91e13] [cursor=pointer]
+          - button "비번변경" [ref=f91e14] [cursor=pointer]
+          - button "PIN변경" [ref=f91e15] [cursor=pointer]
+      - list [ref=f91e16]:
+        - listitem [ref=f91e17] [cursor=pointer]:
+          - generic [ref=f91e18]:
+            - generic [aria-hidden] [ref=f91e19]: 
+            - text: 훈련과정
+        - listitem [ref=f91e20] [cursor=pointer]:
+          - generic [ref=f91e21]:
+            - generic [aria-hidden] [ref=f91e22]: 
+            - text: 공지사항
+      - list [ref=f91e23]:
+        - listitem [ref=f91e24] [cursor=pointer]:
+          - generic [ref=f91e25]:
+            - paragraph [ref=f91e26]:
+              - generic [aria-hidden] [ref=f91e27]: 
+            - paragraph [ref=f91e28]: 고객센터
+        - listitem [ref=f91e29] [cursor=pointer]:
+          - generic [ref=f91e30]:
+            - paragraph [ref=f91e31]:
+              - generic [aria-hidden] [ref=f91e32]: 
+            - paragraph [ref=f91e33]: 카톡문의
+    - generic [ref=f91e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f91e35]:
+        - caption [ref=f91e36]:
+          - generic [ref=f91e37]:
+            - generic [ref=f91e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f91e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f91e48]:
+          - row [ref=f91e49]:
+            - cell "개강일" [ref=f91e50]
+            - cell "2026-05-20" [ref=f91e51]
+            - cell "종강일" [ref=f91e52]
+            - cell "2026-12-04" [ref=f91e53]
+            - cell "강사" [ref=f91e54]
+            - cell "김가경, 김혜지" [ref=f91e55]
+          - row [ref=f91e56]:
+            - cell "실시인원" [ref=f91e57]
+            - cell "11" [ref=f91e58]
+            - cell "수강인원" [ref=f91e59]
+            - cell "9" [ref=f91e60]
+            - cell "수강포기인원" [ref=f91e61]
+            - cell "2" [ref=f91e62]
+      - list [ref=f91e63]:
+        - listitem [ref=f91e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f91e65]
+        - listitem [ref=f91e66] [cursor=pointer]:
+          - generic "시간표" [ref=f91e67]
+        - listitem [ref=f91e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f91e69]
+        - listitem [ref=f91e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f91e71]
+        - listitem [ref=f91e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f91e73]
+        - listitem [ref=f91e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f91e75]
+        - listitem [ref=f91e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f91e77]
+        - listitem [ref=f91e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f91e79]
+        - listitem [ref=f91e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f91e81]
+        - listitem [ref=f91e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f91e83]
+        - listitem [ref=f91e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f91e85]
+        - listitem [ref=f91e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f91e87]
+        - listitem [ref=f91e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f91e89]
+        - listitem [ref=f91e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f91e91]
+        - listitem [ref=f91e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f91e93]
+        - listitem [ref=f91e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f91e95]
+        - listitem [ref=f91e96] [cursor=pointer]:
+          - generic "과제" [ref=f91e97]
+        - listitem [ref=f91e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f91e99]
+        - listitem [ref=f91e100] [cursor=pointer]:
+          - generic [ref=f91e101]: 게시판생성
+        - listitem [ref=f91e102] [cursor=pointer]:
+          - generic [ref=f91e103]: 게시판순서변경
+      - list [ref=f91e104]:
+        - listitem [ref=f91e105]:
+          - table [ref=f91e106]:
+            - caption [ref=f91e107]:
+              - list [ref=f91e110]:
+                - listitem [ref=f91e111] [cursor=pointer]: 평가내역
+                - listitem [ref=f91e112] [cursor=pointer]: 평가결과 분석회의록
+            - rowgroup [ref=f91e118]:
+              - row [ref=f91e119]:
+                - cell "과정명" [ref=f91e120]
+                - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차" [ref=f91e121]
+              - row [ref=f91e122]:
+                - cell "교과목" [ref=f91e123]
+                - cell "(전공)프로토타입 수집 및 제작" [ref=f91e124]
+              - row [ref=f91e125]:
+                - cell "능력단위" [ref=f91e126]
+                - cell "프로토타입 기초데이터 수집 및 스케치" [ref=f91e127]:
+                  - combobox [ref=f91e128]:
+                    - option "선택하세요"
+                    - option "구현"
+                    - option "구현 응용"
+                    - option "시각디자인 리서치 조사"
+                    - option "시각디자인 리서치 분석"
+                    - option "시안 디자인 개발 심화"
+                    - option "디자인 구성요소 설계"
+                    - option "수정 보완"
+                    - option "디자인 구성요소 제작"
+                    - option "디지털디자인 사후관리"
+                    - option "서비스ㆍ경험디자인 관찰조사"
+                    - option "서비스ㆍ경험디자인 시나리오 개발"
+                    - option "프로토타입 기초데이터 수집 및 스케치" [selected]
+                    - option "스마트문화앱 UI 디자인"
+                    - option "프로토타입 제작 및 사용성 테스트"
+                    - option "(비NCS 실기)AI 기획과 발상"
+                    - option "(비NCS 실기)취업포트폴리오 제작"
+              - row [ref=f91e129]:
+                - cell "개강일" [ref=f91e130]
+                - cell "2026-10-06" [ref=f91e131]
+                - cell "종강일" [ref=f91e132]
+                - cell "2026-10-22" [ref=f91e133]
+              - row [ref=f91e134]:
+                - cell "평가도구" [ref=f91e135]
+                - cell "구두발표" [ref=f91e136]
+        - listitem [ref=f91e137]:
+          - table "평가정보 돌아가기" [ref=f91e138]:
+            - caption [ref=f91e139]:
+              - generic [ref=f91e140]:
+                - generic [ref=f91e141]: 평가정보
+                - link "돌아가기" [ref=f91e143] [cursor=pointer]:
+                  - /url: ../index.php?Pcode=300002
+            - rowgroup [ref=f91e151]:
+              - row [ref=f91e152]:
+                - columnheader "구분" [ref=f91e153]
+                - columnheader "본평가" [ref=f91e154]
+                - columnheader "결석자평가" [ref=f91e155]
+                - columnheader "재평가" [ref=f91e156]
+                - columnheader "사전평가" [ref=f91e157]
+                - columnheader "능력단위" [ref=f91e158]
+            - rowgroup [ref=f91e159]:
+              - row [ref=f91e160]:
+                - cell [ref=f91e161]:
+                  - paragraph [ref=f91e162]: 평가날짜
+                  - paragraph [ref=f91e163]: 평가시간
+                  - paragraph [ref=f91e164]: 커트라인
+                  - paragraph [ref=f91e165]: 패널티
+                - cell [ref=f91e166]:
+                  - link [ref=f91e167] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f91e168]: 2026-10-22
+                    - paragraph [ref=f91e169]: 14:00~19:00
+                    - paragraph [ref=f91e170]: 60점
+                    - paragraph [ref=f91e171]: 0점
+                - cell [ref=f91e172]:
+                  - generic [ref=f91e173]:
+                    - paragraph [ref=f91e174]: 평가문제미등록
+                    - paragraph [ref=f91e175]: (0/100)
+                - cell [ref=f91e176]:
+                  - generic [ref=f91e177]:
+                    - paragraph [ref=f91e178]: 평가문제미등록
+                    - paragraph [ref=f91e179]: (0/100)
+                - cell "81.82" [ref=f91e180]
+                - cell "79.44" [ref=f91e181]
+              - row [ref=f91e182]:
+                - cell "평가인원" [ref=f91e183]
+                - cell "9" [ref=f91e184]
+                - cell "0" [ref=f91e185]
+                - cell "0" [ref=f91e186]
+      - table [ref=f91e187]:
+        - caption [ref=f91e188]:
+          - generic [ref=f91e189]:
+            - list [ref=f91e191]:
+              - listitem [ref=f91e192] [cursor=pointer]: 전체점수
+              - listitem [ref=f91e193] [cursor=pointer]: 구두발표
+            - link "평가문제" [ref=f91e195] [cursor=pointer]:
+              - /url: ../evalC/question.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1
+        - rowgroup [ref=f91e196]:
+          - row [ref=f91e197]:
+            - cell [ref=f91e198]:
+              - list [ref=f91e199]:
+                - listitem [ref=f91e200]:
+                  - table [ref=f91e201]:
+                    - rowgroup [ref=f91e207]:
+                      - row [ref=f91e208]:
+                        - cell "강민경" [ref=f91e209]
+                      - row [ref=f91e210]:
+                        - cell "구분" [ref=f91e211]
+                        - cell "본평가" [ref=f91e212]
+                        - cell "결석자평가" [ref=f91e213]
+                        - cell "재평가" [ref=f91e214]
+                      - row [ref=f91e215]:
+                        - cell "점수" [ref=f91e216]
+                        - cell [ref=f91e217]:
+                          - link "89" [ref=f91e218] [cursor=pointer]:
+                            - /url: ../evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1114
+                        - cell [ref=f91e219]
+                        - cell [ref=f91e220]
+                      - row [ref=f91e221]:
+                        - cell "평가일" [ref=f91e222]
+                        - cell "2026-10-22" [ref=f91e223]
+                        - cell [ref=f91e224]
+                        - cell [ref=f91e225]
+                      - row [ref=f91e226]:
+                        - cell "서명" [ref=f91e227]
+                        - cell [ref=f91e228]:
+                          - img "서명" [ref=f91e229]
+                        - cell [ref=f91e230]
+                        - cell [ref=f91e231]
+                - listitem [ref=f91e232]:
+                  - table [ref=f91e233]:
+                    - rowgroup [ref=f91e239]:
+                      - row [ref=f91e240]:
+                        - cell "박주연" [ref=f91e241]
+                      - row [ref=f91e242]:
+                        - cell "구분" [ref=f91e243]
+                        - cell "본평가" [ref=f91e244]
+                        - cell "결석자평가" [ref=f91e245]
+                        - cell "재평가" [ref=f91e246]
+                      - row [ref=f91e247]:
+                        - cell "점수" [ref=f91e248]
+                        - cell [ref=f91e249]:
+                          - link "81" [ref=f91e250] [cursor=pointer]:
+                            - /url: ../evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1117
+                        - cell [ref=f91e251]
+                        - cell [ref=f91e252]
+                      - row [ref=f91e253]:
+                        - cell "평가일" [ref=f91e254]
+                        - cell "2026-10-22" [ref=f91e255]
+                        - cell [ref=f91e256]
+                        - cell [ref=f91e257]
+                      - row [ref=f91e258]:
+                        - cell "서명" [ref=f91e259]
+                        - cell [ref=f91e260]:
+                          - img "서명" [ref=f91e261]
+                        - cell [ref=f91e262]
+                        - cell [ref=f91e263]
+                - listitem [ref=f91e264]:
+                  - table [ref=f91e265]:
+                    - rowgroup [ref=f91e271]:
+                      - row [ref=f91e272]:
+                        - cell "박찬미" [ref=f91e273]
+                      - row [ref=f91e274]:
+                        - cell "구분" [ref=f91e275]
+                        - cell "본평가" [ref=f91e276]
+                        - cell "결석자평가" [ref=f91e277]
+                        - cell "재평가" [ref=f91e278]
+                      - row [ref=f91e279]:
+                        - cell "점수" [ref=f91e280]
+                        - cell "평가중" [ref=f91e281]
+                        - cell [ref=f91e282]
+                        - cell [ref=f91e283]
+                      - row [ref=f91e284]:
+                        - cell "평가일" [ref=f91e285]
+                        - cell "2026-10-22" [ref=f91e286]
+                        - cell [ref=f91e287]
+                        - cell [ref=f91e288]
+                      - row [ref=f91e289]:
+                        - cell "서명" [ref=f91e290]
+                        - cell [ref=f91e291]:
+                          - img "서명" [ref=f91e292]
+                        - cell [ref=f91e293]
+                        - cell [ref=f91e294]
+                - listitem [ref=f91e295]:
+                  - table [ref=f91e296]:
+                    - rowgroup [ref=f91e302]:
+                      - row [ref=f91e303]:
+                        - cell "이은경" [ref=f91e304]
+                      - row [ref=f91e305]:
+                        - cell "구분" [ref=f91e306]
+                        - cell "본평가" [ref=f91e307]
+                        - cell "결석자평가" [ref=f91e308]
+                        - cell "재평가" [ref=f91e309]
+                      - row [ref=f91e310]:
+                        - cell "점수" [ref=f91e311]
+                        - cell [ref=f91e312]:
+                          - link "93" [ref=f91e313] [cursor=pointer]:
+                            - /url: ../evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1119
+                        - cell [ref=f91e314]
+                        - cell [ref=f91e315]
+                      - row [ref=f91e316]:
+                        - cell "평가일" [ref=f91e317]
+                        - cell "2026-10-22" [ref=f91e318]
+                        - cell [ref=f91e319]
+                        - cell [ref=f91e320]
+                      - row [ref=f91e321]:
+                        - cell "서명" [ref=f91e322]
+                        - cell [ref=f91e323]:
+                          - img "서명" [ref=f91e324]
+                        - cell [ref=f91e325]
+                        - cell [ref=f91e326]
+                - listitem [ref=f91e327]:
+                  - table [ref=f91e328]:
+                    - rowgroup [ref=f91e334]:
+                      - row [ref=f91e335]:
+                        - cell "이은수" [ref=f91e336]
+                      - row [ref=f91e337]:
+                        - cell "구분" [ref=f91e338]
+                        - cell "본평가" [ref=f91e339]
+                        - cell "결석자평가" [ref=f91e340]
+                        - cell "재평가" [ref=f91e341]
+                      - row [ref=f91e342]:
+                        - cell "점수" [ref=f91e343]
+                        - cell [ref=f91e344]:
+                          - link "90" [ref=f91e345] [cursor=pointer]:
+                            - /url: ../evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1123
+                        - cell [ref=f91e346]
+                        - cell [ref=f91e347]
+                      - row [ref=f91e348]:
+                        - cell "평가일" [ref=f91e349]
+                        - cell "2026-10-22" [ref=f91e350]
+                        - cell [ref=f91e351]
+                        - cell [ref=f91e352]
+                      - row [ref=f91e353]:
+                        - cell "서명" [ref=f91e354]
+                        - cell [ref=f91e355]:
+                          - img "서명" [ref=f91e356]
+                        - cell [ref=f91e357]
+                        - cell [ref=f91e358]
+                - listitem [ref=f91e359]:
+                  - table [ref=f91e360]:
+                    - rowgroup [ref=f91e366]:
+                      - row [ref=f91e367]:
+                        - cell "이지희" [ref=f91e368]
+                      - row [ref=f91e369]:
+                        - cell "구분" [ref=f91e370]
+                        - cell "본평가" [ref=f91e371]
+                        - cell "결석자평가" [ref=f91e372]
+                        - cell "재평가" [ref=f91e373]
+                      - row [ref=f91e374]:
+                        - cell "점수" [ref=f91e375]
+                        - cell [ref=f91e376]:
+                          - link "94" [ref=f91e377] [cursor=pointer]:
+                            - /url: ../evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1120
+                        - cell [ref=f91e378]
+                        - cell [ref=f91e379]
+                      - row [ref=f91e380]:
+                        - cell "평가일" [ref=f91e381]
+                        - cell "2026-10-22" [ref=f91e382]
+                        - cell [ref=f91e383]
+                        - cell [ref=f91e384]
+                      - row [ref=f91e385]:
+                        - cell "서명" [ref=f91e386]
+                        - cell [ref=f91e387]:
+                          - img "서명" [ref=f91e388]
+                        - cell [ref=f91e389]
+                        - cell [ref=f91e390]
+                - listitem [ref=f91e391]:
+                  - table [ref=f91e392]:
+                    - rowgroup [ref=f91e398]:
+                      - row [ref=f91e399]:
+                        - cell "임연우" [ref=f91e400]
+                      - row [ref=f91e401]:
+                        - cell "구분" [ref=f91e402]
+                        - cell "본평가" [ref=f91e403]
+                        - cell "결석자평가" [ref=f91e404]
+                        - cell "재평가" [ref=f91e405]
+                      - row [ref=f91e406]:
+                        - cell "점수" [ref=f91e407]
+                        - cell [ref=f91e408]:
+                          - link "89" [ref=f91e409] [cursor=pointer]:
+                            - /url: ../evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1121
+                        - cell [ref=f91e410]
+                        - cell [ref=f91e411]
+                      - row [ref=f91e412]:
+                        - cell "평가일" [ref=f91e413]
+                        - cell "2026-10-22" [ref=f91e414]
+                        - cell [ref=f91e415]
+                        - cell [ref=f91e416]
+                      - row [ref=f91e417]:
+                        - cell "서명" [ref=f91e418]
+                        - cell [ref=f91e419]:
+                          - img "서명" [ref=f91e420]
+                        - cell [ref=f91e421]
+                        - cell [ref=f91e422]
+                - listitem [ref=f91e423]:
+                  - table [ref=f91e424]:
+                    - rowgroup [ref=f91e430]:
+                      - row [ref=f91e431]:
+                        - cell "최지혜" [ref=f91e432]
+                      - row [ref=f91e433]:
+                        - cell "구분" [ref=f91e434]
+                        - cell "본평가" [ref=f91e435]
+                        - cell "결석자평가" [ref=f91e436]
+                        - cell "재평가" [ref=f91e437]
+                      - row [ref=f91e438]:
+                        - cell "점수" [ref=f91e439]
+                        - cell [ref=f91e440]:
+                          - link "91" [ref=f91e441] [cursor=pointer]:
+                            - /url: ../evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1124
+                        - cell [ref=f91e442]
+                        - cell [ref=f91e443]
+                      - row [ref=f91e444]:
+                        - cell "평가일" [ref=f91e445]
+                        - cell "2026-10-22" [ref=f91e446]
+                        - cell [ref=f91e447]
+                        - cell [ref=f91e448]
+                      - row [ref=f91e449]:
+                        - cell "서명" [ref=f91e450]
+                        - cell [ref=f91e451]:
+                          - img "서명" [ref=f91e452]
+                        - cell [ref=f91e453]
+                        - cell [ref=f91e454]
+                - listitem [ref=f91e455]:
+                  - table [ref=f91e456]:
+                    - rowgroup [ref=f91e462]:
+                      - row [ref=f91e463]:
+                        - cell "허지민" [ref=f91e464]
+                      - row [ref=f91e465]:
+                        - cell "구분" [ref=f91e466]
+                        - cell "본평가" [ref=f91e467]
+                        - cell "결석자평가" [ref=f91e468]
+                        - cell "재평가" [ref=f91e469]
+                      - row [ref=f91e470]:
+                        - cell "점수" [ref=f91e471]
+                        - cell [ref=f91e472]:
+                          - link "88" [ref=f91e473] [cursor=pointer]:
+                            - /url: ../evalC/answer.php?Pcode=300002&Lcode=13&AppCode=AF&FollowNo=1&Sid=sbsartdj1122
+                        - cell [ref=f91e474]
+                        - cell [ref=f91e475]
+                      - row [ref=f91e476]:
+                        - cell "평가일" [ref=f91e477]
+                        - cell "2026-10-22" [ref=f91e478]
+                        - cell [ref=f91e479]
+                        - cell [ref=f91e480]
+                      - row [ref=f91e481]:
+                        - cell "서명" [ref=f91e482]
+                        - cell [ref=f91e483]:
+                          - img "서명" [ref=f91e484]
+                        - cell [ref=f91e485]
+                        - cell [ref=f91e486]
+                - listitem [ref=f91e487]:
+                  - table [ref=f91e488]:
+                    - rowgroup [ref=f91e494]:
+                      - row [ref=f91e495]:
+                        - cell "김정은" [ref=f91e496]
+                      - row [ref=f91e497]:
+                        - cell "구분" [ref=f91e498]
+                        - cell "본평가" [ref=f91e499]
+                        - cell "결석자평가" [ref=f91e500]
+                        - cell "재평가" [ref=f91e501]
+                      - row [ref=f91e502]:
+                        - cell "2026-09-10 기타 사유로 수강포기" [ref=f91e503]
+                - listitem [ref=f91e504]:
+                  - table [ref=f91e505]:
+                    - rowgroup [ref=f91e511]:
+                      - row [ref=f91e512]:
+                        - cell "김지선" [ref=f91e513]
+                      - row [ref=f91e514]:
+                        - cell "구분" [ref=f91e515]
+                        - cell "본평가" [ref=f91e516]
+                        - cell "결석자평가" [ref=f91e517]
+                        - cell "재평가" [ref=f91e518]
+                      - row [ref=f91e519]:
+                        - cell "2026-08-20 기타 사유로 수강포기" [ref=f91e520]

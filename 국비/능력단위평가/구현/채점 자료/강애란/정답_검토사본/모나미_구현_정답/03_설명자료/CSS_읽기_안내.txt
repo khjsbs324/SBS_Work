@@ -1,0 +1,46 @@
+이 코드에서 먼저 읽을 CSS
+
+1. 부모와 자식
+   display:flex는 가로로 배치하려는 자식들의 부모에 지정합니다.
+   예: .new-row에 display:flex를 주면 그 안의 이미지 묶음들이 가로로 배치됩니다.
+   제목과 이미지를 위아래로 나누는 .new-left는 별도 부모 묶음입니다.
+
+2. 공통 .con
+   width:1400px은 내부 콘텐츠의 폭입니다. 배경을 포함한 전체 화면 폭이 아닙니다.
+   margin-left:auto와 margin-right:auto는 남는 좌우 공간을 균등하게 둡니다.
+   .new-con만 1200px로 다시 지정합니다. 공통 .con 자체를 1200px로 바꾸지 않습니다.
+
+3. Flex 정렬
+   justify-content는 주축의 배치, align-items는 교차축 정렬입니다.
+   flex-direction:column이면 주축은 세로가 됩니다.
+   gap은 자식 사이의 간격입니다. 부모 바깥 공간은 margin과 구분합니다.
+
+4. 폭과 padding
+   MON-03 첫 행: 392 + 22 + 786 = 1200입니다.
+   MON-03 둘째 행: 392 + 22 + 450 + 22 + 314 = 1200입니다.
+   MON-06: 700 + 350 + 350 = 1400입니다.
+   box-sizing:border-box를 지정하면 정한 width 안에 padding과 border를 포함합니다.
+   예: 뉴스 700px 안에 오른쪽 49px 여백이 들어갑니다.
+
+5. 이미지
+   width:100%는 부모 폭을 채우는 값입니다. 100vw와 같은 뜻이 아닙니다.
+   height:100%와 object-fit:cover는 지정한 틀을 채우며 일부가 잘릴 수 있습니다.
+   MON-05는 height:auto여서 원본 비율을 유지합니다.
+   이미지가 작아지거나 커질 때 부모의 width·height부터 확인합니다.
+
+6. 배경
+   MON-02는 사진 위에 글자를 두기 위해 background에 이미지를 연결했습니다.
+   center / cover no-repeat는 가운데를 기준으로 영역을 채우고 반복하지 않는 값입니다.
+   새 position:absolute나 Grid를 사용하지 않고 기존 background·Flex 속성으로 배치했습니다.
+
+7. 선택자와 상태
+   .brand-tab은 기본 상태, .brand-tab.active는 선택 표시입니다.
+   active라는 클래스 이름만으로 클릭 기능이 생기지 않습니다.
+   .main-nav li:hover는 수업 코드의 아이콘 hover처럼 글자 색을 바꿉니다.
+   상품 목록의 overflow:auto는 JS가 아니라 브라우저의 기본 스크롤입니다.
+
+8. 글꼴과 초기화
+   font-family는 공통 body에서 지정합니다.
+   @font-face의 400·500·700과 font-weight가 대응합니다.
+   margin:0, padding:0, list-style:none은 브라우저 기본 여백과 목록 기호를 정리합니다.
+   reset을 바꾸기 전에 모든 섹션에 영향을 줄 수 있다는 점을 확인합니다.

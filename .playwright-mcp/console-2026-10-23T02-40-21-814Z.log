@@ -1,0 +1,6 @@
+[     379ms] ReferenceError: parseImageDisplaySpecsFromHtml is not defined
+    at restoreImageDisplaySpecsFromHtml (https://sbsartdj.maniaro.net/js/toast-editor/lms-toast-editor.js:2522:17)
+    at https://sbsartdj.maniaro.net/js/toast-editor/lms-toast-editor.js:2590:27
+[     379ms] ReferenceError: parseImageDisplaySpecsFromHtml is not defined
+    at restoreImageDisplaySpecsFromHtml (https://sbsartdj.maniaro.net/js/toast-editor/lms-toast-editor.js:2522:17)
+    at https://sbsartdj.maniaro.net/js/toast-editor/lms-toast-editor.js:2590:27

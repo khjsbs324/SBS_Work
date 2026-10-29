@@ -1,0 +1,18 @@
+{
+  "course_id": "A",
+  "unit": "디자인 구성요소 제작",
+  "lcode": "9",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "post_date": "2026-08-21",
+  "group": "C",
+  "checked_at": "2026-10-29T13:04:30+09:00",
+  "local_checks": true,
+  "pdf_reviewed": true,
+  "visual_reviewed": true,
+  "sources_reviewed": true,
+  "privacy_reviewed": true,
+  "pdf_page_count": 6,
+  "review_scope": "전체 PDF 페이지 렌더를 판독함. 표·그림·글자 잘림 없음. 참고자료 원문을 읽고 적용 활동 확인. 이름·점수 노출 없음. DOCX는 문서 구조 및 필드 검증, Word 화면 검토는 하지 않음."
+}

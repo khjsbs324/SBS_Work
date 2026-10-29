@@ -1,0 +1,3977 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SOAPHE · 브랜드 소개</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+/* ==========================================================================
+   [03 비누 & 조향 최종 해결]
+   1. 위아래 베이지색 선 100% 박멸 (직전 3대세트 하단선 + scent 상하단선 + 직후 소재 상단선)
+   2. 좌우 여백 1280px 완벽 대칭 중앙 정렬
+   3. 모바일(390px~820px) 짤림 0% 완전 방어
+   ========================================================================== */
+
+/* 1. 위아래 선 완전 박멸 */
+.atmosphere-sets-bar,
+#atmosphere,
+.atmosphere-section {
+  border-bottom: none !important;
+}
+
+#scents,
+section#scents,
+.scents-editorial-section {
+  background: #ffffff !important;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  padding: clamp(72px, 8.5vw, 130px) 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+#materials,
+section#materials,
+.magazine-section {
+  border-top: none !important;
+}
+
+/* 2. 좌우 완벽 대칭 중앙 정렬 전용 컨테이너 (1280px 단일 기준) */
+.scents-container {
+  max-width: var(--max-width, 1280px) !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(20px, 4vw, 40px) !important;
+  padding-right: clamp(20px, 4vw, 40px) !important;
+  box-sizing: border-box !important;
+}
+
+.scents-section-header {
+  margin-bottom: clamp(36px, 4.5vw, 52px) !important;
+  text-align: left !important;
+}
+
+/* 메인 그리드 (fr 단위로 오차 없는 100% 분할) */
+.scents-stage-grid {
+  display: grid !important;
+  grid-template-columns: 1.32fr 1fr !important;
+  gap: clamp(32px, 4.5vw, 64px) !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 좌측 캔버스 */
+.scents-cinematic-stage {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+}
+
+.stage-ambient-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 560px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--line-main) !important;
+  border-radius: var(--radius-xs) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 4px 24px rgba(36, 34, 30, 0.03) !important;
+}
+
+.ambient-bg-layer {
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(circle at center, rgba(116, 180, 155, 0.16) 0%, rgba(247, 243, 235, 0.6) 70%, #ffffff 100%) !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-end !important;
+  padding: 16px !important;
+  box-sizing: border-box !important;
+}
+
+.ambient-visual-tag {
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  color: var(--text-main) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  padding: 6px 12px !important;
+  border-radius: var(--radius-xs) !important;
+  border: 1px solid var(--line-heavy) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+.pebble-soap-stage {
+  position: relative !important;
+  z-index: 2 !important;
+  perspective: 900px !important;
+}
+
+.pebble-soap-3d {
+  width: 200px !important;
+  height: 200px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: pebbleFloatSpin 14s infinite linear !important;
+}
+
+@keyframes pebbleFloatSpin {
+  0% { transform: rotateY(0deg) rotateX(10deg); }
+  50% { transform: rotateY(180deg) rotateX(6deg); }
+  100% { transform: rotateY(360deg) rotateX(10deg); }
+}
+
+.pebble-body {
+  width: 168px !important;
+  height: 152px !important;
+  background: #e4ece6 !important;
+  border-radius: 46% 54% 52% 48% / 48% 52% 48% 52% !important;
+  border: 1px solid rgba(216, 209, 198, 0.8) !important;
+  box-shadow: 0 16px 36px rgba(36, 34, 30, 0.10), inset 0 2px 6px rgba(255, 255, 255, 0.8), inset 0 -4px 10px rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  transition: all 0.4s ease !important;
+}
+
+.pebble-engrave {
+  font-family: var(--serif) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.24em !important;
+  color: rgba(36, 34, 30, 0.65) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), 0 -1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.pebble-sub-text {
+  font-size: 9px !important;
+  letter-spacing: 0.12em !important;
+  color: rgba(36, 34, 30, 0.45) !important;
+  margin-top: 4px !important;
+}
+
+.pebble-reflection {
+  position: absolute !important;
+  top: 16px !important;
+  left: 24px !important;
+  width: 54px !important;
+  height: 26px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  border-radius: 50% !important;
+  transform: rotate(-25deg) !important;
+  pointer-events: none !important;
+}
+
+.stage-hud-spec {
+  position: absolute !important;
+  bottom: 16px !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.05em !important;
+  box-sizing: border-box !important;
+  padding: 0 12px !important;
+}
+
+/* 우측 에디토리얼 패널 */
+.scents-editorial-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  padding: 4px 0 !important;
+}
+
+.scent-tabs-row {
+  display: flex !important;
+  gap: 8px !important;
+  border-bottom: 1px solid var(--line-main) !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+.scent-tab-btn {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  padding: 6px 14px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  border-radius: var(--radius-pill) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  line-height: 1.2 !important;
+}
+.scent-tab-btn:hover {
+  color: var(--accent-warmth) !important;
+  background: rgba(235, 120, 38, 0.08) !important;
+}
+.scent-tab-btn.active {
+  color: var(--text-main) !important;
+  background: var(--bg-alt) !important;
+  border-color: var(--line-main) !important;
+  font-weight: 600 !important;
+}
+
+.scent-narrative-flow {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex-grow: 1 !important;
+  gap: 14px !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.scent-code-label {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.1em !important;
+  display: block !important;
+  margin-bottom: 2px !important;
+}
+
+.scent-title-serif {
+  font-family: var(--serif) !important;
+  font-size: clamp(22px, 2.6vw, 28px) !important;
+  color: var(--text-main) !important;
+  font-weight: 500 !important;
+  margin: 0 0 6px !important;
+  line-height: 1.2 !important;
+}
+
+.scent-poem-text {
+  font-family: var(--serif) !important;
+  font-size: 14px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.narrative-divider {
+  height: 1px !important;
+  background: rgba(216, 209, 198, 0.65) !important;
+  margin: 2px 0 !important;
+}
+
+.narrative-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+}
+
+.narrative-row-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.06em !important;
+}
+
+.narrative-row-value {
+  font-size: 13.5px !important;
+  color: var(--text-main) !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.intensity-gauge-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.gauge-dots {
+  font-size: 14px !important;
+  color: var(--accent-warmth) !important;
+  letter-spacing: 2px !important;
+}
+.gauge-text {
+  font-size: 12.5px !important;
+  color: var(--text-muted) !important;
+}
+
+.scent-notes-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  padding: 8px 12px !important;
+  background: var(--bg-card) !important;
+  border-radius: var(--radius-xs) !important;
+  border: 1px solid var(--line-light) !important;
+}
+.note-line {
+  font-size: 12px !important;
+  color: var(--text-main) !important;
+  display: flex !important;
+  gap: 8px !important;
+}
+.note-line b {
+  color: var(--text-sub) !important;
+  min-width: 44px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+}
+
+.narrative-action-bar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 4px !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.scent-price-group {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+}
+.price-val {
+  font-family: var(--serif) !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+}
+.price-sub {
+  font-size: 12px !important;
+  color: var(--text-sub) !important;
+}
+
+.scent-add-btn {
+  height: 42px !important;
+  padding: 8px 22px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-radius: var(--radius-xs) !important;
+  background: var(--bg-dark) !important;
+  color: var(--text-white) !important;
+  border: 1px solid var(--bg-dark) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+.scent-add-btn:hover {
+  background: var(--accent-warmth) !important;
+  border-color: var(--accent-warmth) !important;
+}
+
+/* ==========================================================================
+   3. 모바일 반응형 완전 방어 (390px ~ 820px) 짤림 0%
+   ========================================================================== */
+@media (max-width: 820px) {
+  #scents,
+  section#scents,
+  .scents-editorial-section {
+    padding: 48px 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .scents-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .scents-stage-grid {
+    display: flex !important;
+    flex-direction: column !important; /* 1단 세로 적층 */
+    gap: 24px !important;
+    width: 100% !important;
+  }
+  .scents-cinematic-stage {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .stage-ambient-canvas {
+    width: 100% !important;
+    height: 320px !important;
+    min-height: 320px !important;
+    max-height: 320px !important;
+    box-sizing: border-box !important;
+  }
+  .pebble-soap-3d {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  .pebble-body {
+    width: 124px !important;
+    height: 112px !important;
+  }
+  .pebble-engrave {
+    font-size: 12.5px !important;
+  }
+  .ambient-visual-tag {
+    font-size: 9.5px !important;
+    padding: 4px 8px !important;
+    max-width: 85% !important;
+    text-align: right !important;
+    word-break: keep-all !important;
+    line-height: 1.3 !important;
+  }
+  .stage-hud-spec {
+    font-size: 9px !important;
+    gap: 4px !important;
+    padding: 0 8px !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+  }
+  .scent-tabs-row {
+    display: flex !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .scent-tabs-row::-webkit-scrollbar {
+    display: none !important;
+  }
+  .scent-tab-btn {
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    padding: 6px 11px !important;
+    flex-shrink: 0 !important;
+  }
+  .scents-editorial-panel {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .narrative-row-value {
+    word-break: keep-all !important;
+  }
+  .narrative-action-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  .scent-add-btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+
+/* ==========================================================================
+   [03 비누 & 조향 최종] 
+   1. 위아래 베이지색 선 100% 박멸 (직전/직후/자체 보더 제거)
+   2. 좌우 완벽한 대칭 중앙 정렬 (1280px 단일 기준)
+   3. 모바일(390px~820px) 100% 잘림 방지 & 터치 최적화
+   ========================================================================== */
+/* 위아래 선 완전 제거 */
+#atmosphere,
+.atmosphere-section,
+.atmosphere-sets-bar {
+  border-bottom: none !important; /* 직전 섹션 하단선 제거 */
+}
+
+#scents,
+.scents-editorial-section {
+  background: #ffffff !important;
+  border-top: none !important; /* 상단선 제거 */
+  border-bottom: none !important; /* 하단선 제거 */
+  padding: clamp(72px, 8.5vw, 130px) 0 !important;
+  width: 100% !important;
+  overflow-x: clip !important;
+}
+
+#materials,
+.magazine-section {
+  border-top: none !important; /* 직후 섹션 상단선 제거 */
+}
+
+/* 좌우 완벽 대칭 중앙 정렬 컨테이너 */
+.scents-editorial-section .wrap-wide,
+.scents-editorial-section .wrap {
+  max-width: var(--max-width, 1280px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(20px, 4vw, 40px) !important;
+  padding-right: clamp(20px, 4vw, 40px) !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+.scents-section-header {
+  margin-bottom: clamp(36px, 4.5vw, 52px) !important;
+  text-align: left !important;
+}
+
+/* 메인 그리드: fr 단위로 정확한 100% 분할 (오차 없는 중앙 대칭) */
+.scents-stage-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.32fr) minmax(0, 1fr) !important;
+  gap: clamp(32px, 4.5vw, 64px) !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 좌측 시네마틱 스테이지 */
+.scents-cinematic-stage {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+}
+
+.stage-ambient-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 560px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--line-main) !important;
+  border-radius: var(--radius-xs) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 4px 24px rgba(36, 34, 30, 0.03) !important;
+}
+
+/* 은은한 향 무드 배경 레이어 */
+.ambient-bg-layer {
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(circle at center, rgba(116, 180, 155, 0.16) 0%, rgba(247, 243, 235, 0.6) 70%, #ffffff 100%) !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-end !important;
+  padding: 16px !important;
+  box-sizing: border-box !important;
+}
+
+.ambient-visual-tag {
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  color: var(--text-main) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  padding: 6px 12px !important;
+  border-radius: var(--radius-xs) !important;
+  border: 1px solid var(--line-heavy) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 360도 자전하는 비정형 조약돌 비누 */
+.pebble-soap-stage {
+  position: relative !important;
+  z-index: 2 !important;
+  perspective: 900px !important;
+}
+
+.pebble-soap-3d {
+  width: 200px !important;
+  height: 200px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: pebbleFloatSpin 14s infinite linear !important;
+}
+
+@keyframes pebbleFloatSpin {
+  0% { transform: rotateY(0deg) rotateX(10deg); }
+  50% { transform: rotateY(180deg) rotateX(6deg); }
+  100% { transform: rotateY(360deg) rotateX(10deg); }
+}
+
+.pebble-body {
+  width: 168px !important;
+  height: 152px !important;
+  background: #e4ece6 !important;
+  border-radius: 46% 54% 52% 48% / 48% 52% 48% 52% !important;
+  border: 1px solid rgba(216, 209, 198, 0.8) !important;
+  box-shadow: 0 16px 36px rgba(36, 34, 30, 0.10), inset 0 2px 6px rgba(255, 255, 255, 0.8), inset 0 -4px 10px rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  transition: all 0.4s ease !important;
+}
+
+.pebble-engrave {
+  font-family: var(--serif) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.24em !important;
+  color: rgba(36, 34, 30, 0.65) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), 0 -1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.pebble-sub-text {
+  font-size: 9px !important;
+  letter-spacing: 0.12em !important;
+  color: rgba(36, 34, 30, 0.45) !important;
+  margin-top: 4px !important;
+}
+
+.pebble-reflection {
+  position: absolute !important;
+  top: 16px !important;
+  left: 24px !important;
+  width: 54px !important;
+  height: 26px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  border-radius: 50% !important;
+  transform: rotate(-25deg) !important;
+  pointer-events: none !important;
+}
+
+/* 하단 HUD 스펙 라인 */
+.stage-hud-spec {
+  position: absolute !important;
+  bottom: 16px !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.05em !important;
+  box-sizing: border-box !important;
+  padding: 0 12px !important;
+}
+
+/* 우측 42% 에디토리얼 패널 */
+.scents-editorial-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  padding: 4px 0 !important;
+}
+
+.scent-tabs-row {
+  display: flex !important;
+  gap: 8px !important;
+  border-bottom: 1px solid var(--line-main) !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+.scent-tab-btn {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  padding: 6px 14px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  border-radius: var(--radius-pill) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  line-height: 1.2 !important;
+}
+.scent-tab-btn:hover {
+  color: var(--accent-warmth) !important;
+  background: rgba(235, 120, 38, 0.08) !important;
+}
+.scent-tab-btn.active {
+  color: var(--text-main) !important;
+  background: var(--bg-alt) !important;
+  border-color: var(--line-main) !important;
+  font-weight: 600 !important;
+}
+
+.scent-narrative-flow {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex-grow: 1 !important;
+  gap: 14px !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.scent-code-label {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.1em !important;
+  display: block !important;
+  margin-bottom: 2px !important;
+}
+
+.scent-title-serif {
+  font-family: var(--serif) !important;
+  font-size: clamp(22px, 2.6vw, 28px) !important;
+  color: var(--text-main) !important;
+  font-weight: 500 !important;
+  margin: 0 0 6px !important;
+  line-height: 1.2 !important;
+}
+
+.scent-poem-text {
+  font-family: var(--serif) !important;
+  font-size: 14px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.narrative-divider {
+  height: 1px !important;
+  background: rgba(216, 209, 198, 0.65) !important;
+  margin: 2px 0 !important;
+}
+
+.narrative-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+}
+
+.narrative-row-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.06em !important;
+}
+
+.narrative-row-value {
+  font-size: 13.5px !important;
+  color: var(--text-main) !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.intensity-gauge-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.gauge-dots {
+  font-size: 14px !important;
+  color: var(--accent-warmth) !important;
+  letter-spacing: 2px !important;
+}
+.gauge-text {
+  font-size: 12.5px !important;
+  color: var(--text-muted) !important;
+}
+
+.scent-notes-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  padding: 8px 12px !important;
+  background: var(--bg-card) !important;
+  border-radius: var(--radius-xs) !important;
+  border: 1px solid var(--line-light) !important;
+}
+.note-line {
+  font-size: 12px !important;
+  color: var(--text-main) !important;
+  display: flex !important;
+  gap: 8px !important;
+}
+.note-line b {
+  color: var(--text-sub) !important;
+  min-width: 44px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+}
+
+.narrative-action-bar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 4px !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.scent-price-group {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+}
+.price-val {
+  font-family: var(--serif) !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+}
+.price-sub {
+  font-size: 12px !important;
+  color: var(--text-sub) !important;
+}
+
+.scent-add-btn {
+  height: 42px !important;
+  padding: 8px 22px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-radius: var(--radius-xs) !important;
+  background: var(--bg-dark) !important;
+  color: var(--text-white) !important;
+  border: 1px solid var(--bg-dark) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+.scent-add-btn:hover {
+  background: var(--accent-warmth) !important;
+  border-color: var(--accent-warmth) !important;
+}
+
+/* ==========================================================================
+   [모바일 반응형 완전 방어: 390px ~ 820px] 짤림 0% & 완벽 핏
+   ========================================================================== */
+@media (max-width: 820px) {
+  .scents-editorial-section {
+    padding: 56px 0 !important;
+  }
+  .scents-editorial-section .wrap-wide,
+  .scents-editorial-section .wrap {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .scents-stage-grid {
+    grid-template-columns: 1fr !important; /* 1단 세로 적층 */
+    gap: 28px !important;
+    width: 100% !important;
+  }
+  .scents-cinematic-stage {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .stage-ambient-canvas {
+    width: 100% !important;
+    min-height: 330px !important;
+    height: 330px !important;
+    box-sizing: border-box !important;
+  }
+  .pebble-soap-3d {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .pebble-body {
+    width: 132px !important;
+    height: 120px !important;
+  }
+  .pebble-engrave {
+    font-size: 13px !important;
+  }
+  .ambient-visual-tag {
+    font-size: 9.5px !important;
+    padding: 4px 8px !important;
+    max-width: 85% !important;
+    text-align: right !important;
+    word-break: keep-all !important;
+    line-height: 1.3 !important;
+  }
+  .stage-hud-spec {
+    font-size: 9px !important;
+    gap: 4px !important;
+    padding: 0 8px !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+  }
+  .scent-tabs-row {
+    display: flex !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .scent-tabs-row::-webkit-scrollbar {
+    display: none !important;
+  }
+  .scent-tab-btn {
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    padding: 6px 11px !important;
+    flex-shrink: 0 !important;
+  }
+  .scents-editorial-panel {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .narrative-row-value {
+    word-break: keep-all !important;
+  }
+  .narrative-action-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  .scent-add-btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+
+/* ==========================================================================
+   [03 비누 & 조향] 좌측 캔버스 & 우측 패널 상하단 완벽 1:1 칼정렬
+   ========================================================================== */
+.scents-editorial-section {
+  background: #ffffff !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  padding: clamp(72px, 8.5vw, 130px) 0 !important;
+}
+
+.scents-stage-grid {
+  display: grid !important;
+  grid-template-columns: 58% 42% !important;
+  gap: clamp(40px, 5vw, 76px) !important;
+  align-items: stretch !important; /* 좌우 높이 상하단 100% 일치 */
+}
+
+/* 좌측 58% 시네마틱 스테이지 */
+.scents-cinematic-stage {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.stage-ambient-canvas {
+  width: 100% !important;
+  height: 100% !important; /* 우측 전체 높이와 1:1 완벽 일치 */
+  min-height: 560px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--line-main) !important;
+  border-radius: var(--radius-xs) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 4px 24px rgba(36, 34, 30, 0.03) !important;
+}
+
+/* 은은한 향 무드 배경 레이어 */
+.ambient-bg-layer {
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(circle at center, rgba(116, 180, 155, 0.16) 0%, rgba(247, 243, 235, 0.6) 70%, #ffffff 100%) !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-end !important;
+  padding: 16px !important;
+}
+
+.ambient-visual-tag {
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  color: var(--text-main) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  padding: 6px 12px !important;
+  border-radius: var(--radius-xs) !important;
+  border: 1px solid var(--line-heavy) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 360도 자전하는 비정형 조약돌 비누 */
+.pebble-soap-stage {
+  position: relative !important;
+  z-index: 2 !important;
+  perspective: 900px !important;
+}
+
+.pebble-soap-3d {
+  width: 200px !important;
+  height: 200px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: pebbleFloatSpin 14s infinite linear !important;
+}
+
+@keyframes pebbleFloatSpin {
+  0% { transform: rotateY(0deg) rotateX(10deg); }
+  50% { transform: rotateY(180deg) rotateX(6deg); }
+  100% { transform: rotateY(360deg) rotateX(10deg); }
+}
+
+.pebble-body {
+  width: 168px !important;
+  height: 152px !important;
+  background: #e4ece6 !important;
+  border-radius: 46% 54% 52% 48% / 48% 52% 48% 52% !important;
+  border: 1px solid rgba(216, 209, 198, 0.8) !important;
+  box-shadow: 0 16px 36px rgba(36, 34, 30, 0.10), inset 0 2px 6px rgba(255, 255, 255, 0.8), inset 0 -4px 10px rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  transition: all 0.4s ease !important;
+}
+
+.pebble-engrave {
+  font-family: var(--serif) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.24em !important;
+  color: rgba(36, 34, 30, 0.65) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), 0 -1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.pebble-sub-text {
+  font-size: 9px !important;
+  letter-spacing: 0.12em !important;
+  color: rgba(36, 34, 30, 0.45) !important;
+  margin-top: 4px !important;
+}
+
+.pebble-reflection {
+  position: absolute !important;
+  top: 16px !important;
+  left: 24px !important;
+  width: 54px !important;
+  height: 26px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  border-radius: 50% !important;
+  transform: rotate(-25deg) !important;
+  pointer-events: none !important;
+}
+
+/* 하단 HUD 스펙 라인 */
+.stage-hud-spec {
+  position: absolute !important;
+  bottom: 16px !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* 우측 42% 에디토리얼 패널: 좌측 캔버스와 상하단 완벽 일치 */
+.scents-editorial-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  padding: 4px 0 !important;
+}
+
+.scent-tabs-row {
+  display: flex !important;
+  gap: 8px !important;
+  border-bottom: 1px solid var(--line-main) !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+.scent-tab-btn {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  padding: 6px 14px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  border-radius: var(--radius-pill) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  line-height: 1.2 !important;
+}
+.scent-tab-btn:hover {
+  color: var(--accent-warmth) !important;
+  background: rgba(235, 120, 38, 0.08) !important;
+}
+.scent-tab-btn.active {
+  color: var(--text-main) !important;
+  background: var(--bg-alt) !important;
+  border-color: var(--line-main) !important;
+  font-weight: 600 !important;
+}
+
+.scent-narrative-flow {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex-grow: 1 !important;
+  gap: 14px !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.scent-code-label {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.1em !important;
+  display: block !important;
+  margin-bottom: 2px !important;
+}
+
+.scent-title-serif {
+  font-family: var(--serif) !important;
+  font-size: clamp(22px, 2.6vw, 28px) !important;
+  color: var(--text-main) !important;
+  font-weight: 500 !important;
+  margin: 0 0 6px !important;
+  line-height: 1.2 !important;
+}
+
+.scent-poem-text {
+  font-family: var(--serif) !important;
+  font-size: 14px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.narrative-divider {
+  height: 1px !important;
+  background: rgba(216, 209, 198, 0.65) !important;
+  margin: 2px 0 !important;
+}
+
+.narrative-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+}
+
+.narrative-row-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.06em !important;
+}
+
+.narrative-row-value {
+  font-size: 13.5px !important;
+  color: var(--text-main) !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.intensity-gauge-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.gauge-dots {
+  font-size: 14px !important;
+  color: var(--accent-warmth) !important;
+  letter-spacing: 2px !important;
+}
+.gauge-text {
+  font-size: 12.5px !important;
+  color: var(--text-muted) !important;
+}
+
+.scent-notes-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  padding: 8px 12px !important;
+  background: var(--bg-card) !important;
+  border-radius: var(--radius-xs) !important;
+  border: 1px solid var(--line-light) !important;
+}
+.note-line {
+  font-size: 12px !important;
+  color: var(--text-main) !important;
+  display: flex !important;
+  gap: 8px !important;
+}
+.note-line b {
+  color: var(--text-sub) !important;
+  min-width: 44px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+}
+
+.narrative-action-bar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 4px !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.scent-price-group {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+}
+.price-val {
+  font-family: var(--serif) !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+}
+.price-sub {
+  font-size: 12px !important;
+  color: var(--text-sub) !important;
+}
+
+.scent-add-btn {
+  height: 42px !important;
+  padding: 8px 22px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-radius: var(--radius-xs) !important;
+  background: var(--bg-dark) !important;
+  color: var(--text-white) !important;
+  border: 1px solid var(--bg-dark) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+.scent-add-btn:hover {
+  background: var(--accent-warmth) !important;
+  border-color: var(--accent-warmth) !important;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 820px) {
+  .scents-stage-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .stage-ambient-canvas {
+    min-height: 420px !important;
+    height: 420px !important;
+  }
+}
+
+
+/* ==========================================================================
+   [03 비누 & 조향] 위아래 선 완전 제거 & 좌우 영상/텍스트 높이 완벽 1:1 일치
+   ========================================================================== */
+.scents-editorial-section {
+  background: #ffffff !important;
+  border-top: none !important; /* 상단 베이지색 선 100% 제거 */
+  border-bottom: none !important; /* 하단 베이지색 선 100% 제거 */
+  padding: clamp(72px, 8.5vw, 130px) 0 !important;
+}
+
+.scents-stage-grid {
+  display: grid !important;
+  grid-template-columns: 58% 42% !important;
+  gap: clamp(40px, 5vw, 76px) !important;
+  align-items: stretch !important; /* 좌우 높이 완벽 1:1 일치 */
+}
+
+/* 좌측 58% 시네마틱 스테이지: 우측 높이에 맞춰 100% 팽창 */
+.scents-cinematic-stage {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+}
+
+.stage-ambient-canvas {
+  width: 100% !important;
+  height: 100% !important; /* 우측과 동일 높이 */
+  min-height: 520px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--line-main) !important;
+  border-radius: var(--radius-xs) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 24px rgba(36, 34, 30, 0.03) !important;
+}
+
+/* 은은한 향 무드 배경 */
+.ambient-bg-layer {
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(circle at center, rgba(116, 180, 155, 0.16) 0%, rgba(247, 243, 235, 0.6) 70%, #ffffff 100%) !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-end !important;
+  padding: 18px !important;
+}
+
+.ambient-visual-tag {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  color: var(--text-sub) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  padding: 4px 10px !important;
+  border-radius: var(--radius-pill) !important;
+  border: 1px solid var(--line-light) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* 360도 자전하는 비정형 조약돌 비누 */
+.pebble-soap-stage {
+  position: relative !important;
+  z-index: 2 !important;
+  perspective: 900px !important;
+}
+
+.pebble-soap-3d {
+  width: 190px !important;
+  height: 190px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: pebbleFloatSpin 14s infinite linear !important;
+}
+
+@keyframes pebbleFloatSpin {
+  0% { transform: rotateY(0deg) rotateX(10deg); }
+  50% { transform: rotateY(180deg) rotateX(6deg); }
+  100% { transform: rotateY(360deg) rotateX(10deg); }
+}
+
+.pebble-body {
+  width: 160px !important;
+  height: 146px !important;
+  background: #e4ece6 !important;
+  border-radius: 46% 54% 52% 48% / 48% 52% 48% 52% !important;
+  border: 1px solid rgba(216, 209, 198, 0.8) !important;
+  box-shadow: 0 16px 36px rgba(36, 34, 30, 0.10), inset 0 2px 6px rgba(255, 255, 255, 0.8), inset 0 -4px 10px rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  transition: all 0.4s ease !important;
+}
+
+.pebble-engrave {
+  font-family: var(--serif) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.24em !important;
+  color: rgba(36, 34, 30, 0.65) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), 0 -1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.pebble-sub-text {
+  font-size: 8.5px !important;
+  letter-spacing: 0.12em !important;
+  color: rgba(36, 34, 30, 0.45) !important;
+  margin-top: 4px !important;
+}
+
+.pebble-reflection {
+  position: absolute !important;
+  top: 14px !important;
+  left: 20px !important;
+  width: 50px !important;
+  height: 24px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  border-radius: 50% !important;
+  transform: rotate(-25deg) !important;
+  pointer-events: none !important;
+}
+
+/* 하단 HUD 스펙 라인 */
+.stage-hud-spec {
+  position: absolute !important;
+  bottom: 16px !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* 우측 42% 에디토리얼 패널: 위아래 완벽 균형 */
+.scents-editorial-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+}
+
+.scent-tabs-row {
+  display: flex !important;
+  gap: 8px !important;
+  border-bottom: 1px solid var(--line-main) !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 20px !important;
+  flex-wrap: wrap !important;
+}
+
+.scent-tab-btn {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  padding: 6px 14px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  border-radius: var(--radius-pill) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  line-height: 1.2 !important;
+}
+.scent-tab-btn:hover {
+  color: var(--accent-warmth) !important;
+  background: rgba(235, 120, 38, 0.08) !important;
+}
+.scent-tab-btn.active {
+  color: var(--text-main) !important;
+  background: var(--bg-alt) !important;
+  border-color: var(--line-main) !important;
+  font-weight: 600 !important;
+}
+
+.scent-narrative-flow {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex-grow: 1 !important;
+  gap: 14px !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.scent-code-label {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.1em !important;
+  display: block !important;
+  margin-bottom: 3px !important;
+}
+
+.scent-title-serif {
+  font-family: var(--serif) !important;
+  font-size: clamp(22px, 2.6vw, 28px) !important;
+  color: var(--text-main) !important;
+  font-weight: 500 !important;
+  margin: 0 0 6px !important;
+  line-height: 1.2 !important;
+}
+
+.scent-poem-text {
+  font-family: var(--serif) !important;
+  font-size: 14px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.narrative-divider {
+  height: 1px !important;
+  background: rgba(216, 209, 198, 0.65) !important;
+  margin: 2px 0 !important;
+}
+
+.narrative-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+}
+
+.narrative-row-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.06em !important;
+}
+
+.narrative-row-value {
+  font-size: 13.5px !important;
+  color: var(--text-main) !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.intensity-gauge-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.gauge-dots {
+  font-size: 14px !important;
+  color: var(--accent-warmth) !important;
+  letter-spacing: 2px !important;
+}
+.gauge-text {
+  font-size: 12.5px !important;
+  color: var(--text-muted) !important;
+}
+
+.scent-notes-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  padding: 8px 12px !important;
+  background: var(--bg-card) !important;
+  border-radius: var(--radius-xs) !important;
+  border: 1px solid var(--line-light) !important;
+}
+.note-line {
+  font-size: 12px !important;
+  color: var(--text-main) !important;
+  display: flex !important;
+  gap: 8px !important;
+}
+.note-line b {
+  color: var(--text-sub) !important;
+  min-width: 44px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+}
+
+.narrative-action-bar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 4px !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.scent-price-group {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+}
+.price-val {
+  font-family: var(--serif) !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+}
+.price-sub {
+  font-size: 12px !important;
+  color: var(--text-sub) !important;
+}
+
+.scent-add-btn {
+  height: 42px !important;
+  padding: 8px 22px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-radius: var(--radius-xs) !important;
+  background: var(--bg-dark) !important;
+  color: var(--text-white) !important;
+  border: 1px solid var(--bg-dark) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+.scent-add-btn:hover {
+  background: var(--accent-warmth) !important;
+  border-color: var(--accent-warmth) !important;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 820px) {
+  .scents-stage-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .stage-ambient-canvas {
+    min-height: 380px !important;
+    height: 380px !important;
+  }
+}
+
+
+/* ==========================================================================
+   [03 비누 & 조향] 58% : 42% 비대칭 에디토리얼 시네마틱 스테이지 CSS
+   ========================================================================== */
+.scents-editorial-section {
+  background: #ffffff !important;
+  border-top: 1px solid var(--line-main) !important;
+  padding: clamp(72px, 8.5vw, 130px) 0 !important; /* 상하 130px 여유로운 호흡 */
+}
+
+.scents-section-header {
+  margin-bottom: clamp(36px, 4.5vw, 56px) !important;
+}
+
+.scents-stage-grid {
+  display: grid !important;
+  grid-template-columns: 58% 42% !important; /* 58% : 42% 황금비율 */
+  gap: clamp(40px, 5vw, 76px) !important; /* 76px 광활한 컬럼 여백 */
+  align-items: center !important;
+}
+
+/* 좌측 58% 시네마틱 스테이지 */
+.scents-cinematic-stage {
+  width: 100% !important;
+}
+
+.stage-ambient-canvas {
+  width: 100% !important;
+  aspect-ratio: 4 / 3.4 !important;
+  max-height: 520px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--line-main) !important;
+  border-radius: var(--radius-xs) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 24px rgba(36, 34, 30, 0.03) !important;
+}
+
+/* 은은한 향 무드 배경 */
+.ambient-bg-layer {
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(circle at center, rgba(116, 180, 155, 0.12) 0%, rgba(247, 243, 235, 0.6) 70%, #ffffff 100%) !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-end !important;
+  padding: 18px !important;
+}
+
+.ambient-visual-tag {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  color: var(--text-sub) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  padding: 4px 10px !important;
+  border-radius: var(--radius-pill) !important;
+  border: 1px solid var(--line-light) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* 360도 자전하는 비정형 조약돌 비누 */
+.pebble-soap-stage {
+  position: relative !important;
+  z-index: 2 !important;
+  perspective: 900px !important;
+}
+
+.pebble-soap-3d {
+  width: 180px !important;
+  height: 180px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: pebbleFloatSpin 14s infinite linear !important; /* 자동 자전 */
+}
+
+@keyframes pebbleFloatSpin {
+  0% { transform: rotateY(0deg) rotateX(10deg); }
+  50% { transform: rotateY(180deg) rotateX(6deg); }
+  100% { transform: rotateY(360deg) rotateX(10deg); }
+}
+
+.pebble-body {
+  width: 154px !important;
+  height: 140px !important;
+  background: #e9ece4 !important; /* 기본 세이지 그린 조약돌 톤 */
+  border-radius: 46% 54% 52% 48% / 48% 52% 48% 52% !important; /* 비정형 조약돌 유기적 곡면 */
+  border: 1px solid rgba(216, 209, 198, 0.8) !important;
+  box-shadow: 0 16px 36px rgba(36, 34, 30, 0.10), inset 0 2px 6px rgba(255, 255, 255, 0.8), inset 0 -4px 10px rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  transition: all 0.4s ease !important;
+}
+
+.pebble-engrave {
+  font-family: var(--serif) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.24em !important;
+  color: rgba(36, 34, 30, 0.65) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), 0 -1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.pebble-sub-text {
+  font-size: 8px !important;
+  letter-spacing: 0.12em !important;
+  color: rgba(36, 34, 30, 0.45) !important;
+  margin-top: 4px !important;
+}
+
+.pebble-reflection {
+  position: absolute !important;
+  top: 14px !important;
+  left: 20px !important;
+  width: 50px !important;
+  height: 24px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  border-radius: 50% !important;
+  transform: rotate(-25deg) !important;
+  pointer-events: none !important;
+}
+
+/* 하단 HUD 스펙 라인 */
+.stage-hud-spec {
+  position: absolute !important;
+  bottom: 14px !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.05em !important;
+}
+.hud-dot { opacity: 0.4; }
+
+/* 우측 42% 에디토리얼 패널 (제로-보더) */
+.scents-editorial-panel {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.scent-tabs-row {
+  display: flex !important;
+  gap: 8px !important;
+  border-bottom: 1px solid var(--line-main) !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 24px !important;
+  flex-wrap: wrap !important;
+}
+
+.scent-tab-btn {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  padding: 6px 14px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  border-radius: var(--radius-pill) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  line-height: 1.2 !important;
+}
+.scent-tab-btn:hover {
+  color: var(--accent-warmth) !important;
+  background: rgba(235, 120, 38, 0.08) !important;
+}
+.scent-tab-btn.active {
+  color: var(--text-main) !important;
+  background: var(--bg-alt) !important;
+  border-color: var(--line-main) !important;
+  font-weight: 600 !important;
+}
+
+.scent-narrative-flow {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.scent-code-label {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.1em !important;
+  display: block !important;
+  margin-bottom: 4px !important;
+}
+
+.scent-title-serif {
+  font-family: var(--serif) !important;
+  font-size: clamp(22px, 2.6vw, 30px) !important;
+  color: var(--text-main) !important;
+  font-weight: 500 !important;
+  margin: 0 0 8px !important;
+  line-height: 1.2 !important;
+}
+
+.scent-poem-text {
+  font-family: var(--serif) !important;
+  font-size: 14.5px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+}
+
+.narrative-divider {
+  height: 1px !important;
+  background: rgba(216, 209, 198, 0.7) !important;
+  margin: 4px 0 !important;
+}
+
+.narrative-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.narrative-row-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: var(--text-sub) !important;
+  letter-spacing: 0.06em !important;
+}
+
+.narrative-row-value {
+  font-size: 13.5px !important;
+  color: var(--text-main) !important;
+  margin: 0 !important;
+  line-height: 1.55 !important;
+}
+
+.intensity-gauge-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.gauge-dots {
+  font-size: 14px !important;
+  color: var(--accent-warmth) !important;
+  letter-spacing: 2px !important;
+}
+.gauge-text {
+  font-size: 12.5px !important;
+  color: var(--text-muted) !important;
+}
+
+.scent-notes-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  padding: 8px 12px !important;
+  background: var(--bg-card) !important;
+  border-radius: var(--radius-xs) !important;
+  border: 1px solid var(--line-light) !important;
+}
+.note-line {
+  font-size: 12px !important;
+  color: var(--text-main) !important;
+  display: flex !important;
+  gap: 8px !important;
+}
+.note-line b {
+  color: var(--text-sub) !important;
+  min-width: 44px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+}
+
+.narrative-action-bar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 6px !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.scent-price-group {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+}
+.price-val {
+  font-family: var(--serif) !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+}
+.price-sub {
+  font-size: 12px !important;
+  color: var(--text-sub) !important;
+}
+
+.scent-add-btn {
+  height: 42px !important;
+  padding: 8px 22px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-radius: var(--radius-xs) !important;
+  background: var(--bg-dark) !important;
+  color: var(--text-white) !important;
+  border: 1px solid var(--bg-dark) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+.scent-add-btn:hover {
+  background: var(--accent-warmth) !important;
+  border-color: var(--accent-warmth) !important;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 820px) {
+  .scents-stage-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .stage-ambient-canvas {
+    aspect-ratio: 4 / 3.5 !important;
+    max-height: 380px !important;
+  }
+  .scent-tabs-row {
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 8px !important;
+  }
+  .scent-tab-btn {
+    white-space: nowrap !important;
+  }
+}
+
+
+/* ==========================================================================
+   [3대 대표 세트 바 최종 완벽 정렬]
+   - 3개 칸 완벽 동일 높이(min-height: 96px) 및 수직 중앙 정렬
+   - 화살표 크기 확대(24px) 및 글씨와의 간격 확보(margin-left: auto)
+   - 화살표 밑줄 100% 제거
+   - 호버 시 배경색 없이 진하게만 반응 (color: var(--text-main))
+   ========================================================================== */
+.atmosphere-sets-bar {
+  background: var(--bg-alt) !important;
+  border-top: 1px solid var(--line-main) !important;
+  padding: 48px clamp(20px, 4vw, 48px) !important;
+}
+
+.atmosphere-sets-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  max-width: var(--max-width) !important;
+  margin: 0 auto !important;
+  border: 1px solid var(--line-main) !important;
+  background: #ffffff !important;
+  border-radius: var(--radius-xs) !important;
+  overflow: hidden !important;
+}
+
+.atmosphere-set-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  padding: 24px 28px !important;
+  min-height: 96px !important; /* 3개 칸 높이 완벽 통일 */
+  border-right: 1px solid var(--line-main) !important;
+  background: #ffffff !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease !important;
+}
+.atmosphere-set-item:last-child {
+  border-right: none !important;
+}
+.atmosphere-set-item:hover {
+  background: #ffffff !important; /* 배경색 변화 없음 */
+}
+
+/* 좌측 넘버링 뱃지 */
+.atmosphere-set-item .set-num-badge {
+  font-family: var(--serif) !important;
+  font-size: 24px !important;
+  color: var(--text-sub) !important;
+  font-style: italic !important;
+  line-height: 1 !important;
+  min-width: 32px !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: color 0.2s ease !important;
+}
+
+/* 중앙 텍스트 컨텐츠 */
+.atmosphere-set-item .set-card-content {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 4px !important;
+}
+.atmosphere-set-item .set-card-content span {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  line-height: 1.2 !important;
+  display: block !important;
+}
+.atmosphere-set-item .set-card-content b {
+  font-family: var(--serif) !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  line-height: 1.3 !important;
+  display: block !important;
+  word-break: keep-all !important;
+  transition: color 0.2s ease !important;
+}
+
+/* 우측 24px 화살표: 밑줄 및 배경색 완전 제거 */
+.set-arrow-only,
+.set-arrow-only:hover,
+.set-arrow-only:focus,
+a.set-arrow-only,
+a.set-arrow-only:hover {
+  text-decoration: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.set-arrow-only {
+  font-size: 24px !important; /* 크기 확대 */
+  font-family: var(--sans) !important;
+  font-weight: 400 !important;
+  color: var(--text-sub) !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  margin-left: auto !important;
+  cursor: pointer !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+
+/* 호버 시: 배경색 없이 진하게만 반응 */
+.atmosphere-set-item:hover .set-arrow-only,
+.set-arrow-only:hover {
+  color: var(--text-main) !important; /* 딥 차콜로 진해짐 */
+  transform: translateX(4px) !important;
+}
+.atmosphere-set-item:hover .set-card-content b {
+  color: #000000 !important;
+}
+.atmosphere-set-item:hover .set-num-badge {
+  color: var(--text-main) !important;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 820px) {
+  .atmosphere-sets-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .atmosphere-set-item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line-main) !important;
+    padding: 20px 20px !important;
+    min-height: auto !important;
+  }
+  .atmosphere-set-item:last-child {
+    border-bottom: none !important;
+  }
+}
+
+
+.set-arrow-only {
+  font-size: 19px !important;
+  font-family: var(--sans) !important;
+  font-weight: 400 !important;
+  color: var(--text-muted) !important;
+  text-decoration: none !important;
+  padding: 6px 10px !important;
+  cursor: pointer !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.set-arrow-only:hover {
+  color: var(--accent-warmth) !important;
+  transform: translateX(4px) !important;
+}
+
+
+/* ==========================================================================
+   [이미지 영역 전면 순백색(#ffffff) 적용]
+   ========================================================================== */
+/* 01. 히어로 정물 캔버스 및 미디어 플레이스홀더 */
+.hero-image-specimen-box,
+.pane-media-placeholder,
+.hero-slide-full .hero-image-specimen-box,
+.hero-split-pane .pane-media-placeholder {
+  background: #ffffff !important;
+}
+
+/* 02. 브랜드 철학 3분할 화보 캔버스 */
+.col-bg-media,
+.col-bg-media.media-01,
+.col-bg-media.media-02,
+.col-bg-media.media-03,
+.atmosphere-col .col-bg-media {
+  background: #ffffff !important;
+}
+
+/* 03. 비누 360도 뷰어 & 3D 큐브 & 향 카드 미디어 */
+.orbit-viewer-container,
+.cube-face,
+.scent-card .scent-media,
+.scent-visual-box {
+  background: #ffffff !important;
+}
+
+/* 04. 소재 매거진 대형 화보 캔버스 */
+.magazine-media,
+.magazine-article .magazine-media,
+.magazine-article:first-of-type .magazine-media,
+.magazine-article.reverse .magazine-media,
+.magazine-article:last-of-type .magazine-media {
+  background: #ffffff !important;
+}
+
+/* 05. 욕실 공간 시뮬레이터 캔버스 */
+.room-canvas-container,
+.room-visual-box,
+.room-matched-preview {
+  background: #ffffff !important;
+}
+
+/* 06. 실사용 공간 UGC 무드보드 이미지 캔버스 */
+.real-space-card .media-placeholder,
+.real-space-media,
+.real-spaces-grid .media-box {
+  background: #ffffff !important;
+}
+
+/* 07. 선물 패키지 미리보기 캔버스 */
+.gift-package-canvas,
+.gift-visual-box,
+.gift-box-stage {
+  background: #ffffff !important;
+}
+
+/* 모든 범용 이미지 플레이스홀더 박스 */
+.media-placeholder,
+.image-placeholder,
+.img-specimen,
+.photo-frame {
+  background: #ffffff !important;
+}
+
+
+/* ==========================================================================
+   [GNB 최종] 중앙 정렬 3단 대칭 럭셔리 GNB (밑줄 제거 / 쇼룸버튼 제거 / 메뉴 재배치)
+   ========================================================================== */
+header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 99 !important;
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important; /* 완벽한 3단 대칭 분할 */
+  align-items: center !important;
+  padding: 0 clamp(20px, 4vw, 48px) !important;
+  height: 68px !important;
+  min-height: 68px !important;
+  
+  /* 진정한 Frosted Glass 질감 */
+  background: rgba(247, 243, 235, 0.80) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  
+  /* 유리 상단 반사 하이라이트 & 하단 1px 헤어라인 */
+  border-bottom: 1px solid rgba(216, 209, 198, 0.75) !important;
+  box-shadow: 0 4px 24px rgba(36, 34, 30, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.90) !important;
+  
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+header.header-scrolled {
+  height: 56px !important;
+  min-height: 56px !important;
+  background: rgba(247, 243, 235, 0.92) !important;
+  backdrop-filter: blur(24px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+  box-shadow: 0 6px 28px rgba(36, 34, 30, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+/* 중앙 로고 워드마크 */
+.header-center-logo {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.logo {
+  font-family: var(--serif) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.22em !important;
+  font-size: 1.45rem !important;
+  color: var(--text-main) !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+  transition: transform 0.25s ease !important;
+}
+.logo:hover {
+  transform: scale(1.02) !important;
+}
+
+/* 좌측 네비게이션 & 우측 네비게이션 공통 링크 스타일 */
+.header-left-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.header-right-actions {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.header-left-nav a, .header-right-actions a.header-action-link {
+  text-decoration: none !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  padding: 6px 12px !important;
+  border-radius: var(--radius-pill) !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  line-height: 1.2 !important;
+  position: relative !important;
+}
+
+/* 모든 마우스 호버 밑줄 완전 제거 */
+.header-left-nav a::after, .header-right-actions a.header-action-link::after, nav a::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* 호버 시 밑줄 대신 은은한 웜 틴트 소프트 캡슐 */
+.header-left-nav a:hover, .header-right-actions a.header-action-link:hover {
+  color: var(--accent-warmth) !important;
+  background: rgba(235, 120, 38, 0.08) !important;
+  border-color: rgba(235, 120, 38, 0.15) !important;
+  text-decoration: none !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 활성(Active) 상태 */
+.header-left-nav a.active, .header-left-nav a[aria-current="true"],
+.header-right-actions a.header-action-link.active, .header-right-actions a.header-action-link[aria-current="true"] {
+  color: var(--text-main) !important;
+  background: var(--bg-alt) !important;
+  border-color: var(--line-main) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+/* 우측 1분 맞춤 퀴즈 버튼 */
+.header-quiz-btn {
+  min-height: 36px !important;
+  height: 36px !important;
+  padding: 6px 14px !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  border-radius: var(--radius-xs) !important;
+  background: transparent !important;
+  border: 1px solid var(--line-heavy) !important;
+  color: var(--text-main) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+.header-quiz-btn:hover {
+  background: var(--bg-dark) !important;
+  color: var(--text-white) !important;
+  border-color: var(--bg-dark) !important;
+}
+
+/* 모바일 반응형 헤더 (max-width: 820px) */
+@media (max-width: 820px) {
+  header {
+    grid-template-columns: auto 1fr auto !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    padding: 0 16px !important;
+  }
+  .header-left-nav {
+    display: none !important;
+  }
+  .header-center-logo {
+    justify-content: flex-start !important;
+  }
+  .header-right-actions a.header-action-link {
+    display: none !important;
+  }
+  .header-quiz-btn .quiz-cta-full {
+    display: none !important;
+  }
+  .header-quiz-btn .quiz-cta-mobile {
+    display: inline !important;
+  }
+}
+@media (min-width: 821px) {
+  .header-quiz-btn .quiz-cta-mobile {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   SOAPHE(소피) 브랜드 소개 페이지 스토리보드 (100% Editorial Wireframe)
+   - 01. [#manifesto] 브랜드 철학: 사라지는 비누와 오래 머무는 오브제
+   - 02. [#origin] 탄생 이야기: 비누가 놓이는 자리까지의 고민 & 문제 발견
+   - 03. [#design] 제작과 설계: 물 고임 방지, 건조, 마감 설계 원칙 & 제작 여정
+   - 04. [#materials] 소재 선택: 화강석 · 백자 · 강화유리 3대 소재 기준과 공간 적합성
+   - 05. [#ritual] 일상의 리추얼: 손을 씻는 순간의 감각 정돈 3단계 시퀀스
+   - 06. [#second-life] 두 번째 쓰임: 비누 소진 후 생활 트레이로의 전환
+   - 07. [#gifting] 선물 철학: GIVE → USE → STAY 시간의 연속성
+   - 08. [#collection-cta] 컬렉션 CTA: 전체 컬렉션 및 실제 사용 모습 탐색
+   ========================================================================== */
+:root {
+  --bg-main: #ffffff;
+  --bg-alt: #f8f9fa;
+  --bg-card: #f1f3f5;
+  --bg-dark: #1a1d20;
+  --bg-dark-card: #2b3035;
+  
+  --text-main: #212529;
+  --text-muted: #495057;
+  --text-sub: #6c757d;
+  --text-white: #ffffff;
+  --text-white-muted: #ced4da;
+  
+  --line-light: #e9ecef;
+  --line-main: #ced4da;
+  --line-dark: #6c757d;
+  --line-heavy: #212529;
+  
+  --placeholder-bg: #e9ecef;
+  --placeholder-border: #adb5bd;
+  --placeholder-text: #495057;
+  
+  --serif: "Newsreader", Georgia, "Times New Roman", "Batang", serif;
+  --sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font: 15px/1.75 var(--sans);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, a, input, select, textarea { font: inherit; color: inherit; }
+button, a { cursor: pointer; }
+a { text-decoration: none; }
+
+.skip { position: absolute; left: -9999px; }
+.skip:focus {
+  left: 16px;
+  top: 16px;
+  z-index: 999;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 18px;
+  border: 2px solid #000000;
+  font-weight: 700;
+}
+
+/* Global GNB Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 4vw;
+  background: color-mix(in srgb, var(--bg-main) 95%, transparent);
+  border-bottom: 1px solid var(--line-main);
+  backdrop-filter: blur(14px);
+}
+.logo {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: .18em;
+  font-size: 1.25rem;
+  color: var(--text-main);
+}
+nav.global-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+nav.global-nav a {
+  border-bottom: 2px solid transparent;
+  padding: 6px 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all .2s ease;
+  line-height: 1.2;
+}
+nav.global-nav a:hover, nav.global-nav a:focus-visible {
+  color: var(--text-main);
+  border-bottom-color: var(--line-heavy);
+}
+nav.global-nav a.active, nav.global-nav a[aria-current="page"] {
+  border-bottom-color: var(--text-main);
+  color: var(--text-main);
+  font-weight: 700;
+}
+.nav-divider {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: var(--line-heavy);
+  opacity: .5;
+  margin: 0 4px;
+}
+
+.header-cta {
+  font-size: 11.5px;
+  padding: 6px 14px;
+  min-height: 32px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* In-Page Sub Navigation Bar (Story Index) */
+.sub-story-nav {
+  position: sticky;
+  top: 59px;
+  z-index: 35;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line-light);
+  padding: 8px 4vw;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  backdrop-filter: blur(10px);
+}
+.sub-story-nav a {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: all .15s ease;
+}
+.sub-story-nav a:hover, .sub-story-nav a.active {
+  color: var(--text-main);
+  background: var(--bg-card);
+}
+
+/* Plain Button System */
+.plain {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid var(--line-heavy);
+  background: transparent;
+  color: var(--text-main);
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: all .2s ease;
+  min-height: 44px;
+  line-height: 22px;
+  word-break: keep-all;
+}
+.plain:hover, .plain:focus-visible {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  border-color: var(--bg-dark);
+  transform: translateY(-1px);
+}
+.plain.primary {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  border-color: var(--bg-dark);
+  font-weight: 700;
+}
+.plain.primary:hover, .plain.primary:focus-visible {
+  background: #000000;
+  border-color: #000000;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+.section-padding {
+  padding: 110px 0;
+  border-bottom: 1px solid var(--line-main);
+}
+.chapter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-sub);
+  margin-bottom: 16px;
+}
+.chapter-badge::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  background: currentColor;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  word-break: keep-all;
+}
+.section-desc {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 740px;
+  line-height: 1.8;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* Storyboard Specimen Box (Wireframe Guideline Visual) */
+.storyboard-specimen {
+  background: var(--placeholder-bg);
+  border: 1px dashed var(--placeholder-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.storyboard-badge {
+  display: inline-block;
+  background: var(--bg-dark);
+  color: var(--text-white);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   01. HERO: BRAND MANIFESTO (#manifesto)
+   ========================================================================== */
+.brand-hero {
+  min-height: 85vh;
+  background: radial-gradient(circle at 50% 35%, #fafafa 0%, #f1f3f5 60%, #e9ecef 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 4vw;
+  position: relative;
+  border-bottom: 1px solid var(--line-main);
+}
+.hero-manifesto-badge {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: .25em;
+  font-weight: 700;
+  color: var(--text-sub);
+  margin-bottom: 24px;
+}
+.hero-manifesto-title {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  max-width: 900px;
+  margin: 0 auto 28px;
+  word-break: keep-all;
+}
+.hero-manifesto-lead {
+  font-size: clamp(15.5px, 1.3vw, 18px);
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto 36px;
+  line-height: 1.85;
+  word-break: keep-all;
+}
+.hero-action-group {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.hero-specimen-spread {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1040px;
+  min-height: 260px;
+  background: var(--bg-main);
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.hero-specimen-side {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-specimen-side.left {
+  background: var(--bg-alt);
+  border-right: 1px solid var(--line-light);
+}
+
+/* ==========================================================================
+   02. ORIGIN STORY (#origin)
+   ========================================================================== */
+.origin-section {
+  background: var(--bg-main);
+}
+.origin-grid {
+  display: grid;
+  grid-template-columns: 5.5fr 6.5fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 40px;
+}
+.problem-card-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 28px 0;
+}
+.problem-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+}
+.problem-card-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--text-sub);
+  margin-bottom: 8px;
+  display: block;
+}
+.problem-card h4 {
+  font-family: var(--serif);
+  font-size: 17px;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  word-break: keep-all;
+}
+.problem-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  word-break: keep-all;
+}
+
+.quote-box {
+  border-left: 2px solid var(--line-heavy);
+  padding: 12px 0 12px 24px;
+  margin: 28px 0 0;
+}
+.quote-box p {
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: var(--text-main);
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   03. FUNCTIONAL DESIGN (#design)
+   ========================================================================== */
+.design-section {
+  background: var(--bg-alt);
+}
+.design-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 44px 0 50px;
+}
+.design-principle-card {
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  background: var(--bg-main);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.design-principle-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.design-num {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  color: var(--text-sub);
+  margin-bottom: 12px;
+  display: block;
+}
+.design-principle-card h3 {
+  font-family: var(--serif);
+  font-size: 18.5px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  word-break: keep-all;
+}
+.design-principle-card p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* Process Timeline (From Form to Object) */
+.process-stepper-box {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  border-radius: var(--radius-lg);
+  padding: 50px 4vw;
+}
+.process-stepper-header {
+  margin-bottom: 30px;
+}
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.process-item {
+  border-top: 1px solid var(--bg-dark-card);
+  padding-top: 18px;
+  position: relative;
+}
+.process-item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 24px;
+  height: 3px;
+  background: var(--text-white);
+}
+.process-step-num {
+  font-size: 11px;
+  letter-spacing: .2em;
+  color: var(--text-white-muted);
+  display: block;
+  margin-bottom: 6px;
+}
+.process-item h4 {
+  font-size: 15.5px;
+  margin: 0 0 8px 0;
+  color: var(--text-white);
+}
+.process-item p {
+  font-size: 13px;
+  color: var(--text-white-muted);
+  line-height: 1.6;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   04. MATERIALITY (#materials)
+   ========================================================================== */
+.materials-section {
+  background: var(--bg-main);
+}
+.standard-pills-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 36px 0 44px;
+}
+.standard-pill-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+}
+.standard-pill-num {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-sub);
+  margin-bottom: 8px;
+  display: block;
+}
+.standard-pill-card p {
+  font-size: 13.5px;
+  color: var(--text-main);
+  line-height: 1.65;
+  margin: 0;
+  word-break: keep-all;
+}
+
+.materials-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.material-intro-card {
+  background: var(--bg-main);
+  border: 1px solid var(--line-main);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.mat-specimen-placeholder {
+  min-height: 180px;
+  background: var(--placeholder-bg);
+  border-radius: var(--radius-sm);
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  text-align: center;
+}
+.material-intro-card h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  margin: 0 0 6px 0;
+  word-break: keep-all;
+}
+.material-sub-tag {
+  font-size: 12px;
+  color: var(--text-sub);
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+.material-intro-card p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   05. DAILY RITUAL (#ritual)
+   ========================================================================== */
+.ritual-section {
+  background: var(--bg-alt);
+}
+.ritual-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 44px 0 36px;
+}
+.ritual-step-card {
+  background: var(--bg-main);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ritual-media-box {
+  min-height: 190px;
+  background: var(--placeholder-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--line-light);
+}
+.ritual-body-box {
+  padding: 28px 22px;
+  flex: 1;
+}
+.ritual-step-code {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: var(--text-sub);
+  margin-bottom: 6px;
+  display: block;
+}
+.ritual-body-box h4 {
+  font-family: var(--serif);
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+.ritual-body-box p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   06. SECOND LIFE (#second-life)
+   ========================================================================== */
+.second-life-section {
+  background: var(--bg-main);
+}
+.second-life-layout {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 50px;
+  align-items: center;
+  margin-top: 40px;
+}
+.dual-use-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.dual-use-item {
+  background: var(--bg-alt);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-sm);
+  padding: 18px 16px;
+}
+.dual-use-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--text-sub);
+  display: block;
+  margin-bottom: 4px;
+}
+.dual-use-item b {
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.spaces-list {
+  display: grid;
+  gap: 14px;
+}
+.space-item {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+.space-item b {
+  font-size: 14.5px;
+  display: block;
+  margin-bottom: 4px;
+}
+.space-item p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   07. GIFTING PHILOSOPHY (#gifting)
+   ========================================================================== */
+.gifting-section {
+  background: radial-gradient(circle at 50% 40%, #faf8f5 0%, #f1eee7 65%, #e6e2d8 100%);
+}
+.gifting-timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 44px 0 40px;
+}
+.gifting-card {
+  background: var(--bg-main);
+  border: 1px solid #dcd7ce;
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gifting-step-badge {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--text-sub);
+  margin-bottom: 12px;
+  display: block;
+}
+.gifting-card h4 {
+  font-family: var(--serif);
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  word-break: keep-all;
+}
+.gifting-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+  word-break: keep-all;
+}
+
+.gifting-closing-callout {
+  text-align: center;
+  margin-top: 20px;
+}
+.gifting-closing-callout p {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--text-main);
+  margin: 0 0 20px 0;
+}
+
+/* ==========================================================================
+   08. COLLECTION CTA (#collection-cta)
+   ========================================================================== */
+.brand-closing-cta {
+  background: var(--bg-main);
+  text-align: center;
+  padding: 120px 4vw;
+}
+.brand-closing-cta h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 20px 0;
+  word-break: keep-all;
+}
+.brand-closing-cta p {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto 36px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+.closing-cta-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  color: var(--text-white-muted);
+  padding: 60px 4vw 80px;
+  border-top: 1px solid var(--bg-dark-card);
+  font-size: 13px;
+}
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: var(--text-white);
+  margin-bottom: 12px;
+  display: block;
+}
+.footer-col h5 {
+  color: var(--text-white);
+  font-size: 13px;
+  margin: 0 0 14px 0;
+  letter-spacing: .1em;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-col a {
+  color: var(--text-white-muted);
+  transition: color .2s ease;
+}
+.footer-col a:hover {
+  color: var(--text-white);
+}
+
+/* Mobile Quick Bar */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--bg-main);
+  border-top: 1px solid var(--line-main);
+  padding: 8px 16px calc(8px + env(safe-area-inset-bottom, 0px));
+  justify-content: space-around;
+  align-items: center;
+}
+.mobile-bar-btn {
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 4px;
+}
+.mobile-bar-btn.active {
+  color: var(--text-main);
+  font-weight: 800;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 980px) {
+  .origin-grid, .second-life-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .design-principles-grid, .materials-cards-grid, .ritual-flow-grid, .gifting-timeline-grid, .standard-pills-row, .process-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .hero-specimen-spread {
+    grid-template-columns: 1fr;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 760px) {
+  header { padding: 12px 16px; }
+  nav.global-nav { display: none; }
+  .sub-story-nav { top: 52px; justify-content: flex-start; }
+  .section-padding { padding: 70px 0; }
+  .brand-hero { min-height: 75vh; padding: 60px 16px; }
+  .problem-card-pair, .dual-use-box { grid-template-columns: 1fr; }
+  .mobile-bottom-bar { display: flex; }
+  body { padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
+}
+</style>
+<style id="soaphe-shared-refinements">
+:focus-visible { outline: 2px solid var(--text-main, #483217); outline-offset: 4px; }
+section[id] { scroll-margin-top: 150px; }
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto !important; }
+ *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+</style>
+<style>
+.material-collection-link { margin-top: 16px; align-self: flex-start; font-size: 13px; }
+.material-intro-card { display: flex; flex-direction: column; }
+.material-intro-card > p { flex: 1; }
+@media(max-width:820px) { .closing-cta-btns { flex-wrap: wrap; } }
+</style><style>
+#giftBuilder{width:min(760px,calc(100% - 32px));max-height:88dvh;overflow:auto;border:1px solid #d8d0c3;border-radius:18px;padding:28px;color:#483217;background:#fffdf8;box-sizing:border-box}
+#giftBuilder::backdrop{background:rgb(28 23 18 / .55)}
+.gift-heading{display:flex;justify-content:space-between;align-items:start;gap:16px}.gift-heading h2{margin:4px 0 10px;font-size:28px}.gift-heading button{flex-shrink:0}
+#giftBuilder fieldset{border:0;padding:0;margin:24px 0}#giftBuilder legend{font-weight:700;margin-bottom:12px}.gift-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gift-option{display:flex;align-items:center;gap:10px;padding:14px;border:1px solid #d8d0c3;border-radius:8px;cursor:pointer;font-size:14px;line-height:1.5}.gift-option:has(input:checked){border-color:#483217;background:#f1ebdf}.gift-option input{accent-color:#483217;width:18px;height:18px;flex-shrink:0}.gift-summary{padding:18px;background:#f1ebdf;border-radius:10px;font-size:14px;line-height:1.7}.gift-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:20px;flex-wrap:wrap}#giftSaved{margin:12px 0 0;font-size:14px}#giftBuilder p{word-break:keep-all} @media(max-width:520px){#giftBuilder{padding:20px}.gift-options{grid-template-columns:1fr}.gift-heading h2{font-size:24px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<!-- GNB (중앙 정렬 3단 럭셔리 구조 & 사용자 요청 메뉴 재배치) -->
+<header>
+  <!-- [좌측 메뉴]: 비누 소개, 받침대 소재, 공간 연출, 선물 포장 -->
+  <nav class="header-left-nav" aria-label="제품 및 리추얼 탐색">
+    <a href="메인페이지_스토리보드_13차_감성레이아웃.html#scents" data-section="scents">비누 소개</a>
+    <a href="메인페이지_스토리보드_13차_감성레이아웃.html#materials" data-section="materials">받침대 소재</a>
+    <a href="메인페이지_스토리보드_13차_감성레이아웃.html#rooms" data-section="rooms">공간 연출</a>
+    <a href="메인페이지_스토리보드_13차_감성레이아웃.html#gift" data-section="gift">선물 포장</a>
+  </nav>
+
+  <!-- [중앙 로고]: SOAPHE 워드마크 정중앙 앵커 -->
+  <div class="header-center-logo">
+    <a class="logo" href="메인페이지_스토리보드_13차_감성레이아웃.html#hero" aria-label="SOAPHE 메인으로 이동">SOAPHE</a>
+  </div>
+
+  <!-- [우측 메뉴]: 브랜드 소개(전체제품 왼쪽), 전체 제품, 1분 맞춤 퀴즈 (쇼룸 예약 제거) -->
+  <div class="header-right-actions">
+    <a class="header-action-link" href="SOAPHE_brand.html#manifesto">브랜드 소개</a>
+    <a class="header-action-link" href="SOAPHE_category.html">전체 제품</a>
+    <a class="plain header-quiz-btn" href="메인페이지_스토리보드_13차_감성레이아웃.html#finder" aria-label="1분 맞춤 추천 퀴즈로 나만의 제품 찾기">
+      <span class="quiz-cta-full">1분 맞춤 퀴즈</span>
+      <span class="quiz-cta-mobile">맞춤 퀴즈</span>
+    </a>
+  </div>
+</header>
+
+<!-- 2. Brand Page Sub Navigation Bar (목차 앵커) -->
+<nav class="sub-story-nav" aria-label="브랜드 소개 목차">
+  <a href="#manifesto" class="active">철학</a>
+  <a href="#origin">탄생</a>
+  <a href="#design">설계</a>
+  <a href="#materials">소재</a>
+  <a href="#second-life">두 번째 쓰임</a>
+  <a href="#gifting">선물</a>
+</nav>
+
+<main id="main">
+
+  <!-- ==========================================================================
+       01. BRAND MANIFESTO (#manifesto)
+       ========================================================================== -->
+  <section id="manifesto" class="brand-hero" aria-label="SOAPHE 브랜드 철학">
+    <span class="hero-manifesto-badge">SOAPHE BRAND STORY</span>
+    <h1 class="hero-manifesto-title">
+      사라지는 비누와,<br>
+      오래 머무는 오브제.
+    </h1>
+    <p class="hero-manifesto-lead">
+      SOAPHE(소피)는 매일 손을 씻는 짧은 순간과 그 이후의 공간까지 함께 생각합니다.<br><br>
+      비누를 단정하게 받치고, 비누가 사라진 뒤에는 생활 오브제로 쓰임을 이어가는 새로운 형태를 만듭니다.
+    </p>
+    <div class="hero-action-group">
+      <a class="plain primary" href="#origin">브랜드 이야기 읽기 ↓</a>
+    </div>
+
+    <!-- 기획 가이드용 정물 화보 스프레드 -->
+    <div class="hero-specimen-spread">
+      <div class="hero-specimen-side left">
+        <span class="storyboard-badge">[기획 가이드: 사라지는 비누]</span>
+        <b style="font-family: var(--serif); font-size: 17px; margin: 6px 0 4px;">FLEETING FOAM</b>
+        <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; word-break: keep-all;">
+          물과 거품으로 손을 맑게 씻어내며 점차 닳아 사라지는 저온 숙성 비누의 순수함
+        </p>
+      </div>
+      <div class="hero-specimen-side">
+        <span class="storyboard-badge">[기획 가이드: 오래 머무는 오브제]</span>
+        <b style="font-family: var(--serif); font-size: 17px; margin: 6px 0 4px;">STAYING OBJECT</b>
+        <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; word-break: keep-all;">
+          비누가 사라진 뒤에도 공간의 온도를 지키며 생활 오브제로 남아 쓰임을 이어가는 형태
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       02. ORIGIN STORY (#origin)
+       ========================================================================== -->
+  <section id="origin" class="section-padding origin-section">
+    <div class="container">
+      <span class="chapter-badge">01 · ORIGIN STORY</span>
+      <h2 class="section-title">비누가 놓이는 자리까지<br>오래 생각했습니다.</h2>
+      <p class="section-desc">
+        비누 받침에 물이 고이면 비누는 쉽게 무르고, 남은 찌꺼기는 세면대의 인상을 흐립니다. 가볍게 만들어진 받침은 제품을 다 쓰기도 전에 버려지기 쉽습니다.<br><br>
+        SOAPHE는 이 두 가지 문제를 하나의 형태로 해결하고자 했습니다. 비누를 더 쾌적하게 사용할 수 있으면서, 비누가 사라진 뒤에도 일상에 남아 다른 쓰임으로 이어지는 오브제를 만들기 시작했습니다.
+      </p>
+
+      <div class="origin-grid">
+        <div>
+          <div class="problem-card-pair">
+            <article class="problem-card">
+              <span class="problem-card-tag">PROBLEM 01</span>
+              <h4>물 고임과 비누의 무름</h4>
+              <p>비누와 받침 사이에 물이 오래 머물면 비누가 쉽게 무르고 잔여물이 남습니다.</p>
+            </article>
+            <article class="problem-card">
+              <span class="problem-card-tag">PROBLEM 02</span>
+              <h4>쉽게 버려지는 받침</h4>
+              <p>사용 경험과 형태가 충분히 고려되지 않은 받침은 오래 사용하기 어렵습니다.</p>
+            </article>
+          </div>
+
+          <div class="quote-box">
+            <p>
+              “비누는 닳아 사라져도,<br>그것이 머물던 자리의 온기는 오래 이어질 수 있습니다.”
+            </p>
+          </div>
+        </div>
+
+        <!-- 비교 시각 가이드 프레임 -->
+        <div class="storyboard-specimen" style="min-height: 380px;" role="img" aria-label="기존 받침의 물 고임 상태와 SOAPHE 사용 상태 비교 화보 자리">
+          <span class="storyboard-badge">[기획 가이드: 사용 상태 전후 비교 컷]</span>
+          <b style="font-family: var(--serif); font-size: 19px; color: var(--text-main); margin: 10px 0 6px;">
+            BEFORE & AFTER USAGE SCENE
+          </b>
+          <p style="font-size: 13px; color: var(--text-muted); max-width: 380px; margin: 0; line-height: 1.6; word-break: keep-all;">
+            기존 평면 받침의 물 고임 및 잔여물 관찰 장면과, 아치형 오브제 위에서 단정하게 건조되는 SOAPHE 사용 장면의 대비 컷
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       03. FUNCTIONAL DESIGN (#design)
+       ========================================================================== -->
+  <section id="design" class="section-padding design-section">
+    <div class="container">
+      <span class="chapter-badge">02 · FUNCTIONAL DESIGN</span>
+      <h2 class="section-title">비누가 무르지 않도록,<br>물이 머물지 않도록.</h2>
+      <p class="section-desc">
+        SOAPHE의 오브제는 비누를 보기 좋게 올려두는 데서 그치지 않습니다. 비누와 받침이 맞닿는 면적을 줄이고, 사용 후 남은 물이 자연스럽게 빠져나가도록 형태를 설계했습니다.<br><br>
+        세척하기 쉬운 표면과 손에 걸리지 않는 부드러운 마감까지, 매일 반복되는 사용 경험을 기준으로 다듬었습니다.
+      </p>
+
+      <!-- 3대 설계 원칙 카드 -->
+      <div class="design-principles-grid">
+        <article class="design-principle-card">
+          <span class="design-num">01</span>
+          <h3>접점을 줄인 구조</h3>
+          <p>
+            비누와 오브제가 맞닿는 면적을 줄여 공기가 통하고 건조되기 쉬운 상태를 만듭니다.
+          </p>
+        </article>
+
+        <article class="design-principle-card">
+          <span class="design-num">02</span>
+          <h3>물이 흐르는 형태</h3>
+          <p>
+            사용 후 남은 물이 한곳에 고이지 않고 자연스럽게 빠져나가도록 곡면과 높이를 조절했습니다.
+          </p>
+        </article>
+
+        <article class="design-principle-card">
+          <span class="design-num">03</span>
+          <h3>세척과 촉감을 고려한 마감</h3>
+          <p>
+            잔여물을 닦아내기 쉽도록 표면을 마감하고, 손에 닿는 모서리를 부드럽게 다듬었습니다.
+          </p>
+        </article>
+      </div>
+
+      <!-- 구조 단면도 / 분해도 플레이스홀더 -->
+      <div class="storyboard-specimen" style="min-height: 240px; margin-bottom: 40px;" role="img" aria-label="오브제 통풍 배수 구조 단면 다이어그램 자리">
+        <span class="storyboard-badge">[기획 가이드: 구조 단면도 / 분해도]</span>
+        <b style="font-family: var(--serif); font-size: 17px; margin: 6px 0;">STRUCTURAL AIRFLOW & DRAINAGE DIAGRAM</b>
+        <p style="font-size: 13px; color: var(--text-muted); max-width: 520px; margin: 0; line-height: 1.6; word-break: keep-all;">
+          공기 순환 통로와 배수 곡면, 비누 거치 접점의 간격을 설명하는 흑백 라인 드로잉 구조도
+        </p>
+      </div>
+
+      <!-- 4단계 제작 과정 -->
+      <div class="process-stepper-box">
+        <div class="process-stepper-header">
+          <span class="chapter-badge" style="color: var(--text-white-muted);">FROM FORM TO OBJECT</span>
+          <h3 style="font-family: var(--serif); font-size: 22px; color: var(--text-white); margin: 6px 0 0;">
+            형태를 다듬고 완성하는 과정
+          </h3>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-item">
+            <span class="process-step-num">STEP 01</span>
+            <h4>형태 설계</h4>
+            <p>사용 장면과 비누의 크기를 기준으로 오브제의 비례와 구조를 설계합니다.</p>
+          </div>
+          <div class="process-item">
+            <span class="process-step-num">STEP 02</span>
+            <h4>소재별 제작</h4>
+            <p>화강석, 백자, 강화유리의 특성에 맞는 방식으로 형태를 구현합니다.</p>
+          </div>
+          <div class="process-item">
+            <span class="process-step-num">STEP 03</span>
+            <h4>표면 마감</h4>
+            <p>물과 손이 자주 닿는 환경을 고려해 표면과 모서리를 정돈합니다.</p>
+          </div>
+          <div class="process-item">
+            <span class="process-step-num">STEP 04</span>
+            <h4>사용성 검수</h4>
+            <p>비누 거치, 물 빠짐, 세척과 안정성을 확인한 후 최종 형태를 완성합니다.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       04. MATERIALITY (#materials)
+       ========================================================================== -->
+  <section id="materials" class="section-padding materials-section">
+    <div class="container">
+      <span class="chapter-badge">03 · MATERIALITY</span>
+      <h2 class="section-title">오래 쓰기 위해 선택한<br>세 가지 소재.</h2>
+      <p class="section-desc">
+        물과 자주 만나도 쉽게 형태가 변하지 않고, 사용할수록 공간에 자연스럽게 어우러지는 소재를 선택했습니다.<br><br>
+        화강석의 묵직함, 백자의 정갈함, 강화유리의 투명함은 서로 다른 질감으로 빛과 물에 반응하며 SOAPHE의 형태와 쓰임을 완성합니다.
+      </p>
+
+      <!-- 소재 선택 기준 3개 -->
+      <div class="standard-pills-row">
+        <article class="standard-pill-card">
+          <span class="standard-pill-num">01</span>
+          <p>물과 자주 만나는 환경에서도 안정적으로 사용할 수 있을 것.</p>
+        </article>
+        <article class="standard-pill-card">
+          <span class="standard-pill-num">02</span>
+          <p>작은 공간에 놓였을 때 시각적으로 단정할 것.</p>
+        </article>
+        <article class="standard-pill-card">
+          <span class="standard-pill-num">03</span>
+          <p>비누 사용 후에도 다른 쓰임으로 이어질 수 있을 것.</p>
+        </article>
+      </div>
+
+      <!-- 소재별 감각과 공간 적합성 카드 3종 -->
+      <div class="materials-cards-grid">
+        <!-- 1. 화강석 -->
+        <article class="material-intro-card">
+          <div class="mat-specimen-placeholder" role="img" aria-label="화강석 트레이 질감 화보 자리">
+            <span class="storyboard-badge">[소재 화보: 화강석]</span>
+            <span style="font-size: 12px; color: var(--text-muted);">GRANITE TEXTURE</span>
+          </div>
+          <h3>01 · 화강석</h3>
+          <span class="material-sub-tag">공간의 중심을 잡는 묵직함</span>
+          <p>
+            자연석 고유의 무게와 결이 세면대 위에서 안정적인 인상을 만듭니다. 물이 닿으면 더욱 선명하게 드러나는 돌의 표정이 단단하고 고요한 분위기를 더합니다.
+          </p>
+        <a class="plain material-collection-link" href="SOAPHE_category.html?category=object&amp;subcategory=soapdish&amp;material=granite#catalog-filters" aria-label="화강석 비누 받침 컬렉션 보기">화강석 컬렉션 보기 →</a>
+</article>
+
+        <!-- 2. 백자 -->
+        <article class="material-intro-card">
+          <div class="mat-specimen-placeholder" role="img" aria-label="백자 도자기 트레이 질감 화보 자리">
+            <span class="storyboard-badge">[소재 화보: 백자]</span>
+            <span style="font-size: 12px; color: var(--text-muted);">PORCELAIN WARMTH</span>
+          </div>
+          <h3>02 · 백자</h3>
+          <span class="material-sub-tag">부드럽고 정갈한 온기</span>
+          <p>
+            백자의 매끄러운 표면과 차분한 색감은 물과 거품을 깔끔하게 받아냅니다. 따뜻한 욕실과 파우더룸에 자연스럽게 어우러집니다.
+          </p>
+        <a class="plain material-collection-link" href="SOAPHE_category.html?category=object&amp;subcategory=soapdish&amp;material=ceramic#catalog-filters" aria-label="백자 비누 받침 컬렉션 보기">백자 컬렉션 보기 →</a>
+</article>
+
+        <!-- 3. 강화유리 -->
+        <article class="material-intro-card">
+          <div class="mat-specimen-placeholder" role="img" aria-label="강화유리 트레이 질감 화보 자리">
+            <span class="storyboard-badge">[소재 화보: 강화유리]</span>
+            <span style="font-size: 12px; color: var(--text-muted);">TEMPERED GLASS LIGHT</span>
+          </div>
+          <h3>03 · 강화유리</h3>
+          <span class="material-sub-tag">빛을 머금는 투명함</span>
+          <p>
+            투명한 유리는 빛을 통과시키며 작은 공간의 답답함을 덜어냅니다. 조명과 자연광에 따라 달라지는 맑은 표정을 보여줍니다.
+          </p>
+        <a class="plain material-collection-link" href="SOAPHE_category.html?category=object&amp;subcategory=soapdish&amp;material=glass#catalog-filters" aria-label="강화유리 비누 받침 컬렉션 보기">강화유리 컬렉션 보기 →</a>
+</article>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       05. DAILY RITUAL (#ritual)
+       ========================================================================== -->
+  <section id="ritual" class="section-padding ritual-section">
+    <div class="container">
+      <span class="chapter-badge">04 · DAILY RITUAL</span>
+      <h2 class="section-title">손을 씻는 짧은 순간이<br>하루를 정돈하는 시간이 되도록.</h2>
+      <p class="section-desc">
+        비누를 손에 올리고, 물과 함께 거품을 만들고, 사용한 비누를 다시 오브제 위에 내려놓는 짧은 과정.<br><br>
+        SOAPHE는 반복되는 손 씻기의 시간을 잠시 감각에 집중하는 작은 리추얼로 바꿉니다.
+      </p>
+
+      <!-- 3단계 리추얼 시퀀스 -->
+      <div class="ritual-flow-grid">
+        <article class="ritual-step-card">
+          <div class="ritual-media-box" role="img" aria-label="비누를 집어 드는 촉각 경험 컷">
+            <span class="storyboard-badge">[리추얼 1단계: TOUCH]</span>
+            <span style="font-size: 12.5px; color: var(--text-muted);">단단한 비누의 첫 감촉</span>
+          </div>
+          <div class="ritual-body-box">
+            <span class="ritual-step-code">STEP 01 · TOUCH</span>
+            <h4>손에 닿는 단단한 비누의 감촉</h4>
+            <p>손끝으로 느껴지는 차분한 무게감과 단단한 질감에 집중합니다.</p>
+          </div>
+        </article>
+
+        <article class="ritual-step-card">
+          <div class="ritual-media-box" role="img" aria-label="거품과 향을 경험하는 순간 컷">
+            <span class="storyboard-badge">[리추얼 2단계: BREATHE]</span>
+            <span style="font-size: 12.5px; color: var(--text-muted);">거품과 은은한 향의 호흡</span>
+          </div>
+          <div class="ritual-body-box">
+            <span class="ritual-step-code">STEP 02 · BREATHE</span>
+            <h4>물과 함께 피어나는 거품과 은은한 향</h4>
+            <p>따뜻한 물과 만나 부드럽게 일어나는 거품 속에서 깊은 숨을 쉽니다.</p>
+          </div>
+        </article>
+
+        <article class="ritual-step-card">
+          <div class="ritual-media-box" role="img" aria-label="사용한 비누를 오브제에 내려놓는 정돈 컷">
+            <span class="storyboard-badge">[리추얼 3단계: REST]</span>
+            <span style="font-size: 12.5px; color: var(--text-muted);">오브제 위 단정한 안식</span>
+          </div>
+          <div class="ritual-body-box">
+            <span class="ritual-step-code">STEP 03 · REST</span>
+            <h4>사용한 비누가 단정하게 머무는 자리</h4>
+            <p>비누를 오브제 위에 다시 올려두며 손과 마음을 깨끗이 정돈합니다.</p>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <p style="font-size: 15px; color: var(--text-muted); margin: 0;">
+          하루의 시작과 끝에 반복되는 작은 행동이 공간과 마음을 정돈합니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       06. SECOND LIFE (#second-life)
+       ========================================================================== -->
+  <section id="second-life" class="section-padding second-life-section">
+    <div class="container">
+      <span class="chapter-badge">05 · SECOND LIFE</span>
+      <h2 class="section-title">비누가 떠난 자리에서<br>새로운 쓰임이 시작됩니다.</h2>
+      <p class="section-desc">
+        비누를 모두 사용한 뒤에는 오브제를 깨끗이 세척해 생활 트레이로 사용할 수 있습니다.<br><br>
+        욕실에서 현관과 서재, 파우더룸으로 자리를 옮기며 매일 사용하는 작은 물건들을 정돈합니다.
+      </p>
+
+      <div class="second-life-layout">
+        <div>
+          <div class="dual-use-box">
+            <div class="dual-use-item">
+              <span class="dual-use-tag">USE 01 · SOAP</span>
+              <b>비누를 사용하는 동안</b>
+            </div>
+            <div class="dual-use-item">
+              <span class="dual-use-tag">USE 02 · OBJECT</span>
+              <b>비누가 사라진 이후</b>
+            </div>
+          </div>
+
+          <div class="spaces-list">
+            <article class="space-item">
+              <b>01 · 욕실</b>
+              <p>새로운 비누나 페이셜 바를 올려두는 받침으로 계속 사용할 수 있습니다.</p>
+            </article>
+            <article class="space-item">
+              <b>02 · 현관</b>
+              <p>차 키, 안경, 반지처럼 외출할 때 자주 사용하는 물건을 단정하게 정리합니다.</p>
+            </article>
+            <article class="space-item">
+              <b>03 · 서재와 파우더룸</b>
+              <p>필기구와 작은 문구류, 주얼리를 올려두는 생활 트레이로 쓰임을 이어갑니다.</p>
+            </article>
+          </div>
+
+          <p style="font-family: var(--serif); font-size: 16.5px; margin-top: 24px; color: var(--text-main); font-style: italic;">
+            “하나의 형태가 공간을 이동하며 다음 쓰임을 이어갑니다.”
+          </p>
+        </div>
+
+        <div class="storyboard-specimen" style="min-height: 400px;" role="img" aria-label="욕실 비누 받침에서 현관 서재 트레이로 쓰임이 이동하는 연출 컷">
+          <span class="storyboard-badge">[기획 가이드: 두 번째 쓰임 라이프스타일 컷]</span>
+          <b style="font-family: var(--serif); font-size: 18px; margin: 8px 0 4px;">LIFESTYLE TRAY TRANSITION</b>
+          <p style="font-size: 13px; color: var(--text-muted); max-width: 360px; line-height: 1.6; word-break: keep-all;">
+            세면대 위 비누 받침 모습(좌)과 서재 데스크 위 문진·펜 트레이로 활용되는 모습(우)의 2분할 룩북 화보
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       07. GIFTING PHILOSOPHY (#gifting) - 신규 추가
+       ========================================================================== -->
+  <section id="gifting" class="section-padding gifting-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="chapter-badge">06 · GIFTING PHILOSOPHY</span>
+        <h2 class="section-title">오래 남는 온기를 선물하다.</h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          SOAPHE의 선물은 건네는 순간에 끝나지 않습니다.<br><br>
+          비누를 사용하는 동안에는 향과 거품으로 일상에 작은 쉼을 전하고, 비누가 사라진 뒤에는 생활 오브제로 남아 새로운 쓰임을 이어갑니다.<br><br>
+          선물한 사람의 마음이 받는 사람의 공간에 오래 머물도록, 처음의 경험부터 그 이후의 쓰임까지 함께 설계합니다.
+        </p>
+      </div>
+
+      <!-- GIVE → USE → STAY 시간의 흐름 -->
+      <div class="gifting-timeline-grid">
+        <article class="gifting-card">
+          <span class="gifting-step-badge">GIVE</span>
+          <h4>온기를 건네는 순간</h4>
+          <p>정갈한 패키지에 마음을 담아 건네는 첫 만남의 설렘</p>
+        </article>
+
+        <article class="gifting-card">
+          <span class="gifting-step-badge">USE</span>
+          <h4>매일의 일상에서 사용하는 시간</h4>
+          <p>비누 거품과 향으로 하루의 피로를 씻어내는 일상의 쉼</p>
+        </article>
+
+        <article class="gifting-card">
+          <span class="gifting-step-badge">STAY</span>
+          <h4>오브제로 쓰임이 이어지는 이후</h4>
+          <p>비누가 사라진 뒤에도 공간 한편에서 기억되는 지속적인 쓰임</p>
+        </article>
+      </div>
+
+      <div class="gifting-closing-callout">
+        <p>“사용하는 동안에는 감각으로, 사용한 뒤에는 오브제로 남는 선물.”</p>
+        <button type="button" class="plain primary" id="openGiftBuilder" aria-haspopup="dialog">선물 구성하기 →</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       08. COLLECTION CTA (#collection-cta)
+       ========================================================================== -->
+  <section id="collection-cta" class="brand-closing-cta" aria-label="SOAPHE 컬렉션 탐색">
+    <div class="container">
+      <span class="chapter-badge">DISCOVER SOAPHE</span>
+      <h2>오래 머무는 형태를<br>당신의 일상에서 만나보세요.</h2>
+      <p>
+        비누를 사용하는 순간부터 그 이후의 쓰임까지 생각한 SOAPHE의 컬렉션을 살펴보세요.
+      </p>
+      <div class="closing-cta-btns">
+        <a class="plain primary" href="SOAPHE_category.html">
+          SOAPHE 컬렉션 보기 →
+        </a>
+        <a class="plain" href="상품후기_스토리보드.html">
+          실제 공간의 사용 모습 보기
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="footer-logo">SOAPHE</span>
+      <p style="margin: 0; max-width: 380px; line-height: 1.7;">
+        사라지는 비누와 오래 머무는 오브제.<br>
+        사용이 끝난 뒤에도 공간에 남는 온기를 만듭니다.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h5>NAVIGATION</h5>
+      <ul>
+        <li><a href="메인페이지_스토리보드_13차_감성레이아웃.html">메인 홈 (Home)</a></li>
+        <li><a href="#manifesto">브랜드 이야기 (Story)</a></li>
+        <li><a href="SOAPHE_category.html">SOAPHE 컬렉션</a></li>
+        <li><a href="상품후기_스토리보드.html">사용 후기 (Reviews)</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>MATERIALS</h5>
+      <ul>
+        <li><a href="#materials">01. 화강석 (Granite)</a></li>
+        <li><a href="#materials">02. 백자 (Porcelain)</a></li>
+        <li><a href="#materials">03. 강화유리 (Glass)</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- 모바일 하단 빠른 메뉴 바 -->
+<aside class="mobile-bottom-bar" aria-label="모바일 하단 내비게이션">
+  <a class="mobile-bar-btn" href="메인페이지_스토리보드_13차_감성레이아웃.html">
+    <span aria-hidden="true">🏠</span>
+    <span>홈</span>
+  </a>
+  <a class="mobile-bar-btn active" href="#manifesto">
+    <span aria-hidden="true">📖</span>
+    <span>스토리</span>
+  </a>
+  <a class="mobile-bar-btn" href="#design">
+    <span aria-hidden="true">📐</span>
+    <span>설계</span>
+  </a>
+  <a class="mobile-bar-btn" href="#materials">
+    <span aria-hidden="true">🪨</span>
+    <span>소재</span>
+  </a>
+  <a class="mobile-bar-btn" href="SOAPHE_category.html">
+    <span aria-hidden="true">🛍️</span>
+    <span>컬렉션</span>
+  </a>
+</aside>
+
+<!-- JavaScript: 서브 내비게이션 스크롤 스파이 -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const subNavLinks = document.querySelectorAll('.sub-story-nav a[href^="#"]');
+  const sections = document.querySelectorAll('main > section[id]');
+
+  window.addEventListener('scroll', () => {
+    let currentId = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 140;
+      const sectionHeight = section.offsetHeight;
+      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        currentId = section.getAttribute('id');
+      }
+    });
+
+    subNavLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentId}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+});
+</script>
+
+
+<script>
+/* 4대 조향 실시간 동기화 데이터 및 스위처 */
+const scentDataStore = {
+  cypress: {
+    code: 'FORM 01 · CYPRESS & MOSS',
+    title: '01 편백 & 이끼',
+    poem: '“비 온 뒤 축축한 숲길을 걷는 듯한 서늘하고 깊은 고요함.<br>일상의 소란을 잠재우고 하루의 시작과 끝을 정갈하게 가라앉힙니다.”',
+    moment: '이른 아침 첫 세안으로 밤사이 쌓인 유분을 씻어내고 맑은 호흡으로 하루를 깨울 때',
+    gaugeDots: '● ● ● ○ ○',
+    gaugeText: '은은하고 차분한 숲의 잔향',
+    notes: [
+      { type: 'TOP', desc: '편백 잎 · 야생 솔잎 · 유칼립투스' },
+      { type: 'HEART', desc: '젖은 이끼 · 국내산 편백 오일 · 시더우드' },
+      { type: 'BASE', desc: '샌달우드 · 축축한 흙내음 (8시간 잔향)' }
+    ],
+    skin: '지복합성 · 모공 피지 정돈 / 4주 저온숙성이 빚은 조밀하고 미세한 보습 거품',
+    price: '₩18,000',
+    bgTag: '[배경 이미지/영상 삽입 예정: 편백 숲의 새벽 안개와 빛]',
+    bgColor: 'radial-gradient(circle at center, rgba(116, 180, 155, 0.16) 0%, rgba(247, 243, 235, 0.6) 70%, #ffffff 100%)',
+    pebbleColor: '#e4ece6',
+    productId: 'FORM 01'
+  },
+  amber: {
+    code: 'FORM 02 · WARM EMBER',
+    title: '02 웜 앰버',
+    poem: '“노을빛 흙과 마른 리넨 섬유의 포근한 결에서 피어나는 깊은 온기.<br>지친 하루를 감싸 안아주는 따뜻한 쉼표를 선사합니다.”',
+    moment: '하루의 피로를 녹이며 맞이하는 깊은 밤 따뜻한 온수 샤워 리츄얼',
+    gaugeDots: '● ● ● ● ○',
+    gaugeText: '묵직하고 포근한 잔향',
+    notes: [
+      { type: 'TOP', desc: '스위트 오렌지 · 시나몬 바크' },
+      { type: 'HEART', desc: '일랑일랑 · 시더우드 · 앰버 레진' },
+      { type: 'BASE', desc: '파출리 · 통카빈 · 샌달우드 (10시간 잔향)' }
+    ],
+    skin: '건성 · 속당김 완화 / 풍부한 시어버터가 피부 장벽을 감싸는 리치 보습',
+    price: '₩18,000',
+    bgTag: '[배경 이미지/영상 삽입 예정: 따뜻한 벽난로 장작과 노을빛]',
+    bgColor: 'radial-gradient(circle at center, rgba(235, 120, 38, 0.14) 0%, rgba(247, 243, 235, 0.6) 70%, #ffffff 100%)',
+    pebbleColor: '#ebd9cb',
+    productId: 'FORM 02'
+  },
+  yuja: {
+    code: 'FORM 03 · FRESH YUJA',
+    title: '03 맑은 유자',
+    poem: '“갓 수확한 유자 껍질에서 터져 나오는 노란 과즙의 투명한 빛.<br>무기력했던 아침의 감각을 경쾌하고 단정하게 깨워줍니다.”',
+    moment: '나른한 오후 기분 전환이 필요할 때, 맑은 에너지로 감각을 리프레시할 때',
+    gaugeDots: '● ● ○ ○ ○',
+    gaugeText: '산뜻하고 경쾌한 시트러스',
+    notes: [
+      { type: 'TOP', desc: '남해 생유자 껍질 · 베르가못' },
+      { type: 'HEART', desc: '레몬그라스 · 자몽 블로섬' },
+      { type: 'BASE', desc: '화이트 머스크 · 맑은 앰버 (6시간 잔향)' }
+    ],
+    skin: '모든 피부 · 칙칙한 피부 톤업 / 비타민 C 유자 오일의 생기 클렌징',
+    price: '₩18,000',
+    bgTag: '[배경 이미지/영상 삽입 예정: 새벽 햇살을 머금은 노란 유자밭]',
+    bgColor: 'radial-gradient(circle at center, rgba(243, 198, 35, 0.15) 0%, rgba(247, 243, 235, 0.6) 70%, #ffffff 100%)',
+    pebbleColor: '#f1ebd5',
+    productId: 'FORM 03'
+  },
+  unscented: {
+    code: 'FORM 04 · PURE SILENCE',
+    title: '04 순수 무향',
+    poem: '“인공의 향도 억지스러운 장식도 비워낸 가장 순수한 자연의 여백.<br>오직 물과 비누 본연의 거품만이 피부를 고요하게 감쌉니다.”',
+    moment: '자극에 취약한 아침 세안, 영유아 및 향에 민감한 일상의 순간',
+    gaugeDots: '○ ○ ○ ○ ○',
+    gaugeText: '자극 없는 순수 무향',
+    notes: [
+      { type: 'TOP', desc: '순수 식물성 원료 무첨가' },
+      { type: 'HEART', desc: '식물성 글리세린 100% 보습 거품' },
+      { type: 'BASE', desc: '엑스트라 버진 올리브 오일 보습막' }
+    ],
+    skin: '극민감성 · 아토피 취약 피부 / 무자극 천연 글리세린 순수 보습막',
+    price: '₩18,000',
+    bgTag: '[배경 이미지/영상 삽입 예정: 순수한 올리브 오일의 고요한 물결]',
+    bgColor: 'radial-gradient(circle at center, rgba(142, 137, 129, 0.12) 0%, rgba(247, 243, 235, 0.6) 70%, #ffffff 100%)',
+    pebbleColor: '#f3efe8',
+    productId: 'FORM 04'
+  }
+};
+
+function switchScent(scentKey) {
+  const d = scentDataStore[scentKey];
+  if (!d) return;
+
+  // 1. Update Tabs
+  document.querySelectorAll('.scent-tab-btn').forEach(btn => {
+    const isTarget = btn.getAttribute('data-scent') === scentKey;
+    btn.classList.toggle('active', isTarget);
+    btn.setAttribute('aria-selected', isTarget ? 'true' : 'false');
+  });
+
+  // 2. Smooth Fade Transition
+  const narrative = document.getElementById('scentNarrativeFlow');
+  if (narrative) narrative.style.opacity = '0.4';
+
+  setTimeout(() => {
+    // Update Narrative
+    document.getElementById('scentCodeLabel').textContent = d.code;
+    document.getElementById('scentTitle').textContent = d.title;
+    document.getElementById('scentPoem').innerHTML = d.poem;
+    document.getElementById('scentMoment').textContent = d.moment;
+    document.getElementById('scentGaugeDots').textContent = d.gaugeDots;
+    document.getElementById('scentGaugeText').textContent = d.gaugeText;
+    document.getElementById('scentSkin').textContent = d.skin;
+    document.getElementById('scentPrice').textContent = d.price;
+
+    // Update Notes Stack
+    const notesWrap = document.getElementById('scentNotesStack');
+    if (notesWrap) {
+      notesWrap.innerHTML = d.notes.map(n => `<div class="note-line"><b>${n.type}</b><span>${n.desc}</span></div>`).join('');
+    }
+
+    // Update Left Canvas Ambient & Pebble
+    const ambientBg = document.getElementById('scentAmbientBg');
+    if (ambientBg) ambientBg.style.background = d.bgColor;
+    
+    const ambientTag = document.getElementById('ambientVisualTag');
+    if (ambientTag) ambientTag.textContent = d.bgTag;
+
+    const pebble = document.getElementById('pebbleBody');
+    if (pebble) pebble.style.background = d.pebbleColor;
+
+    const addBtn = document.getElementById('scentAddBtn');
+    if (addBtn) addBtn.setAttribute('onclick', `openProductModalDirect('${d.productId}')`);
+
+    if (narrative) narrative.style.opacity = '1';
+  }, 120);
+}
+</script>
+
+
+<dialog id="giftBuilder" aria-labelledby="giftTitle"><form id="giftForm"><div class="gift-heading"><div><small>SOAPHE · YOUR GIFT</small><h2 id="giftTitle">마음을 담아, 선물 구성하기</h2></div><button type="button" class="plain" id="closeGiftBuilder" aria-label="선물 구성 닫기">닫기 ×</button></div><p>비누 1개와 받침 1개를 골라 나만의 선물 세트를 구성해 보세요.</p><fieldset><legend>01 · 비누 선택</legend><div class="gift-options"><label class="gift-option"><input type="radio" name="giftSoap" value="순수 무향 비누" required><span>순수 무향 비누</span></label><label class="gift-option"><input type="radio" name="giftSoap" value="편백 숲 비누" required><span>편백 숲 비누</span></label><label class="gift-option"><input type="radio" name="giftSoap" value="웜 앰버 비누" required><span>웜 앰버 비누</span></label><label class="gift-option"><input type="radio" name="giftSoap" value="맑은 유자 비누" required><span>맑은 유자 비누</span></label><label class="gift-option"><input type="radio" name="giftSoap" value="차콜 솔트 딥클렌징 비누" required><span>차콜 솔트 딥클렌징 비누</span></label></div></fieldset><fieldset><legend>02 · 받침 선택</legend><div class="gift-options"><label class="gift-option"><input type="radio" name="giftTray" value="천연 화강석 시그니처 아치" required><span>천연 화강석 시그니처 아치</span></label><label class="gift-option"><input type="radio" name="giftTray" value="천연 화강석 시그니처 아치 (페일 그레이)" required><span>천연 화강석 시그니처 아치 (페일 그레이)</span></label><label class="gift-option"><input type="radio" name="giftTray" value="백자 도자기 폴드 오브제" required><span>백자 도자기 폴드 오브제</span></label><label class="gift-option"><input type="radio" name="giftTray" value="백자 도자기 폴드 오브제 (클리어 글레이즈)" required><span>백자 도자기 폴드 오브제 (클리어 글레이즈)</span></label><label class="gift-option"><input type="radio" name="giftTray" value="플루티드 강화유리 헤일로" required><span>플루티드 강화유리 헤일로</span></label><label class="gift-option"><input type="radio" name="giftTray" value="블로잉 강화유리 헤일로 오브제 (프로스트)" required><span>블로잉 강화유리 헤일로 오브제 (프로스트)</span></label></div></fieldset><div class="gift-summary" aria-live="polite"><strong>나의 선물 구성</strong><div id="giftSummary">비누와 받침을 선택해 주세요.</div></div><div class="gift-actions"><button type="reset" class="plain">선택 초기화</button><button type="submit" class="plain primary">이 구성 저장하기</button></div><p id="giftSaved" role="status"></p></form></dialog>
+<script>
+(()=>{
+const dialog=document.getElementById('giftBuilder'),form=document.getElementById('giftForm'),summary=document.getElementById('giftSummary'),status=document.getElementById('giftSaved'),open=document.getElementById('openGiftBuilder');
+let previousFocus;
+const selection=()=>({soap:form.elements.giftSoap.value,tray:form.elements.giftTray.value});
+function update(){const v=selection();summary.textContent=`비누: ${v.soap||'선택 전'} / 받침: ${v.tray||'선택 전'}`;status.textContent='';}
+open.addEventListener('click',()=>{previousFocus=document.activeElement;dialog.showModal();});
+document.getElementById('closeGiftBuilder').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(e.target===dialog&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))dialog.close();});
+dialog.addEventListener('close',()=>previousFocus?.focus({preventScroll:true}));
+form.addEventListener('change',update);form.addEventListener('reset',()=>{setTimeout(update,0);try{localStorage.removeItem('soapheGiftConfiguration');}catch(_) {}});
+form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;try{localStorage.setItem('soapheGiftConfiguration',JSON.stringify(selection()));status.textContent='선물 구성을 이 브라우저에 저장했어요.';}catch(_){status.textContent='브라우저 저장을 사용할 수 없어요. 현재 선택한 구성은 팝업에서 확인할 수 있어요.'}});
+try{const saved=JSON.parse(localStorage.getItem('soapheGiftConfiguration')||'null');if(saved){for(const [key,name] of [['soap','giftSoap'],['tray','giftTray']]){for(const input of form.querySelectorAll(`input[name="${name}"]`))input.checked=input.value===saved[key];}update();}}catch(_){}
+})();
+</script>
+</body>
+</html>

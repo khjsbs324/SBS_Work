@@ -96,6 +96,7 @@ def inventory(course='A', root=WORK_ROOT):
             # A later run is the authoritative continuation; earlier evidence stays intact.
             _, run, job, state, result = max(runs, key=lambda r: r[0])
             row.update(run=str(run), status=result['status'], post_date=job['post_date'],
+                       meeting_review_status=result['meeting_review_status'], stale_global=result['stale_global'],
                        stale_groups=result['stale_groups'], active_revisions=result.get('active_revisions', []),
                        groups={g: {'stages': list(state['groups'][g]),
                                    'url': state['groups'][g].get('registered', {}).get('url')}
@@ -116,7 +117,7 @@ def write_report(course='A', root=WORK_ROOT):
     lines = ['# 회의록 및 지원내역 작업 현황', '',
              'queue/report가 작업대상·실행 기록에서 생성한다. 수동으로 완료 처리하지 않는다.', '',
              f"과정: {course}반 · 생성 시각: {report['generated_at']}", '',
-             '| 능력단위 | 상태 | A그룹 | B그룹 | C그룹 |', '|---|---|---|---|---|']
+             '| 능력단위 | 상태 | 회의록 | A그룹 | B그룹 | C그룹 |', '|---|---|---|---|---|---|']
     for row in report['units']:
         links = []
         for g in GROUPS:
@@ -126,7 +127,12 @@ def write_report(course='A', root=WORK_ROOT):
                 url = next((p.get('post_url') for p in row['prior_posts'] if p['group'] == g), None)
             label = '검증 기록' if 'verified' in info.get('stages', []) else '이전 기록'
             links.append(f'[{label}]({url})' if url else '—')
-        lines.append('| ' + ' | '.join([row['unit'].replace('|', '\\|'), labels[row['status']]] + links) + ' |')
+        meeting_labels = {'legacy': '이전 기록·재개 시 검수', 'unreviewed': '검수 전',
+                          'review_required': '재검수 필요', 'drafted': '로컬 초안 검수',
+                          'existing': '기존 회의록 검수', 'created': '작성·저장 확인',
+                          'updated': '수정·저장 확인', 'skipped': '초안 검수·저장 제외'}
+        meeting = meeting_labels.get(row.get('meeting_review_status'), '현재 확인 필요')
+        lines.append('| ' + ' | '.join([row['unit'].replace('|', '\\|'), labels[row['status']], meeting] + links) + ' |')
     lines += ['', '완료 기록은 당시 검증 결과다. 실제 재개·수정 시 현재 LMS를 다시 확인한다.',
               'A반 안의 A·B·C 지원 그룹을 표시한다. B반은 현재 일괄 작업 범위에 포함하지 않는다.', '']
     path = root / '작업현황.md'

@@ -1,0 +1,29 @@
+{
+  "unit": "스마트문화앱 UI 디자인",
+  "lcode": "14",
+  "unit_end_date": "2026-10-19",
+  "evaluation_date": "2026-10-19",
+  "reassessment_date": "-",
+  "view": {
+    "회의제목": [
+      "평가결과 분석 회의",
+      "회의일시",
+      ""
+    ],
+    "평가결과 분석내용": [
+      ""
+    ],
+    "개선사항": [
+      ""
+    ]
+  },
+  "form": {
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=14",
+    "date": "",
+    "analysis": "",
+    "improvement": "",
+    "Pcode": "300002",
+    "Lcode": "14"
+  },
+  "checked_at": "2026-10-29T02:41:02.145Z"
+}

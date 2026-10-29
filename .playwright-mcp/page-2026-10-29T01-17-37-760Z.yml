@@ -1,0 +1,481 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: 김혜지
+        - generic [ref=e12]:
+          - button "정보수정" [ref=e13] [cursor=pointer]
+          - button "비번변경" [ref=e14] [cursor=pointer]
+          - button "PIN변경" [ref=e15] [cursor=pointer]
+      - list [ref=e16]:
+        - listitem [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]:
+            - generic [aria-hidden] [ref=e19]: 
+            - text: 훈련과정
+        - listitem [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]:
+            - generic [aria-hidden] [ref=e22]: 
+            - text: 공지사항
+      - list [ref=e23]:
+        - listitem [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]:
+            - paragraph [ref=e26]:
+              - generic [aria-hidden] [ref=e27]: 
+            - paragraph [ref=e28]: 고객센터
+        - listitem [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]:
+            - paragraph [ref=e31]:
+              - generic [aria-hidden] [ref=e32]: 
+            - paragraph [ref=e33]: 카톡문의
+    - generic [ref=e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=e35]:
+        - caption [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=e48]:
+          - row [ref=e49]:
+            - cell "개강일" [ref=e50]
+            - cell "2026-05-20" [ref=e51]
+            - cell "종강일" [ref=e52]
+            - cell "2026-12-04" [ref=e53]
+            - cell "강사" [ref=e54]
+            - cell "김가경, 김혜지" [ref=e55]
+          - row [ref=e56]:
+            - cell "실시인원" [ref=e57]
+            - cell "11" [ref=e58]
+            - cell "수강인원" [ref=e59]
+            - cell "9" [ref=e60]
+            - cell "수강포기인원" [ref=e61]
+            - cell "2" [ref=e62]
+      - list [ref=e63]:
+        - listitem [ref=e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=e65]
+        - listitem [ref=e66] [cursor=pointer]:
+          - generic "시간표" [ref=e67]
+        - listitem [ref=e68] [cursor=pointer]:
+          - generic "훈련생" [ref=e69]
+        - listitem [ref=e70] [cursor=pointer]:
+          - generic "사전평가" [ref=e71]
+        - listitem [ref=e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=e73]
+        - listitem [ref=e74] [cursor=pointer]:
+          - generic "출석현황" [ref=e75]
+        - listitem [ref=e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=e77]
+        - listitem [ref=e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=e79]
+        - listitem [ref=e80] [cursor=pointer]:
+          - generic "상담일지" [ref=e81]
+        - listitem [ref=e82] [cursor=pointer]:
+          - generic "이의신청" [ref=e83]
+        - listitem [ref=e84] [cursor=pointer]:
+          - generic "보충수업" [ref=e85]
+        - listitem [ref=e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=e87]
+        - listitem [ref=e88] [cursor=pointer]:
+          - generic "교재관리" [ref=e89]
+        - listitem [ref=e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=e91]
+        - listitem [ref=e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=e93]
+        - listitem [ref=e94] [cursor=pointer]:
+          - generic "지원내역" [ref=e95]
+        - listitem [ref=e96] [cursor=pointer]:
+          - generic "과제" [ref=e97]
+        - listitem [ref=e98] [cursor=pointer]:
+          - generic "서식공유" [ref=e99]
+        - listitem [ref=e100] [cursor=pointer]:
+          - generic [ref=e101]: 게시판생성
+        - listitem [ref=e102] [cursor=pointer]:
+          - generic [ref=e103]: 게시판순서변경
+      - table "종합평가 삭제하기 종합평가 등록하기" [ref=e104]:
+        - caption [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]: 종합평가
+            - generic [ref=e109]:
+              - button "삭제하기" [ref=e110] [cursor=pointer]
+              - link "종합평가 등록하기" [ref=e111] [cursor=pointer]:
+                - /url: "#"
+        - rowgroup [ref=e112]:
+          - row [ref=e113]:
+            - cell [ref=e114]:
+              - generic "A chart." [ref=e118]:
+                - img "A chart." [ref=e119]:
+                  - generic [ref=e121]:
+                    - generic [ref=e123]: 사전평가
+                    - generic [ref=e128]: 수행평가
+                  - generic [ref=e181]:
+                    - generic [ref=e182]:
+                      - generic [ref=e183]: 시각디자인 리
+                      - generic [ref=e184]: 서치 조사
+                    - generic [ref=e185]: 구현
+                    - generic [ref=e187]:
+                      - generic [ref=e188]: 시각디자인 리
+                      - generic [ref=e189]: 서치 분석
+                    - generic [ref=e190]: 구현 응용
+                    - generic [ref=e192]:
+                      - generic [ref=e193]: 시안 디자인 개
+                      - generic [ref=e194]: 발 심화
+                    - generic [ref=e195]:
+                      - generic [ref=e196]: 디자인 구성요
+                      - generic [ref=e197]: 소 설계
+                    - generic [ref=e198]: 수정 보완
+                    - generic [ref=e200]:
+                      - generic [ref=e201]: 디자인 구성요
+                      - generic [ref=e202]: 소 제작
+                    - generic [ref=e203]:
+                      - generic [ref=e204]: 디지털디자인
+                      - generic [ref=e205]: 사후관리
+                    - generic [ref=e206]:
+                      - generic [ref=e207]: 서비스ㆍ경험디
+                      - generic [ref=e208]: 자인 관찰조사
+                    - generic [ref=e209]:
+                      - generic [ref=e210]: 서비스ㆍ경험디
+                      - generic [ref=e211]: 자인 시나리오
+                      - generic [ref=e212]: 개발
+                    - generic [ref=e213]:
+                      - generic [ref=e214]: 스마트문화앱
+                      - generic [ref=e215]: UI 디자인
+                    - generic [ref=e216]:
+                      - generic [ref=e217]: 프로토타입 기
+                      - generic [ref=e218]: 초데이터 수집
+                      - generic [ref=e219]: 및 스케치
+                    - generic [ref=e220]:
+                      - generic [ref=e221]: 프로토타입 제
+                      - generic [ref=e222]: 작 및 사용성 테
+                      - generic [ref=e223]: 스트
+                    - generic [ref=e224]:
+                      - generic [ref=e225]: (비NCS 실
+                      - generic [ref=e226]: 기)AI 기획과 발
+                      - generic [ref=e227]: 상
+                    - generic [ref=e228]:
+                      - generic [ref=e229]: (비NCS 실기)
+                      - generic [ref=e230]: 취업포트폴리오
+                      - generic [ref=e231]: 제작
+                    - generic [ref=e232]: "0"
+                    - generic [ref=e234]: "20"
+                    - generic [ref=e236]: "40"
+                    - generic [ref=e238]: "60"
+                    - generic [ref=e240]: "80"
+                    - generic [ref=e242]: "100"
+                - generic "A tabular representation of the data in the chart." [ref=e244]:
+                  - table [ref=e245]:
+                    - rowgroup [ref=e246]:
+                      - row [ref=e247]:
+                        - columnheader "능력단위명" [ref=e248]
+                        - columnheader "사전평가" [ref=e249]
+                        - columnheader "수행평가" [ref=e250]
+                    - rowgroup [ref=e251]:
+                      - row [ref=e252]:
+                        - cell "시각디자인 리서치 조사" [ref=e253]
+                        - cell "84.85" [ref=e254]
+                        - cell "65.182" [ref=e255]
+                      - row [ref=e256]:
+                        - cell "구현" [ref=e257]
+                        - cell "57.58" [ref=e258]
+                        - cell "68.545" [ref=e259]
+                      - row [ref=e260]:
+                        - cell "시각디자인 리서치 분석" [ref=e261]
+                        - cell "51.52" [ref=e262]
+                        - cell "81.818" [ref=e263]
+                      - row [ref=e264]:
+                        - cell "구현 응용" [ref=e265]
+                        - cell "51.52" [ref=e266]
+                        - cell "77.455" [ref=e267]
+                      - row [ref=e268]:
+                        - cell "시안 디자인 개발 심화" [ref=e269]
+                        - cell "84.85" [ref=e270]
+                        - cell "78.545" [ref=e271]
+                      - row [ref=e272]:
+                        - cell "디자인 구성요소 설계" [ref=e273]
+                        - cell "90.91" [ref=e274]
+                        - cell "73.364" [ref=e275]
+                      - row [ref=e276]:
+                        - cell "수정 보완" [ref=e277]
+                        - cell "81.82" [ref=e278]
+                        - cell "79" [ref=e279]
+                      - row [ref=e280]:
+                        - cell "디자인 구성요소 제작" [ref=e281]
+                        - cell "78.79" [ref=e282]
+                        - cell "91.4" [ref=e283]
+                      - row [ref=e284]:
+                        - cell "디지털디자인 사후관리" [ref=e285]
+                        - cell "72.73" [ref=e286]
+                        - cell "78.2" [ref=e287]
+                      - row [ref=e288]:
+                        - cell "서비스ㆍ경험디자인 관찰조사" [ref=e289]
+                        - cell "87.88" [ref=e290]
+                        - cell "89.9" [ref=e291]
+                      - row [ref=e292]:
+                        - cell "서비스ㆍ경험디자인 시나리오 개발" [ref=e293]
+                        - cell "72.73" [ref=e294]
+                        - cell "82.333" [ref=e295]
+                      - row [ref=e296]:
+                        - cell "스마트문화앱 UI 디자인" [ref=e297]
+                        - cell "69.7" [ref=e298]
+                        - cell "85.667" [ref=e299]
+                      - row [ref=e300]:
+                        - cell "프로토타입 기초데이터 수집 및 스케치" [ref=e301]
+                        - cell "81.82" [ref=e302]
+                        - cell "79.444" [ref=e303]
+                      - row [ref=e304]:
+                        - cell "프로토타입 제작 및 사용성 테스트" [ref=e305]
+                        - cell "75.76" [ref=e306]
+                        - cell "0" [ref=e307]
+                      - row [ref=e308]:
+                        - cell "(비NCS 실기)AI 기획과 발상" [ref=e309]
+                        - cell "0" [ref=e310]
+                        - cell "0" [ref=e311]
+                      - row [ref=e312]:
+                        - cell "(비NCS 실기)취업포트폴리오 제작" [ref=e313]
+                        - cell "0" [ref=e314]
+                        - cell "0" [ref=e315]
+          - row [ref=e316]:
+            - cell "종합평가의 내용을 등록하지 않았습니다" [ref=e317]
+      - table [ref=e320]:
+        - caption [ref=e321]: 능력단위
+        - rowgroup [ref=e334]:
+          - row [ref=e335]:
+            - columnheader "교과목" [ref=e336]
+            - columnheader "능력단위" [ref=e337]
+            - columnheader "강사" [ref=e338]
+            - columnheader "시작일" [ref=e339]
+            - columnheader "종료일" [ref=e340]
+            - columnheader "본평가" [ref=e341]
+            - columnheader "결석자평가" [ref=e342]
+            - columnheader "재평가" [ref=e343]
+            - columnheader "사전평가" [ref=e344]
+            - columnheader "능력단위" [ref=e345]
+            - columnheader "평가내역" [ref=e346]
+        - rowgroup [ref=e347]:
+          - row [ref=e348]:
+            - cell "(전공)시안 디자인 개발" [ref=e349]
+            - cell "시각디자인 리서치 조사" [ref=e350]
+            - cell "김*지" [ref=e351]
+            - cell "2026-05-21" [ref=e352]
+            - cell "2026-06-05" [ref=e353]
+            - cell "2026-06-05" [ref=e354]
+            - cell "2026-06-08" [ref=e355]
+            - cell "2026-06-10" [ref=e356]
+            - cell "84.85" [ref=e357]
+            - cell "65.18" [ref=e358]
+            - cell [ref=e359]:
+              - link "평가내역" [ref=e360] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=4
+          - row [ref=e361]:
+            - cell "(전공)퍼블리싱 구현 및 수정보완" [ref=e362]
+            - cell "구현" [ref=e363]
+            - cell "김*지" [ref=e364]
+            - cell "2026-05-21" [ref=e365]
+            - cell "2026-06-12" [ref=e366]
+            - cell "2026-06-12" [ref=e367]
+            - cell "-" [ref=e368]
+            - cell "-" [ref=e369]
+            - cell "57.58" [ref=e370]
+            - cell "68.55" [ref=e371]
+            - cell [ref=e372]:
+              - link "평가내역" [ref=e373] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=2
+          - row [ref=e374]:
+            - cell "(전공)시안 디자인 개발" [ref=e375]
+            - cell "시각디자인 리서치 분석" [ref=e376]
+            - cell "김*지" [ref=e377]
+            - cell "2026-06-08" [ref=e378]
+            - cell "2026-06-19" [ref=e379]
+            - cell "2026-06-19" [ref=e380]
+            - cell "-" [ref=e381]
+            - cell "-" [ref=e382]
+            - cell "51.52" [ref=e383]
+            - cell "81.82" [ref=e384]
+            - cell [ref=e385]:
+              - link "평가내역" [ref=e386] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=5
+          - row [ref=e387]:
+            - cell "(전공)퍼블리싱 구현 및 수정보완" [ref=e388]
+            - cell "구현 응용" [ref=e389]
+            - cell "김*경,김*지" [ref=e390]
+            - cell "2026-06-15" [ref=e391]
+            - cell "2026-07-03" [ref=e392]
+            - cell "2026-07-03" [ref=e393]
+            - cell "-" [ref=e394]
+            - cell "-" [ref=e395]
+            - cell "51.52" [ref=e396]
+            - cell "77.45" [ref=e397]
+            - cell [ref=e398]:
+              - link "평가내역" [ref=e399] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=3
+          - row [ref=e400]:
+            - cell "(전공)웹디자인 구성요소 설계 및 제작" [ref=e401]
+            - cell "시안 디자인 개발 심화" [ref=e402]
+            - cell "김*경,김*지" [ref=e403]
+            - cell "2026-06-22" [ref=e404]
+            - cell "2026-07-03" [ref=e405]
+            - cell "2026-07-03" [ref=e406]
+            - cell "-" [ref=e407]
+            - cell "2026-07-06" [ref=e408]
+            - cell "84.85" [ref=e409]
+            - cell "78.55" [ref=e410]
+            - cell [ref=e411]:
+              - link "평가내역" [ref=e412] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=6
+          - row [ref=e413]:
+            - cell "(전공)웹디자인 구성요소 설계 및 제작" [ref=e414]
+            - cell "디자인 구성요소 설계" [ref=e415]
+            - cell "김*지" [ref=e416]
+            - cell "2026-07-06" [ref=e417]
+            - cell "2026-07-24" [ref=e418]
+            - cell "2026-07-24" [ref=e419]
+            - cell "-" [ref=e420]
+            - cell "2026-07-27" [ref=e421]
+            - cell "90.91" [ref=e422]
+            - cell "73.36" [ref=e423]
+            - cell [ref=e424]:
+              - link "평가내역" [ref=e425] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=7
+          - row [ref=e426]:
+            - cell "(전공)퍼블리싱 구현 및 수정보완" [ref=e427]
+            - cell "수정 보완" [ref=e428]
+            - cell "김*지" [ref=e429]
+            - cell "2026-07-06" [ref=e430]
+            - cell "2026-08-18" [ref=e431]
+            - cell "2026-08-18" [ref=e432]
+            - cell "-" [ref=e433]
+            - cell "-" [ref=e434]
+            - cell "81.82" [ref=e435]
+            - cell "79" [ref=e436]
+            - cell [ref=e437]:
+              - link "평가내역" [ref=e438] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=8
+          - row [ref=e439]:
+            - cell "(전공)웹디자인 구성요소 설계 및 제작" [ref=e440]
+            - cell "디자인 구성요소 제작" [ref=e441]
+            - cell "김*지" [ref=e442]
+            - cell "2026-07-24" [ref=e443]
+            - cell "2026-08-20" [ref=e444]
+            - cell "2026-08-20" [ref=e445]
+            - cell "-" [ref=e446]
+            - cell "-" [ref=e447]
+            - cell "78.79" [ref=e448]
+            - cell "91.4" [ref=e449]
+            - cell [ref=e450]:
+              - link "평가내역" [ref=e451] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=9
+          - row [ref=e452]:
+            - cell "(전공)웹디자인 실무 응용 및 사후관리" [ref=e453]
+            - cell "디지털디자인 사후관리" [ref=e454]
+            - cell "김*지" [ref=e455]
+            - cell "2026-08-21" [ref=e456]
+            - cell "2026-08-28" [ref=e457]
+            - cell "2026-08-28" [ref=e458]
+            - cell "-" [ref=e459]
+            - cell "-" [ref=e460]
+            - cell "72.73" [ref=e461]
+            - cell "78.2" [ref=e462]
+            - cell [ref=e463]:
+              - link "평가내역" [ref=e464] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=10
+          - row [ref=e465]:
+            - cell "(전공)서비스 경험 디자인 조사 및 시나리오 개발" [ref=e466]
+            - cell "서비스ㆍ경험디자인 관찰조사" [ref=e467]
+            - cell "김*지" [ref=e468]
+            - cell "2026-08-31" [ref=e469]
+            - cell "2026-09-09" [ref=e470]
+            - cell "2026-09-09" [ref=e471]
+            - cell "-" [ref=e472]
+            - cell "-" [ref=e473]
+            - cell "87.88" [ref=e474]
+            - cell "89.9" [ref=e475]
+            - cell [ref=e476]:
+              - link "평가내역" [ref=e477] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=11
+          - row [ref=e478]:
+            - cell "(전공)서비스 경험 디자인 조사 및 시나리오 개발" [ref=e479]
+            - cell "서비스ㆍ경험디자인 시나리오 개발" [ref=e480]
+            - cell "김*지" [ref=e481]
+            - cell "2026-09-10" [ref=e482]
+            - cell "2026-10-02" [ref=e483]
+            - cell "2026-10-02" [ref=e484]
+            - cell "-" [ref=e485]
+            - cell "-" [ref=e486]
+            - cell "72.73" [ref=e487]
+            - cell "82.33" [ref=e488]
+            - cell [ref=e489]:
+              - link "평가내역" [ref=e490] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=12
+          - row [ref=e491]:
+            - cell "(전공)UI 디자인" [ref=e492]
+            - cell "스마트문화앱 UI 디자인" [ref=e493]
+            - cell "김*경" [ref=e494]
+            - cell "2026-09-01" [ref=e495]
+            - cell "2026-10-19" [ref=e496]
+            - cell "2026-10-19" [ref=e497]
+            - cell "-" [ref=e498]
+            - cell "-" [ref=e499]
+            - cell "69.70" [ref=e500]
+            - cell "85.67" [ref=e501]
+            - cell [ref=e502]:
+              - link "평가내역" [ref=e503] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=14
+          - row [ref=e504]:
+            - cell "(전공)프로토타입 수집 및 제작" [ref=e505]
+            - cell "프로토타입 기초데이터 수집 및 스케치" [ref=e506]
+            - cell "김*경,김*지" [ref=e507]
+            - cell "2026-10-06" [ref=e508]
+            - cell "2026-10-22" [ref=e509]
+            - cell "2026-10-22" [ref=e510]
+            - cell "-" [ref=e511]
+            - cell "-" [ref=e512]
+            - cell "81.82" [ref=e513]
+            - cell "79.44" [ref=e514]
+            - cell [ref=e515]:
+              - link "평가내역" [ref=e516] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=13
+          - row [ref=e517]:
+            - cell "(전공)프로토타입 수집 및 제작" [ref=e518]
+            - cell "프로토타입 제작 및 사용성 테스트" [ref=e519]
+            - cell "김*경,김*지" [ref=e520]
+            - cell "2026-10-23" [ref=e521]
+            - cell "2026-11-03" [ref=e522]
+            - cell "-" [ref=e523]
+            - cell "-" [ref=e524]
+            - cell "-" [ref=e525]
+            - cell "75.76" [ref=e526]
+            - cell "0" [ref=e527]
+            - cell [ref=e528]:
+              - link "평가내역" [ref=e529] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=15
+          - row [ref=e530]:
+            - cell "(비NCS 실기)AI 기획과 발상" [ref=e531]
+            - cell "(비NCS 실기)AI 기획과 발상" [ref=e532]
+            - cell "김*경" [ref=e533]
+            - cell "2026-11-04" [ref=e534]
+            - cell "2026-11-05" [ref=e535]
+            - cell "-" [ref=e536]
+            - cell "-" [ref=e537]
+            - cell "-" [ref=e538]
+            - cell "0" [ref=e539]
+            - cell "0" [ref=e540]
+            - cell [ref=e541]:
+              - link "평가내역" [ref=e542] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=16
+          - row [ref=e543]:
+            - cell "(비NCS 실기)취업포트폴리오 제작" [ref=e544]
+            - cell "(비NCS 실기)취업포트폴리오 제작" [ref=e545]
+            - cell "김*경,김*지" [ref=e546]
+            - cell "2026-11-06" [ref=e547]
+            - cell "2026-12-03" [ref=e548]
+            - cell "-" [ref=e549]
+            - cell "-" [ref=e550]
+            - cell "-" [ref=e551]
+            - cell "0" [ref=e552]
+            - cell "0" [ref=e553]
+            - cell [ref=e554]:
+              - link "평가내역" [ref=e555] [cursor=pointer]:
+                - /url: ./app/index.php?Pcode=300002&Lcode=17

@@ -1,0 +1,33 @@
+{
+  "student": "홍석경",
+  "passed": true,
+  "purpose": "원본 채점과 구분한 메모리 내 수정 예시 검증입니다. 학생 제출 파일은 수정하지 않습니다.",
+  "proposedCss": ".main-banner{height:652px;background:#222 url(\"./image/banner.jpg\") center / cover no-repeat}.banner-inner{width:1400px;height:100%;margin:0 auto;padding-left:120px;box-sizing:border-box;display:flex;align-items:center}.banner-copy{color:#fff}.banner-copy p{margin:0}.banner-title{padding-bottom:24px}.banner-title p{font-size:50px;height:63px}.banner-desc p{font-size:15px;color:#ddd;padding-bottom:5px}",
+  "boxes": [
+    {
+      "viewport": 1920,
+      "width": 1920,
+      "height": 652,
+      "display": "block"
+    },
+    {
+      "viewport": 1440,
+      "width": 1440,
+      "height": 652,
+      "display": "block"
+    }
+  ],
+  "readability": {
+    "title": "홍석경 모나미 구현 피드백",
+    "headings": [
+      "1. 상단 > 빈 공간을 실제 메인헤더로 바꾸기",
+      "2. 메인 비주얼 > 사진만 있는 구조에 브랜드 문구 추가",
+      "3. 메인 비주얼 > 데스크톱 기준 높이 유지"
+    ],
+    "codeBlocks": 7,
+    "viewport": 1440,
+    "documentWidth": 1425,
+    "characters": 2711
+  },
+  "verifiedAt": "2026-10-26T04:37:43.303Z"
+}

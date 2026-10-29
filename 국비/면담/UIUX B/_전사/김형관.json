@@ -1,0 +1,7127 @@
+{
+  "source": "김형관.mp3",
+  "source_sha256": "e241773adc0ee96a7c9fe8a5d1f0daedfed6cf3a2604b818c3316d425d79a37c",
+  "model": ".codex-temp\\interview-models\\large-v3",
+  "language": "ko",
+  "duration_seconds": 785.241875,
+  "duration_after_vad": 701.952,
+  "note": "자동 전사 원문. 화자 자동 분리 및 수동 청취 검수 미실시. 불명확한 발언은 별도 근거 검토에서 구분함.",
+  "complete": true,
+  "segments": [
+    {
+      "id": 1,
+      "start": 0.08,
+      "end": 41.6,
+      "text": "질문 먼저 받을게요. 지금 일단 고등학교 쪽에서 CSS에서 위치 놓는 게 아주 조금 좋은 것 같아요. 리서치 같은 거 할 때 제가 주제를 먼저 정할 때 처음에는 조금 괜찮은 생각이 드는데 시간 지나면 별로인 것 같아요.",
+      "avg_logprob": -0.41837283044025814,
+      "no_speech_prob": 0.1591796875,
+      "words": [
+        {
+          "start": 0.08,
+          "end": 1.24,
+          "word": " 질문",
+          "probability": 0.7344
+        },
+        {
+          "start": 11.54,
+          "end": 11.82,
+          "word": " 먼저",
+          "probability": 0.918
+        },
+        {
+          "start": 11.82,
+          "end": 12.5,
+          "word": " 받을게요.",
+          "probability": 0.9188
+        },
+        {
+          "start": 12.6,
+          "end": 13.42,
+          "word": " 지금",
+          "probability": 0.2028
+        },
+        {
+          "start": 13.62,
+          "end": 13.96,
+          "word": " 일단",
+          "probability": 0.9175
+        },
+        {
+          "start": 13.96,
+          "end": 15.3,
+          "word": " 고등학교",
+          "probability": 0.5979
+        },
+        {
+          "start": 15.3,
+          "end": 16.44,
+          "word": " 쪽에서",
+          "probability": 0.8357
+        },
+        {
+          "start": 16.44,
+          "end": 18.72,
+          "word": " CSS에서",
+          "probability": 0.4606
+        },
+        {
+          "start": 19.8,
+          "end": 21.12,
+          "word": " 위치",
+          "probability": 0.3041
+        },
+        {
+          "start": 21.16,
+          "end": 21.44,
+          "word": " 놓는",
+          "probability": 0.7094
+        },
+        {
+          "start": 21.44,
+          "end": 21.6,
+          "word": " 게",
+          "probability": 0.7793
+        },
+        {
+          "start": 21.6,
+          "end": 21.74,
+          "word": " 아주",
+          "probability": 0.387
+        },
+        {
+          "start": 21.74,
+          "end": 22.04,
+          "word": " 조금",
+          "probability": 0.6396
+        },
+        {
+          "start": 22.13,
+          "end": 22.79,
+          "word": " 좋은",
+          "probability": 0.1305
+        },
+        {
+          "start": 22.79,
+          "end": 23.05,
+          "word": " 것",
+          "probability": 0.386
+        },
+        {
+          "start": 23.05,
+          "end": 23.27,
+          "word": " 같아요.",
+          "probability": 0.5044
+        },
+        {
+          "start": 28.11,
+          "end": 29.03,
+          "word": " 리서치",
+          "probability": 0.7331
+        },
+        {
+          "start": 29.03,
+          "end": 29.49,
+          "word": " 같은",
+          "probability": 0.8687
+        },
+        {
+          "start": 29.49,
+          "end": 29.65,
+          "word": " 거",
+          "probability": 0.9648
+        },
+        {
+          "start": 29.65,
+          "end": 29.79,
+          "word": " 할",
+          "probability": 0.9985
+        },
+        {
+          "start": 29.79,
+          "end": 30.01,
+          "word": " 때",
+          "probability": 0.9937
+        },
+        {
+          "start": 30.01,
+          "end": 30.79,
+          "word": " 제가",
+          "probability": 0.5444
+        },
+        {
+          "start": 31.11,
+          "end": 31.57,
+          "word": " 주제를",
+          "probability": 0.9741
+        },
+        {
+          "start": 31.57,
+          "end": 31.81,
+          "word": " 먼저",
+          "probability": 0.5415
+        },
+        {
+          "start": 31.81,
+          "end": 32.83,
+          "word": " 정할",
+          "probability": 0.7913
+        },
+        {
+          "start": 32.83,
+          "end": 34.59,
+          "word": " 때",
+          "probability": 0.9434
+        },
+        {
+          "start": 35.36,
+          "end": 35.94,
+          "word": " 처음에는",
+          "probability": 0.6765
+        },
+        {
+          "start": 35.94,
+          "end": 36.08,
+          "word": " 조금",
+          "probability": 0.3472
+        },
+        {
+          "start": 36.08,
+          "end": 37.06,
+          "word": " 괜찮은",
+          "probability": 0.9084
+        },
+        {
+          "start": 37.06,
+          "end": 37.26,
+          "word": " 생각이",
+          "probability": 0.4019
+        },
+        {
+          "start": 37.26,
+          "end": 38.08,
+          "word": " 드는데",
+          "probability": 0.9358
+        },
+        {
+          "start": 38.08,
+          "end": 39.2,
+          "word": " 시간",
+          "probability": 0.4302
+        },
+        {
+          "start": 39.2,
+          "end": 40.22,
+          "word": " 지나면",
+          "probability": 0.9774
+        },
+        {
+          "start": 40.22,
+          "end": 41.28,
+          "word": " 별로인",
+          "probability": 0.9641
+        },
+        {
+          "start": 41.28,
+          "end": 41.36,
+          "word": " 것",
+          "probability": 0.9854
+        },
+        {
+          "start": 41.36,
+          "end": 41.6,
+          "word": " 같아요.",
+          "probability": 0.2903
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 42.59,
+      "end": 61.95,
+      "text": "그리고 개인적으로 자신이 떨어지고 그런 게 좀 되는 게 있습니다. 그리고 취업도 조금 몇 년 전에 여기서 B부전 들었었는데 뭐 들으셨어요? 그때는 일반 과정들 들었어요. 일러스트, 포토샵 이중에. 어디로 취업하셨어요?",
+      "avg_logprob": -0.3061079482237498,
+      "no_speech_prob": 0.19873046875,
+      "words": [
+        {
+          "start": 42.59,
+          "end": 42.91,
+          "word": " 그리고",
+          "probability": 0.2791
+        },
+        {
+          "start": 42.91,
+          "end": 44.07,
+          "word": " 개인적으로",
+          "probability": 0.9382
+        },
+        {
+          "start": 44.07,
+          "end": 44.89,
+          "word": " 자신이",
+          "probability": 0.6251
+        },
+        {
+          "start": 44.89,
+          "end": 45.49,
+          "word": " 떨어지고",
+          "probability": 0.8252
+        },
+        {
+          "start": 45.49,
+          "end": 45.69,
+          "word": " 그런",
+          "probability": 0.6113
+        },
+        {
+          "start": 45.69,
+          "end": 45.87,
+          "word": " 게",
+          "probability": 0.6079
+        },
+        {
+          "start": 45.87,
+          "end": 46.01,
+          "word": " 좀",
+          "probability": 0.2389
+        },
+        {
+          "start": 46.01,
+          "end": 46.83,
+          "word": " 되는",
+          "probability": 0.2664
+        },
+        {
+          "start": 46.83,
+          "end": 47.07,
+          "word": " 게",
+          "probability": 0.8701
+        },
+        {
+          "start": 47.07,
+          "end": 47.33,
+          "word": " 있습니다.",
+          "probability": 0.7012
+        },
+        {
+          "start": 48.15,
+          "end": 49.07,
+          "word": " 그리고",
+          "probability": 0.5005
+        },
+        {
+          "start": 49.07,
+          "end": 50.25,
+          "word": " 취업도",
+          "probability": 0.9941
+        },
+        {
+          "start": 50.25,
+          "end": 50.71,
+          "word": " 조금",
+          "probability": 0.7246
+        },
+        {
+          "start": 50.71,
+          "end": 51.83,
+          "word": " 몇",
+          "probability": 0.2556
+        },
+        {
+          "start": 52.18,
+          "end": 52.84,
+          "word": " 년",
+          "probability": 0.9749
+        },
+        {
+          "start": 52.84,
+          "end": 53.04,
+          "word": " 전에",
+          "probability": 0.9282
+        },
+        {
+          "start": 53.04,
+          "end": 53.38,
+          "word": " 여기서",
+          "probability": 0.7617
+        },
+        {
+          "start": 53.38,
+          "end": 54.74,
+          "word": " B부전",
+          "probability": 0.5666
+        },
+        {
+          "start": 54.74,
+          "end": 55.34,
+          "word": " 들었었는데",
+          "probability": 0.8044
+        },
+        {
+          "start": 55.34,
+          "end": 55.84,
+          "word": " 뭐",
+          "probability": 0.6211
+        },
+        {
+          "start": 55.84,
+          "end": 56.3,
+          "word": " 들으셨어요?",
+          "probability": 0.9854
+        },
+        {
+          "start": 56.87,
+          "end": 57.65,
+          "word": " 그때는",
+          "probability": 0.8918
+        },
+        {
+          "start": 57.65,
+          "end": 57.99,
+          "word": " 일반",
+          "probability": 0.9424
+        },
+        {
+          "start": 57.99,
+          "end": 58.39,
+          "word": " 과정들",
+          "probability": 0.6947
+        },
+        {
+          "start": 58.39,
+          "end": 58.73,
+          "word": " 들었어요.",
+          "probability": 0.6941
+        },
+        {
+          "start": 58.93,
+          "end": 59.35,
+          "word": " 일러스트,",
+          "probability": 0.96
+        },
+        {
+          "start": 59.45,
+          "end": 60.17,
+          "word": " 포토샵",
+          "probability": 0.9899
+        },
+        {
+          "start": 60.17,
+          "end": 60.57,
+          "word": " 이중에.",
+          "probability": 0.687
+        },
+        {
+          "start": 60.65,
+          "end": 61.37,
+          "word": " 어디로",
+          "probability": 0.9514
+        },
+        {
+          "start": 61.37,
+          "end": 61.95,
+          "word": " 취업하셨어요?",
+          "probability": 0.9893
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 64.36,
+      "end": 89.52,
+      "text": "금산쪽에.. 아 쌀 맞으시죠? 네 맞아요. 기억났어요. 거기에 있는데 제가 생각하는 디자인 회사가 아니어서.. 면접 때 했던 얘기가.. 다 기억나세요? 이번에는 좀 여름 수업에 관한 대목들 토대로 회사원으로 갈 수 있는 제품으로 가겠습니다.",
+      "avg_logprob": -0.4554794487887866,
+      "no_speech_prob": 0.1661376953125,
+      "words": [
+        {
+          "start": 64.36,
+          "end": 65.44,
+          "word": " 금산쪽에..",
+          "probability": 0.5166
+        },
+        {
+          "start": 65.44,
+          "end": 66.0,
+          "word": " 아",
+          "probability": 0.489
+        },
+        {
+          "start": 66.0,
+          "end": 66.52,
+          "word": " 쌀",
+          "probability": 0.6538
+        },
+        {
+          "start": 66.52,
+          "end": 67.88,
+          "word": " 맞으시죠?",
+          "probability": 0.8869
+        },
+        {
+          "start": 68.0,
+          "end": 68.16,
+          "word": " 네",
+          "probability": 0.3716
+        },
+        {
+          "start": 68.16,
+          "end": 68.3,
+          "word": " 맞아요.",
+          "probability": 0.4375
+        },
+        {
+          "start": 68.3,
+          "end": 69.16,
+          "word": " 기억났어요.",
+          "probability": 0.8354
+        },
+        {
+          "start": 69.26,
+          "end": 69.92,
+          "word": " 거기에",
+          "probability": 0.4803
+        },
+        {
+          "start": 69.92,
+          "end": 70.14,
+          "word": " 있는데",
+          "probability": 0.6816
+        },
+        {
+          "start": 70.14,
+          "end": 71.24,
+          "word": " 제가",
+          "probability": 0.3989
+        },
+        {
+          "start": 71.24,
+          "end": 72.02,
+          "word": " 생각하는",
+          "probability": 0.822
+        },
+        {
+          "start": 72.02,
+          "end": 72.5,
+          "word": " 디자인",
+          "probability": 0.9319
+        },
+        {
+          "start": 72.5,
+          "end": 72.84,
+          "word": " 회사가",
+          "probability": 0.7778
+        },
+        {
+          "start": 72.84,
+          "end": 73.64,
+          "word": " 아니어서..",
+          "probability": 0.3427
+        },
+        {
+          "start": 73.64,
+          "end": 75.08,
+          "word": " 면접",
+          "probability": 0.7917
+        },
+        {
+          "start": 75.08,
+          "end": 75.1,
+          "word": " 때",
+          "probability": 0.7202
+        },
+        {
+          "start": 75.1,
+          "end": 75.44,
+          "word": " 했던",
+          "probability": 0.6353
+        },
+        {
+          "start": 75.44,
+          "end": 76.06,
+          "word": " 얘기가..",
+          "probability": 0.5995
+        },
+        {
+          "start": 76.06,
+          "end": 78.18,
+          "word": " 다",
+          "probability": 0.835
+        },
+        {
+          "start": 79.08,
+          "end": 79.7,
+          "word": " 기억나세요?",
+          "probability": 0.9847
+        },
+        {
+          "start": 81.49,
+          "end": 82.61,
+          "word": " 이번에는",
+          "probability": 0.7177
+        },
+        {
+          "start": 82.61,
+          "end": 82.85,
+          "word": " 좀",
+          "probability": 0.5547
+        },
+        {
+          "start": 82.85,
+          "end": 84.13,
+          "word": " 여름",
+          "probability": 0.4863
+        },
+        {
+          "start": 84.16,
+          "end": 85.26,
+          "word": " 수업에",
+          "probability": 0.9157
+        },
+        {
+          "start": 85.26,
+          "end": 85.7,
+          "word": " 관한",
+          "probability": 0.9973
+        },
+        {
+          "start": 85.7,
+          "end": 86.8,
+          "word": " 대목들",
+          "probability": 0.5274
+        },
+        {
+          "start": 86.8,
+          "end": 87.6,
+          "word": " 토대로",
+          "probability": 0.6525
+        },
+        {
+          "start": 87.6,
+          "end": 88.08,
+          "word": " 회사원으로",
+          "probability": 0.6148
+        },
+        {
+          "start": 88.08,
+          "end": 88.24,
+          "word": " 갈",
+          "probability": 0.9814
+        },
+        {
+          "start": 88.24,
+          "end": 88.38,
+          "word": " 수",
+          "probability": 0.9609
+        },
+        {
+          "start": 88.38,
+          "end": 88.58,
+          "word": " 있는",
+          "probability": 0.9658
+        },
+        {
+          "start": 88.58,
+          "end": 89.16,
+          "word": " 제품으로",
+          "probability": 0.287
+        },
+        {
+          "start": 89.16,
+          "end": 89.52,
+          "word": " 가겠습니다.",
+          "probability": 0.6077
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 90.5,
+      "end": 100.48,
+      "text": "네. 직무로 다 가요. 걱정 안 하셔도 돼요. 본인이 좋아하는 직무로 대부분 다 취업을 해서요. 열심히 하면 다 되죠.",
+      "avg_logprob": -0.1527343813329935,
+      "no_speech_prob": 0.105224609375,
+      "words": [
+        {
+          "start": 90.5,
+          "end": 90.94,
+          "word": " 네.",
+          "probability": 0.4536
+        },
+        {
+          "start": 90.98,
+          "end": 91.42,
+          "word": " 직무로",
+          "probability": 0.8684
+        },
+        {
+          "start": 91.42,
+          "end": 91.54,
+          "word": " 다",
+          "probability": 0.939
+        },
+        {
+          "start": 91.54,
+          "end": 91.92,
+          "word": " 가요.",
+          "probability": 0.8958
+        },
+        {
+          "start": 92.18,
+          "end": 92.9,
+          "word": " 걱정",
+          "probability": 0.959
+        },
+        {
+          "start": 92.9,
+          "end": 93.12,
+          "word": " 안",
+          "probability": 0.9307
+        },
+        {
+          "start": 93.12,
+          "end": 93.44,
+          "word": " 하셔도",
+          "probability": 0.909
+        },
+        {
+          "start": 93.44,
+          "end": 93.66,
+          "word": " 돼요.",
+          "probability": 0.957
+        },
+        {
+          "start": 93.88,
+          "end": 94.6,
+          "word": " 본인이",
+          "probability": 0.9912
+        },
+        {
+          "start": 94.6,
+          "end": 95.26,
+          "word": " 좋아하는",
+          "probability": 0.9946
+        },
+        {
+          "start": 95.26,
+          "end": 96.0,
+          "word": " 직무로",
+          "probability": 0.9976
+        },
+        {
+          "start": 96.0,
+          "end": 96.34,
+          "word": " 대부분",
+          "probability": 0.7507
+        },
+        {
+          "start": 96.34,
+          "end": 96.52,
+          "word": " 다",
+          "probability": 0.8374
+        },
+        {
+          "start": 96.52,
+          "end": 96.92,
+          "word": " 취업을",
+          "probability": 0.9785
+        },
+        {
+          "start": 96.92,
+          "end": 97.3,
+          "word": " 해서요.",
+          "probability": 0.9858
+        },
+        {
+          "start": 97.48,
+          "end": 98.2,
+          "word": " 열심히",
+          "probability": 0.5264
+        },
+        {
+          "start": 98.2,
+          "end": 98.5,
+          "word": " 하면",
+          "probability": 0.6289
+        },
+        {
+          "start": 98.5,
+          "end": 99.3,
+          "word": " 다",
+          "probability": 0.9785
+        },
+        {
+          "start": 99.46,
+          "end": 100.48,
+          "word": " 되죠.",
+          "probability": 0.9983
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 101.86,
+      "end": 126.04,
+      "text": "본인이 원하는 회사 골라가는 친구들도 많고 제대로 된 회사를 다녀서 힘들어하는 친구들도 많고요. 오히려 제대로 가서 힘들어해. 무슨 말인지 이해 되시죠? 제대로 된 회사는 안 바쁠 수가 없어요. 하루 종일 디자인 일만 해요. 계속 일만 해요. 힘들어서 그만두고 싶을 정도로 일만 해요. 제대로 다녀. 그런 회사 충분히 가실 수 있으니까.",
+      "avg_logprob": -0.0731425400899381,
+      "no_speech_prob": 0.20751953125,
+      "words": [
+        {
+          "start": 101.86,
+          "end": 102.38,
+          "word": " 본인이",
+          "probability": 0.7727
+        },
+        {
+          "start": 102.38,
+          "end": 102.78,
+          "word": " 원하는",
+          "probability": 0.9297
+        },
+        {
+          "start": 102.78,
+          "end": 104.54,
+          "word": " 회사",
+          "probability": 0.8918
+        },
+        {
+          "start": 104.54,
+          "end": 104.94,
+          "word": " 골라가는",
+          "probability": 0.8934
+        },
+        {
+          "start": 104.94,
+          "end": 105.48,
+          "word": " 친구들도",
+          "probability": 0.9475
+        },
+        {
+          "start": 105.48,
+          "end": 105.9,
+          "word": " 많고",
+          "probability": 0.9844
+        },
+        {
+          "start": 105.9,
+          "end": 106.62,
+          "word": " 제대로",
+          "probability": 0.9468
+        },
+        {
+          "start": 106.62,
+          "end": 106.94,
+          "word": " 된",
+          "probability": 0.9565
+        },
+        {
+          "start": 106.94,
+          "end": 107.32,
+          "word": " 회사를",
+          "probability": 0.9688
+        },
+        {
+          "start": 107.32,
+          "end": 107.9,
+          "word": " 다녀서",
+          "probability": 0.9842
+        },
+        {
+          "start": 107.9,
+          "end": 108.86,
+          "word": " 힘들어하는",
+          "probability": 0.9189
+        },
+        {
+          "start": 108.86,
+          "end": 109.48,
+          "word": " 친구들도",
+          "probability": 0.9871
+        },
+        {
+          "start": 109.48,
+          "end": 109.96,
+          "word": " 많고요.",
+          "probability": 0.8184
+        },
+        {
+          "start": 110.04,
+          "end": 110.74,
+          "word": " 오히려",
+          "probability": 0.9937
+        },
+        {
+          "start": 110.74,
+          "end": 111.1,
+          "word": " 제대로",
+          "probability": 0.9868
+        },
+        {
+          "start": 111.1,
+          "end": 111.4,
+          "word": " 가서",
+          "probability": 0.9922
+        },
+        {
+          "start": 111.4,
+          "end": 112.12,
+          "word": " 힘들어해.",
+          "probability": 0.9842
+        },
+        {
+          "start": 112.18,
+          "end": 112.74,
+          "word": " 무슨",
+          "probability": 0.9985
+        },
+        {
+          "start": 112.74,
+          "end": 113.26,
+          "word": " 말인지",
+          "probability": 0.9951
+        },
+        {
+          "start": 113.26,
+          "end": 113.66,
+          "word": " 이해",
+          "probability": 0.6279
+        },
+        {
+          "start": 113.66,
+          "end": 114.12,
+          "word": " 되시죠?",
+          "probability": 0.9832
+        },
+        {
+          "start": 114.3,
+          "end": 114.98,
+          "word": " 제대로",
+          "probability": 0.9951
+        },
+        {
+          "start": 114.98,
+          "end": 115.22,
+          "word": " 된",
+          "probability": 0.998
+        },
+        {
+          "start": 115.22,
+          "end": 115.6,
+          "word": " 회사는",
+          "probability": 0.9993
+        },
+        {
+          "start": 115.6,
+          "end": 115.9,
+          "word": " 안",
+          "probability": 0.9912
+        },
+        {
+          "start": 115.9,
+          "end": 116.28,
+          "word": " 바쁠",
+          "probability": 0.8669
+        },
+        {
+          "start": 116.28,
+          "end": 116.44,
+          "word": " 수가",
+          "probability": 0.9927
+        },
+        {
+          "start": 116.44,
+          "end": 116.8,
+          "word": " 없어요.",
+          "probability": 0.9976
+        },
+        {
+          "start": 117.0,
+          "end": 117.14,
+          "word": " 하루",
+          "probability": 0.9995
+        },
+        {
+          "start": 117.14,
+          "end": 117.74,
+          "word": " 종일",
+          "probability": 0.9971
+        },
+        {
+          "start": 117.74,
+          "end": 118.3,
+          "word": " 디자인",
+          "probability": 0.9956
+        },
+        {
+          "start": 118.3,
+          "end": 118.62,
+          "word": " 일만",
+          "probability": 0.9478
+        },
+        {
+          "start": 118.62,
+          "end": 118.78,
+          "word": " 해요.",
+          "probability": 0.9233
+        },
+        {
+          "start": 118.8,
+          "end": 119.1,
+          "word": " 계속",
+          "probability": 0.9917
+        },
+        {
+          "start": 119.1,
+          "end": 119.56,
+          "word": " 일만",
+          "probability": 0.9897
+        },
+        {
+          "start": 119.56,
+          "end": 119.74,
+          "word": " 해요.",
+          "probability": 0.9976
+        },
+        {
+          "start": 120.08,
+          "end": 120.84,
+          "word": " 힘들어서",
+          "probability": 0.9998
+        },
+        {
+          "start": 120.84,
+          "end": 121.52,
+          "word": " 그만두고",
+          "probability": 0.9973
+        },
+        {
+          "start": 121.52,
+          "end": 121.82,
+          "word": " 싶을",
+          "probability": 0.9988
+        },
+        {
+          "start": 121.82,
+          "end": 122.18,
+          "word": " 정도로",
+          "probability": 0.9995
+        },
+        {
+          "start": 122.18,
+          "end": 122.62,
+          "word": " 일만",
+          "probability": 0.9978
+        },
+        {
+          "start": 122.62,
+          "end": 122.82,
+          "word": " 해요.",
+          "probability": 0.9932
+        },
+        {
+          "start": 122.84,
+          "end": 123.1,
+          "word": " 제대로",
+          "probability": 0.9727
+        },
+        {
+          "start": 123.1,
+          "end": 123.52,
+          "word": " 다녀.",
+          "probability": 0.7058
+        },
+        {
+          "start": 123.66,
+          "end": 124.2,
+          "word": " 그런",
+          "probability": 0.6812
+        },
+        {
+          "start": 124.2,
+          "end": 124.62,
+          "word": " 회사",
+          "probability": 0.9932
+        },
+        {
+          "start": 124.62,
+          "end": 125.28,
+          "word": " 충분히",
+          "probability": 0.9084
+        },
+        {
+          "start": 125.28,
+          "end": 125.52,
+          "word": " 가실",
+          "probability": 0.9937
+        },
+        {
+          "start": 125.52,
+          "end": 125.68,
+          "word": " 수",
+          "probability": 1.0
+        },
+        {
+          "start": 125.68,
+          "end": 126.04,
+          "word": " 있으니까.",
+          "probability": 0.998
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 126.97,
+      "end": 145.17,
+      "text": "본인만 잘 노력하면 될 것 같고요. CSS 적용하는 위치의 문제는 지금까지 얘기했던 것처럼 계속 반복적으로 똑같은 위치에 넣어봐야 이게 돼요. 개념만 계속 똑같은 것만 판다고 해서 새로운 개념을 배운다고 해서 이게 코딩이 늘진 않거든요.",
+      "avg_logprob": -0.1094308041036129,
+      "no_speech_prob": 0.12042236328125,
+      "words": [
+        {
+          "start": 126.97,
+          "end": 127.53,
+          "word": " 본인만",
+          "probability": 0.8763
+        },
+        {
+          "start": 127.53,
+          "end": 127.71,
+          "word": " 잘",
+          "probability": 0.9253
+        },
+        {
+          "start": 127.71,
+          "end": 128.35,
+          "word": " 노력하면",
+          "probability": 0.9778
+        },
+        {
+          "start": 128.35,
+          "end": 128.83,
+          "word": " 될",
+          "probability": 0.9707
+        },
+        {
+          "start": 128.83,
+          "end": 128.97,
+          "word": " 것",
+          "probability": 0.6021
+        },
+        {
+          "start": 128.97,
+          "end": 129.45,
+          "word": " 같고요.",
+          "probability": 0.8516
+        },
+        {
+          "start": 129.53,
+          "end": 130.15,
+          "word": " CSS",
+          "probability": 0.7627
+        },
+        {
+          "start": 130.15,
+          "end": 131.17,
+          "word": " 적용하는",
+          "probability": 0.9401
+        },
+        {
+          "start": 131.17,
+          "end": 131.73,
+          "word": " 위치의",
+          "probability": 0.8849
+        },
+        {
+          "start": 131.73,
+          "end": 132.45,
+          "word": " 문제는",
+          "probability": 0.9978
+        },
+        {
+          "start": 132.45,
+          "end": 133.11,
+          "word": " 지금까지",
+          "probability": 0.7451
+        },
+        {
+          "start": 133.11,
+          "end": 133.81,
+          "word": " 얘기했던",
+          "probability": 0.8916
+        },
+        {
+          "start": 133.81,
+          "end": 134.33,
+          "word": " 것처럼",
+          "probability": 0.9761
+        },
+        {
+          "start": 134.33,
+          "end": 135.05,
+          "word": " 계속",
+          "probability": 0.9814
+        },
+        {
+          "start": 135.05,
+          "end": 135.89,
+          "word": " 반복적으로",
+          "probability": 0.9878
+        },
+        {
+          "start": 135.89,
+          "end": 136.61,
+          "word": " 똑같은",
+          "probability": 0.9907
+        },
+        {
+          "start": 136.61,
+          "end": 137.05,
+          "word": " 위치에",
+          "probability": 0.9837
+        },
+        {
+          "start": 137.05,
+          "end": 137.61,
+          "word": " 넣어봐야",
+          "probability": 0.8317
+        },
+        {
+          "start": 137.61,
+          "end": 137.91,
+          "word": " 이게",
+          "probability": 0.3521
+        },
+        {
+          "start": 137.91,
+          "end": 138.97,
+          "word": " 돼요.",
+          "probability": 0.8359
+        },
+        {
+          "start": 139.15,
+          "end": 140.07,
+          "word": " 개념만",
+          "probability": 0.9023
+        },
+        {
+          "start": 140.07,
+          "end": 140.43,
+          "word": " 계속",
+          "probability": 0.938
+        },
+        {
+          "start": 140.43,
+          "end": 141.13,
+          "word": " 똑같은",
+          "probability": 0.9934
+        },
+        {
+          "start": 141.13,
+          "end": 141.41,
+          "word": " 것만",
+          "probability": 0.9861
+        },
+        {
+          "start": 141.41,
+          "end": 141.83,
+          "word": " 판다고",
+          "probability": 0.9241
+        },
+        {
+          "start": 141.83,
+          "end": 142.11,
+          "word": " 해서",
+          "probability": 0.9912
+        },
+        {
+          "start": 142.11,
+          "end": 142.45,
+          "word": " 새로운",
+          "probability": 0.9609
+        },
+        {
+          "start": 142.45,
+          "end": 142.91,
+          "word": " 개념을",
+          "probability": 0.9531
+        },
+        {
+          "start": 142.91,
+          "end": 143.37,
+          "word": " 배운다고",
+          "probability": 0.9709
+        },
+        {
+          "start": 143.37,
+          "end": 143.59,
+          "word": " 해서",
+          "probability": 0.9888
+        },
+        {
+          "start": 143.59,
+          "end": 143.85,
+          "word": " 이게",
+          "probability": 0.8584
+        },
+        {
+          "start": 143.85,
+          "end": 144.39,
+          "word": " 코딩이",
+          "probability": 0.9876
+        },
+        {
+          "start": 144.39,
+          "end": 144.75,
+          "word": " 늘진",
+          "probability": 0.7268
+        },
+        {
+          "start": 144.75,
+          "end": 145.17,
+          "word": " 않거든요.",
+          "probability": 0.9978
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 146.41,
+      "end": 174.51,
+      "text": "크게 생각하셔야 돼요. 위치를 적용하실 때 그냥 깊하게 생각하지 마시고요. 이런 상황에 이걸 썼었지 이런 상황에 이걸 썼었지 헷갈리면 또다시 똑같은 코드 보면서 맞다 여기였지 맞다 여기였지 이거를 수십 번 반복하시면 몇 개월 뒤에는 똑같은 코드를 고민하고 있을 거예요. 이해되시죠? 만약에 원리 자체가 이해가 안 되면 그건 이제 질문을 하셔야 되는 게 맞는 거예요.",
+      "avg_logprob": -0.10114397015422583,
+      "no_speech_prob": 0.125,
+      "words": [
+        {
+          "start": 146.41,
+          "end": 146.89,
+          "word": " 크게",
+          "probability": 0.5356
+        },
+        {
+          "start": 146.89,
+          "end": 147.75,
+          "word": " 생각하셔야",
+          "probability": 0.9168
+        },
+        {
+          "start": 147.75,
+          "end": 148.01,
+          "word": " 돼요.",
+          "probability": 0.7046
+        },
+        {
+          "start": 148.05,
+          "end": 148.39,
+          "word": " 위치를",
+          "probability": 0.7686
+        },
+        {
+          "start": 148.39,
+          "end": 148.99,
+          "word": " 적용하실",
+          "probability": 0.8994
+        },
+        {
+          "start": 148.99,
+          "end": 149.21,
+          "word": " 때",
+          "probability": 0.9937
+        },
+        {
+          "start": 149.21,
+          "end": 150.25,
+          "word": " 그냥",
+          "probability": 0.6475
+        },
+        {
+          "start": 150.25,
+          "end": 151.41,
+          "word": " 깊하게",
+          "probability": 0.7229
+        },
+        {
+          "start": 151.41,
+          "end": 151.93,
+          "word": " 생각하지",
+          "probability": 0.9941
+        },
+        {
+          "start": 151.93,
+          "end": 152.55,
+          "word": " 마시고요.",
+          "probability": 0.9269
+        },
+        {
+          "start": 152.59,
+          "end": 153.09,
+          "word": " 이런",
+          "probability": 0.873
+        },
+        {
+          "start": 153.09,
+          "end": 153.61,
+          "word": " 상황에",
+          "probability": 0.9194
+        },
+        {
+          "start": 153.61,
+          "end": 153.77,
+          "word": " 이걸",
+          "probability": 0.9229
+        },
+        {
+          "start": 153.77,
+          "end": 154.37,
+          "word": " 썼었지",
+          "probability": 0.9937
+        },
+        {
+          "start": 154.37,
+          "end": 154.73,
+          "word": " 이런",
+          "probability": 0.6689
+        },
+        {
+          "start": 154.73,
+          "end": 155.23,
+          "word": " 상황에",
+          "probability": 0.9622
+        },
+        {
+          "start": 155.23,
+          "end": 155.37,
+          "word": " 이걸",
+          "probability": 0.9551
+        },
+        {
+          "start": 155.37,
+          "end": 155.99,
+          "word": " 썼었지",
+          "probability": 0.9937
+        },
+        {
+          "start": 155.99,
+          "end": 156.99,
+          "word": " 헷갈리면",
+          "probability": 0.985
+        },
+        {
+          "start": 156.99,
+          "end": 157.57,
+          "word": " 또다시",
+          "probability": 0.8532
+        },
+        {
+          "start": 157.57,
+          "end": 158.21,
+          "word": " 똑같은",
+          "probability": 0.9946
+        },
+        {
+          "start": 158.21,
+          "end": 158.45,
+          "word": " 코드",
+          "probability": 0.9595
+        },
+        {
+          "start": 158.45,
+          "end": 158.81,
+          "word": " 보면서",
+          "probability": 0.9956
+        },
+        {
+          "start": 158.81,
+          "end": 159.35,
+          "word": " 맞다",
+          "probability": 0.8655
+        },
+        {
+          "start": 159.35,
+          "end": 160.03,
+          "word": " 여기였지",
+          "probability": 0.9661
+        },
+        {
+          "start": 160.03,
+          "end": 160.43,
+          "word": " 맞다",
+          "probability": 0.916
+        },
+        {
+          "start": 160.43,
+          "end": 161.03,
+          "word": " 여기였지",
+          "probability": 0.9943
+        },
+        {
+          "start": 161.03,
+          "end": 161.25,
+          "word": " 이거를",
+          "probability": 0.8955
+        },
+        {
+          "start": 161.25,
+          "end": 161.77,
+          "word": " 수십",
+          "probability": 0.9961
+        },
+        {
+          "start": 161.77,
+          "end": 161.95,
+          "word": " 번",
+          "probability": 0.8618
+        },
+        {
+          "start": 161.95,
+          "end": 162.73,
+          "word": " 반복하시면",
+          "probability": 0.9952
+        },
+        {
+          "start": 162.73,
+          "end": 163.39,
+          "word": " 몇",
+          "probability": 0.9922
+        },
+        {
+          "start": 163.39,
+          "end": 163.75,
+          "word": " 개월",
+          "probability": 0.9819
+        },
+        {
+          "start": 163.75,
+          "end": 164.15,
+          "word": " 뒤에는",
+          "probability": 0.9949
+        },
+        {
+          "start": 164.15,
+          "end": 164.89,
+          "word": " 똑같은",
+          "probability": 0.9941
+        },
+        {
+          "start": 164.89,
+          "end": 165.23,
+          "word": " 코드를",
+          "probability": 0.9792
+        },
+        {
+          "start": 165.23,
+          "end": 165.83,
+          "word": " 고민하고",
+          "probability": 0.4111
+        },
+        {
+          "start": 165.83,
+          "end": 166.49,
+          "word": " 있을",
+          "probability": 0.9448
+        },
+        {
+          "start": 166.49,
+          "end": 166.87,
+          "word": " 거예요.",
+          "probability": 0.8965
+        },
+        {
+          "start": 167.05,
+          "end": 167.97,
+          "word": " 이해되시죠?",
+          "probability": 0.8727
+        },
+        {
+          "start": 168.13,
+          "end": 169.09,
+          "word": " 만약에",
+          "probability": 0.9492
+        },
+        {
+          "start": 169.09,
+          "end": 170.37,
+          "word": " 원리",
+          "probability": 0.9895
+        },
+        {
+          "start": 170.37,
+          "end": 170.87,
+          "word": " 자체가",
+          "probability": 0.999
+        },
+        {
+          "start": 170.87,
+          "end": 171.33,
+          "word": " 이해가",
+          "probability": 0.998
+        },
+        {
+          "start": 171.33,
+          "end": 171.47,
+          "word": " 안",
+          "probability": 0.9502
+        },
+        {
+          "start": 171.47,
+          "end": 171.77,
+          "word": " 되면",
+          "probability": 0.998
+        },
+        {
+          "start": 171.77,
+          "end": 172.33,
+          "word": " 그건",
+          "probability": 0.9683
+        },
+        {
+          "start": 172.33,
+          "end": 172.53,
+          "word": " 이제",
+          "probability": 0.6519
+        },
+        {
+          "start": 172.53,
+          "end": 173.21,
+          "word": " 질문을",
+          "probability": 0.999
+        },
+        {
+          "start": 173.21,
+          "end": 173.49,
+          "word": " 하셔야",
+          "probability": 0.9993
+        },
+        {
+          "start": 173.49,
+          "end": 173.71,
+          "word": " 되는",
+          "probability": 0.9829
+        },
+        {
+          "start": 173.71,
+          "end": 173.91,
+          "word": " 게",
+          "probability": 0.9878
+        },
+        {
+          "start": 173.91,
+          "end": 174.15,
+          "word": " 맞는",
+          "probability": 0.9521
+        },
+        {
+          "start": 174.15,
+          "end": 174.51,
+          "word": " 거예요.",
+          "probability": 0.9824
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 175.69,
+      "end": 196.64,
+      "text": "왜 디스플레이 플렉스를 써야 되는지 자체에 의문이 들면 그거는 질문을 하셔야 되는 게 맞는 거고요. 그냥 여기 썼었나? 라고 헷갈리면 그거는 다시 되돌아보는 게 맞는 거예요. 이해되셨나요? 푸딩 복습은 몇 시간 정도 하시는 것 같아요?",
+      "avg_logprob": -0.11406249953433871,
+      "no_speech_prob": 0.0447998046875,
+      "words": [
+        {
+          "start": 175.69,
+          "end": 176.15,
+          "word": " 왜",
+          "probability": 0.6841
+        },
+        {
+          "start": 176.15,
+          "end": 177.27,
+          "word": " 디스플레이",
+          "probability": 0.9289
+        },
+        {
+          "start": 177.27,
+          "end": 177.77,
+          "word": " 플렉스를",
+          "probability": 0.9457
+        },
+        {
+          "start": 177.77,
+          "end": 178.17,
+          "word": " 써야",
+          "probability": 0.9106
+        },
+        {
+          "start": 178.17,
+          "end": 178.63,
+          "word": " 되는지",
+          "probability": 0.7756
+        },
+        {
+          "start": 178.63,
+          "end": 179.23,
+          "word": " 자체에",
+          "probability": 0.8529
+        },
+        {
+          "start": 179.23,
+          "end": 179.95,
+          "word": " 의문이",
+          "probability": 0.9883
+        },
+        {
+          "start": 179.95,
+          "end": 180.33,
+          "word": " 들면",
+          "probability": 0.8621
+        },
+        {
+          "start": 180.33,
+          "end": 181.19,
+          "word": " 그거는",
+          "probability": 0.8083
+        },
+        {
+          "start": 181.19,
+          "end": 181.85,
+          "word": " 질문을",
+          "probability": 0.9543
+        },
+        {
+          "start": 181.85,
+          "end": 182.13,
+          "word": " 하셔야",
+          "probability": 0.9734
+        },
+        {
+          "start": 182.13,
+          "end": 182.31,
+          "word": " 되는",
+          "probability": 0.9414
+        },
+        {
+          "start": 182.31,
+          "end": 182.53,
+          "word": " 게",
+          "probability": 0.6611
+        },
+        {
+          "start": 182.53,
+          "end": 182.75,
+          "word": " 맞는",
+          "probability": 0.9902
+        },
+        {
+          "start": 182.75,
+          "end": 183.31,
+          "word": " 거고요.",
+          "probability": 0.7532
+        },
+        {
+          "start": 183.35,
+          "end": 183.83,
+          "word": " 그냥",
+          "probability": 0.7715
+        },
+        {
+          "start": 183.83,
+          "end": 184.25,
+          "word": " 여기",
+          "probability": 0.6567
+        },
+        {
+          "start": 184.25,
+          "end": 185.05,
+          "word": " 썼었나?",
+          "probability": 0.9752
+        },
+        {
+          "start": 185.15,
+          "end": 185.41,
+          "word": " 라고",
+          "probability": 0.9541
+        },
+        {
+          "start": 185.41,
+          "end": 186.03,
+          "word": " 헷갈리면",
+          "probability": 0.9989
+        },
+        {
+          "start": 186.03,
+          "end": 186.57,
+          "word": " 그거는",
+          "probability": 0.7034
+        },
+        {
+          "start": 186.57,
+          "end": 186.83,
+          "word": " 다시",
+          "probability": 0.998
+        },
+        {
+          "start": 186.83,
+          "end": 187.53,
+          "word": " 되돌아보는",
+          "probability": 0.9766
+        },
+        {
+          "start": 187.53,
+          "end": 187.67,
+          "word": " 게",
+          "probability": 0.9019
+        },
+        {
+          "start": 187.67,
+          "end": 187.89,
+          "word": " 맞는",
+          "probability": 0.916
+        },
+        {
+          "start": 187.89,
+          "end": 188.25,
+          "word": " 거예요.",
+          "probability": 0.9385
+        },
+        {
+          "start": 188.96,
+          "end": 189.74,
+          "word": " 이해되셨나요?",
+          "probability": 0.913
+        },
+        {
+          "start": 193.64,
+          "end": 194.42,
+          "word": " 푸딩",
+          "probability": 0.7378
+        },
+        {
+          "start": 194.42,
+          "end": 195.04,
+          "word": " 복습은",
+          "probability": 0.9891
+        },
+        {
+          "start": 195.04,
+          "end": 195.26,
+          "word": " 몇",
+          "probability": 0.9995
+        },
+        {
+          "start": 195.26,
+          "end": 195.52,
+          "word": " 시간",
+          "probability": 0.9932
+        },
+        {
+          "start": 195.52,
+          "end": 195.76,
+          "word": " 정도",
+          "probability": 0.9976
+        },
+        {
+          "start": 195.76,
+          "end": 196.22,
+          "word": " 하시는",
+          "probability": 0.9915
+        },
+        {
+          "start": 196.22,
+          "end": 196.36,
+          "word": " 것",
+          "probability": 0.8027
+        },
+        {
+          "start": 196.36,
+          "end": 196.64,
+          "word": " 같아요?",
+          "probability": 0.9097
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 197.33,
+      "end": 225.59,
+      "text": "저녁에도 수업이 있어서요. 무슨 수업 들으세요? 바이브 코딩이라는 수업이 있어요. 7시부터 10시까지 들어서요. 1시간 정도밖에 안 들어요. 1시간 정도면 괜찮은데 바이브 코딩은 어떠신 것 같아요? 지금이 파트 2배로 보이거든요. 근데 이제 그게 좀 심화 과정이거든요.",
+      "avg_logprob": -0.3346945924515074,
+      "no_speech_prob": 0.1328125,
+      "words": [
+        {
+          "start": 197.33,
+          "end": 197.95,
+          "word": " 저녁에도",
+          "probability": 0.8306
+        },
+        {
+          "start": 197.95,
+          "end": 198.43,
+          "word": " 수업이",
+          "probability": 0.9855
+        },
+        {
+          "start": 198.43,
+          "end": 198.99,
+          "word": " 있어서요.",
+          "probability": 0.5016
+        },
+        {
+          "start": 199.05,
+          "end": 199.51,
+          "word": " 무슨",
+          "probability": 0.8301
+        },
+        {
+          "start": 199.51,
+          "end": 199.91,
+          "word": " 수업",
+          "probability": 0.9958
+        },
+        {
+          "start": 199.91,
+          "end": 200.37,
+          "word": " 들으세요?",
+          "probability": 0.9797
+        },
+        {
+          "start": 200.61,
+          "end": 201.57,
+          "word": " 바이브",
+          "probability": 0.6959
+        },
+        {
+          "start": 201.57,
+          "end": 202.13,
+          "word": " 코딩이라는",
+          "probability": 0.6557
+        },
+        {
+          "start": 202.13,
+          "end": 202.61,
+          "word": " 수업이",
+          "probability": 0.8542
+        },
+        {
+          "start": 202.61,
+          "end": 202.87,
+          "word": " 있어요.",
+          "probability": 0.3848
+        },
+        {
+          "start": 204.73,
+          "end": 205.69,
+          "word": " 7시부터",
+          "probability": 0.7067
+        },
+        {
+          "start": 205.69,
+          "end": 206.75,
+          "word": " 10시까지",
+          "probability": 0.978
+        },
+        {
+          "start": 206.75,
+          "end": 207.29,
+          "word": " 들어서요.",
+          "probability": 0.7163
+        },
+        {
+          "start": 207.99,
+          "end": 208.95,
+          "word": " 1시간",
+          "probability": 0.584
+        },
+        {
+          "start": 208.98,
+          "end": 211.96,
+          "word": " 정도밖에",
+          "probability": 0.7286
+        },
+        {
+          "start": 211.96,
+          "end": 212.12,
+          "word": " 안",
+          "probability": 0.7354
+        },
+        {
+          "start": 212.12,
+          "end": 212.44,
+          "word": " 들어요.",
+          "probability": 0.8796
+        },
+        {
+          "start": 214.99,
+          "end": 215.95,
+          "word": " 1시간",
+          "probability": 0.8052
+        },
+        {
+          "start": 215.95,
+          "end": 216.77,
+          "word": " 정도면",
+          "probability": 0.9856
+        },
+        {
+          "start": 216.77,
+          "end": 217.51,
+          "word": " 괜찮은데",
+          "probability": 0.9893
+        },
+        {
+          "start": 217.51,
+          "end": 218.23,
+          "word": " 바이브",
+          "probability": 0.8796
+        },
+        {
+          "start": 218.23,
+          "end": 218.71,
+          "word": " 코딩은",
+          "probability": 0.9834
+        },
+        {
+          "start": 218.71,
+          "end": 219.33,
+          "word": " 어떠신",
+          "probability": 0.8566
+        },
+        {
+          "start": 219.33,
+          "end": 219.49,
+          "word": " 것",
+          "probability": 0.771
+        },
+        {
+          "start": 219.49,
+          "end": 219.71,
+          "word": " 같아요?",
+          "probability": 0.9648
+        },
+        {
+          "start": 220.17,
+          "end": 221.13,
+          "word": " 지금이",
+          "probability": 0.7517
+        },
+        {
+          "start": 221.13,
+          "end": 221.43,
+          "word": " 파트",
+          "probability": 0.9358
+        },
+        {
+          "start": 221.43,
+          "end": 221.85,
+          "word": " 2배로",
+          "probability": 0.761
+        },
+        {
+          "start": 221.85,
+          "end": 222.17,
+          "word": " 보이거든요.",
+          "probability": 0.5578
+        },
+        {
+          "start": 222.51,
+          "end": 223.27,
+          "word": " 근데",
+          "probability": 0.6909
+        },
+        {
+          "start": 223.27,
+          "end": 223.39,
+          "word": " 이제",
+          "probability": 0.5078
+        },
+        {
+          "start": 223.39,
+          "end": 224.09,
+          "word": " 그게",
+          "probability": 0.2072
+        },
+        {
+          "start": 224.09,
+          "end": 224.39,
+          "word": " 좀",
+          "probability": 0.2493
+        },
+        {
+          "start": 224.39,
+          "end": 225.01,
+          "word": " 심화",
+          "probability": 0.5128
+        },
+        {
+          "start": 225.01,
+          "end": 225.59,
+          "word": " 과정이거든요.",
+          "probability": 0.469
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 226.64,
+      "end": 246.68,
+      "text": "제가 들을 필요는 있을까라는 이런 생각이 조금 들어요. 아 너무 심한 거 아니여서? 네. 그래서 지금 V-Squad 말고 다른 프로그램에서 배우기도 하고 디비버 배우기도 하고 그러고 있거든요. 근데 이제 얘네들에 대한 배울 필요가 있을까 하는 그런 고민이 조금 들어요. 너무 심한 거죠.",
+      "avg_logprob": -0.341844503472491,
+      "no_speech_prob": 0.270263671875,
+      "words": [
+        {
+          "start": 226.64,
+          "end": 227.04,
+          "word": " 제가",
+          "probability": 0.29
+        },
+        {
+          "start": 227.04,
+          "end": 227.46,
+          "word": " 들을",
+          "probability": 0.8621
+        },
+        {
+          "start": 227.46,
+          "end": 227.86,
+          "word": " 필요는",
+          "probability": 0.9209
+        },
+        {
+          "start": 227.86,
+          "end": 228.6,
+          "word": " 있을까라는",
+          "probability": 0.7885
+        },
+        {
+          "start": 228.6,
+          "end": 228.92,
+          "word": " 이런",
+          "probability": 0.4119
+        },
+        {
+          "start": 228.92,
+          "end": 229.44,
+          "word": " 생각이",
+          "probability": 0.9126
+        },
+        {
+          "start": 229.44,
+          "end": 229.68,
+          "word": " 조금",
+          "probability": 0.7388
+        },
+        {
+          "start": 229.68,
+          "end": 230.32,
+          "word": " 들어요.",
+          "probability": 0.8135
+        },
+        {
+          "start": 230.32,
+          "end": 230.68,
+          "word": " 아",
+          "probability": 0.3005
+        },
+        {
+          "start": 230.68,
+          "end": 230.88,
+          "word": " 너무",
+          "probability": 0.7026
+        },
+        {
+          "start": 230.88,
+          "end": 231.32,
+          "word": " 심한",
+          "probability": 0.6598
+        },
+        {
+          "start": 231.32,
+          "end": 231.4,
+          "word": " 거",
+          "probability": 0.2256
+        },
+        {
+          "start": 231.4,
+          "end": 231.96,
+          "word": " 아니여서?",
+          "probability": 0.7379
+        },
+        {
+          "start": 232.08,
+          "end": 232.3,
+          "word": " 네.",
+          "probability": 0.2625
+        },
+        {
+          "start": 232.3,
+          "end": 232.62,
+          "word": " 그래서",
+          "probability": 0.4153
+        },
+        {
+          "start": 232.62,
+          "end": 233.04,
+          "word": " 지금",
+          "probability": 0.311
+        },
+        {
+          "start": 233.04,
+          "end": 233.4,
+          "word": " V",
+          "probability": 0.4844
+        },
+        {
+          "start": 233.4,
+          "end": 233.84,
+          "word": "-Squad",
+          "probability": 0.6236
+        },
+        {
+          "start": 233.84,
+          "end": 234.04,
+          "word": " 말고",
+          "probability": 0.9014
+        },
+        {
+          "start": 234.04,
+          "end": 234.38,
+          "word": " 다른",
+          "probability": 0.9487
+        },
+        {
+          "start": 234.38,
+          "end": 235.36,
+          "word": " 프로그램에서",
+          "probability": 0.9704
+        },
+        {
+          "start": 235.36,
+          "end": 236.2,
+          "word": " 배우기도",
+          "probability": 0.9852
+        },
+        {
+          "start": 236.2,
+          "end": 236.42,
+          "word": " 하고",
+          "probability": 0.9927
+        },
+        {
+          "start": 236.42,
+          "end": 237.5,
+          "word": " 디비버",
+          "probability": 0.6532
+        },
+        {
+          "start": 237.5,
+          "end": 237.9,
+          "word": " 배우기도",
+          "probability": 0.9779
+        },
+        {
+          "start": 237.9,
+          "end": 238.08,
+          "word": " 하고",
+          "probability": 0.8745
+        },
+        {
+          "start": 238.08,
+          "end": 238.2,
+          "word": " 그러고",
+          "probability": 0.7106
+        },
+        {
+          "start": 238.2,
+          "end": 238.48,
+          "word": " 있거든요.",
+          "probability": 0.623
+        },
+        {
+          "start": 238.76,
+          "end": 239.0,
+          "word": " 근데",
+          "probability": 0.3406
+        },
+        {
+          "start": 239.0,
+          "end": 239.18,
+          "word": " 이제",
+          "probability": 0.9072
+        },
+        {
+          "start": 239.18,
+          "end": 240.5,
+          "word": " 얘네들에",
+          "probability": 0.9218
+        },
+        {
+          "start": 240.5,
+          "end": 240.64,
+          "word": " 대한",
+          "probability": 0.7188
+        },
+        {
+          "start": 240.64,
+          "end": 241.54,
+          "word": " 배울",
+          "probability": 0.9336
+        },
+        {
+          "start": 241.54,
+          "end": 241.94,
+          "word": " 필요가",
+          "probability": 0.9976
+        },
+        {
+          "start": 241.94,
+          "end": 242.3,
+          "word": " 있을까",
+          "probability": 0.979
+        },
+        {
+          "start": 242.3,
+          "end": 242.48,
+          "word": " 하는",
+          "probability": 0.9106
+        },
+        {
+          "start": 242.48,
+          "end": 242.94,
+          "word": " 그런",
+          "probability": 0.9819
+        },
+        {
+          "start": 242.94,
+          "end": 244.36,
+          "word": " 고민이",
+          "probability": 0.9451
+        },
+        {
+          "start": 244.49,
+          "end": 244.63,
+          "word": " 조금",
+          "probability": 0.9521
+        },
+        {
+          "start": 244.63,
+          "end": 245.05,
+          "word": " 들어요.",
+          "probability": 0.8958
+        },
+        {
+          "start": 245.32,
+          "end": 246.04,
+          "word": " 너무",
+          "probability": 0.8677
+        },
+        {
+          "start": 246.04,
+          "end": 246.52,
+          "word": " 심한",
+          "probability": 0.6674
+        },
+        {
+          "start": 246.52,
+          "end": 246.68,
+          "word": " 거죠.",
+          "probability": 0.8218
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 248.43,
+      "end": 273.59,
+      "text": "이왕 수업을 들으시는 김에요. 지금 블로그 만들어야 되잖아요. 이제 슬슬 조금씩 다시 구축을 할 건데 블로그 만들 때 사용을 한번 해보세요. 거기에서 사용되는 개념을 써서 그래야지 수업을 들었을 때 본인이 활용해야 40만원의 값어치를 하지 않겠어요? 무슨 말인지 이해되시죠?",
+      "avg_logprob": -0.06984031626156398,
+      "no_speech_prob": 0.093505859375,
+      "words": [
+        {
+          "start": 248.43,
+          "end": 249.01,
+          "word": " 이왕",
+          "probability": 0.8713
+        },
+        {
+          "start": 249.01,
+          "end": 249.53,
+          "word": " 수업을",
+          "probability": 0.965
+        },
+        {
+          "start": 249.53,
+          "end": 250.15,
+          "word": " 들으시는",
+          "probability": 0.9723
+        },
+        {
+          "start": 250.15,
+          "end": 250.65,
+          "word": " 김에요.",
+          "probability": 0.7012
+        },
+        {
+          "start": 250.77,
+          "end": 251.63,
+          "word": " 지금",
+          "probability": 0.9624
+        },
+        {
+          "start": 251.63,
+          "end": 252.41,
+          "word": " 블로그",
+          "probability": 0.9801
+        },
+        {
+          "start": 252.41,
+          "end": 253.35,
+          "word": " 만들어야",
+          "probability": 0.9695
+        },
+        {
+          "start": 253.35,
+          "end": 253.71,
+          "word": " 되잖아요.",
+          "probability": 0.9705
+        },
+        {
+          "start": 253.95,
+          "end": 254.59,
+          "word": " 이제",
+          "probability": 0.9673
+        },
+        {
+          "start": 254.59,
+          "end": 255.09,
+          "word": " 슬슬",
+          "probability": 0.998
+        },
+        {
+          "start": 255.09,
+          "end": 255.61,
+          "word": " 조금씩",
+          "probability": 0.9722
+        },
+        {
+          "start": 255.61,
+          "end": 255.83,
+          "word": " 다시",
+          "probability": 0.9883
+        },
+        {
+          "start": 255.83,
+          "end": 256.45,
+          "word": " 구축을",
+          "probability": 0.9952
+        },
+        {
+          "start": 256.45,
+          "end": 256.57,
+          "word": " 할",
+          "probability": 0.9951
+        },
+        {
+          "start": 256.57,
+          "end": 256.81,
+          "word": " 건데",
+          "probability": 0.7446
+        },
+        {
+          "start": 256.81,
+          "end": 258.19,
+          "word": " 블로그",
+          "probability": 0.9367
+        },
+        {
+          "start": 258.19,
+          "end": 258.45,
+          "word": " 만들",
+          "probability": 0.9966
+        },
+        {
+          "start": 258.45,
+          "end": 258.85,
+          "word": " 때",
+          "probability": 0.981
+        },
+        {
+          "start": 258.85,
+          "end": 259.53,
+          "word": " 사용을",
+          "probability": 0.9939
+        },
+        {
+          "start": 259.53,
+          "end": 259.75,
+          "word": " 한번",
+          "probability": 0.9038
+        },
+        {
+          "start": 259.75,
+          "end": 260.31,
+          "word": " 해보세요.",
+          "probability": 0.9512
+        },
+        {
+          "start": 260.41,
+          "end": 261.01,
+          "word": " 거기에서",
+          "probability": 0.9895
+        },
+        {
+          "start": 261.01,
+          "end": 261.59,
+          "word": " 사용되는",
+          "probability": 0.9983
+        },
+        {
+          "start": 261.59,
+          "end": 262.25,
+          "word": " 개념을",
+          "probability": 0.9988
+        },
+        {
+          "start": 262.25,
+          "end": 262.75,
+          "word": " 써서",
+          "probability": 0.9988
+        },
+        {
+          "start": 262.75,
+          "end": 264.89,
+          "word": " 그래야지",
+          "probability": 0.7861
+        },
+        {
+          "start": 264.89,
+          "end": 265.69,
+          "word": " 수업을",
+          "probability": 0.999
+        },
+        {
+          "start": 265.69,
+          "end": 266.15,
+          "word": " 들었을",
+          "probability": 0.9997
+        },
+        {
+          "start": 266.15,
+          "end": 266.45,
+          "word": " 때",
+          "probability": 0.9961
+        },
+        {
+          "start": 266.45,
+          "end": 267.27,
+          "word": " 본인이",
+          "probability": 0.9597
+        },
+        {
+          "start": 267.27,
+          "end": 267.85,
+          "word": " 활용해야",
+          "probability": 0.9982
+        },
+        {
+          "start": 267.85,
+          "end": 269.21,
+          "word": " 40만원의",
+          "probability": 0.9248
+        },
+        {
+          "start": 269.21,
+          "end": 269.75,
+          "word": " 값어치를",
+          "probability": 0.9964
+        },
+        {
+          "start": 269.75,
+          "end": 269.95,
+          "word": " 하지",
+          "probability": 0.998
+        },
+        {
+          "start": 269.95,
+          "end": 270.41,
+          "word": " 않겠어요?",
+          "probability": 0.9973
+        },
+        {
+          "start": 271.21,
+          "end": 272.25,
+          "word": " 무슨",
+          "probability": 0.9946
+        },
+        {
+          "start": 272.25,
+          "end": 272.77,
+          "word": " 말인지",
+          "probability": 0.9958
+        },
+        {
+          "start": 272.77,
+          "end": 273.59,
+          "word": " 이해되시죠?",
+          "probability": 0.9399
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 275.76,
+      "end": 305.06,
+      "text": "제가 바이브 코딩 알기로는 격일반이라고 알고 있는데, 맞나요? 월요일부터 목요일까지 2시간씩 들으세요? 3시간이요. 조금 힘드시겠지만 저녁시간에 수업을 들으시잖아요.",
+      "avg_logprob": -0.1781506079142211,
+      "no_speech_prob": 0.0452880859375,
+      "words": [
+        {
+          "start": 275.76,
+          "end": 276.24,
+          "word": " 제가",
+          "probability": 0.7427
+        },
+        {
+          "start": 276.24,
+          "end": 276.64,
+          "word": " 바이브",
+          "probability": 0.9185
+        },
+        {
+          "start": 276.64,
+          "end": 277.1,
+          "word": " 코딩",
+          "probability": 0.8069
+        },
+        {
+          "start": 277.1,
+          "end": 278.0,
+          "word": " 알기로는",
+          "probability": 0.7542
+        },
+        {
+          "start": 278.0,
+          "end": 279.1,
+          "word": " 격일반이라고",
+          "probability": 0.8541
+        },
+        {
+          "start": 279.1,
+          "end": 279.52,
+          "word": " 알고",
+          "probability": 0.9458
+        },
+        {
+          "start": 279.52,
+          "end": 280.32,
+          "word": " 있는데,",
+          "probability": 0.7588
+        },
+        {
+          "start": 280.6,
+          "end": 282.06,
+          "word": " 맞나요?",
+          "probability": 0.9027
+        },
+        {
+          "start": 283.08,
+          "end": 284.48,
+          "word": " 월요일부터",
+          "probability": 0.9322
+        },
+        {
+          "start": 284.48,
+          "end": 285.1,
+          "word": " 목요일까지",
+          "probability": 0.9744
+        },
+        {
+          "start": 285.1,
+          "end": 289.66,
+          "word": " 2시간씩",
+          "probability": 0.7304
+        },
+        {
+          "start": 289.66,
+          "end": 290.1,
+          "word": " 들으세요?",
+          "probability": 0.9557
+        },
+        {
+          "start": 290.28,
+          "end": 291.68,
+          "word": " 3시간이요.",
+          "probability": 0.8357
+        },
+        {
+          "start": 293.29,
+          "end": 294.69,
+          "word": " 조금",
+          "probability": 0.8555
+        },
+        {
+          "start": 300.16,
+          "end": 301.28,
+          "word": " 힘드시겠지만",
+          "probability": 0.9832
+        },
+        {
+          "start": 301.28,
+          "end": 303.42,
+          "word": " 저녁시간에",
+          "probability": 0.8383
+        },
+        {
+          "start": 303.42,
+          "end": 304.12,
+          "word": " 수업을",
+          "probability": 0.848
+        },
+        {
+          "start": 304.12,
+          "end": 305.06,
+          "word": " 들으시잖아요.",
+          "probability": 0.9901
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 310.09,
+      "end": 337.31,
+      "text": "중간에 비는 시간에 1시간 계속 유지하시고요. 지금 배웠던 걸로 중간 시간에 점심 먹고 학원에 강의장에 비어 있으면 와서 그걸 활용해가지고 바이브 코딩으로 블로그를 한 번 스스로 해보세요. 그래야지 돈이 안 아까우실 거예요. 안 그러면 바닥에다 버리는 거랑 똑같은 거예요. 너무 아깝잖아요. 한번 해보시면 될 것 같아요.",
+      "avg_logprob": -0.10262439146782588,
+      "no_speech_prob": 0.2083740234375,
+      "words": [
+        {
+          "start": 310.09,
+          "end": 310.65,
+          "word": " 중간에",
+          "probability": 0.8687
+        },
+        {
+          "start": 310.65,
+          "end": 310.95,
+          "word": " 비는",
+          "probability": 0.8879
+        },
+        {
+          "start": 310.95,
+          "end": 311.59,
+          "word": " 시간에",
+          "probability": 0.9158
+        },
+        {
+          "start": 311.59,
+          "end": 312.61,
+          "word": " 1시간",
+          "probability": 0.8467
+        },
+        {
+          "start": 312.61,
+          "end": 312.85,
+          "word": " 계속",
+          "probability": 0.9468
+        },
+        {
+          "start": 312.85,
+          "end": 313.83,
+          "word": " 유지하시고요.",
+          "probability": 0.8229
+        },
+        {
+          "start": 313.95,
+          "end": 314.63,
+          "word": " 지금",
+          "probability": 0.9395
+        },
+        {
+          "start": 314.63,
+          "end": 315.23,
+          "word": " 배웠던",
+          "probability": 0.9956
+        },
+        {
+          "start": 315.23,
+          "end": 315.45,
+          "word": " 걸로",
+          "probability": 0.8525
+        },
+        {
+          "start": 315.45,
+          "end": 316.05,
+          "word": " 중간",
+          "probability": 0.9817
+        },
+        {
+          "start": 316.05,
+          "end": 316.67,
+          "word": " 시간에",
+          "probability": 0.9055
+        },
+        {
+          "start": 316.67,
+          "end": 317.45,
+          "word": " 점심",
+          "probability": 0.9836
+        },
+        {
+          "start": 317.45,
+          "end": 317.69,
+          "word": " 먹고",
+          "probability": 0.9951
+        },
+        {
+          "start": 317.69,
+          "end": 318.33,
+          "word": " 학원에",
+          "probability": 0.8574
+        },
+        {
+          "start": 318.33,
+          "end": 319.13,
+          "word": " 강의장에",
+          "probability": 0.8752
+        },
+        {
+          "start": 319.13,
+          "end": 319.47,
+          "word": " 비어",
+          "probability": 0.7964
+        },
+        {
+          "start": 319.47,
+          "end": 319.79,
+          "word": " 있으면",
+          "probability": 0.9961
+        },
+        {
+          "start": 319.79,
+          "end": 320.83,
+          "word": " 와서",
+          "probability": 0.918
+        },
+        {
+          "start": 320.83,
+          "end": 321.97,
+          "word": " 그걸",
+          "probability": 0.9165
+        },
+        {
+          "start": 321.97,
+          "end": 323.03,
+          "word": " 활용해가지고",
+          "probability": 0.8325
+        },
+        {
+          "start": 323.03,
+          "end": 323.67,
+          "word": " 바이브",
+          "probability": 0.7895
+        },
+        {
+          "start": 323.67,
+          "end": 324.35,
+          "word": " 코딩으로",
+          "probability": 0.9502
+        },
+        {
+          "start": 324.35,
+          "end": 325.11,
+          "word": " 블로그를",
+          "probability": 0.9601
+        },
+        {
+          "start": 325.11,
+          "end": 325.23,
+          "word": " 한",
+          "probability": 0.4756
+        },
+        {
+          "start": 325.23,
+          "end": 325.47,
+          "word": " 번",
+          "probability": 0.9985
+        },
+        {
+          "start": 325.47,
+          "end": 326.17,
+          "word": " 스스로",
+          "probability": 0.9982
+        },
+        {
+          "start": 326.17,
+          "end": 326.89,
+          "word": " 해보세요.",
+          "probability": 0.9312
+        },
+        {
+          "start": 327.07,
+          "end": 327.97,
+          "word": " 그래야지",
+          "probability": 0.9893
+        },
+        {
+          "start": 327.97,
+          "end": 328.51,
+          "word": " 돈이",
+          "probability": 0.9963
+        },
+        {
+          "start": 328.51,
+          "end": 329.51,
+          "word": " 안",
+          "probability": 0.9941
+        },
+        {
+          "start": 329.51,
+          "end": 330.07,
+          "word": " 아까우실",
+          "probability": 0.9665
+        },
+        {
+          "start": 330.07,
+          "end": 330.35,
+          "word": " 거예요.",
+          "probability": 0.9355
+        },
+        {
+          "start": 330.51,
+          "end": 330.99,
+          "word": " 안",
+          "probability": 0.5786
+        },
+        {
+          "start": 330.99,
+          "end": 331.31,
+          "word": " 그러면",
+          "probability": 0.9692
+        },
+        {
+          "start": 331.31,
+          "end": 332.07,
+          "word": " 바닥에다",
+          "probability": 0.9363
+        },
+        {
+          "start": 332.07,
+          "end": 332.41,
+          "word": " 버리는",
+          "probability": 0.999
+        },
+        {
+          "start": 332.41,
+          "end": 332.69,
+          "word": " 거랑",
+          "probability": 0.9944
+        },
+        {
+          "start": 332.69,
+          "end": 333.19,
+          "word": " 똑같은",
+          "probability": 0.998
+        },
+        {
+          "start": 333.19,
+          "end": 333.33,
+          "word": " 거예요.",
+          "probability": 0.7573
+        },
+        {
+          "start": 333.43,
+          "end": 333.97,
+          "word": " 너무",
+          "probability": 0.9824
+        },
+        {
+          "start": 333.97,
+          "end": 334.65,
+          "word": " 아깝잖아요.",
+          "probability": 0.9949
+        },
+        {
+          "start": 334.73,
+          "end": 335.35,
+          "word": " 한번",
+          "probability": 0.3918
+        },
+        {
+          "start": 335.35,
+          "end": 336.79,
+          "word": " 해보시면",
+          "probability": 0.998
+        },
+        {
+          "start": 336.79,
+          "end": 336.99,
+          "word": " 될",
+          "probability": 0.9976
+        },
+        {
+          "start": 336.99,
+          "end": 337.17,
+          "word": " 것",
+          "probability": 0.9429
+        },
+        {
+          "start": 337.17,
+          "end": 337.31,
+          "word": " 같아요.",
+          "probability": 0.8506
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "start": 338.18,
+      "end": 356.09,
+      "text": "체력적으로 생기는 문제는 따로 없나요? 네 없습니다. 아침에 일어나기 힘들거나 그러진 않으시고요? 네 집 가까워서요. 리서치는요?",
+      "avg_logprob": -0.11691496885100076,
+      "no_speech_prob": 0.12445068359375,
+      "words": [
+        {
+          "start": 338.18,
+          "end": 338.98,
+          "word": " 체력적으로",
+          "probability": 0.9309
+        },
+        {
+          "start": 338.98,
+          "end": 339.66,
+          "word": " 생기는",
+          "probability": 0.9592
+        },
+        {
+          "start": 339.66,
+          "end": 340.28,
+          "word": " 문제는",
+          "probability": 0.9441
+        },
+        {
+          "start": 340.28,
+          "end": 340.56,
+          "word": " 따로",
+          "probability": 0.9207
+        },
+        {
+          "start": 340.56,
+          "end": 341.04,
+          "word": " 없나요?",
+          "probability": 0.9857
+        },
+        {
+          "start": 341.6,
+          "end": 342.54,
+          "word": " 네",
+          "probability": 0.8398
+        },
+        {
+          "start": 342.9,
+          "end": 343.28,
+          "word": " 없습니다.",
+          "probability": 0.5112
+        },
+        {
+          "start": 343.64,
+          "end": 344.58,
+          "word": " 아침에",
+          "probability": 0.9756
+        },
+        {
+          "start": 344.58,
+          "end": 344.92,
+          "word": " 일어나기",
+          "probability": 0.979
+        },
+        {
+          "start": 344.92,
+          "end": 346.02,
+          "word": " 힘들거나",
+          "probability": 0.9414
+        },
+        {
+          "start": 346.02,
+          "end": 346.48,
+          "word": " 그러진",
+          "probability": 0.7773
+        },
+        {
+          "start": 346.48,
+          "end": 347.0,
+          "word": " 않으시고요?",
+          "probability": 0.9324
+        },
+        {
+          "start": 347.16,
+          "end": 347.22,
+          "word": " 네",
+          "probability": 0.9111
+        },
+        {
+          "start": 347.22,
+          "end": 347.48,
+          "word": " 집",
+          "probability": 0.6724
+        },
+        {
+          "start": 347.48,
+          "end": 348.18,
+          "word": " 가까워서요.",
+          "probability": 0.7225
+        },
+        {
+          "start": 355.15,
+          "end": 356.09,
+          "word": " 리서치는요?",
+          "probability": 0.943
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "start": 357.57,
+      "end": 380.25,
+      "text": "주제는 원래 다 마음에 안 들어요. 저도 지금 제가 하는 디자인이 마음에 안 들 때가 많아요. 완성된 걸 봐도 계속 고치고 싶은 게 사람 마음이거든요. 그래서 적절하게 시장이 괜찮으면 그걸로 밀고 나가야 돼요. 판단을요. 내가 마음에 안 든다로 기준을 두는 게 아니라 시장이 괜찮은지 안 괜찮은지.",
+      "avg_logprob": -0.07466774579437299,
+      "no_speech_prob": 0.1668701171875,
+      "words": [
+        {
+          "start": 357.57,
+          "end": 358.27,
+          "word": " 주제는",
+          "probability": 0.7887
+        },
+        {
+          "start": 358.27,
+          "end": 358.97,
+          "word": " 원래",
+          "probability": 0.6494
+        },
+        {
+          "start": 358.97,
+          "end": 359.67,
+          "word": " 다",
+          "probability": 0.918
+        },
+        {
+          "start": 359.67,
+          "end": 360.07,
+          "word": " 마음에",
+          "probability": 0.9146
+        },
+        {
+          "start": 360.07,
+          "end": 360.29,
+          "word": " 안",
+          "probability": 0.6577
+        },
+        {
+          "start": 360.29,
+          "end": 360.67,
+          "word": " 들어요.",
+          "probability": 0.9934
+        },
+        {
+          "start": 360.85,
+          "end": 361.55,
+          "word": " 저도",
+          "probability": 0.9321
+        },
+        {
+          "start": 361.55,
+          "end": 361.89,
+          "word": " 지금",
+          "probability": 0.9683
+        },
+        {
+          "start": 361.89,
+          "end": 362.17,
+          "word": " 제가",
+          "probability": 0.9727
+        },
+        {
+          "start": 362.17,
+          "end": 362.37,
+          "word": " 하는",
+          "probability": 0.5786
+        },
+        {
+          "start": 362.37,
+          "end": 362.93,
+          "word": " 디자인이",
+          "probability": 0.9795
+        },
+        {
+          "start": 362.93,
+          "end": 363.17,
+          "word": " 마음에",
+          "probability": 0.939
+        },
+        {
+          "start": 363.17,
+          "end": 363.49,
+          "word": " 안",
+          "probability": 0.9517
+        },
+        {
+          "start": 363.49,
+          "end": 363.65,
+          "word": " 들",
+          "probability": 0.8984
+        },
+        {
+          "start": 363.65,
+          "end": 363.89,
+          "word": " 때가",
+          "probability": 0.9873
+        },
+        {
+          "start": 363.89,
+          "end": 364.37,
+          "word": " 많아요.",
+          "probability": 0.9963
+        },
+        {
+          "start": 364.77,
+          "end": 365.47,
+          "word": " 완성된",
+          "probability": 0.9714
+        },
+        {
+          "start": 365.47,
+          "end": 365.67,
+          "word": " 걸",
+          "probability": 0.958
+        },
+        {
+          "start": 365.67,
+          "end": 365.99,
+          "word": " 봐도",
+          "probability": 0.9897
+        },
+        {
+          "start": 365.99,
+          "end": 366.33,
+          "word": " 계속",
+          "probability": 0.9941
+        },
+        {
+          "start": 366.33,
+          "end": 366.79,
+          "word": " 고치고",
+          "probability": 0.9774
+        },
+        {
+          "start": 366.79,
+          "end": 367.03,
+          "word": " 싶은",
+          "probability": 0.9829
+        },
+        {
+          "start": 367.03,
+          "end": 367.31,
+          "word": " 게",
+          "probability": 0.9565
+        },
+        {
+          "start": 367.31,
+          "end": 367.51,
+          "word": " 사람",
+          "probability": 0.9727
+        },
+        {
+          "start": 367.51,
+          "end": 368.17,
+          "word": " 마음이거든요.",
+          "probability": 0.9831
+        },
+        {
+          "start": 368.47,
+          "end": 369.17,
+          "word": " 그래서",
+          "probability": 0.9854
+        },
+        {
+          "start": 369.17,
+          "end": 370.53,
+          "word": " 적절하게",
+          "probability": 0.9946
+        },
+        {
+          "start": 370.53,
+          "end": 370.99,
+          "word": " 시장이",
+          "probability": 0.9939
+        },
+        {
+          "start": 370.99,
+          "end": 371.69,
+          "word": " 괜찮으면",
+          "probability": 0.9978
+        },
+        {
+          "start": 371.69,
+          "end": 372.49,
+          "word": " 그걸로",
+          "probability": 0.9902
+        },
+        {
+          "start": 372.49,
+          "end": 372.95,
+          "word": " 밀고",
+          "probability": 0.9595
+        },
+        {
+          "start": 372.95,
+          "end": 373.31,
+          "word": " 나가야",
+          "probability": 0.9863
+        },
+        {
+          "start": 373.31,
+          "end": 373.57,
+          "word": " 돼요.",
+          "probability": 0.5503
+        },
+        {
+          "start": 373.83,
+          "end": 374.53,
+          "word": " 판단을요.",
+          "probability": 0.885
+        },
+        {
+          "start": 374.59,
+          "end": 375.29,
+          "word": " 내가",
+          "probability": 0.9976
+        },
+        {
+          "start": 375.29,
+          "end": 375.67,
+          "word": " 마음에",
+          "probability": 0.998
+        },
+        {
+          "start": 375.67,
+          "end": 375.89,
+          "word": " 안",
+          "probability": 0.9995
+        },
+        {
+          "start": 375.89,
+          "end": 376.43,
+          "word": " 든다로",
+          "probability": 0.9414
+        },
+        {
+          "start": 376.43,
+          "end": 376.91,
+          "word": " 기준을",
+          "probability": 0.9989
+        },
+        {
+          "start": 376.91,
+          "end": 377.25,
+          "word": " 두는",
+          "probability": 0.9956
+        },
+        {
+          "start": 377.25,
+          "end": 377.35,
+          "word": " 게",
+          "probability": 0.9985
+        },
+        {
+          "start": 377.35,
+          "end": 377.61,
+          "word": " 아니라",
+          "probability": 0.9995
+        },
+        {
+          "start": 377.61,
+          "end": 378.55,
+          "word": " 시장이",
+          "probability": 0.9934
+        },
+        {
+          "start": 378.55,
+          "end": 379.25,
+          "word": " 괜찮은지",
+          "probability": 0.999
+        },
+        {
+          "start": 379.25,
+          "end": 379.43,
+          "word": " 안",
+          "probability": 0.9985
+        },
+        {
+          "start": 379.43,
+          "end": 380.25,
+          "word": " 괜찮은지.",
+          "probability": 0.9989
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "start": 380.57,
+      "end": 413.97,
+      "text": "이 주제가 포트폴리오로 먹힐 것 같은지 안 먹힐 것 같은지 거기에 기준을 두셔야지 본인이 흔들리지 않거든요. 기준을 다르게 세우세요. 기준은 포트폴리오, 시장 가능성. 그 회사 일해보셔서 아시잖아요. 그 회사가 잘 될 것 같았나요? 솔직히 안 될 줄 알았는데.",
+      "avg_logprob": -0.08028157598649462,
+      "no_speech_prob": 0.040557861328125,
+      "words": [
+        {
+          "start": 380.57,
+          "end": 380.79,
+          "word": " 이",
+          "probability": 0.7422
+        },
+        {
+          "start": 380.79,
+          "end": 381.29,
+          "word": " 주제가",
+          "probability": 0.948
+        },
+        {
+          "start": 381.29,
+          "end": 382.23,
+          "word": " 포트폴리오로",
+          "probability": 0.9572
+        },
+        {
+          "start": 382.23,
+          "end": 382.65,
+          "word": " 먹힐",
+          "probability": 0.9217
+        },
+        {
+          "start": 382.65,
+          "end": 382.79,
+          "word": " 것",
+          "probability": 0.7358
+        },
+        {
+          "start": 382.79,
+          "end": 383.55,
+          "word": " 같은지",
+          "probability": 0.77
+        },
+        {
+          "start": 383.55,
+          "end": 383.71,
+          "word": " 안",
+          "probability": 0.8789
+        },
+        {
+          "start": 383.71,
+          "end": 384.15,
+          "word": " 먹힐",
+          "probability": 0.994
+        },
+        {
+          "start": 384.15,
+          "end": 384.33,
+          "word": " 것",
+          "probability": 0.9209
+        },
+        {
+          "start": 384.33,
+          "end": 384.85,
+          "word": " 같은지",
+          "probability": 0.9788
+        },
+        {
+          "start": 384.85,
+          "end": 385.39,
+          "word": " 거기에",
+          "probability": 0.9604
+        },
+        {
+          "start": 385.39,
+          "end": 385.89,
+          "word": " 기준을",
+          "probability": 0.9886
+        },
+        {
+          "start": 385.89,
+          "end": 386.45,
+          "word": " 두셔야지",
+          "probability": 0.8646
+        },
+        {
+          "start": 386.45,
+          "end": 386.99,
+          "word": " 본인이",
+          "probability": 0.9319
+        },
+        {
+          "start": 386.99,
+          "end": 387.57,
+          "word": " 흔들리지",
+          "probability": 0.9902
+        },
+        {
+          "start": 387.57,
+          "end": 388.05,
+          "word": " 않거든요.",
+          "probability": 0.9927
+        },
+        {
+          "start": 388.43,
+          "end": 389.41,
+          "word": " 기준을",
+          "probability": 0.9945
+        },
+        {
+          "start": 389.41,
+          "end": 389.73,
+          "word": " 다르게",
+          "probability": 0.998
+        },
+        {
+          "start": 389.73,
+          "end": 390.21,
+          "word": " 세우세요.",
+          "probability": 0.9971
+        },
+        {
+          "start": 392.35,
+          "end": 393.33,
+          "word": " 기준은",
+          "probability": 0.9907
+        },
+        {
+          "start": 393.33,
+          "end": 394.53,
+          "word": " 포트폴리오,",
+          "probability": 0.9945
+        },
+        {
+          "start": 399.4,
+          "end": 401.8,
+          "word": " 시장",
+          "probability": 0.8022
+        },
+        {
+          "start": 401.8,
+          "end": 402.64,
+          "word": " 가능성.",
+          "probability": 0.9653
+        },
+        {
+          "start": 402.78,
+          "end": 403.62,
+          "word": " 그",
+          "probability": 0.4993
+        },
+        {
+          "start": 404.86,
+          "end": 405.34,
+          "word": " 회사",
+          "probability": 0.9963
+        },
+        {
+          "start": 405.34,
+          "end": 405.98,
+          "word": " 일해보셔서",
+          "probability": 0.9696
+        },
+        {
+          "start": 405.98,
+          "end": 406.52,
+          "word": " 아시잖아요.",
+          "probability": 0.9992
+        },
+        {
+          "start": 406.74,
+          "end": 407.68,
+          "word": " 그",
+          "probability": 0.9951
+        },
+        {
+          "start": 407.84,
+          "end": 408.24,
+          "word": " 회사가",
+          "probability": 1.0
+        },
+        {
+          "start": 408.24,
+          "end": 408.46,
+          "word": " 잘",
+          "probability": 0.999
+        },
+        {
+          "start": 408.46,
+          "end": 408.72,
+          "word": " 될",
+          "probability": 0.999
+        },
+        {
+          "start": 408.72,
+          "end": 408.88,
+          "word": " 것",
+          "probability": 0.9888
+        },
+        {
+          "start": 408.88,
+          "end": 409.4,
+          "word": " 같았나요?",
+          "probability": 0.9989
+        },
+        {
+          "start": 411.27,
+          "end": 412.25,
+          "word": " 솔직히",
+          "probability": 0.8726
+        },
+        {
+          "start": 412.25,
+          "end": 412.49,
+          "word": " 안",
+          "probability": 0.9263
+        },
+        {
+          "start": 412.49,
+          "end": 412.67,
+          "word": " 될",
+          "probability": 0.8711
+        },
+        {
+          "start": 412.67,
+          "end": 413.49,
+          "word": " 줄",
+          "probability": 0.978
+        },
+        {
+          "start": 413.49,
+          "end": 413.97,
+          "word": " 알았는데.",
+          "probability": 0.8091
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "start": 415.67,
+      "end": 423.07,
+      "text": "그러면 본인이 생각하기에는 매출이 안 나올 것 같겠지만 그 사정도 어쨌든",
+      "avg_logprob": -0.23906249403953553,
+      "no_speech_prob": 0.372314453125,
+      "words": [
+        {
+          "start": 415.67,
+          "end": 416.91,
+          "word": " 그러면",
+          "probability": 0.1552
+        },
+        {
+          "start": 416.91,
+          "end": 418.15,
+          "word": " 본인이",
+          "probability": 0.8047
+        },
+        {
+          "start": 418.15,
+          "end": 418.99,
+          "word": " 생각하기에는",
+          "probability": 0.957
+        },
+        {
+          "start": 418.99,
+          "end": 419.93,
+          "word": " 매출이",
+          "probability": 0.971
+        },
+        {
+          "start": 419.93,
+          "end": 420.07,
+          "word": " 안",
+          "probability": 0.916
+        },
+        {
+          "start": 420.07,
+          "end": 420.31,
+          "word": " 나올",
+          "probability": 0.9771
+        },
+        {
+          "start": 420.31,
+          "end": 420.49,
+          "word": " 것",
+          "probability": 0.8657
+        },
+        {
+          "start": 420.49,
+          "end": 420.95,
+          "word": " 같겠지만",
+          "probability": 0.725
+        },
+        {
+          "start": 420.95,
+          "end": 421.91,
+          "word": " 그",
+          "probability": 0.7256
+        },
+        {
+          "start": 421.91,
+          "end": 422.53,
+          "word": " 사정도",
+          "probability": 0.936
+        },
+        {
+          "start": 422.53,
+          "end": 423.07,
+          "word": " 어쨌든",
+          "probability": 0.9683
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "start": 423.89,
+      "end": 450.07,
+      "text": "이걸 다 생각을 하고 움직이는 거잖아요. 그걸 누군가한테 팔겠다. 주변에 뭔가 거래할 사람들이 많다. 그걸 이미 다 깔아두고 시장이 계속 사람들이 쌀을 계속 먹겠죠. 사람이 쌀을 안 먹지는 않을 거 아니에요. 주식인데. 그렇죠? 그래서 많이 벌지는 못하더라도 어쨌든 주변에 계속 이렇게 뿌릴 텐데 그게 이제 거래처가 늘어나면 늘어나지 줄지는 않거든요. 업체가.",
+      "avg_logprob": -0.10111177555070473,
+      "no_speech_prob": 0.455078125,
+      "words": [
+        {
+          "start": 423.89,
+          "end": 424.29,
+          "word": " 이걸",
+          "probability": 0.4231
+        },
+        {
+          "start": 424.29,
+          "end": 424.47,
+          "word": " 다",
+          "probability": 0.8809
+        },
+        {
+          "start": 424.47,
+          "end": 424.89,
+          "word": " 생각을",
+          "probability": 0.8999
+        },
+        {
+          "start": 424.89,
+          "end": 425.23,
+          "word": " 하고",
+          "probability": 0.9678
+        },
+        {
+          "start": 425.23,
+          "end": 425.85,
+          "word": " 움직이는",
+          "probability": 0.9067
+        },
+        {
+          "start": 425.85,
+          "end": 426.27,
+          "word": " 거잖아요.",
+          "probability": 0.875
+        },
+        {
+          "start": 426.41,
+          "end": 427.03,
+          "word": " 그걸",
+          "probability": 0.8877
+        },
+        {
+          "start": 427.03,
+          "end": 428.09,
+          "word": " 누군가한테",
+          "probability": 0.9412
+        },
+        {
+          "start": 428.09,
+          "end": 428.61,
+          "word": " 팔겠다.",
+          "probability": 0.9678
+        },
+        {
+          "start": 428.83,
+          "end": 429.69,
+          "word": " 주변에",
+          "probability": 0.9935
+        },
+        {
+          "start": 429.69,
+          "end": 430.09,
+          "word": " 뭔가",
+          "probability": 0.8081
+        },
+        {
+          "start": 430.09,
+          "end": 430.71,
+          "word": " 거래할",
+          "probability": 0.9928
+        },
+        {
+          "start": 430.71,
+          "end": 431.07,
+          "word": " 사람들이",
+          "probability": 0.9907
+        },
+        {
+          "start": 431.07,
+          "end": 431.69,
+          "word": " 많다.",
+          "probability": 0.9956
+        },
+        {
+          "start": 431.79,
+          "end": 432.27,
+          "word": " 그걸",
+          "probability": 0.9873
+        },
+        {
+          "start": 432.27,
+          "end": 432.53,
+          "word": " 이미",
+          "probability": 0.998
+        },
+        {
+          "start": 432.53,
+          "end": 432.71,
+          "word": " 다",
+          "probability": 0.9912
+        },
+        {
+          "start": 432.71,
+          "end": 433.37,
+          "word": " 깔아두고",
+          "probability": 0.981
+        },
+        {
+          "start": 433.37,
+          "end": 433.95,
+          "word": " 시장이",
+          "probability": 0.9644
+        },
+        {
+          "start": 433.95,
+          "end": 434.19,
+          "word": " 계속",
+          "probability": 0.9365
+        },
+        {
+          "start": 434.19,
+          "end": 434.79,
+          "word": " 사람들이",
+          "probability": 0.9658
+        },
+        {
+          "start": 434.79,
+          "end": 435.27,
+          "word": " 쌀을",
+          "probability": 0.9922
+        },
+        {
+          "start": 435.27,
+          "end": 435.41,
+          "word": " 계속",
+          "probability": 0.9849
+        },
+        {
+          "start": 435.41,
+          "end": 436.05,
+          "word": " 먹겠죠.",
+          "probability": 0.9985
+        },
+        {
+          "start": 436.31,
+          "end": 436.91,
+          "word": " 사람이",
+          "probability": 0.2605
+        },
+        {
+          "start": 436.91,
+          "end": 437.27,
+          "word": " 쌀을",
+          "probability": 0.9017
+        },
+        {
+          "start": 437.27,
+          "end": 437.27,
+          "word": " 안",
+          "probability": 0.9399
+        },
+        {
+          "start": 437.27,
+          "end": 437.65,
+          "word": " 먹지는",
+          "probability": 0.729
+        },
+        {
+          "start": 437.65,
+          "end": 437.83,
+          "word": " 않을",
+          "probability": 0.9976
+        },
+        {
+          "start": 437.83,
+          "end": 437.99,
+          "word": " 거",
+          "probability": 0.9961
+        },
+        {
+          "start": 437.99,
+          "end": 438.25,
+          "word": " 아니에요.",
+          "probability": 0.9995
+        },
+        {
+          "start": 438.57,
+          "end": 439.45,
+          "word": " 주식인데.",
+          "probability": 0.9982
+        },
+        {
+          "start": 439.59,
+          "end": 440.37,
+          "word": " 그렇죠?",
+          "probability": 0.5503
+        },
+        {
+          "start": 440.51,
+          "end": 440.97,
+          "word": " 그래서",
+          "probability": 0.9922
+        },
+        {
+          "start": 440.97,
+          "end": 441.49,
+          "word": " 많이",
+          "probability": 1.0
+        },
+        {
+          "start": 441.49,
+          "end": 441.97,
+          "word": " 벌지는",
+          "probability": 0.9993
+        },
+        {
+          "start": 441.97,
+          "end": 442.79,
+          "word": " 못하더라도",
+          "probability": 0.9946
+        },
+        {
+          "start": 442.79,
+          "end": 443.33,
+          "word": " 어쨌든",
+          "probability": 0.9883
+        },
+        {
+          "start": 443.33,
+          "end": 444.33,
+          "word": " 주변에",
+          "probability": 0.9966
+        },
+        {
+          "start": 444.33,
+          "end": 444.71,
+          "word": " 계속",
+          "probability": 1.0
+        },
+        {
+          "start": 444.71,
+          "end": 444.99,
+          "word": " 이렇게",
+          "probability": 0.9927
+        },
+        {
+          "start": 444.99,
+          "end": 445.47,
+          "word": " 뿌릴",
+          "probability": 0.9995
+        },
+        {
+          "start": 445.47,
+          "end": 445.77,
+          "word": " 텐데",
+          "probability": 0.9958
+        },
+        {
+          "start": 445.77,
+          "end": 446.45,
+          "word": " 그게",
+          "probability": 0.8516
+        },
+        {
+          "start": 446.45,
+          "end": 446.67,
+          "word": " 이제",
+          "probability": 0.9595
+        },
+        {
+          "start": 446.67,
+          "end": 447.27,
+          "word": " 거래처가",
+          "probability": 0.9996
+        },
+        {
+          "start": 447.27,
+          "end": 447.93,
+          "word": " 늘어나면",
+          "probability": 0.9987
+        },
+        {
+          "start": 447.93,
+          "end": 448.47,
+          "word": " 늘어나지",
+          "probability": 0.6594
+        },
+        {
+          "start": 448.47,
+          "end": 448.91,
+          "word": " 줄지는",
+          "probability": 0.8499
+        },
+        {
+          "start": 448.91,
+          "end": 449.41,
+          "word": " 않거든요.",
+          "probability": 0.9998
+        },
+        {
+          "start": 449.59,
+          "end": 450.07,
+          "word": " 업체가.",
+          "probability": 0.9863
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "start": 450.83,
+      "end": 480.36,
+      "text": "무슨 말인지 이해되시죠? 이런 식으로 리서치를 시작할 때 주제가요. 말을 기준에 두는 게 아니라 시장이 어떻게 될지를 봐야 되는 거고요. 그거는 사장이 좋은 거지 디자이너가 좋은 회사는 당연히 아니에요. 하나밖에 디자인을 할 수가 없잖아요. 무슨 말인지 이해되시죠? 그건 이제 별개로 생각을 하시는 게 좋고 흥미도는 어떠신 것 같아요? 리서치에 대한? 솔직히 좀 반반인데 되게 중요하다고 생각은 들어요.",
+      "avg_logprob": -0.06554554971092838,
+      "no_speech_prob": 0.1912841796875,
+      "words": [
+        {
+          "start": 450.83,
+          "end": 451.03,
+          "word": " 무슨",
+          "probability": 0.8833
+        },
+        {
+          "start": 451.03,
+          "end": 451.43,
+          "word": " 말인지",
+          "probability": 0.9814
+        },
+        {
+          "start": 451.43,
+          "end": 452.03,
+          "word": " 이해되시죠?",
+          "probability": 0.8346
+        },
+        {
+          "start": 452.17,
+          "end": 452.41,
+          "word": " 이런",
+          "probability": 0.9688
+        },
+        {
+          "start": 452.41,
+          "end": 452.69,
+          "word": " 식으로",
+          "probability": 0.9692
+        },
+        {
+          "start": 452.69,
+          "end": 453.55,
+          "word": " 리서치를",
+          "probability": 0.9946
+        },
+        {
+          "start": 453.55,
+          "end": 454.13,
+          "word": " 시작할",
+          "probability": 0.8347
+        },
+        {
+          "start": 454.13,
+          "end": 454.45,
+          "word": " 때",
+          "probability": 0.9941
+        },
+        {
+          "start": 454.45,
+          "end": 455.85,
+          "word": " 주제가요.",
+          "probability": 0.797
+        },
+        {
+          "start": 455.99,
+          "end": 456.57,
+          "word": " 말을",
+          "probability": 0.9663
+        },
+        {
+          "start": 456.57,
+          "end": 457.13,
+          "word": " 기준에",
+          "probability": 0.993
+        },
+        {
+          "start": 457.13,
+          "end": 457.39,
+          "word": " 두는",
+          "probability": 0.9976
+        },
+        {
+          "start": 457.39,
+          "end": 457.55,
+          "word": " 게",
+          "probability": 0.9873
+        },
+        {
+          "start": 457.55,
+          "end": 457.81,
+          "word": " 아니라",
+          "probability": 0.9995
+        },
+        {
+          "start": 457.81,
+          "end": 458.81,
+          "word": " 시장이",
+          "probability": 0.8245
+        },
+        {
+          "start": 458.81,
+          "end": 459.11,
+          "word": " 어떻게",
+          "probability": 0.9995
+        },
+        {
+          "start": 459.11,
+          "end": 459.69,
+          "word": " 될지를",
+          "probability": 0.9917
+        },
+        {
+          "start": 459.69,
+          "end": 460.09,
+          "word": " 봐야",
+          "probability": 0.9978
+        },
+        {
+          "start": 460.09,
+          "end": 460.29,
+          "word": " 되는",
+          "probability": 0.9785
+        },
+        {
+          "start": 460.29,
+          "end": 460.75,
+          "word": " 거고요.",
+          "probability": 0.998
+        },
+        {
+          "start": 460.95,
+          "end": 461.47,
+          "word": " 그거는",
+          "probability": 0.726
+        },
+        {
+          "start": 461.47,
+          "end": 462.07,
+          "word": " 사장이",
+          "probability": 0.8572
+        },
+        {
+          "start": 462.07,
+          "end": 462.33,
+          "word": " 좋은",
+          "probability": 0.9971
+        },
+        {
+          "start": 462.33,
+          "end": 462.67,
+          "word": " 거지",
+          "probability": 0.9604
+        },
+        {
+          "start": 462.67,
+          "end": 463.53,
+          "word": " 디자이너가",
+          "probability": 0.9788
+        },
+        {
+          "start": 463.53,
+          "end": 463.77,
+          "word": " 좋은",
+          "probability": 0.9966
+        },
+        {
+          "start": 463.77,
+          "end": 464.21,
+          "word": " 회사는",
+          "probability": 0.9972
+        },
+        {
+          "start": 464.21,
+          "end": 464.69,
+          "word": " 당연히",
+          "probability": 0.9922
+        },
+        {
+          "start": 464.69,
+          "end": 464.91,
+          "word": " 아니에요.",
+          "probability": 0.8022
+        },
+        {
+          "start": 465.33,
+          "end": 466.07,
+          "word": " 하나밖에",
+          "probability": 0.9705
+        },
+        {
+          "start": 466.07,
+          "end": 466.61,
+          "word": " 디자인을",
+          "probability": 0.896
+        },
+        {
+          "start": 466.61,
+          "end": 466.77,
+          "word": " 할",
+          "probability": 0.998
+        },
+        {
+          "start": 466.77,
+          "end": 466.95,
+          "word": " 수가",
+          "probability": 0.9458
+        },
+        {
+          "start": 466.95,
+          "end": 467.41,
+          "word": " 없잖아요.",
+          "probability": 0.999
+        },
+        {
+          "start": 467.73,
+          "end": 468.15,
+          "word": " 무슨",
+          "probability": 0.9902
+        },
+        {
+          "start": 468.15,
+          "end": 468.53,
+          "word": " 말인지",
+          "probability": 0.999
+        },
+        {
+          "start": 468.53,
+          "end": 469.09,
+          "word": " 이해되시죠?",
+          "probability": 0.9388
+        },
+        {
+          "start": 469.39,
+          "end": 469.85,
+          "word": " 그건",
+          "probability": 0.8726
+        },
+        {
+          "start": 469.85,
+          "end": 470.09,
+          "word": " 이제",
+          "probability": 0.6123
+        },
+        {
+          "start": 470.09,
+          "end": 470.57,
+          "word": " 별개로",
+          "probability": 0.9977
+        },
+        {
+          "start": 470.57,
+          "end": 470.83,
+          "word": " 생각을",
+          "probability": 0.9126
+        },
+        {
+          "start": 470.83,
+          "end": 471.27,
+          "word": " 하시는",
+          "probability": 0.9985
+        },
+        {
+          "start": 471.27,
+          "end": 471.45,
+          "word": " 게",
+          "probability": 0.9956
+        },
+        {
+          "start": 471.45,
+          "end": 471.83,
+          "word": " 좋고",
+          "probability": 0.9978
+        },
+        {
+          "start": 471.83,
+          "end": 472.93,
+          "word": " 흥미도는",
+          "probability": 0.9718
+        },
+        {
+          "start": 472.93,
+          "end": 473.33,
+          "word": " 어떠신",
+          "probability": 0.9987
+        },
+        {
+          "start": 473.33,
+          "end": 473.45,
+          "word": " 것",
+          "probability": 0.9316
+        },
+        {
+          "start": 473.45,
+          "end": 473.69,
+          "word": " 같아요?",
+          "probability": 0.998
+        },
+        {
+          "start": 473.75,
+          "end": 474.31,
+          "word": " 리서치에",
+          "probability": 0.9976
+        },
+        {
+          "start": 474.31,
+          "end": 474.57,
+          "word": " 대한?",
+          "probability": 0.9985
+        },
+        {
+          "start": 476.39,
+          "end": 477.19,
+          "word": " 솔직히",
+          "probability": 0.8525
+        },
+        {
+          "start": 477.32,
+          "end": 477.52,
+          "word": " 좀",
+          "probability": 0.9663
+        },
+        {
+          "start": 477.52,
+          "end": 478.28,
+          "word": " 반반인데",
+          "probability": 0.9951
+        },
+        {
+          "start": 478.28,
+          "end": 478.82,
+          "word": " 되게",
+          "probability": 0.8027
+        },
+        {
+          "start": 478.82,
+          "end": 479.58,
+          "word": " 중요하다고",
+          "probability": 0.9995
+        },
+        {
+          "start": 479.58,
+          "end": 480.08,
+          "word": " 생각은",
+          "probability": 0.9863
+        },
+        {
+          "start": 480.08,
+          "end": 480.36,
+          "word": " 들어요.",
+          "probability": 0.9893
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "start": 480.88,
+      "end": 513.67,
+      "text": "이게 진짜 중요한 과정이구나. 그러면서 주제 찾고 자료를 찾는데 제가 재밌는 걸 찾았다. 그때는 흥미를 느끼고 자료만 찾는다고 하다 그런 이목이 돼가지고 마음에 안 드는 자료만 있었을 때도 아닌 것 같기도 하고 근데 중요하다는 생각이 더 크게 들어요.",
+      "avg_logprob": -0.1535456663905046,
+      "no_speech_prob": 0.1351318359375,
+      "words": [
+        {
+          "start": 480.88,
+          "end": 481.32,
+          "word": " 이게",
+          "probability": 0.6523
+        },
+        {
+          "start": 481.32,
+          "end": 481.58,
+          "word": " 진짜",
+          "probability": 0.8535
+        },
+        {
+          "start": 481.58,
+          "end": 481.88,
+          "word": " 중요한",
+          "probability": 0.9771
+        },
+        {
+          "start": 481.88,
+          "end": 482.66,
+          "word": " 과정이구나.",
+          "probability": 0.9533
+        },
+        {
+          "start": 482.8,
+          "end": 483.4,
+          "word": " 그러면서",
+          "probability": 0.9822
+        },
+        {
+          "start": 483.4,
+          "end": 484.26,
+          "word": " 주제",
+          "probability": 0.7307
+        },
+        {
+          "start": 484.26,
+          "end": 484.7,
+          "word": " 찾고",
+          "probability": 0.9583
+        },
+        {
+          "start": 484.7,
+          "end": 487.32,
+          "word": " 자료를",
+          "probability": 0.8792
+        },
+        {
+          "start": 487.32,
+          "end": 487.82,
+          "word": " 찾는데",
+          "probability": 0.8132
+        },
+        {
+          "start": 487.82,
+          "end": 488.62,
+          "word": " 제가",
+          "probability": 0.7651
+        },
+        {
+          "start": 488.62,
+          "end": 489.76,
+          "word": " 재밌는",
+          "probability": 0.7964
+        },
+        {
+          "start": 489.76,
+          "end": 490.0,
+          "word": " 걸",
+          "probability": 0.8647
+        },
+        {
+          "start": 490.0,
+          "end": 490.58,
+          "word": " 찾았다.",
+          "probability": 0.8319
+        },
+        {
+          "start": 490.62,
+          "end": 491.24,
+          "word": " 그때는",
+          "probability": 0.925
+        },
+        {
+          "start": 491.24,
+          "end": 491.6,
+          "word": " 흥미를",
+          "probability": 0.997
+        },
+        {
+          "start": 491.6,
+          "end": 491.96,
+          "word": " 느끼고",
+          "probability": 0.7461
+        },
+        {
+          "start": 492.34,
+          "end": 495.58,
+          "word": " 자료만",
+          "probability": 0.8853
+        },
+        {
+          "start": 498.84,
+          "end": 499.52,
+          "word": " 찾는다고",
+          "probability": 0.9587
+        },
+        {
+          "start": 499.52,
+          "end": 500.68,
+          "word": " 하다",
+          "probability": 0.6875
+        },
+        {
+          "start": 500.68,
+          "end": 501.32,
+          "word": " 그런",
+          "probability": 0.6987
+        },
+        {
+          "start": 501.32,
+          "end": 502.54,
+          "word": " 이목이",
+          "probability": 0.9346
+        },
+        {
+          "start": 502.54,
+          "end": 502.98,
+          "word": " 돼가지고",
+          "probability": 0.8152
+        },
+        {
+          "start": 502.98,
+          "end": 505.28,
+          "word": " 마음에",
+          "probability": 0.834
+        },
+        {
+          "start": 505.35,
+          "end": 505.55,
+          "word": " 안",
+          "probability": 0.9595
+        },
+        {
+          "start": 505.55,
+          "end": 505.77,
+          "word": " 드는",
+          "probability": 0.9905
+        },
+        {
+          "start": 505.77,
+          "end": 506.35,
+          "word": " 자료만",
+          "probability": 0.9883
+        },
+        {
+          "start": 506.35,
+          "end": 507.01,
+          "word": " 있었을",
+          "probability": 0.9021
+        },
+        {
+          "start": 507.01,
+          "end": 507.23,
+          "word": " 때도",
+          "probability": 0.47
+        },
+        {
+          "start": 507.23,
+          "end": 508.61,
+          "word": " 아닌",
+          "probability": 0.959
+        },
+        {
+          "start": 510.11,
+          "end": 510.35,
+          "word": " 것",
+          "probability": 0.8296
+        },
+        {
+          "start": 510.35,
+          "end": 510.67,
+          "word": " 같기도",
+          "probability": 0.9978
+        },
+        {
+          "start": 510.67,
+          "end": 511.11,
+          "word": " 하고",
+          "probability": 0.9971
+        },
+        {
+          "start": 511.11,
+          "end": 511.77,
+          "word": " 근데",
+          "probability": 0.79
+        },
+        {
+          "start": 511.77,
+          "end": 512.65,
+          "word": " 중요하다는",
+          "probability": 0.9897
+        },
+        {
+          "start": 512.65,
+          "end": 512.97,
+          "word": " 생각이",
+          "probability": 0.9932
+        },
+        {
+          "start": 512.97,
+          "end": 513.15,
+          "word": " 더",
+          "probability": 0.9858
+        },
+        {
+          "start": 513.15,
+          "end": 513.35,
+          "word": " 크게",
+          "probability": 0.7432
+        },
+        {
+          "start": 513.35,
+          "end": 513.67,
+          "word": " 들어요.",
+          "probability": 0.7344
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "start": 514.07,
+      "end": 537.27,
+      "text": "이게 장점이자 단점인데요. 장점은 본인의 일에 질리지 않는다는 게 장점이거든요. 고민을 하다 보면 고민이 흥미가 되고 흥미도가 높아지면 당연히 결과물이 좋을 수밖에 없고 디자이너한테는 굉장히 좋은 습관 중에 하나가 본인 결과물에 만족을 못하는 거예요.",
+      "avg_logprob": -0.020652077118442816,
+      "no_speech_prob": 0.295654296875,
+      "words": [
+        {
+          "start": 514.07,
+          "end": 515.61,
+          "word": " 이게",
+          "probability": 0.6338
+        },
+        {
+          "start": 515.61,
+          "end": 517.19,
+          "word": " 장점이자",
+          "probability": 0.9735
+        },
+        {
+          "start": 517.19,
+          "end": 518.11,
+          "word": " 단점인데요.",
+          "probability": 0.9735
+        },
+        {
+          "start": 518.67,
+          "end": 519.71,
+          "word": " 장점은",
+          "probability": 0.9801
+        },
+        {
+          "start": 519.71,
+          "end": 520.75,
+          "word": " 본인의",
+          "probability": 0.9839
+        },
+        {
+          "start": 520.75,
+          "end": 521.25,
+          "word": " 일에",
+          "probability": 0.9927
+        },
+        {
+          "start": 521.25,
+          "end": 521.81,
+          "word": " 질리지",
+          "probability": 0.9904
+        },
+        {
+          "start": 521.81,
+          "end": 522.29,
+          "word": " 않는다는",
+          "probability": 0.9941
+        },
+        {
+          "start": 522.29,
+          "end": 522.55,
+          "word": " 게",
+          "probability": 0.9019
+        },
+        {
+          "start": 522.55,
+          "end": 523.95,
+          "word": " 장점이거든요.",
+          "probability": 0.9971
+        },
+        {
+          "start": 524.31,
+          "end": 525.35,
+          "word": " 고민을",
+          "probability": 0.998
+        },
+        {
+          "start": 525.35,
+          "end": 525.67,
+          "word": " 하다",
+          "probability": 0.9397
+        },
+        {
+          "start": 525.67,
+          "end": 525.87,
+          "word": " 보면",
+          "probability": 1.0
+        },
+        {
+          "start": 525.87,
+          "end": 526.81,
+          "word": " 고민이",
+          "probability": 0.8569
+        },
+        {
+          "start": 526.81,
+          "end": 527.23,
+          "word": " 흥미가",
+          "probability": 0.9987
+        },
+        {
+          "start": 527.23,
+          "end": 527.51,
+          "word": " 되고",
+          "probability": 0.9941
+        },
+        {
+          "start": 527.51,
+          "end": 528.65,
+          "word": " 흥미도가",
+          "probability": 0.9945
+        },
+        {
+          "start": 528.65,
+          "end": 529.25,
+          "word": " 높아지면",
+          "probability": 0.9995
+        },
+        {
+          "start": 529.25,
+          "end": 529.77,
+          "word": " 당연히",
+          "probability": 0.9983
+        },
+        {
+          "start": 529.77,
+          "end": 530.31,
+          "word": " 결과물이",
+          "probability": 0.9993
+        },
+        {
+          "start": 530.31,
+          "end": 530.49,
+          "word": " 좋을",
+          "probability": 0.9927
+        },
+        {
+          "start": 530.49,
+          "end": 530.95,
+          "word": " 수밖에",
+          "probability": 0.9807
+        },
+        {
+          "start": 530.95,
+          "end": 531.19,
+          "word": " 없고",
+          "probability": 0.9849
+        },
+        {
+          "start": 531.19,
+          "end": 532.87,
+          "word": " 디자이너한테는",
+          "probability": 0.9937
+        },
+        {
+          "start": 532.87,
+          "end": 533.21,
+          "word": " 굉장히",
+          "probability": 0.999
+        },
+        {
+          "start": 533.21,
+          "end": 533.63,
+          "word": " 좋은",
+          "probability": 0.9995
+        },
+        {
+          "start": 533.63,
+          "end": 534.17,
+          "word": " 습관",
+          "probability": 1.0
+        },
+        {
+          "start": 534.17,
+          "end": 534.33,
+          "word": " 중에",
+          "probability": 0.9854
+        },
+        {
+          "start": 534.33,
+          "end": 534.89,
+          "word": " 하나가",
+          "probability": 1.0
+        },
+        {
+          "start": 534.89,
+          "end": 535.41,
+          "word": " 본인",
+          "probability": 0.999
+        },
+        {
+          "start": 535.41,
+          "end": 536.07,
+          "word": " 결과물에",
+          "probability": 0.9902
+        },
+        {
+          "start": 536.07,
+          "end": 536.63,
+          "word": " 만족을",
+          "probability": 0.9997
+        },
+        {
+          "start": 536.63,
+          "end": 536.99,
+          "word": " 못하는",
+          "probability": 0.9763
+        },
+        {
+          "start": 536.99,
+          "end": 537.27,
+          "word": " 거예요.",
+          "probability": 0.9976
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "start": 537.99,
+      "end": 560.29,
+      "text": "근데 단점 중에 하나는 본인 스트레스가 꽤 있거든요. 근데 그러면 차라리 이걸 바꿀 수는 없어요. 제가 학생들을 많이 가르쳐보면서 느낀 건 기초 성향을 바꿀 수는 없어요. 본인의. 그럼 이 스트레스가 계속된다는 건데 일을 하면서도 계속될 거거든요. 차라리 스트레스를 관리하는 걸로 방향을 트세요. 계속 고민하시고요.",
+      "avg_logprob": -0.06226794701991695,
+      "no_speech_prob": 0.06292724609375,
+      "words": [
+        {
+          "start": 537.99,
+          "end": 538.23,
+          "word": " 근데",
+          "probability": 0.3774
+        },
+        {
+          "start": 538.23,
+          "end": 538.87,
+          "word": " 단점",
+          "probability": 0.9868
+        },
+        {
+          "start": 538.87,
+          "end": 539.15,
+          "word": " 중에",
+          "probability": 0.6562
+        },
+        {
+          "start": 539.15,
+          "end": 539.65,
+          "word": " 하나는",
+          "probability": 0.9922
+        },
+        {
+          "start": 539.65,
+          "end": 540.07,
+          "word": " 본인",
+          "probability": 0.9639
+        },
+        {
+          "start": 540.07,
+          "end": 540.75,
+          "word": " 스트레스가",
+          "probability": 0.974
+        },
+        {
+          "start": 540.75,
+          "end": 541.05,
+          "word": " 꽤",
+          "probability": 0.9678
+        },
+        {
+          "start": 541.05,
+          "end": 541.35,
+          "word": " 있거든요.",
+          "probability": 0.9839
+        },
+        {
+          "start": 541.65,
+          "end": 542.15,
+          "word": " 근데",
+          "probability": 0.6064
+        },
+        {
+          "start": 542.15,
+          "end": 542.53,
+          "word": " 그러면",
+          "probability": 0.9736
+        },
+        {
+          "start": 542.53,
+          "end": 543.43,
+          "word": " 차라리",
+          "probability": 0.9989
+        },
+        {
+          "start": 543.43,
+          "end": 543.91,
+          "word": " 이걸",
+          "probability": 0.8975
+        },
+        {
+          "start": 543.91,
+          "end": 544.69,
+          "word": " 바꿀",
+          "probability": 0.9966
+        },
+        {
+          "start": 544.69,
+          "end": 544.83,
+          "word": " 수는",
+          "probability": 0.9141
+        },
+        {
+          "start": 544.83,
+          "end": 545.09,
+          "word": " 없어요.",
+          "probability": 0.9995
+        },
+        {
+          "start": 545.29,
+          "end": 545.73,
+          "word": " 제가",
+          "probability": 0.9897
+        },
+        {
+          "start": 545.73,
+          "end": 546.43,
+          "word": " 학생들을",
+          "probability": 0.8698
+        },
+        {
+          "start": 546.43,
+          "end": 546.63,
+          "word": " 많이",
+          "probability": 0.9829
+        },
+        {
+          "start": 546.63,
+          "end": 547.41,
+          "word": " 가르쳐보면서",
+          "probability": 0.9183
+        },
+        {
+          "start": 547.41,
+          "end": 547.87,
+          "word": " 느낀",
+          "probability": 0.9985
+        },
+        {
+          "start": 547.87,
+          "end": 548.05,
+          "word": " 건",
+          "probability": 0.9917
+        },
+        {
+          "start": 548.05,
+          "end": 548.83,
+          "word": " 기초",
+          "probability": 0.9888
+        },
+        {
+          "start": 548.83,
+          "end": 549.27,
+          "word": " 성향을",
+          "probability": 0.9948
+        },
+        {
+          "start": 549.27,
+          "end": 549.65,
+          "word": " 바꿀",
+          "probability": 0.9985
+        },
+        {
+          "start": 549.65,
+          "end": 549.79,
+          "word": " 수는",
+          "probability": 0.9919
+        },
+        {
+          "start": 549.79,
+          "end": 550.05,
+          "word": " 없어요.",
+          "probability": 0.9995
+        },
+        {
+          "start": 550.23,
+          "end": 550.67,
+          "word": " 본인의.",
+          "probability": 0.9665
+        },
+        {
+          "start": 550.75,
+          "end": 551.23,
+          "word": " 그럼",
+          "probability": 0.9102
+        },
+        {
+          "start": 551.23,
+          "end": 551.41,
+          "word": " 이",
+          "probability": 0.999
+        },
+        {
+          "start": 551.41,
+          "end": 551.97,
+          "word": " 스트레스가",
+          "probability": 0.9998
+        },
+        {
+          "start": 551.97,
+          "end": 552.73,
+          "word": " 계속된다는",
+          "probability": 0.9632
+        },
+        {
+          "start": 552.73,
+          "end": 553.09,
+          "word": " 건데",
+          "probability": 0.9995
+        },
+        {
+          "start": 553.09,
+          "end": 553.83,
+          "word": " 일을",
+          "probability": 0.842
+        },
+        {
+          "start": 553.83,
+          "end": 554.35,
+          "word": " 하면서도",
+          "probability": 0.9988
+        },
+        {
+          "start": 554.35,
+          "end": 554.97,
+          "word": " 계속될",
+          "probability": 0.9673
+        },
+        {
+          "start": 554.97,
+          "end": 555.31,
+          "word": " 거거든요.",
+          "probability": 0.9976
+        },
+        {
+          "start": 555.61,
+          "end": 556.23,
+          "word": " 차라리",
+          "probability": 0.9976
+        },
+        {
+          "start": 556.23,
+          "end": 556.85,
+          "word": " 스트레스를",
+          "probability": 0.9995
+        },
+        {
+          "start": 556.85,
+          "end": 557.57,
+          "word": " 관리하는",
+          "probability": 0.9997
+        },
+        {
+          "start": 557.57,
+          "end": 557.91,
+          "word": " 걸로",
+          "probability": 0.9976
+        },
+        {
+          "start": 557.91,
+          "end": 558.67,
+          "word": " 방향을",
+          "probability": 0.9998
+        },
+        {
+          "start": 558.67,
+          "end": 558.95,
+          "word": " 트세요.",
+          "probability": 0.9611
+        },
+        {
+          "start": 559.05,
+          "end": 559.55,
+          "word": " 계속",
+          "probability": 0.9883
+        },
+        {
+          "start": 559.55,
+          "end": 560.29,
+          "word": " 고민하시고요.",
+          "probability": 0.9988
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "start": 560.7,
+      "end": 581.4,
+      "text": "계속 스트레스 받으시고요. 계속 고민하시면서 자료를 받은 때 본인 스트레스를 어떻게 해소할지 반대로 생각을 하시면 디자인하실 때 이걸 많이 살릴 수 있을 거예요. 무슨 말인지 이해되시죠? 흥미도는 낮다고 저는 생각이 들긴 하는데 기획하는 걸 직무로 삼으면 어떠실 것 같아요?",
+      "avg_logprob": -0.08791307796692026,
+      "no_speech_prob": 0.1650390625,
+      "words": [
+        {
+          "start": 560.7,
+          "end": 560.94,
+          "word": " 계속",
+          "probability": 0.7861
+        },
+        {
+          "start": 560.94,
+          "end": 561.28,
+          "word": " 스트레스",
+          "probability": 0.9302
+        },
+        {
+          "start": 561.28,
+          "end": 561.98,
+          "word": " 받으시고요.",
+          "probability": 0.8517
+        },
+        {
+          "start": 562.06,
+          "end": 562.52,
+          "word": " 계속",
+          "probability": 0.9497
+        },
+        {
+          "start": 562.52,
+          "end": 563.46,
+          "word": " 고민하시면서",
+          "probability": 0.9688
+        },
+        {
+          "start": 563.46,
+          "end": 563.96,
+          "word": " 자료를",
+          "probability": 0.8945
+        },
+        {
+          "start": 563.96,
+          "end": 564.38,
+          "word": " 받은",
+          "probability": 0.7659
+        },
+        {
+          "start": 564.38,
+          "end": 564.66,
+          "word": " 때",
+          "probability": 0.9663
+        },
+        {
+          "start": 564.66,
+          "end": 565.16,
+          "word": " 본인",
+          "probability": 0.9104
+        },
+        {
+          "start": 565.16,
+          "end": 565.82,
+          "word": " 스트레스를",
+          "probability": 0.9766
+        },
+        {
+          "start": 565.82,
+          "end": 566.22,
+          "word": " 어떻게",
+          "probability": 0.9937
+        },
+        {
+          "start": 566.22,
+          "end": 566.92,
+          "word": " 해소할지",
+          "probability": 0.9742
+        },
+        {
+          "start": 566.92,
+          "end": 567.44,
+          "word": " 반대로",
+          "probability": 0.9761
+        },
+        {
+          "start": 567.44,
+          "end": 567.72,
+          "word": " 생각을",
+          "probability": 0.9399
+        },
+        {
+          "start": 567.72,
+          "end": 568.26,
+          "word": " 하시면",
+          "probability": 0.9927
+        },
+        {
+          "start": 568.26,
+          "end": 569.32,
+          "word": " 디자인하실",
+          "probability": 0.8317
+        },
+        {
+          "start": 569.32,
+          "end": 569.52,
+          "word": " 때",
+          "probability": 0.9878
+        },
+        {
+          "start": 569.52,
+          "end": 570.0,
+          "word": " 이걸",
+          "probability": 0.8359
+        },
+        {
+          "start": 570.0,
+          "end": 570.22,
+          "word": " 많이",
+          "probability": 0.9985
+        },
+        {
+          "start": 570.22,
+          "end": 570.66,
+          "word": " 살릴",
+          "probability": 0.9915
+        },
+        {
+          "start": 570.66,
+          "end": 570.76,
+          "word": " 수",
+          "probability": 0.9961
+        },
+        {
+          "start": 570.76,
+          "end": 571.0,
+          "word": " 있을",
+          "probability": 0.8516
+        },
+        {
+          "start": 571.0,
+          "end": 571.22,
+          "word": " 거예요.",
+          "probability": 0.4292
+        },
+        {
+          "start": 571.42,
+          "end": 572.06,
+          "word": " 무슨",
+          "probability": 0.9961
+        },
+        {
+          "start": 572.06,
+          "end": 572.48,
+          "word": " 말인지",
+          "probability": 0.9968
+        },
+        {
+          "start": 572.48,
+          "end": 573.28,
+          "word": " 이해되시죠?",
+          "probability": 0.8667
+        },
+        {
+          "start": 573.86,
+          "end": 574.7,
+          "word": " 흥미도는",
+          "probability": 0.9513
+        },
+        {
+          "start": 574.7,
+          "end": 575.5,
+          "word": " 낮다고",
+          "probability": 0.9966
+        },
+        {
+          "start": 575.5,
+          "end": 575.98,
+          "word": " 저는",
+          "probability": 0.7783
+        },
+        {
+          "start": 575.98,
+          "end": 576.86,
+          "word": " 생각이",
+          "probability": 0.9917
+        },
+        {
+          "start": 576.86,
+          "end": 577.48,
+          "word": " 들긴",
+          "probability": 0.9802
+        },
+        {
+          "start": 577.48,
+          "end": 577.76,
+          "word": " 하는데",
+          "probability": 0.9932
+        },
+        {
+          "start": 577.76,
+          "end": 579.36,
+          "word": " 기획하는",
+          "probability": 0.9775
+        },
+        {
+          "start": 579.36,
+          "end": 579.72,
+          "word": " 걸",
+          "probability": 0.9878
+        },
+        {
+          "start": 579.72,
+          "end": 580.3,
+          "word": " 직무로",
+          "probability": 0.9479
+        },
+        {
+          "start": 580.3,
+          "end": 580.58,
+          "word": " 삼으면",
+          "probability": 0.9578
+        },
+        {
+          "start": 580.58,
+          "end": 580.96,
+          "word": " 어떠실",
+          "probability": 0.998
+        },
+        {
+          "start": 580.96,
+          "end": 581.14,
+          "word": " 것",
+          "probability": 0.978
+        },
+        {
+          "start": 581.14,
+          "end": 581.4,
+          "word": " 같아요?",
+          "probability": 0.998
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "start": 586.68,
+      "end": 600.38,
+      "text": "제가 흥미도를 체크하는 거예요 얘기했지만 여기서 잘 할 수도 없고요 우선은 가가지고 풍나더라도 제대로 되는 회사를 가는 게 좋지 않겠어요? 잘한다 못한다의 문제가 아니라 본인이 재밌냐고",
+      "avg_logprob": -0.34877231078488485,
+      "no_speech_prob": 0.2783203125,
+      "words": [
+        {
+          "start": 586.68,
+          "end": 587.56,
+          "word": " 제가",
+          "probability": 0.0299
+        },
+        {
+          "start": 587.56,
+          "end": 588.44,
+          "word": " 흥미도를",
+          "probability": 0.8237
+        },
+        {
+          "start": 588.44,
+          "end": 588.92,
+          "word": " 체크하는",
+          "probability": 0.7555
+        },
+        {
+          "start": 588.92,
+          "end": 589.24,
+          "word": " 거예요",
+          "probability": 0.5078
+        },
+        {
+          "start": 589.24,
+          "end": 590.24,
+          "word": " 얘기했지만",
+          "probability": 0.7345
+        },
+        {
+          "start": 590.24,
+          "end": 590.98,
+          "word": " 여기서",
+          "probability": 0.6343
+        },
+        {
+          "start": 590.98,
+          "end": 591.36,
+          "word": " 잘",
+          "probability": 0.9077
+        },
+        {
+          "start": 591.36,
+          "end": 591.54,
+          "word": " 할",
+          "probability": 0.4731
+        },
+        {
+          "start": 591.54,
+          "end": 591.7,
+          "word": " 수도",
+          "probability": 0.875
+        },
+        {
+          "start": 591.7,
+          "end": 592.1,
+          "word": " 없고요",
+          "probability": 0.8809
+        },
+        {
+          "start": 592.1,
+          "end": 592.96,
+          "word": " 우선은",
+          "probability": 0.7676
+        },
+        {
+          "start": 592.96,
+          "end": 593.72,
+          "word": " 가가지고",
+          "probability": 0.4671
+        },
+        {
+          "start": 593.72,
+          "end": 594.6,
+          "word": " 풍나더라도",
+          "probability": 0.6078
+        },
+        {
+          "start": 594.6,
+          "end": 595.36,
+          "word": " 제대로",
+          "probability": 0.9707
+        },
+        {
+          "start": 595.36,
+          "end": 595.62,
+          "word": " 되는",
+          "probability": 0.5596
+        },
+        {
+          "start": 595.62,
+          "end": 595.98,
+          "word": " 회사를",
+          "probability": 0.9275
+        },
+        {
+          "start": 595.98,
+          "end": 596.22,
+          "word": " 가는",
+          "probability": 0.9268
+        },
+        {
+          "start": 596.22,
+          "end": 596.42,
+          "word": " 게",
+          "probability": 0.8237
+        },
+        {
+          "start": 596.42,
+          "end": 596.7,
+          "word": " 좋지",
+          "probability": 0.9927
+        },
+        {
+          "start": 596.7,
+          "end": 597.22,
+          "word": " 않겠어요?",
+          "probability": 0.9836
+        },
+        {
+          "start": 597.32,
+          "end": 598.06,
+          "word": " 잘한다",
+          "probability": 0.8093
+        },
+        {
+          "start": 598.06,
+          "end": 598.7,
+          "word": " 못한다의",
+          "probability": 0.6922
+        },
+        {
+          "start": 598.7,
+          "end": 599.06,
+          "word": " 문제가",
+          "probability": 0.9595
+        },
+        {
+          "start": 599.06,
+          "end": 599.34,
+          "word": " 아니라",
+          "probability": 0.9917
+        },
+        {
+          "start": 599.34,
+          "end": 599.78,
+          "word": " 본인이",
+          "probability": 0.9734
+        },
+        {
+          "start": 599.78,
+          "end": 600.38,
+          "word": " 재밌냐고",
+          "probability": 0.9019
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "start": 608.72,
+      "end": 627.76,
+      "text": "그러시면 디자인 쪽에서 생각을 하시거나 또는 코딩 쪽에서 생각을 하시는 게 이제 맞겠죠? 저는 디자인 쪽이.. 재밌었던 것 같아요? 네. 툴을 만지고 왔었던 것 같아요. 재밌었던 것 같아요. 디자인 계열로.. 그러면..",
+      "avg_logprob": -0.2762896683481004,
+      "no_speech_prob": 0.092529296875,
+      "words": [
+        {
+          "start": 608.72,
+          "end": 609.48,
+          "word": " 그러시면",
+          "probability": 0.6438
+        },
+        {
+          "start": 609.48,
+          "end": 610.24,
+          "word": " 디자인",
+          "probability": 0.8025
+        },
+        {
+          "start": 610.24,
+          "end": 610.64,
+          "word": " 쪽에서",
+          "probability": 0.8306
+        },
+        {
+          "start": 610.64,
+          "end": 611.56,
+          "word": " 생각을",
+          "probability": 0.9434
+        },
+        {
+          "start": 611.56,
+          "end": 612.22,
+          "word": " 하시거나",
+          "probability": 0.9808
+        },
+        {
+          "start": 612.22,
+          "end": 612.74,
+          "word": " 또는",
+          "probability": 0.7307
+        },
+        {
+          "start": 612.74,
+          "end": 613.1,
+          "word": " 코딩",
+          "probability": 0.9912
+        },
+        {
+          "start": 613.1,
+          "end": 613.46,
+          "word": " 쪽에서",
+          "probability": 0.9011
+        },
+        {
+          "start": 613.46,
+          "end": 613.78,
+          "word": " 생각을",
+          "probability": 0.8931
+        },
+        {
+          "start": 613.78,
+          "end": 614.18,
+          "word": " 하시는",
+          "probability": 0.9795
+        },
+        {
+          "start": 614.18,
+          "end": 614.44,
+          "word": " 게",
+          "probability": 0.6128
+        },
+        {
+          "start": 614.44,
+          "end": 614.6,
+          "word": " 이제",
+          "probability": 0.687
+        },
+        {
+          "start": 614.6,
+          "end": 615.08,
+          "word": " 맞겠죠?",
+          "probability": 0.9019
+        },
+        {
+          "start": 615.36,
+          "end": 615.88,
+          "word": " 저는",
+          "probability": 0.6094
+        },
+        {
+          "start": 615.88,
+          "end": 616.84,
+          "word": " 디자인",
+          "probability": 0.9771
+        },
+        {
+          "start": 616.84,
+          "end": 617.24,
+          "word": " 쪽이..",
+          "probability": 0.5297
+        },
+        {
+          "start": 617.56,
+          "end": 618.68,
+          "word": " 재밌었던",
+          "probability": 0.7954
+        },
+        {
+          "start": 618.68,
+          "end": 618.88,
+          "word": " 것",
+          "probability": 0.5317
+        },
+        {
+          "start": 618.88,
+          "end": 619.1,
+          "word": " 같아요?",
+          "probability": 0.9492
+        },
+        {
+          "start": 619.32,
+          "end": 619.52,
+          "word": " 네.",
+          "probability": 0.4702
+        },
+        {
+          "start": 620.66,
+          "end": 621.42,
+          "word": " 툴을",
+          "probability": 0.6904
+        },
+        {
+          "start": 621.42,
+          "end": 621.76,
+          "word": " 만지고",
+          "probability": 0.9636
+        },
+        {
+          "start": 621.76,
+          "end": 622.2,
+          "word": " 왔었던",
+          "probability": 0.5942
+        },
+        {
+          "start": 622.2,
+          "end": 622.38,
+          "word": " 것",
+          "probability": 0.4951
+        },
+        {
+          "start": 622.38,
+          "end": 622.6,
+          "word": " 같아요.",
+          "probability": 0.6821
+        },
+        {
+          "start": 622.8,
+          "end": 623.56,
+          "word": " 재밌었던",
+          "probability": 0.7122
+        },
+        {
+          "start": 623.56,
+          "end": 623.76,
+          "word": " 것",
+          "probability": 0.8506
+        },
+        {
+          "start": 623.76,
+          "end": 623.98,
+          "word": " 같아요.",
+          "probability": 0.9839
+        },
+        {
+          "start": 624.06,
+          "end": 624.78,
+          "word": " 디자인",
+          "probability": 0.9585
+        },
+        {
+          "start": 624.78,
+          "end": 625.66,
+          "word": " 계열로..",
+          "probability": 0.8825
+        },
+        {
+          "start": 625.66,
+          "end": 627.76,
+          "word": " 그러면..",
+          "probability": 0.7074
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "start": 635.9,
+      "end": 663.7,
+      "text": "이렇게 하실 거면요. 본인이 지금 계속 자신감 떨어진다고 하고 있잖아요. 디자이너는 자존심도 있어야 되고 그다음에 내 주장도 밀어붙일 수 있어야 되고 누군가랑 싸우기도 해야 되고요. 싸울 사람들이 굉장히 많아요. 독해지거든요, 사람이. 착한 사람들도 독해지는 게 디자인 계열이 얼마나 많이 싸웠는데요. 본인을 믿고 본인이 맞다고 생각을 하면서",
+      "avg_logprob": -0.04548267415254423,
+      "no_speech_prob": 0.42578125,
+      "words": [
+        {
+          "start": 635.9,
+          "end": 636.42,
+          "word": " 이렇게",
+          "probability": 0.8286
+        },
+        {
+          "start": 636.42,
+          "end": 636.76,
+          "word": " 하실",
+          "probability": 0.9629
+        },
+        {
+          "start": 636.76,
+          "end": 637.36,
+          "word": " 거면요.",
+          "probability": 0.8817
+        },
+        {
+          "start": 637.68,
+          "end": 638.66,
+          "word": " 본인이",
+          "probability": 0.9939
+        },
+        {
+          "start": 638.66,
+          "end": 639.14,
+          "word": " 지금",
+          "probability": 0.9434
+        },
+        {
+          "start": 639.14,
+          "end": 639.66,
+          "word": " 계속",
+          "probability": 0.9937
+        },
+        {
+          "start": 639.66,
+          "end": 640.44,
+          "word": " 자신감",
+          "probability": 0.8687
+        },
+        {
+          "start": 640.44,
+          "end": 641.12,
+          "word": " 떨어진다고",
+          "probability": 0.9941
+        },
+        {
+          "start": 641.12,
+          "end": 641.34,
+          "word": " 하고",
+          "probability": 0.9951
+        },
+        {
+          "start": 641.34,
+          "end": 641.7,
+          "word": " 있잖아요.",
+          "probability": 0.9985
+        },
+        {
+          "start": 642.04,
+          "end": 643.02,
+          "word": " 디자이너는",
+          "probability": 0.9984
+        },
+        {
+          "start": 643.02,
+          "end": 644.18,
+          "word": " 자존심도",
+          "probability": 0.9573
+        },
+        {
+          "start": 644.18,
+          "end": 644.6,
+          "word": " 있어야",
+          "probability": 0.999
+        },
+        {
+          "start": 644.6,
+          "end": 644.88,
+          "word": " 되고",
+          "probability": 0.9819
+        },
+        {
+          "start": 644.88,
+          "end": 645.86,
+          "word": " 그다음에",
+          "probability": 0.833
+        },
+        {
+          "start": 645.86,
+          "end": 646.7,
+          "word": " 내",
+          "probability": 0.9966
+        },
+        {
+          "start": 646.7,
+          "end": 647.26,
+          "word": " 주장도",
+          "probability": 0.9993
+        },
+        {
+          "start": 647.26,
+          "end": 647.98,
+          "word": " 밀어붙일",
+          "probability": 0.9857
+        },
+        {
+          "start": 647.98,
+          "end": 648.12,
+          "word": " 수",
+          "probability": 0.998
+        },
+        {
+          "start": 648.12,
+          "end": 648.52,
+          "word": " 있어야",
+          "probability": 0.9995
+        },
+        {
+          "start": 648.52,
+          "end": 648.78,
+          "word": " 되고",
+          "probability": 0.999
+        },
+        {
+          "start": 648.78,
+          "end": 649.88,
+          "word": " 누군가랑",
+          "probability": 0.9653
+        },
+        {
+          "start": 649.88,
+          "end": 650.46,
+          "word": " 싸우기도",
+          "probability": 0.9995
+        },
+        {
+          "start": 650.46,
+          "end": 650.76,
+          "word": " 해야",
+          "probability": 0.9961
+        },
+        {
+          "start": 650.76,
+          "end": 651.18,
+          "word": " 되고요.",
+          "probability": 0.9907
+        },
+        {
+          "start": 651.3,
+          "end": 651.9,
+          "word": " 싸울",
+          "probability": 0.9971
+        },
+        {
+          "start": 651.9,
+          "end": 652.22,
+          "word": " 사람들이",
+          "probability": 0.9985
+        },
+        {
+          "start": 652.22,
+          "end": 652.76,
+          "word": " 굉장히",
+          "probability": 1.0
+        },
+        {
+          "start": 652.76,
+          "end": 653.42,
+          "word": " 많아요.",
+          "probability": 1.0
+        },
+        {
+          "start": 653.76,
+          "end": 654.74,
+          "word": " 독해지거든요,",
+          "probability": 0.9442
+        },
+        {
+          "start": 654.92,
+          "end": 655.24,
+          "word": " 사람이.",
+          "probability": 0.9995
+        },
+        {
+          "start": 655.48,
+          "end": 656.14,
+          "word": " 착한",
+          "probability": 0.9998
+        },
+        {
+          "start": 656.14,
+          "end": 656.62,
+          "word": " 사람들도",
+          "probability": 0.9048
+        },
+        {
+          "start": 656.62,
+          "end": 657.16,
+          "word": " 독해지는",
+          "probability": 0.9995
+        },
+        {
+          "start": 657.16,
+          "end": 657.36,
+          "word": " 게",
+          "probability": 0.9971
+        },
+        {
+          "start": 657.36,
+          "end": 657.86,
+          "word": " 디자인",
+          "probability": 0.9983
+        },
+        {
+          "start": 657.86,
+          "end": 658.2,
+          "word": " 계열이",
+          "probability": 0.9316
+        },
+        {
+          "start": 658.2,
+          "end": 658.52,
+          "word": " 얼마나",
+          "probability": 0.9907
+        },
+        {
+          "start": 658.52,
+          "end": 658.86,
+          "word": " 많이",
+          "probability": 0.8452
+        },
+        {
+          "start": 658.86,
+          "end": 659.42,
+          "word": " 싸웠는데요.",
+          "probability": 0.9049
+        },
+        {
+          "start": 659.96,
+          "end": 660.52,
+          "word": " 본인을",
+          "probability": 0.937
+        },
+        {
+          "start": 660.52,
+          "end": 661.88,
+          "word": " 믿고",
+          "probability": 0.999
+        },
+        {
+          "start": 661.88,
+          "end": 662.5,
+          "word": " 본인이",
+          "probability": 0.9983
+        },
+        {
+          "start": 662.5,
+          "end": 662.94,
+          "word": " 맞다고",
+          "probability": 0.9858
+        },
+        {
+          "start": 662.94,
+          "end": 663.32,
+          "word": " 생각을",
+          "probability": 0.9849
+        },
+        {
+          "start": 663.32,
+          "end": 663.7,
+          "word": " 하면서",
+          "probability": 0.999
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "start": 664.38,
+      "end": 689.54,
+      "text": "아직은 안 되지만 계속 밀어붙이는 연습을 한번 해보세요. 그래야지 계열에서 살아남을 수 있어요. 디자인하고 싶으시다면서요. 무슨 말인지 이해 되시죠? 이거는 이제 어느 정도 감안을 해주시고 취업은 걱정하면 스트레스만 내거든요.",
+      "avg_logprob": -0.12035778899123703,
+      "no_speech_prob": 0.0654296875,
+      "words": [
+        {
+          "start": 664.38,
+          "end": 665.02,
+          "word": " 아직은",
+          "probability": 0.8267
+        },
+        {
+          "start": 665.02,
+          "end": 665.16,
+          "word": " 안",
+          "probability": 0.3577
+        },
+        {
+          "start": 665.16,
+          "end": 665.56,
+          "word": " 되지만",
+          "probability": 0.9841
+        },
+        {
+          "start": 665.56,
+          "end": 666.36,
+          "word": " 계속",
+          "probability": 0.9482
+        },
+        {
+          "start": 666.36,
+          "end": 667.16,
+          "word": " 밀어붙이는",
+          "probability": 0.9263
+        },
+        {
+          "start": 667.16,
+          "end": 668.24,
+          "word": " 연습을",
+          "probability": 0.981
+        },
+        {
+          "start": 668.24,
+          "end": 668.38,
+          "word": " 한번",
+          "probability": 0.707
+        },
+        {
+          "start": 668.38,
+          "end": 668.9,
+          "word": " 해보세요.",
+          "probability": 0.8005
+        },
+        {
+          "start": 669.52,
+          "end": 670.42,
+          "word": " 그래야지",
+          "probability": 0.9814
+        },
+        {
+          "start": 670.42,
+          "end": 671.38,
+          "word": " 계열에서",
+          "probability": 0.967
+        },
+        {
+          "start": 671.38,
+          "end": 672.06,
+          "word": " 살아남을",
+          "probability": 0.9942
+        },
+        {
+          "start": 672.06,
+          "end": 672.1,
+          "word": " 수",
+          "probability": 0.9834
+        },
+        {
+          "start": 672.1,
+          "end": 672.42,
+          "word": " 있어요.",
+          "probability": 0.8887
+        },
+        {
+          "start": 672.44,
+          "end": 672.92,
+          "word": " 디자인하고",
+          "probability": 0.7502
+        },
+        {
+          "start": 672.92,
+          "end": 673.82,
+          "word": " 싶으시다면서요.",
+          "probability": 0.9207
+        },
+        {
+          "start": 673.92,
+          "end": 674.6,
+          "word": " 무슨",
+          "probability": 0.9775
+        },
+        {
+          "start": 674.6,
+          "end": 674.94,
+          "word": " 말인지",
+          "probability": 0.9561
+        },
+        {
+          "start": 674.94,
+          "end": 675.06,
+          "word": " 이해",
+          "probability": 0.4253
+        },
+        {
+          "start": 675.06,
+          "end": 675.42,
+          "word": " 되시죠?",
+          "probability": 0.9878
+        },
+        {
+          "start": 676.85,
+          "end": 677.75,
+          "word": " 이거는",
+          "probability": 0.5308
+        },
+        {
+          "start": 683.44,
+          "end": 683.8,
+          "word": " 이제",
+          "probability": 0.8994
+        },
+        {
+          "start": 683.8,
+          "end": 684.16,
+          "word": " 어느",
+          "probability": 0.9956
+        },
+        {
+          "start": 684.16,
+          "end": 684.42,
+          "word": " 정도",
+          "probability": 0.7212
+        },
+        {
+          "start": 684.42,
+          "end": 685.18,
+          "word": " 감안을",
+          "probability": 0.9852
+        },
+        {
+          "start": 685.18,
+          "end": 685.74,
+          "word": " 해주시고",
+          "probability": 0.8906
+        },
+        {
+          "start": 685.74,
+          "end": 686.9,
+          "word": " 취업은",
+          "probability": 0.9626
+        },
+        {
+          "start": 686.9,
+          "end": 688.42,
+          "word": " 걱정하면",
+          "probability": 0.988
+        },
+        {
+          "start": 688.42,
+          "end": 689.12,
+          "word": " 스트레스만",
+          "probability": 0.9985
+        },
+        {
+          "start": 689.12,
+          "end": 689.54,
+          "word": " 내거든요.",
+          "probability": 0.9712
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "start": 690.28,
+      "end": 717.86,
+      "text": "스트레스가 내면 불안도가 올라가는데 불안도가 높아지면 스트레스를 또다시 받으니까 체력적으로 몸에 문제가 생기고 몸에 문제가 생기면 당연히 나도 아프고 아프면 취업을 못해요. 포트폴리오를 못 만드니까. 걱정해서 해결되는 건 아무것도 없으니까요. 그냥 된다고 생각하시면서 하시면 될 것 같아요. 안 되는 걸 된다고 하진 않을 거예요. 무슨 말인지 이해 되시죠? 본인을 믿고 과정을 믿고",
+      "avg_logprob": -0.0719639228853753,
+      "no_speech_prob": 0.12481689453125,
+      "words": [
+        {
+          "start": 690.28,
+          "end": 690.82,
+          "word": " 스트레스가",
+          "probability": 0.939
+        },
+        {
+          "start": 690.82,
+          "end": 691.26,
+          "word": " 내면",
+          "probability": 0.6022
+        },
+        {
+          "start": 691.26,
+          "end": 692.02,
+          "word": " 불안도가",
+          "probability": 0.8044
+        },
+        {
+          "start": 692.02,
+          "end": 692.62,
+          "word": " 올라가는데",
+          "probability": 0.971
+        },
+        {
+          "start": 692.62,
+          "end": 693.48,
+          "word": " 불안도가",
+          "probability": 0.9745
+        },
+        {
+          "start": 693.48,
+          "end": 694.16,
+          "word": " 높아지면",
+          "probability": 0.9966
+        },
+        {
+          "start": 694.16,
+          "end": 695.06,
+          "word": " 스트레스를",
+          "probability": 0.9849
+        },
+        {
+          "start": 695.06,
+          "end": 695.56,
+          "word": " 또다시",
+          "probability": 0.8711
+        },
+        {
+          "start": 695.56,
+          "end": 696.02,
+          "word": " 받으니까",
+          "probability": 0.9836
+        },
+        {
+          "start": 696.02,
+          "end": 697.32,
+          "word": " 체력적으로",
+          "probability": 0.9452
+        },
+        {
+          "start": 697.32,
+          "end": 698.08,
+          "word": " 몸에",
+          "probability": 0.9954
+        },
+        {
+          "start": 698.08,
+          "end": 698.4,
+          "word": " 문제가",
+          "probability": 0.999
+        },
+        {
+          "start": 698.4,
+          "end": 699.06,
+          "word": " 생기고",
+          "probability": 0.9933
+        },
+        {
+          "start": 699.06,
+          "end": 699.54,
+          "word": " 몸에",
+          "probability": 0.988
+        },
+        {
+          "start": 699.54,
+          "end": 699.86,
+          "word": " 문제가",
+          "probability": 0.9976
+        },
+        {
+          "start": 699.86,
+          "end": 700.5,
+          "word": " 생기면",
+          "probability": 0.9979
+        },
+        {
+          "start": 700.5,
+          "end": 701.16,
+          "word": " 당연히",
+          "probability": 0.9919
+        },
+        {
+          "start": 701.16,
+          "end": 701.54,
+          "word": " 나도",
+          "probability": 0.9712
+        },
+        {
+          "start": 701.54,
+          "end": 702.04,
+          "word": " 아프고",
+          "probability": 0.9982
+        },
+        {
+          "start": 702.04,
+          "end": 703.04,
+          "word": " 아프면",
+          "probability": 0.9826
+        },
+        {
+          "start": 703.04,
+          "end": 703.62,
+          "word": " 취업을",
+          "probability": 0.9857
+        },
+        {
+          "start": 703.62,
+          "end": 703.98,
+          "word": " 못해요.",
+          "probability": 0.8635
+        },
+        {
+          "start": 704.12,
+          "end": 705.02,
+          "word": " 포트폴리오를",
+          "probability": 0.9222
+        },
+        {
+          "start": 705.02,
+          "end": 705.14,
+          "word": " 못",
+          "probability": 0.9966
+        },
+        {
+          "start": 705.14,
+          "end": 705.72,
+          "word": " 만드니까.",
+          "probability": 0.9896
+        },
+        {
+          "start": 705.9,
+          "end": 706.8,
+          "word": " 걱정해서",
+          "probability": 0.957
+        },
+        {
+          "start": 706.8,
+          "end": 707.26,
+          "word": " 해결되는",
+          "probability": 0.9958
+        },
+        {
+          "start": 707.26,
+          "end": 707.46,
+          "word": " 건",
+          "probability": 0.9819
+        },
+        {
+          "start": 707.46,
+          "end": 707.9,
+          "word": " 아무것도",
+          "probability": 0.9966
+        },
+        {
+          "start": 707.9,
+          "end": 708.64,
+          "word": " 없으니까요.",
+          "probability": 0.9972
+        },
+        {
+          "start": 708.68,
+          "end": 709.06,
+          "word": " 그냥",
+          "probability": 0.9819
+        },
+        {
+          "start": 709.06,
+          "end": 709.58,
+          "word": " 된다고",
+          "probability": 0.998
+        },
+        {
+          "start": 709.58,
+          "end": 710.38,
+          "word": " 생각하시면서",
+          "probability": 0.9948
+        },
+        {
+          "start": 710.38,
+          "end": 710.8,
+          "word": " 하시면",
+          "probability": 0.9954
+        },
+        {
+          "start": 710.8,
+          "end": 711.0,
+          "word": " 될",
+          "probability": 0.9888
+        },
+        {
+          "start": 711.0,
+          "end": 711.2,
+          "word": " 것",
+          "probability": 0.9531
+        },
+        {
+          "start": 711.2,
+          "end": 711.28,
+          "word": " 같아요.",
+          "probability": 0.2571
+        },
+        {
+          "start": 711.36,
+          "end": 711.54,
+          "word": " 안",
+          "probability": 0.7773
+        },
+        {
+          "start": 711.54,
+          "end": 711.84,
+          "word": " 되는",
+          "probability": 0.9976
+        },
+        {
+          "start": 711.84,
+          "end": 712.04,
+          "word": " 걸",
+          "probability": 0.5889
+        },
+        {
+          "start": 712.04,
+          "end": 712.36,
+          "word": " 된다고",
+          "probability": 0.9746
+        },
+        {
+          "start": 712.36,
+          "end": 712.62,
+          "word": " 하진",
+          "probability": 0.9644
+        },
+        {
+          "start": 712.62,
+          "end": 712.8,
+          "word": " 않을",
+          "probability": 0.9985
+        },
+        {
+          "start": 712.8,
+          "end": 713.06,
+          "word": " 거예요.",
+          "probability": 0.7305
+        },
+        {
+          "start": 713.48,
+          "end": 714.38,
+          "word": " 무슨",
+          "probability": 0.9946
+        },
+        {
+          "start": 714.38,
+          "end": 714.8,
+          "word": " 말인지",
+          "probability": 0.9927
+        },
+        {
+          "start": 714.8,
+          "end": 715.0,
+          "word": " 이해",
+          "probability": 0.8052
+        },
+        {
+          "start": 715.0,
+          "end": 715.34,
+          "word": " 되시죠?",
+          "probability": 0.9932
+        },
+        {
+          "start": 715.54,
+          "end": 716.06,
+          "word": " 본인을",
+          "probability": 0.9927
+        },
+        {
+          "start": 716.06,
+          "end": 716.62,
+          "word": " 믿고",
+          "probability": 1.0
+        },
+        {
+          "start": 716.62,
+          "end": 717.32,
+          "word": " 과정을",
+          "probability": 0.9746
+        },
+        {
+          "start": 717.32,
+          "end": 717.86,
+          "word": " 믿고",
+          "probability": 0.9998
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "start": 718.31,
+      "end": 743.47,
+      "text": "저를 믿고 무조건 취업한다고 생각하시면서 걱정 같은 거 다 버리시고 취업만 준비하세요. 그래야지 더욱 취업하실 수 있을 거예요. 그것만 잘 인지하세요. 다른 건 또 걱정되거나 문제 되는 거 있나요? 만약에 제가 코딩 쪽으로 안 간다고 하면",
+      "avg_logprob": -0.0836817762801345,
+      "no_speech_prob": 0.071533203125,
+      "words": [
+        {
+          "start": 718.31,
+          "end": 718.63,
+          "word": " 저를",
+          "probability": 0.9395
+        },
+        {
+          "start": 718.63,
+          "end": 719.11,
+          "word": " 믿고",
+          "probability": 0.9941
+        },
+        {
+          "start": 719.11,
+          "end": 719.77,
+          "word": " 무조건",
+          "probability": 0.9548
+        },
+        {
+          "start": 719.77,
+          "end": 720.43,
+          "word": " 취업한다고",
+          "probability": 0.959
+        },
+        {
+          "start": 720.43,
+          "end": 721.31,
+          "word": " 생각하시면서",
+          "probability": 0.9709
+        },
+        {
+          "start": 721.31,
+          "end": 722.33,
+          "word": " 걱정",
+          "probability": 0.45
+        },
+        {
+          "start": 722.33,
+          "end": 722.77,
+          "word": " 같은",
+          "probability": 0.7705
+        },
+        {
+          "start": 722.77,
+          "end": 723.09,
+          "word": " 거",
+          "probability": 0.4001
+        },
+        {
+          "start": 723.09,
+          "end": 723.23,
+          "word": " 다",
+          "probability": 0.9766
+        },
+        {
+          "start": 723.23,
+          "end": 723.81,
+          "word": " 버리시고",
+          "probability": 0.9798
+        },
+        {
+          "start": 723.81,
+          "end": 724.59,
+          "word": " 취업만",
+          "probability": 0.9307
+        },
+        {
+          "start": 724.59,
+          "end": 725.33,
+          "word": " 준비하세요.",
+          "probability": 0.9683
+        },
+        {
+          "start": 725.55,
+          "end": 726.23,
+          "word": " 그래야지",
+          "probability": 0.9636
+        },
+        {
+          "start": 726.23,
+          "end": 726.83,
+          "word": " 더욱",
+          "probability": 0.9231
+        },
+        {
+          "start": 726.83,
+          "end": 728.17,
+          "word": " 취업하실",
+          "probability": 0.9755
+        },
+        {
+          "start": 728.17,
+          "end": 728.27,
+          "word": " 수",
+          "probability": 0.9941
+        },
+        {
+          "start": 728.27,
+          "end": 728.49,
+          "word": " 있을",
+          "probability": 0.9946
+        },
+        {
+          "start": 728.49,
+          "end": 728.79,
+          "word": " 거예요.",
+          "probability": 0.937
+        },
+        {
+          "start": 729.7,
+          "end": 730.38,
+          "word": " 그것만",
+          "probability": 0.959
+        },
+        {
+          "start": 730.38,
+          "end": 730.58,
+          "word": " 잘",
+          "probability": 0.9956
+        },
+        {
+          "start": 730.58,
+          "end": 731.16,
+          "word": " 인지하세요.",
+          "probability": 0.9642
+        },
+        {
+          "start": 731.4,
+          "end": 731.98,
+          "word": " 다른",
+          "probability": 0.9663
+        },
+        {
+          "start": 731.98,
+          "end": 732.24,
+          "word": " 건",
+          "probability": 0.9326
+        },
+        {
+          "start": 732.24,
+          "end": 732.44,
+          "word": " 또",
+          "probability": 0.9736
+        },
+        {
+          "start": 732.44,
+          "end": 733.32,
+          "word": " 걱정되거나",
+          "probability": 0.849
+        },
+        {
+          "start": 733.32,
+          "end": 733.64,
+          "word": " 문제",
+          "probability": 0.5864
+        },
+        {
+          "start": 733.64,
+          "end": 733.88,
+          "word": " 되는",
+          "probability": 0.9458
+        },
+        {
+          "start": 733.88,
+          "end": 734.08,
+          "word": " 거",
+          "probability": 0.8442
+        },
+        {
+          "start": 734.08,
+          "end": 734.42,
+          "word": " 있나요?",
+          "probability": 0.9883
+        },
+        {
+          "start": 740.23,
+          "end": 740.91,
+          "word": " 만약에",
+          "probability": 0.9944
+        },
+        {
+          "start": 740.91,
+          "end": 741.09,
+          "word": " 제가",
+          "probability": 0.9951
+        },
+        {
+          "start": 741.09,
+          "end": 742.37,
+          "word": " 코딩",
+          "probability": 0.9668
+        },
+        {
+          "start": 742.43,
+          "end": 742.79,
+          "word": " 쪽으로",
+          "probability": 0.9727
+        },
+        {
+          "start": 742.79,
+          "end": 742.89,
+          "word": " 안",
+          "probability": 0.9946
+        },
+        {
+          "start": 742.89,
+          "end": 743.23,
+          "word": " 간다고",
+          "probability": 0.9866
+        },
+        {
+          "start": 743.23,
+          "end": 743.47,
+          "word": " 하면",
+          "probability": 0.9468
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "start": 745.8,
+      "end": 774.16,
+      "text": "지금 HTML이랑 CSS 배우는 정도만 알면 좋지 않을까요? 그럼 구조만 읽을 수 있고 다른 사람의 HTML, CSS 갖고 왔을 때 HTML이고, DIV이고, CSS이고, 컬러 바꾸는 거고 이거 바꾸면 색깔 바뀌기 때문에 이 정도만 인지하시면 돼요. 나머지는 AI한테 물어보시면 되잖아요. 나 이거 다 보고 싶은데 컬러 어떻게 해? 하다 보면 되겠죠. 그럼 그 정도만 인지하시면 돼요. 요즘에는 그건 수학이 안 있어요. 이미지 URL 바꾸면 이미지 사이즈 바꿔야 돼요.",
+      "avg_logprob": -0.24675926411593402,
+      "no_speech_prob": 0.26025390625,
+      "words": [
+        {
+          "start": 745.8,
+          "end": 746.44,
+          "word": " 지금",
+          "probability": 0.6318
+        },
+        {
+          "start": 746.44,
+          "end": 747.08,
+          "word": " HTML이랑",
+          "probability": 0.527
+        },
+        {
+          "start": 747.08,
+          "end": 747.52,
+          "word": " CSS",
+          "probability": 0.9746
+        },
+        {
+          "start": 747.52,
+          "end": 748.76,
+          "word": " 배우는",
+          "probability": 0.8994
+        },
+        {
+          "start": 748.76,
+          "end": 749.32,
+          "word": " 정도만",
+          "probability": 0.8955
+        },
+        {
+          "start": 749.32,
+          "end": 749.8,
+          "word": " 알면",
+          "probability": 0.9429
+        },
+        {
+          "start": 749.8,
+          "end": 750.6,
+          "word": " 좋지",
+          "probability": 0.4845
+        },
+        {
+          "start": 750.6,
+          "end": 750.92,
+          "word": " 않을까요?",
+          "probability": 0.7783
+        },
+        {
+          "start": 751.18,
+          "end": 751.5,
+          "word": " 그럼",
+          "probability": 0.3892
+        },
+        {
+          "start": 751.5,
+          "end": 752.12,
+          "word": " 구조만",
+          "probability": 0.7726
+        },
+        {
+          "start": 752.12,
+          "end": 752.48,
+          "word": " 읽을",
+          "probability": 0.981
+        },
+        {
+          "start": 752.48,
+          "end": 752.56,
+          "word": " 수",
+          "probability": 0.9634
+        },
+        {
+          "start": 752.56,
+          "end": 752.8,
+          "word": " 있고",
+          "probability": 0.9941
+        },
+        {
+          "start": 752.8,
+          "end": 753.74,
+          "word": " 다른",
+          "probability": 0.9209
+        },
+        {
+          "start": 753.74,
+          "end": 754.18,
+          "word": " 사람의",
+          "probability": 0.7236
+        },
+        {
+          "start": 754.18,
+          "end": 754.4,
+          "word": " HTML,",
+          "probability": 0.9829
+        },
+        {
+          "start": 754.4,
+          "end": 754.82,
+          "word": " CSS",
+          "probability": 0.9204
+        },
+        {
+          "start": 754.82,
+          "end": 755.14,
+          "word": " 갖고",
+          "probability": 0.375
+        },
+        {
+          "start": 755.14,
+          "end": 755.54,
+          "word": " 왔을",
+          "probability": 0.9712
+        },
+        {
+          "start": 755.54,
+          "end": 755.76,
+          "word": " 때",
+          "probability": 0.9771
+        },
+        {
+          "start": 755.76,
+          "end": 756.74,
+          "word": " HTML이고,",
+          "probability": 0.7161
+        },
+        {
+          "start": 756.8,
+          "end": 757.52,
+          "word": " DIV이고,",
+          "probability": 0.7443
+        },
+        {
+          "start": 757.58,
+          "end": 758.6,
+          "word": " CSS이고,",
+          "probability": 0.7795
+        },
+        {
+          "start": 758.66,
+          "end": 758.9,
+          "word": " 컬러",
+          "probability": 0.8115
+        },
+        {
+          "start": 758.9,
+          "end": 759.42,
+          "word": " 바꾸는",
+          "probability": 0.9894
+        },
+        {
+          "start": 759.42,
+          "end": 759.72,
+          "word": " 거고",
+          "probability": 0.9685
+        },
+        {
+          "start": 759.72,
+          "end": 760.2,
+          "word": " 이거",
+          "probability": 0.5874
+        },
+        {
+          "start": 760.2,
+          "end": 760.54,
+          "word": " 바꾸면",
+          "probability": 0.9955
+        },
+        {
+          "start": 760.54,
+          "end": 760.88,
+          "word": " 색깔",
+          "probability": 0.9089
+        },
+        {
+          "start": 760.88,
+          "end": 761.18,
+          "word": " 바뀌기",
+          "probability": 0.7977
+        },
+        {
+          "start": 761.18,
+          "end": 761.34,
+          "word": " 때문에",
+          "probability": 0.9971
+        },
+        {
+          "start": 761.34,
+          "end": 761.52,
+          "word": " 이",
+          "probability": 0.8838
+        },
+        {
+          "start": 761.52,
+          "end": 761.9,
+          "word": " 정도만",
+          "probability": 0.9854
+        },
+        {
+          "start": 761.9,
+          "end": 762.5,
+          "word": " 인지하시면",
+          "probability": 0.9775
+        },
+        {
+          "start": 762.5,
+          "end": 762.78,
+          "word": " 돼요.",
+          "probability": 0.9927
+        },
+        {
+          "start": 763.08,
+          "end": 763.72,
+          "word": " 나머지는",
+          "probability": 0.9906
+        },
+        {
+          "start": 763.72,
+          "end": 764.72,
+          "word": " AI한테",
+          "probability": 0.9514
+        },
+        {
+          "start": 764.72,
+          "end": 765.32,
+          "word": " 물어보시면",
+          "probability": 0.9283
+        },
+        {
+          "start": 765.32,
+          "end": 765.66,
+          "word": " 되잖아요.",
+          "probability": 0.5867
+        },
+        {
+          "start": 765.74,
+          "end": 765.92,
+          "word": " 나",
+          "probability": 0.0998
+        },
+        {
+          "start": 765.92,
+          "end": 765.92,
+          "word": " 이거",
+          "probability": 0.9194
+        },
+        {
+          "start": 765.92,
+          "end": 766.04,
+          "word": " 다",
+          "probability": 0.2776
+        },
+        {
+          "start": 766.04,
+          "end": 766.2,
+          "word": " 보고",
+          "probability": 0.9438
+        },
+        {
+          "start": 766.2,
+          "end": 766.66,
+          "word": " 싶은데",
+          "probability": 0.9646
+        },
+        {
+          "start": 766.66,
+          "end": 766.8,
+          "word": " 컬러",
+          "probability": 0.4631
+        },
+        {
+          "start": 766.8,
+          "end": 767.04,
+          "word": " 어떻게",
+          "probability": 0.9351
+        },
+        {
+          "start": 767.04,
+          "end": 767.3,
+          "word": " 해?",
+          "probability": 0.9878
+        },
+        {
+          "start": 767.48,
+          "end": 767.62,
+          "word": " 하다",
+          "probability": 0.9082
+        },
+        {
+          "start": 767.62,
+          "end": 767.82,
+          "word": " 보면",
+          "probability": 0.998
+        },
+        {
+          "start": 767.82,
+          "end": 768.18,
+          "word": " 되겠죠.",
+          "probability": 0.6042
+        },
+        {
+          "start": 768.74,
+          "end": 769.24,
+          "word": " 그럼",
+          "probability": 0.5859
+        },
+        {
+          "start": 769.24,
+          "end": 769.46,
+          "word": " 그",
+          "probability": 0.979
+        },
+        {
+          "start": 769.46,
+          "end": 769.92,
+          "word": " 정도만",
+          "probability": 0.9824
+        },
+        {
+          "start": 769.92,
+          "end": 770.5,
+          "word": " 인지하시면",
+          "probability": 0.9867
+        },
+        {
+          "start": 770.5,
+          "end": 770.76,
+          "word": " 돼요.",
+          "probability": 0.9927
+        },
+        {
+          "start": 770.86,
+          "end": 771.24,
+          "word": " 요즘에는",
+          "probability": 0.7749
+        },
+        {
+          "start": 771.24,
+          "end": 771.4,
+          "word": " 그건",
+          "probability": 0.3708
+        },
+        {
+          "start": 771.4,
+          "end": 771.72,
+          "word": " 수학이",
+          "probability": 0.2924
+        },
+        {
+          "start": 771.72,
+          "end": 771.84,
+          "word": " 안",
+          "probability": 0.8159
+        },
+        {
+          "start": 771.84,
+          "end": 772.04,
+          "word": " 있어요.",
+          "probability": 0.937
+        },
+        {
+          "start": 772.1,
+          "end": 772.44,
+          "word": " 이미지",
+          "probability": 0.9739
+        },
+        {
+          "start": 772.44,
+          "end": 772.62,
+          "word": " URL",
+          "probability": 0.9507
+        },
+        {
+          "start": 772.62,
+          "end": 773.06,
+          "word": " 바꾸면",
+          "probability": 0.7986
+        },
+        {
+          "start": 773.06,
+          "end": 773.34,
+          "word": " 이미지",
+          "probability": 0.9775
+        },
+        {
+          "start": 773.34,
+          "end": 773.62,
+          "word": " 사이즈",
+          "probability": 0.9878
+        },
+        {
+          "start": 773.62,
+          "end": 774.06,
+          "word": " 바꿔야",
+          "probability": 0.6742
+        },
+        {
+          "start": 774.06,
+          "end": 774.16,
+          "word": " 돼요.",
+          "probability": 0.8062
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "start": 777.13,
+      "end": 777.93,
+      "text": "덥네요? 네",
+      "avg_logprob": -0.5950520932674408,
+      "no_speech_prob": 0.361083984375,
+      "words": [
+        {
+          "start": 777.13,
+          "end": 777.61,
+          "word": " 덥네요?",
+          "probability": 0.7451
+        },
+        {
+          "start": 777.69,
+          "end": 777.93,
+          "word": " 네",
+          "probability": 0.48
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 32.34
+}

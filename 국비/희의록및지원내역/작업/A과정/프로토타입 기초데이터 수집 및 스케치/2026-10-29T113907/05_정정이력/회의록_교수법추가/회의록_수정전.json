@@ -1,0 +1,29 @@
+{
+  "unit": "프로토타입 기초데이터 수집 및 스케치",
+  "lcode": "13",
+  "unit_end_date": "2026-10-22",
+  "evaluation_date": "2026-10-22",
+  "reassessment_date": "-",
+  "view": {
+    "회의제목": [
+      "평가결과 분석 회의",
+      "회의일시",
+      ""
+    ],
+    "평가결과 분석내용": [
+      ""
+    ],
+    "개선사항": [
+      ""
+    ]
+  },
+  "form": {
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=13",
+    "date": "",
+    "analysis": "",
+    "improvement": "",
+    "Pcode": "300002",
+    "Lcode": "13"
+  },
+  "checked_at": "2026-10-29T02:41:02.486Z"
+}

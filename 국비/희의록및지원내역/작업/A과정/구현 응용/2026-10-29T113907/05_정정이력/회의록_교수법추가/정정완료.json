@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "request": "그 다음에 교수법 실행해",
+  "completed_at": "2026-10-29T03:03:33.973656+00:00",
+  "unit": "구현 응용",
+  "Lcode": "3",
+  "ordinal": 4,
+  "scope": "meeting_improvement_append_only",
+  "meeting_date": "2026-10-23",
+  "unit_end_date": "2026-07-03",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=3",
+  "exact_readback": true,
+  "original_preserved": true,
+  "reassessment_record_preserved": true,
+  "assessment_preservation": {
+    "summary_unchanged": true,
+    "scores_and_targets_unchanged": true
+  },
+  "screen_read": true,
+  "source_scope": [
+    "학생 변화는 현재 평가 피드백의 대표 사례와 기존 회의록 및 확인 가능한 훈련일지에 근거한다.",
+    "실제 교수법 적용 시점이 확인되지 않은 절차는 향후 실행 계획으로 구분했다.",
+    "서로 다른 과제·제출본·관측 조건의 비교이며 교수법의 인과 효과를 확정하지 않는다.",
+    "동일 종료일 및 수업기간 중첩은 시간상 한계를 표시했다.",
+    "2026-11-03 종료 예정 단위는 평가 결과가 없어 LMS 회의록을 작성하지 않았다."
+  ],
+  "historical_support_state_modified": false,
+  "file_sha256": {
+    "회의록_수정전.json": "ad546e84c942e56ac75b0c68ccac8011df899aedfa6e2e546a0ae02c7b8cf3f9",
+    "회의록_추가안.json": "3649eef513f3da22d861e56324aacd5bff7e2e140b4f793cbc0d25a6e2e5dc55",
+    "교수법_근거자료.json": "f05e7a1968a8557561098be2c78f22c9b4f8cc692fd00f02e02ab1732ee490b2",
+    "저장확인.json": "e711bfb57914317c478c96b5310b3f563325b4d1a295a83918fa175d4e8740fd",
+    "평가보존확인.json": "2323936d8fa150fe1a9a4cb58cf45fcf54c315a19a8790b4cb327d4c6df21884",
+    "추가후화면.png": "d3d965e5861206fa1e0040cdb409a7b2e331adb82b3bf65ad6018e8dbf4799d3"
+  },
+  "checks_ref": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\검증\\교수법연계_2026-10-29T113907.json"
+}

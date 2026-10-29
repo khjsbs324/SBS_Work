@@ -1,0 +1,45 @@
+{
+  "example": false,
+  "group": "A",
+  "unit": "테스트 단위",
+  "subtitle": "Fixture learning goal",
+  "support_plan_sha256": "49b885ff31b02b2348ea18b09e4725241773735e3c82170a79230068b2a96b4e",
+  "sections": [
+    {
+      "title": "Observe, practice and check",
+      "html": "<p>Isolated fixture.</p><p><img src=\"@@process.png@@\" alt=\"test fixture\" /></p><table><tr><th>Observe</th><th>Check</th></tr><tr><td>A</td><td>B</td></tr></table>"
+    }
+  ],
+  "images": [
+    "process.png"
+  ],
+  "sources": [
+    {
+      "url": "https://example.org/test-fixture",
+      "provider": "test fixture",
+      "title": "Fixture reference",
+      "language": "ko",
+      "free": true,
+      "scope": "test scope",
+      "activity": "test activity",
+      "checked_at": "2026-10-29T13:49:56+09:00"
+    }
+  ],
+  "worksheets": [
+    {
+      "title": "Practice evidence",
+      "fields": [
+        "File",
+        "Reason",
+        "Result"
+      ]
+    }
+  ],
+  "files": [
+    "학습자료.pdf",
+    "실습양식.docx",
+    "읽는순서.txt",
+    "process.png",
+    "빈칸양식/01_실습.csv"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "student": "이은수",
+  "received": "2026-10-23",
+  "files": [
+    {
+      "path": "열람\\03_학생_제출_산출물.md",
+      "size": 22257,
+      "sha256": "fc4d79d1ee76b11153e053dba7f368e797198f4818fb634e8f1fffbc072b3b45"
+    },
+    {
+      "path": "열람\\1.jpg",
+      "size": 293833,
+      "sha256": "c4be074b5ab68fbc31c8b108fede88af285ce92d91010f27c386069ce7ebe5ca"
+    },
+    {
+      "path": "열람\\2.jpg",
+      "size": 376989,
+      "sha256": "7f7aef9961f2c286e37a53b8f180010c981e48a2459a0c886d082e4e9b9520d0"
+    },
+    {
+      "path": "열람\\3.jpg",
+      "size": 211229,
+      "sha256": "f222c2d950eee319d51427f8942b4f28485264b110fc8a913cea0340d6687ba6"
+    },
+    {
+      "path": "열람\\4.jpg",
+      "size": 685646,
+      "sha256": "97879c33e8486d23f7756f99b11a13042c87133924cab22c2e49469cbd4fd99f"
+    },
+    {
+      "path": "열람\\브랜드_소개_수정.html",
+      "size": 174896,
+      "sha256": "8f35a7f04968a1d9298302261e1c74ae4e300a850c74cdf57875c1f08a98a56d"
+    },
+    {
+      "path": "열람\\브랜드_소개_초안.html",
+      "size": 154386,
+      "sha256": "e5329cdb2dc136054f1b4163c1144e66876e0e48b7b829c31b47b3ab75c21cee"
+    },
+    {
+      "path": "열람\\이은수_메인페이지.pdf",
+      "size": 9265401,
+      "sha256": "8d9f604b8f6c142fc7af944d4aa1849e1990ff795ee01983114884489d430679",
+      "pages": 1
+    },
+    {
+      "path": "열람\\참고 레퍼런스.txt",
+      "size": 383,
+      "sha256": "82e33f6f99ffca0f270c1e56b5d5ab4dcee81b281d30e6e805d61274ee4281a0"
+    },
+    {
+      "path": "열람\\카테고리_수정.html",
+      "size": 295146,
+      "sha256": "c785b9dc45509f4b53d388ce506a2b2b0515da702b4132bf660863507eadd8e7"
+    },
+    {
+      "path": "열람\\카테고리_초안.html",
+      "size": 278759,
+      "sha256": "f9f43947baa6b4aa752a16884319ecb5806cf1ebe63c5b77ea034d299086943b"
+    },
+    {
+      "path": "원본\\1792581734_11eded09.zip",
+      "size": 10116356,
+      "sha256": "19f5c8e11c96734eb652e09f92b1b6fd569b143e39dc29ee152acf50f75fa613"
+    }
+  ]
+}

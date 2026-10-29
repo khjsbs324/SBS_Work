@@ -1,0 +1,214 @@
+- generic [active] [ref=f47e1]:
+  - banner [ref=f47e2]:
+    - generic [ref=f47e3]:
+      - generic [ref=f47e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f47e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f47e8]:
+    - generic [ref=f47e9]:
+      - generic [ref=f47e10]:
+        - generic [ref=f47e11]: 김혜지
+        - generic [ref=f47e12]:
+          - button "정보수정" [ref=f47e13] [cursor=pointer]
+          - button "비번변경" [ref=f47e14] [cursor=pointer]
+          - button "PIN변경" [ref=f47e15] [cursor=pointer]
+      - list [ref=f47e16]:
+        - listitem [ref=f47e17] [cursor=pointer]:
+          - generic [ref=f47e18]:
+            - generic [aria-hidden] [ref=f47e19]: 
+            - text: 훈련과정
+        - listitem [ref=f47e20] [cursor=pointer]:
+          - generic [ref=f47e21]:
+            - generic [aria-hidden] [ref=f47e22]: 
+            - text: 공지사항
+      - list [ref=f47e23]:
+        - listitem [ref=f47e24] [cursor=pointer]:
+          - generic [ref=f47e25]:
+            - paragraph [ref=f47e26]:
+              - generic [aria-hidden] [ref=f47e27]: 
+            - paragraph [ref=f47e28]: 고객센터
+        - listitem [ref=f47e29] [cursor=pointer]:
+          - generic [ref=f47e30]:
+            - paragraph [ref=f47e31]:
+              - generic [aria-hidden] [ref=f47e32]: 
+            - paragraph [ref=f47e33]: 카톡문의
+    - generic [ref=f47e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f47e35]:
+        - caption [ref=f47e36]:
+          - generic [ref=f47e37]:
+            - generic [ref=f47e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f47e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f47e48]:
+          - row [ref=f47e49]:
+            - cell "개강일" [ref=f47e50]
+            - cell "2026-05-20" [ref=f47e51]
+            - cell "종강일" [ref=f47e52]
+            - cell "2026-12-04" [ref=f47e53]
+            - cell "강사" [ref=f47e54]
+            - cell "김가경, 김혜지" [ref=f47e55]
+          - row [ref=f47e56]:
+            - cell "실시인원" [ref=f47e57]
+            - cell "11" [ref=f47e58]
+            - cell "수강인원" [ref=f47e59]
+            - cell "9" [ref=f47e60]
+            - cell "수강포기인원" [ref=f47e61]
+            - cell "2" [ref=f47e62]
+      - list [ref=f47e63]:
+        - listitem [ref=f47e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f47e65]
+        - listitem [ref=f47e66] [cursor=pointer]:
+          - generic "시간표" [ref=f47e67]
+        - listitem [ref=f47e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f47e69]
+        - listitem [ref=f47e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f47e71]
+        - listitem [ref=f47e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f47e73]
+        - listitem [ref=f47e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f47e75]
+        - listitem [ref=f47e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f47e77]
+        - listitem [ref=f47e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f47e79]
+        - listitem [ref=f47e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f47e81]
+        - listitem [ref=f47e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f47e83]
+        - listitem [ref=f47e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f47e85]
+        - listitem [ref=f47e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f47e87]
+        - listitem [ref=f47e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f47e89]
+        - listitem [ref=f47e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f47e91]
+        - listitem [ref=f47e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f47e93]
+        - listitem [ref=f47e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f47e95]
+        - listitem [ref=f47e96] [cursor=pointer]:
+          - generic "과제" [ref=f47e97]
+        - listitem [ref=f47e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f47e99]
+        - listitem [ref=f47e100] [cursor=pointer]:
+          - generic [ref=f47e101]: 게시판생성
+        - listitem [ref=f47e102] [cursor=pointer]:
+          - generic [ref=f47e103]: 게시판순서변경
+      - list [ref=f47e104]:
+        - listitem [ref=f47e105]:
+          - table [ref=f47e106]:
+            - caption [ref=f47e107]:
+              - list [ref=f47e110]:
+                - listitem [ref=f47e111] [cursor=pointer]: 평가내역
+                - listitem [ref=f47e112] [cursor=pointer]: 평가결과 분석회의록
+            - rowgroup [ref=f47e118]:
+              - row [ref=f47e119]:
+                - cell "과정명" [ref=f47e120]
+                - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차" [ref=f47e121]
+              - row [ref=f47e122]:
+                - cell "교과목" [ref=f47e123]
+                - cell "(전공)퍼블리싱 구현 및 수정보완" [ref=f47e124]
+              - row [ref=f47e125]:
+                - cell "능력단위" [ref=f47e126]
+                - cell "구현" [ref=f47e127]:
+                  - combobox [ref=f47e128]:
+                    - option "선택하세요"
+                    - option "구현" [selected]
+                    - option "구현 응용"
+                    - option "시각디자인 리서치 조사"
+                    - option "시각디자인 리서치 분석"
+                    - option "시안 디자인 개발 심화"
+                    - option "디자인 구성요소 설계"
+                    - option "수정 보완"
+                    - option "디자인 구성요소 제작"
+                    - option "디지털디자인 사후관리"
+                    - option "서비스ㆍ경험디자인 관찰조사"
+                    - option "서비스ㆍ경험디자인 시나리오 개발"
+                    - option "프로토타입 기초데이터 수집 및 스케치"
+                    - option "스마트문화앱 UI 디자인"
+                    - option "프로토타입 제작 및 사용성 테스트"
+                    - option "(비NCS 실기)AI 기획과 발상"
+                    - option "(비NCS 실기)취업포트폴리오 제작"
+              - row [ref=f47e129]:
+                - cell "개강일" [ref=f47e130]
+                - cell "2026-05-21" [ref=f47e131]
+                - cell "종강일" [ref=f47e132]
+                - cell "2026-06-12" [ref=f47e133]
+              - row [ref=f47e134]:
+                - cell "평가도구" [ref=f47e135]
+                - cell "문제해결시나리오" [ref=f47e136]
+        - listitem [ref=f47e137]:
+          - table "평가정보 돌아가기" [ref=f47e138]:
+            - caption [ref=f47e139]:
+              - generic [ref=f47e140]:
+                - generic [ref=f47e141]: 평가정보
+                - link "돌아가기" [ref=f47e143] [cursor=pointer]:
+                  - /url: ../index.php?Pcode=300002
+            - rowgroup [ref=f47e151]:
+              - row [ref=f47e152]:
+                - columnheader "구분" [ref=f47e153]
+                - columnheader "본평가" [ref=f47e154]
+                - columnheader "결석자평가" [ref=f47e155]
+                - columnheader "재평가" [ref=f47e156]
+                - columnheader "사전평가" [ref=f47e157]
+                - columnheader "능력단위" [ref=f47e158]
+            - rowgroup [ref=f47e159]:
+              - row [ref=f47e160]:
+                - cell [ref=f47e161]:
+                  - paragraph [ref=f47e162]: 평가날짜
+                  - paragraph [ref=f47e163]: 평가시간
+                  - paragraph [ref=f47e164]: 커트라인
+                  - paragraph [ref=f47e165]: 패널티
+                - cell [ref=f47e166]:
+                  - link [ref=f47e167] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f47e168]: 2026-06-12
+                    - paragraph [ref=f47e169]: 14:10~16:00
+                    - paragraph [ref=f47e170]: 60점
+                    - paragraph [ref=f47e171]: 0점
+                - cell [ref=f47e172]:
+                  - generic [ref=f47e173]:
+                    - paragraph [ref=f47e174]: 평가문제미등록
+                    - paragraph [ref=f47e175]: (0/100)
+                - cell [ref=f47e176]:
+                  - generic [ref=f47e177]:
+                    - paragraph [ref=f47e178]: 평가문제미등록
+                    - paragraph [ref=f47e179]: (0/100)
+                - cell "57.58" [ref=f47e180]
+                - cell "68.55" [ref=f47e181]
+              - row [ref=f47e182]:
+                - cell "평가인원" [ref=f47e183]
+                - cell "11" [ref=f47e184]
+                - cell "0" [ref=f47e185]
+                - cell "0" [ref=f47e186]
+      - table "평가결과분석회의록 돌아가기" [ref=f47e188]:
+        - caption [ref=f47e189]:
+          - generic [ref=f47e190]:
+            - generic [ref=f47e191]: 평가결과분석회의록
+            - link "돌아가기" [ref=f47e193] [cursor=pointer]:
+              - /url: ./index.php?Pcode=300002&Lcode=2
+        - rowgroup [ref=f47e197]:
+          - row [ref=f47e198]:
+            - cell "회의일자" [ref=f47e199]
+            - cell [ref=f47e200]:
+              - textbox [ref=f47e201]: 2026-06-15
+          - row [ref=f47e202]:
+            - cell "평가결과 분석내용" [ref=f47e203]
+            - cell [ref=f47e204]:
+              - textbox [ref=f47e205]: "*평가결과 분석내용 회의 참석자 : 김봉섭 부원장, 김혜지 강사, 김지수 사원 1. 주제 : ‘구현’ 평가결과에 대한 분석 및 의견 2. 목적 : ‘구현’ 평가결과에서 부족한 부분과 잘 되는 부분을 확인하여 앞으로 수업하는 데 활용하기 위함. 3. 결과 : A등급 : [임연우, 이은수] B등급 : [강민경, 김정은, 박찬미, 이은경, 김지선, 박주연, 이지희, 최지혜, 허지민] C등급 : [해당 없음] F등급 : [해당 없음] * 능력단위요소 ‘HTML 구조 작성 및 화면 구현’에 대한 이해도 부족 : [김지선, 박주연, 이지희, 최지혜, 허지민] - 조치사항 : 웹 페이지 구현 시 필요한 HTML 기본 구조, 시맨틱 태그 사용, 콘텐츠 영역 구분 방식을 다시 확인할 수 있도록 예시 코드와 구조 작성 자료를 제공함. / 기존 작업물을 기준으로 header, main, section, footer 등 주요 영역을 구분하여 작성하는 보충 과제를 제시함. / 보충 과제 제출 후 개별 피드백을 통해 코드 구조가 화면 구성과 적절하게 연결되었는지 확인하고 수정 방향을 안내함. * 능력단위요소 ‘CSS 레이아웃 및 스타일 구현’에 대한 이해도 부족 : [박찬미, 이은경, 김지선, 박주연, 이지희, 최지혜, 허지민] - 조치사항 : CSS 선택자 사용, 박스 모델, flex 레이아웃, 여백 설정, 정렬 방식 등 화면 구현에 필요한 핵심 개념을 다시 정리한 자료를 제공함. / 주어진 시안을 기준으로 레이아웃을 나누고, 콘텐츠 간 간격과 정렬을 맞추는 보완 과제를 추가 제시함. / 수업 시간 내 개별 점검을 통해 레이아웃이 깨지는 부분, 중복 코드, 스타일 적용 오류를 확인하고 구체적인 수정 방향을 피드백함. * 능력단위요소 ‘구현 결과물 검토 및 수정·보완’에 대한 이해도 부족 : [강민경, 김정은, 박찬미, 이은경, 김지선, 박주연, 이지희, 최지혜, 허지민] - 조치사항 : 구현 완료 후 제출 전 확인해야 할 화면 정렬, 링크 연결, 이미지 경로, 코드 정리, 브라우저 확인 항목을 체크리스트로 제공함. / 기존 결과물에서 오류가 발생한 부분을 찾아 수정 전·후 내용을 정리하는 보완 과제를 제시함. / 보완 완료 후 결과물을 다시 확인하여 코드 수정이 화면에 정상적으로 반영되었는지 개별 피드백을 진행함. F등급 : [해당 없음] * 조치사항 : 해당 인원 없음. 다만 60점대 학습자가 다수 분포되어 있어 기본 구현 능력을 안정적으로 다질 수 있도록 코드 작성 순서와 화면 점검 기준을 추가로 안내함. / 이후 수업에서도 구현 단계별 체크리스트를 활용하여 학습자가 스스로 오류를 찾고 수정할 수 있도록 지도함. 4. 종합 의견 : 전체적으로 임연우와 이은수는 A등급을 기록하여 HTML 구조 작성, CSS 스타일 적용, 화면 구현 과정에 대한 이해도가 안정적인 것으로 확인됨. 강민경과 김정은은 기본적인 구현 수행 능력은 갖추고 있으나 코드 구조의 정리와 세부 스타일 완성도에서 추가 보완이 필요함. 박찬미와 이은경은 과제 수행은 이루어졌으나 레이아웃 정렬, 여백 설정, 스타일 적용의 일관성 측면에서 일부 미흡함이 확인됨. 김지선, 박주연, 이지희, 최지혜, 허지민은 최소 수행 기준은 충족하였으나 HTML 구조 작성, CSS 레이아웃 구현, 오류 수정 및 보완 과정에 대한 개별 지도가 필요함. 차후 수업에서는 결과물 완성도를 높이기 위해 구현 전 구조 설계, 구현 중 중간 점검, 구현 후 오류 수정 과정을 단계별로 강화할 예정임. *개선사항 1. 건의사항 : 예시 : “HTML 구조를 어떻게 나누어 작성해야 하는지 더 구체적인 예시가 필요합니다.” / “CSS를 적용했을 때 레이아웃이 깨지는 원인을 찾는 것이 어렵습니다.” / “구현 결과물을 제출하기 전에 어떤 부분을 확인하고 수정해야 하는지 체크리스트가 있으면 좋겠습니다.”"
+          - row [ref=f47e206]:
+            - cell "개선사항" [ref=f47e207]
+            - cell [ref=f47e208]:
+              - textbox [ref=f47e209]: "2. 조치사항 : 구현 과정에서 필요한 HTML 구조 작성, CSS 레이아웃 구성, 스타일 적용, 이미지 및 링크 연결, 오류 수정 단계를 순서대로 확인할 수 있는 체크리스트를 제공함. 또한 기본 코드 예시, 레이아웃 구성 예시, 오류 수정 전·후 비교 자료를 배포하여 학습자가 구현 과정을 체계적으로 이해할 수 있도록 지도함. B등급 학습자에게는 기존 결과물의 구조와 스타일을 점검하여 수정·보완하는 과제를 제시하고, 수업 중 개별 피드백을 통해 코드 오류와 화면 구현 문제를 확인할 수 있도록 안내함. 이후 수업에서는 우수 구현 사례를 공유하여 학습자들이 코드 작성 방식과 화면 완성도 기준을 참고할 수 있도록 조치함."
+          - row [ref=f47e210]:
+            - cell "회의사진" [ref=f47e211]
+            - cell [ref=f47e212]:
+              - button "Choose File" [ref=f47e214] [cursor=pointer]
+        - rowgroup [ref=f47e215]:
+          - row [ref=f47e216]:
+            - cell "0B 100MB 등록하기" [ref=f47e217]:
+              - generic [ref=f47e218]:
+                - generic [ref=f47e219]: 0B
+                - generic [ref=f47e220]: 100MB
+                - button "등록하기" [ref=f47e221] [cursor=pointer]

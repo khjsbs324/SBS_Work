@@ -1,0 +1,394 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - generic [ref=f5e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f5e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f5e8]:
+    - generic [ref=f5e9]:
+      - generic [ref=f5e10]:
+        - generic [ref=f5e11]: 김혜지
+        - generic [ref=f5e12]:
+          - button "정보수정" [ref=f5e13] [cursor=pointer]
+          - button "비번변경" [ref=f5e14] [cursor=pointer]
+          - button "PIN변경" [ref=f5e15] [cursor=pointer]
+      - list [ref=f5e16]:
+        - listitem [ref=f5e17] [cursor=pointer]:
+          - generic [ref=f5e18]:
+            - generic [aria-hidden] [ref=f5e19]: 
+            - text: 훈련과정
+        - listitem [ref=f5e20] [cursor=pointer]:
+          - generic [ref=f5e21]:
+            - generic [aria-hidden] [ref=f5e22]: 
+            - text: 공지사항
+      - list [ref=f5e23]:
+        - listitem [ref=f5e24] [cursor=pointer]:
+          - generic [ref=f5e25]:
+            - paragraph [ref=f5e26]:
+              - generic [aria-hidden] [ref=f5e27]: 
+            - paragraph [ref=f5e28]: 고객센터
+        - listitem [ref=f5e29] [cursor=pointer]:
+          - generic [ref=f5e30]:
+            - paragraph [ref=f5e31]:
+              - generic [aria-hidden] [ref=f5e32]: 
+            - paragraph [ref=f5e33]: 카톡문의
+    - generic [ref=f5e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f5e35]:
+        - caption [ref=f5e36]:
+          - generic [ref=f5e37]:
+            - generic [ref=f5e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f5e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f5e48]:
+          - row [ref=f5e49]:
+            - cell "개강일" [ref=f5e50]
+            - cell "2026-05-20" [ref=f5e51]
+            - cell "종강일" [ref=f5e52]
+            - cell "2026-12-04" [ref=f5e53]
+            - cell "강사" [ref=f5e54]
+            - cell "김가경, 김혜지" [ref=f5e55]
+          - row [ref=f5e56]:
+            - cell "실시인원" [ref=f5e57]
+            - cell "11" [ref=f5e58]
+            - cell "수강인원" [ref=f5e59]
+            - cell "9" [ref=f5e60]
+            - cell "수강포기인원" [ref=f5e61]
+            - cell "2" [ref=f5e62]
+      - list [ref=f5e63]:
+        - listitem [ref=f5e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f5e65]
+        - listitem [ref=f5e66] [cursor=pointer]:
+          - generic "시간표" [ref=f5e67]
+        - listitem [ref=f5e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f5e69]
+        - listitem [ref=f5e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f5e71]
+        - listitem [ref=f5e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f5e73]
+        - listitem [ref=f5e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f5e75]
+        - listitem [ref=f5e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f5e77]
+        - listitem [ref=f5e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f5e79]
+        - listitem [ref=f5e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f5e81]
+        - listitem [ref=f5e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f5e83]
+        - listitem [ref=f5e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f5e85]
+        - listitem [ref=f5e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f5e87]
+        - listitem [ref=f5e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f5e89]
+        - listitem [ref=f5e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f5e91]
+        - listitem [ref=f5e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f5e93]
+        - listitem [ref=f5e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f5e95]
+        - listitem [ref=f5e96] [cursor=pointer]:
+          - generic "과제" [ref=f5e97]
+        - listitem [ref=f5e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f5e99]
+        - listitem [ref=f5e100] [cursor=pointer]:
+          - generic [ref=f5e101]: 게시판생성
+        - listitem [ref=f5e102] [cursor=pointer]:
+          - generic [ref=f5e103]: 게시판순서변경
+      - list [ref=f5e104]:
+        - listitem [ref=f5e105]:
+          - table [ref=f5e106]:
+            - caption [ref=f5e107]:
+              - list [ref=f5e110]:
+                - listitem [ref=f5e111] [cursor=pointer]: 평가내역
+                - listitem [ref=f5e112] [cursor=pointer]: 평가결과 분석회의록
+            - rowgroup [ref=f5e118]:
+              - row [ref=f5e119]:
+                - cell "과정명" [ref=f5e120]
+                - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차" [ref=f5e121]
+              - row [ref=f5e122]:
+                - cell "교과목" [ref=f5e123]
+                - cell "(전공)시안 디자인 개발" [ref=f5e124]
+              - row [ref=f5e125]:
+                - cell "능력단위" [ref=f5e126]
+                - cell "시각디자인 리서치 조사" [ref=f5e127]:
+                  - combobox [ref=f5e128]:
+                    - option "선택하세요"
+                    - option "구현"
+                    - option "구현 응용"
+                    - option "시각디자인 리서치 조사" [selected]
+                    - option "시각디자인 리서치 분석"
+                    - option "시안 디자인 개발 심화"
+                    - option "디자인 구성요소 설계"
+                    - option "수정 보완"
+                    - option "디자인 구성요소 제작"
+                    - option "디지털디자인 사후관리"
+                    - option "서비스ㆍ경험디자인 관찰조사"
+                    - option "서비스ㆍ경험디자인 시나리오 개발"
+                    - option "프로토타입 기초데이터 수집 및 스케치"
+                    - option "스마트문화앱 UI 디자인"
+                    - option "프로토타입 제작 및 사용성 테스트"
+                    - option "(비NCS 실기)AI 기획과 발상"
+                    - option "(비NCS 실기)취업포트폴리오 제작"
+              - row [ref=f5e129]:
+                - cell "개강일" [ref=f5e130]
+                - cell "2026-05-21" [ref=f5e131]
+                - cell "종강일" [ref=f5e132]
+                - cell "2026-06-05" [ref=f5e133]
+              - row [ref=f5e134]:
+                - cell "평가도구" [ref=f5e135]
+                - cell "평가자체크리스트" [ref=f5e136]
+        - listitem [ref=f5e137]:
+          - table "평가정보 돌아가기" [ref=f5e138]:
+            - caption [ref=f5e139]:
+              - generic [ref=f5e140]:
+                - generic [ref=f5e141]: 평가정보
+                - link "돌아가기" [ref=f5e143] [cursor=pointer]:
+                  - /url: ../index.php?Pcode=300002
+            - rowgroup [ref=f5e151]:
+              - row [ref=f5e152]:
+                - columnheader "구분" [ref=f5e153]
+                - columnheader "본평가" [ref=f5e154]
+                - columnheader "결석자평가" [ref=f5e155]
+                - columnheader "재평가" [ref=f5e156]
+                - columnheader "사전평가" [ref=f5e157]
+                - columnheader "능력단위" [ref=f5e158]
+            - rowgroup [ref=f5e159]:
+              - row [ref=f5e160]:
+                - cell [ref=f5e161]:
+                  - paragraph [ref=f5e162]: 평가날짜
+                  - paragraph [ref=f5e163]: 평가시간
+                  - paragraph [ref=f5e164]: 커트라인
+                  - paragraph [ref=f5e165]: 패널티
+                - cell [ref=f5e166]:
+                  - link [ref=f5e167] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f5e168]: 2026-06-05
+                    - paragraph [ref=f5e169]: 16:00~18:50
+                    - paragraph [ref=f5e170]: 60점
+                    - paragraph [ref=f5e171]: 0점
+                - cell [ref=f5e172]:
+                  - link [ref=f5e173] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f5e174]: 2026-06-08
+                    - paragraph [ref=f5e175]: 18:50~22:00
+                    - paragraph [ref=f5e176]: 60점
+                    - paragraph [ref=f5e177]: 10점
+                - cell [ref=f5e178]:
+                  - link [ref=f5e179] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f5e180]: 2026-06-10
+                    - paragraph [ref=f5e181]: 18:50~21:50
+                    - paragraph [ref=f5e182]: 0점
+                    - paragraph [ref=f5e183]: 10점
+                - cell "84.85" [ref=f5e184]
+                - cell "65.18" [ref=f5e185]
+              - row [ref=f5e186]:
+                - cell "평가인원" [ref=f5e187]
+                - cell "10" [ref=f5e188]
+                - cell "1" [ref=f5e189]
+                - cell "1" [ref=f5e190]
+      - table [ref=f5e192]:
+        - caption [ref=f5e193]:
+          - generic [ref=f5e194]:
+            - list [ref=f5e196]:
+              - listitem [ref=f5e197] [cursor=pointer]: 전체점수
+              - listitem [ref=f5e198] [cursor=pointer]: 평가자체크리스트
+            - generic [ref=f5e200]:
+              - combobox [ref=f5e201]:
+                - option "선택하세요" [selected]
+                - option "본평가"
+                - option "결석자평가"
+                - option "재평가"
+                - option "평가전체"
+              - button "평가내역삭제" [ref=f5e202] [cursor=pointer]
+        - rowgroup [ref=f5e214]:
+          - row [ref=f5e215]:
+            - columnheader [ref=f5e216]:
+              - checkbox [ref=f5e217]
+            - columnheader "석차" [ref=f5e218]
+            - columnheader "이름" [ref=f5e219]
+            - columnheader "평가점수" [ref=f5e220]
+            - columnheader "가중치" [ref=f5e221]
+            - columnheader "총점" [ref=f5e222]
+            - columnheader "피드백확인시간" [ref=f5e223]
+            - columnheader "수행평가" [ref=f5e224]
+            - columnheader "피평가자" [ref=f5e225]
+            - columnheader "피드백" [ref=f5e226]
+        - rowgroup [ref=f5e227]:
+          - row [ref=f5e228]:
+            - cell [ref=f5e229]:
+              - checkbox [ref=f5e230]
+            - cell "1" [ref=f5e231]
+            - cell "이은수" [ref=f5e232]
+            - cell "79" [ref=f5e233]
+            - cell "4.6" [ref=f5e234]
+            - cell "3.63" [ref=f5e235]
+            - cell [ref=f5e236]:
+              - link "2026-06-08 17:01:47" [ref=f5e237] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e238]:
+              - link "보기" [ref=f5e239] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1123
+            - cell "-" [ref=f5e240]
+            - cell "마패라는 전통 오브제를 현대적인 향수 브랜드로 재해석한 콘셉트가 매우 흥미롭고, 1마패·2마패·3마패 라인으로 향의 농도와 사용 상황을 구분한 점이 브랜드 구조를 이해하기 쉽게 만들어 주었습니다. 니치 향수 시장 성장, 힙트래디션, 디깅 소비, K-뷰티 글로벌화 등 시장과 트렌드 자료를 브랜드 방향과 연결한 점도 좋았습니다. 특히 경쟁사별 특징을 비교하고 포지셔닝 맵까지 구성한 점은 분석의 완성도를 높여 주었습니다. 다만 주 사용자와 부 사용자를 명확히 나누고, 각 사용자의 라이프스타일과 소비심리를 표로 정리하면 사용자 분석이 더 탄탄해질 것 같습니다. 또한 프로젝트 개발수준을 1차 출시 제품, 확장 라인, 기프트 패키지 등 단계별로 예측하면 결과물의 설득력이 더 높아질 것입니다. 고생하셨습니다^^" [ref=f5e241]
+          - row [ref=f5e242]:
+            - cell [ref=f5e243]:
+              - checkbox [ref=f5e244]
+            - cell "2" [ref=f5e245]
+            - cell "강민경" [ref=f5e246]
+            - cell "75" [ref=f5e247]
+            - cell "4.6" [ref=f5e248]
+            - cell "3.45" [ref=f5e249]
+            - cell [ref=f5e250]:
+              - link "2026-06-08 16:58:22" [ref=f5e251] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e252]:
+              - link "보기" [ref=f5e253] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1114
+            - cell "-" [ref=f5e254]
+            - cell "시장 조사와 트렌드 자료를 브랜드 콘셉트와 연결한 점이 좋았고, 디지털과 아날로그 기록 경험을 함께 제안한 방향성도 명확하게 드러났습니다. 특히 사용자 니즈를 디지털, 아날로그, 공통 니즈로 구분한 점이 적절했으며, 브랜드가 지향하는 기록 경험의 차별성도 잘 표현되었습니다. 다만 거시 환경과 미시 환경을 표로 구분하고, 경쟁사별 디자인 특징과 장단점, 차별화 전략을 조금 더 구체적으로 정리하면 분석 구조가 더욱 명확해질 것 같습니다. 또한 주 사용자와 부 사용자를 구체적으로 설정하고, 이를 바탕으로 프로젝트의 개발수준 예측까지 보완하면 결과물의 완성도가 더 높아질 것입니다. 고생하셨습니다^^" [ref=f5e255]
+          - row [ref=f5e256]:
+            - cell [ref=f5e257]:
+              - checkbox [ref=f5e258]
+            - cell "3" [ref=f5e259]
+            - cell "이지희" [ref=f5e260]
+            - cell "69" [ref=f5e261]
+            - cell "4.6" [ref=f5e262]
+            - cell "3.17" [ref=f5e263]
+            - cell [ref=f5e264]:
+              - link "2026-06-08 16:58:28" [ref=f5e265] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e266]:
+              - link "보기" [ref=f5e267] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1120
+            - cell "-" [ref=f5e268]
+            - cell "초현실주의 컨셉의 프리미엄 블렌딩 티 브랜드라는 방향이 흥미롭고, 차를 마시는 시간을 감각적인 힐링 경험으로 제안한 점이 브랜드 콘셉트와 잘 연결되었습니다. 특히 제로·저당, RTD, 콤부차, 블렌딩 티, 기능성 원료 등 시장 흐름을 반영하고, 편의성·성분 신뢰·미감 충족·믹솔로지 확장성까지 사용자 니즈로 정리한 점이 좋았습니다. 다만 시장 규모와 전망에 대한 구체적인 수치와 출처가 부족하고, 국내외 디자인 트렌드나 패키지·색상·그래픽 등 조형적 분석이 충분히 드러나지 않아 보완이 필요합니다. 또한 경쟁사별 디자인 장단점, 주 사용자와 부 사용자 구분, 프로젝트의 1차 출시 및 확장 개발수준을 표로 정리하면 분석 구조가 더 명확해질 것 같습니다. 고생하셨습니다^^" [ref=f5e269]
+          - row [ref=f5e270]:
+            - cell [ref=f5e271]:
+              - checkbox [ref=f5e272]
+            - cell "4" [ref=f5e273]
+            - cell "김정은" [ref=f5e274]
+            - cell "64" [ref=f5e275]
+            - cell "4.6" [ref=f5e276]
+            - cell "2.94" [ref=f5e277]
+            - cell [ref=f5e278]:
+              - link "2026-06-08 16:59:36" [ref=f5e279] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e280]:
+              - link "보기" [ref=f5e281] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1115
+            - cell "-" [ref=f5e282]
+            - cell "시장조사 자료와 사용자 니즈를 제품 콘셉트로 연결한 점이 좋았고, 바쁜 아침과 이동 중 취식이라는 문제 상황을 바탕으로 그릭요거트&그래놀라 일체형 패키지를 제안한 방향성이 명확했습니다. 특히 개인 맞춤형 영양, 프리미엄 식품 시장, Z세대 소비 트렌드 등을 활용해 시장 가능성을 설명한 점이 좋았습니다. 다만 디자인 트렌드 분석이 시장 트렌드 중심으로 정리되어 있어, 패키지 색상·형태·재질·레이아웃 등 조형적 트렌드를 추가하면 평가 완성도가 높아질 것 같습니다. 또한 경쟁사별 디자인 특징과 장단점, 주 사용자와 부 사용자 구분, 프로젝트 개발수준 예측을 표로 정리하면 분석 구조가 더 명확해집니다. 고생하셨습니다^^" [ref=f5e283]
+          - row [ref=f5e284]:
+            - cell [ref=f5e285]:
+              - checkbox [ref=f5e286]
+            - cell "4" [ref=f5e287]
+            - cell "김지선" [ref=f5e288]
+            - cell "64" [ref=f5e289]
+            - cell "4.6" [ref=f5e290]
+            - cell "2.94" [ref=f5e291]
+            - cell [ref=f5e292]:
+              - link "2026-06-08 17:02:57" [ref=f5e293] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e294]:
+              - link "보기" [ref=f5e295] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=3&Sid=sbsartdj1116
+            - cell "-" [ref=f5e296]
+            - cell "파일 미완성, 미제출로 인한 재평가" [ref=f5e297]
+          - row [ref=f5e298]:
+            - cell [ref=f5e299]:
+              - checkbox [ref=f5e300]
+            - cell "6" [ref=f5e301]
+            - cell "임연우" [ref=f5e302]
+            - cell "63" [ref=f5e303]
+            - cell "4.6" [ref=f5e304]
+            - cell "2.9" [ref=f5e305]
+            - cell [ref=f5e306]:
+              - link "2026-06-08 16:58:35" [ref=f5e307] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e308]:
+              - link "보기" [ref=f5e309] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1121
+            - cell "-" [ref=f5e310]
+            - cell "일상생활이나 홈케어 상황에서 편하게 사용할 수 있는 자세교정 브랜드라는 방향이 명확하고, AI 체형 분석과 앱 연동, 온·오프라인 교정 프로그램을 함께 제안한 점이 좋았습니다. 특히 자세 교정 시장의 성장 수치와 사용자 니즈를 바탕으로 제품의 필요성을 설명한 점은 적절했습니다. 다만 디자인 트렌드 분석이 부족하여 착용 장비의 형태, 소재, 색상, 착용감, 시각적 노출 정도 등 조형적 요소를 더 구체적으로 정리하면 좋겠습니다. 또한 경쟁사별 장점과 단점, 주 사용자와 부 사용자 구분, 프로젝트의 1차 개발 범위와 확장 가능성을 표로 정리하면 분석 구조가 더 명확해질 것 같습니다. 고생하셨습니다^^" [ref=f5e311]
+          - row [ref=f5e312]:
+            - cell [ref=f5e313]:
+              - checkbox [ref=f5e314]
+            - cell "7" [ref=f5e315]
+            - cell "박찬미" [ref=f5e316]
+            - cell "62" [ref=f5e317]
+            - cell "4.6" [ref=f5e318]
+            - cell "2.85" [ref=f5e319]
+            - cell [ref=f5e320]:
+              - link "2026-06-10 14:04:45" [ref=f5e321] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e322]:
+              - link "보기" [ref=f5e323] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=2&Sid=sbsartdj1118
+            - cell "-" [ref=f5e324]
+            - cell "야구장 전용 화장품이라는 주제와 노터치, 철벽방어, 쿨링감이라는 브랜드 키워드가 명확하고, AHC·식물나라·슈퍼굽을 중심으로 경쟁사의 강점과 약점, 내 브랜드와의 차별점을 정리한 점이 좋았습니다. 특히 포지셔닝 맵을 통해 익스트림, 쿨링, 일상, 진정의 시장 위치를 구분하려는 시도는 적절했습니다. 다만 시장 규모나 성장 가능성, 야구장 관람객의 실제 니즈, 국내외 선케어 디자인 트렌드에 대한 근거 자료가 부족해 전반적인 리서치 설득력이 약하게 보입니다. 또한 주 사용자와 부 사용자를 구분하고, 패키지 형태·사용 방식·색상·재질 등 조형적 디자인 분석을 추가하면 브랜드 방향이 더 구체화될 것 같습니다. 제품의 1차 출시 범위와 이후 확장 라인업까지 정리하면 완성도가 더 높아질 것입니다. 고생하셨습니다^^" [ref=f5e325]
+          - row [ref=f5e326]:
+            - cell [ref=f5e327]:
+              - checkbox [ref=f5e328]
+            - cell "8" [ref=f5e329]
+            - cell "이은경" [ref=f5e330]
+            - cell "61" [ref=f5e331]
+            - cell "4.6" [ref=f5e332]
+            - cell "2.81" [ref=f5e333]
+            - cell [ref=f5e334]:
+              - link "2026-06-08 16:59:28" [ref=f5e335] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e336]:
+              - link "보기" [ref=f5e337] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1119
+            - cell "-" [ref=f5e338]
+            - cell "공간의 목적과 분위기에 맞는 향을 제안한다는 브랜드 콘셉트가 명확하고, 디퓨저·룸스프레이·캔들 등 상품 방향도 브랜드 주제와 잘 연결되었습니다. 특히 웰니스, 스몰 럭셔리, 인테리어 문화 확산을 바탕으로 프래그런스 제품의 성장 가능성을 설명한 점이 좋았습니다. 사용자 니즈도 공간별 사용 상황을 중심으로 구체적으로 정리되어 있어 브랜드 기획 방향을 이해하기 쉬웠습니다. 다만 시장 자료의 구체적인 수치와 출처, 국내외 디자인 트렌드, 패키지·로고·재질 등 조형적 트렌드 분석은 더 보완이 필요합니다. 또한 경쟁사별 디자인 특징과 장단점, 주 사용자와 부 사용자 구분, 프로젝트 개발수준 예측을 표로 정리하면 분석 구조가 더 명확해질 것 같습니다. 고생하셨습니다^^" [ref=f5e339]
+          - row [ref=f5e340]:
+            - cell [ref=f5e341]:
+              - checkbox [ref=f5e342]
+            - cell "9" [ref=f5e343]
+            - cell "박주연" [ref=f5e344]
+            - cell "60" [ref=f5e345]
+            - cell "4.6" [ref=f5e346]
+            - cell "2.76" [ref=f5e347]
+            - cell [ref=f5e348]:
+              - link "2026-06-08 17:01:47" [ref=f5e349] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e350]:
+              - link "보기" [ref=f5e351] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1117
+            - cell "-" [ref=f5e352]
+            - cell "PDRN 블러셔라는 제품 콘셉트가 명확하고, 스킨케어링 메이크업과 슬로우에이징 트렌드를 연결해 브랜드 방향을 설정한 점이 좋았습니다. 특히 29세 타깃 페르소나를 설정하고 앞볼 볼륨 저하, 피부 건조함, 가격 부담 등의 불편점과 니즈를 구체적으로 정리한 점이 적절했습니다. 다만 시장 조사 자료에 구체적인 수치와 출처가 부족하고, 국내외 디자인 트렌드나 조형적 트렌드 분석이 충분히 드러나지 않아 보완이 필요합니다. 또한 경쟁사별 디자인 특징과 장단점, 주 사용자와 부 사용자 구분, 프로젝트 개발수준 예측을 표로 정리하면 분석 구조가 더 명확해질 것 같습니다. 고생하셨습니다^^" [ref=f5e353]
+          - row [ref=f5e354]:
+            - cell [ref=f5e355]:
+              - checkbox [ref=f5e356]
+            - cell "9" [ref=f5e357]
+            - cell "최지혜" [ref=f5e358]
+            - cell "60" [ref=f5e359]
+            - cell "4.6" [ref=f5e360]
+            - cell "2.76" [ref=f5e361]
+            - cell [ref=f5e362]:
+              - link "2026-06-08 17:03:15" [ref=f5e363] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e364]:
+              - link "보기" [ref=f5e365] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1124
+            - cell "-" [ref=f5e366]
+            - cell "네온 외계 생명체와 디지털 반려 생물이라는 브랜드 세계관이 흥미롭고, 키덜트·가챠·도파민·컬렉팅 소비 흐름을 브랜드 콘셉트와 연결하려는 시도가 좋았습니다. 특히 사용자의 질림, 상실감, 업데이트, 커뮤니티, 휴대성, AS 문제 등을 니즈로 정리한 점은 브랜드 방향을 잡는 데 도움이 됩니다. 다만 브랜드 CI 설명이 미완성되어 있고, 경쟁사별 디자인 특징과 장단점, 국내외 디자인 트렌드, 조형적 요소 분석이 충분히 정리되지 않아 아쉬운 부분이 있습니다. 또한 주 사용자와 부 사용자를 구분하고, 1차 출시 기능과 이후 콘텐츠 확장 방향을 표로 정리하면 프로젝트 개발수준 예측이 더 명확해질 것 같습니다. 고생하셨습니다^^" [ref=f5e367]
+          - row [ref=f5e368]:
+            - cell [ref=f5e369]:
+              - checkbox [ref=f5e370]
+            - cell "9" [ref=f5e371]
+            - cell "허지민" [ref=f5e372]
+            - cell "60" [ref=f5e373]
+            - cell "4.6" [ref=f5e374]
+            - cell "2.76" [ref=f5e375]
+            - cell [ref=f5e376]:
+              - link "2026-06-08 16:58:39" [ref=f5e377] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f5e378]:
+              - link "보기" [ref=f5e379] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=4&FollowNo=1&Sid=sbsartdj1122
+            - cell "-" [ref=f5e380]
+            - cell "개인 맞춤형 올인원 헬스케어 푸드라는 브랜드 방향이 명확하고, 메디푸드·케어푸드·건강기능식품 시장 성장 자료를 활용해 시장 가능성을 설명한 점이 좋았습니다. 특히 여러 페르소나 인터뷰를 통해 간편한 식사, 영양 밸런스, 이너뷰티, 쓰레기 감소, 비건 영양 보완 등 사용자 니즈를 다양하게 도출한 점이 인상적이었습니다. 다만 경쟁사 이름은 제시되어 있지만 각 경쟁사의 디자인 특징과 장단점, 자사 브랜드의 차별화 전략이 부족하여 보완이 필요합니다. 또한 국내외 디자인 트렌드, 패키지 형태·색상·재질·레이아웃 등 조형적 분석을 추가하면 브랜드 결과물의 설득력이 더 높아질 것 같습니다. 주 사용자와 부 사용자를 구분하고, 1차 출시 제품과 이후 확장 가능한 제품 라인업까지 정리하면 평가 완성도가 더 높아질 것입니다. 고생하셨습니다^^" [ref=f5e381]

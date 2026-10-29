@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "example": false,
+  "unit": "테스트 단위",
+  "actual_date": "2026-10-29",
+  "meeting_date": "2026-10-29",
+  "roster_path": "01_근거자료/평가대상.json",
+  "analysis": "주제\n목적\n결과\nA그룹 : [학생A]\nB그룹 : [학생B]\nC그룹 : [학생C]\n실제 요소 제작하기\n종합 의견\n건의사항",
+  "improvement": "조치사항\nA그룹 : [학생A]\nB그룹 : [학생B]\nC그룹 : [학생C]\n학생 변화\n교수법 개선\n후속 지도",
+  "groups": {
+    "A": {
+      "student_ids": [
+        "A"
+      ],
+      "basis": "Observed basis A",
+      "strengths": "Strength A",
+      "needs": "Need A",
+      "activities": "Activity A",
+      "criteria": "Criterion A"
+    },
+    "B": {
+      "student_ids": [
+        "B"
+      ],
+      "basis": "Observed basis B",
+      "strengths": "Strength B",
+      "needs": "Need B",
+      "activities": "Activity B",
+      "criteria": "Criterion B"
+    },
+    "C": {
+      "student_ids": [
+        "C"
+      ],
+      "basis": "Observed basis C",
+      "strengths": "Strength C",
+      "needs": "Need C",
+      "activities": "Activity C",
+      "criteria": "Criterion C"
+    }
+  },
+  "teaching_link": {
+    "previous_unit": "이전 단위",
+    "next_unit": "다음 단위",
+    "follow_up": "실제 후속 지도"
+  }
+}

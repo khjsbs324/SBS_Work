@@ -1,0 +1,84 @@
+{
+  "unit": "수정 보완",
+  "lcode": "8",
+  "source": {
+    "unit": "수정 보완",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=8",
+    "summary": "평가정보\n돌아가기\n구분\t본평가\t결석자평가\t재평가\t사전평가\t능력단위\n\n\n평가날짜\n\n평가시간\n\n커트라인\n\n패널티\n\n\t\n\n2026-08-18\n\n14:00~16:00\n\n60점\n\n0점\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t81.82\t79\n평가인원\t10\t0\t0",
+    "scores": [
+      {
+        "name": "이은경",
+        "score": "90",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1119"
+      },
+      {
+        "name": "이은수",
+        "score": "80",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1123"
+      },
+      {
+        "name": "김정은",
+        "score": "79",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1115"
+      },
+      {
+        "name": "임연우",
+        "score": "79",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1121"
+      },
+      {
+        "name": "박주연",
+        "score": "78",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1117"
+      },
+      {
+        "name": "이지희",
+        "score": "78",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1120"
+      },
+      {
+        "name": "박찬미",
+        "score": "77",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1118"
+      },
+      {
+        "name": "허지민",
+        "score": "77",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1122"
+      },
+      {
+        "name": "강민경",
+        "score": "76",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1114"
+      },
+      {
+        "name": "최지혜",
+        "score": "76",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1124"
+      }
+    ],
+    "samples": [
+      {
+        "name": "이은경",
+        "score": "90",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1119",
+        "feedback": "1. CSS 연결 순서 html <!-- 학생 코드 --> <link rel=\"stylesheet\" href=\"./css/btn_cpn.css\"> <link rel=\"stylesheet\" href=\"./css/layout_cpn.css\"> <link rel=\"stylesheet\" href=\"./css/item_cpn.css\"> html <!-- 정답 코드 --> <link rel=\"stylesheet\" href=\"./css/btn_cpn.css\"> <link rel=\"stylesheet\" href=\"./css/item_cpn.css\"> <link rel=\"stylesheet\" href=\"./css/layout_cpn.css\"> 피드백: 현재 화면은 정상이나 수업 기준 연결 순서는 item_cpn.css 다음 layout_cpn.css입니다. 공통 아이템 규칙을 먼저 읽고 레이아웃 규칙을 뒤에서 적용하는 계층을 유지하면 추후 같은 선택자 명시도가 겹칠 때 캐스케이드 결과를 예측하기 쉽습니다. 2. 반응형 증빙 링크 text <!-- 학생 제출 기록 --> | TC-02 | 1600px | 통과 | [링크] | | TC-04 | 768px | 통과 | [링크] | text <!-- 정답 제출 형태 --> | TC-02 | 1600px | 통과 | 실제 1600px 캡처 링크 | | TC-04 | 768px | 통과 | 실제 768px 캡처 링크 | 피드백: 코드와 실제 Chrome 검사에서는 다섯 너비 모두 정상 통과했지만 제출 폴더에는 1920px·1024px·480px 화면만 있고 표의 증빙 칸도 [링크]로 남았습니다. 1600px과 768px 캡처까지 연결하면 다섯 기준 너비의 재검증이 완성됩니다. 3. 접근성·사용성 점검 기록 html <!-- 학생 코드에 보존된 예 --> <a class=\"material-symbols-rounded\" aria-label=\"검색\">search</a> <img src=\"...\" alt=\"MALBON X BALLANTINES 컬렉션\"> text <!-- 정답 제출 형태 --> 이미지 alt, 링크와 버튼 역할, 키보드 포커스, 텍스트 가독성, 480px 조작성을 코드 위치와 함께 기록 피드백: 기존 alt와 aria-label, header·nav·footer 구조는 잘 보존했습니다. 다만 수행준거는 접근성 요소의 존재뿐 아니라 링크·버튼 역할, 키보드 포커스와 작은 화면 조작성을 점검해 보완 요소를 파악한 기록을 요구하므로 별도 체크 결과를 추가해야 합니다. 4. 최종 커밋과 Pull Request text <!-- 학생 보고서 --> 최종 커밋 3217a867... Pull Request .../pull/1 text <!-- 실제 확인 --> main HEAD 84578b0b... GitHub Pull Request 없음 피드백: 수정 단계별 커밋은 잘 남겼지만 보고서의 최종 해시가 현재 main HEAD와 다르고 연결한 PR은 GitHub에서 확인되지 않습니다. 최종 제출 직전에 HEAD를 다시 기록하고 변경 목적·검증 결과가 있는 실제 PR을 생성해야 협업 이력이 완성됩니다. 세 핵심 결함을 정확한 코드로 모두 해결했습니다. Chrome 실측에서 1920px 컨테이너 1600px 중앙 정렬, 데스크톱 5열, 1024px 3열, 768px·480px 2열과 가로 넘침 없음이 모두 확인되었습니다. CSS 8개 분리도 역할이 분명하고 페이지 스타일 손실이 없습니다. 다만 item_cpn.css와 layout_cpn.css의 연결 순서, 일부 화면 증빙 링크, 접근성 검토 기록과 실제 PR이 남은 보완 요소입니다. 빠르게 마무리하려면 링크 순서를 기준대로 맞춘 뒤 1600px과 768px 캡처를 추가하고 Network·Console 결과를 테스트 표에 연결하세요. 코드는 이미 핵심 기능이 정상이라 문서와 협업 증빙을 맞추는 작업이 중심입니다. 다음에도 결함별 커밋 방식을 유지하되 각 커밋 메시지에 원인과 수정 대상을 조금 더 명확히 적어 보세요. 마지막 PR에 다섯 너비, scrollWidth 비교, 접근성 체크를 한 표로 모으면 같은 검증 절차를 다른 반응형 프로젝트에도 그대로 재사용할 수 있습니다. 오류 원인 분석과 실제 수정 정확도가 가장 안정적인 제출입니다. 남은 증빙과 PR을 보완하면 구현뿐 아니라 재검증·협업 수행준거까지 높은 완성도로 마무리할 수 있습니다. 고생하셨습니다^^"
+      },
+      {
+        "name": "이은수",
+        "score": "80",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1123",
+        "feedback": "1. 컨테이너 변수명 css /* 학생 코드 */ .con { max-width: var(--containner); } css /* 정답 코드 */ .con { max-width: var(--container); } 피드백: component.css에 선언한 --container와 사용한 --containner의 철자가 다릅니다. Chrome에서 1920px과 1600px의 max-width가 none으로 계산되어 컨테이너가 기준보다 넓어졌습니다. 토큰 이름을 일치시켜야 대화면 중앙 정렬이 정상화됩니다. 2. 데스크톱 5열 Grid css /* 학생 코드 */ .grid-5 { grid-template-columns: repeat(5 1fr); } .product-grid { display: flex; } css /* 정답 코드 */ .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); } .product-grid { margin-top: var(--num4); } 피드백: 1024px 이하에서는 미디어쿼리가 display:grid를 다시 적용해 일부 정상처럼 보이지만, 기본 데스크톱 선언은 쉼표 누락과 Flex 덮어쓰기로 여전히 무효입니다. 1920px 실측에서 display:flex와 columns:none이 확인되므로 기본 5열부터 정확히 고쳐야 합니다. 3. 480px 최소 폭 css /* 학생 코드 */ body { min-width: 480px; } css /* 정답 코드 */ body { word-break: keep-all; } 피드백: 1600px을 480px로 줄인 것은 개선이지만 최소 폭 자체가 남아 있어 480px 테스트의 실제 콘텐츠 폭 465px보다 body가 큽니다. 그 결과 480px 화면에서 가로 스크롤이 생깁니다. 고정 최소 폭은 값만 줄이지 말고 제거해야 합니다. 4. 테스트 결과의 실제값 반영 text <!-- 학생 보고서 --> 1920px부터 480px까지 가로 스크롤 없이 통과 text <!-- 실제 Chrome 결과 --> 1920px 컨테이너 max-width none 1920px Grid display flex 480px documentWidth 480, clientWidth 465 피드백: 보고서의 전 구간 통과 주장과 실제 최종 HEAD 계산값이 다릅니다. 완료 문구를 먼저 적기보다 각 너비에서 Computed의 max-width·display와 scrollWidth·clientWidth를 기록하고 그 값으로 최종 검증 결과를 결정해야 합니다. CSS를 8개 역할로 분리하고 1024px 3열, 768px 2열 전환이 실제로 동작하도록 구성한 점은 좋았습니다. HTML 콘텐츠와 접근성 속성도 그대로 유지했습니다. 다만 데스크톱 기본 Grid와 컨테이너 토큰 오류가 남았고 body 최소 폭을 480px로 바꾼 방식은 480px 실측에서 여전히 가로 스크롤을 만듭니다. 보고서의 통과 결과도 이 실제 상태와 일치하지 않습니다. 빠르게 보완하려면 body 최소 폭을 완전히 제거하고, --container 철자를 고친 뒤, product-grid의 display:flex를 제거하면서 repeat(5, 1fr)를 적용하세요. 기본 데스크톱을 먼저 고치면 기존 미디어쿼리 전환도 자연스럽게 이어집니다. 반응형 검증은 화면 표시만 보지 말고 각 너비에서 .con의 max-width, .grid-5의 display와 columns, 문서 scrollWidth를 표로 남겨 보세요. 같은 값과 화면을 PR에 연결하면 보고서와 실제 코드가 달라지는 문제를 줄일 수 있습니다. 파일 분리와 일부 반응형 보완은 잘 수행했습니다. 남은 세 선언을 정확히 정리하고 실측값으로 테스트 표를 갱신하면 구현과 재검증의 신뢰도가 함께 높아집니다. 고생하셨습니다^^"
+      },
+      {
+        "name": "최지혜",
+        "score": "76",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1124",
+        "feedback": "1. component.css 첫 주석 문법 css /* 학생 코드 */ * ------ 지역 디자인 토큰 ------ */ :root { --container: var(--GW-XL); } css /* 정답 코드 */ /* ------ 지역 디자인 토큰 ------ */ :root { --container: var(--GW-XL); } 피드백: 파일 첫 줄에 주석 시작 기호의 슬래시가 빠져 브라우저가 component.css를 유효한 규칙으로 파싱하지 못합니다. CSSOM 검사에서도 이 파일의 규칙 수가 0으로 확인됐습니다. 첫 줄을 올바른 주석으로 바꿔야 --container를 포함한 의미 토큰들이 선언됩니다. 2. 파일명 오타 html <!-- 학생 코드 --> <link rel=\"stylesheet\" href=\"./css/nomar.css\"> <link rel=\"stylesheet\" href=\"./css/layuit_cpn.css\"> html <!-- 정답 코드 --> <link rel=\"stylesheet\" href=\"./css/normal.css\"> <link rel=\"stylesheet\" href=\"./css/layout_cpn.css\"> 피드백: 현재 링크와 실제 파일명은 서로 맞아 요청 자체는 성공하지만 수업 기준 파일명 normal.css와 layout_cpn.css에 오타가 있습니다. 보고서에서도 오타를 알고 있었으므로 파일과 링크를 함께 표준 이름으로 변경해야 유지보수와 자동 검사가 안정적입니다. 3. 컨테이너와 Grid css /* 학생 코드 */ .con { max-width: var(--containner); } .grid-5 { grid-template-columns: repeat(5 1fr); } .product-grid { display: flex; } css /* 정답 코드 */ .con { max-width: var(--container); } .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); } 피드백: 변수 오타, repeat() 쉼표 누락, Flex 덮어쓰기가 함께 남아 있습니다. 실제 1920px에서 max-width는 none, 상품 목록은 Flex와 columns:none으로 계산됩니다. 세 선언을 원인 위치에서 바로잡아야 최대 폭과 5열 Grid가 정상화됩니다. 4. body 고정 최소 폭 css /* 학생 코드 */ body { min-width: 1600px; } css /* 정답 코드 */ body { word-break: keep-all; } 피드백: nomar.css에 1600px 최소 폭이 남아 있어 1024px·768px·480px에서도 문서 폭이 1600px입니다. 이 선언을 제거해야 모바일 화면이 뷰포트 안으로 줄어들고 미디어쿼리 열 수도 실제로 확인할 수 있습니다. 5. 중복 style.css와 미완성 증빙 html <!-- 학생 코드 --> <link rel=\"stylesheet\" href=\"./css/style.css\"> <link rel=\"stylesheet\" href=\"./css/media.css\"> <link rel=\"stylesheet\" href=\"./css/style.css\"> text <!-- 정답 제출 형태 --> style.css는 한 번만 연결 5개 너비 테스트에 실제 결과와 캡처 링크 작성 피드백: style.css가 media.css 뒤에서 다시 연결되어 반응형 캐스케이드를 흐릴 수 있고, 테스트 표는 모두 [통과/실패]와 [링크] 상태입니다. 중복 링크를 제거한 뒤 실제 화면과 계산값으로 결과를 확정해야 합니다. 8개 파일 구조를 만들고 세 핵심 오류의 원인을 보고서에서 정확히 설명하려 한 점은 좋았습니다. HTML 콘텐츠와 이미지 대체텍스트도 그대로 보존했습니다. 다만 component.css의 첫 주석 문법 때문에 의미 토큰 전체가 파싱되지 않으며, 핵심 결함 3건과 파일명 오타·중복 링크가 최종 코드에 남았습니다. 보고서의 수정 완료 설명과 실제 HEAD가 일치하지 않습니다. 빠르게 보완하려면 component.css 주석부터 고쳐 토큰을 복구하고, 파일명 두 개와 링크를 함께 정리하세요. 이후 body 최소 폭, --container, repeat(5, 1fr), Flex 우회 순서로 수정하면 화면 변화가 명확합니다. 재사용할 때는 Network의 성공 여부만 보지 말고 document.styleSheets의 규칙 수와 Computed 값도 함께 확인하세요. 파일이 200으로 로드돼도 이번 component.css처럼 내부 파싱 오류로 규칙이 0개일 수 있으므로 Console·CSSOM·화면을 함께 보는 습관이 중요합니다. 파일을 나누고 오류 원리를 설명한 방향은 맞았습니다. 이제 실제 제출 파일의 문법과 이름을 정리하고 다섯 너비 결과를 채우면 분석 내용이 화면 결과로 이어질 수 있습니다. 고생하셨습니다^^"
+      }
+    ],
+    "checked_at": "2026-10-29T02:45:15.889Z"
+  },
+  "diary_records": [],
+  "diary_scope_limit": "조회한 훈련일지의 내용 유무는 조회 범위에 한함. 비어 있는 날짜로 전체 기간에 수업 실행이 없었다고 추정하지 않음."
+}

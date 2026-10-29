@@ -1,0 +1,44 @@
+[
+  {
+    "file": "강애란.mp3",
+    "bytes": 9599730,
+    "sha256": "c12be79bc87eeb4e9ee1aafd413fbec2ad811efe6befce0562d16362e217c401",
+    "duration_seconds": 399.9608163265306
+  },
+  {
+    "file": "김규린.mp3",
+    "bytes": 14350672,
+    "sha256": "f819ffe3c9a0e39e04cf766e2e297492bdcaf53e72da4e448abd889e23bd3809",
+    "duration_seconds": 597.9167346938775
+  },
+  {
+    "file": "김형관.mp3",
+    "bytes": 18847077,
+    "sha256": "e241773adc0ee96a7c9fe8a5d1f0daedfed6cf3a2604b818c3316d425d79a37c",
+    "duration_seconds": 785.2669387755102
+  },
+  {
+    "file": "박선환.mp3",
+    "bytes": 7243067,
+    "sha256": "976ce1fb8dbcda24c672069c3909f158778c58489ce6d8c18dc41397ad4722b1",
+    "duration_seconds": 301.7665306122449
+  },
+  {
+    "file": "신윤아.mp3",
+    "bytes": 14145663,
+    "sha256": "9bc422b51e5cf386247bd03a9e7e1b5f5ec2cd0e1232459477ecaa1982170047",
+    "duration_seconds": 589.3746938775511
+  },
+  {
+    "file": "이주원.mp3",
+    "bytes": 12495560,
+    "sha256": "1debf9cecf54ece0169e4e541aa0ffbb1e5dbd04665213368e3543a7ed2dbf2d",
+    "duration_seconds": 520.6204081632653
+  },
+  {
+    "file": "홍석경, 전해주.mp3",
+    "bytes": 20974280,
+    "sha256": "7499de5270ce97ea3a83af611f3e4f8060087a32f096202557ba1e9267d1ca47",
+    "duration_seconds": 873.9004081632653
+  }
+]

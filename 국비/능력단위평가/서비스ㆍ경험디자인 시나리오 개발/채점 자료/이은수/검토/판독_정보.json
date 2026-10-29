@@ -1,0 +1,14 @@
+{
+  "student": "이은수",
+  "pages": [
+    {
+      "page": 1,
+      "width": 7433.0,
+      "height": 13643.0,
+      "lines": 383,
+      "characters": 5910
+    }
+  ],
+  "method": "PyMuPDF get_texttrace Unicode glyphs, line origin and bounding boxes; original PDF unchanged",
+  "visualReview": "Overview rendered; text content and figures require subsequent human/model visual review before scoring."
+}

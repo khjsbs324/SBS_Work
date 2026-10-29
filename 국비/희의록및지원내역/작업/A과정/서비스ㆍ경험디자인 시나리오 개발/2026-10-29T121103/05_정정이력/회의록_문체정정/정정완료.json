@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "unit": "서비스ㆍ경험디자인 시나리오 개발",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=12",
+  "completed_at": "2026-10-29T03:19:40.797246+00:00",
+  "exact_readback": true,
+  "previous_prefix_preserved": true,
+  "date_preserved": true,
+  "reassessment_preserved": true,
+  "visual_reviewed": true,
+  "hashes": {
+    "최종수정안.json": "c158d1f81b9ae6931491e8466c03f94044359b102762e2ed428592c04e6139b2",
+    "최종저장확인.json": "985a6204bf6ea1dd728db66d52009a4e1ecae2862d6c1804ba938336421e3ee4",
+    "회의록_수정전.json": "3aec3463d4ae5e7c01553c19ff9b02cd6ae393e4989126337dfa56dd9bb2f335",
+    "수정후화면.png": "68498d556b1058e45473ce50b729bd39e4c6ce04727a868ac7d8f3d604f4ff47"
+  }
+}

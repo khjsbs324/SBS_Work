@@ -1,0 +1,48 @@
+{
+  "name": "신윤아",
+  "Sid": "sbsartdj1168",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1168",
+  "downloads": [
+    {
+      "filename": "1792725263_79afaba7.zip",
+      "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725263_79afaba7.zip",
+      "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/신윤아/원본/1792725263_79afaba7.zip"
+    }
+  ],
+  "currentScore": "0 / 100",
+  "submittedAnswer": "",
+  "submittedLinks": [
+    {
+      "href": "https://github.com/fngk2580-prog/first_test_MNM.git",
+      "onclick": null
+    }
+  ],
+  "receivedAt": "2026-10-26T04:22:17.533Z",
+  "archiveBytes": 1043073,
+  "sha256": "c682a266829af22aec88f9c7e83fea3c6064cd9b7ce2b32dffa6066c0aad9979",
+  "memberCount": 204,
+  "codeFiles": [
+    {
+      "path": "학생_검토사본\\first_test_MNM\\README.md",
+      "bytes": 16,
+      "monami": false
+    },
+    {
+      "path": "학생_검토사본\\first_test_MNM\\모나미 1차\\index.html",
+      "bytes": 2510,
+      "monami": true
+    },
+    {
+      "path": "학생_검토사본\\first_test_MNM\\모나미 1차\\style.css",
+      "bytes": 4818,
+      "monami": true
+    }
+  ],
+  "git": [
+    {
+      "directory": "학생_검토사본\\first_test_MNM",
+      "head": "ref: refs/heads/main",
+      "commit": "84179335a3781ac41e88429816da64919adad889"
+    }
+  ]
+}

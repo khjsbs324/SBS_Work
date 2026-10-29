@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../image/logo.jpg">
+  <title>MONAMI | 전체 통합 정답</title>
+  <!-- UIUXB_2610의 HTML/CSS 수업 예제를 참고한 모나미 데스크톱 학습용 정답 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ============================================================
+  MON-01 시작: 상단 유틸리티 + 로고 + 주 메뉴
+  참고: 마켓컬리 index.html의 header, utility-menu, brand, nav, actions
+  구조: header > utility-menu + main-header
+  협업: .con 1400px은 푸터와 공유합니다. 메뉴를 추가하면 폭 합계도 확인합니다.
+  이미지: logo.jpg 162×89, SNS 이미지 각 30×30
+  범위: 메뉴·검색·전체 메뉴는 화면 구성 학습용 표시입니다. 새 JS를 넣지 않았습니다.
+============================================================ -->
+<header id="MON-01">
+  <div class="utility-menu">
+    <div class="con utility-con">
+      <div class="utility-left">
+        <div class="language">🇰🇷 KOR <span>⌄</span></div>
+        <div class="social-list">
+          <img src="../image/facebook.gif" alt="모나미 페이스북 아이콘">
+          <img src="../image/instagram.gif" alt="모나미 인스타그램 아이콘">
+          <img src="../image/youtube.png" alt="모나미 유튜브 아이콘">
+        </div>
+      </div>
+      <nav class="utility-nav" aria-label="유틸리티 메뉴 표시">
+        <ul><li>HOME</li><li>SITE MAP</li><li>CONTACT US</li></ul>
+      </nav>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="con m-header-con">
+      <h1 class="brand"><img src="../image/logo.jpg" alt="MONAMI 모나미"></h1>
+      <nav class="main-nav" aria-label="주 메뉴 표시">
+        <ul>
+          <li>모나미소개</li><li>모나미제품</li><li>NEWS &amp; VIDEO</li>
+          <li>브랜드스토어</li><li>모나미 미술대회</li><li>고객지원</li>
+          <li>기업 구매 / 개발</li>
+        </ul>
+      </nav>
+      <!-- actions: 검색 이미지와 전체 메뉴 아이콘을 한 줄로 묶는 부모입니다.
+           가로 배치와 두 아이콘 사이 간격은 CSS .actions에서 지정합니다. -->
+      <div class="actions">
+        <!-- 검색은 준비된 이미지 파일을 사용합니다. alt는 이미지의 의미를 설명합니다. -->
+        <img src="../image/search.gif" alt="검색 아이콘">
+
+        <!-- 전체 메뉴 아이콘(☰)은 이미지 파일 대신 아래의 빈 div 3개로 그립니다.
+             div 안에 글자가 없어도 CSS로 너비·높이·배경색을 주면 선이 보입니다.
+             부모 .menu-lines: 선 3개를 세로로 배치하고, 선 사이를 5px 띄웁니다.
+             자식 .menu-lines div: 각 선을 너비 20px, 높이 2px, 회색(#555)으로 만듭니다.
+             role="img": 이 묶음을 화면 읽기 프로그램에 하나의 이미지로 알려줍니다.
+             aria-label: 그 이미지의 이름을 '전체 메뉴 아이콘'으로 알려줍니다.
+             현재는 모양만 표시합니다. 클릭해서 메뉴를 여는 기능은 없습니다. -->
+        <div class="menu-lines" role="img" aria-label="전체 메뉴 아이콘">
+          <div></div> <!-- 첫 번째 자식: 위쪽 가로선 -->
+          <div></div> <!-- 두 번째 자식: 가운데 가로선 -->
+          <div></div> <!-- 세 번째 자식: 아래쪽 가로선 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- MON-01 끝 -->
+<main>
+<!-- ============================================================
+  MON-02 시작: 메인 비주얼
+  참고: 마켓컬리 banner의 대표 이미지 영역 + 제목·설명 패턴
+  협업: 사진은 CSS .hero에서 연결합니다. 사진을 바꾸면 글자 대비를 확인합니다.
+  배치: 사진과 문구를 absolute로 겹치지 않고 배경 + 내부 Flex로 구성합니다.
+  폭: 1400px 컨테이너, 문구 왼쪽 여백 120px, 전체 높이 652px
+============================================================ -->
+<div id="MON-02" class="hero">
+  <div class="con hero-con">
+    <div class="hero-copy">
+      <div class="hero-title">
+        <p>어쩌면 삶은</p><p>인생이라는 종이 위에</p>
+        <p>써 내려가는</p><p>펜의 기록 같습니다.</p>
+      </div>
+      <div class="hero-desc">
+        <p>그중에서도 지우고 싶지 않은 기록이 있습니다.</p>
+        <p>모나미는 언제나 당신의 행복한 기록과 함께 합니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MON-02 끝 -->
+<!-- ============================================================
+  MON-03 시작: NEW ARRIVALS
+  참고: 마켓컬리 product-list > product-card > product-image 패턴
+  행 1: (제목 + 392×205 이미지) 392px + 간격 22px + 786×360 이미지
+  행 2: 392×292 + 450×439 + 314×292, 간격 각 22px
+  협업: 두 행 모두 폭 합계가 1200px입니다. 이미지 하나만 늘리면 행 전체가 달라집니다.
+  공통: 이 영역의 .new-con은 .con의 폭만 1200px로 재정의합니다.
+  상품명: 각 img alt에 기록했습니다. 원사이트의 hover 오버레이는 추가하지 않았습니다.
+============================================================ -->
+<div id="MON-03" class="new-products">
+  <div class="con new-con">
+    <div class="new-row">
+      <div class="new-left">
+        <div class="new-heading">
+          <h2 class="section-title"><span>NEW</span><span>ARRIVALS</span></h2>
+          <div class="title-line"></div>
+          <p class="section-desc">가장 먼저 만나는 설레는 기다림</p>
+        </div>
+        <div class="new-card new-card-01">
+          <img src="../image/new-01.jpg" alt="PEN — FX ZETA C3, 여러 색상의 볼펜">
+        </div>
+      </div>
+      <div class="new-card new-card-02">
+        <img src="../image/new-02.jpg" alt="NOTE — 지퀀스, 세 가지 색상의 노트">
+      </div>
+    </div>
+    <div class="new-row">
+      <div class="new-card new-card-03">
+        <img src="../image/new-03.jpg" alt="PREMIUM PEN — 프러스펜3000프라임과 케이스">
+      </div>
+      <div class="new-card new-card-04">
+        <img src="../image/new-04.jpg" alt="FOUNTAIN PEN — 153 아이디 만년필과 케이스">
+      </div>
+      <div class="new-card new-card-05">
+        <img src="../image/new-05.jpg" alt="WATER-BASED MARKER — 프러스펜 3000, 60색 마커">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MON-03 끝 -->
+<!-- ============================================================
+  MON-04 시작: BEST PRODUCT
+  참고: 마켓컬리 brand-tabs의 active 표시 + 반복되는 product-card
+  협업: 카드 266px, 사이 간격 9px, 전체 목록 폭 3016px = 266×11 + 9×10
+  범위: 프리미엄 펜 목록을 보여줍니다. 카테고리 버튼은 disabled인 표시용입니다.
+  스크롤: overflow:auto의 브라우저 기본 가로 스크롤입니다. JS 드래그가 아닙니다.
+============================================================ -->
+<div id="MON-04" class="best-products">
+  <div class="best-heading">
+    <h2 class="section-title">BEST PRODUCT</h2>
+    <div class="title-line"></div>
+    <p class="section-desc">언제 어디서나 생활 속에 함께하는 모나미</p>
+  </div>
+  <div class="brand-tabs" aria-label="상품 카테고리 표시">
+    <button type="button" class="brand-tab active" disabled>프리미엄 펜</button>
+    <button type="button" class="brand-tab" disabled>펜·펜슬</button>
+    <button type="button" class="brand-tab" disabled>마카·컬러링</button>
+    <button type="button" class="brand-tab" disabled>노트·사무용품</button>
+  </div>
+  <div class="product-scroll" tabindex="0" role="region" aria-label="프리미엄 펜 상품 목록, 가로 스크롤">
+    <div class="product-list">
+      <!-- 상품 01: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-01.jpg" alt="프러스펜 3000 프라임"></div>
+        <div class="product-info"><p class="product-category">프리미엄 펜</p><p class="product-name">프러스펜 3000 프라임</p></div>
+      </div>
+      <!-- 상품 02: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-02.jpg" alt="153 리스펙트 리파인"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 리스펙트 리파인</p></div>
+      </div>
+      <!-- 상품 03: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-03.jpg" alt="153 아이디 만년필"></div>
+        <div class="product-info"><p class="product-category">만년필</p><p class="product-name">153 아이디 만년필</p></div>
+      </div>
+      <!-- 상품 04: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-04.jpg" alt="153 네오 만년필 EF"></div>
+        <div class="product-info"><p class="product-category">만년필</p><p class="product-name">153 네오 만년필 EF</p></div>
+      </div>
+      <!-- 상품 05: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-05.jpg" alt="153 블랙 &amp; 화이트"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 블랙 &amp; 화이트</p></div>
+      </div>
+      <!-- 상품 06: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-06.jpg" alt="153 골드"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 골드</p></div>
+      </div>
+      <!-- 상품 07: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-07.jpg" alt="153 아이디"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 아이디</p></div>
+      </div>
+      <!-- 상품 08: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-08.jpg" alt="60주년 프러스펜 3000 데스크펜 스페셜 에디션"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">60주년 프러스펜 3000 데스크펜 스페셜 에디션</p></div>
+      </div>
+      <!-- 상품 09: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-09.jpg" alt="153 아이디 샤프"></div>
+        <div class="product-info"><p class="product-category">고급샤프</p><p class="product-name">153 아이디 샤프</p></div>
+      </div>
+      <!-- 상품 10: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-10.jpg" alt="153 네오"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 네오</p></div>
+      </div>
+      <!-- 상품 11: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../image/best-11.jpg" alt="153 리스펙트"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 리스펙트</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-guide">
+    <div class="scroll-rule"><img src="../image/arrow-left.gif" alt=""></div>
+    <div class="scroll-label"><img src="../image/scroll-cursor.gif" alt=""><p>SCROLL</p></div>
+    <div class="scroll-rule"><img src="../image/arrow-right.gif" alt=""></div>
+  </div>
+</div>
+<!-- MON-04 끝 -->
+<!-- ============================================================
+  MON-05 시작: 브랜드 영상 자리의 대표 이미지
+  참고: 마켓컬리 banner img의 width:100%, object-fit 패턴
+  범위: 원사이트의 bg_video.jpg를 정적인 이미지로 사용합니다.
+  협업: 수업 참고 코드에는 video 태그·재생 JS가 없어 재생 기능을 추가하지 않았습니다.
+  확인: 이미지의 원본 비율을 유지합니다. 이 파일을 영상 재생 완료 증빙으로 쓰지 않습니다.
+============================================================ -->
+<div id="MON-05" class="brand-video">
+  <img src="../image/video-poster.jpg" alt="브랜드 영상 대표 이미지: 모나미 펜으로 그림을 그리는 손">
+</div>
+<!-- MON-05 끝 -->
+<!-- ============================================================
+  MON-06 시작: 뉴스 + 문의 + 공식 스토어
+  참고: 마켓컬리 이미지·정보 묶음, 제목·설명, add-btn의 버튼 테두리
+  폭: 1400px = 뉴스 700px + 문의 350px + 스토어 350px
+  협업: 뉴스 문구가 길어지면 글자 크기를 줄이지 말고 줄 수·내용 길이를 먼저 검토합니다.
+  상태: 버튼은 외부 요청을 보내지 않는 disabled 표시용입니다.
+============================================================ -->
+<div id="MON-06" class="information">
+  <div class="con information-con">
+    <div class="news">
+      <div class="news-heading"><h2>MONAMI NEWS</h2><span>MORE</span></div>
+      <div class="title-line"></div>
+      <div class="news-feature">
+        <img src="../image/news.png" alt="리쥼 3·리쥼 S 지워지는 중성펜 출시 안내 이미지">
+        <div class="news-copy">
+          <h3>모나미, 지워지는 중성펜 리쥼 3·리쥼 S 신제품 출시</h3>
+          <p>60도 마찰열에 지워지는 특수잉크를 적용해 손쉽게 지울 수 있는 신제품을 소개합니다.</p>
+          <p class="news-date">2025-12-15</p>
+        </div>
+      </div>
+      <div class="news-rule"></div>
+      <ul class="news-list">
+        <li><span>‘쓰는 펜’과 ‘그리는 펜’ 직접 경험해보세요!</span><span>2025-12-11</span></li>
+        <li><span>주방 필수품 키친마카 라인업 확대</span><span>2025-11-17</span></li>
+        <li><span>‘153 독도’ 수익금 기부 및 특별 기획</span><span>2025-10-24</span></li>
+      </ul>
+    </div>
+    <div class="inquiry info-panel">
+      <img class="panel-icon" src="../image/inquiry-icon.png" alt="">
+      <h2>INQUIRY</h2>
+      <div class="title-line"></div>
+      <div class="panel-desc"><p>언제나 소중한 의견에 귀 기울이겠습니다.</p><p>궁금한 사항은 문의하세요.</p></div>
+      <button type="button" class="outline-btn" disabled>INQUIRY NOW</button>
+    </div>
+    <div class="shop info-panel">
+      <img class="panel-icon" src="../image/shop-icon.png" alt="">
+      <h2>모나미 네이버 브랜드스토어</h2>
+      <div class="title-line"></div>
+      <div class="panel-desc"><p>모나미 공식 쇼핑몰입니다.</p><p>공식몰만의 다양한 혜택을 만나보세요.</p></div>
+      <button type="button" class="outline-btn" disabled>BUY NOW</button>
+    </div>
+  </div>
+</div>
+<!-- MON-06 끝 -->
+</main>
+<!-- ============================================================
+  MON-07 시작: 푸터
+  참고: 마켓컬리 utility-con의 양끝 정렬과 제목·설명·버튼 패턴
+  협업: .con 1400px을 상단과 공유합니다. 회사 정보·전화번호는 내용 교체 지점입니다.
+  범위: 개인정보 팝업·패밀리 사이트 펼침·채팅 연결은 새로 추가하지 않았습니다.
+  footer 태그 대신 수업에서 사용한 div 묶음으로 하단을 구성했습니다.
+============================================================ -->
+<div id="MON-07" class="footer" role="contentinfo">
+  <div class="con footer-con">
+    <div class="footer-top">
+      <img src="../image/footer-logo.jpg" alt="MONAMI 모나미 푸터 로고">
+      <ul class="footer-menu"><li>회사소개</li><li>개인정보처리방침</li><li>이메일무단수집거부</li></ul>
+    </div>
+    <div class="footer-rule"></div>
+    <div class="footer-bottom">
+      <div class="company-info">
+        <h2>INFO</h2>
+        <p>ADDRESS : 경기도 용인시 수지구 손곡로 17　 l　 TEL : 031-216-0153　 l　 FAX : 031-270-5154</p>
+        <p>COPYRIGHT(C) MONAMI.CO.,LTD. ALL RIGHTS RESERVED.</p>
+      </div>
+      <div class="customer-center">
+        <h2>CUSTOMER CENTER</h2><p class="customer-tel">080-022-0153</p>
+        <button type="button" class="kakao-btn" disabled>카카오톡 문의</button>
+      </div>
+      <div class="family-site">FAMILY SITE <span>⌃</span></div>
+    </div>
+  </div>
+</div>
+<!-- MON-07 끝 -->
+</body>
+</html>

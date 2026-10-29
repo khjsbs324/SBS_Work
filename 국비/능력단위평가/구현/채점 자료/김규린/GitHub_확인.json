@@ -1,0 +1,20 @@
+{
+  "student": "김규린",
+  "repository": "wonsi708934/EXAM_KGR",
+  "requestedCommit": "9dfa6cab7571aea69cb2ee7e804b3702e24bce27",
+  "commit": "9dfa6cab7571aea69cb2ee7e804b3702e24bce27",
+  "createdAt": "2026-10-23T03:10:45Z",
+  "title": "제출",
+  "url": "https://github.com/wonsi708934/EXAM_KGR/commit/9dfa6cab7571aea69cb2ee7e804b3702e24bce27",
+  "files": [
+    ".playwright-mcp/console-2026-10-23T00-16-33-049Z.log",
+    ".playwright-mcp/console-2026-10-23T00-17-33-811Z.log",
+    ".playwright-mcp/page-2026-10-23T00-16-41-241Z.yml",
+    ".playwright-mcp/page-2026-10-23T00-17-05-772Z.yml",
+    ".playwright-mcp/page-2026-10-23T00-17-35-723Z.yml",
+    "EXAM/img/logo-transparent.png",
+    "EXAM/index.html",
+    "EXAM/style.css"
+  ],
+  "isError": false
+}

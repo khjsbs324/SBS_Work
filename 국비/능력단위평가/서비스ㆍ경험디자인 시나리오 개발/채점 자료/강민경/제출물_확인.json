@@ -1,0 +1,15 @@
+{
+  "student": "강민경",
+  "unit": "서비스ㆍ경험디자인 시나리오 개발",
+  "Sid": "sbsartdj1114",
+  "receivedAt": "2026-10-23T04:08:17.682216+00:00",
+  "sourceUrl": "https://sbsartdj.maniaro.net/uflist/download.php?type=project_appraisal&pcode=300002&lcode=12&file=1790674297_01f78157.pdf",
+  "files": [
+    {
+      "filename": "원본/1790674297_01f78157.pdf",
+      "bytes": 13529820,
+      "sha256": "947ad822dba9616779b7ff7b6e79c6fae26c1e382dce3059556322d5a9088b63"
+    }
+  ],
+  "review": "원본 변경 없이 보존. 복원 텍스트는 가시 rawdict 줄과 glyph origin을 대응한 검토용이며 그림·연결선은 원본 렌더링으로 확인."
+}

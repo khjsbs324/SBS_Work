@@ -9,6 +9,7 @@
 - [이전 작업 목록](설정/이전작업목록.json): 기존 파일·게시글 참조. 과거 검증을 현재 검증으로 간주하지 않는다.
 - [작업 현황](작업현황.md): `report`가 실행 기록과 이전 목록을 읽어 생성하는 조회 문서.
 - [템플릿](템플릿): 회의록 입력·본문·PDF·실습 양식의 시작점.
+- [회의록 작성 기준](../.agents/skills/ncs-learning-support/references/meeting.md): 문체·교수법 연계·재평가·날짜 관리·정정·본문 검수의 기준. 양식은 이 기준에 맞춰 채운다.
 - [실행 코드](../scripts/ncs_support): 날짜·작업 상태·자료 생성·패키징·검증.
 - 결과 경로는 `작업/과정/능력단위/실행일시/`이다. 기존 산출물은 옮기거나 덮어쓰지 않는다.
 
@@ -16,18 +17,20 @@
 작업/A과정/능력단위/실행일시/
 ├─ 작업정보.json                 대상·게시일·실제 요청
 ├─ 진행상태.json                 단계별 증빙·검수 파일 해시
-├─ 01_근거자료/                  평가·피드백·대상·참고자료 관측
-├─ 02_회의록/                    원본·작성안·등록 확인
+├─ 01_근거자료/평가대상.json      실제 명단·능력단위요소·관측 근거
+├─ 02_회의록/회의록.json          전문·ABC 편성·지원계획의 기준 원본
 ├─ 03_지원자료/A그룹·B그룹·C그룹/ 본문·PDF·실습양식·ZIP
 ├─ 04_등록검증/                  상세 확인·다운로드 검증·캡처
 └─ 05_정정이력/정정ID/           수정 전 자료·상태·정정 근거·완료 증빙
 ```
 
-기존 실행 폴더는 그대로 읽는다. 새 실행에는 위 디렉토리를 만들며 기존 실행의 정정 폴더는 `revise` 때 생성한다. 등록 후 파일 수정은 보존된 원본과 정정 기록을 통해 관리한다.
+기존 실행 폴더는 그대로 읽는다. 지원자료 전체 작업의 새 실행에는 위 디렉토리를 만들며 지원 게시글 정정 폴더는 `revise` 때 생성한다. 회의록만 정정하는 작업은 아래 안내에 따라 필요한 정정 증빙을 보관한다.
+
+평가·피드백 등 다른 근거는 01_근거자료에, 회의록 원문 백업·검수·저장 확인은 02_회의록과 04_등록검증에 함께 보관한다. 폴더를 이동하거나 기준 계획을 여러 파일에 복제하지 않는다.
 
 ## 전체 작업 시작과 재개
 
-국비 폴더에서 실행한다. 현재 설치된 Python은 3.14.7이며 최소 3.11이 필요하다. 다른 PC에서는 `python --version`으로 확인한다.
+국비 폴더에서 Python 3.11 이상으로 실행한다. `python --version`으로 확인하고, 이 PC에서는 아래 명령의 `python` 대신 `py -3.14`를 사용한다.
 
 ```powershell
 python -X utf8 -B -m scripts.ncs_support queue --course A
@@ -64,15 +67,23 @@ init은 실제 자료 작업 때만 실행한다. 기본 action은 prepare이다
 ```powershell
 python -X utf8 -B -m scripts.ncs_support status '실제 run 경로'
 python -X utf8 -B -m scripts.ncs_support next '실제 run 경로'
+python -X utf8 -B -m scripts.ncs_support meeting-check '실제 run 경로'
+python -X utf8 -B -m scripts.ncs_support record '실제 run 경로' --stage meeting_resolved --evidence '실제 회의록 검수 JSON 경로'
+python -X utf8 -B -m scripts.ncs_support meeting-plan '실제 run 경로' A
 python -X utf8 -B -m scripts.ncs_support build '실제 run 경로' A
 python -X utf8 -B -m scripts.ncs_support package '실제 run 경로' A
 python -X utf8 -B -m scripts.ncs_support validate '실제 run 경로' A
 python -X utf8 -B -m scripts.ncs_support record '실제 run 경로' --stage materials_verified --group A --evidence '실제 증빙 JSON 경로'
+python -X utf8 -B -m scripts.ncs_support registration-check '실제 run 경로' A
 ```
 
 build 전에 그룹 폴더에 content.json과 실제 이미지를 준비한다. [본문 입력 예시](템플릿/지원내역본문/content.example.json)는 형식 설명이며 빈 예시를 게시하지 않는다. 생성된 guide.html을 브라우저로 열어 PDF를 출력하고 실제 페이지·글자·표·이미지를 확인한다. package는 content.json의 files 목록에 명시한 학생용 파일만 포함한다.
 
 ## 단계와 증빙
+
+회의록 전문과 실제 A·B·C 명단·지원계획을 먼저 완성하고 내용 검수·LMS 저장값 확인 후 지원자료를 작성한다. meeting-plan의 support_plan_sha256을 content.json에 넣고, 자료 검수에는 보완점·활동·완료 기준과의 대조 결과도 기록한다. meeting-check는 구조 검사이며 실제 내용 판독을 대신하지 않는다. 회의록 검수가 없거나 달라지면 build·package·등록 사전 검사를 차단한다.
+
+문장만 변경하면 회의록을 다시 검수하고, 그룹 명단·계획이 바뀌면 해당 그룹 자료만 재검수한다. 기존 완료 기록은 조회·보존하며 재개·정정할 때 강화된 검수를 적용한다. registration-check 반환값은 브라우저 어댑터의 meeting_gate로 전달한다.
 
 `target_confirmed → sources_collected → meeting_resolved → (그룹별 materials_verified → registered → verified)` 순서다. 로컬 작업은 세 그룹 자료 검수 후 prepared, 등록 작업은 세 그룹 실제 상세·다운로드 검증 후 complete이다.
 
@@ -82,7 +93,13 @@ record는 근거 파일이 있어야 다음 단계로 진행한다. 자료 검�
 
 새 실행은 평가 원문을 직접 읽은 경우와 피드백으로 과제 범위를 파악한 경우를 구분한다. 로컬 제작만 요청되어 회의록 초안을 작성한 경우에는 `drafted`로 기록하며 LMS 등록 완료로 표시하지 않는다.
 
-## 등록 후 정정
+## 회의록 입력과 단독 정정
+
+[회의록 입력 예시](템플릿/회의록/meeting.example.json)의 `analysis`·`improvement`가 LMS에 등록할 두 본문이다. `meeting_date`는 별도 회의일시 입력값이며 `actual_date`·`retrospective`와 근거·확인 한계는 로컬 관리 정보다. 기존 JSON의 필드는 유지하고 날짜 판단과 본문 검수는 회의록 작성 기준을 따른다.
+
+회의록만 정정하는 요청은 `05_정정이력/정정ID/`에 원문·수정안·요청 근거·저장 확인·완료 증빙을 보관한다. 지원 게시글용 `revise`와 구분하며, 지원자료 전체 작업의 상태를 변경하지 않는다. 상세 절차와 검수 항목은 [회의록 작성 기준](../.agents/skills/ncs-learning-support/references/meeting.md)에 있다.
+
+## 지원 게시글 등록 후 정정
 
 현재 게시글을 확인한 증빙에 공통 대상 필드·group·post_date·title·post_id·url·checked_at·live_post_checked=true를 기록한다. 실제 수정 전에 다음을 실행한다.
 

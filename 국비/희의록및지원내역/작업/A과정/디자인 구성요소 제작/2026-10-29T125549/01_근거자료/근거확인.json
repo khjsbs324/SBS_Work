@@ -1,0 +1,27 @@
+{
+  "course_id": "A",
+  "unit": "디자인 구성요소 제작",
+  "lcode": "9",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+  "unit_end_date": "2026-08-20",
+  "screen_confirmed": true,
+  "checked_at": "2026-10-29T12:55:49+09:00",
+  "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=9",
+  "scores_read": true,
+  "feedback_read": true,
+  "meeting_read": true,
+  "task_read": false,
+  "original_task_full_text_available": false,
+  "task_basis": "feedback_reconstruction",
+  "task_scope": "현재 10명 평가 피드백의 13개 초안·최종 구성요소, 8단계 기록, 리서치, 웹디자인 적용 범위와 로컬 Exam 및 과제안내서 대조",
+  "limitations": [
+    "LMS 수행평가서에서 평가문제 전문은 확인되지 않아 로컬 과제안내서와 현재 전체 피드백으로 과제 범위를 확인함."
+  ],
+  "source_urls": [
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=9",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=9"
+  ]
+}

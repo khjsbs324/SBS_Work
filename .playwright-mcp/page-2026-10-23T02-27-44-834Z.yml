@@ -1,0 +1,173 @@
+- generic [active] [ref=f15e1]:
+  - banner [ref=f15e2]:
+    - generic [ref=f15e3]:
+      - generic [ref=f15e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f15e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f15e8]:
+    - generic [ref=f15e9]:
+      - generic [ref=f15e10]:
+        - generic [ref=f15e11]: 김혜지
+        - generic [ref=f15e12]:
+          - button "정보수정" [ref=f15e13] [cursor=pointer]
+          - button "비번변경" [ref=f15e14] [cursor=pointer]
+          - button "PIN변경" [ref=f15e15] [cursor=pointer]
+      - list [ref=f15e16]:
+        - listitem [ref=f15e17] [cursor=pointer]:
+          - generic [ref=f15e18]:
+            - generic [aria-hidden] [ref=f15e19]: 
+            - text: 훈련과정
+        - listitem [ref=f15e20] [cursor=pointer]:
+          - generic [ref=f15e21]:
+            - generic [aria-hidden] [ref=f15e22]: 
+            - text: 공지사항
+      - list [ref=f15e23]:
+        - listitem [ref=f15e24] [cursor=pointer]:
+          - generic [ref=f15e25]:
+            - paragraph [ref=f15e26]:
+              - generic [aria-hidden] [ref=f15e27]: 
+            - paragraph [ref=f15e28]: 고객센터
+        - listitem [ref=f15e29] [cursor=pointer]:
+          - generic [ref=f15e30]:
+            - paragraph [ref=f15e31]:
+              - generic [aria-hidden] [ref=f15e32]: 
+            - paragraph [ref=f15e33]: 카톡문의
+    - generic [ref=f15e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f15e35]:
+        - caption [ref=f15e36]:
+          - generic [ref=f15e37]:
+            - generic [ref=f15e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f15e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f15e48]:
+          - row [ref=f15e49]:
+            - cell "개강일" [ref=f15e50]
+            - cell "2026-05-20" [ref=f15e51]
+            - cell "종강일" [ref=f15e52]
+            - cell "2026-12-04" [ref=f15e53]
+            - cell "강사" [ref=f15e54]
+            - cell "김가경, 김혜지" [ref=f15e55]
+          - row [ref=f15e56]:
+            - cell "실시인원" [ref=f15e57]
+            - cell "11" [ref=f15e58]
+            - cell "수강인원" [ref=f15e59]
+            - cell "9" [ref=f15e60]
+            - cell "수강포기인원" [ref=f15e61]
+            - cell "2" [ref=f15e62]
+      - list [ref=f15e63]:
+        - listitem [ref=f15e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f15e65]
+        - listitem [ref=f15e66] [cursor=pointer]:
+          - generic "시간표" [ref=f15e67]
+        - listitem [ref=f15e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f15e69]
+        - listitem [ref=f15e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f15e71]
+        - listitem [ref=f15e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f15e73]
+        - listitem [ref=f15e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f15e75]
+        - listitem [ref=f15e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f15e77]
+        - listitem [ref=f15e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f15e79]
+        - listitem [ref=f15e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f15e81]
+        - listitem [ref=f15e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f15e83]
+        - listitem [ref=f15e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f15e85]
+        - listitem [ref=f15e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f15e87]
+        - listitem [ref=f15e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f15e89]
+        - listitem [ref=f15e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f15e91]
+        - listitem [ref=f15e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f15e93]
+        - listitem [ref=f15e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f15e95]
+        - listitem [ref=f15e96] [cursor=pointer]:
+          - generic "과제" [ref=f15e97]
+        - listitem [ref=f15e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f15e99]
+        - listitem [ref=f15e100] [cursor=pointer]:
+          - generic [ref=f15e101]: 게시판생성
+        - listitem [ref=f15e102] [cursor=pointer]:
+          - generic [ref=f15e103]: 게시판순서변경
+      - table "지원내역 등록 돌아가기" [ref=f15e105]:
+        - caption [ref=f15e106]:
+          - generic [ref=f15e107]:
+            - generic [ref=f15e108]: 지원내역 등록
+            - link "돌아가기" [ref=f15e110] [cursor=pointer]:
+              - /url: ./list.php?Pcode=300002&BoardCode=85
+        - rowgroup [ref=f15e114]:
+          - row [ref=f15e115]:
+            - cell "제목" [ref=f15e116]
+            - cell [ref=f15e117]:
+              - textbox [ref=f15e118]
+          - row [ref=f15e119]:
+            - cell "내용" [ref=f15e120]
+            - cell [ref=f15e121]:
+              - generic [ref=f15e122]:
+                - generic [ref=f15e123]:
+                  - paragraph [ref=f15e124]:
+                    - text: "ㆍ 이미지: 업로드 시 자동 축소(최대 1200px), 삽입 후"
+                    - strong [ref=f15e125]: 오른쪽 아래
+                    - text: 를 드래그해 크기 조절.
+                  - paragraph [ref=f15e126]: ㆍ 열 너비는 셀 세로 경계선을 드래그 하세요.
+                  - paragraph [ref=f15e127]: ㆍ PDF 파일을 드래그앤드롭하면 이미지로 변환해서 저장됩니다.
+                  - paragraph [ref=f15e128]:
+                    - text: ㆍ
+                    - strong [ref=f15e129]: YouTube
+                    - text: 아이콘으로 동영상 URL을 넣을 수 있습니다.
+                  - paragraph [ref=f15e130]:
+                    - text: "ㆍ Word(.docx) 드롭:"
+                    - strong [ref=f15e131]: 이미지로 넣기
+                    - text: 또는
+                    - strong [ref=f15e132]: 글·표로 넣기
+                    - text: 선택. Excel·마크다운도 드롭 가능. 한글(.hwp)은 미지원.
+                  - paragraph [ref=f15e133]:
+                    - text: ㆍ
+                    - strong [ref=f15e134]: 코드등록
+                    - text: ": 코드등록 버튼을 클릭하거나 입력한 코드를 선택한 후 코드등록 버튼을 클릭하세요."
+                - generic [ref=f15e136]:
+                  - generic [ref=f15e138]:
+                    - generic [ref=f15e139]:
+                      - button "제목크기" [ref=f15e140] [cursor=pointer]
+                      - button "굵게" [ref=f15e141] [cursor=pointer]
+                      - button "기울임꼴" [ref=f15e142] [cursor=pointer]
+                      - button "글자 색상" [ref=f15e143] [cursor=pointer]
+                    - generic [ref=f15e145]:
+                      - button "왼쪽 정렬" [ref=f15e147] [cursor=pointer]:
+                        - generic [aria-hidden]: 
+                      - button "가운데 정렬" [ref=f15e149] [cursor=pointer]:
+                        - generic [aria-hidden]: 
+                      - button "오른쪽 정렬" [ref=f15e151] [cursor=pointer]:
+                        - generic [aria-hidden]: 
+                    - generic [ref=f15e153]:
+                      - button "글머리 기호" [ref=f15e154] [cursor=pointer]
+                      - button "번호 매기기" [ref=f15e155] [cursor=pointer]
+                    - generic [ref=f15e157]:
+                      - button "표 삽입" [ref=f15e158] [cursor=pointer]
+                      - button "이미지 삽입" [ref=f15e159] [cursor=pointer]
+                      - button "링크 삽입" [ref=f15e160] [cursor=pointer]
+                      - button "YouTube" [ref=f15e162] [cursor=pointer]:
+                        - generic [aria-hidden]: 
+                    - button "코드등록" [ref=f15e166] [cursor=pointer]
+                  - paragraph [ref=f15e172]
+          - row [ref=f15e173]:
+            - cell "작성일" [ref=f15e174]
+            - cell [ref=f15e175]:
+              - textbox [ref=f15e176]: 2026-10-23
+          - row [ref=f15e177]:
+            - cell "첨부파일" [ref=f15e178]
+            - cell [ref=f15e179]:
+              - button "Choose File" [ref=f15e181] [cursor=pointer]
+        - rowgroup [ref=f15e182]:
+          - row [ref=f15e183]:
+            - cell "0B 100MB 등록하기" [ref=f15e184]:
+              - generic [ref=f15e185]:
+                - generic [ref=f15e186]: 0B
+                - generic [ref=f15e187]: 100MB
+                - button "등록하기" [ref=f15e188] [cursor=pointer]

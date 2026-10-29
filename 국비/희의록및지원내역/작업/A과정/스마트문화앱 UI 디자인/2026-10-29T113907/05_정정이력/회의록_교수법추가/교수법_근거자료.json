@@ -1,0 +1,79 @@
+{
+  "unit": "스마트문화앱 UI 디자인",
+  "lcode": "14",
+  "source": {
+    "unit": "스마트문화앱 UI 디자인",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=14",
+    "summary": "평가정보\n돌아가기\n구분\t본평가\t결석자평가\t재평가\t사전평가\t능력단위\n\n\n평가날짜\n\n평가시간\n\n커트라인\n\n패널티\n\n\t\n\n2026-10-19\n\n14:00~19:00\n\n60점\n\n0점\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t69.7\t85.67\n평가인원\t9\t0\t0",
+    "scores": [
+      {
+        "name": "이은경",
+        "score": "92",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1119"
+      },
+      {
+        "name": "박주연",
+        "score": "89",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1117"
+      },
+      {
+        "name": "임연우",
+        "score": "89",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1121"
+      },
+      {
+        "name": "이지희",
+        "score": "88",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1120"
+      },
+      {
+        "name": "이은수",
+        "score": "87",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1123"
+      },
+      {
+        "name": "강민경",
+        "score": "86",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1114"
+      },
+      {
+        "name": "박찬미",
+        "score": "83",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1118"
+      },
+      {
+        "name": "허지민",
+        "score": "80",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1122"
+      },
+      {
+        "name": "최지혜",
+        "score": "77",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1124"
+      }
+    ],
+    "samples": [
+      {
+        "name": "이은경",
+        "score": "92",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1119",
+        "feedback": "크림색과 브라운, 공간 사진을 활용해 SOAPHE의 차분한 분위기를 여러 화면에 안정적으로 연결한 점이 좋았습니다. Gift 화면에서는 상품을 같은 형식으로 비교할 수 있고, 공간별 활용 후기에서는 사용 장면과 관련 제품을 함께 보여 주어 콘텐츠의 관계가 잘 읽혔습니다. AI 추천 결과에 공간 분석·리뷰 분석·추천 제품을 순서대로 배치한 구성도 추천 이유를 이해하는 데 도움이 됩니다. 다만 하단 중앙의 추가 버튼은 기능명이 없어 처음 보는 사용자가 무엇을 추가하는지 바로 알기 어려울 수 있습니다. 버튼 옆이나 진입 영역에 역할을 짧게 설명하면 다음 행동을 선택하기 쉬울 것 같습니다. 분석 표와 후기의 날짜·보조 설명은 작은 글자가 많으므로 실제 휴대전화 크기에서 확인하며 글자 크기와 대비를 조정하면 좋겠습니다. 긴 추천 결과에서는 분석 내용과 상품 제안 사이의 제목·여백을 조금 더 구분하면 훑어보기도 편해질 것입니다. 최종점수는 92점입니다. 중앙 버튼의 역할과 작은 보조 글자의 가독성을 먼저 보완하면 현재의 높은 시각적 완성도와 콘텐츠 연결이 더욱 명확하게 전달될 것입니다. 고생하셨습니다."
+      },
+      {
+        "name": "이은수",
+        "score": "87",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1123",
+        "feedback": "향·사운드·괄사 콘텐츠를 차분한 이미지와 절제된 색상으로 연결한 점이 좋았습니다. 홈의 저장 조합과 최근 기록, 괄사 화면의 부위 선택은 각 화면에서 무엇을 살펴보고 선택할 수 있는지 이해하는 데 도움이 됩니다. 로그인과 회원가입에서도 입력 항목과 주요 버튼을 구분해 기본 구조를 안정적으로 구성했습니다. 다만 향 추천과 인센스 화면은 비슷한 구성을 사용하고 있어 제목과 현재 메뉴 표시가 충분히 구분되어야 각 기능의 차이가 더 잘 드러날 것 같습니다. 괄사 화면에서도 선택된 부위의 테두리·배경·표시를 조금 더 명확하게 하면 현재 선택을 파악하기 쉬울 것입니다. 마이페이지 하단 메뉴는 본문과 떨어져 배치되어 있으므로 하나의 최종 화면 안에서 위치를 정리하면 전체 화면의 완성도를 높일 수 있습니다. 연한 날짜와 보조 설명도 실제 크기에서 읽히는지 확인하면 좋겠습니다. 최종점수는 87점입니다. 현재 위치와 선택 표시, 마이페이지의 하단 메뉴 배치를 먼저 정리하면 차분한 시각 방향을 유지하면서도 화면을 더 쉽게 이해할 수 있을 것입니다. 고생하셨습니다."
+      },
+      {
+        "name": "최지혜",
+        "score": "77",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=14&FollowNo=1&Sid=sbsartdj1124",
+        "feedback": "타월 이미지와 밝은 색상, 여백으로 브랜드의 부드러운 분위기를 표현한 점이 좋았습니다. 홈에서 My Log와 커뮤니티를 함께 보여 주고, 달력에서는 선택 기간과 날짜별 기록을 구분하여 기록 기능의 역할이 드러났습니다. 상품 화면에도 같은 이미지 분위기를 적용해 서비스의 전체적인 인상을 유지했습니다. 다만 로그인 입력칸과 보조 링크가 화면에 비해 작아 읽고 선택하는 데 부담이 생길 수 있습니다. 입력 영역과 주요 버튼의 크기·간격을 먼저 정리하면 첫 진입 화면의 사용 편의성이 높아질 것 같습니다. My Page의 내정보에는 결제 수단 변경이 반복되므로 각 항목의 목적에 맞게 문구를 정리하면 좋겠습니다. 하단 메뉴도 아이콘에 이름을 더하고 현재 위치의 강조를 통일하면 각 기능을 구별하기 쉬울 것입니다. 달력의 선택 기간은 날짜 숫자와 배경이 충분히 구분되는지도 확인해 보세요. 최종점수는 77점입니다. 로그인 폼의 크기와 중복 메뉴, 하단 메뉴의 이름을 먼저 보완하면 현재의 차분한 브랜드 분위기를 더 편리한 화면으로 전달할 수 있을 것입니다. 고생하셨습니다."
+      }
+    ],
+    "checked_at": "2026-10-29T02:45:34.012Z"
+  },
+  "diary_records": [],
+  "diary_scope_limit": "조회한 훈련일지의 내용 유무는 조회 범위에 한함. 비어 있는 날짜로 전체 기간에 수업 실행이 없었다고 추정하지 않음."
+}

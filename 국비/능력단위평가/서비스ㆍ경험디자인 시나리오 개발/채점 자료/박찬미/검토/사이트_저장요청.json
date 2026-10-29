@@ -1,0 +1,19 @@
+{
+    "student":  "박찬미",
+    "Sid":  "sbsartdj1118",
+    "url":  "sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/evalC/answer.php?Pcode=300002\u0026Lcode=12\u0026AppCode=B\u0026FollowNo=1\u0026Sid=sbsartdj1118",
+    "requestedAt":  "2026-10-23T04:38:08.6629793Z",
+    "scores":  [
+                   9,
+                   9,
+                   7,
+                   9,
+                   7,
+                   8,
+                   7,
+                   7,
+                   8,
+                   7
+               ],
+    "feedbackSha256":  "11c9d244e04c14d0b77ad4b72fefa67196acc6d0927a97fae457a85863c6e4d3"
+}

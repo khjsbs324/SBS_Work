@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "unit": "프로토타입 기초데이터 수집 및 스케치",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=13",
+  "completed_at": "2026-10-29T03:19:40.808609+00:00",
+  "exact_readback": true,
+  "previous_prefix_preserved": true,
+  "date_preserved": true,
+  "reassessment_preserved": true,
+  "visual_reviewed": true,
+  "hashes": {
+    "최종수정안.json": "6cd70966196f17763c663fc24f24877a51b9b635aaf5416e4b22d89fcfdbc300",
+    "최종저장확인.json": "34ffe5ea0bd8aafe2d343665a4c83dce7f615e7c4bf2a2f14e5bbc854990b8f0",
+    "회의록_수정전.json": "08e2b5029cfce81270dc0ca74c163fd049ea3007e18c8a8138ca4aeaece5eae8",
+    "수정후화면.png": "57a41ea4911c568e3bdf9b39941b612dca960566c382016b96f550580df9fd03"
+  }
+}

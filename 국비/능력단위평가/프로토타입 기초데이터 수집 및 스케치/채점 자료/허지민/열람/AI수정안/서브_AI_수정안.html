@@ -1,0 +1,498 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A:FIT | 제품 컬렉션 수정안</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;color:#173e32;background:#fcfcfa;font-family:"Malgun Gothic",Arial,sans-serif;line-height:1.75;word-break:keep-all}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button,.btn{padding:11px 20px;border:1px solid #b8c7bc;background:transparent;color:inherit;cursor:pointer;border-radius:3px}.primary{background:#173e32;color:white;border-color:#173e32}button:hover,.btn:hover{filter:brightness(.9)}:focus-visible{outline:3px solid #b47e38;outline-offset:3px}header{position:sticky;top:0;z-index:5;background:#fcfcfaf5;border-bottom:1px solid #dce2dc}nav{max-width:1280px;margin:auto;padding:18px 30px;display:flex;align-items:center;gap:28px}.logo{font-size:30px;font-weight:900;letter-spacing:-2px;margin-right:auto}main{max-width:1200px;margin:auto;padding:0 28px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(34px,4.6vw,60px);font-weight:500;line-height:1.25;letter-spacing:-2px}h2{font-size:clamp(28px,3vw,40px);font-weight:500;line-height:1.4;letter-spacing:-1px}h3{font-size:19px}p{color:#65776b}.eyebrow{font-size:12px;letter-spacing:2.5px;color:#6a806d}.intro{padding:65px 0 35px}.row{display:flex;justify-content:space-between;align-items:center;gap:24px}.filters{border-top:1px solid #173e32;border-bottom:1px solid #dce2dc;padding:24px 0}.chips{display:flex;gap:10px;flex-wrap:wrap}.chips button{border-radius:30px;padding:8px 18px}.chips button[aria-pressed=true]{background:#173e32;color:white}.filterline{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-top:20px}input,select{padding:10px;border:1px solid #bdc8bf;background:white;min-width:0}input{flex:1}.muted,small{font-size:12px;color:#718175}.count{font-size:13px;padding-top:24px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:45px 24px;padding:10px 0 80px}.card{width:100%;padding:0;border:0;text-align:left}.card h3{margin:8px 0}.card p{font-size:13px}.price{border-top:1px solid #dce2dc;padding-top:14px;font-weight:bold}.art{display:flex;align-items:center;justify-content:center;min-height:300px;height:300px;background:#ecf0e7;position:relative;overflow:hidden;margin-bottom:20px}.art.peach{background:#f1e7d9}.art.blue{background:#e6edef}.art.lilac{background:#eeeaf1}.art:before{content:"";position:absolute;width:230px;height:230px;border:1px solid #ffffffa0;border-radius:50%}.bottle{position:relative;width:98px;height:190px;border:1px solid #71886a;border-radius:16px 16px 25px 25px;background:linear-gradient(100deg,#dce6cd,#aabd97 55%,#819b7a);box-shadow:18px 24px 25px #213d3820;display:flex;align-items:center;justify-content:center;flex-direction:column;transform:rotate(-7deg);margin-top:35px}.bottle:before{content:"● ●";text-align:center;letter-spacing:5px;position:absolute;top:-37px;left:9px;width:78px;height:39px;border:1px solid #83947c;border-radius:6px 6px 2px 2px;background:repeating-linear-gradient(90deg,#dfe7d9,#c1cfb8 3px,#e7ecdf 4px)}.bottle b{font-size:25px;letter-spacing:-2px}.bottle span{font-size:9px;letter-spacing:1px}.bottle em{font-size:8px;font-style:normal;margin-top:20px}.caption{position:absolute;left:20px;bottom:14px;font-size:9px;letter-spacing:1px;color:#607164}.story{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:80px 0;border-bottom:1px solid #dce2dc}.story .art{height:460px}.story .bottle{transform:rotate(-9deg) scale(1.5)}.story p{max-width:440px}.number{display:block;font-size:12px;letter-spacing:2px;margin-bottom:24px}.closing{text-align:center;padding:90px 0}.closing p{margin-bottom:30px}footer{padding:34px max(28px,calc((100% - 1144px)/2));background:#edf0e8;color:#657367;font-size:12px}footer b{font-size:25px;color:#173e32}dialog{width:min(680px,calc(100% - 32px));border:1px solid #c8d1c7;padding:32px;color:#173e32;max-height:90vh;overflow:auto;background:#fcfcfa}dialog::backdrop{background:#173e3270}.close{float:right;padding:3px 12px;font-size:22px}.answers{display:grid;gap:12px;margin:25px 0}.answers button{text-align:left}.progress{display:flex;gap:8px;margin:25px 0}.progress span{height:5px;background:#e0e5dc;flex:1}.progress .done{background:#173e32}.detail{padding:35px 0 100px}.detailgrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;margin:30px 0 50px}.detailgrid .art{height:460px}.detailgrid h1{font-size:36px}.facts{width:100%;border-collapse:collapse}.facts th,.facts td{padding:17px 10px;text-align:left;border-bottom:1px solid #dce2dc;font-size:14px}.facts th{width:100px}.tabs{display:flex;gap:15px;border-bottom:1px solid #c8d1c7;margin-bottom:30px}.tabs button{border:0;border-bottom:2px solid transparent}.tabs button[aria-selected=true]{border-color:#173e32}.buybar{position:fixed;bottom:0;left:0;right:0;z-index:6;padding:15px max(20px,calc((100% - 1144px)/2));background:#fcfcfa;border-top:1px solid #b8c6bd;display:flex;align-items:center;gap:18px}.buybar strong{margin-right:auto}.empty{grid-column:1/-1;padding:60px;text-align:center}[hidden]{display:none!important}.skip{position:absolute;top:-100px}.skip:focus{top:0;z-index:20;background:white}@media(max-width:760px){nav{padding:14px 18px;gap:14px;flex-wrap:wrap}nav a{font-size:12px}nav .logo{font-size:26px}nav button{font-size:12px;padding:7px 10px}main{padding:0 20px}.intro{padding-top:45px}.row{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 14px}.card .art{height:210px;min-height:210px}.card h3{font-size:16px}.story,.detailgrid{grid-template-columns:1fr;gap:30px;padding:40px 0}.story .art{height:340px}.story .copy{order:2}.detailgrid .art{height:330px}.buybar{padding:12px 16px;gap:10px;font-size:12px}.buybar button{padding:10px}.tabs{gap:0}.tabs button{padding:12px}.filterline input{width:100%;flex-basis:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"><style id="original-header-style" data-source="강사_제작예시_밝은_디자인.html">.top-full{font-size:16px;font-family:Arial,"Malgun Gothic","맑은 고딕",sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased;--transition:all .25s ease}.top-full nav{max-width:none;margin:0;padding:0;gap:0;flex-wrap:nowrap}.top-full input{flex:initial;min-width:0}.top-full a:hover,.top-full button:hover{filter:none}.top-full .brand-group{margin-right:0}
+.top-full{
+      --primary: #111827;             
+      --primary-rgb: 17, 24, 39;
+      --primary-light: #374151;
+      --accent: #6B7280;              
+      --accent-dark: #4B5563;
+      --accent-deep: #111827;
+      --accent-soft: rgba(107, 114, 128, 0.10);
+      --bg: #FFFFFF;                  
+      --bg-subtle: #F8F9FA;           
+      --card: #FFFFFF;                
+      --card-muted: #F3F4F6;
+      --border: #E5E7EB;              
+      --border-strong: #D1D5DB;
+      --border-accent: #9CA3AF;
+      --text: #111827;
+      --text-body: #374151;
+      --text-muted: #6B7280;
+      --text-light: #9CA3AF;
+      --text-canvas-title: #111827;
+      --text-canvas-lead: #4B5563;
+      --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 1px #E5E7EB;
+      --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.10), 0 0 0 1px #9CA3AF;
+      --shadow-glow: none;
+      --radius-xl: 20px;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --radius-xs: 4px;
+      --transition: all 0.25s ease;
+    }
+.top-full,.top-full *{ box-sizing: border-box; margin: 0; padding: 0; }
+.top-full{ scroll-behavior: smooth; }
+.top-full{
+      background: var(--bg);
+      color: var(--text-body);
+      font-family: 'Plus Jakarta Sans', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      word-break: keep-all;
+      overflow-x: hidden;
+      position: relative;
+    }
+.top-full button,.top-full input,.top-full select,.top-full textarea{ font: inherit; }
+.top-full button{ cursor: pointer; }
+.top-full{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E5E7EB;
+      width: 100%;
+      padding: 0 40px;
+      transition: var(--transition);
+    }
+.top-full nav.nav-wide{
+      min-height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+.top-full .brand-group{
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      background: none;
+      padding: 0;
+      box-shadow: none;
+      transition: var(--transition);
+    }
+.top-full .brand-group strong{
+      font-size: 1.95rem;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: #111827;
+      line-height: 1;
+      transition: var(--transition);
+    }
+.top-full .header-right-nav-group{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+.top-full .links-wide{
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+.top-full .links-wide a{
+      text-decoration: none;
+      color: #4B5563;
+      font-weight: 600;
+      font-size: 0.82rem;
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+    }
+.top-full .links-wide a:hover{
+      color: #111827;
+    }
+.top-full .links-wide a.active{
+      color: #111827;
+      font-weight: 700;
+    }
+.top-full .links-wide a::after{
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #111827;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+.top-full .links-wide a:hover::after,.top-full .links-wide a.active::after{
+      width: 100%;
+    }
+.top-full .gnb-actions-wrap{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+.top-full .gnb-search-wrap{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 2px;
+      border-bottom: 1.5px solid #D1D5DB;
+      transition: border-color 0.3s ease;
+    }
+.top-full .gnb-search-wrap:focus-within{
+      border-bottom-color: #111827;
+    }
+.top-full .gnb-search-wrap .gnb-icon{
+      color: #111827;
+      opacity: 0.75;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+.top-full .gnb-search-wrap:hover .gnb-icon{
+      opacity: 1;
+      color: #111827;
+    }
+.top-full .gnb-search-input{
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #111827;
+      font-size: 0.82rem;
+      font-family: inherit;
+      width: 90px;
+      transition: width 0.3s ease;
+    }
+.top-full .gnb-search-input:focus{
+      width: 125px;
+    }
+.top-full .gnb-consult-btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      color: #111827;
+      opacity: 0.80;
+      cursor: pointer;
+      padding: 4px;
+      transition: var(--transition);
+    }
+.top-full .gnb-consult-btn:hover{
+      opacity: 1;
+      color: #111827;
+      transform: translateY(-1px);
+    }
+.top-full .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+.top-full .btn-gnb{
+      padding: 9px 18px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      background: #111827 !important;
+      color: #FFFFFF !important;
+      border: 1px solid #111827 !important;
+    }
+.top-full .btn-gnb:hover{
+      background: #374151 !important;
+      color: #FFFFFF !important;
+      border-color: #374151 !important;
+      transform: translateY(-1px);
+    }
+.top-full .btn.primary{
+      background: #111827;
+      color: #FFFFFF;
+      border: 1px solid #111827;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition);
+    }
+.top-full .btn.primary:hover{
+      background: #374151;
+      color: #FFFFFF;
+      border-color: #374151;
+      transform: translateY(-2px);
+    }
+.top-full .btn.secondary{
+      background: #FFFFFF;
+      color: #111827;
+      border: 1.5px solid #D1D5DB;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition);
+    }
+.top-full .btn.secondary:hover{
+      background: #F3F4F6;
+      border-color: #111827;
+      color: #111827;
+      transform: translateY(-2px);
+    }
+.top-full .btn.accent{
+      background: #111827;
+      color: #FFFFFF;
+      border: 1px solid #111827;
+    }
+.top-full .btn.accent:hover{
+      background: #374151;
+      transform: translateY(-2px);
+      box-shadow: none;
+    }
+@media (max-width: 1024px){.top-full{ padding: 0 20px; }
+.top-full .links-wide{ display: none; }
+}
+@media (max-width: 768px){.top-full .gnb-actions-wrap .btn-gnb{
+        padding: 8px 14px;
+        font-size: 0.82rem;
+      }
+}
+@media (max-width: 480px){.top-full .btn{
+        min-height: 44px;
+        padding: 12px 16px;
+      }
+.top-full{
+        padding: 0 12px;
+      }
+.top-full .gnb-search-wrap{
+        display: none !important;
+      }
+.top-full .brand-group strong{
+        font-size: 1.6rem;
+      }
+}
+.top-full{--primary:#252923;--primary-rgb:37,41,35;--primary-light:#505648;--accent:#c5d200;--accent-dark:#727b00;--accent-deep:#353b00;--accent-soft:#f0f3d7;--bg:#fff;--bg-subtle:#f5f6f1;--card:#fff;--card-muted:#f0f1e9;--border:#dddfd2;--border-strong:#c6cab8;--text:#252923;--text-body:#555b4d;--text-muted:#73796b;--text-light:#929887;--shadow-subtle:none;--shadow-card:none;--shadow-hover:none;--radius-xl:0px;--radius:0px;--radius-sm:0px;--radius-xs:0px}
+.top-full{scroll-padding-top:108px}
+.top-full{font-family:Arial,'Malgun Gothic','맑은 고딕',sans-serif;line-height:1.8;background:#fff;overflow-x:clip}
+.top-full a{color:inherit}
+.top-full button,.top-full input,.top-full select{font:inherit}
+.top-full a,.top-full button{ -webkit-tap-highlight-color:transparent}
+.top-full .btn{border-radius:0!important;padding:14px 23px;font-weight:500;font-size:14px;box-shadow:none!important;text-align:center;white-space:normal}
+.top-full .btn.primary,.top-full .btn-gnb{background:#c5d200!important;color:#252923!important;border:1px solid #c5d200!important}
+.top-full .btn.primary:hover,.top-full .btn-gnb:hover{background:#d7e43a!important;border-color:#d7e43a!important;color:#252923!important}
+.top-full .btn.secondary{background:transparent!important;color:#252923!important;border:1px solid #b7bcaa!important}
+.top-full .btn.secondary:hover{background:#f0f2dd!important}
+.top-full{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #eaecdf;padding:0 32px}
+.top-full .nav-wide{min-height:70px!important;gap:22px}
+.top-full .brand-group strong{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif!important;font-size:34px;color:#919c00;letter-spacing:-0.04em;font-weight:600!important;line-height:1}
+.top-full .brand-group:after{display:none!important}
+.top-full .header-right-nav-group{gap:26px}
+.top-full .links-wide{gap:25px}
+.top-full .links-wide a{font-size:12px;font-weight:400;color:#373d30}
+.top-full .links-wide a:after{height:1px;background:#a0ac00}
+.top-full .links-wide a.active{font-weight:700!important;color:#252923!important}
+.top-full .links-wide a.active:after{width:100%!important}
+.top-full .gnb-search-input{width:65px;outline:none!important}
+.top-full .gnb-search-input:focus,.top-full .gnb-search-input:focus-visible{width:85px;outline:none!important}
+.top-full .gnb-search-wrap:focus-within{border-bottom:2px solid #252923!important}
+.top-full .gnb-actions-wrap{gap:12px}
+.top-full .btn-gnb{font-size:12px;padding:10px 15px;border-radius:999px!important}
+.top-full .search-link{display:flex}
+@media(max-width:1190px){.top-full .links-wide{gap:14px}
+.top-full .links-wide a{font-size:11px}
+.top-full .header-right-nav-group{gap:15px}
+.top-full .gnb-search-wrap{display:none}
+}
+@media(max-width:900px){.top-full{padding:0 24px}
+.top-full .nav-wide{flex-wrap:wrap;gap:12px;min-height:110px!important;padding:12px 0}
+.top-full .brand-group:after{top:55px}
+.top-full .header-right-nav-group{display:contents}
+.top-full .links-wide{order:3;flex:1 0 100%;justify-content:space-between;gap:8px}
+.top-full .gnb-actions-wrap{margin-left:auto}
+}
+@media(max-width:600px){.top-full{scroll-padding-top:120px}
+.top-full{padding:0 18px}
+.top-full .brand-group strong{font-size:33px}
+.top-full .brand-group:after{font-size:6px;top:48px}
+.top-full .nav-wide{min-height:102px!important}
+.top-full .links-wide{overflow-x:auto;justify-content:flex-start;gap:21px;padding:3px 0 7px;white-space:nowrap}
+.top-full .links-wide a{font-size:10px;flex:none}
+.top-full .btn-gnb{font-size:10px;padding:9px 12px}
+.top-full .gnb-consult-btn svg{width:18px}
+.top-full .gnb-actions-wrap{gap:8px}
+}
+.top-full .brand-group{position:relative;display:inline-flex;align-items:center}
+.top-full .brand-group:after{display:none!important}
+@media(max-width:900px){.top-full .links-wide{display:flex!important}
+.top-full .header-right-nav-group{display:contents!important}
+}
+@media(max-width:600px){.top-full .brand-group:after{margin-top:4px;letter-spacing:1.6px}
+}
+@media(prefers-reduced-motion:reduce){.top-full{scroll-behavior:auto}
+.top-full,.top-full *{animation:none!important;transition:none!important}
+}
+.top-full{
+  --section-bg-white: #ffffff;
+  --section-bg-ivory: #f5f2eb;
+}
+</style><style id="illumiel-collection-style">
+body{background:#fff}#main{max-width:1260px;padding:0 34px;color:#222}
+#listing .collection-heading{position:relative;text-align:center;padding:72px 0 35px}
+#listing .collection-location{position:absolute;right:0;top:23px;font-size:10px;color:#999;margin:0}
+#listing .collection-heading h1{font-family:Arial,"Malgun Gothic",sans-serif;font-size:30px;line-height:1.3;font-weight:500;letter-spacing:0;margin:0 0 12px}
+#listing .collection-heading>p:last-child{font-size:12px;color:#888;margin:0}
+#listing .collection-navigation{padding:0 0 24px;border-bottom:1px solid #e5e5e5}
+#listing .chips{justify-content:center;gap:0;padding:6px 0 28px}
+#listing .chips button{position:relative;font-size:13px;line-height:1.4;font-weight:400;border:0;border-radius:0;background:transparent;color:#777;padding:4px 22px}
+#listing .chips button+button:before{content:"";position:absolute;left:0;top:8px;height:10px;border-left:1px solid #e1e1e1}
+#listing .chips button[aria-pressed=true]{color:#1c4d3c;font-weight:700;text-decoration:underline;text-underline-offset:8px}
+#listing .filterline{justify-content:center;margin:0;gap:9px;font-size:11px;color:#888}
+#listing .filterline select,#listing .filterline input{font-size:11px;padding:7px 9px;height:32px;border:1px solid #e2e2e2;border-radius:0;color:#555}
+#listing .filterline input{flex:0 1 210px}#listing .filterline label{margin-left:8px}
+#listing .filterline button{font-size:11px;padding:5px 12px;height:32px;border:1px solid #e2e2e2;border-radius:0;color:#666}
+#listing .collection-toolbar{display:flex;justify-content:space-between;align-items:center;padding:25px 0 18px}
+#listing .count{margin:0;padding:0;font-size:11px;color:#666}
+#listing .collection-toolbar label{font-size:10px;color:#888}
+#listing .collection-toolbar select{font-size:11px;border:0;padding:3px 0 3px 5px;background:white;color:#444}
+#listing .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 24px;padding:0 0 55px}
+#listing .card{border:0;border-radius:0;background:#fff;box-shadow:none;padding:0;overflow:visible;transform:none;color:#111}
+#listing .card:hover{filter:none}
+#listing .card .art{aspect-ratio:1/1.15;height:auto;min-height:0;background:#f5f5f5;margin:0 0 20px}
+#listing .card .art:before{display:none}
+#listing .card .bottle{width:110px;height:206px;margin-top:37px;transform:none;border-radius:11px 11px 22px 22px;background:linear-gradient(100deg,#edf0e8 0%,var(--product-tone) 32%,var(--product-tone) 68%,#98a58a 100%);border:1px solid #a7b19a;box-shadow:15px 18px 20px #33333316;color:#334632;transition:transform .25s ease}
+#listing .card:hover .bottle{transform:translateY(-5px)}
+#listing .card .bottle:before{height:43px;top:-42px;left:7px;width:94px;line-height:40px;background:repeating-linear-gradient(90deg,#e8ecde,#cdd4c0 3px,#e8ecde 5px);border-color:#adb79d;border-radius:4px 4px 0 0;color:#99a583}
+#listing .card .bottle b{font-family:Arial,sans-serif;font-size:29px;color:#fff;font-weight:600}
+#listing .card .bottle span{font-size:9px;color:#fff;margin-top:8px;letter-spacing:1px}
+#listing .card .bottle em{font-size:8px;color:#f9faf5;margin-top:30px}
+#listing .caption{bottom:16px;left:17px;font-size:9px;letter-spacing:1px;color:#aaa}
+#listing .product-info h3{font-size:14px;line-height:1.5;letter-spacing:-.35px;margin:0 0 7px;font-weight:600}
+#listing .product-summary{font-size:11px;color:#888;line-height:1.6;margin:0 0 17px;min-height:18px}
+#listing .price{border-top:1px solid #e5e5e5;padding-top:17px;line-height:1.4}
+#listing .price strong{font-family:Arial,"Malgun Gothic",sans-serif;font-size:19px;font-weight:700;letter-spacing:-.3px}
+#listing .price span{font-size:11px;color:#999;font-weight:400}
+#listing .product-meta{font-size:10px;color:#888;margin:9px 0 0}
+#listing .collection-pagination{text-align:center;font-size:12px;padding:0 0 22px}
+#listing .collection-pagination span{display:inline-block;padding:4px 12px;border-bottom:1px solid #333;color:#333}
+#listing .collection-note{text-align:center;font-size:10px;color:#aaa;padding:0 0 50px;margin:0}
+@media(max-width:760px){#main{padding:0 20px}#listing .collection-heading{padding-top:62px}#listing .chips{row-gap:16px}#listing .chips button{font-size:11px;padding:3px 14px}#listing .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:35px 12px}#listing .card .bottle{width:68px;height:136px}#listing .card .bottle:before{width:58px;left:4px;top:-30px;height:31px;line-height:26px;font-size:10px}#listing .card .bottle b{font-size:21px}#listing .card .bottle span{font-size:7px;letter-spacing:0}#listing .card .bottle em{font-size:6px;margin-top:16px}#listing .caption{font-size:7px;left:10px;bottom:9px;letter-spacing:0}#listing .product-info h3{font-size:12px;min-height:36px}#listing .product-summary{font-size:10px;min-height:32px}#listing .price strong{font-size:15px}#listing .product-meta{font-size:9px}}
+@media(max-width:440px){#main{padding:0 12px}#listing .grid{gap:28px 9px}#listing .filterline{gap:6px}#listing .filterline input{flex-basis:125px}#listing .filterline label{margin:0}#listing .card .art{aspect-ratio:1/1.5}#listing .card .bottle{width:55px;height:109px}#listing .card .bottle:before{width:47px;left:3px;top:-25px;height:26px;line-height:22px}#listing .card .bottle b{font-size:18px}#listing .card .bottle span{font-size:6px}#listing .card .bottle em{font-size:5px}#listing .caption{font-size:6px;left:7px}#listing .product-info h3{font-size:11px}#listing .price strong{font-size:13px}#listing .price span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){#listing .card .bottle{transition:none}}
+</style><style id="reference-category-navigation">
+#listing .collection-heading{text-align:left;padding:58px 0 64px}
+#listing .collection-heading h1{font-family:Arial,"Malgun Gothic",sans-serif;font-size:72px;font-weight:500;letter-spacing:-3px;line-height:1.15;margin:0;color:#000}
+#listing .collection-navigation{border:0;padding:0 0 5px}
+#listing .collection-main-tabs{display:flex;gap:58px;align-items:stretch;border-bottom:1px solid #dedede}
+#listing .collection-main-tabs button{position:relative;padding:0 0 29px;border:0;border-radius:0;background:transparent;font-size:23px;font-weight:600;line-height:1.5;color:#000;white-space:nowrap}
+#listing .collection-main-tabs button[aria-pressed=true]{color:#29553f}
+#listing .collection-main-tabs button[aria-pressed=true]:after{content:"";height:2px;position:absolute;bottom:-1px;left:0;right:0;background:#29553f}
+#listing .chips{justify-content:flex-start;padding:30px 0 27px;gap:14px}
+#listing .chips button{padding:12px 25px;border:1px solid #e1e1e1;border-radius:999px;background:#fff;color:#737373;font-size:18px;font-weight:400;line-height:1.5;text-decoration:none;white-space:nowrap}
+#listing .chips button+button:before{display:none}
+#listing .chips button[aria-pressed=true]{background:#29553f;border-color:#29553f;color:#fff;font-weight:600;text-decoration:none}
+#listing .filterline{justify-content:flex-end;margin:0 0 6px;padding:0}
+#listing .collection-toolbar{padding-top:18px}
+@media(max-width:760px){#listing .collection-heading{padding:40px 0 42px}#listing .collection-heading h1{font-size:55px;letter-spacing:-2px}#listing .collection-main-tabs{gap:35px}#listing .collection-main-tabs button{font-size:18px;padding-bottom:21px}#listing .chips{gap:10px;padding:24px 0}#listing .chips button{font-size:14px;padding:9px 19px}}
+@media(max-width:440px){#listing .collection-heading h1{font-size:47px}#listing .collection-main-tabs{gap:29px}#listing .collection-main-tabs button{font-size:17px}#listing .chips{gap:8px}#listing .chips button{font-size:12px;padding:8px 15px}#listing .filterline{justify-content:flex-start}}
+</style><style id="collection-pagination-style">#listing nav.collection-pagination{display:flex;justify-content:center;align-items:center;gap:8px;padding:0 0 28px;margin:0;max-width:none;flex-wrap:wrap}#listing .collection-pagination button{min-width:36px;height:36px;padding:4px 11px;border:1px solid transparent;border-radius:0;background:#fff;color:#777;font-size:12px;line-height:1.5}#listing .collection-pagination button[aria-current=page]{color:#29553f;font-weight:700;border-bottom:1px solid #29553f}#listing .collection-pagination button:hover:not(:disabled){background:#f3f5ef}#listing .collection-pagination button:disabled{color:#ccc;cursor:default;filter:none}#products{scroll-margin-top:140px}</style></head><body><a class="skip" href="#main">본문 바로가기</a><header class="top-full">
+    <nav class="nav-wide">
+      <a href="강사_제작예시_밝은_디자인.html#hero" class="brand-group" title="A:FIT 홈으로 이동" aria-label="A:FIT 홈으로 이동">
+        <strong>A:FIT</strong>
+      </a>
+      <div class="header-right-nav-group">
+        <div class="links-wide">
+          <a href="브랜드AI수정안.html">브랜드 소개</a>
+          <a href="강사_제작예시_밝은_디자인.html#curation">AI 맞춤진단</a>
+          <a href="강사_제작예시_밝은_디자인.html#calculator">가성비 계산기</a>
+          <a href="서브AI수정안.html">15종 컬렉션</a>
+          <a href="강사_제작예시_밝은_디자인.html#reviews">구독 후기 &amp; FAQ</a>
+        </div>
+        <div class="gnb-actions-wrap">
+          <div class="gnb-search-wrap">
+            <input type="text" class="gnb-search-input" aria-label="맞춤 루틴 검색">
+            <a class="search-link" href="서브AI수정안.html" aria-label="15종 컬렉션 탐색"><svg class="gnb-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg></a>
+          </div>
+          <a class="gnb-consult-btn" title="A:FIT 브랜드 고객만족센터 (CS)" aria-label="A:FIT 브랜드 고객만족센터 (CS)" href="강사_제작예시_밝은_디자인.html#csModal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+            </svg>
+          </a>
+          <a class="btn primary btn-gnb" href="강사_제작예시_밝은_디자인.html#checkoutModal">
+            <span>맞춤 구독 시작하기</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header><main id="main"><div id="listing">
+<section class="collection-heading"><h1>Product</h1></section>
+<section class="collection-navigation" aria-label="제품 카테고리">
+<div class="collection-main-tabs" aria-label="제품 분류 방식">
+<button type="button" aria-pressed="false" data-mode="all" onclick="setCollectionMode('all')">전제품</button>
+<button type="button" aria-pressed="true" data-mode="category" onclick="setCollectionMode('category')">카테고리별</button>
+<button type="button" aria-pressed="false" data-mode="line" onclick="setCollectionMode('line')">라인별</button>
+</div>
+<div class="chips" id="categories"></div>
+
+</section>
+<div class="collection-toolbar"><p class="count" id="count" role="status" aria-live="polite"></p><label for="sort">정렬 <select id="sort" onchange="currentPage=1;render()"><option value="default">기본순</option><option value="name">제품명순</option><option value="reverse">역순</option></select></label></div>
+<section class="grid" id="products" aria-label="15종 제품 목록"></section><nav class="collection-pagination" id="pagination" aria-label="상품 목록 페이지"></nav><p class="collection-note">30병 기준의 월 구독 구성입니다. 제품과 가격은 기획 단계의 예시입니다.</p></div><section id="detail" class="detail" hidden><button onclick="backToList()">← 컬렉션으로 돌아가기</button><div class="detailgrid"><div id="detailArt"></div><div><p class="eyebrow" id="detailCat"></p><h1 id="detailTitle"></h1><p id="detailDesc"></p><p class="price">월 79,800원 <small>/ 30병 구성 · 기획 예시</small></p><table class="facts"><tr><th>제형 구성</th><td>상단 정제 + 하단 액상</td></tr><tr><th>관심 키워드</th><td id="detailGoal"></td></tr><tr><th>생활 시간</th><td id="detailTime"></td></tr></table><p class="muted">실제 원료·함량·섭취 방법은 제품 확정 후 제공됩니다.</p></div></div><div class="tabs" role="tablist" aria-label="제품 상세 정보"><button role="tab" id="tab0" aria-controls="panel" aria-selected="true" onclick="showTab(0)">제품 설명</button><button role="tab" id="tab1" aria-controls="panel" aria-selected="false" onclick="showTab(1)">구성 안내</button><button role="tab" id="tab2" aria-controls="panel" aria-selected="false" onclick="showTab(2)">확인 사항</button></div><div id="panel" role="tabpanel" aria-labelledby="tab0" tabindex="0"></div></section></main><div class="buybar" id="buybar" hidden><strong id="barTitle"></strong><span>월 79,800원</span><button class="primary" onclick="document.getElementById('order').showModal()">구독 구성 확인</button></div><dialog id="quiz" aria-labelledby="quizTitle"><button class="close" aria-label="닫기" onclick="this.closest('dialog').close()">×</button><div id="quizBody"></div></dialog><dialog id="order" aria-labelledby="orderTitle"><button class="close" aria-label="닫기" onclick="this.closest('dialog').close()">×</button><p class="eyebrow">SUBSCRIPTION PREVIEW</p><h2 id="orderTitle">선택한 구독 구성</h2><p id="orderName"></p><p>30병 / 월 79,800원 · 기획 예시</p><p>제출용 시안으로 실제 주문이나 결제는 진행되지 않습니다.</p><button class="primary" onclick="this.closest('dialog').close()">구성 확인 완료</button></dialog>
+<script>
+const names=['나이트 오버타임 팩','모닝 에너지 스타터','브레인 포커스 밸런스','데일리 바이오 밸런스','액티브 데일리 케어','프로틴 리커버리','프리-워크아웃 부스터','딥 하이드라 콜라겐','브라이트닝 글루타치온','퓨어 그린 비건 올인원','밸런스 엔자임 다이제스트','나이트 시프트 슬립','에머전시 바이탈 샷','블루라이트 아이 쉴드','뉴로 딥 포커스'];
+const groups=['직장인','직장인','직장인','데일리','데일리','스포츠','스포츠','이너뷰티','이너뷰티','비건','비건','교대근무','교대근무','IT 라이프','IT 라이프'];
+const times=['저녁','아침','업무 중','아침','아침','운동 전후','운동 전후','저녁','아침','아침','저녁','저녁','업무 중','업무 중','업무 중'];
+const goals=['바쁜 일상','아침 루틴','몰입하는 하루','매일의 균형','활동적인 하루','운동 후 루틴','운동 전 루틴','이너뷰티 관심','이너뷰티 관심','식물성 원료 관심','식후 루틴','불규칙한 하루','야간 루틴','모니터 작업','몰입하는 하루'];
+const data=names.map((name,i)=>({name,cat:groups[i],time:times[i],goal:goals[i]}));
+const art='<div class="art"><div class="bottle" role="img" aria-label="상단 정제와 하단 액상의 에이핏 보틀 콘셉트"><b>A:FIT</b><span>DAILY BALANCE</span><em>ALL-IN-ONE · DUAL FORM</em></div><span class="caption">A:FIT / PRODUCT CONCEPT</span></div>';const $=id=>document.getElementById(id);let category='전체',selected=0,step=0,answers=[];
+let currentPage=1,pageCount=1;const pageSize=6;
+let collectionMode='category',collectionLine='전체';
+const productLines=data.map(p=>p.cat==='스포츠'?'액티브 루틴':['이너뷰티','비건'].includes(p.cat)?'뷰티 & 클린':'데일리 밸런스');
+function setCollectionMode(mode){
+ currentPage=1;
+ collectionMode=mode;collectionLine='전체';category='전체';
+ document.querySelectorAll('.collection-main-tabs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode));
+ drawCategories();render();
+}
+function selectCollectionChip(button){
+ currentPage=1;
+ if(collectionMode==='line')collectionLine=button.textContent;else category=button.textContent;
+ drawCategories();render();
+}
+function drawCategories(){
+ const node=$('categories');node.hidden=collectionMode==='all';
+ const options=collectionMode==='line'?['전체',...new Set(productLines)]:['전체',...new Set(groups)];
+ node.innerHTML=options.map(c=>'<button type="button" aria-pressed="'+(c===(collectionMode==='line'?collectionLine:category))+'" onclick="selectCollectionChip(this)">'+c+'</button>').join('');
+}function render(){
+ const sort=$('sort').value;
+ const found=data.map((p,i)=>({...p,i})).filter(p=>(collectionLine==='전체'||productLines[p.i]===collectionLine)&&(category==='전체'||p.cat===category));
+ if(sort==='name')found.sort((a,b)=>a.name.localeCompare(b.name,'ko'));else if(sort==='reverse')found.reverse();
+ pageCount=Math.max(1,Math.ceil(found.length/pageSize));currentPage=Math.max(1,Math.min(currentPage,pageCount));
+ const visible=found.slice((currentPage-1)*pageSize,currentPage*pageSize);
+ $('count').textContent='총 '+found.length+'개 상품 · '+currentPage+' / '+pageCount+' 페이지';
+ drawPagination(found.length);
+ $('products').innerHTML=visible.length?visible.map(p=>{
+ const tones=['#b9cba3','#d8cb98','#aebac5','#b7cbb6','#c3c6a1','#b5c2c5','#a9b5a1','#d5bfba','#d5c9a7','#aac1a1','#b7c5ad','#b4b6c6','#c9c19f','#aabec1','#b5c0b3'];
+ const visual=art.replace('class="art"','class="art" style="--product-tone:'+tones[p.i]+'"').replace('DAILY BALANCE',p.cat.toUpperCase()).replace('ALL-IN-ONE · DUAL FORM','DUAL FORM / '+String(p.i+1).padStart(2,'0')).replace('A:FIT / PRODUCT CONCEPT','A:FIT · '+p.time);
+ return '<button class="card" onclick="openDetail('+p.i+')" aria-label="'+p.name+' 상세보기">'+visual+'<div class="product-info"><h3>'+p.name+'</h3><p class="product-summary">'+p.goal+' · 상단 정제 + 하단 액상</p><div class="price"><strong>79,800원</strong><span> / 월</span></div><p class="product-meta">'+p.cat+' · 30병 구성</p></div></button>'
+ }).join(''):'<div class="empty"><h3>조건에 맞는 제품이 없어요.</h3><p>다른 키워드를 입력하거나 필터를 초기화해 주세요.</p><button onclick="reset()">전체 제품 보기</button></div>';
+}function drawPagination(total){
+ const node=$('pagination');node.hidden=total===0;
+ const button=(label,page,disabled,active)=>'<button type="button" onclick="changePage('+page+')"'+(disabled?' disabled':'')+(active?' aria-current="page"':'')+' aria-label="'+(typeof label==='number'?label+'페이지':label)+'">'+label+'</button>';
+ node.innerHTML=button('이전',currentPage-1,currentPage===1,false)+Array.from({length:pageCount},(_,i)=>button(i+1,i+1,false,currentPage===i+1)).join('')+button('다음',currentPage+1,currentPage===pageCount,false);
+}
+function changePage(page){
+ if(!Number.isInteger(page)||page<1||page>pageCount||page===currentPage)return;
+ currentPage=page;render();$('products').scrollIntoView({block:'start'});$('products').querySelector('.card')?.focus({preventScroll:true});
+}
+function reset(){currentPage=1;collectionLine='전체';$('sort').value='default';category='전체';drawCategories();render()}
+function openDetail(i,push=true){selected=i;const p=data[i];$('listing').hidden=true;$('detail').hidden=false;$('buybar').hidden=false;$('detailArt').innerHTML=art;$('detailCat').textContent=p.cat;$('detailTitle').textContent=p.name;$('detailDesc').textContent=p.goal+'에 관심 있는 분을 위한 이중제형 제품 콘셉트입니다.';$('detailGoal').textContent=p.goal;$('detailTime').textContent=p.time;$('barTitle').textContent=p.name;$('orderName').textContent=p.name;showTab(0);if(push)location.hash='product-'+i;window.scrollTo(0,0);$('detailTitle').tabIndex=-1;$('detailTitle').focus({preventScroll:true})}
+function route(){const m=location.hash.match(/^#product-(\d+)$/);if(m&&data[+m[1]])openDetail(+m[1],false);else{$('listing').hidden=false;$('detail').hidden=true;$('buybar').hidden=true}}
+function backToList(){history.pushState(null,'',location.pathname);route();$('products').querySelector('.card')?.focus()}
+function showTab(i){document.querySelectorAll('[role=tab]').forEach((b,n)=>b.setAttribute('aria-selected',i===n));$('panel').setAttribute('aria-labelledby','tab'+i);$('panel').innerHTML=['<h2>'+data[selected].name+'</h2><p>'+data[selected].goal+'이라는 관심사에서 출발한 제품입니다. 상단 정제와 하단 액상의 구성, 선택 이유를 함께 확인하는 경험을 제안합니다.</p>','<h2>한 보틀, 두 가지 제형</h2><table class="facts"><tr><th>상단</th><td>정제 보관 영역 · 원료 및 함량 미정</td></tr><tr><th>하단</th><td>액상 보관 영역 · 원료 및 용량 미정</td></tr><tr><th>구독 구성</th><td>30병 / 월 79,800원 (기획 예시)</td></tr></table>','<h2>선택 전에 확인해 주세요</h2><p>이 화면은 제품 정보 배치와 탐색 흐름을 보여주는 시안입니다. 실제 성분, 알레르기 정보, 섭취량과 주의사항은 제품 확정 후 확인할 수 있습니다.</p>'][i]}
+const questions=[['평소 끼니를 어떻게 챙기나요?',['규칙적으로 챙겨요','바빠서 자주 거르게 돼요','날마다 달라요']],['제품을 고를 때 무엇이 가장 중요한가요?',['간편한 일상 루틴','운동과 활동에 맞는 구성','식물성 원료 중심 구성']],['현재 영양제를 챙겨 먹고 있나요?',['먹고 있어요','먹지 않아요','아직 잘 모르겠어요']]];
+function quizResult(){return answers[1]===1?5:answers[1]===2?9:answers[0]===1?1:3}
+function startQuiz(){step=0;answers=[];$('quiz').showModal();drawQuiz()}
+function drawQuiz(){if(step===3){$('quizBody').innerHTML='<p class="eyebrow">YOUR DAILY FIT</p><h2 id="quizTitle">선택에서 시작하는 나의 조합</h2><p>생활 응답: '+questions[0][1][answers[0]]+'<br>선택 기준: '+questions[1][1][answers[1]]+'<br>현재 루틴: '+questions[2][1][answers[2]]+'</p><h3>'+data[quizResult()].name+'</h3><p>선택한 관심사에 따라 '+data[quizResult()].cat+' 컬렉션을 먼저 제안해요. 현재 복용 중인 성분과의 중복 여부는 실제 제품 정보가 확정된 후 확인해 주세요.</p><p class="muted">생활 응답을 이용한 시안용 분류이며 영양 상태를 판단하지 않습니다.</p><button class="primary" onclick="finishQuiz()">선택 이유와 구성 보기 →</button> <button onclick="step=0;answers=[];drawQuiz()">다시 하기</button>'}else{$('quizBody').innerHTML='<p class="eyebrow">FIND YOUR DAILY FIT</p><h2 id="quizTitle">내 생활에 맞는 조합 찾기</h2><div class="progress" aria-label="'+(step+1)+'/3 단계">'+[0,1,2].map(i=>'<span class="'+(i<=step?'done':'')+'"></span>').join('')+'</div><p>'+(step+1)+' / 3</p><h3>'+questions[step][0]+'</h3><div class="answers">'+questions[step][1].map((a,i)=>'<button onclick="answers[step]='+i+';step++;drawQuiz()">'+a+' <span style="float:right">○</span></button>').join('')+'</div>'+(step?'<button onclick="step--;drawQuiz()">← 이전 질문</button>':'')}$('quizTitle').tabIndex=-1;$('quizTitle').focus()}
+function finishQuiz(){$('quiz').close();openDetail(quizResult())}
+window.addEventListener('hashchange',route);window.addEventListener('popstate',route);drawCategories();render();route();if(new URLSearchParams(location.search).has('quiz'))startQuiz();
+</script><footer><b>A:FIT</b><p>All-in-one, Fit your day.<br>내 생활에 맞추는 이중제형 웰니스.</p>능력단위평가 · UI/UX 시안 | 제품 구성과 가격은 기획 단계의 예시입니다.</footer><dialog id="headerNotice" aria-labelledby="headerNoticeTitle"><button class="close" aria-label="닫기" onclick="this.closest('dialog').close()">×</button><h2 id="headerNoticeTitle"></h2><p id="headerNoticeText"></p><button onclick="this.closest('dialog').close()">확인</button></dialog>
+<script>
+function openCsModal(){document.getElementById('headerNoticeTitle').textContent='A:FIT 고객만족센터';document.getElementById('headerNoticeText').textContent='고객 상담 안내 화면입니다. 제출용 시안으로 실제 상담은 연결되지 않습니다.';document.getElementById('headerNotice').showModal()}
+function openCheckoutModal(plan){const d=document.getElementById('order');if(d){document.getElementById('orderName').textContent=plan;d.showModal()}else{document.getElementById('headerNoticeTitle').textContent='맞춤 구독 시작하기';document.getElementById('headerNoticeText').textContent='제품 컬렉션에서 구독 구성을 확인할 수 있어요.';document.getElementById('headerNotice').showModal()}}
+function handleGnbSearch(e){if(e.key!=='Enter')return;const q=e.target.value.trim();if(!q)return;const search=document.getElementById('search');if(search){backToList();search.value=q;render();search.focus()}else{location.href='서브AI수정안.html?search='+encodeURIComponent(q)}}
+const incomingSearch=new URLSearchParams(location.search).get('search');if(incomingSearch&&document.getElementById('search')){document.getElementById('search').value=incomingSearch;render()}
+</script></body></html>

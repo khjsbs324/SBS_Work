@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../image/logo.jpg">
+  <title>MONAMI | MON-04 인기상품</title>
+  <!-- UIUXB_2610의 HTML/CSS 수업 예제를 참고한 모나미 데스크톱 학습용 정답 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ============================================================
+  MON-04 시작: BEST PRODUCT
+  참고: 마켓컬리 brand-tabs의 active 표시 + 반복되는 product-card
+  협업: 카드 266px, 사이 간격 9px, 전체 목록 폭 3016px = 266×11 + 9×10
+  범위: 프리미엄 펜 목록을 보여줍니다. 카테고리 버튼은 disabled인 표시용입니다.
+  스크롤: overflow:auto의 브라우저 기본 가로 스크롤입니다. JS 드래그가 아닙니다.
+============================================================ -->
+<div id="MON-04" class="best-products">
+  <div class="best-heading">
+    <h2 class="section-title">BEST PRODUCT</h2>
+    <div class="title-line"></div>
+    <p class="section-desc">언제 어디서나 생활 속에 함께하는 모나미</p>
+  </div>
+  <div class="brand-tabs" aria-label="상품 카테고리 표시">
+    <button type="button" class="brand-tab active" disabled>프리미엄 펜</button>
+    <button type="button" class="brand-tab" disabled>펜·펜슬</button>
+    <button type="button" class="brand-tab" disabled>마카·컬러링</button>
+    <button type="button" class="brand-tab" disabled>노트·사무용품</button>
+  </div>
+  <div class="product-scroll" tabindex="0" role="region" aria-label="프리미엄 펜 상품 목록, 가로 스크롤">
+    <div class="product-list">
+      <!-- 상품 01: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-01.jpg" alt="프러스펜 3000 프라임"></div>
+        <div class="product-info"><p class="product-category">프리미엄 펜</p><p class="product-name">프러스펜 3000 프라임</p></div>
+      </div>
+      <!-- 상품 02: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-02.jpg" alt="153 리스펙트 리파인"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 리스펙트 리파인</p></div>
+      </div>
+      <!-- 상품 03: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-03.jpg" alt="153 아이디 만년필"></div>
+        <div class="product-info"><p class="product-category">만년필</p><p class="product-name">153 아이디 만년필</p></div>
+      </div>
+      <!-- 상품 04: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-04.jpg" alt="153 네오 만년필 EF"></div>
+        <div class="product-info"><p class="product-category">만년필</p><p class="product-name">153 네오 만년필 EF</p></div>
+      </div>
+      <!-- 상품 05: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-05.jpg" alt="153 블랙 &amp; 화이트"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 블랙 &amp; 화이트</p></div>
+      </div>
+      <!-- 상품 06: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-06.jpg" alt="153 골드"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 골드</p></div>
+      </div>
+      <!-- 상품 07: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-07.jpg" alt="153 아이디"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 아이디</p></div>
+      </div>
+      <!-- 상품 08: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-08.jpg" alt="60주년 프러스펜 3000 데스크펜 스페셜 에디션"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">60주년 프러스펜 3000 데스크펜 스페셜 에디션</p></div>
+      </div>
+      <!-- 상품 09: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-09.jpg" alt="153 아이디 샤프"></div>
+        <div class="product-info"><p class="product-category">고급샤프</p><p class="product-name">153 아이디 샤프</p></div>
+      </div>
+      <!-- 상품 10: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-10.jpg" alt="153 네오"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 네오</p></div>
+      </div>
+      <!-- 상품 11: 카드의 구조와 적용 CSS는 다른 상품과 동일합니다. -->
+      <div class="product-card">
+        <div class="product-image"><img src="../../image/best-11.jpg" alt="153 리스펙트"></div>
+        <div class="product-info"><p class="product-category">프리미엄펜</p><p class="product-name">153 리스펙트</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-guide">
+    <div class="scroll-rule"><img src="../../image/arrow-left.gif" alt=""></div>
+    <div class="scroll-label"><img src="../../image/scroll-cursor.gif" alt=""><p>SCROLL</p></div>
+    <div class="scroll-rule"><img src="../../image/arrow-right.gif" alt=""></div>
+  </div>
+</div>
+<!-- MON-04 끝 -->
+</body>
+</html>

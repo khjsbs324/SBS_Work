@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUNID (누니드) - All Hybrid 라인업 (카테고리)</title>
+  <style>
+    /* ==========================================================================
+       1. Base Setup (No JavaScript, HTML5/CSS3 Only, Grey Box & Text Layout)
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Full Web Page Wrapper */
+    .page-wrapper {
+      width: 100%;
+      max-width: 1160px;
+      background-color: #ffffff;
+      min-height: 100vh;
+      border-left: 1px solid #cbd5e1;
+      border-right: 1px solid #cbd5e1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Common Grey Box & Wireframe Components */
+    .box-placeholder {
+      background-color: #f1f5f9;
+      border: 1px dashed #94a3b8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #64748b;
+      font-size: 11px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .btn-wireframe {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 12px;
+      border: 1px solid #0f172a;
+      background-color: #ffffff;
+      color: #0f172a;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-wireframe.dark {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+
+    .section-container {
+      padding: 30px 30px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    /* ==========================================================================
+       2. Global Navigation Header (SEC-020-HDR - All Hybrid Active)
+       ========================================================================== */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: #ffffff;
+      border-bottom: 2px solid #0f172a;
+      padding: 16px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    .gnb-menu {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .gnb-menu li a {
+      color: #64748b;
+      text-decoration: none;
+    }
+
+    .gnb-menu li.active a {
+      color: #0f172a;
+      font-weight: 900;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 2px;
+    }
+
+    .header-util {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 12px;
+    }
+
+    /* ==========================================================================
+       3. Category Hero Header (SEC-020-01)
+       ========================================================================== */
+    .category-hero {
+      background-color: #f8fafc;
+      padding: 40px 30px;
+      border-bottom: 1px solid #cbd5e1;
+      text-align: center;
+    }
+
+    .category-sub {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #64748b;
+      margin-bottom: 6px;
+    }
+
+    .category-title {
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .category-desc {
+      font-size: 13px;
+      color: #475569;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       4. Texture Filter & Sort Toolbar (SEC-020-02 / 03)
+       ========================================================================== */
+    .category-toolbar-wrapper {
+      background-color: #ffffff;
+      padding: 20px 30px 10px 30px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .texture-nav-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed #cbd5e1;
+    }
+
+    .tab-btn {
+      padding: 7px 16px;
+      border: 1px solid #94a3b8;
+      background-color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .tab-btn.active {
+      background-color: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+    }
+
+    .filter-sort-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      font-size: 12px;
+    }
+
+    .product-counter {
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .filter-controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .select-wireframe {
+      padding: 5px 10px;
+      border: 1px solid #94a3b8;
+      background-color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    /* ==========================================================================
+       5. 16 Products Grid (SEC-020-04 - 4 Columns x 4 Rows)
+       ========================================================================== */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 24px 30px;
+    }
+
+    .product-card {
+      border: 1px solid #cbd5e1;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-media {
+      height: 140px;
+      border-bottom: 1px solid #cbd5e1;
+    }
+
+    .media-badge {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      background-color: #0f172a;
+      color: #ffffff;
+      font-size: 8px;
+      font-weight: 800;
+      padding: 1px 4px;
+    }
+
+    .card-body {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-category {
+      font-size: 9px;
+      font-weight: 800;
+      color: #64748b;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .card-specs {
+      font-size: 10px;
+      color: #64748b;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .card-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      margin-bottom: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed #e2e8f0;
+    }
+
+    .card-price {
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .sample-tag {
+      font-size: 9px;
+      border: 1px solid #cbd5e1;
+      padding: 1px 4px;
+      background-color: #f8fafc;
+      color: #475569;
+    }
+
+    .card-btn-group {
+      display: flex;
+      gap: 4px;
+    }
+
+    .card-btn-group .btn-wireframe {
+      flex: 1;
+      padding: 5px 2px;
+      font-size: 10px;
+    }
+
+    /* ==========================================================================
+       6. Pagination & Quick View Overlay Preview Section
+       ========================================================================== */
+    .pagination-bar {
+      padding: 20px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .page-btn {
+      padding: 6px 12px;
+      border: 1px solid #94a3b8;
+      background-color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .page-btn.active {
+      background-color: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+    }
+
+    .overlay-preview-section {
+      background-color: #f8fafc;
+      padding: 24px 30px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .preview-box {
+      border: 1px solid #0f172a;
+      background-color: #ffffff;
+      padding: 14px;
+      max-width: 600px;
+      margin: 12px auto 0 auto;
+    }
+
+    .preview-box-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #0f172a;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .quick-view-inner {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 12px;
+    }
+
+    .spec-table-mini {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+      margin: 6px 0;
+    }
+
+    .spec-table-mini th, .spec-table-mini td {
+      border: 1px solid #e2e8f0;
+      padding: 3px 5px;
+      text-align: left;
+    }
+
+    .spec-table-mini th {
+      background-color: #f1f5f9;
+      width: 35%;
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       7. Global Footer (SEC-020-07)
+       ========================================================================== */
+    .main-footer {
+      background-color: #f8fafc;
+      border-top: 2px solid #0f172a;
+      padding: 24px 30px;
+      font-size: 11px;
+      color: #64748b;
+      line-height: 1.6;
+      margin-top: auto;
+    }
+
+    .footer-brand {
+      font-weight: 900;
+      font-size: 12px;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- ============================================== -->
+    <!-- 1. Global Navigation Header (SEC-020-HDR) -->
+    <!-- ============================================== -->
+    <header class="main-header">
+      <div class="brand-logo">NUNID .</div>
+      <nav>
+        <ul class="gnb-menu">
+          <li class="active"><a href="#all-hybrid">All Hybrid</a></li>
+          <li><a href="#formula-proof">Formula & Proof</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+        </ul>
+      </nav>
+      <div class="header-util">
+        <span>주문조회</span>
+        <div class="btn-wireframe" style="padding: 3px 6px;">🛒 Cart (1)</div>
+      </div>
+    </header>
+
+    <!-- ============================================== -->
+    <!-- 2. Category Hero Header (SEC-020-01) -->
+    <!-- ============================================== -->
+    <section class="category-hero">
+      <div class="category-sub">ALL HYBRID FORMULATIONS</div>
+      <h1 class="category-title">제형으로 완성하는 1단계 미니멀 뷰티 라인업</h1>
+      <p class="category-desc">
+        스킨케어와 메이크업의 경계를 허문 16종의 독자적 하이브리드 제형 포뮬러.<br>
+        20,000원 ~ 50,000원대 정직한 가심비 가격으로 필요한 기능만 가볍게 선택하세요.
+      </p>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 3. Texture LNB Tabs & Sort/Filter Toolbar -->
+    <!-- ============================================== -->
+    <div class="category-toolbar-wrapper">
+      
+      <!-- Texture LNB Tabs (SEC-020-02) -->
+      <div class="texture-nav-tabs">
+        <div class="tab-btn active">전체보기 (All 16)</div>
+        <div class="tab-btn">Water-light (수분 밀착 5)</div>
+        <div class="tab-btn">Melting Balm (영양 코팅 5)</div>
+        <div class="tab-btn">Tinted Fluid (투명 톤업 5)</div>
+        <div class="tab-btn">Hybrid Setting (스페셜 1)</div>
+      </div>
+
+      <!-- Filter & Sort Bar (SEC-020-03) -->
+      <div class="filter-sort-bar">
+        <div class="product-counter">총 16개의 하이브리드 포뮬러</div>
+        <div class="filter-controls">
+          <select class="select-wireframe">
+            <option>추천순</option>
+            <option>신상품순</option>
+            <option>낮은가격순</option>
+            <option>높은가격순</option>
+            <option>보습지속시간순</option>
+            <option>밀착두께순</option>
+          </select>
+          <div class="btn-wireframe">필터: 가격대 / 스펙 ▼</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 16 Products Grid (SEC-020-04 - 4 Columns x 4 Rows) -->
+    <!-- ============================================== -->
+    <div class="product-grid">
+      
+      <!-- 01. Water-light 1 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 수분 밀착 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Water-light</div>
+          <div class="card-title">01. 하이드라 수분 밀착 플루이드</div>
+          <div class="card-specs">밀착 0.02mm · 24시간 보습 지속</div>
+          <div class="card-price-row">
+            <div class="card-price">28,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02. Water-light 2 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 쿨링 진정 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Water-light</div>
+          <div class="card-title">02. 쿨링 카밍 수분 플루이드</div>
+          <div class="card-specs">피부온도 -3.5℃ 강하 · 통기 99.1%</div>
+          <div class="card-price-row">
+            <div class="card-price">26,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03. Water-light 3 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 오일프리 보습 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Water-light</div>
+          <div class="card-title">03. 딥 하이드라 오일프리 플루이드</div>
+          <div class="card-specs">속건조 케어 · 36시간 수분 락킹</div>
+          <div class="card-price-row">
+            <div class="card-price">29,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04. Water-light 4 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 비타 광채 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Water-light</div>
+          <div class="card-title">04. 비타 글로우 세럼 플루이드</div>
+          <div class="card-specs">순수 비타민C 10% · 투명 결 개선</div>
+          <div class="card-price-row">
+            <div class="card-price">32,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05. Water-light 5 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 시카 베리어 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Water-light</div>
+          <div class="card-title">05. 시카 수딩 베리어 플루이드</div>
+          <div class="card-specs">병풀 추출물 85% · 진정 지수 96%</div>
+          <div class="card-price-row">
+            <div class="card-price">27,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06. Melting Balm 1 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 영양 코팅 밤 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Melting Balm</div>
+          <div class="card-title">06. 베리어 멜팅 리페어 밤</div>
+          <div class="card-specs">5중 세라마이드 · 모니터 앞 당김 방지</div>
+          <div class="card-price-row">
+            <div class="card-price">34,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07. Melting Balm 2 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 밤샘 리셋 밤 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Melting Balm</div>
+          <div class="card-title">07. 오버나이트 멜팅 슬리핑 밤</div>
+          <div class="card-specs">밤샘 과제 후 리셋 · 영양 밀착 코팅</div>
+          <div class="card-price-row">
+            <div class="card-price">36,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 08. Melting Balm 3 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 생기 보습 밤 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Melting Balm</div>
+          <div class="card-title">08. 립 앤 치크 멜팅 모이스처 밤</div>
+          <div class="card-specs">자연스러운 생기 · 식물성 오일 코팅</div>
+          <div class="card-price-row">
+            <div class="card-price">22,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 09. Melting Balm 4 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 펩타이드 밤 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Melting Balm</div>
+          <div class="card-title">09. 세라 펩타이드 멜팅 밤</div>
+          <div class="card-specs">탄력 강화 코팅 · 0.03mm 초밀착</div>
+          <div class="card-price-row">
+            <div class="card-price">38,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Melting Balm 5 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 원스텝 클렌징 밤 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Melting Balm</div>
+          <div class="card-title">10. 소프트 버터 멜팅 원스텝 밤</div>
+          <div class="card-specs">원스텝 클렌징 · 세안 후 당김 0%</div>
+          <div class="card-price-row">
+            <div class="card-price">25,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. Tinted Fluid 1 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 틴티드 01 라이트 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Tinted Fluid</div>
+          <div class="card-title">11. 누드 스킨 틴티드 01 라이트</div>
+          <div class="card-specs">투명 톤업 보정 · 통기성 지수 98.4%</div>
+          <div class="card-price-row">
+            <div class="card-price">32,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. Tinted Fluid 2 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 틴티드 02 내추럴 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Tinted Fluid</div>
+          <div class="card-title">12. 누드 스킨 틴티드 02 내추럴</div>
+          <div class="card-specs">자연스러운 균일 톤 · 답답함 제로</div>
+          <div class="card-price-row">
+            <div class="card-price">32,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13. Tinted Fluid 3 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 모공 블러 틴티드 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Tinted Fluid</div>
+          <div class="card-title">13. 포어 블러링 틴티드 세럼</div>
+          <div class="card-specs">요철 커버 · 피지 컨트롤 8시간</div>
+          <div class="card-price-row">
+            <div class="card-price">31,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14. Tinted Fluid 4 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 자외선차단 틴티드 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Tinted Fluid</div>
+          <div class="card-title">14. 글로우 선 틴티드 프로텍터</div>
+          <div class="card-specs">SPF50+ PA++++ · 백탁 없는 유리알 결</div>
+          <div class="card-price-row">
+            <div class="card-price">33,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15. Tinted Fluid 5 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 톤 리셋 틴티드 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Tinted Fluid</div>
+          <div class="card-title">15. 브라이트 톤 리셋 플루이드</div>
+          <div class="card-specs">다크닝 방지 12시간 · 톤 균일도 94%</div>
+          <div class="card-price-row">
+            <div class="card-price">35,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16. Hybrid Setting 1 -->
+      <div class="product-card">
+        <div class="box-placeholder card-media">
+          <span class="media-badge">1MB GIF</span>
+          [ 픽싱 미스트 시연 ]
+        </div>
+        <div class="card-body">
+          <div class="card-category">Hybrid Setting</div>
+          <div class="card-title">16. 에어리 피니시 픽싱 미스트</div>
+          <div class="card-specs">초미세 안개 분사 · 밀착 픽싱 24시간</div>
+          <div class="card-price-row">
+            <div class="card-price">24,000원</div>
+            <span class="sample-tag">샘플동봉</span>
+          </div>
+          <div class="card-btn-group">
+            <div class="btn-wireframe">Quick View</div>
+            <div class="btn-wireframe dark">담기</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. Pagination Bar -->
+    <!-- ============================================== -->
+    <div class="pagination-bar">
+      <div class="page-btn active">1</div>
+      <div class="page-btn">2</div>
+      <div class="page-btn">다음 ></div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. Quick View Overlay Modal UI Preview (SCR-011) -->
+    <!-- ============================================== -->
+    <section class="overlay-preview-section">
+      <div style="text-align: center;">
+        <div style="font-size: 13px; font-weight: 800;">⚡ 카테고리 직결 퀵뷰 (Quick View 오버레이 미리보기)</div>
+        <div style="font-size: 11px; color: #64748b; margin-top: 2px;">페이지 이탈 없이 카테고리 화면 위에서 1초 만에 스펙을 확인하고 즉시 결제</div>
+      </div>
+
+      <div class="preview-box">
+        <div class="preview-box-header">
+          <span>★ Quick View 모달 (SCR-011)</span>
+          <span>[ X 닫기 ]</span>
+        </div>
+        <div class="quick-view-inner">
+          <div class="box-placeholder" style="height: 130px;">
+            [ 1MB GIF 숏폼 시연 ]
+          </div>
+          <div>
+            <div style="font-size: 10px; font-weight: 800; color: #64748b;">Water-light Formula</div>
+            <div style="font-size: 13px; font-weight: 800;">하이드라 수분 밀착 플루이드</div>
+            <div style="font-size: 14px; font-weight: 900; margin: 2px 0;">28,000원</div>
+            
+            <table class="spec-table-mini">
+              <tr><th>밀착두께</th><td>0.02 mm</td></tr>
+              <tr><th>보습지속</th><td>24시간</td></tr>
+              <tr><th>통기성</th><td>98.4%</td></tr>
+              <tr><th>전성분</th><td>EWG 그린등급</td></tr>
+            </table>
+
+            <div style="display: flex; gap: 4px; margin-top: 6px;">
+              <div class="btn-wireframe" style="flex: 1; padding: 4px 2px; font-size: 10px;">장바구니</div>
+              <div class="btn-wireframe dark" style="flex: 1; padding: 4px 2px; font-size: 10px;">원클릭 결제</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 7. Global Footer (SEC-020-07) -->
+    <!-- ============================================== -->
+    <footer class="main-footer">
+      <div class="footer-brand">NUNID (누니드) D2C 커머스</div>
+      <div>대표: 한지민 · 사업자등록번호: 000-00-00000 · 통신판매업신고: 2026-서울강남-0000</div>
+      <div>고객센터: 1588-0000 (평일 10:00 ~ 18:00) · 100% 무료 반품 안심 약속 센터</div>
+      <div class="footer-links">
+        <span>이용약관</span>
+        <span>개인정보처리방침</span>
+        <span>사업자정보확인</span>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

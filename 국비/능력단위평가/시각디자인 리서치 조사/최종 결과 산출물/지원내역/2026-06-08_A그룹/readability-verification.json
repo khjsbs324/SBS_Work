@@ -1,0 +1,36 @@
+{
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1035",
+  "heading": {
+    "font": "\"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+    "size": "32px",
+    "marginTop": "12px"
+  },
+  "wrapper": {
+    "maxWidth": "980px",
+    "width": 980,
+    "font": "\"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+    "lineHeight": "33.15px"
+  },
+  "tableCell": {
+    "padding": "14px 16px",
+    "font": "16px",
+    "background": "rgb(255, 255, 255)"
+  },
+  "navigation": 10,
+  "date": "작성자\t김혜지\t작성일\t2026-06-08",
+  "images": [
+    {
+      "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792722999_535b1b6f.png",
+      "loaded": true
+    },
+    {
+      "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792723000_b2fa8c81.png",
+      "loaded": true
+    }
+  ],
+  "attachmentHref": "./download.php?Pcode=300002&file=1792723051_06f43e30.zip",
+  "overflow": false,
+  "contentMatches": true,
+  "originalParagraphsRetained": true,
+  "validAnchors": true
+}

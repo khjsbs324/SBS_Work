@@ -1,0 +1,211 @@
+/* ============================================================
+   공통 CSS — 모든 섹션에서 사용하는 수업 코드
+   참고: UIUXB_2610 / 1코딩/마켓컬리/와이어프레임/style.css
+   원본의 초기화, .con, Flex, 이미지 규칙을 모나미 화면에 맞게 적용했습니다.
+   협업: 이 부분을 바꾸면 모든 섹션에 영향이 있습니다.
+   통합: 초기화와 @font-face는 한 번만 둡니다.
+   글꼴: 원본에서 사용한 Pretendard의 400/500/700을 로컬 파일로 연결합니다.
+   ============================================================ */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../font/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../font/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../font/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* .con은 전체 폭이 아니라 내부 콘텐츠 폭입니다.
+   원본 .con의 1050px을 모나미 데스크톱 기준 1400px로 조정했습니다. */
+.con {
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* img의 기본 아래쪽 글자 간격을 없애고 블록으로 배치합니다. */
+img {
+  display: block;
+}
+
+/* 원본 products-title / products-desc를 재사용한 제목 패턴입니다. */
+.section-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #111;
+}
+
+.section-desc {
+  font-size: 13px;
+  color: #777;
+}
+
+.title-line {
+  width: 26px;
+  height: 3px;
+  background-color: #c81939;
+}
+
+
+
+/* MON-04 시작 — 카드 구조는 원본과 같고 이미지·상품 정보·배치 값이 다릅니다. */
+.best-products {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #eee;
+}
+
+.best-heading {
+  text-align: center;
+}
+
+.best-heading .title-line {
+  margin: 14px auto 12px;
+}
+
+.brand-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.brand-tab {
+  width: 157px;
+  height: 36px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  color: #999;
+  font-size: 13px;
+}
+
+.brand-tab.active {
+  border: 2px solid #c81939;
+  color: #c81939;
+}
+
+.product-scroll {
+  overflow: auto;
+}
+
+.product-list {
+  width: 3016px;
+  display: flex;
+  gap: 9px;
+}
+
+.product-card {
+  width: 266px;
+  height: 505px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.product-image {
+  height: 390px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 30px 28px 18px;
+}
+
+.product-category {
+  font-size: 12px;
+  color: #aaa;
+  padding-bottom: 7px;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #111;
+  font-weight: 700;
+}
+
+.scroll-guide {
+  width: 850px;
+  margin: 55px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.scroll-rule {
+  width: 340px;
+  height: 1px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-label {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scroll-label img {
+  width: 21px;
+  height: 27px;
+}
+
+.scroll-label p {
+  font-size: 10px;
+  color: #888;
+}
+
+/* MON-04 끝 */

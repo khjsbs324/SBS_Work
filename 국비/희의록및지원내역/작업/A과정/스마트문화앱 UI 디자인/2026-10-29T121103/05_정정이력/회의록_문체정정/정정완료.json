@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "unit": "스마트문화앱 UI 디자인",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=14",
+  "completed_at": "2026-10-29T03:19:40.801181+00:00",
+  "exact_readback": true,
+  "previous_prefix_preserved": true,
+  "date_preserved": true,
+  "reassessment_preserved": true,
+  "visual_reviewed": true,
+  "hashes": {
+    "최종수정안.json": "b82642d054331105570d5c43dce653ef68825e7caf7517d865fb398f0d4e9c66",
+    "최종저장확인.json": "ee588c192f85fc8d2e90ca4efa2202dc427aeee986cc42cc043346432a398090",
+    "회의록_수정전.json": "5a8845d698ff777de19796da98a7ce592b50b5033ad15cffa3721a06876119ab",
+    "수정후화면.png": "33883ff0ae21a8b39a0709b1a04265dc8d0194ef4cce279c94deeb62f20b09b9"
+  }
+}

@@ -1,0 +1,204 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - generic [ref=f2e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f2e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f2e8]:
+    - generic [ref=f2e9]:
+      - generic [ref=f2e10]:
+        - generic [ref=f2e11]: 김혜지
+        - generic [ref=f2e12]:
+          - button "정보수정" [ref=f2e13] [cursor=pointer]
+          - button "비번변경" [ref=f2e14] [cursor=pointer]
+          - button "PIN변경" [ref=f2e15] [cursor=pointer]
+      - list [ref=f2e16]:
+        - listitem [ref=f2e17] [cursor=pointer]:
+          - generic [ref=f2e18]:
+            - generic [aria-hidden] [ref=f2e19]: 
+            - text: 훈련과정
+        - listitem [ref=f2e20] [cursor=pointer]:
+          - generic [ref=f2e21]:
+            - generic [aria-hidden] [ref=f2e22]: 
+            - text: 공지사항
+      - list [ref=f2e23]:
+        - listitem [ref=f2e24] [cursor=pointer]:
+          - generic [ref=f2e25]:
+            - paragraph [ref=f2e26]:
+              - generic [aria-hidden] [ref=f2e27]: 
+            - paragraph [ref=f2e28]: 고객센터
+        - listitem [ref=f2e29] [cursor=pointer]:
+          - generic [ref=f2e30]:
+            - paragraph [ref=f2e31]:
+              - generic [aria-hidden] [ref=f2e32]: 
+            - paragraph [ref=f2e33]: 카톡문의
+    - generic [ref=f2e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f2e35]:
+        - caption [ref=f2e36]:
+          - generic [ref=f2e37]:
+            - generic [ref=f2e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f2e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f2e48]:
+          - row [ref=f2e49]:
+            - cell "개강일" [ref=f2e50]
+            - cell "2026-05-20" [ref=f2e51]
+            - cell "종강일" [ref=f2e52]
+            - cell "2026-12-04" [ref=f2e53]
+            - cell "강사" [ref=f2e54]
+            - cell "김가경, 김혜지" [ref=f2e55]
+          - row [ref=f2e56]:
+            - cell "실시인원" [ref=f2e57]
+            - cell "11" [ref=f2e58]
+            - cell "수강인원" [ref=f2e59]
+            - cell "9" [ref=f2e60]
+            - cell "수강포기인원" [ref=f2e61]
+            - cell "2" [ref=f2e62]
+      - list [ref=f2e63]:
+        - listitem [ref=f2e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f2e65]
+        - listitem [ref=f2e66] [cursor=pointer]:
+          - generic "시간표" [ref=f2e67]
+        - listitem [ref=f2e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f2e69]
+        - listitem [ref=f2e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f2e71]
+        - listitem [ref=f2e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f2e73]
+        - listitem [ref=f2e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f2e75]
+        - listitem [ref=f2e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f2e77]
+        - listitem [ref=f2e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f2e79]
+        - listitem [ref=f2e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f2e81]
+        - listitem [ref=f2e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f2e83]
+        - listitem [ref=f2e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f2e85]
+        - listitem [ref=f2e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f2e87]
+        - listitem [ref=f2e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f2e89]
+        - listitem [ref=f2e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f2e91]
+        - listitem [ref=f2e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f2e93]
+        - listitem [ref=f2e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f2e95]
+        - listitem [ref=f2e96] [cursor=pointer]:
+          - generic "과제" [ref=f2e97]
+        - listitem [ref=f2e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f2e99]
+        - listitem [ref=f2e100] [cursor=pointer]:
+          - generic [ref=f2e101]: 게시판생성
+        - listitem [ref=f2e102] [cursor=pointer]:
+          - generic [ref=f2e103]: 게시판순서변경
+      - list [ref=f2e104]:
+        - listitem [ref=f2e105]:
+          - table [ref=f2e106]:
+            - caption [ref=f2e107]:
+              - list [ref=f2e110]:
+                - listitem [ref=f2e111] [cursor=pointer]: 평가내역
+                - listitem [ref=f2e112] [cursor=pointer]: 평가결과 분석회의록
+            - rowgroup [ref=f2e118]:
+              - row [ref=f2e119]:
+                - cell "과정명" [ref=f2e120]
+                - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차" [ref=f2e121]
+              - row [ref=f2e122]:
+                - cell "교과목" [ref=f2e123]
+                - cell "(전공)퍼블리싱 구현 및 수정보완" [ref=f2e124]
+              - row [ref=f2e125]:
+                - cell "능력단위" [ref=f2e126]
+                - cell "수정 보완" [ref=f2e127]:
+                  - combobox [ref=f2e128]:
+                    - option "선택하세요"
+                    - option "구현"
+                    - option "구현 응용"
+                    - option "시각디자인 리서치 조사"
+                    - option "시각디자인 리서치 분석"
+                    - option "시안 디자인 개발 심화"
+                    - option "디자인 구성요소 설계"
+                    - option "수정 보완" [selected]
+                    - option "디자인 구성요소 제작"
+                    - option "디지털디자인 사후관리"
+                    - option "서비스ㆍ경험디자인 관찰조사"
+                    - option "서비스ㆍ경험디자인 시나리오 개발"
+                    - option "프로토타입 기초데이터 수집 및 스케치"
+                    - option "스마트문화앱 UI 디자인"
+                    - option "프로토타입 제작 및 사용성 테스트"
+                    - option "(비NCS 실기)AI 기획과 발상"
+                    - option "(비NCS 실기)취업포트폴리오 제작"
+              - row [ref=f2e129]:
+                - cell "개강일" [ref=f2e130]
+                - cell "2026-07-06" [ref=f2e131]
+                - cell "종강일" [ref=f2e132]
+                - cell "2026-08-18" [ref=f2e133]
+              - row [ref=f2e134]:
+                - cell "평가도구" [ref=f2e135]
+                - cell "피평가자체크리스트, 평가자체크리스트" [ref=f2e136]
+        - listitem [ref=f2e137]:
+          - table "평가정보 돌아가기" [ref=f2e138]:
+            - caption [ref=f2e139]:
+              - generic [ref=f2e140]:
+                - generic [ref=f2e141]: 평가정보
+                - link "돌아가기" [ref=f2e143] [cursor=pointer]:
+                  - /url: ../index.php?Pcode=300002
+            - rowgroup [ref=f2e151]:
+              - row [ref=f2e152]:
+                - columnheader "구분" [ref=f2e153]
+                - columnheader "본평가" [ref=f2e154]
+                - columnheader "결석자평가" [ref=f2e155]
+                - columnheader "재평가" [ref=f2e156]
+                - columnheader "사전평가" [ref=f2e157]
+                - columnheader "능력단위" [ref=f2e158]
+            - rowgroup [ref=f2e159]:
+              - row [ref=f2e160]:
+                - cell [ref=f2e161]:
+                  - paragraph [ref=f2e162]: 평가날짜
+                  - paragraph [ref=f2e163]: 평가시간
+                  - paragraph [ref=f2e164]: 커트라인
+                  - paragraph [ref=f2e165]: 패널티
+                - cell [ref=f2e166]:
+                  - link [ref=f2e167] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=f2e168]: 2026-08-18
+                    - paragraph [ref=f2e169]: 14:00~16:00
+                    - paragraph [ref=f2e170]: 60점
+                    - paragraph [ref=f2e171]: 0점
+                - cell [ref=f2e172]:
+                  - generic [ref=f2e173]:
+                    - paragraph [ref=f2e174]: 평가문제미등록
+                    - paragraph [ref=f2e175]: (0/100)
+                - cell [ref=f2e176]:
+                  - generic [ref=f2e177]:
+                    - paragraph [ref=f2e178]: 평가문제미등록
+                    - paragraph [ref=f2e179]: (0/100)
+                - cell "81.82" [ref=f2e180]
+                - cell "79" [ref=f2e181]
+              - row [ref=f2e182]:
+                - cell "평가인원" [ref=f2e183]
+                - cell "10" [ref=f2e184]
+                - cell "0" [ref=f2e185]
+                - cell "0" [ref=f2e186]
+      - table "평가결과분석회의록 삭제하기 회의록등록" [ref=f2e188]:
+        - caption [ref=f2e189]:
+          - generic [ref=f2e190]:
+            - generic [ref=f2e191]: 평가결과분석회의록
+            - generic [ref=f2e193]:
+              - button "삭제하기" [ref=f2e194] [cursor=pointer]
+              - link "회의록등록" [ref=f2e195] [cursor=pointer]:
+                - /url: ./write.php?Pcode=300002&Lcode=8
+        - rowgroup [ref=f2e201]:
+          - row [ref=f2e202]:
+            - cell "회의제목" [ref=f2e203]
+            - cell "평가결과 분석 회의" [ref=f2e204]
+            - cell "회의일시" [ref=f2e205]
+            - cell [ref=f2e206]
+          - row [ref=f2e207]:
+            - cell "평가결과 분석내용" [ref=f2e208]
+            - cell [ref=f2e209]
+          - row [ref=f2e210]:
+            - cell "개선사항" [ref=f2e211]
+            - cell [ref=f2e212]

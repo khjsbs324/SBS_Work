@@ -1,0 +1,315 @@
+{
+  "request": "위 계획대로",
+  "course": "A과정",
+  "Pcode": "300002",
+  "run_id": "2026-10-29T121103",
+  "status": "complete",
+  "scope": "13개 교수법 추가 문단 및 신규 6개 분석란 문체 정정",
+  "saved": [
+    {
+      "unit": "시각디자인 리서치 조사",
+      "lcode": "4",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=4",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": true,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:14:58.622Z"
+    },
+    {
+      "unit": "구현",
+      "lcode": "2",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=2",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": true,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:15:00.826Z"
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "lcode": "5",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=5",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": true,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:15:03.185Z"
+    },
+    {
+      "unit": "구현 응용",
+      "lcode": "3",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=3",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": true,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:15:05.539Z"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "lcode": "6",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=6",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": true,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:15:21.039Z"
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "lcode": "7",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": true,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:15:23.542Z"
+    },
+    {
+      "unit": "수정 보완",
+      "lcode": "8",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=8",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": true,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:15:25.856Z"
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "lcode": "9",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=9",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": null,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:18:14.580Z"
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "lcode": "10",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=10",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": null,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:18:17.665Z"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "lcode": "11",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=11",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": null,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:18:19.871Z"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "lcode": "12",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=12",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": null,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:18:22.000Z"
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "lcode": "14",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=14",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": null,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:18:24.141Z"
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "lcode": "13",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=13",
+      "checks": {
+        "exact_readback": true,
+        "date_preserved": true,
+        "original_prefix_preserved": true,
+        "original_analysis_preserved": null,
+        "codes_removed": true,
+        "footer_removed": true,
+        "reassessment_preserved": true
+      },
+      "checked_at": "2026-10-29T03:18:26.218Z"
+    }
+  ],
+  "visual_review": {
+    "count": 13,
+    "result": "최종 실제 화면에서 문단·한글 표시 및 정정 내용 판독 완료"
+  },
+  "tests": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "e0ca64",
+        "wall_time_seconds": 1.7946015,
+        "exit_code": 1,
+        "original_token_count": 95,
+        "output": "{\r\n  \"ok\": false,\r\n  \"summary\": {\r\n    \"instruction_files\": 37,\r\n    \"skills\": [\r\n      \"ncs-exam-production\",\r\n      \"ncs-learning-support\",\r\n      \"ncs-timetable\",\r\n      \"student-interview\"\r\n    ],\r\n    \"custom_agents\": 0,\r\n    \"hooks\": 0\r\n  },\r\n  \"errors\": [\r\n    \"능력단위평가\\\\수정 보완\\\\CLAUDE.md: Missing link/import: 수정 보완\"\r\n  ],\r\n  \"warnings\": []\r\n}\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "2b594d",
+        "wall_time_seconds": 1.4787548,
+        "exit_code": 0,
+        "original_token_count": 30,
+        "output": "..............\r\n----------------------------------------------------------------------\r\nRan 14 tests in 0.223s\r\n\r\nOK\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "4608dd",
+        "wall_time_seconds": 9.4355698,
+        "exit_code": 0,
+        "original_token_count": 32,
+        "output": "........................\r\n----------------------------------------------------------------------\r\nRan 24 tests in 8.153s\r\n\r\nOK\r\n"
+      }
+    }
+  ],
+  "preexisting_error": "능력단위평가\\수정 보완\\CLAUDE.md: Missing link/import: 수정 보완",
+  "source_evidence_run": "2026-10-29T113907",
+  "historical_support_state_modified": false,
+  "notes": [
+    "이번 정정은 교수법 문체 정정으로, 이전 원문과 재평가 기록을 보존함.",
+    "사실 확인 자료와 적용 시점의 한계는 이전 근거자료 및 정정 전 백업에 보존함."
+  ],
+  "completion_records": [
+    {
+      "unit": "시각디자인 리서치 조사",
+      "ordinal": 1,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\시각디자인 리서치 조사\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "구현",
+      "ordinal": 2,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\구현\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "ordinal": 3,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\시각디자인 리서치 분석\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "구현 응용",
+      "ordinal": 4,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\구현 응용\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "ordinal": 5,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\시안 디자인 개발 심화\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "ordinal": 6,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\디자인 구성요소 설계\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "수정 보완",
+      "ordinal": 7,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\수정 보완\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "ordinal": 8,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\디자인 구성요소 제작\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "ordinal": 9,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\디지털디자인 사후관리\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "ordinal": 10,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\서비스ㆍ경험디자인 관찰조사\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "ordinal": 11,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\서비스ㆍ경험디자인 시나리오 개발\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "ordinal": 12,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\스마트문화앱 UI 디자인\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "ordinal": 13,
+      "completion": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\프로토타입 기초데이터 수집 및 스케치\\2026-10-29T121103\\05_정정이력\\회의록_문체정정\\정정완료.json"
+    }
+  ]
+}

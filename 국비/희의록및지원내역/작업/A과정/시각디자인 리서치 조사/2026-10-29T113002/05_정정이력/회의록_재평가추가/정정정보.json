@@ -1,0 +1,16 @@
+{
+  "scope": "meeting_improvement_append_only",
+  "status": "prepared",
+  "opened_at": "2026-10-29T02:31:36.165Z",
+  "unit": "시각디자인 리서치 조사",
+  "lcode": "4",
+  "Pcode": "300002",
+  "course_id": "A",
+  "request": "ㅇㅇ 우선 재평가 내용부터 추가하는 방향으로 수정해",
+  "constraint": "기존 내용은 수정하지 말고 추가만 하는거야",
+  "cause_basis": {
+    "type": "user_confirmation",
+    "text": "능력단위평가 볼때 재평가 인원이 있는데 점수 미달이 아닌 본평가 미제출로 인해 재평가 진행했다는 내용들이 들어가있어야 되거든"
+  },
+  "method": "기존 날짜·분석내용·개선사항 원문을 백업한 후 개선사항 끝에 추가. 기존 revise 명령은 지원 게시글 그룹·ZIP 전용이므로 회의록 전용 정정 증빙을 보존하며 지원자료·진행상태를 변경하지 않음."
+}

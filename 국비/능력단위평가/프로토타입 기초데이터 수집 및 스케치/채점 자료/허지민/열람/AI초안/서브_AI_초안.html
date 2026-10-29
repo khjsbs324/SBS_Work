@@ -1,0 +1,2327 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>A:FIT (에이핏)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* =========================================================
+       A:FIT 100% Monochromatic Wireframe Design System
+       Primary: #111827 (Wireframe Dark Charcoal Black)
+       Accent: #6B7280 (Wireframe Mid Gray)
+       Background: #FFFFFF (Pure White Canvas)
+       Card/Surface: #FFFFFF (Pure White)
+       Border: #E5E7EB (Wireframe Outline)
+       ========================================================= */
+    :root {
+      --primary: #111827;             /* Wireframe Dark Charcoal Black */
+      --primary-rgb: 17, 24, 39;
+      --primary-light: #374151;
+      --accent: #6B7280;              /* Wireframe Mid Gray */
+      --accent-dark: #4B5563;
+      --accent-deep: #111827;
+      --accent-soft: rgba(107, 114, 128, 0.10);
+      --bg: #FFFFFF;                  /* Main Canvas: Pure White Wireframe */
+      --bg-subtle: #F8F9FA;           /* Sub Canvas: Light Wireframe Gray */
+      --card: #FFFFFF;                /* Card Surface: Pure White */
+      --card-muted: #F3F4F6;
+      --border: #E5E7EB;              /* Wireframe Border Line */
+      --border-strong: #D1D5DB;
+      --border-accent: #9CA3AF;
+      --text: #111827;
+      --text-body: #374151;
+      --text-muted: #6B7280;
+      --text-light: #9CA3AF;
+      --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 1px #E5E7EB;
+      --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.10), 0 0 0 1px #9CA3AF;
+      --shadow-glow: none;
+      --radius-xl: 20px;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --radius-xs: 4px;
+      --transition: all 0.25s ease;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      background: var(--bg);
+      color: var(--text-body);
+      font-family: 'Plus Jakarta Sans', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      word-break: keep-all;
+      overflow-x: hidden;
+    }
+
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+
+    /* Wide Desktop Container (1360px Standard) */
+    .wrap-wide {
+      width: min(1360px, calc(100% - 64px));
+      margin: auto;
+    }
+
+    /* Floating Wireframe Header (슬림 60px & 화이트 와이어프레임 GNB) */
+    .top-full {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E5E7EB;
+      width: 100%;
+      padding: 0 40px;
+      transition: var(--transition);
+    }
+    nav.nav-wide {
+      min-height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .brand-group {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      background: none;
+      padding: 0;
+      box-shadow: none;
+      transition: var(--transition);
+    }
+    .brand-group strong {
+      font-size: 1.95rem;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: #111827;
+      line-height: 1;
+      transition: var(--transition);
+    }
+
+    /* 우측 내비게이션 + CTA 버튼 그룹 */
+    .header-right-nav-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .links-wide {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .links-wide a {
+      text-decoration: none;
+      color: #4B5563;
+      font-weight: 600;
+      font-size: 0.82rem;
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+    }
+    .links-wide a:hover {
+      color: #111827;
+    }
+    .links-wide a.active {
+      color: #111827;
+      font-weight: 700;
+    }
+    .links-wide a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #111827;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+    .links-wide a:hover::after,
+    .links-wide a.active::after {
+      width: 100%;
+    }
+
+    /* GNB 우측 액션 그룹 (검색, 상담사, 구독버튼 간격 15px) */
+    .gnb-actions-wrap {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* GNB 인라인 검색창 및 상담사 아이콘 */
+    .gnb-search-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 2px;
+      border-bottom: 1.5px solid #D1D5DB;
+      transition: border-color 0.3s ease;
+    }
+    .gnb-search-wrap:focus-within {
+      border-bottom-color: #111827;
+    }
+    .gnb-search-wrap .gnb-icon {
+      color: #111827;
+      opacity: 0.75;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .gnb-search-wrap:hover .gnb-icon {
+      opacity: 1;
+      color: #111827;
+    }
+    .gnb-search-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #111827;
+      font-size: 0.82rem;
+      font-family: inherit;
+      width: 90px;
+      transition: width 0.3s ease;
+    }
+    .gnb-search-input:focus {
+      width: 125px;
+    }
+    .gnb-consult-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      color: #111827;
+      opacity: 0.80;
+      cursor: pointer;
+      padding: 4px;
+      transition: var(--transition);
+    }
+    .gnb-consult-btn:hover {
+      opacity: 1;
+      color: #111827;
+      transform: translateY(-1px);
+    }
+
+    /* Buttons & Badges */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-gnb {
+      padding: 9px 18px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      background: #111827 !important;
+      color: #FFFFFF !important;
+      border: 1px solid #111827 !important;
+    }
+    .btn-gnb:hover {
+      background: #374151 !important;
+      color: #FFFFFF !important;
+      border-color: #374151 !important;
+      transform: translateY(-1px);
+    }
+    .btn.primary {
+      background: #111827;
+      color: #FFFFFF;
+      border: 1px solid #111827;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition);
+    }
+    .btn.primary:hover {
+      background: #374151;
+      color: #FFFFFF;
+      border-color: #374151;
+      transform: translateY(-2px);
+    }
+    .btn.secondary {
+      background: #FFFFFF;
+      color: #111827;
+      border: 1.5px solid #D1D5DB;
+      box-shadow: var(--shadow-subtle);
+    }
+    .btn.secondary:hover {
+      background: #F3F4F6;
+      border-color: #111827;
+      color: #111827;
+      transform: translateY(-2px);
+    }
+    .btn.secondary:hover {
+      background: var(--bg-subtle);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: #F3F4F6;
+      border: 1px solid #E5E7EB;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #111827;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #111827;
+    }
+
+    /* Section Utilities */
+    section {
+      padding: 80px 0;
+      position: relative;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+    }
+    .section-header h1 {
+      font-size: clamp(2.0rem, 2.8vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      color: var(--primary);
+      margin-top: 14px;
+      line-height: 1.28;
+    }
+    .section-header p {
+      font-size: 0.90rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      line-height: 1.65;
+    }
+
+    /* Multi-dimensional Filter Navigation Bar (CAT-100) */
+    .filter-dimension-nav {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      box-shadow: var(--shadow-card);
+      display: grid;
+      gap: 18px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .filter-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      width: 100%;
+      min-width: 0;
+    }
+    .filter-label {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #4B5563;
+      width: 84px;
+      flex-shrink: 0;
+      padding-top: 8px;
+      letter-spacing: -0.01em;
+    }
+    .filter-row .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      justify-content: flex-start;
+      flex: 1;
+      min-width: 0;
+    }
+    .filter-row .filter-pills button {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--text-body);
+      transition: var(--transition);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .filter-row .filter-pills button:hover {
+      border-color: #111827;
+      color: #111827;
+    }
+    .filter-row .filter-pills button.active {
+      background: #111827;
+      color: #FFFFFF;
+      border-color: #111827;
+      box-shadow: none;
+    }
+    .empty-state-card {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      background: #F9FAFB;
+      border: 1.5px dashed #D1D5DB;
+      border-radius: var(--radius);
+      margin: 10px 0 30px 0;
+    }
+
+    /* 15 Product Cards Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .prd-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .prd-card:hover {
+      transform: translateY(-6px);
+      border-color: #111827;
+      box-shadow: var(--shadow-hover);
+    }
+    .prd-header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .prd-cat-tag {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #374151;
+      background: #F3F4F6;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #D1D5DB;
+    }
+    .prd-num {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text-light);
+    }
+    .prd-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .prd-problem-line {
+      font-size: 0.84rem;
+      color: var(--text-body);
+      margin-bottom: 14px;
+      line-height: 1.45;
+      min-height: 38px;
+    }
+    .prd-problem-line strong {
+      color: #111827;
+      font-weight: 700;
+    }
+    .prd-target {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    /* Miniature 3D Bottle in Grid */
+    .prd-bottle-box {
+      background: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 18px;
+      position: relative;
+    }
+    .mini-bottle {
+      width: 74px;
+      margin: 0 auto;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .prd-card:hover .mini-bottle {
+      transform: translateY(-5px) scale(1.04);
+    }
+    .mini-cap {
+      width: 46px;
+      height: 28px;
+      margin: 0 auto;
+      background: #F9FAFB;
+      border-radius: 8px 8px 0 0;
+      border: 1.5px solid #111827;
+      box-shadow: none;
+      position: relative;
+      z-index: 2;
+    }
+    .mini-body {
+      width: 68px;
+      height: 104px;
+      margin: -1.5px auto 0 auto;
+      background: #FFFFFF;
+      border-radius: 0 0 18px 18px;
+      border: 1.5px solid #111827;
+      border-top: none;
+      position: relative;
+      overflow: hidden;
+      box-shadow: none;
+    }
+    .mini-shoulder-logo {
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.52rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      color: #111827;
+      line-height: 1;
+      pointer-events: none;
+      white-space: nowrap !important;
+      z-index: 3;
+    }
+    .mini-engrave-label {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 58px;
+      background: #FFFFFF;
+      border-radius: 4px;
+      padding: 3px 2px;
+      box-sizing: border-box;
+      box-shadow: none;
+      border: 1px solid #111827;
+      white-space: nowrap;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .mini-engrave-tag {
+      font-size: 0.42rem;
+      color: #4B5563;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.15;
+      display: block;
+      width: 100%;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .mini-engrave-name {
+      font-size: 0.62rem;
+      color: #111827;
+      font-weight: 900;
+      margin-top: 1px;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      display: block;
+      width: 100%;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .prd-formula-info {
+      background: #FFFFFF;
+      border-radius: var(--radius-xs);
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      font-size: 0.82rem;
+      border: 1.5px solid #E5E7EB;
+      box-shadow: none;
+    }
+    .prd-formula-row {
+      display: flex;
+      margin-bottom: 6px;
+      gap: 6px;
+      align-items: baseline;
+    }
+    .prd-formula-row:last-child { margin-bottom: 0; }
+    .f-badge {
+      font-weight: 800;
+      color: #111827;
+      background: #F3F4F6;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-size: 0.74rem;
+    }
+    .f-val {
+      color: var(--text-body);
+      font-weight: 600;
+    }
+
+    .prd-price-box {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .price-sub {
+      font-size: 0.78rem;
+      color: #9CA3AF;
+      font-weight: 600;
+    }
+    .price-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 2px;
+      margin-bottom: 14px;
+    }
+    .price-main strong {
+      font-size: 1.25rem;
+      color: #111827;
+      font-weight: 900;
+    }
+    .price-main span {
+      font-size: 0.84rem;
+      color: #4B5563;
+      font-weight: 800;
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+
+    /* Comparison Table (CAT-130) */
+    .compare-table-sec {
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+    }
+    .table-container {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      overflow-x: auto;
+    }
+    table.spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.90rem;
+    }
+    table.spec-table th {
+      background: #111827;
+      color: #FFFFFF;
+      padding: 16px 20px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      letter-spacing: -0.01em;
+    }
+    table.spec-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-body);
+      vertical-align: middle;
+    }
+    table.spec-table tr:last-child td { border-bottom: none; }
+    table.spec-table tr:hover td {
+      background: #F9FAFB;
+    }
+
+    /* Instant Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(17, 24, 39, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .modal.show,
+    .modal.active {
+      display: flex;
+    }
+    .modal-dialog {
+      background: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 40px 32px;
+      width: min(580px, 100%);
+      max-height: calc(100vh - 48px);
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .loading-spinner {
+      width: 42px;
+      height: 42px;
+      border: 3px solid #E5E7EB;
+      border-top-color: #111827;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 28px auto;
+    }
+    .form-group {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-strong);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    /* =========================================================
+       Comprehensive Responsive Queries (390px Mobile & 768px Tablet)
+       - 가로 넘침(Horizontal Overflow) 100% 방지
+       - 모바일 390px에서 1열 스택 및 44px 터치 타깃 완비
+       ========================================================= */
+
+    /* 1. Tablet Landscape (1024px ~ 1100px) */
+    @media (max-width: 1100px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+      }
+    }
+
+    /* 2. Tablet Portrait & Mobile (768px 이하) */
+    @media (max-width: 768px) {
+      .wrap-wide {
+        padding: 0 16px !important;
+      }
+      section {
+        padding: 60px 0 !important;
+      }
+      .top-full {
+        padding: 0 20px;
+      }
+      .links-wide {
+        display: none;
+      }
+      .gnb-actions-wrap .btn-gnb {
+        padding: 8px 14px;
+        font-size: 0.82rem;
+      }
+      .section-header {
+        margin-bottom: 36px;
+      }
+      .section-header h1 {
+        font-size: 1.65rem !important;
+      }
+      /* 3차원 필터 바 모바일 세로 배치 및 컴팩트 래핑 */
+      .filter-dimension-nav {
+        padding: 18px 14px !important;
+        gap: 16px !important;
+        margin-bottom: 32px !important;
+      }
+      .filter-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+      }
+      .filter-label {
+        width: auto !important;
+        padding-top: 0 !important;
+        font-size: 0.84rem !important;
+        color: #111827 !important;
+      }
+      .filter-pills {
+        display: flex;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+        width: 100% !important;
+      }
+      .filter-pills button {
+        padding: 6px 12px !important;
+        font-size: 0.78rem !important;
+      }
+      .prd-card {
+        padding: 24px 18px !important;
+      }
+      .modal-dialog {
+        padding: 28px 18px !important;
+        width: min(580px, calc(100vw - 32px)) !important;
+        max-height: calc(100vh - 32px) !important;
+        margin: 16px auto !important;
+      }
+      footer {
+        padding: 48px 20px !important;
+      }
+    }
+
+    /* 3. Small Mobile (480px 이하 / 390px 스마트폰 기준) */
+    @media (max-width: 480px) {
+      .wrap-wide {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+      }
+      .top-full {
+        padding: 0 12px;
+      }
+      .gnb-search-wrap {
+        display: none !important;
+      }
+      .brand-group strong {
+        font-size: 1.6rem;
+      }
+      .products-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .prd-card {
+        padding: 20px 16px !important;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+      }
+      .prd-name {
+        font-size: 1.25rem !important;
+      }
+      /* 상품 카드 하단 버튼 세로 1열 스택 */
+      .card-actions {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+      .card-actions .btn {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+      .btn {
+        min-height: 44px;
+        padding: 12px 16px;
+      }
+      /* CAT-130 하단 배너 버튼 그룹 세로 1열 스택 및 텍스트 래핑 */
+      .curation-banner-sec {
+        padding: 48px 0 !important;
+      }
+      .curation-banner-sec h2 {
+        font-size: 1.45rem !important;
+        word-break: keep-all;
+      }
+      .curation-banner-sec .wrap-wide > div {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+      }
+      .curation-banner-sec .btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        white-space: normal !important;
+        text-align: center !important;
+        padding: 12px 16px !important;
+        font-size: 0.90rem !important;
+        box-sizing: border-box !important;
+      }
+      /* CAT-120 퀵뷰 모달 하단 버튼 세로 1열 스택 */
+      .modal-dialog {
+        padding: 24px 16px !important;
+        width: min(580px, calc(100vw - 24px)) !important;
+        box-sizing: border-box !important;
+      }
+      #quickViewModal .modal-dialog > div:last-child {
+        flex-direction: column !important;
+        gap: 8px !important;
+      }
+      #quickViewModal .btn {
+        width: 100% !important;
+        white-space: normal !important;
+        text-align: center !important;
+        font-size: 0.88rem !important;
+      }
+      footer {
+        padding: 40px 16px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Full-Width Floating GNB (Unified Across All Pages) -->
+  <header class="top-full">
+    <nav class="nav-wide">
+      <a href="메인페이지.html" class="brand-group" title="A:FIT 홈으로 이동" aria-label="A:FIT 홈으로 이동">
+        <strong>A:FIT</strong>
+      </a>
+      <div class="header-right-nav-group">
+        <div class="links-wide">
+          <a href="브랜드소개.html">브랜드 소개</a>
+          <a href="카테고리.html" class="active">15종 컬렉션</a>
+          <a href="메인페이지.html#curation">AI 맞춤진단</a>
+          <a href="메인페이지.html#calculator">가성비 계산기</a>
+          <a href="메인페이지.html#reviews">구독 후기 & FAQ</a>
+        </div>
+        <div class="gnb-actions-wrap">
+          <div class="gnb-search-wrap">
+            <input type="text" class="gnb-search-input" aria-label="맞춤 루틴 검색" onkeydown="handleGnbSearch(event)">
+            <svg class="gnb-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" onclick="const input = document.querySelector('.gnb-search-input'); handleGnbSearch({key:'Enter', target: input});">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <button type="button" class="gnb-consult-btn" title="A:FIT 브랜드 고객만족센터 (CS)" aria-label="A:FIT 브랜드 고객만족센터 (CS)" onclick="openCsModal()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+            </svg>
+          </button>
+          <button class="btn primary btn-gnb" onclick="openCheckoutModal('플래그십 올인원팩')">
+            <span>맞춤 구독 시작하기</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CAT-100: Category Hero & Multi-dimensional Filter Bar -->
+  <section>
+    <div class="wrap-wide">
+      <div class="section-header">
+        <h1>내 라이프스타일에 맞춘<br>15대 올인원 이중제형 컬렉션</h1>
+        <p>
+          직장인부터 야간 근무자까지, 하루 패턴에 정밀 최적화된 15종 맞춤 라인업.
+        </p>
+      </div>
+
+      <!-- Multi-dimensional Filter Navigation Bar (CAT-100) -->
+      <div class="filter-dimension-nav" id="categoryFilterNav">
+        <!-- Row 1: Lifestyle -->
+        <div class="filter-row">
+          <span class="filter-label">라이프스타일</span>
+          <div class="filter-pills" id="filterPillsCat">
+            <button class="active" onclick="filterCategory('all', this)">전체 (15)</button>
+            <button onclick="filterCategory('worker', this)">2030 직장인 (3)</button>
+            <button onclick="filterCategory('rnd', this)">R&D 바이오 (2)</button>
+            <button onclick="filterCategory('sports', this)">스포츠 Pro (2)</button>
+            <button onclick="filterCategory('beauty', this)">이너뷰티 Glow (2)</button>
+            <button onclick="filterCategory('vegan', this)">클린 Eco 비건 (2)</button>
+            <button onclick="filterCategory('shift', this)">3교대 Emergency (2)</button>
+            <button onclick="filterCategory('it', this)">판교 IT Tech (2)</button>
+          </div>
+        </div>
+        <!-- Row 2: Intake Timing -->
+        <div class="filter-row">
+          <span class="filter-label">섭취 시점</span>
+          <div class="filter-pills" id="filterPillsTiming">
+            <button class="active" onclick="filterTimingSelect('all', this)">전체 시점</button>
+            <button onclick="filterTimingSelect('morning', this)">아침 기상</button>
+            <button onclick="filterTimingSelect('work', this)">업무/집중</button>
+            <button onclick="filterTimingSelect('workout', this)">운동 전후</button>
+            <button onclick="filterTimingSelect('night', this)">야간/회식</button>
+            <button onclick="filterTimingSelect('sleep', this)">취침 전</button>
+          </div>
+        </div>
+        <!-- Row 3: Health Goal -->
+        <div class="filter-row">
+          <span class="filter-label">건강 목적</span>
+          <div class="filter-pills" id="filterPillsGoal">
+            <button class="active" onclick="filterGoalSelect('all', this)">전체 목적</button>
+            <button onclick="filterGoalSelect('energy', this)">활력/에너지</button>
+            <button onclick="filterGoalSelect('focus', this)">두뇌/시각</button>
+            <button onclick="filterGoalSelect('muscle', this)">근합성/체력</button>
+            <button onclick="filterGoalSelect('skin', this)">피부/항산화</button>
+            <button onclick="filterGoalSelect('sleep', this)">수면/이완</button>
+            <button onclick="filterGoalSelect('digest', this)">속편함/소화</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAT-110: 15 Product Cards Grid (Standardized 8-Part Hierarchy) -->
+      <div class="products-grid" id="productCardGrid">
+
+        <!-- 01 -->
+        <div class="prd-card" data-cat="worker" data-timing="night" data-goal="energy" id="prd-card-01">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">2030 직장인</span>
+            <span class="prd-num">01 / 15</span>
+          </div>
+          <div class="prd-name">나이트 오버타임 팩</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 잦은 야근과 수면 부족으로 인한 만성 피로 및 간 기능 저하 회복</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">밀크씨슬 130mg + 비타민B군 500%</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">속쓰림 없는 귀리 식이섬유 곡물 쉐이크</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">저녁 야근 시작 전 / 식사 대용</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(0)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('나이트 오버타임 팩')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="prd-card" data-cat="worker" data-timing="morning" data-goal="energy" id="prd-card-02">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">2030 직장인</span>
+            <span class="prd-num">02 / 15</span>
+          </div>
+          <div class="prd-name">모닝 퀵스타터 팩</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 바쁜 아침 공복 출근으로 인한 오전 에너지 결핍 및 혈당 저하 해소</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">필수 비타민 13종 + 마그네슘 150mg</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">저당 오트밀 수용성 섬유질 & 활력 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">아침 출근길 공복 / 업무 시작 전</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(1)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('모닝 퀵스타터 팩')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="prd-card" data-cat="worker" data-timing="night" data-goal="digest" id="prd-card-03">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">2030 직장인</span>
+            <span class="prd-num">03 / 15</span>
+          </div>
+          <div class="prd-name">애프터 파티 리커버리</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 회식 후 아세트알데히드 축적으로 인한 숙취, 갈증 및 두통 완화</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">헛개나무추출물 + 순수 글루타치온 효모</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">전해질 미네랄 & 타우린 1,000mg 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">음주 직후 또는 다음 날 기상 직후</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(2)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('애프터 파티 리커버리')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="prd-card" data-cat="rnd" data-timing="morning" data-goal="energy" id="prd-card-04">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">R&D 바이오</span>
+            <span class="prd-num">04 / 15</span>
+          </div>
+          <div class="prd-name">바이오 이뮨 디펜스</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 밀폐된 연구 환경과 환절기 체온 변화로 약해진 1차 면역 방어벽 강화</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">글루콘산 아연 12mg + 비타민D 2,000IU</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">유럽산 엘더베리 고농축 바이오 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">매일 아침 식후 1병</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(3)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('바이오 이뮨 디펜스')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="prd-card" data-cat="rnd" data-timing="work" data-goal="skin" id="prd-card-05">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">R&D 바이오</span>
+            <span class="prd-num">05 / 15</span>
+          </div>
+          <div class="prd-name">셀룰러 안티옥스</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 고강도 두뇌 노동 및 스트레스로 누적된 유해 활성산소의 세포 손상 억제</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">코엔자임Q10 100mg + 비타민E</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">지중해 석류 농축 안토시아닌 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">오후 2시 나른한 업무 시간</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(4)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('셀룰러 안티옥스')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <div class="prd-card" data-cat="sports" data-timing="workout" data-goal="muscle" id="prd-card-06">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag" style="background: var(--primary); color: #fff;">대표 시그니처</span>
+            <span class="prd-num">06 / 15</span>
+          </div>
+          <div class="prd-name">프로틴 머슬 빌더</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 운동 후 쉐이커 세척의 번거로움 없이 즉각적인 근단백질 합성 유도</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">필수 아미노산 9종 (EAA 5,000mg)</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">분리유청단백질(WPI) 20g 초저당 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">운동 직후 30분 이내 (골든타임)</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 3정+액상 120ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(5)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('프로틴 머슬 빌더')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07 -->
+        <div class="prd-card" data-cat="sports" data-timing="workout" data-goal="energy" id="prd-card-07">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">스포츠 Pro</span>
+            <span class="prd-num">07 / 15</span>
+          </div>
+          <div class="prd-name">프리-워크아웃 부스터</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 운동 전 에너지 고갈 상태에서 혈관 확장 및 폭발적 근력 퍼포먼스 발현</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">L-아르기닌 5,000mg + 크레아틴</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">타우린 1,000mg + 고농축 비타민C 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">운동 시작 20~30분 전</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(6)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('프리-워크아웃 부스터')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 08 -->
+        <div class="prd-card" data-cat="beauty" data-timing="morning" data-goal="skin" id="prd-card-08">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">이너뷰티 Glow</span>
+            <span class="prd-num">08 / 15</span>
+          </div>
+          <div class="prd-name">딥 하이드라 콜라겐</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 건조한 실내 환경으로 인한 피부 진피 속당김 및 탄력 저하 개선</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">히알루론산 240mg + 피쉬 엘라스틴</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">초저분자 피쉬콜라겐 3,270mg 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">매일 아침 세안 직후 공복</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(7)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('딥 하이드라 콜라겐')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 09 -->
+        <div class="prd-card" data-cat="beauty" data-timing="work" data-goal="skin" id="prd-card-09">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">이너뷰티 Glow</span>
+            <span class="prd-num">09 / 15</span>
+          </div>
+          <div class="prd-name">브라이트닝 글루타치온</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 자외선 노출과 피로 누적으로 칙칙해진 피부 톤과 기미·잡티 완화</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">L-글루타치온 순수 효모 250mg</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">화이트토마토 농축 브라이트닝 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">오후 1시 나른한 시간대</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(8)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('브라이트닝 글루타치온')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="prd-card" data-cat="vegan" data-timing="morning" data-goal="digest" id="prd-card-10">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">클린 Eco 비건</span>
+            <span class="prd-num">10 / 15</span>
+          </div>
+          <div class="prd-name">퓨어 그린 비건 올인원</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 채식 식단에서 쉽게 결핍되는 식물성 비타민B12 및 철분의 균형 공급</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">EVE 비건 건조효모 B12 + 식물성 철분</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">100% 유기농 완두·현미 단백질 쉐이크</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">아침 식사 대용 1병</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(9)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('퓨어 그린 비건 올인원')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="prd-card" data-cat="vegan" data-timing="work" data-goal="digest" id="prd-card-11">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">클린 Eco 비건</span>
+            <span class="prd-num">11 / 15</span>
+          </div>
+          <div class="prd-name">밸런스 엔자임 다이제스트</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 식사 후 더부룩함, 가스 참, 불규칙한 배변 활동의 편안한 소화 서포트</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">15곡 발효 곡물 효소 + 유산균 사균체</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">유기농 양배추 & 매실 저자극 농축액</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">점심 또는 저녁 식사 직후</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(10)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('밸런스 엔자임 다이제스트')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="prd-card" data-cat="shift" data-timing="sleep" data-goal="sleep" id="prd-card-12">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag" style="background: var(--primary); color: #fff;">대표 시그니처</span>
+            <span class="prd-num">12 / 15</span>
+          </div>
+          <div class="prd-name">나이트 시프트 슬립</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 주·야간 교대근무로 무너진 수면 리듬 회복 및 심신 긴장 이완</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">뇌파 안정 L-테아닌 200mg + 마그네슘</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">타트체리 멜라토닌 & 카모마일 진정 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">퇴근 후 취침 30분 전</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(11)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('나이트 시프트 슬립')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="prd-card" data-cat="shift" data-timing="night" data-goal="energy" id="prd-card-13">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">3교대 Emergency</span>
+            <span class="prd-num">13 / 15</span>
+          </div>
+          <div class="prd-name">에머전시 바이탈 샷</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 심야 야간 근무 시간대의 급격한 체력 고갈 및 두뇌 졸음 방지</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">비타민B12 1,000㎍ + 천연 과라나</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">고농축 아미노산 타우린 & 구연산 샷</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">심야 근무 시작 직전</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(12)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('에머전시 바이탈 샷')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="prd-card" data-cat="it" data-timing="work" data-goal="focus" id="prd-card-14">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag" style="background: var(--primary); color: #fff;">대표 시그니처</span>
+            <span class="prd-num">14 / 15</span>
+          </div>
+          <div class="prd-name">블루라이트 아이 쉴드</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 하루 10시간 이상 모니터 노출로 인한 황반 색소 감소 및 안구 건조 피로</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">루테인지아잔틴 20mg + 아스타잔틴 6mg</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">빌베리 안토시아닌 시신경 보호 농축액</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">오후 2시 화면 집중 시간</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(13)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('블루라이트 아이 쉴드')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="prd-card" data-cat="it" data-timing="work" data-goal="focus" id="prd-card-15">
+          <div class="prd-header-top">
+            <span class="prd-cat-tag">판교 IT Tech</span>
+            <span class="prd-num">15 / 15</span>
+          </div>
+          <div class="prd-name">뉴로 딥 포커스</div>
+          <div class="prd-problem-line"><strong>해결 문제:</strong> 복잡한 코딩 및 설계 업무 시 발생하는 두뇌 피로 및 기억·집중력 저하</div>
+          <div class="prd-bottle-box">
+            <div class="mini-bottle">
+              <div class="mini-cap"></div>
+              <div class="mini-body">
+                <div class="mini-shoulder-logo">A:FIT</div>
+                <div class="mini-engrave-label">
+                  <span class="mini-engrave-tag">1:1 맞춤 처방</span>
+                  <span class="mini-engrave-name">OOO님</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-formula-info">
+            <div class="prd-formula-row"><span class="f-badge">상단 정제</span> <span class="f-val">은행잎추출물 플라보놀 28mg + 테아닌</span></div>
+            <div class="prd-formula-row"><span class="f-badge">하단 액상</span> <span class="f-val">로즈마리 콜린 두뇌 회로 부스팅 액상</span></div>
+            <div class="prd-formula-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);"><span class="f-badge" style="background: #F3F4F6;">추천 시점</span> <span class="f-val" style="color: #111827; font-weight: 700;">오전 집중 코딩 / 기획 시작 전</span></div>
+            <div class="prd-formula-row" style="margin-top: 4px;"><span class="f-badge" style="background: #F3F4F6;">용량 구성</span> <span class="f-val">1병 (정제 2정+액상 100ml) / 월 30병</span></div>
+          </div>
+          <div class="prd-price-box">
+            <div class="price-sub">정기구독 30일 기준</div>
+            <div class="price-main">
+              <strong>월 79,800원</strong>
+              <span>1병 약 2,660원대</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn secondary" style="padding: 11px 16px; font-size: 0.86rem;" onclick="openQuickView(14)">상세보기</button>
+              <button class="btn primary" style="padding: 11px 18px; font-size: 0.86rem; flex: 1;" onclick="openCheckoutModal('뉴로 딥 포커스')">구독 시작</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty State Container -->
+        <div id="archiveEmptyState" class="empty-state-card" style="display: none;">
+          <div style="font-size: 2.2rem; color: var(--accent); margin-bottom: 12px;">∅</div>
+          <h3 style="font-size: 1.25rem; color: var(--primary); font-weight: 800; margin-bottom: 8px;">
+            선택하신 조건에 일치하는 맞춤 포뮬러가 없습니다.
+          </h3>
+          <p style="font-size: 0.92rem; color: var(--text-body); margin-bottom: 22px;">
+            필터 조건을 변경하시거나 초기화 버튼을 눌러 15종 전체 컬렉션을 확인해 보세요.
+          </p>
+          <button type="button" class="btn primary" style="padding: 10px 22px; font-size: 0.88rem;" onclick="resetAllFilters()">
+            전체 상품 목록으로 초기화 (Reset)
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAT-130: AI 1:1 맞춤 진단 가이드 배너 (AI Curation Guide Banner) -->
+  <section class="curation-banner-sec" style="background: #111827; color: #FFFFFF; padding: 72px 0; border-top: 1px solid var(--border); text-align: center;">
+    <div class="wrap-wide" style="max-width: 860px; margin: 0 auto;">
+      <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; line-height: 1.35; margin-bottom: 14px;">
+        어떤 제품이 내 하루에 가장 잘 맞을지 고민되시나요?
+      </h2>
+      <p style="font-size: 1rem; color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 32px;">
+        7가지 핵심 라이프스타일 문진 알고리즘을 통해<br>
+        단 1분 만에 당신의 생체 리듬에 100% 최적화된 맞춤 포뮬러를 처방해 드립니다.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+        <a href="메인페이지.html#curation" class="btn primary" style="background: #111827; color: #FFFFFF; border: 1px solid #FFFFFF; padding: 14px 32px; font-size: 1rem; font-weight: 800; border-radius: 999px; text-decoration: none; box-shadow: none;">
+          1분 AI 맞춤 진단받기 →
+        </a>
+        <a href="브랜드소개.html" class="btn secondary" style="background: rgba(255,255,255,0.08); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.2); padding: 14px 28px; font-size: 0.95rem; border-radius: 999px; text-decoration: none;">
+          A:FIT 브랜드 철학 & 과학 원칙 보기
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAT-120: Quick View Modal -->
+  <div id="quickViewModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalPrdTitle" onclick="if(event.target===this) closeQuickView()">
+    <div class="modal-dialog" style="max-width: 580px; padding: 36px 28px;">
+      <button style="position: absolute; right: 20px; top: 20px; font-size: 1.5rem; background: #F3F4F6; border: 1px solid #E5E7EB; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--primary); line-height: 1; cursor: pointer; z-index: 10;" onclick="closeQuickView()" aria-label="닫기">×</button>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <span class="tag-badge" id="modalPrdTag"><span class="tag-dot"></span> 상세 영양 처방 리포트</span>
+        <h3 id="modalPrdTitle" style="font-size: 1.55rem; font-weight: 800; color: var(--primary); margin-top: 8px;">제품명</h3>
+        <p id="modalPrdTarget" style="font-size: 0.90rem; color: var(--text-muted); margin-top: 4px;">타깃 대상</p>
+      </div>
+
+      <!-- 💡 약사의 1줄 핵심 요약 -->
+      <div style="background: #F9FAFB; border: 1.5px solid #E5E7EB; border-radius: var(--radius-sm); padding: 16px 18px; margin-bottom: 16px;">
+        <div style="font-size: 0.82rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+          <span>💡</span> <span>약사의 3초 핵심 처방 요약</span>
+        </div>
+        <div id="modalSummaryText" style="font-size: 0.92rem; font-weight: 600; color: var(--primary); line-height: 1.5;">요약 정보</div>
+      </div>
+
+      <!-- 💊 상단 정제 -->
+      <div style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: var(--radius-sm); padding: 16px 18px; margin-bottom: 14px;">
+        <div style="font-size: 0.84rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+          <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #111827;"></span>
+          <span>상단 캡슐 정제 (무엇이 들어있나요?)</span>
+        </div>
+        <div id="modalCapText" style="font-size: 0.88rem; color: var(--text-body); line-height: 1.6;">성분 정보</div>
+      </div>
+
+      <!-- 🧪 하단 액상 -->
+      <div style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: var(--radius-sm); padding: 16px 18px; margin-bottom: 14px;">
+        <div style="font-size: 0.84rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+          <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--primary);"></span>
+          <span>하단 고농축 액상 포뮬러 (왜 함께 마시나요?)</span>
+        </div>
+        <div id="modalLiqText" style="font-size: 0.88rem; color: var(--text-body); line-height: 1.6;">액상 정보</div>
+      </div>
+
+      <!-- ⏰ 섭취 골든타임 -->
+      <div style="background: #F9FAFB; border: 1px dashed #D1D5DB; border-radius: var(--radius-sm); padding: 12px 18px; margin-bottom: 22px; display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1rem;">⏰</span>
+        <div style="font-size: 0.85rem; color: var(--text-body);">
+          <strong style="color: var(--primary);">추천 섭취 골든타임:</strong> <span id="modalTimingText" style="font-weight: 700; color: #111827;">섭취 시간 가이드</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-top: 18px;">
+        <button class="btn primary" style="flex: 1; justify-content: center; font-size: 0.95rem;" onclick="subscribeFromModal()">
+          이 처방으로 30% 할인가 구독하기 (월 79,800원)
+        </button>
+        <button class="btn secondary" style="min-width: 90px; justify-content: center; font-weight: 700;" onclick="closeQuickView()">
+          닫기
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- A:FIT Customer Service (CS) Modal (메인페이지 100% 동일) -->
+  <div id="csModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="csModalTitle" onclick="if(event.target===this) closeCsModal()">
+    <div class="modal-dialog" style="max-width: 520px; padding: 36px 30px;">
+      <button style="position: absolute; right: 24px; top: 24px; font-size: 1.6rem; background: none; border: none; color: var(--text-muted); line-height: 1; cursor: pointer;" onclick="closeCsModal()" aria-label="닫기">×</button>
+      
+      <div style="text-align: center; margin-bottom: 24px;">
+        <h2 id="csModalTitle" style="font-size: 1.45rem; margin-top: 0; margin-bottom: 8px; font-weight: 800; color: var(--primary);">A:FIT 브랜드 고객만족센터</h2>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+          상품 하자, 교환/반품 접수, 배송 및 구독 문의를 신속하게 해결해 드립니다.
+        </p>
+      </div>
+
+      <!-- Channel 1: KakaoTalk 1:1 Live Chat -->
+      <div style="background: #FFFFFF; border: 1.5px solid #E5E7EB; border-radius: var(--radius); padding: 18px 20px; margin-bottom: 14px; box-shadow: none;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+          <div>
+            <span style="font-size: 0.76rem; font-weight: 800; color: #4B5563; letter-spacing: 0.05em; display: block; margin-bottom: 2px;">REAL-TIME CHAT</span>
+            <strong style="font-size: 1.05rem; color: var(--primary); font-weight: 800;">카카오톡 1:1 실시간 상담</strong>
+          </div>
+          <span style="font-size: 0.76rem; color: #111827; font-weight: 700; background: #F3F4F6; padding: 3px 8px; border-radius: 999px; border: 1px solid #E5E7EB;">● 상담원 대기중</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-body); line-height: 1.5; margin: 0 0 14px 0;">
+          파손 사진 첨부, 불량 교환 접수, 실시간 배송 조회를 가장 빠르게 처리하실 수 있습니다.
+        </p>
+        <button type="button" onclick="connectKakaoChat()" style="width: 100%; background: #FEE500; color: #191919; font-weight: 800; font-size: 0.95rem; border: none; border-radius: 10px; padding: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); transition: var(--transition);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#191919">
+            <path d="M12 3c-5.52 0-10 3.58-10 8 0 2.83 1.83 5.32 4.62 6.72-.2.75-.73 2.72-.84 3.16-.13.54.2.53.42.38.17-.11 2.37-1.61 3.33-2.27.79.11 1.62.17 2.47.17 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/>
+          </svg>
+          <span>카카오톡 1:1 상담원 연결하기</span>
+        </button>
+        <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 8px;">
+          운영시간: 평일 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00 / 주말·공휴일 휴무)
+        </div>
+      </div>
+
+      <!-- Channel 2: Phone Hotline -->
+      <div style="background: #FFFFFF; border: 1.5px solid #E5E7EB; border-radius: var(--radius); padding: 18px 20px; margin-bottom: 14px; box-shadow: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <div>
+            <span style="font-size: 0.76rem; font-weight: 800; color: #4B5563; letter-spacing: 0.05em; display: block; margin-bottom: 2px;">PHONE HOTLINE</span>
+            <strong style="font-size: 1.05rem; color: var(--primary); font-weight: 800;">고객센터 대표 전화</strong>
+          </div>
+          <a href="tel:1588-4920" style="background: #111827; color: #FFFFFF; font-weight: 800; font-size: 0.85rem; padding: 8px 16px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+            📞 통화 연결
+          </a>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 10px; margin: 6px 0;">
+          <span style="font-size: 1.55rem; font-weight: 900; color: var(--primary); letter-spacing: -0.02em;">1588-4920</span>
+          <button type="button" onclick="copyCsPhone('1588-4920')" style="background: none; border: 1px solid var(--border); border-radius: 6px; padding: 2px 8px; font-size: 0.76rem; color: var(--text-muted); cursor: pointer;">번호 복사</button>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-muted);">
+          통화료는 발신자 부담이며, 통화량이 많을 때는 카카오톡 상담을 이용하시면 더 빠릅니다.
+        </div>
+      </div>
+
+      <!-- Assurance Guarantee & FAQ Quick Links -->
+      <div style="background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 20px; font-size: 0.80rem; color: var(--primary); line-height: 1.6;">
+        <strong style="display: block; margin-bottom: 2px; color: var(--primary);">🛡️ A:FIT 100% 품질 안심 보증제</strong>
+        • 배송 중 파손 또는 캡/액상 불량 발생 시 <strong>100% 무료 맞춤 재배송</strong><br>
+        • 미개봉 상품은 수령 후 7일 이내 1:1 무상 반품 접수 지원
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <button class="btn secondary" style="flex: 1; justify-content: center; font-size: 0.90rem;" onclick="closeCsModal(); window.location.href='메인페이지.html#reviews';">
+          자주 묻는 질문(FAQ) 확인하기
+        </button>
+        <button class="btn primary" style="padding: 12px 24px; font-size: 0.90rem;" onclick="closeCsModal()">
+          닫기
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instant Checkout Modal (3-State Workflow & A11y - 메인페이지 100% 동일) -->
+  <div id="checkoutModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle" onclick="if(event.target===this) closeCheckoutModal()">
+    <div class="modal-dialog">
+      <button style="position: absolute; right: 24px; top: 24px; font-size: 1.6rem; background: none; border: none; color: var(--text-muted); line-height: 1; cursor: pointer;" onclick="closeCheckoutModal()" aria-label="닫기">×</button>
+      
+      <!-- State 1: Input Form -->
+      <div id="checkoutFormBox">
+        <h2 id="checkoutModalTitle" style="font-size: 1.45rem; margin-top: 0; margin-bottom: 18px; font-weight: 800; color: var(--primary);">A:FIT 1:1 맞춤 정기구독 신청</h2>
+        
+        <form onsubmit="handleOrderSubmit(event)">
+          <div style="margin-bottom: 16px;">
+            <label for="orderPlanName" style="font-size: 0.85rem; font-weight: 700; color: var(--primary); display: block; margin-bottom: 6px;">선택 제품 / 처방 플랜</label>
+            <input type="text" id="orderPlanName" value="01. 나이트 오버타임 팩" style="width: 100%; padding: 12px 14px; border: 1.5px solid #E5E7EB; border-radius: 10px; background: #F9FAFB; font-weight: 800; color: var(--primary);" readonly>
+          </div>
+          <div style="margin-bottom: 16px;">
+            <label for="orderCustName" style="font-size: 0.85rem; font-weight: 700; color: var(--primary); display: block; margin-bottom: 6px;">구독자 성함 <span style="color: #EF4444;">*</span></label>
+            <input type="text" id="orderCustName" placeholder="예: 홍길동 (최소 2자)" required style="width: 100%; padding: 12px 14px; border: 1px solid var(--border-strong); border-radius: 10px;" oninput="validateNameInput(this)">
+            <div id="nameErrorMsg" style="color: #EF4444; font-size: 0.78rem; margin-top: 4px; display: none;">성함을 2자 이상 정확히 입력해 주세요.</div>
+          </div>
+          <div style="margin-bottom: 16px;">
+            <label for="orderCustPhone" style="font-size: 0.85rem; font-weight: 700; color: var(--primary); display: block; margin-bottom: 6px;">휴대폰 번호 <span style="color: #EF4444;">*</span></label>
+            <input type="tel" id="orderCustPhone" placeholder="예: 010-1234-5678" maxlength="13" required style="width: 100%; padding: 12px 14px; border: 1px solid var(--border-strong); border-radius: 10px;" oninput="formatPhoneNumber(this)">
+            <div id="phoneErrorMsg" style="color: #EF4444; font-size: 0.78rem; margin-top: 4px; display: none;">올바른 휴대폰 번호 형식을 입력해 주세요 (010-XXXX-XXXX).</div>
+          </div>
+          <div style="margin-bottom: 22px;">
+            <label for="orderPlanPeriod" style="font-size: 0.85rem; font-weight: 700; color: var(--primary); display: block; margin-bottom: 6px;">구독 플랜 선택</label>
+            <select id="orderPlanPeriod" style="width: 100%; padding: 12px 14px; border: 1px solid var(--border-strong); border-radius: 10px; background: #FFFFFF; font-weight: 600;">
+              <option>월 30일 매일 올인원팩 (월 79,800원)</option>
+              <option>월 20일 평일 출근팩 (월 53,200원)</option>
+            </select>
+          </div>
+          <button type="submit" id="btnSubmitOrder" class="btn primary" style="width: 100%; justify-content: center; padding: 15px; font-size: 1.02rem;">
+            구독 신청 완료하기
+          </button>
+        </form>
+      </div>
+
+      <!-- State 2: Loading State -->
+      <div id="checkoutLoadingBox" style="display: none; text-align: center; padding: 24px 0;">
+        <div style="width: 44px; height: 44px; border: 3px solid #E5E7EB; border-top-color: #111827; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px;"></div>
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">
+          1:1 맞춤 구독 처방을 접수하고 있습니다
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+          개인화 라벨 각인 정보 및 첫 정기배송 일정을 생성 중입니다.<br>잠시만 기다려 주세요.
+        </p>
+      </div>
+
+      <!-- State 3: Success Confirmation -->
+      <div id="checkoutSuccessBox" style="display: none; text-align: center; padding: 12px 0;">
+        <h3 style="font-size: 1.38rem; font-weight: 900; color: var(--primary); margin-bottom: 12px;">
+          정기구독 신청이 성공적으로 완료되었습니다
+        </h3>
+        <p style="font-size: 0.90rem; color: var(--text-muted); margin-bottom: 24px;">
+          선택하신 맞춤 포뮬러가 1:1 라벨 각인 공정을 거쳐 안전하게 출고됩니다.
+        </p>
+
+        <div style="background: #F9FAFB; border: 1.5px solid #E5E7EB; border-radius: var(--radius-sm); padding: 20px; text-align: left; margin-bottom: 24px; font-size: 0.88rem; line-height: 1.8;">
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted);">주문 접수번호</span>
+            <strong style="color: var(--primary); font-weight: 800;" id="successOrderNum">AFIT-20260825-001</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted);">구독자</span>
+            <strong style="color: var(--primary);" id="successCustName">홍길동 님</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted);">신청 플랜</span>
+            <strong style="color: var(--primary);" id="successPlanName">01. 나이트 오버타임 팩</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-top: 1px dashed var(--border); margin-top: 8px; padding-top: 8px;">
+            <span style="color: var(--text-muted);">첫 배송 예정일</span>
+            <strong style="color: #111827; font-weight: 800;">신청 후 2영업일 이내 무균 질소 팩 출고</strong>
+          </div>
+        </div>
+
+        <button type="button" class="btn primary" style="width: 100%; justify-content: center; padding: 14px;" onclick="closeCheckoutModal()">
+          확인 완료
+        </button>
+      </div>
+
+      <!-- State 4: Error & Retry State -->
+      <div id="checkoutErrorBox" style="display: none; text-align: center; padding: 20px 0;">
+        <div style="font-size: 2.4rem; margin-bottom: 12px;">⚠️</div>
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: #111827; margin-bottom: 8px;">
+          정기구독 신청 전송 실패
+        </h3>
+        <p style="font-size: 0.90rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 24px;">
+          일시적인 통신 오류로 신청서가 정상 접수되지 않았습니다.<br>입력하신 정보는 안전하게 보존되어 있으니 다시 시도해 주세요.
+        </p>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+          <button type="button" class="btn primary" style="flex: 1; justify-content: center; min-width: 160px;" onclick="retryCheckoutSubmit()">
+            신청 다시 시도하기 ↻
+          </button>
+          <button type="button" class="btn secondary" onclick="backToCheckoutForm()">
+            입력 정보 수정
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wide Minimalist Footer (메인페이지 100% 동일 원본) -->
+  <footer style="background: #0C0F12; color: #FFFFFF; padding: 60px 48px; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="wrap-wide">
+      
+      <!-- Project Legal Disclaimer Box -->
+      <div style="background: rgba(255,255,255,0.04); border: 1px dashed rgba(255,255,255,0.18); border-radius: var(--radius-sm); padding: 22px 26px; margin-bottom: 36px; font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.65;">
+        <strong style="color: var(--accent); display: block; margin-bottom: 4px; font-weight: 800; font-size: 0.88rem;">[PROJECT DISCLAIMER · 가상 프로젝트 고지]</strong>
+        본 웹사이트는 A:FIT 맞춤 영양 구독 서비스의 UI/UX 디자인 및 인터랙션 설계를 위한 학술·포트폴리오 가상 프로젝트입니다.<br>
+        사이트에 기재된 상표, 제품명, 배합비, 인증 번호, 리뷰 및 가격 정보는 서비스 시연을 위한 가상 데이터(Mock Data)이며 실제 상업적 판매 또는 의료적 처방을 목적으로 하지 않습니다.
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+        <div>
+          <strong style="font-size: 1.8rem; letter-spacing: -0.05em; color: #FFFFFF; font-weight: 900;">A:FIT</strong>
+          <p style="font-size: 0.84rem; color: rgba(255,255,255,0.55); margin-top: 6px; line-height: 1.6;">
+            (주)에이핏바이오 (가상 프로젝트) | 대표: 홍길동 | 서울특별시 강남구 테헤란로 웰니스타워 12층<br>
+            사업자등록번호: 000-00-00000 | 통신판매업신고: 2026-서울강남-0000
+          </p>
+        </div>
+        <div style="font-size: 0.84rem; color: rgba(255,255,255,0.45);">
+          © 2026 A:FIT Inc. All Rights Reserved. 맞춤 웰니스 UI/UX 포트폴리오
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const quickViewData = [
+      {
+        name: "나이트 오버타임 팩",
+        cat: "2030 직장인",
+        target: "잦은 야근 및 만성 피로 직장인",
+        summary: "야근 후 묵직한 피로와 지친 간을 깨우는 고단백 에너지 처방",
+        cap: "• 밀크씨슬 130mg : 지친 간세포 보호 및 피로 물질 분해 지원<br>• 활성 비타민B군 500% : 음식물을 에너지로 빠르게 바꾸는 체내 활력 생성",
+        liq: "• 귀리 식이섬유 곡물 쉐이크 : 공복 속쓰림 방지 및 유효 성분의 4배 빠른 흡수 부스팅",
+        timing: "저녁 야근 시작 전 또는 늦은 저녁 식사 대용"
+      },
+      {
+        name: "모닝 퀵스타터 팩",
+        cat: "2030 직장인",
+        target: "바쁜 아침 공복 출근족",
+        summary: "아침 굶고 출근하는 직장인을 위한 하루 1병 활력 충전 & 두뇌 부스팅",
+        cap: "• 필수 비타민 13종 : 하루에 꼭 필요한 기초 미네랄 밸런스 완성<br>• 마그네슘 150mg : 굳은 목과 어깨 근육 이완 및 오전 활력 충전",
+        liq: "• 저당 오트밀 수용성 섬유 액상 : 아침 혈당 급상승(스파이크) 방지 및 든든한 포만감 유지",
+        timing: "아침 출근길 또는 오전 첫 업무 시작 직전"
+      },
+      {
+        name: "애프터 파티 리커버리",
+        cat: "2030 직장인",
+        target: "회식 후 숙취 및 갈증 해소",
+        summary: "알코올 분해를 2배 빠르게 돕고 다음 날 아침 붓기와 갈증을 없애는 숙취 킬러",
+        cap: "• 헛개나무열매추출물 + 글루타치온 효모 : 숙취 유발 독소(아세트알데히드)의 급속 분해 촉진<br>• 밀크씨슬 : 음주로 손상된 간세포의 빠른 재생 지원",
+        liq: "• 전해질 타우린 이온 수분 포뮬러 : 음주 후 심한 탈수와 갈증의 즉각적인 해소",
+        timing: "회식 자리 직후 또는 잠들기 전 1병"
+      },
+      {
+        name: "바이오 이뮨 디펜스",
+        cat: "R&D 바이오",
+        target: "환절기 체내 면역 방어벽 구축",
+        summary: "목이 칼칼하고 감기 기운이 돌 때 체내 면역 세포를 깨우는 방어벽 포뮬러",
+        cap: "• 글루콘산 아연 12mg : 정상적인 면역 세포 분열을 돕는 필수 방어 미네랄 공급<br>• 활성 비타민D 2,000IU + 셀레늄 : 외부 유해 바이러스에 맞서는 저항력 강화",
+        liq: "• 엘더베리 고농축 바이오 액상 : 풍부한 안토시아닌을 통한 호흡기 및 구강 점막 보호",
+        timing: "일교차가 큰 아침 또는 컨디션 저하가 느껴질 때"
+      },
+      {
+        name: "셀룰러 안티옥스",
+        cat: "R&D 바이오",
+        target: "유해 활성산소 억제 & 혈관 케어",
+        summary: "야근과 스트레스로 쌓인 유해 활성산소를 제거하는 프리미엄 세포 항산화제",
+        cap: "• 순수 코엔자임Q10 100mg : 높은 혈압 감소 및 세포 내 에너지원(ATP) 생성<br>• 비타민E + 구리 : 유해 산소로부터 세포막을 빈틈없이 지키는 2중 방어",
+        liq: "• 석류 안토시아닌 폴리페놀 액상 : 혈관 탄력 유지 및 맑고 원활한 혈액 순환 지원",
+        timing: "점심 식사 직후 (지용성 성분의 흡수율 극대화)"
+      },
+      {
+        name: "프로틴 머슬 빌더",
+        cat: "스포츠 Pro",
+        target: "웨이트 트레이닝 & 근합성 극대화",
+        summary: "당류 0g, 쉐이커 없이 운동 후 간편하게 마시는 순수 근단백질 합성 샷",
+        cap: "• 필수 아미노산 9종(EAA) + BCAA 5,000mg : 운동 중 근육 손실 방지 및 즉각적인 근합성 트리거<br>• 비타민B6 : 섭취한 단백질의 체내 흡수 및 아미노산 대사 촉진",
+        liq: "• 100% 분리유청단백(WPI) 20g 무당류 액상 : 락토프리로 유당불내증 없이 30분 내 초고속 단백질 흡수",
+        timing: "운동 직후 30분 이내 (골든타임)"
+      },
+      {
+        name: "프리-워크아웃 부스터",
+        cat: "스포츠 Pro",
+        target: "운동 전 폭발적 혈관 펌핑",
+        summary: "지친 퇴근길에도 헬스장 바벨을 가볍게 만드는 고출력 혈관 펌핑 부스터",
+        cap: "• 순수 발효 L-아르기닌 5,000mg : 혈관 확장 및 근육으로 가는 산소 공급량 극대화<br>• 크레아틴 : 고강도 운동 시 순간 파워와 근력 퍼포먼스 향상",
+        liq: "• 타우린 2,000mg & 비타민C 샷 : 운동 중 젖산 축적 억제 및 지치지 않는 지구력 지원",
+        timing: "운동 시작 20분 전"
+      },
+      {
+        name: "딥 하이드라 콜라겐",
+        cat: "이너뷰티 Glow",
+        target: "피부 속건조 완화 & 탄력 장벽",
+        summary: "화장이 들뜨고 당기는 피부 속부터 차오르는 수분 탄력 포뮬러",
+        cap: "• 발효 히알루론산 240mg : 자기 무게 1,000배의 수분을 피부 속에 꽉 잡아두는 수분 잠금<br>• 저분자 엘라스틴 : 피부 속 콜라겐 기둥을 탄탄하게 묶어주는 탄력 지탱",
+        liq: "• 초저분자 어린(魚鱗) 콜라겐 3,270mg : 모공 1/1,000 크기로 피부 진피층까지 다이렉트 도달",
+        timing: "저녁 스킨케어 후 또는 취침 전"
+      },
+      {
+        name: "브라이트닝 글루타치온",
+        cat: "이너뷰티 Glow",
+        target: "칙칙한 안색 개선 & 화사한 광채",
+        summary: "야근으로 칙칙해진 피부 톤을 속부터 맑고 환하게 밝혀주는 광채 포뮬러",
+        cap: "• L-글루타치온 순수 건조효모 250mg : 칙칙한 멜라닌 색소 억제 및 화사한 피부 톤 케어<br>• 비타민C 500mg : 글루타치온의 체내 흡수율과 항산화 시너지 극대화",
+        liq: "• 화이트토마토 농축 미백 포뮬러 : 자외선으로부터 피부 보호 및 자연스러운 피부 광채 부여",
+        timing: "햇빛에 노출되기 전 아침 시간대"
+      },
+      {
+        name: "퓨어 그린 비건 올인원",
+        cat: "클린 Eco 비건",
+        target: "100% 식물성 클린 영양 공급",
+        summary: "프랑스 EVE 비건 인증, 속이 더부룩하지 않은 100% 식물성 멀티 비타민",
+        cap: "• 유기농 건조효모 비타민B12 1,000% : 채식 식단에서 결핍되기 쉬운 필수 혈액 생성 영양소 충족<br>• 식물성 비건 철분 : 위장 자극 없이 순하고 편안한 철분 흡수",
+        liq: "• 100% 완두·쌀 단백질 그린 쉐이크 : 동물성 원료 0%, 텁텁하지 않고 고소한 식물성 단백질 공급",
+        timing: "공복 또는 가벼운 식사 대용"
+      },
+      {
+        name: "밸런스 엔자임 다이제스트",
+        cat: "클린 Eco 비건",
+        target: "식후 더부룩함 & 편안한 소화",
+        summary: "탄수화물/배달음식 섭취 후 꽉 막힌 속을 가볍게 분해하는 천연 발효 효소",
+        cap: "• 15곡 발효 효소 역가 50만 Unit : 탄수화물과 단백질을 미세하게 쪼개는 초고속 소화 촉진<br>• 유산균 사균체 : 장내 유익균 환경 조성 및 배변 활동 지원",
+        liq: "• 국내산 양배추·매실 저자극 발효 액상 : 위벽 코팅을 통한 속쓰림과 더부룩함의 즉각적인 진정",
+        timing: "과식이나 기름진 식사 직후 10분 이내"
+      },
+      {
+        name: "나이트 시프트 슬립",
+        cat: "3교대 Emergency",
+        target: "불규칙 수면 리듬 & 깊은 숙면",
+        summary: "교대근무로 뒤바뀐 밤낮에도 잡념 없이 푹 자게 돕는 릴랙스 수면 처방",
+        cap: "• 순수 L-테아닌 200mg : 스트레스 뇌파(베타파) 완화 및 편안한 안정 뇌파(알파파) 유도<br>• 몽모랑시 타트체리 : 식물성 멜라토닌을 통한 자연스러운 입면 리듬 형성",
+        liq: "• 카모마일·마그네슘 진정 포뮬러 : 밤새 근육 경련과 뒤척임 없는 깊은 숙면 유지",
+        timing: "근무 후 잠들기 30분 전 (암막 환경 권장)"
+      },
+      {
+        name: "에머전시 바이탈 샷",
+        cat: "3교대 Emergency",
+        target: "야간 근무 중 급격한 체력 방전",
+        summary: "새벽 3~4시 쏟아지는 졸음과 체력 방전을 즉각 깨우는 무설탕 비상 활력 샷",
+        cap: "• 활성형 비타민B12 1,000㎍ : 지친 신경계를 위한 부담 없는 활력 충전<br>• 유기농 과라나 추출물 : 가슴 두근거림 없는 순하고 안전한 천연 각성 제공",
+        liq: "• 고농축 아미노 에너지 샷 : 간 피로 완화 및 빠른 에너지 회복 지원",
+        timing: "나이트 근무 중 집중력이 급격히 떨어질 때"
+      },
+      {
+        name: "블루라이트 아이 쉴드",
+        cat: "판교 IT Tech",
+        target: "장시간 모니터 노출 & 안구 건조",
+        summary: "하루 10시간 이상 모니터 보는 개발자를 위한 안구 건조 & 황반 색소 보호 쉴드",
+        cap: "• 루테인지아잔틴 복합추출물 20mg : 눈 망막 중심의 황반 색소 밀도 100% 유지<br>• 아스타잔틴 6mg : 미세 초점 조절력 개선을 통한 눈 침침함 완화",
+        liq: "• 스위스산 빌베리 안토시아닌 : 시신경 피로 회복 및 안구 눈물막의 촉촉한 보호",
+        timing: "오전 코딩 및 업무 시작 전"
+      },
+      {
+        name: "뉴로 딥 포커스",
+        cat: "판교 IT Tech",
+        target: "코딩/기획 집중력 & 두뇌 피로",
+        summary: "복잡한 알고리즘과 기획 업무 시 머리가 맑아지고 두뇌 혈류를 돕는 브레인 포뮬러",
+        cap: "• 은행잎추출물 플라보놀배당체 28mg : 뇌 미세혈관 혈류 개선을 통한 기억력과 집중력 향상<br>• 비타민B6 : 뇌신경 전달 물질의 원활한 합성 지원",
+        liq: "• 로즈마리 콜린 두뇌 신경 회로 포뮬러 : 두뇌 피로감 완화 및 장시간 몰입 상태 유지",
+        timing: "복잡한 회의나 코딩 집중 세션 15분 전"
+      }
+    ];
+
+    // Multi-dimensional Filter State & Logic (CAT-100)
+    let filterCat = 'all';
+    let filterTiming = 'all';
+    let filterGoal = 'all';
+
+    function applyArchiveFilter() {
+      const cards = document.querySelectorAll("#productCardGrid .prd-card");
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cCat = card.getAttribute("data-cat");
+        const cTiming = card.getAttribute("data-timing");
+        const cGoal = card.getAttribute("data-goal");
+
+        const matchCat = (filterCat === 'all' || cCat === filterCat);
+        const matchTiming = (filterTiming === 'all' || cTiming === filterTiming);
+        const matchGoal = (filterGoal === 'all' || cGoal === filterGoal);
+
+        if (matchCat && matchTiming && matchGoal) {
+          card.style.display = "flex";
+          visibleCount++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      const emptyEl = document.getElementById("archiveEmptyState");
+      if (emptyEl) {
+        emptyEl.style.display = visibleCount === 0 ? "block" : "none";
+      }
+    }
+
+    function filterCategory(cat, btn) {
+      filterCat = cat;
+      const buttons = document.querySelectorAll("#filterPillsCat button");
+      buttons.forEach(b => b.classList.remove("active"));
+      if (btn) {
+        btn.classList.add("active");
+      } else {
+        buttons.forEach(b => {
+          if (b.getAttribute("onclick") && b.getAttribute("onclick").includes(`'${cat}'`)) {
+            b.classList.add("active");
+          }
+        });
+      }
+      applyArchiveFilter();
+    }
+
+    function filterTimingSelect(timing, btn) {
+      filterTiming = timing;
+      if (btn) {
+        document.querySelectorAll("#filterPillsTiming button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+      }
+      applyArchiveFilter();
+    }
+
+    function filterGoalSelect(goal, btn) {
+      filterGoal = goal;
+      if (btn) {
+        document.querySelectorAll("#filterPillsGoal button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+      }
+      applyArchiveFilter();
+    }
+
+    function resetAllFilters() {
+      filterCat = 'all';
+      filterTiming = 'all';
+      filterGoal = 'all';
+
+      document.querySelectorAll("#filterPillsCat button").forEach(b => b.classList.remove("active"));
+      document.querySelector("#filterPillsCat button:first-child").classList.add("active");
+
+      document.querySelectorAll("#filterPillsTiming button").forEach(b => b.classList.remove("active"));
+      document.querySelector("#filterPillsTiming button:first-child").classList.add("active");
+
+      document.querySelectorAll("#filterPillsGoal button").forEach(b => b.classList.remove("active"));
+      document.querySelector("#filterPillsGoal button:first-child").classList.add("active");
+
+      applyArchiveFilter();
+    }
+
+    function openQuickView(idx) {
+      const data = quickViewData[idx];
+      currentSelectedModalProduct = data.name;
+      document.getElementById('modalPrdTag').innerHTML = `<span class="tag-dot"></span> ` + data.cat;
+      document.getElementById('modalPrdTitle').innerText = data.name;
+      document.getElementById('modalPrdTarget').innerText = data.target;
+      document.getElementById('modalSummaryText').innerText = data.summary;
+      document.getElementById('modalCapText').innerHTML = data.cap;
+      document.getElementById('modalLiqText').innerHTML = data.liq;
+      document.getElementById('modalTimingText').innerText = data.timing;
+      const modal = document.getElementById('quickViewModal');
+      if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeQuickView() {
+      const modal = document.getElementById('quickViewModal');
+      if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function subscribeFromModal() {
+      closeQuickView();
+      openCheckoutModal(currentSelectedModalProduct);
+    }
+
+    /* GNB 인라인 검색 */
+    function handleGnbSearch(e) {
+      if (e.key === 'Enter') {
+        const query = e.target.value.trim().toLowerCase();
+        if (query) {
+          const cards = document.querySelectorAll('#productCardGrid .prd-card');
+          let matchedCount = 0;
+          cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            if (text.includes(query)) {
+              card.style.display = 'flex';
+              matchedCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+          
+          const emptyEl = document.getElementById("archiveEmptyState");
+          if (emptyEl) {
+            emptyEl.style.display = matchedCount === 0 ? "block" : "none";
+          }
+          if (matchedCount === 0) {
+            alert(`[검색 결과 안내]\n\n'${query}' 검색어와 일치하는 제품이 없습니다. 전체 15종 목록을 다시 표시합니다.`);
+            resetAllFilters();
+          }
+        }
+      }
+    }
+
+    /* 1:1 CS Consultation Handler (메인페이지 100% 동일) */
+    let lastFocusedElement = null;
+
+    function openCsModal() {
+      lastFocusedElement = document.activeElement;
+      const modal = document.getElementById('csModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        const closeBtn = modal.querySelector('button');
+        if (closeBtn) closeBtn.focus();
+      }
+    }
+
+    function closeCsModal() {
+      const modal = document.getElementById('csModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        if (lastFocusedElement) lastFocusedElement.focus();
+      }
+    }
+
+    function connectKakaoChat() {
+      alert('💬 [A:FIT 카카오톡 1:1 고객만족센터 연결]\n\n카카오톡 1:1 채팅 상담 창으로 안전하게 이동합니다.\n(상담원 연결 대기시간: 약 1분 이내)');
+    }
+
+    function copyCsPhone(phone) {
+      navigator.clipboard.writeText(phone).then(() => {
+        alert(`📞 고객센터 전화번호(${phone})가 클립보드에 복사되었습니다.`);
+      });
+    }
+
+    /* Form Validation Handlers (메인페이지 100% 동일) */
+    function validateNameInput(input) {
+      const errorMsg = document.getElementById("nameErrorMsg");
+      if (input.value.trim().length >= 2) {
+        if (errorMsg) errorMsg.style.display = "none";
+        input.style.borderColor = "";
+      }
+    }
+
+    function formatPhoneNumber(input) {
+      let val = input.value.replace(/[^0-9]/g, '');
+      if (val.length > 3 && val.length <= 7) {
+        val = val.slice(0, 3) + '-' + val.slice(3);
+      } else if (val.length > 7) {
+        val = val.slice(0, 3) + '-' + val.slice(3, 7) + '-' + val.slice(7, 11);
+      }
+      input.value = val;
+      const errorMsg = document.getElementById("phoneErrorMsg");
+      const phoneRegex = /^01[0-9]-\d{3,4}-\d{4}$/;
+      if (phoneRegex.test(val)) {
+        if (errorMsg) errorMsg.style.display = "none";
+        input.style.borderColor = "";
+      }
+    }
+
+    /* Checkout Modal Controller & 3-State Workflow (메인페이지 100% 동일) */
+    function openCheckoutModal(planName) {
+      lastFocusedElement = document.activeElement;
+      if (planName) {
+        const planInput = document.getElementById("orderPlanName");
+        if (planInput) planInput.value = planName;
+      }
+      document.getElementById("checkoutFormBox").style.display = "block";
+      document.getElementById("checkoutLoadingBox").style.display = "none";
+      document.getElementById("checkoutSuccessBox").style.display = "none";
+      const errorBox = document.getElementById("checkoutErrorBox");
+      if (errorBox) errorBox.style.display = "none";
+
+      const nameError = document.getElementById("nameErrorMsg");
+      if (nameError) nameError.style.display = "none";
+      const phoneError = document.getElementById("phoneErrorMsg");
+      if (phoneError) phoneError.style.display = "none";
+      const nameInput = document.getElementById("orderCustName");
+      if (nameInput) nameInput.style.borderColor = "";
+      const phoneInput = document.getElementById("orderCustPhone");
+      if (phoneInput) phoneInput.style.borderColor = "";
+
+      const modal = document.getElementById("checkoutModal");
+      if (modal) {
+        modal.classList.add("active");
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          if (nameInput) nameInput.focus();
+        }, 100);
+      }
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById("checkoutModal");
+      if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = '';
+        if (lastFocusedElement) lastFocusedElement.focus();
+      }
+    }
+
+    function handleOrderSubmit(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById("orderCustName");
+      const phoneInput = document.getElementById("orderCustPhone");
+      const name = nameInput ? nameInput.value.trim() : '';
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+      const plan = document.getElementById("orderPlanName") ? document.getElementById("orderPlanName").value : '01. 나이트 오버타임 팩';
+
+      if (name.length < 2) {
+        const nameError = document.getElementById("nameErrorMsg");
+        if (nameError) nameError.style.display = "block";
+        if (nameInput) {
+          nameInput.focus();
+          nameInput.style.borderColor = "#EF4444";
+        }
+        return;
+      }
+
+      const phoneRegex = /^01[0-9]-\d{3,4}-\d{4}$/;
+      if (!phoneRegex.test(phone)) {
+        const phoneError = document.getElementById("phoneErrorMsg");
+        if (phoneError) phoneError.style.display = "block";
+        if (phoneInput) {
+          phoneInput.focus();
+          phoneInput.style.borderColor = "#EF4444";
+        }
+        return;
+      }
+
+      const orderNum = "AFIT-" + new Date().getFullYear() + "-" + String(Math.floor(1000 + Math.random() * 9000));
+
+      document.getElementById("checkoutFormBox").style.display = "none";
+      document.getElementById("checkoutLoadingBox").style.display = "block";
+
+      setTimeout(() => {
+        document.getElementById("checkoutLoadingBox").style.display = "none";
+        document.getElementById("checkoutSuccessBox").style.display = "block";
+
+        const orderNumElem = document.getElementById("successOrderNum");
+        if (orderNumElem) orderNumElem.innerText = orderNum;
+        const custNameElem = document.getElementById("successCustName");
+        if (custNameElem) custNameElem.innerText = name + " 님";
+        const planNameElem = document.getElementById("successPlanName");
+        if (planNameElem) planNameElem.innerText = plan;
+      }, 1200);
+    }
+
+    function retryCheckoutSubmit() {
+      const errorBox = document.getElementById("checkoutErrorBox");
+      if (errorBox) errorBox.style.display = "none";
+      document.getElementById("checkoutLoadingBox").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("checkoutLoadingBox").style.display = "none";
+        document.getElementById("checkoutSuccessBox").style.display = "block";
+      }, 1000);
+    }
+
+    function backToCheckoutForm() {
+      const errorBox = document.getElementById("checkoutErrorBox");
+      if (errorBox) errorBox.style.display = "none";
+      document.getElementById("checkoutFormBox").style.display = "block";
+    }
+
+    /* ESC Key Support & Modal Focus Trap */
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCsModal();
+        closeCheckoutModal();
+        closeQuickView();
+      }
+      if (e.key === 'Tab') {
+        const activeModal = document.querySelector('.modal.active');
+        if (!activeModal) return;
+        const focusables = activeModal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusables.length === 0) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

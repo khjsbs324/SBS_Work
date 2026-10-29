@@ -1,0 +1,84 @@
+{
+  "unit": "디지털디자인 사후관리",
+  "lcode": "10",
+  "source": {
+    "unit": "디지털디자인 사후관리",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=10",
+    "summary": "평가정보\n돌아가기\n구분\t본평가\t결석자평가\t재평가\t사전평가\t능력단위\n\n\n평가날짜\n\n평가시간\n\n커트라인\n\n패널티\n\n\t\n\n2026-08-28\n\n14:00~18:50\n\n60점\n\n0점\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t72.73\t78.2\n평가인원\t10\t0\t0",
+    "scores": [
+      {
+        "name": "이지희",
+        "score": "82",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1120"
+      },
+      {
+        "name": "최지혜",
+        "score": "80",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1124"
+      },
+      {
+        "name": "허지민",
+        "score": "80",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1122"
+      },
+      {
+        "name": "박찬미",
+        "score": "79",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1118"
+      },
+      {
+        "name": "강민경",
+        "score": "78",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1114"
+      },
+      {
+        "name": "김정은",
+        "score": "78",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1115"
+      },
+      {
+        "name": "박주연",
+        "score": "78",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1117"
+      },
+      {
+        "name": "이은경",
+        "score": "76",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1119"
+      },
+      {
+        "name": "이은수",
+        "score": "76",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1123"
+      },
+      {
+        "name": "임연우",
+        "score": "75",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1121"
+      }
+    ],
+    "samples": [
+      {
+        "name": "이지희",
+        "score": "82",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1120",
+        "feedback": "최종점수는 82점입니다. WICKETA의 사후관리 자료는 사용자 근거가 비교적 풍부합니다. 네 페르소나의 모니터링 대상과 수용 기준을 정하고, 일곱 VOC를 심각도·영향·사용 여정에 연결했으며 별도 감사 보고서에서 정보 위계, 레이아웃, 접근성, 인터랙션 문제를 분석했습니다. 단순한 기능 목록을 넘어 사용자가 어디에서 왜 불편한지를 설명한 점이 좋습니다. 최종 HTML에서도 실시간 검색 결과, 찜 상태와 수량, 장바구니 토스트, 리뷰 모달, 다섯 개 스튜디오 패널, B2B 기업 발주 폼이 실제로 작동했습니다. 라벤더 검색 시 해당 상품 한 개가 표시되고 찜·장바구니 수량도 갱신되어 주요 개선 기능의 구현 수준은 높았습니다. 가장 큰 보완점은 반응형 재검증입니다. 보고서에는 모바일 최소 글자 크기와 하단 고정바가 정상이고 전 기능이 통과했다고 적었지만, 실제 최종본은 1440px에서도 68px, 768px에서 18px, 390px에서 396px의 가로 넘침이 발생했습니다. 특히 390px에서는 페이지가 약 786px 고정 폭으로 남아 헤더와 오른쪽 콘텐츠가 잘립니다. 기능이 작동하더라도 주요 모바일 사용자가 화면 전체를 볼 수 없으므로 완료 판정을 유지할 수 없습니다. 고정 폭·최소 너비·긴 그리드·헤더 구성요소를 찾아 모바일 미디어 쿼리에서 한 열로 재배치하고, 360px·390px에서 scrollWidth와 clientWidth를 직접 비교해 주세요. 수정 전후 캡처뿐 아니라 넘침을 만든 요소의 선택자, 실제 너비, 조치와 재시험 결과를 보고서에 남기면 좋습니다. 04 보고서가 수정 후 파일을 ‘웹디자인 수정본.html’로 적고 실제 ZIP에는 별도의 ‘웹디자인_최종.html’이 있는 점도 일치시켜야 합니다. 가상 클라이언트로 진행한 사실은 감점하지 않았습니다. 요구사항과 질문·답변은 구체적이지만 수정 후 클라이언트 피드백을 항목별로 분석해 반영·보류 판단을 남긴 기록은 제한적입니다. 사용자 문서에서 보여 준 심각도·영향·로드맵 방식을 클라이언트 피드백에도 적용하고, 작업범위 조율서에서 비용·일정·난이도·유무상 범위와 승인 상태까지 연결해 주세요. 마지막으로 단계별 성공점과 아쉬운 점을 정리한 사후리뷰, 내부 공유 기록, 산출물 인덱스, 백업·버전관리표가 필요합니다. 세 HTML과 보조 문서의 변경 이력·해시·백업 위치·복구 결과·재사용 주의사항을 정리하면 현재 강점인 사용자 분석이 운영과 재사용까지 이어지는 완결된 사후관리 체계가 됩니다. 고생하셨습니다^^"
+      },
+      {
+        "name": "이은수",
+        "score": "76",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1123",
+        "feedback": "최종점수는 76점입니다. SADAN의 마패 등급 탐색, 장바구니 담기, 가격 정보, 진단 결과 구매 연결, 레이어링 세트, 이미지 교체, 상세 스펙의 일곱 문제를 구체적으로 나누고 직접 원인과 근본 원인, 완료 조건을 연결한 점이 좋습니다. 초안·수정본·최종본이 함께 있어 기능 변화도 비교할 수 있습니다. 최종 HTML을 직접 실행한 결과 마패 2 탭을 선택하면 시각·상품 패널과 선택 상태가 함께 바뀌었고, 상품을 담으면 장바구니 드로어가 열렸습니다. 향 진단 모달과 상품 상세 모달도 정상 작동했으며 1440px, 768px, 390px에서 가로 넘침은 없었습니다. 기능 로직과 기본 반응형 구조는 비교적 안정적입니다. 그러나 이미지 자산 패키징은 반드시 보완해야 합니다. 최종본이 직접 참조하는 히어로, 룩북, 마패 3종, 모듈러 4종, 디스커버리 킷과 썸네일 등 13개 고유 이미지 경로가 ZIP에 없습니다. 이 때문에 17개 이미지 요소가 깨지고 첫 화면부터 핵심 시각 자료가 표시되지 않습니다. 이는 화면 이동용 상대 파일 문제가 아니라 현재 페이지가 직접 사용하는 콘텐츠 자산이므로 독립 실행 완성도에 영향을 줍니다. 재검증 보고서에는 이미지가 정상 렌더링되고 누락이 없다고 기록되어 있어 실제 제출본과도 모순됩니다. 최종 제출 폴더를 새 위치에 복사한 뒤 네트워크를 끈 상태에서 열고, 개발자 도구의 Network 실패와 naturalWidth가 0인 이미지를 확인해 주세요. 모든 이미지가 보이는 상태의 ZIP을 다시 만든 후 파일 목록, 경로, 해시와 전후 캡처를 보고서에 연결해야 합니다. 가상 클라이언트 요구사항은 배경·목적·우선순위·완료 조건이 구체적이며 가상 방식 자체는 감점하지 않았습니다. 다만 작업범위 조율서와 피드백 분석·반영보고서가 없어 요청별 비용·일정·난이도·유무상 범위, 사용자 의견의 빈도와 영향, 수정 후 클라이언트 확인을 추적하기 어렵습니다. 반영·보류·추후 처리 판단과 승인 상태를 별도 표로 남겨 주세요. 마지막으로 사후리뷰, 산출물 인덱스, 백업·버전관리표를 추가해야 합니다. 특히 HTML뿐 아니라 이미지 폴더를 포함한 백업 위치, 버전별 변경 내용, 자산 무결성, 실제 복구 시험 결과를 기록하고 파일별 용도·라이선스·재사용 주의사항을 연결하면 같은 누락을 예방할 수 있습니다. 고생하셨습니다^^"
+      },
+      {
+        "name": "임연우",
+        "score": "75",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=10&FollowNo=1&Sid=sbsartdj1121",
+        "feedback": "최종점수는 75점입니다. SEUMIM의 모바일 화면 쏠림과 메뉴 드로어, 헤더 행동 버튼, 핵심 기술 시각화의 세 문제를 사용자 영향과 완료 조건에 연결해 정리했습니다. 원인분석서에서는 직접 원인과 근본 원인을 구분하고 기존 상품 데이터와 카피를 보존하는 방법까지 제시해 수정 방향을 이해하기 쉽습니다. 최종 HTML을 직접 실행한 결과 1440px, 768px, 390px에서 가로 넘침이 없었고, 메인·상품·스토리 내부 화면 전환과 모바일 메뉴, 3D 단면 Quick View 모달은 작동했습니다. 모바일 폭을 맞춘 점과 주요 탐색 흐름을 하나의 HTML 안에서 구현한 점은 장점입니다. 다만 재검증에서 확인해야 할 기능과 자산이 제출본에서 완결되지 않았습니다. 상품 카테고리 버튼은 filterShopPage 함수를 호출하지만 최종 코드에 그 함수가 정의되어 있지 않아 클릭 시 오류가 발생합니다. 또한 문제·사용사례 영역이 직접 참조하는 로컬 이미지 6개가 ZIP에 없어 화면에서 깨집니다. 보고서에는 15종 필터와 콘솔 무결성, 전 기능이 통과했다고 기록되어 있어 실제 결과와 모순됩니다. 최종 파일을 새 폴더에서 열어 모든 버튼을 직접 클릭하고 콘솔 오류와 실패 자산을 확인해 주세요. 카테고리별 예상 상품 수를 표로 만든 뒤 실제 표시 수와 비교하고, 누락 이미지를 상대 경로 그대로 포함한 후 오프라인에서 다시 시험해야 합니다. 한 페이지에 h1이 3개인 구조도 대표 제목 하나와 하위 h2로 정리하면 문서 위계와 접근성이 좋아집니다. 가상 클라이언트 방식은 감점하지 않았고 요구사항의 질문·답변과 완료 기준은 구체적으로 평가했습니다. 다만 작업범위 조율서와 피드백 분석·반영보고서가 없어 비용·일정·난이도·유무상 범위, 사용자 피드백의 빈도와 영향, 수정 후 클라이언트 확인을 추적하기 어렵습니다. 요청별 반영·보류·추후 처리 근거와 승인 상태를 남겨 주세요. 마지막으로 프로젝트 사후리뷰, 산출물 인덱스, 백업·버전관리표가 필요합니다. HTML과 이미지 자산을 한 패키지로 백업하고 버전별 변경 내용·해시·복구 시험을 기록하며, 각 파일의 용도·검색어·재사용 범위·주의사항을 정리하면 같은 회귀 오류와 자산 누락을 예방할 수 있습니다. 고생하셨습니다^^"
+      }
+    ],
+    "checked_at": "2026-10-29T02:45:33.472Z"
+  },
+  "diary_records": [],
+  "diary_scope_limit": "조회한 훈련일지의 내용 유무는 조회 범위에 한함. 비어 있는 날짜로 전체 기간에 수업 실행이 없었다고 추정하지 않음."
+}

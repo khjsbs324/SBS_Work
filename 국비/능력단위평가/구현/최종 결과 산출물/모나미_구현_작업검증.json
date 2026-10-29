@@ -1,0 +1,15 @@
+{
+  "command": "py -3.12 -X utf8 -B scripts/harness.py check --records",
+  "exitCode": 1,
+  "scope": "workspace_harness",
+  "implementationExam": {
+    "unit": "구현",
+    "items": 9,
+    "total": 100
+  },
+  "errors": [
+    "능력단위평가\\수정 보완\\CLAUDE.md: Missing link/import: 수정 보완",
+    "능력단위평가\\수정 보완\\Exam.md: Unsupported or malformed Exam headings"
+  ],
+  "note": "기존 수정 보완 평가의 오류 2건입니다. 모나미 HTML/CSS 정답의 정적 검사와 브라우저 검사는 별도 기록에서 통과했습니다."
+}

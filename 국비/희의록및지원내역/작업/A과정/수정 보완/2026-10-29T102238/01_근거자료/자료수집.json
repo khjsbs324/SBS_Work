@@ -1,0 +1,67 @@
+{
+  "course_id": "A",
+  "unit": "수정 보완",
+  "lcode": "8",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-29T01:25:41.462Z",
+  "scores_read": true,
+  "feedback_read": true,
+  "meeting_read": true,
+  "task_read": true,
+  "task_basis": "original",
+  "original_task_full_text_available": true,
+  "source_urls": [
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/evalC/question.php?Pcode=300002&Lcode=8&AppCode=AH&FollowNo=1",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1119",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1123",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1115",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1121",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1117",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1120",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1118",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1122",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1114",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1124",
+    "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/list.php?Pcode=300002&BoardCode=85"
+  ],
+  "local_sources": [
+    "능력단위평가/수정 보완/Exam.md",
+    "능력단위평가/수정 보완/피드백.md",
+    "능력단위평가/수정 보완/수정 보완 시험 출제.html"
+  ],
+  "group_basis": "현재 수정 보완 점수에 같은 과정의 기존 분석회의록(Lcode=7)에서 확인한 학습지원 기준 A>=80, B70~79, C60~69, F<60을 적용. 수정 보완 자체의 그룹 기준은 아직 빈 회의록에 없어 동일 과정 기준을 채택했음을 명시.",
+  "group_reference_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+  "groups": {
+    "A": [
+      "이은경",
+      "이은수"
+    ],
+    "B": [
+      "김정은",
+      "임연우",
+      "박주연",
+      "이지희",
+      "박찬미",
+      "허지민",
+      "강민경",
+      "최지혜"
+    ],
+    "C": [],
+    "F": []
+  },
+  "score_statistics": {
+    "count": 10,
+    "total": 790,
+    "average": 79,
+    "min": 76,
+    "max": 90
+  },
+  "limitations": [
+    "현재 저장된 평가와 피드백을 분석했으며 이번 지원작업에서 학생 저장소나 과거 화면검사를 다시 채점한 것은 아님.",
+    "김지선은 현재 단위 평가일·점수가 비어 있어 평가인원 10명 분석에서 제외.",
+    "로컬 피드백.md 제목은 구현 응용으로 남아 있어 수정 보완 원문·현재 평가·Exam.md를 우선함.",
+    "로컬 학생용 과제안내서의 CSS 파일명이 .css로만 표시된 표는 사용하지 않고 LMS 실제 원문으로 확인함."
+  ]
+}

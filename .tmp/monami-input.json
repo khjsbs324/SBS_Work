@@ -1,0 +1,143 @@
+{
+  "assets": [
+    {
+      "name": "logo.jpg",
+      "url": "https://www.monami.com/images/common/logo.jpg"
+    },
+    {
+      "name": "footer-logo.jpg",
+      "url": "https://www.monami.com/images/common/foot_logo.jpg"
+    },
+    {
+      "name": "facebook.gif",
+      "url": "https://www.monami.com/images/common/sns_facebook.gif"
+    },
+    {
+      "name": "instagram.gif",
+      "url": "https://www.monami.com/images/common/sns_insta.gif"
+    },
+    {
+      "name": "youtube.png",
+      "url": "https://www.monami.com/images/common/sns_youtube.png"
+    },
+    {
+      "name": "search.gif",
+      "url": "https://www.monami.com/images/common/btn_search.gif"
+    },
+    {
+      "name": "hero.jpg",
+      "url": "https://www.monami.com/images/main/visual1.jpg"
+    },
+    {
+      "name": "video-poster.jpg",
+      "url": "https://www.monami.com/images/main/bg_video.jpg"
+    },
+    {
+      "name": "inquiry-bg.jpg",
+      "url": "https://www.monami.com/images/main/inquiry_bg.jpg"
+    },
+    {
+      "name": "shop-bg.png",
+      "url": "https://www.monami.com/images/main/shop_bg.png"
+    },
+    {
+      "name": "arrow-left.gif",
+      "url": "https://www.monami.com/images/main/p_arr1.gif"
+    },
+    {
+      "name": "arrow-right.gif",
+      "url": "https://www.monami.com/images/main/p_arr2.gif"
+    },
+    {
+      "name": "scroll-cursor.gif",
+      "url": "https://www.monami.com/images/main/p_cursor.gif"
+    },
+    {
+      "name": "new-01.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_1699945409grwui60w6u.jpg"
+    },
+    {
+      "name": "new-02.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_169994521784nzg4whv7.jpg"
+    },
+    {
+      "name": "new-03.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_1715318030bhfwnjum09.jpg"
+    },
+    {
+      "name": "new-04.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_1681087061mb8i5l6zdx.jpg"
+    },
+    {
+      "name": "new-05.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/main/file1_1715319042z7nuju2l3p.jpg"
+    },
+    {
+      "name": "best-01.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2040136001_file6_1713138750ujw6qaj97g.jpg"
+    },
+    {
+      "name": "best-02.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/8801067962537_file6_16993368522ze8t9y6ul.jpg"
+    },
+    {
+      "name": "best-03.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2040048020_file6_1681086837wink3y4zfr.jpg"
+    },
+    {
+      "name": "best-04.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2040048012_file6_1583298386d4wy0fw22t.jpg"
+    },
+    {
+      "name": "best-05.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2010209001_file6_15106474920b1lr1fhnf.jpg"
+    },
+    {
+      "name": "best-06.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/0file6_15106488276b3copnqua.jpg"
+    },
+    {
+      "name": "best-07.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2010204001_file6_1510645904wfwu2dzbh8.jpg"
+    },
+    {
+      "name": "best-08.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/%202040012000_file6_1581983504aiqk5l95cs.jpg"
+    },
+    {
+      "name": "best-09.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2100013001_file6_1510646729quxjpnwxv2.jpg"
+    },
+    {
+      "name": "best-10.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2010207001_file6_15106464990pucf68uao.jpg"
+    },
+    {
+      "name": "best-11.jpg",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/product/2010205004_file6_15106462368v88izo2ui.jpg"
+    },
+    {
+      "name": "news.png",
+      "url": "https://dfrkkcv2hg1jc.cloudfront.net/data/board/bodo/b_file_1768790167lxyus9qzvj.png"
+    }
+  ],
+  "refs": [
+    {
+      "path": "https://github.com/khjsbs324/UIUXB_2610/blob/93673783dbea20b814985532778af348cb0e75d9/1%EC%BD%94%EB%94%A9/%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC/%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84/index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>마켓컬리 와이어프레임</title>\n  <!-- 구글 심볼 -->\n  <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200\" />\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <header>\n    <div class=\"top-banner\">지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!</div>\n    <div class=\"utility-menu\">\n      <div class=\"con utility-con\">\n        <nav>\n          <ul>\n            <li class=\"signup-link\">회원가입</li>\n            <li>로그인</li>\n            <li>고객센터</li>\n          </ul>\n        </nav>\n      </div>\n    </div>\n    <div class=\"main-header\">\n      <div class=\"con m-header-con\">\n        <div class=\"brand\">\n          <!-- H1 예정 -->\n          <img src=\"./image/logo/kurly-logo.svg\" alt=\"로고\">\n          <div class=\"brand-tabs\">\n            <div class=\"brand-tab active\">마켓컬리</div>\n            <div class=\"brand-tab\">뷰티컬리</div>\n          </div>\n        </div>\n        <div class=\"search\">검색어를 입력해주세요</div>\n        <div id=\"actions\" class=\"actions\">\n          <div class=\"ac-icon pin\">\n            <span class=\"location material-symbols-outlined\">location_on</span>\n          </div>\n          <div class=\"ac-icon wish\">\n            <span class=\"favorite material-symbols-outlined\">favorite</span>\n          </div>\n          <div class=\"ac-icon cart\">\n            <span class=\"shopping material-symbols-outlined\">shopping_cart</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  </header>\n  <main>\n    <div class=\"banner\">\n      <img src=\"./image/banner/banner01.png\" alt=\"배너 이미지\">\n    </div>\n    <div class=\"products\">\n      <div class=\"con products-con\">\n        <div class=\"products-header\">\n          <h2 class=\"products-title\">🛒지금 가장 많이 담는 특가</h2>\n          <p class=\"products-desc\">꼭 담아야 할 추천 특가템 최대 50% OFF</p>\n        </div>\n        <div class=\"product-list\">\n          <div class=\"product-card\">\n            <div class=\"product-image\">\n              <img src=\"./image/Products/product01.jpg\" alt=\"상품 이미지\">\n            </div>\n            <div class=\"product-add\">\n              <button type=\"button\" class=\"add-btn\">\n                <span class=\"add-label\">담기</span>\n                <span class=\"shopping material-symbols-outlined\">shopping_cart</span>\n              </button>\n            </div>\n            <div class=\"product-info\">\n              <p class=\"product-name\">[Kurly's] 동물복지 유정란 20구</p>\n              <p class=\"product-original-price\">10,580원</p>\n              <p class=\"product-sale-price\">\n                <span class=\"product-discount\">24%</span>\n                <span class=\"product-price\">7,990원</span>\n              </p>\n            </div>\n          </div>\n          <div class=\"product-card\">\n            <div class=\"product-image\">\n              <img src=\"./image/Products/product02.jpg\" alt=\"제주 감귤\">\n            </div>\n            <div class=\"product-add\">\n              <button type=\"button\" class=\"add-btn\">\n                <span class=\"add-label\">담기</span>\n                <span class=\"shopping material-symbols-outlined\">shopping_cart</span>\n              </button>\n            </div>\n            <div class=\"product-info\">\n              <p class=\"product-name\">[KF365] 새콤달콤 제주 감귤 1.5kg (비가림 하우스)</p>\n              <p class=\"product-original-price\">15,900원</p>\n              <p class=\"product-sale-price\">\n                <span class=\"product-discount\">25%</span>\n                <span class=\"product-price\">11,900원</span>\n              </p>\n            </div>\n          </div>\n          <div class=\"product-card\">\n            <div class=\"product-image\">\n              <img src=\"./image/Products/product03.jpg\" alt=\"스위티오 바나나\">\n            </div>\n            <div class=\"product-add\">\n              <button type=\"button\" class=\"add-btn\">\n                <span class=\"add-label\">담기</span>\n                <span class=\"shopping material-symbols-outlined\">shopping_cart</span>\n              </button>\n            </div>\n            <div class=\"product-info\">\n              <p class=\"product-name\">[Dole] 스위티오 바나나 2종 (택1)</p>\n              <p class=\"product-original-price\">4,200원</p>\n              <p class=\"product-sale-price\">\n                <span class=\"product-discount\">5%</span>\n                <span class=\"product-price\">3,990원~</span>\n              </p>\n            </div>\n          </div>\n          <div class=\"product-card\">\n            <div class=\"product-image\">\n              <img src=\"./image/Products/product04.jpg\" alt=\"노르웨이 생연어\">\n            </div>\n            <div class=\"product-add\">\n              <button type=\"button\" class=\"add-btn\">\n                <span class=\"add-label\">담기</span>\n                <span class=\"shopping material-symbols-outlined\">shopping_cart</span>\n              </button>\n            </div>\n            <div class=\"product-info\">\n              <p class=\"product-name\">[KF365] 항공직송 노르웨이 생연어 6종, 택1 (냉장)</p>\n              <p class=\"product-original-price\">15,900원</p>\n              <p class=\"product-sale-price\">\n                <span class=\"product-discount\">17%</span>\n                <span class=\"product-price\">13,150원~</span>\n              </p>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </main>\n</body>\n</html>\n"
+    },
+    {
+      "path": "https://github.com/khjsbs324/UIUXB_2610/blob/93673783dbea20b814985532778af348cb0e75d9/1%EC%BD%94%EB%94%A9/%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC/%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84/style.css",
+      "content": "@font-face {\n    font-family: 'Pretendard';\n    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');\n    font-weight: 100;\n    font-display: swap;\n}\n\n@font-face {\n    font-family: 'Pretendard';\n    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');\n    font-weight: 200;\n    font-display: swap;\n}\n\n@font-face {\n    font-family: 'Pretendard';\n    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');\n    font-weight: 300;\n    font-display: swap;\n}\n\n@font-face {\n    font-family: 'Pretendard';\n    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');\n    font-weight: 400;\n    font-display: swap;\n}\n\n@font-face {\n    font-family: 'Pretendard';\n    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');\n    font-weight: 500;\n    font-display: swap;\n}\n\n@font-face {\n    font-family: 'Pretendard';\n    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');\n    font-weight: 600;\n    font-display: swap;\n}\n\n@font-face {\n    font-family: 'Pretendard';\n    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');\n    font-weight: 700;\n    font-display: swap;\n}\n\n@font-face {\n    font-family: 'Pretendard';\n    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');\n    font-weight: 800;\n    font-display: swap;\n}\n\n@font-face {\n    font-family: 'Pretendard';\n    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');\n    font-weight: 900;\n    font-display: swap;\n}\n\n/* body: html자식 */\nbody {\n  font-family: 'Pretendard', sans-serif;\n}\nul, li {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\nh1, h2, h3, h4, h5, h6, p {\n  font-size: inherit; font-weight: normal;\n  margin: auto;\n}\nbutton {\n  margin: 0; padding: 0;\n  border: 0; background: none;\n  color: inherit;\n}\n\n/* component */\n.con {\n  width: 1050px; \n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n}\n\n\n.top-banner {\n  height: 42px;\n  background-color: #5F0080;\n  /* 글자 색상 color */\n  color: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 14px;\n}\n.utility-menu {\n  /* 선 */\n}\n.utility-con {\n  height: 35px;\n  justify-content: flex-end;\n  align-items: center;\n}\n.con>nav>ul {\n  display: flex;\n  gap: 12px;\n  font-size: 12px;\n}\n.signup-link {\n color: #5F0080;\n}\n.m-header-con {\n  justify-content: space-between;\n  align-items: center;\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n.brand {\n  display: flex; gap: 20px;\n  align-items: center;\n  width: 250px;\n}\n.brand-tabs {\n  display: flex; gap: 22px;\n  font-size: 18px;\n  color: #B5B5B5;\n}\n.brand-tab.active {\n  color: #5F0080;\n  font-weight: 500;\n}\n.search {\n  width: 400px; height: 48px;\n  border: 1px solid #5F0080;\n  border-radius: 8px;\n  padding-left: 20px;\n  padding-right: 20px;\n  /* 태그 크기안에 padding과 선 크기 포함 */\n  box-sizing: border-box;\n  display: flex; align-items: center;\n  font-size: 16px; color: #999;\n}\n.actions {\n  width: 250px;\n  display: flex; gap: 40px;\n  justify-content: flex-end;\n}\n#actions .location,\n#actions .favorite,\n#actions .shopping {\n  font-size: 28px;\n  cursor: pointer;\n}\n/*.location,.favorite,.shopping \n마우스 올리면 아이콘 색삭 변경*/\n#actions .location:hover,\n#actions .favorite:hover,\n#actions .shopping:hover {\n  color: #5F0080;\n}\n\n.banner {\n  background-color: gray;\n  height: 370px;\n}\n.banner img {\n  width: 100%; height: 100%;\n  object-fit: cover;\n}\n\n.products {\n  padding-top: 40px;\n  padding-bottom: 40px;\n}\n.products-con {\n  flex-direction: column;\n}\n.products-header {\n  text-align: center;\n}\n.products-title {\n  font-size: 28px;\n  color: #333; font-weight: 500;\n  padding-bottom: 8px;\n}\n.products-desc {\n  font-size: 16px; color: #999;\n}\n.product-list {\n  padding-top: 23px;\n  display: flex; gap: 18px;\n}\n.product-card {\n  /* background-color: gray; */\n  flex-grow: 1; flex-basis: 0;\n}\n.product-image {\n  border-radius: 4px;\n  overflow: hidden;\n}\n.product-image img {\n  width: 100%;\n}\n.product-add {\n  padding-top: 6px; padding-bottom: 8px;\n}\n.product-add .shopping {\n  font-size: 20px;\n}\n.add-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 16px; color: #222;\n  border: 1px solid #DFE4EB;\n  height: 36px; width: 100%;\n  border-radius: 4px;\n}\n.product-name {\n  font-size: 16px; color: #333;\n}\n.product-original-price {\n  font-size: 16px; color: #BCC4CC;\n  padding-top: 8px;\n  padding-bottom: 7px;\n}\n.product-discount {\n  font-size: 16px; color: #FA622F;\n  font-weight: 700;\n  padding-right: 8px;\n}\n.product-price {\n  font-size: 16px; color: #222;\n  font-weight: 700;\n}\n"
+    },
+    {
+      "path": "https://github.com/khjsbs324/UIUXB_2610/blob/93673783dbea20b814985532778af348cb0e75d9/1%EC%BD%94%EB%94%A9/HTML%EA%B8%B0%EC%B4%88/index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>HTML기초</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <div class=\"flex-box\">\n    <div class=\"row01\">01</div>\n    <div class=\"row02\">02</div>\n    <div class=\"row03\">03</div>\n  </div>\n</body>\n</html>\n"
+    },
+    {
+      "path": "https://github.com/khjsbs324/UIUXB_2610/blob/93673783dbea20b814985532778af348cb0e75d9/1%EC%BD%94%EB%94%A9/HTML%EA%B8%B0%EC%B4%88/style.css",
+      "content": ".flex-box {\n  display: flex;\n  flex-direction: row;\n}\n\n.row01 {\n  /* 배경색 */\n  background-color: red;\n  /* 높이 */\n  height: 100px;\n  /* 너비 */\n  width: 300px;\n}\n\n.row02 {\n  /* 배경색 */\n  background-color: orange;\n  /* 높이 */\n  height: 200px;\n}\n\n.row03 {\n  /* 배경색 */\n  background-color: green;\n  /* 높이 */\n  height: 300px;\n}"
+    }
+  ],
+  "commit": "93673783dbea20b814985532778af348cb0e75d9"
+}

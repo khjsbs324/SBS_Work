@@ -1,0 +1,190 @@
+{
+  "unit": "디자인 구성요소 설계",
+  "lcode": "7",
+  "unit_end_date": "2026-07-24",
+  "reassessment_date": "2026-07-27",
+  "appraisal_summary": "평가정보\n돌아가기\n구분\t본평가\t결석자평가\t재평가\t사전평가\t능력단위\n\n\n평가날짜\n\n평가시간\n\n커트라인\n\n패널티\n\n\t\n\n2026-07-24\n\n16:00~18:50\n\n60점\n\n0점\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t\n\n2026-07-27\n\n10:00~13:00\n\n0점\n\n10점\n\n\t90.91\t73.36\n평가인원\t11\t0\t1",
+  "students": [
+    {
+      "name": "최지혜",
+      "score": "82",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1124"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "이은경",
+      "score": "81",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1119"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "김지선",
+      "score": "79",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1116"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "이은수",
+      "score": "78",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1123"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "강민경",
+      "score": "76",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=3&Sid=sbsartdj1114"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "박주연",
+      "score": "75",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1117"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "임연우",
+      "score": "73",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1121"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "박찬미",
+      "score": "70",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1118"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "이지희",
+      "score": "67",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1120"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "허지민",
+      "score": "64",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1122"
+        }
+      ],
+      "reasonSnippets": []
+    },
+    {
+      "name": "김정은",
+      "score": "62",
+      "links": [
+        {
+          "text": "보기",
+          "href": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=1&Sid=sbsartdj1115"
+        }
+      ],
+      "reasonSnippets": []
+    }
+  ],
+  "reassessment_records": [
+    {
+      "unit": "디자인 구성요소 설계",
+      "lcode": "7",
+      "name": "강민경",
+      "display_score": "76",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/teacher.php?Pcode=300002&Lcode=7&FollowNo=3&Sid=sbsartdj1114",
+      "performance": [
+        {
+          "caption": "수행평가서",
+          "rows": [
+            [
+              "능력단위명",
+              "디자인 구성요소 설계",
+              "시작일",
+              "2026-07-06",
+              "종료일",
+              "2026-07-24"
+            ],
+            [
+              "본평가",
+              "2026-07-24",
+              "결석자평가",
+              "-",
+              "재평가",
+              "2026-07-27"
+            ],
+            [
+              "-",
+              "-",
+              "76"
+            ],
+            [
+              "성취수준",
+              "수행정도"
+            ],
+            [
+              "",
+              "5. 해당 지식과 기술을 확실하게 습득하여 직무수행에 필요한 기술적 사고력과 문제 해결력을 토대로 주도적으로 완벽한 작업을 수행할 수 있다."
+            ],
+            [
+              "",
+              "4. 해당 지식과 기술을 습득하여 직무수행에 필요한 기술적 사고력과 문제 해결력을 토대로 작업을 수행할 수 있다."
+            ],
+            [
+              "",
+              "3. 해당 지식과 기술을 대부분 습득하여 직무수행에 필요한 지식과 기술을 가지고 대부분의 작업을 수행할 수 있다."
+            ],
+            [
+              "",
+              "2. 해당 지식과 기술을 부분적으로 습득하여 직무수행에 필요한 지식과 기술을 가지고 타인과 공동으로 작업을 수행할 수 있다."
+            ]
+          ]
+        }
+      ],
+      "feedback": "텐핏 프로젝트는 클라이언트가 고정한 서비스 목적, 24~36세 사무직 직장인이라는 핵심 타깃, 웹사이트 공개일과 서비스 출시 일정, 네이비·라임 중심의 디자인 방향, 금지 요소 및 필수 콘텐츠를 정확히 분석했으며, 이를 AIDA 모델에 따른 공감→서비스 이해→프로그램 탐색→운동 기록과 후기 확인→요금 비교→7일 무료 체험 신청의 정보 흐름으로 설계 방향 제안서, 화면 설계서, 메인페이지 전체 와이어프레임에 높은 수준으로 연결한 점이 우수했음. 특히 필수 콘텐츠 10종과 UI 구성요소 8종을 요구사항 추적 매트릭스로 정리하고, 반응형 정책, 상태 및 접근성 가이드, 아토믹 컴포넌트, 프로그램 카드 클릭 시 가입 유도 모달, 앵커 이동, 기록 데이터 시각화, CTA와 입력 필드의 상태 변화까지 구체적으로 정의하여 단순한 화면 배치가 아니라 사용자 행동과 기능의 연결 관계를 설계 문서에서 확인할 수 있었음. Gemini 공유 대화에서도 최초 자료 진단 이후 누락된 필수 콘텐츠와 UI 요소를 보강하고, 여러 파일로 분리된 화면 설계서를 통합하며, 와이어프레임의 화면 잘림과 코드 구성 문제를 반복적으로 수정한 과정이 확인되었고, 공개 GitHub 저장소에 index.html과 4개의 커밋이 남아 있어 LLM 결과를 그대로 제출한 것이 아니라 검토와 수정 과정을 거쳤다는 점도 긍정적이었음. 다만 설계 방향 제안서에는 LLM을 활용한 UI·UX 및 홈트레이닝 웹 트렌드 조사 과정이 별도로 제시되지 않았으며, AIDA, Fogg 행동 모델, 아토믹 디자인, 데이터형 UI와 같은 설계 개념은 활용했지만 어떤 트렌드 후보를 조사했고 그중 무엇을 텐핏에 채택하거나 제외했는지, 그 판단이 타깃과 서비스 목적에 왜 적합한지에 대한 비교 근거가 부족했음. 따라서 경쟁 서비스와 최근 홈트레이닝 웹의 콘텐츠 구조, 개인화 추천, 마이크로 인터랙션, 데이터 시각화, 짧은 운동 콘텐츠 등의 경향을 분석한 뒤 채택 요소와 제외 요소 및 이유를 표로 정리할 필요가 있음. 또한 로컬로 제출한 HTML과 GitHub의 index.html은 폼 검증, 푸터 정보, 일부 카피와 스타일 등에서 차이가 있으므로 어느 파일이 최종본인지 명확하지 않았으며, 화면 설계서와 와이어프레임 PDF, 검증 리포트가 서로 다른 구현 상태를 가리키는 문제가 있었음. 최종 HTML 한 개를 확정한 뒤 문서 버전, 작성일, 기준 파일명과 GitHub 기준 커밋 SHA를 모든 제출물에 동일하게 명시하고, 저장소에도 설계 방향 제안서, 화면 설계서, 와이어프레임, 프롬프트 및 검증 리포트 원본을 함께 정리해야 함. 리포지터리 URL과 .git URL은 같은 저장소의 웹 주소와 복제 주소이므로 별도의 두 제출물이 아니라 동일 링크의 중복 제출이라는 점도 명시하는 것이 적절함. 최종 검증 체크리스트는 실제 차이와 미반영 요소가 존재함에도 모든 항목을 PASS, 100%, 무결점, 추가 수정 불필요로 판정하여 객관성이 부족했으므로, 모바일 하단 고정 CTA 미반영, 태블릿 환경의 세부 규칙 부족, 설계용 후기와 가상 데이터 표시 미흡, 모바일 후기 마키의 좌우 잘림, 긴 제목의 불안정한 줄바꿈, 로컬 파일과 저장소 파일의 버전 차이 등을 수정 필요로 분류하고 문서 페이지, HTML 클래스명, 코드 위치 또는 화면 캡처를 확인 근거로 함께 기록해야 함. 반응형 설계 역시 데스크톱·태블릿·모바일의 기본 브레이크포인트와 카드 재배치 원칙은 마련되어 있으나 디바이스별 제목·본문 글자 크기, 버튼의 최소 높이와 터치 영역, 이미지 비율과 크롭 방식, 섹션 여백, 카드 간격, 내비게이션 전환 방식, 데이터 패널 배열을 하나의 구성요소 표준표로 정리하지 않아 실제 제작과 검수 과정에서 일관성을 유지하기 어려움. 최종적으로 트렌드 분석과 채택·제외 근거를 설계 방향 제안서에 추가하고, 최종 HTML 버전을 하나로 통일하며, 실제 미반영 사항을 포함한 근거 중심의 검증 체크리스트와 디바이스별 구성요소 표준표를 보완한다면 현재의 풍부한 기획 내용이 보다 신뢰도 높은 실무 설계 문서로 완성될 것임.",
+      "checked_at": "2026-10-29T02:30:01.559Z"
+    }
+  ],
+  "checked_at": "2026-10-29T02:28:49.674Z"
+}

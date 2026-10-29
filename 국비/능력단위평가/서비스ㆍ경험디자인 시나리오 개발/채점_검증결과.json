@@ -1,0 +1,304 @@
+{
+  "unit": "서비스ㆍ경험디자인 시나리오 개발",
+  "checkedAt": "2026-10-23T04:35:42.860492+00:00",
+  "status": "passed",
+  "students": [
+    {
+      "student": "강민경",
+      "Sid": "sbsartdj1114",
+      "rows": 10,
+      "registeredTotal": 89,
+      "registeredScores": [
+        9,
+        9,
+        8,
+        9,
+        8,
+        9,
+        10,
+        9,
+        10,
+        8
+      ],
+      "feedbackSha256": "02787c36b20d0349326862f1e6e25782220f98098f8317ecee49943b11ca705b",
+      "warnings": [],
+      "status": "passed"
+    },
+    {
+      "student": "박주연",
+      "Sid": "sbsartdj1117",
+      "rows": 10,
+      "registeredTotal": 79,
+      "registeredScores": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        8,
+        8,
+        7,
+        8,
+        7
+      ],
+      "feedbackSha256": "73be21a5baf0f463a9b543c98468585b8f9e8448cc7a89a2f2f3b74715a0a783",
+      "warnings": [],
+      "status": "passed"
+    },
+    {
+      "student": "박찬미",
+      "Sid": "sbsartdj1118",
+      "rows": 10,
+      "registeredTotal": 78,
+      "registeredScores": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        8,
+        7,
+        7,
+        8,
+        7
+      ],
+      "feedbackSha256": "11c9d244e04c14d0b77ad4b72fefa67196acc6d0927a97fae457a85863c6e4d3",
+      "warnings": [],
+      "status": "passed"
+    },
+    {
+      "student": "이은경",
+      "Sid": "sbsartdj1119",
+      "rows": 10,
+      "registeredTotal": 83,
+      "registeredScores": [
+        9,
+        9,
+        8,
+        9,
+        7,
+        9,
+        8,
+        7,
+        9,
+        8
+      ],
+      "feedbackSha256": "d3ca45817d9f308c8f50eedbb4b1a7dd1638355cdbd5aec26d4d32127d5d31da",
+      "warnings": [],
+      "status": "passed"
+    },
+    {
+      "student": "이은수",
+      "Sid": "sbsartdj1123",
+      "rows": 10,
+      "registeredTotal": 82,
+      "registeredScores": [
+        9,
+        9,
+        8,
+        9,
+        7,
+        9,
+        9,
+        7,
+        8,
+        7
+      ],
+      "feedbackSha256": "6712f6dad397155f9b35a40184fa3e0c6b3c990f4f726ee922a54697beda0ba0",
+      "warnings": [],
+      "status": "passed"
+    },
+    {
+      "student": "이지희",
+      "Sid": "sbsartdj1120",
+      "rows": 10,
+      "registeredTotal": 85,
+      "registeredScores": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        9,
+        9,
+        8,
+        10,
+        8
+      ],
+      "feedbackSha256": "aa7ff30fd5b5e3d49a1ac0ddb29d7abb7c979b2a981a08e8299058cd5a333d84",
+      "warnings": [],
+      "status": "passed"
+    },
+    {
+      "student": "임연우",
+      "Sid": "sbsartdj1121",
+      "rows": 10,
+      "registeredTotal": 88,
+      "registeredScores": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        9,
+        9,
+        9,
+        11,
+        9
+      ],
+      "feedbackSha256": "6e1b4357a9b1c5764dfd13f7404662efcdcffbd041639ce78705c9b97b075216",
+      "warnings": [],
+      "status": "passed"
+    },
+    {
+      "student": "최지혜",
+      "Sid": "sbsartdj1124",
+      "rows": 10,
+      "registeredTotal": 80,
+      "registeredScores": [
+        9,
+        9,
+        7,
+        9,
+        7,
+        9,
+        8,
+        7,
+        8,
+        7
+      ],
+      "feedbackSha256": "828800ff47edc57eb6c65b25d925291a8ef7696fd85afa72f29b39d745fbaddf",
+      "warnings": [],
+      "status": "passed"
+    },
+    {
+      "student": "허지민",
+      "Sid": "sbsartdj1122",
+      "rows": 10,
+      "registeredTotal": 77,
+      "registeredScores": [
+        9,
+        9,
+        6,
+        8,
+        7,
+        8,
+        8,
+        7,
+        8,
+        7
+      ],
+      "feedbackSha256": "3ee9783e49979ebe22544dc33d65bf1cc6a10ae52df9ea71648128e3e1b45004",
+      "warnings": [],
+      "status": "passed"
+    }
+  ],
+  "checks": [
+    "Exam 10문항·총점 100점 대응",
+    "9명 PDF 원본 크기·SHA-256 일치",
+    "문항별 환산·합계",
+    "증빙·판단 기록",
+    "공개문·교사 기록 일치와 내부 정보 비노출"
+  ],
+  "globalHarness": "다른 평가 「수정 보완」의 기존 CLAUDE 링크와 Exam 제목 오류 2건. 다른 평가의 줄바꿈 차이 경고 있음. 이번 대상에는 오류·경고 없음.",
+  "siteVerification": {
+    "status": "passed",
+    "checkedAt": "2026-10-23T04:40:08.942921+00:00",
+    "students": [
+      {
+        "student": "강민경",
+        "Sid": "sbsartdj1114",
+        "registeredTotal": 89,
+        "criteria": 10,
+        "verifiedAt": "2026-10-23T04:37:49.3912118Z",
+        "feedbackSha256": "02787c36b20d0349326862f1e6e25782220f98098f8317ecee49943b11ca705b",
+        "proof": "채점 자료/강민경/검토/사이트_등록후_재조회.json",
+        "status": "passed"
+      },
+      {
+        "student": "박주연",
+        "Sid": "sbsartdj1117",
+        "registeredTotal": 79,
+        "criteria": 10,
+        "verifiedAt": "2026-10-23T04:38:05.9462735Z",
+        "feedbackSha256": "73be21a5baf0f463a9b543c98468585b8f9e8448cc7a89a2f2f3b74715a0a783",
+        "proof": "채점 자료/박주연/검토/사이트_등록후_재조회.json",
+        "status": "passed"
+      },
+      {
+        "student": "박찬미",
+        "Sid": "sbsartdj1118",
+        "registeredTotal": 78,
+        "criteria": 10,
+        "verifiedAt": "2026-10-23T04:38:11.3368789Z",
+        "feedbackSha256": "11c9d244e04c14d0b77ad4b72fefa67196acc6d0927a97fae457a85863c6e4d3",
+        "proof": "채점 자료/박찬미/검토/사이트_등록후_재조회.json",
+        "status": "passed"
+      },
+      {
+        "student": "이은경",
+        "Sid": "sbsartdj1119",
+        "registeredTotal": 83,
+        "criteria": 10,
+        "verifiedAt": "2026-10-23T04:38:22.7817167Z",
+        "feedbackSha256": "d3ca45817d9f308c8f50eedbb4b1a7dd1638355cdbd5aec26d4d32127d5d31da",
+        "proof": "채점 자료/이은경/검토/사이트_등록후_재조회.json",
+        "status": "passed"
+      },
+      {
+        "student": "이은수",
+        "Sid": "sbsartdj1123",
+        "registeredTotal": 82,
+        "criteria": 10,
+        "verifiedAt": "2026-10-23T04:38:28.0402784Z",
+        "feedbackSha256": "6712f6dad397155f9b35a40184fa3e0c6b3c990f4f726ee922a54697beda0ba0",
+        "proof": "채점 자료/이은수/검토/사이트_등록후_재조회.json",
+        "status": "passed"
+      },
+      {
+        "student": "이지희",
+        "Sid": "sbsartdj1120",
+        "registeredTotal": 85,
+        "criteria": 10,
+        "verifiedAt": "2026-10-23T04:38:33.2913773Z",
+        "feedbackSha256": "aa7ff30fd5b5e3d49a1ac0ddb29d7abb7c979b2a981a08e8299058cd5a333d84",
+        "proof": "채점 자료/이지희/검토/사이트_등록후_재조회.json",
+        "status": "passed"
+      },
+      {
+        "student": "임연우",
+        "Sid": "sbsartdj1121",
+        "registeredTotal": 88,
+        "criteria": 10,
+        "verifiedAt": "2026-10-23T04:38:51.8610072Z",
+        "feedbackSha256": "6e1b4357a9b1c5764dfd13f7404662efcdcffbd041639ce78705c9b97b075216",
+        "proof": "채점 자료/임연우/검토/사이트_등록후_재조회.json",
+        "status": "passed"
+      },
+      {
+        "student": "최지혜",
+        "Sid": "sbsartdj1124",
+        "registeredTotal": 80,
+        "criteria": 10,
+        "verifiedAt": "2026-10-23T04:38:57.4036494Z",
+        "feedbackSha256": "828800ff47edc57eb6c65b25d925291a8ef7696fd85afa72f29b39d745fbaddf",
+        "proof": "채점 자료/최지혜/검토/사이트_등록후_재조회.json",
+        "status": "passed"
+      },
+      {
+        "student": "허지민",
+        "Sid": "sbsartdj1122",
+        "registeredTotal": 77,
+        "criteria": 10,
+        "verifiedAt": "2026-10-23T04:39:02.7234984Z",
+        "feedbackSha256": "3ee9783e49979ebe22544dc33d65bf1cc6a10ae52df9ea71648128e3e1b45004",
+        "proof": "채점 자료/허지민/검토/사이트_등록후_재조회.json",
+        "status": "passed"
+      }
+    ],
+    "criteriaVerified": 90,
+    "fullFeedbackVerified": 9,
+    "overviewProof": "사이트_최종목록_재조회.json",
+    "overviewAverage": "82.33"
+  }
+}

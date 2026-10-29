@@ -1,0 +1,445 @@
+{
+  "student": "홍석경",
+  "unit": "구현",
+  "Sid": "sbsartdj1170",
+  "Pcode": "500000",
+  "Lcode": "8",
+  "receivedAt": "2026-10-26T04:22:22.051Z",
+  "archive": "원본\\1792725262_db6975e6.zip",
+  "archive_sha256": "9d13cf2e2c7f98e46d6a7cc90b42d7af25ac9003e398296f77fe9fb65563077d",
+  "archive_bytes": 507065,
+  "submittedLinks": [
+    {
+      "href": "https://github.com/lf2net080/TEST_MONAMI.git",
+      "onclick": null
+    }
+  ],
+  "files": [
+    {
+      "filename": "학생_검토사본\\.git\\COMMIT_EDITMSG",
+      "archive_filename": ".git/COMMIT_EDITMSG",
+      "bytes": 17,
+      "sha256": "4649a42ed001aab47c508643a06d8b96a8fd4ef8156b68ced3954ea3049edb85"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\config",
+      "archive_filename": ".git/config",
+      "bytes": 362,
+      "sha256": "9e824eb55cf5985c81e8a150b1c9cff28db1c76a1f0e1e85704b7770048ce0fe"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\description",
+      "archive_filename": ".git/description",
+      "bytes": 73,
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\FETCH_HEAD",
+      "archive_filename": ".git/FETCH_HEAD",
+      "bytes": 100,
+      "sha256": "8c239cead99e32e739ce48d2b59e6d0944287634e8708bf5ce3a28a6b37ba71b"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\HEAD",
+      "archive_filename": ".git/HEAD",
+      "bytes": 21,
+      "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\applypatch-msg.sample",
+      "archive_filename": ".git/hooks/applypatch-msg.sample",
+      "bytes": 478,
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\commit-msg.sample",
+      "archive_filename": ".git/hooks/commit-msg.sample",
+      "bytes": 896,
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\fsmonitor-watchman.sample",
+      "archive_filename": ".git/hooks/fsmonitor-watchman.sample",
+      "bytes": 4726,
+      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\post-update.sample",
+      "archive_filename": ".git/hooks/post-update.sample",
+      "bytes": 189,
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\pre-applypatch.sample",
+      "archive_filename": ".git/hooks/pre-applypatch.sample",
+      "bytes": 424,
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\pre-commit.sample",
+      "archive_filename": ".git/hooks/pre-commit.sample",
+      "bytes": 1649,
+      "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\pre-merge-commit.sample",
+      "archive_filename": ".git/hooks/pre-merge-commit.sample",
+      "bytes": 416,
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\pre-push.sample",
+      "archive_filename": ".git/hooks/pre-push.sample",
+      "bytes": 1374,
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\pre-rebase.sample",
+      "archive_filename": ".git/hooks/pre-rebase.sample",
+      "bytes": 4898,
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\pre-receive.sample",
+      "archive_filename": ".git/hooks/pre-receive.sample",
+      "bytes": 544,
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\prepare-commit-msg.sample",
+      "archive_filename": ".git/hooks/prepare-commit-msg.sample",
+      "bytes": 1492,
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\push-to-checkout.sample",
+      "archive_filename": ".git/hooks/push-to-checkout.sample",
+      "bytes": 2783,
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\sendemail-validate.sample",
+      "archive_filename": ".git/hooks/sendemail-validate.sample",
+      "bytes": 2308,
+      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\hooks\\update.sample",
+      "archive_filename": ".git/hooks/update.sample",
+      "bytes": 3650,
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\index",
+      "archive_filename": ".git/index",
+      "bytes": 2149,
+      "sha256": "64efd56789d507a99a183962b5c1ace037adb497e715f309870d930cfeffb152"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\info\\exclude",
+      "archive_filename": ".git/info/exclude",
+      "bytes": 240,
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\logs\\HEAD",
+      "archive_filename": ".git/logs/HEAD",
+      "bytes": 166,
+      "sha256": "c637256fc7dcac1e75a00093106e39b470e190f2b64c211d40b3d4b394eade8b"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\logs\\refs\\heads\\main",
+      "archive_filename": ".git/logs/refs/heads/main",
+      "bytes": 166,
+      "sha256": "c637256fc7dcac1e75a00093106e39b470e190f2b64c211d40b3d4b394eade8b"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+      "archive_filename": ".git/logs/refs/remotes/origin/HEAD",
+      "bytes": 278,
+      "sha256": "eca97f265a5147133f423cbf4aa224df90089cd743496de56e1570f6199f0573"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\logs\\refs\\remotes\\origin\\main",
+      "archive_filename": ".git/logs/refs/remotes/origin/main",
+      "bytes": 146,
+      "sha256": "b597931e21f554a6a5b342551b50b81e08a52936eb9f7a7fd6ab4fb6d9adf42b"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\02\\a5d1a71055d8fc9857da37df7dc794975dd669",
+      "archive_filename": ".git/objects/02/a5d1a71055d8fc9857da37df7dc794975dd669",
+      "bytes": 1036,
+      "sha256": "23b78fb398b23e5182f6990ed82706544b156762242734a73023356fdce9afb9"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\10\\af50fe243a63a6d2df5431d56520f1753dd096",
+      "archive_filename": ".git/objects/10/af50fe243a63a6d2df5431d56520f1753dd096",
+      "bytes": 638,
+      "sha256": "d2334a4661bd30e0d7085068e46328a27059ba01b52b6807158f1404ecb335af"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\16\\2f54397eb4ef96f8aa620a51eadca06f9cfc2d",
+      "archive_filename": ".git/objects/16/2f54397eb4ef96f8aa620a51eadca06f9cfc2d",
+      "bytes": 98,
+      "sha256": "9d6c121c455a3e248654730c1de57a584566a357d11a91fe6ce0a4b421a5ecba"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\23\\5605b6921ba1ce91d72d2d46ead846b816fec3",
+      "archive_filename": ".git/objects/23/5605b6921ba1ce91d72d2d46ead846b816fec3",
+      "bytes": 844,
+      "sha256": "2e92db939ac6001d1646e64e1c00a06ef1ffff6ae99c17466ec9b2a4b60473bf"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\2f\\b19aad266d96c390541e7b09f7b5c93d792649",
+      "archive_filename": ".git/objects/2f/b19aad266d96c390541e7b09f7b5c93d792649",
+      "bytes": 426,
+      "sha256": "f573c355031dfea851c5ac79af33b92c6e6d7de42136d57b33d8d4d114542900"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\37\\00b903c34e9b93d3addaca9bff5c5ce9b4a260",
+      "archive_filename": ".git/objects/37/00b903c34e9b93d3addaca9bff5c5ce9b4a260",
+      "bytes": 194,
+      "sha256": "a6930609c214afee4bd6250aa94520cb60e5451e92da7252fb1f3b3917e805cb"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\43\\026677feb3fbc2aec80d06d8c7834d83365dc6",
+      "archive_filename": ".git/objects/43/026677feb3fbc2aec80d06d8c7834d83365dc6",
+      "bytes": 307,
+      "sha256": "21bf546d40ad65ae43f343809cba90bff087e81c0498538b441c14342ed70d8f"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\4f\\6d2567f274ad6b49e5fb071416d4ad78a6cfb3",
+      "archive_filename": ".git/objects/4f/6d2567f274ad6b49e5fb071416d4ad78a6cfb3",
+      "bytes": 216843,
+      "sha256": "05c26804564a0d35bc1ca52669598b523ee8ec1e4ce4ffcea9486570081865fe"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\5b\\1c31e0e2df3f39ce142e26fe5be1660f936c15",
+      "archive_filename": ".git/objects/5b/1c31e0e2df3f39ce142e26fe5be1660f936c15",
+      "bytes": 819,
+      "sha256": "c629b92f5423201de90055b9de7fb8193373cb198bd3227993e704e8f445a67e"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\5e\\b78a7129964e088ab25075c9b7dedfb4873bed",
+      "archive_filename": ".git/objects/5e/b78a7129964e088ab25075c9b7dedfb4873bed",
+      "bytes": 9684,
+      "sha256": "f89c70d73bcc21dfa93b9c76e01be516fb413e5e4a90796922f5c6591f291297"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\6a\\9462a8c14d91b4bd09bc0118f548cb653b0830",
+      "archive_filename": ".git/objects/6a/9462a8c14d91b4bd09bc0118f548cb653b0830",
+      "bytes": 145,
+      "sha256": "e5e89670284230bd51afef100b684d8ee031f488b1962982dc79149901d6880b"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\78\\ba42ae72fed3013bba6fd5055a13c9172d140a",
+      "archive_filename": ".git/objects/78/ba42ae72fed3013bba6fd5055a13c9172d140a",
+      "bytes": 1100,
+      "sha256": "489dc03ba5c34f652d3a6204c1a16528bda43d8c20625322aace69db2232ee1d"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\87\\27b5208361a6348bb1ebee630cdfc3ad28b746",
+      "archive_filename": ".git/objects/87/27b5208361a6348bb1ebee630cdfc3ad28b746",
+      "bytes": 86,
+      "sha256": "b3eede142a905260d1579f721cfc2467a5787aadda906f4c93557bb3c062d2bc"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\98\\93e5250015c98208ab6582127244c575c906c3",
+      "archive_filename": ".git/objects/98/93e5250015c98208ab6582127244c575c906c3",
+      "bytes": 1268,
+      "sha256": "9bc7ba876ebbdeb5e3df554d624f210de13f4f23b52ff5826031f885c80cb874"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\ac\\f5726f4ce04fd64c509c941a1015f7dd4df103",
+      "archive_filename": ".git/objects/ac/f5726f4ce04fd64c509c941a1015f7dd4df103",
+      "bytes": 138,
+      "sha256": "2a6f7acb5256cf40ed188b649d2fea54f244e67d94883b09a21693add6761b09"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\d3\\7234c173185c19293371c4c6458f0c824fb58f",
+      "archive_filename": ".git/objects/d3/7234c173185c19293371c4c6458f0c824fb58f",
+      "bytes": 812,
+      "sha256": "c4cd1d6b8e8e8916846cc0b6435d6501bc684ce714d6cd2b10348a09a85380fe"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\e0\\52a647af4641db7e79a1466c964d193903f6aa",
+      "archive_filename": ".git/objects/e0/52a647af4641db7e79a1466c964d193903f6aa",
+      "bytes": 855,
+      "sha256": "f65bd36e533af90d185a7f8de6eb3eacec85593714b8bb6a5c48e1aaf369c6c7"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\e6\\9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "archive_filename": ".git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 15,
+      "sha256": "164c5fa8067facf1a43f09ce3d0e35ebf53a7f5723ecbf15a8667cfc53c26f6c"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\e7\\6065cabef5d39c9e3c05e450adbc8e1602c6df",
+      "archive_filename": ".git/objects/e7/6065cabef5d39c9e3c05e450adbc8e1602c6df",
+      "bytes": 138,
+      "sha256": "3db6e88d229a0d1e30e34c4ba4f28f972f685851f7917066d4c75bf8eb50e770"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\e9\\d70e67e0e56bea5b8a3aba59eddd6f184b1aa7",
+      "archive_filename": ".git/objects/e9/d70e67e0e56bea5b8a3aba59eddd6f184b1aa7",
+      "bytes": 816,
+      "sha256": "ab8a6506f11d24d5da8a1aedb89c1a81a425eb534321cad38ddbe7adf856668d"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\fa\\ee8ada324b89b6d3bb5b281629637352200c2c",
+      "archive_filename": ".git/objects/fa/ee8ada324b89b6d3bb5b281629637352200c2c",
+      "bytes": 512,
+      "sha256": "1e866f6d2187ad0db969ad158b2b08d087375a9c519f900d79212bb96e991c41"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\ff\\3dba06dbea8b46e496e19eb59a66d6bd2c4205",
+      "archive_filename": ".git/objects/ff/3dba06dbea8b46e496e19eb59a66d6bd2c4205",
+      "bytes": 246,
+      "sha256": "d3066bea4363546dfe38a37f151f037e75aa021b9f2e13e5cd0de1dee6ee3779"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\objects\\ff\\89236b2839d55bf97781c4a0c0ff96a596f8d3",
+      "archive_filename": ".git/objects/ff/89236b2839d55bf97781c4a0c0ff96a596f8d3",
+      "bytes": 1204,
+      "sha256": "665f6fb5937f092f9b7d418866ce0206da6e5e20e7b89ef0772d867a1706b302"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\refs\\heads\\main",
+      "archive_filename": ".git/refs/heads/main",
+      "bytes": 41,
+      "sha256": "276696c072fa42494013bdf0f9f874a3524627a38d9b13ac833686a4ea043e24"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\refs\\remotes\\origin\\HEAD",
+      "archive_filename": ".git/refs/remotes/origin/HEAD",
+      "bytes": 30,
+      "sha256": "2bb6a24aa0fc6c484100f5d51a29bbad841cd2c755f5d93faa204e5dbb4eb2b4"
+    },
+    {
+      "filename": "학생_검토사본\\.git\\refs\\remotes\\origin\\main",
+      "archive_filename": ".git/refs/remotes/origin/main",
+      "bytes": 41,
+      "sha256": "276696c072fa42494013bdf0f9f874a3524627a38d9b13ac833686a4ea043e24"
+    },
+    {
+      "filename": "학생_검토사본\\.playwright-mcp\\console-2026-10-23T00-16-15-696Z.log",
+      "archive_filename": ".playwright-mcp/console-2026-10-23T00-16-15-696Z.log",
+      "bytes": 605,
+      "sha256": "0a57ea64895fb319a7529430094b8099005241acea58aeabd676a4d50b937fda"
+    },
+    {
+      "filename": "학생_검토사본\\.playwright-mcp\\console-2026-10-23T00-51-52-084Z.log",
+      "archive_filename": ".playwright-mcp/console-2026-10-23T00-51-52-084Z.log",
+      "bytes": 6541,
+      "sha256": "01e02bc4d5082ed1a4994d7cdff872a6bcef7057b9b107912a229fd4211ba93e"
+    },
+    {
+      "filename": "학생_검토사본\\.playwright-mcp\\console-2026-10-23T01-01-16-158Z.log",
+      "archive_filename": ".playwright-mcp/console-2026-10-23T01-01-16-158Z.log",
+      "bytes": 143,
+      "sha256": "d26f7723c52ef5cf95fdb6f339082b0c1693083c988ed748a82e973297503321"
+    },
+    {
+      "filename": "학생_검토사본\\.playwright-mcp\\console-2026-10-23T01-39-46-087Z.log",
+      "archive_filename": ".playwright-mcp/console-2026-10-23T01-39-46-087Z.log",
+      "bytes": 137,
+      "sha256": "e6830685942a5b790100508d80b9a3cb32ab55f4ab6b317279ea501e9b435352"
+    },
+    {
+      "filename": "학생_검토사본\\.playwright-mcp\\page-2026-10-23T00-16-15-728Z.yml",
+      "archive_filename": ".playwright-mcp/page-2026-10-23T00-16-15-728Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "filename": "학생_검토사본\\.playwright-mcp\\page-2026-10-23T00-51-55-025Z.yml",
+      "archive_filename": ".playwright-mcp/page-2026-10-23T00-51-55-025Z.yml",
+      "bytes": 36362,
+      "sha256": "5a401db7ea5a3613207e2cc9cd3921ae8a1a7f0ec452d1b931286882bce2eaf3"
+    },
+    {
+      "filename": "학생_검토사본\\.playwright-mcp\\page-2026-10-23T01-01-16-641Z.yml",
+      "archive_filename": ".playwright-mcp/page-2026-10-23T01-01-16-641Z.yml",
+      "bytes": 141,
+      "sha256": "616977f7e280c13ea81739054230117ab5d67abc3e04356b38b42b5e22aa4ddf"
+    },
+    {
+      "filename": "학생_검토사본\\.playwright-mcp\\page-2026-10-23T01-01-27-293Z.yml",
+      "archive_filename": ".playwright-mcp/page-2026-10-23T01-01-27-293Z.yml",
+      "bytes": 141,
+      "sha256": "616977f7e280c13ea81739054230117ab5d67abc3e04356b38b42b5e22aa4ddf"
+    },
+    {
+      "filename": "학생_검토사본\\.playwright-mcp\\page-2026-10-23T01-39-41-708Z.yml",
+      "archive_filename": ".playwright-mcp/page-2026-10-23T01-39-41-708Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "filename": "학생_검토사본\\chatGPT.md",
+      "archive_filename": "chatGPT.md",
+      "bytes": 1802,
+      "sha256": "e4ab32fa3b10c04eacc5c7c922a5751ef82b2fb9b6f4debb3a04cd92b6810462"
+    },
+    {
+      "filename": "학생_검토사본\\image\\banner.jpg",
+      "archive_filename": "image/banner.jpg",
+      "bytes": 219987,
+      "sha256": "87787a03d651106db37dfe80f79f91cda31f1073efb07b5c8c97308b5f0d49ee"
+    },
+    {
+      "filename": "학생_검토사본\\image\\icon\\lang_arr.gif",
+      "archive_filename": "image/icon/lang_arr.gif",
+      "bytes": 1154,
+      "sha256": "414cec54c27b28f1469e6a822c2702247ca5303581a2054f19d16f5f556ea4c3"
+    },
+    {
+      "filename": "학생_검토사본\\image\\icon\\lang_eng.gif",
+      "archive_filename": "image/icon/lang_eng.gif",
+      "bytes": 1361,
+      "sha256": "9a423a90a251067d33e9fe628ee85e191d84b8750a85e1de45f55207f28810ae"
+    },
+    {
+      "filename": "학생_검토사본\\image\\icon\\lang_kor.gif",
+      "archive_filename": "image/icon/lang_kor.gif",
+      "bytes": 1585,
+      "sha256": "f8b4f2448adac0e97e8495978aaf93bc5e87f7131d8feca0b02ee08c3c512e0b"
+    },
+    {
+      "filename": "학생_검토사본\\image\\icon\\sns_facebook.gif",
+      "archive_filename": "image/icon/sns_facebook.gif",
+      "bytes": 1372,
+      "sha256": "211ba02c9dbfc3482a0f25aa3f7044d5a5593d6464cafe848e645cd9ac992751"
+    },
+    {
+      "filename": "학생_검토사본\\image\\icon\\sns_insta.gif",
+      "archive_filename": "image/icon/sns_insta.gif",
+      "bytes": 1583,
+      "sha256": "a14caae98a3fece92c3910c5b333fff3b37c365abad1cd3eea74acd5f70dd4c8"
+    },
+    {
+      "filename": "학생_검토사본\\image\\icon\\sns_youtube.png",
+      "archive_filename": "image/icon/sns_youtube.png",
+      "bytes": 799,
+      "sha256": "df04d4af2fd0540467424ccc737ef6d223e92a2fd67529929c6b1944feb30574"
+    },
+    {
+      "filename": "학생_검토사본\\image\\icon\\tm_bar.gif",
+      "archive_filename": "image/icon/tm_bar.gif",
+      "bytes": 1096,
+      "sha256": "08c277b2102afd398e00de0e83b958d280d70799cdb44694cc15fc8f6dcab9c6"
+    },
+    {
+      "filename": "학생_검토사본\\index.html",
+      "archive_filename": "index.html",
+      "bytes": 1290,
+      "sha256": "feff20c1431fc4c3610b1f2df3ac780580a674eb5b175c7a03666db829a4aebe"
+    },
+    {
+      "filename": "학생_검토사본\\style.css",
+      "archive_filename": "style.css",
+      "bytes": 1707,
+      "sha256": "6aab1d141a154666a46db51fbef87a21d269413d43b518dfe09e67869b187355"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+    "student":  "이지희",
+    "Sid":  "sbsartdj1120",
+    "url":  "sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/evalC/answer.php?Pcode=300002\u0026Lcode=12\u0026AppCode=B\u0026FollowNo=1\u0026Sid=sbsartdj1120",
+    "requestedAt":  "2026-10-23T04:38:30.6551765Z",
+    "scores":  [
+                   9,
+                   9,
+                   7,
+                   9,
+                   7,
+                   9,
+                   9,
+                   8,
+                   10,
+                   8
+               ],
+    "feedbackSha256":  "aa7ff30fd5b5e3d49a1ac0ddb29d7abb7c979b2a981a08e8299058cd5a333d84"
+}

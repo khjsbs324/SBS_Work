@@ -1,0 +1,43 @@
+{
+  "name": "김형관",
+  "Sid": "sbsartdj1166",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1166",
+  "downloads": [
+    {
+      "filename": "1792725266_86ea1fb0.zip",
+      "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725266_86ea1fb0.zip",
+      "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/김형관/원본/1792725266_86ea1fb0.zip"
+    }
+  ],
+  "currentScore": "0 / 100",
+  "submittedAnswer": "",
+  "submittedLinks": [
+    {
+      "href": "https://github.com/gudrhks1403-droid/uiuxb1023.git",
+      "onclick": null
+    }
+  ],
+  "receivedAt": "2026-10-26T04:22:15.035Z",
+  "archiveBytes": 4291502,
+  "sha256": "54819901bfa7fdd1b43d24e45d2a125e9feb5e5f4221099046dd1d8d911fd55f",
+  "memberCount": 82,
+  "codeFiles": [
+    {
+      "path": "학생_검토사본\\시험\\index.html",
+      "bytes": 2897,
+      "monami": true
+    },
+    {
+      "path": "학생_검토사본\\시험\\style.css",
+      "bytes": 2235,
+      "monami": false
+    }
+  ],
+  "git": [
+    {
+      "directory": "학생_검토사본",
+      "head": "ref: refs/heads/main",
+      "commit": "dcf4b75f9168548d3010e66e24538f4b4302ff89"
+    }
+  ]
+}

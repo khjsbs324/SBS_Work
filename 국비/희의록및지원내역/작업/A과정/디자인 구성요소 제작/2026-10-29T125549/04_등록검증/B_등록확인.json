@@ -1,0 +1,34 @@
+{
+  "course_id": "A",
+  "unit": "디자인 구성요소 제작",
+  "lcode": "9",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "group": "B",
+  "post_date": "2026-08-21",
+  "title": "[능력단위평가_지원내역] 디자인 구성요소 제작 B그룹 지원자료",
+  "post_id": "1071",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1071",
+  "checked_at": "2026-10-29T04:06:21.506Z",
+  "title_exact": true,
+  "date_exact": true,
+  "text_exact": true,
+  "images_loaded": true,
+  "anchors_valid": true,
+  "reference_urls": [
+    "https://toss.tech/article/toss-design-system-guide",
+    "https://toss.im/tossfeed/article/toss-designer-interview"
+  ],
+  "styles": {
+    "maxWidth": "980px",
+    "fontSize": "17px",
+    "lineHeight": "33.15px",
+    "tablePadding": "14px 16px"
+  },
+  "anchor_navigation": true,
+  "attachment_status": 200,
+  "attachment_sha256": "80d8f20b1515bebfca56530f555883b704c3b79a047865b09b154fccfc6d997d",
+  "course_confirmed": true,
+  "observed_in_list": true
+}

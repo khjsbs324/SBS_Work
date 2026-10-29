@@ -1,0 +1,24 @@
+{
+  "course_id": "A",
+  "unit": "테스트 단위",
+  "lcode": "6",
+  "checked_at": "2026-10-29T13:49:56+09:00",
+  "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=6",
+  "unit_elements": [
+    "실제 요소 제작하기"
+  ],
+  "students": [
+    {
+      "id": "A",
+      "name": "학생A"
+    },
+    {
+      "id": "B",
+      "name": "학생B"
+    },
+    {
+      "id": "C",
+      "name": "학생C"
+    }
+  ]
+}

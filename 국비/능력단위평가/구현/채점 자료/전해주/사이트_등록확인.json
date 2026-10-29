@@ -1,0 +1,50 @@
+{
+  "student": "전해주",
+  "Sid": "sbsartdj1169",
+  "Pcode": "500000",
+  "Lcode": "8",
+  "unit": "구현",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1169",
+  "saved": true,
+  "alreadyCorrect": false,
+  "total": 79,
+  "scores": [
+    10,
+    8,
+    8,
+    10,
+    8,
+    9,
+    9,
+    8,
+    9
+  ],
+  "siteMaxima": [
+    12,
+    10,
+    10,
+    12,
+    10,
+    12,
+    12,
+    10,
+    12
+  ],
+  "criterionIds": [
+    "55",
+    "56",
+    "57",
+    "58",
+    "59",
+    "60",
+    "61",
+    "62",
+    "63"
+  ],
+  "allIntegers": true,
+  "feedbackSHA256": "fadda170b9d90a1275b577de9ce11cddeb3dba06183d62daf35b0d6f42804810",
+  "feedbackChars": 2706,
+  "feedbackExactMatch": true,
+  "verifiedAt": "2026-10-26T04:41:21.562Z",
+  "dialogs": []
+}

@@ -1,0 +1,14 @@
+{
+  "student": "박찬미",
+  "pages": [
+    {
+      "page": 1,
+      "width": 9287.0,
+      "height": 11241.0,
+      "lines": 226,
+      "characters": 1497
+    }
+  ],
+  "method": "PyMuPDF get_texttrace Unicode glyphs, line origin and bounding boxes; original PDF unchanged",
+  "visualReview": "Overview rendered; text content and figures require subsequent human/model visual review before scoring."
+}

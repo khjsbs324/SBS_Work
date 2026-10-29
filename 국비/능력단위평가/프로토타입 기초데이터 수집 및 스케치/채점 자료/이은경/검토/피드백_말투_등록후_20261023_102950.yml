@@ -1,0 +1,234 @@
+- generic [ref=f201e1]:
+  - banner [ref=f201e2]:
+    - generic [ref=f201e3]:
+      - generic [ref=f201e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f201e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f201e8]:
+    - generic [ref=f201e9]:
+      - generic [ref=f201e10]:
+        - generic [ref=f201e11]: 김혜지
+        - generic [ref=f201e12]:
+          - button "정보수정" [ref=f201e13] [cursor=pointer]
+          - button "비번변경" [ref=f201e14] [cursor=pointer]
+          - button "PIN변경" [ref=f201e15] [cursor=pointer]
+      - list [ref=f201e16]:
+        - listitem [ref=f201e17] [cursor=pointer]:
+          - generic [ref=f201e18]:
+            - generic [aria-hidden] [ref=f201e19]: 
+            - text: 훈련과정
+        - listitem [ref=f201e20] [cursor=pointer]:
+          - generic [ref=f201e21]:
+            - generic [aria-hidden] [ref=f201e22]: 
+            - text: 공지사항
+      - list [ref=f201e23]:
+        - listitem [ref=f201e24] [cursor=pointer]:
+          - generic [ref=f201e25]:
+            - paragraph [ref=f201e26]:
+              - generic [aria-hidden] [ref=f201e27]: 
+            - paragraph [ref=f201e28]: 고객센터
+        - listitem [ref=f201e29] [cursor=pointer]:
+          - generic [ref=f201e30]:
+            - paragraph [ref=f201e31]:
+              - generic [aria-hidden] [ref=f201e32]: 
+            - paragraph [ref=f201e33]: 카톡문의
+    - generic [ref=f201e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f201e35]:
+        - caption [ref=f201e36]:
+          - generic [ref=f201e37]:
+            - generic [ref=f201e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f201e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f201e48]:
+          - row [ref=f201e49]:
+            - cell "개강일" [ref=f201e50]
+            - cell "2026-05-20" [ref=f201e51]
+            - cell "종강일" [ref=f201e52]
+            - cell "2026-12-04" [ref=f201e53]
+            - cell "강사" [ref=f201e54]
+            - cell "김가경, 김혜지" [ref=f201e55]
+          - row [ref=f201e56]:
+            - cell "실시인원" [ref=f201e57]
+            - cell "11" [ref=f201e58]
+            - cell "수강인원" [ref=f201e59]
+            - cell "9" [ref=f201e60]
+            - cell "수강포기인원" [ref=f201e61]
+            - cell "2" [ref=f201e62]
+      - list [ref=f201e63]:
+        - listitem [ref=f201e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f201e65]
+        - listitem [ref=f201e66] [cursor=pointer]:
+          - generic "시간표" [ref=f201e67]
+        - listitem [ref=f201e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f201e69]
+        - listitem [ref=f201e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f201e71]
+        - listitem [ref=f201e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f201e73]
+        - listitem [ref=f201e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f201e75]
+        - listitem [ref=f201e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f201e77]
+        - listitem [ref=f201e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f201e79]
+        - listitem [ref=f201e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f201e81]
+        - listitem [ref=f201e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f201e83]
+        - listitem [ref=f201e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f201e85]
+        - listitem [ref=f201e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f201e87]
+        - listitem [ref=f201e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f201e89]
+        - listitem [ref=f201e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f201e91]
+        - listitem [ref=f201e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f201e93]
+        - listitem [ref=f201e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f201e95]
+        - listitem [ref=f201e96] [cursor=pointer]:
+          - generic "과제" [ref=f201e97]
+        - listitem [ref=f201e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f201e99]
+        - listitem [ref=f201e100] [cursor=pointer]:
+          - generic [ref=f201e101]: 게시판생성
+        - listitem [ref=f201e102] [cursor=pointer]:
+          - generic [ref=f201e103]: 게시판순서변경
+      - table "평가정보 돌아가기" [ref=f201e104]:
+        - caption [ref=f201e105]:
+          - generic [ref=f201e106]:
+            - generic [ref=f201e107]: 평가정보
+            - link "돌아가기" [ref=f201e109] [cursor=pointer]:
+              - /url: ../app/appraisal.php?Pcode=300002&Lcode=13&AppCode=AF
+        - rowgroup [ref=f201e116]:
+          - row [ref=f201e117]:
+            - cell "능력단위명" [ref=f201e118]
+            - cell "프로토타입 기초데이터 수집 및 스케치" [ref=f201e119]
+            - cell "평가일시" [ref=f201e120]
+            - cell "2026-10-22" [ref=f201e121]
+            - cell [ref=f201e122]:
+              - paragraph [ref=f201e123]: 93 / 100
+              - paragraph [ref=f201e124]: "패널티 : 0점"
+          - row [ref=f201e125]:
+            - cell "훈련강사" [ref=f201e126]
+            - cell "김*지, 김*경" [ref=f201e127]
+            - cell "훈련생명" [ref=f201e128]
+            - cell "이은경" [ref=f201e129]
+      - table "평가내역 평가점수 일괄등록" [ref=f201e131]:
+        - caption [ref=f201e132]:
+          - generic [ref=f201e133]:
+            - generic [ref=f201e134]: 평가내역
+            - link "평가점수 일괄등록" [ref=f201e136] [cursor=pointer]:
+              - /url: "#"
+        - rowgroup [ref=f201e144]:
+          - row [ref=f201e145]:
+            - columnheader "문항" [ref=f201e146]
+            - columnheader "문제" [ref=f201e147]
+            - columnheader "모범답안" [ref=f201e148]
+            - columnheader "제출답안" [ref=f201e149]
+            - columnheader "파일" [ref=f201e150]
+            - columnheader "링크" [ref=f201e151]
+        - rowgroup [ref=f201e152]:
+          - row [ref=f201e153]:
+            - cell "1" [ref=f201e154]
+            - cell "기초데이터와 레퍼런스를 분석하여 제작한 스토리보드 및 프로토타입 스케치를 제출해 주세요" [ref=f201e155]
+            - cell [ref=f201e156]:
+              - button "모범답안" [ref=f201e157] [cursor=pointer]
+            - cell "-" [ref=f201e158]
+            - cell [ref=f201e159]:
+              - link "다운로드" [ref=f201e160] [cursor=pointer]:
+                - /url: /uflist/download.php?type=project_appraisal&pcode=300002&lcode=13&file=1792588415_cc2cf4fc.zip
+            - cell "-" [ref=f201e161]
+        - rowgroup [ref=f201e162]:
+          - row [ref=f201e163]:
+            - cell [ref=f201e164]
+  - dialog [active] [ref=f201e165]:
+    - generic [ref=f201e166]:
+      - generic [ref=f201e167]:
+        - heading "평가점수 일괄등록" [level=5] [ref=f201e168]
+        - button "Close" [ref=f201e169] [cursor=pointer]
+      - table [ref=f201e172]:
+        - rowgroup [ref=f201e177]:
+          - row [ref=f201e178]:
+            - columnheader "능력단위요소명" [ref=f201e179]
+            - columnheader "채점기준" [ref=f201e180]
+            - columnheader "점수" [ref=f201e181]
+        - rowgroup [ref=f201e182]:
+          - row [ref=f201e183]:
+            - cell "기초데이터 수집하기" [ref=f201e184]
+            - cell "프로토타입 제작을 위한 기초데이터와 레퍼런스 데이터를 수집하여 장 단점을 분석할 수 있다." [ref=f201e185]
+            - cell "9 10" [ref=f201e186]:
+              - generic [ref=f201e187]:
+                - spinbutton [ref=f201e188]: "9"
+                - generic [ref=f201e189]: "10"
+          - row [ref=f201e190]:
+            - cell "기초데이터 수집하기" [ref=f201e191]
+            - cell "아이디어를 시각화하기 위한 디자인 기획을 바탕으로 스케치를 할 수 있다." [ref=f201e192]
+            - cell "10 10" [ref=f201e193]:
+              - generic [ref=f201e194]:
+                - spinbutton [ref=f201e195]: "10"
+                - generic [ref=f201e196]: "10"
+          - row [ref=f201e197]:
+            - cell "기초데이터 수집하기" [ref=f201e198]
+            - cell "아이디어 스케치한 결과물을 구현이 가능하도록 설명할 수 있다." [ref=f201e199]
+            - cell "10 10" [ref=f201e200]:
+              - generic [ref=f201e201]:
+                - spinbutton [ref=f201e202]: "10"
+                - generic [ref=f201e203]: "10"
+          - row [ref=f201e204]:
+            - cell "레퍼런스 조사‧분석하기" [ref=f201e205]
+            - cell "프로토타입 제작을 위한 스토리보드 구성과 인터렉션, 모션그래픽 또는 애니메이션을 제작 할 수 있다." [ref=f201e206]
+            - cell "10 10" [ref=f201e207]:
+              - generic [ref=f201e208]:
+                - spinbutton [ref=f201e209]: "10"
+                - generic [ref=f201e210]: "10"
+          - row [ref=f201e211]:
+            - cell "레퍼런스 조사‧분석하기" [ref=f201e212]
+            - cell "프로토타입 제작물을 바탕으로 사용성 테스트를 하기위한 방법론을 적용할 수 있다." [ref=f201e213]
+            - cell "8 10" [ref=f201e214]:
+              - generic [ref=f201e215]:
+                - spinbutton [ref=f201e216]: "8"
+                - generic [ref=f201e217]: "10"
+          - row [ref=f201e218]:
+            - cell "레퍼런스 조사‧분석하기" [ref=f201e219]
+            - cell "사용성 테스트를 통한 사용성에 대한 정의와 문제점을 도출 할 수 있다." [ref=f201e220]
+            - cell "10 10" [ref=f201e221]:
+              - generic [ref=f201e222]:
+                - spinbutton [ref=f201e223]: "10"
+                - generic [ref=f201e224]: "10"
+          - row [ref=f201e225]:
+            - cell "레퍼런스 조사‧분석하기" [ref=f201e226]
+            - cell "사용성 테스트 결과를 바탕으로 프로토타입 스케치를 수정 할 수 있다." [ref=f201e227]
+            - cell "9 10" [ref=f201e228]:
+              - generic [ref=f201e229]:
+                - spinbutton [ref=f201e230]: "9"
+                - generic [ref=f201e231]: "10"
+          - row [ref=f201e232]:
+            - cell "아이디어 스케치하기" [ref=f201e233]
+            - cell "디자인 콘셉트에 따라 아이디어를 스토리보드에 맞게 썸네일 스케치(thumbnail sketch)할 수 있다." [ref=f201e234]
+            - cell "9 10" [ref=f201e235]:
+              - generic [ref=f201e236]:
+                - spinbutton [ref=f201e237]: "9"
+                - generic [ref=f201e238]: "10"
+          - row [ref=f201e239]:
+            - cell "아이디어 스케치하기" [ref=f201e240]
+            - cell "실제 전달 매체에 맞추어 디자인 스타일, 컬러, 텍스쳐, 모션을 구체화시킬 수 있다." [ref=f201e241]
+            - cell "9 10" [ref=f201e242]:
+              - generic [ref=f201e243]:
+                - spinbutton [ref=f201e244]: "9"
+                - generic [ref=f201e245]: "10"
+          - row [ref=f201e246]:
+            - cell "아이디어 스케치하기" [ref=f201e247]
+            - cell "필요에 따라 전체 스토리보드에 대한 세부 시안과 종합 패키지를 제작할 수 있다." [ref=f201e248]
+            - cell "9 10" [ref=f201e249]:
+              - generic [ref=f201e250]:
+                - spinbutton [ref=f201e251]: "9"
+                - generic [ref=f201e252]: "10"
+          - row [ref=f201e253]:
+            - cell [ref=f201e254]:
+              - textbox "이곳에 피드백을 입력하세요." [ref=f201e255]: SOAPHE는 소재·공간·쓰임의 관계를 화면 설계와 문제 분석에 함께 연결한 점이 좋았습니다. 브랜드 소개에서 선택한 소재를 제품 탐색 조건으로 이어지게 하고, 메인·소개·카테고리의 썸네일을 서로 다른 구조로 비교한 점도 적절했습니다. 공유 증빙 PDF의 26~28쪽에서도 각 화면의 세 가지 대안과 선정 이유를 확인할 수 있습니다. 이는 시안을 여러 개 나열하는 데서 그치지 않고 사용자의 탐색 목적에 따라 구성을 선택한 근거가 됩니다. 보고서 9.2절의 백자 비누 받침 사례는 구체적인 분석 근거입니다. 수정 전에는 백자 받침 두 개가 조회되다가 욕실·세면대 조건을 추가하면 0개가 되었고, ‘홈카페 & 세면대’라는 설명과 제품의 공간 분류가 어긋나 있었습니다. 이 상태에서는 사용자가 자신이 찾는 용도의 상품이 없다고 해석할 가능성이 있습니다. 이는 실제 참여자가 그렇게 반응했다는 뜻이 아니라, 기록된 조건과 결과에서 예상할 수 있는 탐색상의 위험입니다. 최신 보고서 10장에서는 복수 공간 태그로 바꾼 뒤 백자·욕실 조건에서 두 개가 나오고, 전체 초기화 후 25개로 돌아온다고 정리했습니다. 수정된 HTML과 도식도 제출되어 있으므로 이 문제를 계속 미수정 상태로 설명할 필요는 없습니다. 다음에는 수정 전의 조건, 변경한 기준, 수정 후 결과를 한 화면의 같은 위치에서 비교하면 개선 과정이 더 명확해질 것 같습니다. 코드 처리 이름을 늘어놓기보다 ‘상품 설명의 사용 공간과 선택 조건이 일치하도록 바꿨다’는 결정이 먼저 읽히게 정리하면 설계 의도를 이해하는 데 도움이 될 것입니다. 사용성 점검은 현재 확인한 범위를 구분해서 설명하면 더욱 정확해질 것 같습니다. 9.1~9.2절은 AI가 구성한 가상 경로와 제한된 함수 실행이며, 실제 사람의 이해도나 선택 행동을 관찰한 자료는 아닙니다. 점검자에게 ‘욕실에 둘 백자 받침 하나를 골라 정보 확인 후 목록으로 돌아오기’를 맡기는 방식으로 보완해 볼 수 있습니다. 어떤 조건부터 고르는지, 선택 조건과 결과 수를 알아보는지, 상세를 닫은 뒤 탐색을 이어가는지를 기록하면 실제 탐색 과정을 파악하는 데 도움이 될 것입니다. 한 과업을 손 스케치나 저충실도 시안으로 진행해도 되므로 완성된 서비스나 결제 기능이 필요하지는 않습니다. 카드 펼침과 별도 상세 팝업을 단일 상세 확인으로 정리한 변경도 같은 과업에서 살펴보면 좋겠습니다. 정보가 카드에 바로 보이게 한 사실과, 점검자가 더 적은 망설임으로 후보를 고른 결과는 다릅니다. 실제로 멈춘 지점이 있었다면 그 위치와 발언을 남기고, 이후 수정한 화면에서 동일 과업을 다시 확인하면 변경의 효과를 설명하기 쉬울 것입니다. 이미 수정된 상태를 다시 바꾸기보다 현재 선택이 과업에 맞는지 확인하는 데 집중하면 됩니다. 마지막으로 공유 PDF는 이전 버전이고 최신 Markdown에는 공간 태그 수정과 선물 구성 등이 추가되어 있습니다. 두 문서의 완료·보류 표시가 다르면 다음 제작자가 어느 내용을 기준으로 작업해야 할지 혼동할 수 있습니다. 최신 보고서와 실제 원본의 파일명·화면 번호를 맞추고, PDF에서도 같은 수정 상태가 보이도록 갱신하면 인계 자료가 더욱 명확해질 것입니다. 최종점수는 93점입니다. 이미 수정한 설계를 바탕으로 실제 수행자 점검과 최신 전달본의 일치를 먼저 확인하면, 현재의 구체적인 분석이 더욱 잘 전달될 것 같습니다. 고생하셨습니다.
+        - rowgroup [ref=f201e256]:
+          - row [ref=f201e257]:
+            - cell [ref=f201e258]:
+              - button "채점하기" [ref=f201e259] [cursor=pointer]

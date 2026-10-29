@@ -1,0 +1,36 @@
+[   63736ms] [ERROR] Mixed Content: The page at 'https://noonnu.cc/index' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/earlyaccess/nanumgothic.css'. This request has been blocked; the content must be served over HTTPS. @ https://cdn.noonnu.cc/public/vite/assets/tosspayments_controller-Ag-EGOmF.js:416
+[   63939ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   63939ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   63939ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   63939ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   63939ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   63939ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   63939ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   63939ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   63947ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   63947ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   71060ms] [ERROR] Mixed Content: The page at 'https://noonnu.cc/index' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/earlyaccess/nanumgothic.css'. This request has been blocked; the content must be served over HTTPS. @ https://cdn.noonnu.cc/public/vite/assets/tosspayments_controller-Ag-EGOmF.js:416
+[   71072ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js:20
+[   71073ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js:20
+[   76810ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   76810ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   76864ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   76864ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   76885ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   76885ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   76950ms] [ERROR] Access to font at 'https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.woff2' from origin 'https://noonnu.cc' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://noonnu.cc/index:0
+[   76950ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.woff2:0
+[   76950ms] [ERROR] Access to font at 'https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Bold.woff2' from origin 'https://noonnu.cc' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://noonnu.cc/index:0
+[   76950ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Bold.woff2:0
+[   77128ms] [ERROR] Access to font at 'https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Bold.woff' from origin 'https://noonnu.cc' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://noonnu.cc/index:0
+[   77128ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Bold.woff:0
+[   77128ms] [ERROR] Access to font at 'https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.woff' from origin 'https://noonnu.cc' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://noonnu.cc/index:0
+[   77128ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.woff:0
+[   77184ms] [ERROR] Access to font at 'https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Bold.ttf' from origin 'https://noonnu.cc' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://noonnu.cc/index:0
+[   77184ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Bold.ttf:0
+[   77184ms] [ERROR] Access to font at 'https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.ttf' from origin 'https://noonnu.cc' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://noonnu.cc/index:0
+[   77184ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.ttf:0
+[   92608ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   92608ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   92725ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   92725ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0

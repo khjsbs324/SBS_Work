@@ -1,0 +1,38 @@
+{
+  "course_id": "A",
+  "unit": "수정 보완",
+  "lcode": "8",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-29T01:35:54.881Z",
+  "group": "B",
+  "post_date": "2026-08-19",
+  "local_checks": true,
+  "pdf_reviewed": true,
+  "visual_reviewed": true,
+  "sources_reviewed": true,
+  "privacy_reviewed": true,
+  "pdf_page_count": 8,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "reviewed_images": [
+    "B그룹/process.png"
+  ],
+  "pdf_review_evidence": "04_등록검증/PDF검수/B_전체.png",
+  "notes": [
+    "PDF 전 페이지 렌더 접촉표와 B8·C4 상세 판독; 빈 페이지·페이지 밖 텍스트·표/코드 잘림 없음",
+    "이미지 직접 판독 및 학생용 텍스트·PDF·DOCX XML·CSV·HTML·CSS에서 학생 이름·점수 비노출 확인",
+    "참고자료는 공개 본문과 명시한 범위 검토. 영상 시청 완료로 기록하지 않음",
+    "연습 파일 1024·480px 확인. B 예시는 의도적 오류 포함으로 넘침·무효 열 정의를 확인",
+    "DOCX는 XML·압축 무결성 확인, Word 앱에서의 실제 페이지 렌더 검증은 수행하지 않음"
+  ]
+}

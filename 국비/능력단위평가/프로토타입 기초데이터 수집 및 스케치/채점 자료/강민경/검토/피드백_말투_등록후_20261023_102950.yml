@@ -1,0 +1,235 @@
+- generic [ref=f189e1]:
+  - banner [ref=f189e2]:
+    - generic [ref=f189e3]:
+      - generic [ref=f189e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f189e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f189e8]:
+    - generic [ref=f189e9]:
+      - generic [ref=f189e10]:
+        - generic [ref=f189e11]: 김혜지
+        - generic [ref=f189e12]:
+          - button "정보수정" [ref=f189e13] [cursor=pointer]
+          - button "비번변경" [ref=f189e14] [cursor=pointer]
+          - button "PIN변경" [ref=f189e15] [cursor=pointer]
+      - list [ref=f189e16]:
+        - listitem [ref=f189e17] [cursor=pointer]:
+          - generic [ref=f189e18]:
+            - generic [aria-hidden] [ref=f189e19]: 
+            - text: 훈련과정
+        - listitem [ref=f189e20] [cursor=pointer]:
+          - generic [ref=f189e21]:
+            - generic [aria-hidden] [ref=f189e22]: 
+            - text: 공지사항
+      - list [ref=f189e23]:
+        - listitem [ref=f189e24] [cursor=pointer]:
+          - generic [ref=f189e25]:
+            - paragraph [ref=f189e26]:
+              - generic [aria-hidden] [ref=f189e27]: 
+            - paragraph [ref=f189e28]: 고객센터
+        - listitem [ref=f189e29] [cursor=pointer]:
+          - generic [ref=f189e30]:
+            - paragraph [ref=f189e31]:
+              - generic [aria-hidden] [ref=f189e32]: 
+            - paragraph [ref=f189e33]: 카톡문의
+    - generic [ref=f189e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f189e35]:
+        - caption [ref=f189e36]:
+          - generic [ref=f189e37]:
+            - generic [ref=f189e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f189e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f189e48]:
+          - row [ref=f189e49]:
+            - cell "개강일" [ref=f189e50]
+            - cell "2026-05-20" [ref=f189e51]
+            - cell "종강일" [ref=f189e52]
+            - cell "2026-12-04" [ref=f189e53]
+            - cell "강사" [ref=f189e54]
+            - cell "김가경, 김혜지" [ref=f189e55]
+          - row [ref=f189e56]:
+            - cell "실시인원" [ref=f189e57]
+            - cell "11" [ref=f189e58]
+            - cell "수강인원" [ref=f189e59]
+            - cell "9" [ref=f189e60]
+            - cell "수강포기인원" [ref=f189e61]
+            - cell "2" [ref=f189e62]
+      - list [ref=f189e63]:
+        - listitem [ref=f189e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f189e65]
+        - listitem [ref=f189e66] [cursor=pointer]:
+          - generic "시간표" [ref=f189e67]
+        - listitem [ref=f189e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f189e69]
+        - listitem [ref=f189e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f189e71]
+        - listitem [ref=f189e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f189e73]
+        - listitem [ref=f189e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f189e75]
+        - listitem [ref=f189e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f189e77]
+        - listitem [ref=f189e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f189e79]
+        - listitem [ref=f189e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f189e81]
+        - listitem [ref=f189e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f189e83]
+        - listitem [ref=f189e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f189e85]
+        - listitem [ref=f189e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f189e87]
+        - listitem [ref=f189e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f189e89]
+        - listitem [ref=f189e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f189e91]
+        - listitem [ref=f189e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f189e93]
+        - listitem [ref=f189e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f189e95]
+        - listitem [ref=f189e96] [cursor=pointer]:
+          - generic "과제" [ref=f189e97]
+        - listitem [ref=f189e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f189e99]
+        - listitem [ref=f189e100] [cursor=pointer]:
+          - generic [ref=f189e101]: 게시판생성
+        - listitem [ref=f189e102] [cursor=pointer]:
+          - generic [ref=f189e103]: 게시판순서변경
+      - table "평가정보 돌아가기" [ref=f189e104]:
+        - caption [ref=f189e105]:
+          - generic [ref=f189e106]:
+            - generic [ref=f189e107]: 평가정보
+            - link "돌아가기" [ref=f189e109] [cursor=pointer]:
+              - /url: ../app/appraisal.php?Pcode=300002&Lcode=13&AppCode=AF
+        - rowgroup [ref=f189e116]:
+          - row [ref=f189e117]:
+            - cell "능력단위명" [ref=f189e118]
+            - cell "프로토타입 기초데이터 수집 및 스케치" [ref=f189e119]
+            - cell "평가일시" [ref=f189e120]
+            - cell "2026-10-22" [ref=f189e121]
+            - cell [ref=f189e122]:
+              - paragraph [ref=f189e123]: 89 / 100
+              - paragraph [ref=f189e124]: "패널티 : 0점"
+          - row [ref=f189e125]:
+            - cell "훈련강사" [ref=f189e126]
+            - cell "김*지, 김*경" [ref=f189e127]
+            - cell "훈련생명" [ref=f189e128]
+            - cell "강민경" [ref=f189e129]
+      - table "평가내역 평가점수 일괄등록" [ref=f189e131]:
+        - caption [ref=f189e132]:
+          - generic [ref=f189e133]:
+            - generic [ref=f189e134]: 평가내역
+            - link "평가점수 일괄등록" [ref=f189e136] [cursor=pointer]:
+              - /url: "#"
+        - rowgroup [ref=f189e144]:
+          - row [ref=f189e145]:
+            - columnheader "문항" [ref=f189e146]
+            - columnheader "문제" [ref=f189e147]
+            - columnheader "모범답안" [ref=f189e148]
+            - columnheader "제출답안" [ref=f189e149]
+            - columnheader "파일" [ref=f189e150]
+            - columnheader "링크" [ref=f189e151]
+        - rowgroup [ref=f189e152]:
+          - row [ref=f189e153]:
+            - cell "1" [ref=f189e154]
+            - cell "기초데이터와 레퍼런스를 분석하여 제작한 스토리보드 및 프로토타입 스케치를 제출해 주세요" [ref=f189e155]
+            - cell [ref=f189e156]:
+              - button "모범답안" [ref=f189e157] [cursor=pointer]
+            - cell [ref=f189e158]:
+              - button "제출답안" [ref=f189e159] [cursor=pointer]
+            - cell [ref=f189e160]:
+              - link "다운로드" [ref=f189e161] [cursor=pointer]:
+                - /url: /uflist/download.php?type=project_appraisal&pcode=300002&lcode=13&file=1792594876_1564e890.zip
+            - cell "-" [ref=f189e162]
+        - rowgroup [ref=f189e163]:
+          - row [ref=f189e164]:
+            - cell [ref=f189e165]
+  - dialog [active] [ref=f189e166]:
+    - generic [ref=f189e167]:
+      - generic [ref=f189e168]:
+        - heading "평가점수 일괄등록" [level=5] [ref=f189e169]
+        - button "Close" [ref=f189e170] [cursor=pointer]
+      - table [ref=f189e173]:
+        - rowgroup [ref=f189e178]:
+          - row [ref=f189e179]:
+            - columnheader "능력단위요소명" [ref=f189e180]
+            - columnheader "채점기준" [ref=f189e181]
+            - columnheader "점수" [ref=f189e182]
+        - rowgroup [ref=f189e183]:
+          - row [ref=f189e184]:
+            - cell "기초데이터 수집하기" [ref=f189e185]
+            - cell "프로토타입 제작을 위한 기초데이터와 레퍼런스 데이터를 수집하여 장 단점을 분석할 수 있다." [ref=f189e186]
+            - cell "9 10" [ref=f189e187]:
+              - generic [ref=f189e188]:
+                - spinbutton [ref=f189e189]: "9"
+                - generic [ref=f189e190]: "10"
+          - row [ref=f189e191]:
+            - cell "기초데이터 수집하기" [ref=f189e192]
+            - cell "아이디어를 시각화하기 위한 디자인 기획을 바탕으로 스케치를 할 수 있다." [ref=f189e193]
+            - cell "10 10" [ref=f189e194]:
+              - generic [ref=f189e195]:
+                - spinbutton [ref=f189e196]: "10"
+                - generic [ref=f189e197]: "10"
+          - row [ref=f189e198]:
+            - cell "기초데이터 수집하기" [ref=f189e199]
+            - cell "아이디어 스케치한 결과물을 구현이 가능하도록 설명할 수 있다." [ref=f189e200]
+            - cell "10 10" [ref=f189e201]:
+              - generic [ref=f189e202]:
+                - spinbutton [ref=f189e203]: "10"
+                - generic [ref=f189e204]: "10"
+          - row [ref=f189e205]:
+            - cell "레퍼런스 조사‧분석하기" [ref=f189e206]
+            - cell "프로토타입 제작을 위한 스토리보드 구성과 인터렉션, 모션그래픽 또는 애니메이션을 제작 할 수 있다." [ref=f189e207]
+            - cell "9 10" [ref=f189e208]:
+              - generic [ref=f189e209]:
+                - spinbutton [ref=f189e210]: "9"
+                - generic [ref=f189e211]: "10"
+          - row [ref=f189e212]:
+            - cell "레퍼런스 조사‧분석하기" [ref=f189e213]
+            - cell "프로토타입 제작물을 바탕으로 사용성 테스트를 하기위한 방법론을 적용할 수 있다." [ref=f189e214]
+            - cell "8 10" [ref=f189e215]:
+              - generic [ref=f189e216]:
+                - spinbutton [ref=f189e217]: "8"
+                - generic [ref=f189e218]: "10"
+          - row [ref=f189e219]:
+            - cell "레퍼런스 조사‧분석하기" [ref=f189e220]
+            - cell "사용성 테스트를 통한 사용성에 대한 정의와 문제점을 도출 할 수 있다." [ref=f189e221]
+            - cell "9 10" [ref=f189e222]:
+              - generic [ref=f189e223]:
+                - spinbutton [ref=f189e224]: "9"
+                - generic [ref=f189e225]: "10"
+          - row [ref=f189e226]:
+            - cell "레퍼런스 조사‧분석하기" [ref=f189e227]
+            - cell "사용성 테스트 결과를 바탕으로 프로토타입 스케치를 수정 할 수 있다." [ref=f189e228]
+            - cell "8 10" [ref=f189e229]:
+              - generic [ref=f189e230]:
+                - spinbutton [ref=f189e231]: "8"
+                - generic [ref=f189e232]: "10"
+          - row [ref=f189e233]:
+            - cell "아이디어 스케치하기" [ref=f189e234]
+            - cell "디자인 콘셉트에 따라 아이디어를 스토리보드에 맞게 썸네일 스케치(thumbnail sketch)할 수 있다." [ref=f189e235]
+            - cell "8 10" [ref=f189e236]:
+              - generic [ref=f189e237]:
+                - spinbutton [ref=f189e238]: "8"
+                - generic [ref=f189e239]: "10"
+          - row [ref=f189e240]:
+            - cell "아이디어 스케치하기" [ref=f189e241]
+            - cell "실제 전달 매체에 맞추어 디자인 스타일, 컬러, 텍스쳐, 모션을 구체화시킬 수 있다." [ref=f189e242]
+            - cell "10 10" [ref=f189e243]:
+              - generic [ref=f189e244]:
+                - spinbutton [ref=f189e245]: "10"
+                - generic [ref=f189e246]: "10"
+          - row [ref=f189e247]:
+            - cell "아이디어 스케치하기" [ref=f189e248]
+            - cell "필요에 따라 전체 스토리보드에 대한 세부 시안과 종합 패키지를 제작할 수 있다." [ref=f189e249]
+            - cell "8 10" [ref=f189e250]:
+              - generic [ref=f189e251]:
+                - spinbutton [ref=f189e252]: "8"
+                - generic [ref=f189e253]: "10"
+          - row [ref=f189e254]:
+            - cell [ref=f189e255]:
+              - textbox "이곳에 피드백을 입력하세요." [ref=f189e256]: 브랜드 소개 손 스케치의 섹션 번호와 카테고리 손 스케치의 상품 선택·이동 화살표를 보고서의 화면 설명과 연결한 점이 좋았습니다. 브랜드를 이해한 뒤 자신의 기록 목적에 맞는 도구를 고르게 하려는 흐름이 읽히며, 웜 브라운·크림 색상과 기록 장면을 사용한 시각 방향도 프로젝트 콘셉트와 잘 어울렸습니다. 보고서 7.2절과 9.2절에서 검색, 미리보기, 결과 없음, 목록 복귀를 시작 상태와 행동·결과로 나누어 설명한 점은 다음 제작자가 설계를 이어받는 데 도움이 되는 부분입니다. 다만 6.2절의 대안 표는 실제 그림과 함께 보완하면 선택 근거가 더 명확해질 것 같습니다. 보고서에서도 손 스케치는 페이지당 1안이고, A/B는 기존 HTML의 사후 비교, C는 아직 제작하지 않은 제안이라고 구분하고 있습니다. 비교표가 상세하더라도 화면의 구조·위계·조작 방식이 어떻게 달라지는지 그림으로 확인하기에는 조금 더 보완이 필요합니다. 예를 들어 같은 상품 목록을 대상으로 ‘상품 유형을 먼저 고르는 안’과 ‘기록 목적을 먼저 고르는 안’을 작게 그려 비교하면 두 방식의 차이를 이해하기 쉬울 것입니다. 두 안에서 첫 선택, 상품을 좁히는 순서, 선택 결과가 보이는 위치를 표시하고 어느 쪽이 기록 초보자의 선택을 돕는다고 판단했는지 이유를 덧붙이면 대안을 선택한 과정도 잘 드러날 것 같습니다. 그림과 상태 설명을 연결할 때에는 미리보기 닫기와 검색 결과 없음의 회복 경로를 함께 보여주면 흐름이 더 명확해질 것 같습니다. 현재 보고서에는 설명이 있지만 기본 손 스케치에서는 해당 상태가 생략되어 있습니다. 목록 옆에 미리보기와 결과 없음 상태를 작은 도식으로 붙이고, 닫은 뒤 어떤 목록으로 돌아가는지, ‘전체 상품 보기’를 선택하면 어떤 조건이 초기화되는지를 화살표와 주석으로 연결하면 다음 행동을 파악하기 쉬울 것입니다. 새로운 화면을 크게 다시 그리거나 실제 구매 기능을 만들 필요는 없습니다. 9.1~9.2절의 과업과 성공 조건은 준비되어 있으나 실제 수행자 점검은 미실시로 적혀 있습니다. 자체 자료 대조로 파일·문구의 불일치를 찾은 것과, 다른 사람이 설계를 이해하고 과업을 마친 것은 구분해 정리할 필요가 있습니다. 점검자에게 ‘속지 한 개를 찾아 정보를 확인한 뒤 목록으로 돌아오기’를 맡기고, 처음 고른 항목과 멈춘 위치, 실제 발언, 도움 여부를 남기면 실제 사용 과정에서 보완할 부분을 찾는 데 도움이 될 것입니다. 손 스케치를 이용한다면 선택에 따라 다음 상태를 보여주는 방식으로 진행해도 됩니다. 관찰한 문제를 고친 뒤 같은 과업을 다시 확인하면 변경 이유와 결과가 연결됩니다. 전달 자료에서는 초안 .lnk를 실제 열 수 있는 원본으로 바꾸고, 보고서 11.2절의 파일명·상대경로를 제출 폴더와 맞추면 전달 자료도 더 안정적으로 정리될 것 같습니다. 보고서 PDF 안에서도 두 손 스케치의 작은 주석이 읽히는지도 함께 확인하면 좋겠습니다. 기존 자료를 다시 배치하고 연결을 정리하는 것이 우선이며, 리뷰·FAQ·다운로드처럼 범위 밖이거나 자료가 없는 영역은 보류 이유를 표시하면 됩니다. 최종점수는 89점입니다. 같은 화면의 복수 대안과 실제 과업 관찰을 먼저 보완하고, 그 결과를 수정 전후에 연결하면 설계의 근거가 더욱 명확해질 것입니다. 고생하셨습니다.
+        - rowgroup [ref=f189e257]:
+          - row [ref=f189e258]:
+            - cell [ref=f189e259]:
+              - button "채점하기" [ref=f189e260] [cursor=pointer]

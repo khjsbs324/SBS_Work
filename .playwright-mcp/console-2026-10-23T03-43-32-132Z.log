@@ -1,0 +1,2 @@
+[     876ms] [ERROR] Mixed Content: The page at 'https://story.pxd.co.kr/176' was loaded over HTTPS, but requested an insecure script 'http://lab.pxd.co.kr/tistory/mobileinclude.js'. This request has been blocked; the content must be served over HTTPS. @ https://story.pxd.co.kr/176:0
+[    1060ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://story.pxd.co.kr/176:0

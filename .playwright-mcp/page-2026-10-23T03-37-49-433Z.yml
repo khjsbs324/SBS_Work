@@ -1,0 +1,120 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: 김혜지
+        - generic [ref=e12]:
+          - button "정보수정" [ref=e13] [cursor=pointer]
+          - button "비번변경" [ref=e14] [cursor=pointer]
+          - button "PIN변경" [ref=e15] [cursor=pointer]
+      - list [ref=e16]:
+        - listitem [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]:
+            - generic [aria-hidden] [ref=e19]: 
+            - text: 훈련과정
+        - listitem [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]:
+            - generic [aria-hidden] [ref=e22]: 
+            - text: 공지사항
+      - list [ref=e23]:
+        - listitem [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]:
+            - paragraph [ref=e26]:
+              - generic [aria-hidden] [ref=e27]: 
+            - paragraph [ref=e28]: 고객센터
+        - listitem [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]:
+            - paragraph [ref=e31]:
+              - generic [aria-hidden] [ref=e32]: 
+            - paragraph [ref=e33]: 카톡문의
+    - generic [ref=e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) B (1회차) 처음으로" [ref=e35]:
+        - caption [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) B (1회차)"
+            - link "처음으로" [ref=e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=e48]:
+          - row [ref=e49]:
+            - cell "개강일" [ref=e50]
+            - cell "2026-10-13" [ref=e51]
+            - cell "종강일" [ref=e52]
+            - cell "2027-04-28" [ref=e53]
+            - cell "강사" [ref=e54]
+            - cell "김가경, 김혜지" [ref=e55]
+          - row [ref=e56]:
+            - cell "실시인원" [ref=e57]
+            - cell "9" [ref=e58]
+            - cell "수강인원" [ref=e59]
+            - cell "9" [ref=e60]
+            - cell "수강포기인원" [ref=e61]
+            - cell "0" [ref=e62]
+      - list [ref=e63]:
+        - listitem [ref=e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=e65]
+        - listitem [ref=e66] [cursor=pointer]:
+          - generic "시간표" [ref=e67]
+        - listitem [ref=e68] [cursor=pointer]:
+          - generic "훈련생" [ref=e69]
+        - listitem [ref=e70] [cursor=pointer]:
+          - generic "사전평가" [ref=e71]
+        - listitem [ref=e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=e73]
+        - listitem [ref=e74] [cursor=pointer]:
+          - generic "출석현황" [ref=e75]
+        - listitem [ref=e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=e77]
+        - listitem [ref=e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=e79]
+        - listitem [ref=e80] [cursor=pointer]:
+          - generic "보충수업" [ref=e81]
+        - listitem [ref=e82] [cursor=pointer]:
+          - generic "훈련일지" [ref=e83]
+        - listitem [ref=e84] [cursor=pointer]:
+          - generic "교재관리" [ref=e85]
+        - listitem [ref=e86] [cursor=pointer]:
+          - generic "상담일지" [ref=e87]
+        - listitem [ref=e88] [cursor=pointer]:
+          - generic "과정회의록" [ref=e89]
+        - listitem [ref=e90] [cursor=pointer]:
+          - generic "과정공지사항" [ref=e91]
+        - listitem [ref=e92] [cursor=pointer]:
+          - generic "지원내역" [ref=e93]
+        - listitem [ref=e94] [cursor=pointer]:
+          - generic "과제" [ref=e95]
+        - listitem [ref=e96] [cursor=pointer]:
+          - generic "서식공유" [ref=e97]
+        - listitem [ref=e98] [cursor=pointer]:
+          - generic [ref=e99]: 게시판생성
+        - listitem [ref=e100] [cursor=pointer]:
+          - generic [ref=e101]: 게시판순서변경
+      - table "지원내역 검색 게시판수정 게시물삭제 게시물복사 게시물등록" [ref=e103]:
+        - caption [ref=e104]:
+          - generic [ref=e105]:
+            - generic [ref=e106]: 지원내역
+            - generic [ref=e108]:
+              - textbox "검색어 입력" [ref=e109]
+              - button "검색" [ref=e110] [cursor=pointer]
+            - generic [ref=e112]:
+              - link "게시판수정" [ref=e113] [cursor=pointer]:
+                - /url: "#"
+              - button "게시물삭제" [ref=e114] [cursor=pointer]
+              - button "게시물복사" [ref=e115] [cursor=pointer]
+              - link "게시물등록" [ref=e116] [cursor=pointer]:
+                - /url: ./write.php?Pcode=500000&BoardCode=1
+        - rowgroup [ref=e123]:
+          - row [ref=e124]:
+            - columnheader [ref=e125]:
+              - checkbox [ref=e126]
+            - columnheader "번호" [ref=e127]
+            - columnheader "제목" [ref=e128]
+            - columnheader "작성자" [ref=e129]
+            - columnheader "작성일" [ref=e130]
+        - rowgroup [ref=e131]:
+          - row [ref=e132]:
+            - cell "데이터가 없습니다." [ref=e133]

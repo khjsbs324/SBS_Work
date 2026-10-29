@@ -47,6 +47,12 @@ def main(argv=None):
     p.add_argument('--stage', required=True)
     p.add_argument('--group', choices=('A', 'B', 'C'))
     p.add_argument('--evidence', required=True)
+    p = sub.add_parser('meeting-check')
+    p.add_argument('run')
+    for command in ('meeting-plan', 'registration-check'):
+        p = sub.add_parser(command)
+        p.add_argument('run')
+        p.add_argument('group', choices=('A', 'B', 'C'))
     args = parser.parse_args(argv)
     try:
         if args.command == 'date':
@@ -72,6 +78,12 @@ def main(argv=None):
             result = status(args.run)
         elif args.command == 'record':
             result = record(args.run, args.stage, args.evidence, args.group)
+        elif args.command in ('meeting-check', 'meeting-plan'):
+            from .meeting import check_meeting, material_plan
+            result = check_meeting(args.run) if args.command == 'meeting-check' else material_plan(args.run, args.group)
+        elif args.command == 'registration-check':
+            from .meeting import registration_check
+            result = registration_check(args.run, args.group)
         elif args.command == 'build':
             from .render import build_group
             result = build_group(args.run, args.group)

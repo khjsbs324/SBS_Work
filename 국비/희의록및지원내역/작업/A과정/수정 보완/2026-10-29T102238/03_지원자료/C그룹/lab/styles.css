@@ -1,0 +1,4 @@
+*{box-sizing:border-box}body{margin:0;font-family:"Malgun Gothic",sans-serif;line-height:1.7;color:#20364a;background:#f1f5f8}.practice{width:calc(100% - 40px);margin:40px auto}h1{font-size:clamp(24px,4vw,38px);line-height:1.35}.eyebrow{font-size:12px;letter-spacing:.15em;color:#47766a}.cards{gap:16px}.card{padding:22px;background:white;border:1px solid #c7d7df;border-radius:16px;min-width:0}.card h2{font-size:20px}.card span{color:#5a8c79;font-weight:bold}a{color:#1e6555}a:focus-visible{outline:3px solid #da8b2d;outline-offset:4px}#lab-notes{margin-top:40px;padding:20px;background:#e0ede6;border-radius:12px}
+.practice{max-width:960px}.cards{display:grid;grid-template-columns:repeat(2,1fr)}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+

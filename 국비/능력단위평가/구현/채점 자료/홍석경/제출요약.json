@@ -1,0 +1,48 @@
+{
+  "name": "홍석경",
+  "Sid": "sbsartdj1170",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1170",
+  "downloads": [
+    {
+      "filename": "1792725262_db6975e6.zip",
+      "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725262_db6975e6.zip",
+      "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/홍석경/원본/1792725262_db6975e6.zip"
+    }
+  ],
+  "currentScore": "0 / 100",
+  "submittedAnswer": "",
+  "submittedLinks": [
+    {
+      "href": "https://github.com/lf2net080/TEST_MONAMI.git",
+      "onclick": null
+    }
+  ],
+  "receivedAt": "2026-10-26T04:22:22.051Z",
+  "archiveBytes": 507065,
+  "sha256": "9d13cf2e2c7f98e46d6a7cc90b42d7af25ac9003e398296f77fe9fb65563077d",
+  "memberCount": 71,
+  "codeFiles": [
+    {
+      "path": "학생_검토사본\\chatGPT.md",
+      "bytes": 1802,
+      "monami": true
+    },
+    {
+      "path": "학생_검토사본\\index.html",
+      "bytes": 1290,
+      "monami": true
+    },
+    {
+      "path": "학생_검토사본\\style.css",
+      "bytes": 1707,
+      "monami": false
+    }
+  ],
+  "git": [
+    {
+      "directory": "학생_검토사본",
+      "head": "ref: refs/heads/main",
+      "commit": "e76065cabef5d39c9e3c05e450adbc8e1602c6df"
+    }
+  ]
+}

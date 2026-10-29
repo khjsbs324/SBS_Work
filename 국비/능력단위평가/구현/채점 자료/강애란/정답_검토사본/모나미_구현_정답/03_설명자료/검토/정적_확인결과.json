@@ -1,0 +1,144 @@
+{
+  "ok": true,
+  "pages": [
+    {
+      "path": "01_섹션별\\MON-01_상단\\index.html",
+      "images": 5,
+      "sectionIds": [
+        "MON-01"
+      ],
+      "validNesting": true,
+      "localPathsExist": true,
+      "scripts": 0
+    },
+    {
+      "path": "01_섹션별\\MON-02_비주얼\\index.html",
+      "images": 0,
+      "sectionIds": [
+        "MON-02"
+      ],
+      "validNesting": true,
+      "localPathsExist": true,
+      "scripts": 0
+    },
+    {
+      "path": "01_섹션별\\MON-03_신제품\\index.html",
+      "images": 5,
+      "sectionIds": [
+        "MON-03"
+      ],
+      "validNesting": true,
+      "localPathsExist": true,
+      "scripts": 0
+    },
+    {
+      "path": "01_섹션별\\MON-04_인기상품\\index.html",
+      "images": 14,
+      "sectionIds": [
+        "MON-04"
+      ],
+      "validNesting": true,
+      "localPathsExist": true,
+      "scripts": 0
+    },
+    {
+      "path": "01_섹션별\\MON-05_영상영역\\index.html",
+      "images": 1,
+      "sectionIds": [
+        "MON-05"
+      ],
+      "validNesting": true,
+      "localPathsExist": true,
+      "scripts": 0
+    },
+    {
+      "path": "01_섹션별\\MON-06_하단정보\\index.html",
+      "images": 3,
+      "sectionIds": [
+        "MON-06"
+      ],
+      "validNesting": true,
+      "localPathsExist": true,
+      "scripts": 0
+    },
+    {
+      "path": "01_섹션별\\MON-07_푸터\\index.html",
+      "images": 1,
+      "sectionIds": [
+        "MON-07"
+      ],
+      "validNesting": true,
+      "localPathsExist": true,
+      "scripts": 0
+    },
+    {
+      "path": "02_전체통합\\index.html",
+      "images": 29,
+      "sectionIds": [
+        "MON-01",
+        "MON-02",
+        "MON-03",
+        "MON-04",
+        "MON-05",
+        "MON-06",
+        "MON-07"
+      ],
+      "validNesting": true,
+      "localPathsExist": true,
+      "scripts": 0
+    },
+    {
+      "path": "02_전체통합\\전체코드.html",
+      "images": 29,
+      "sectionIds": [
+        "MON-01",
+        "MON-02",
+        "MON-03",
+        "MON-04",
+        "MON-05",
+        "MON-06",
+        "MON-07"
+      ],
+      "validNesting": true,
+      "localPathsExist": true,
+      "scripts": 0
+    }
+  ],
+  "cssProperties": [
+    "align-items",
+    "background",
+    "background-color",
+    "border",
+    "border-radius",
+    "box-sizing",
+    "color",
+    "display",
+    "flex-direction",
+    "font-display",
+    "font-family",
+    "font-size",
+    "font-weight",
+    "gap",
+    "height",
+    "justify-content",
+    "list-style",
+    "margin",
+    "margin-left",
+    "margin-right",
+    "object-fit",
+    "overflow",
+    "padding",
+    "padding-bottom",
+    "padding-left",
+    "padding-top",
+    "src",
+    "text-align",
+    "width"
+  ],
+  "cssPropertiesOutsideReference": [],
+  "sectionMarkupAndCSSMatchCombined": true,
+  "inlineCSSMatchesSeparatedCSS": true,
+  "imageAndFontHashesMatch": true,
+  "referenceCopiesUnchanged": true,
+  "referenceCommit": "93673783dbea20b814985532778af348cb0e75d9"
+}

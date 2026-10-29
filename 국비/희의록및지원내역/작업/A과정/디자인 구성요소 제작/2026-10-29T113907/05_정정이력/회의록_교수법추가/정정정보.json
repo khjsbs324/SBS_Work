@@ -1,0 +1,10 @@
+{
+  "scope": "new_meeting_pedagogy_record",
+  "status": "prepared",
+  "unit": "디자인 구성요소 제작",
+  "lcode": "9",
+  "request": "그 다음에 교수법 실행해",
+  "constraint": "기존 내용은 수정하지 말고 추가만 하는거야",
+  "opened_at": "2026-10-29T02:52:38.419Z",
+  "method": "회의록 전용 추가 작업으로 원문·날짜와 앞서 추가한 재평가 기록을 보존함. 지원 게시글·ZIP 그룹 전용 revise 및 성적·시험 수정 기능은 사용하지 않음."
+}

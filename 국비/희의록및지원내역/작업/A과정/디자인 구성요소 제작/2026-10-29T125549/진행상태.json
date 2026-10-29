@@ -1,0 +1,471 @@
+{
+  "global": {
+    "target_confirmed": {
+      "course_id": "A",
+      "unit": "디자인 구성요소 제작",
+      "lcode": "9",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+      "unit_end_date": "2026-08-20",
+      "screen_confirmed": true,
+      "checked_at": "2026-10-29T12:55:49+09:00",
+      "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=9",
+      "recorded_at": "2026-10-29T12:55:49+09:00"
+    },
+    "sources_collected": {
+      "course_id": "A",
+      "unit": "디자인 구성요소 제작",
+      "lcode": "9",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+      "unit_end_date": "2026-08-20",
+      "screen_confirmed": true,
+      "checked_at": "2026-10-29T12:55:49+09:00",
+      "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=9",
+      "scores_read": true,
+      "feedback_read": true,
+      "meeting_read": true,
+      "task_read": false,
+      "original_task_full_text_available": false,
+      "task_basis": "feedback_reconstruction",
+      "task_scope": "현재 10명 평가 피드백의 13개 초안·최종 구성요소, 8단계 기록, 리서치, 웹디자인 적용 범위와 로컬 Exam 및 과제안내서 대조",
+      "limitations": [
+        "LMS 수행평가서에서 평가문제 전문은 확인되지 않아 로컬 과제안내서와 현재 전체 피드백으로 과제 범위를 확인함."
+      ],
+      "source_urls": [
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=9",
+        "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=9"
+      ],
+      "recorded_at": "2026-10-29T12:55:49+09:00"
+    },
+    "meeting_resolved": {
+      "course_id": "A",
+      "unit": "디자인 구성요소 제작",
+      "lcode": "9",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+      "unit_end_date": "2026-08-20",
+      "screen_confirmed": true,
+      "checked_at": "2026-10-29T12:55:49+09:00",
+      "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=9",
+      "mode": "existing",
+      "exact_readback": true,
+      "reason": "현재 회의록에 초안·최종 비교 지도, 모바일 점검과 다음 사후관리 연계가 있어 그대로 활용함.",
+      "meeting_text": "SBS아카데미 대전\n로그아웃\n김혜지\n정보수정\n비번변경\nPIN변경\n 훈련과정\n 공지사항\n\n고객센터\n\n카톡문의\n\n[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)\n처음으로\n개강일\t2026-05-20\t종강일\t2026-12-04\t강사\t김가경, 김혜지\n실시인원\t11\t수강인원\t9\t수강포기인원\t2\n집체훈련\n시간표\n훈련생\n사전평가\n오리엔테이션\n출석현황\n능력단위평가\n훈련생평가\n상담일지\n이의신청\n보충수업\n훈련일지\n교재관리\n과정회의록\n과정공지사항\n지원내역\n과제\n서식공유\n게시판생성\n게시판순서변경\n평가내역\n평가결과 분석회의록\n과정명\t[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차\n교과목\t(전공)웹디자인 구성요소 설계 및 제작\n능력단위\t\n선택하세요\n구현\n구현 응용\n시각디자인 리서치 조사\n시각디자인 리서치 분석\n시안 디자인 개발 심화\n디자인 구성요소 설계\n수정 보완\n디자인 구성요소 제작\n디지털디자인 사후관리\n서비스ㆍ경험디자인 관찰조사\n서비스ㆍ경험디자인 시나리오 개발\n프로토타입 기초데이터 수집 및 스케치\n스마트문화앱 UI 디자인\n프로토타입 제작 및 사용성 테스트\n(비NCS 실기)AI 기획과 발상\n(비NCS 실기)취업포트폴리오 제작\n\n개강일\t2026-07-24\t종강일\t2026-08-20\n평가도구\t포트폴리오\n평가정보\n돌아가기\n구분\t본평가\t결석자평가\t재평가\t사전평가\t능력단위\n\n\n평가날짜\n\n평가시간\n\n커트라인\n\n패널티\n\n\t\n\n2026-08-20\n\n14:00~18:50\n\n60점\n\n0점\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t78.79\t91.4\n평가인원\t10\t0\t0\n평가결과분석회의록\n삭제하기\n회의록등록\n회의제목\t평가결과 분석 회의\t회의일시\t2026-10-29\n평가결과 분석내용\t*평가결과 분석내용\n\n능력단위 : 디자인 구성요소 제작\n평가일 : 2026-08-20\n\n1. 주제\n디자인 구성요소 제작 평가결과 분석 및 수업 개선\n\n2. 평가결과\n완성 화면의 안정성뿐 아니라 변경·유지 이유와 실제 최종 적용을 확인할 필요가 있음.\n\n3. 지도 방향\n모바일 화면의 넘침을 보완하고, 초안에서 무엇을 바꾸었는지와 그 이유를 결과물에 맞춰 정리하도록 지도하기로 함.\n개선사항\t교수법 개선 및 학생 지도\n\n1. 학생 변화 및 보완사항\n수정 보완에서 강조한 수정 내용과 실제 결과의 일치 여부를 제작 과제에서도 살펴봄. 강민경은 초안의 문제, 추가 조사, 최종 변경 및 유지 이유를 연결하고 화면에 반영함. 이은수는 설계 의도와 개선 이유를 구체적으로 설명했으나 모바일 화면의 넘침이 남아 있음. 김정은은 자기 비평, 추가 조사, 변경 이유의 기록을 보완할 필요가 있음.\n\n2. 교수법 개선\n같은 구성요소의 초안과 최종안을 나란히 비교하며 문제점, 참고자료, 변경하거나 유지한 이유를 학생이 설명하도록 지도하기로 함. 화면의 해당 위치를 직접 짚으며 설명하게 하고, 작은 화면에서도 의도한 구성이 유지되는지 점검하기로 함.\n\n3. 후속 지도\n디지털디자인 사후관리에서는 모바일 화면의 문제를 보완했는지, 최종 파일·이미지·보고서가 일치하는지 살펴보기로 함.",
+      "meeting_date": "2026-10-29",
+      "recorded_at": "2026-10-29T12:55:50+09:00"
+    }
+  },
+  "groups": {
+    "A": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "post_date": "2026-08-21",
+        "group": "A",
+        "checked_at": "2026-10-29T13:04:30+09:00",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "pdf_page_count": 6,
+        "review_scope": "전체 PDF 페이지 렌더를 판독함. 표·그림·글자 잘림 없음. 참고자료 원문을 읽고 적용 활동 확인. 이름·점수 노출 없음. DOCX는 문서 구조 및 필드 검증, Word 화면 검토는 하지 않음.",
+        "snapshot": {
+          "article.html": "da51fa5796c189c3cac3a96d91f418ea22e657b62340c82383afcf6727de5f1b",
+          "content.json": "bb160d00b525f38202c68095a60afc7d878d29164ba6e52c9c8879123faa5936",
+          "guide.html": "45662aabe5a3690efdd60e054174acd5db3d7218f5995f3527a19d45eaa48136",
+          "post.json": "c3e96d56509f6ce85e3e59ff8cd82936e48647609df99cfb8d86e11f2801a568",
+          "비교예시.png": "669017919b404cbcc746c3dcc5a8ab5fdf58f9ce07c3d4a73bc1d3475a54c22d",
+          "빈칸양식/01_실습.csv": "a7363d0856ecb5080e79659c41c4b3ee717e6cae7454d3f9fd955ea97695ab0a",
+          "빈칸양식/02_실습.csv": "6a765f1113fe043c523c135b1da38166070c639984cc8a9b14e662b05f55bb3c",
+          "빈칸양식/03_실습.csv": "009852f9567166230b5b7eb5c2cbe3b5e6256a41047a892d95a2f1aaf9c17d95",
+          "실습양식.docx": "d45126e8e9578b0faead9da630f36e323b56693422a1d7540d4661bbbb591734",
+          "읽는순서.txt": "925f65635f913489aea08d7dd745a43214a9e1202af31d6638802375d08c4c48",
+          "학습자료.pdf": "d9b0b7bb9957d2b14403a603fb1cec0f735087117e03e1d9ec7454b2570bd902",
+          "학습자료.zip": "e86dcb69064c84e2be445fb7e3fb5c1ebe7eeac7b097936abb38879e8b14ab62"
+        },
+        "recorded_at": "2026-10-29T13:04:30+09:00"
+      },
+      "registered": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "A",
+        "post_date": "2026-08-21",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 제작 A그룹 지원자료",
+        "post_id": "1070",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1070",
+        "checked_at": "2026-10-29T04:05:39.516Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://toss.tech/article/toss-design-system-guide",
+          "https://developer.mozilla.org/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "e86dcb69064c84e2be445fb7e3fb5c1ebe7eeac7b097936abb38879e8b14ab62",
+        "course_confirmed": true,
+        "observed_in_list": true,
+        "recorded_at": "2026-10-29T13:07:58+09:00"
+      },
+      "verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "A",
+        "post_date": "2026-08-21",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 제작 A그룹 지원자료",
+        "post_id": "1070",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1070",
+        "checked_at": "2026-10-29T04:05:39.516Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://toss.tech/article/toss-design-system-guide",
+          "https://developer.mozilla.org/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "e86dcb69064c84e2be445fb7e3fb5c1ebe7eeac7b097936abb38879e8b14ab62",
+        "course_confirmed": true,
+        "references_checked": true,
+        "layout_reviewed": true,
+        "observed_in_list": true,
+        "layout_evidence": "A_등록후본문.png",
+        "reference_review": "공개 한국어 원문의 지정 범위를 읽고 각 활동과 대조함.",
+        "recorded_at": "2026-10-29T13:07:58+09:00"
+      }
+    },
+    "B": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "post_date": "2026-08-21",
+        "group": "B",
+        "checked_at": "2026-10-29T13:04:30+09:00",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "pdf_page_count": 7,
+        "review_scope": "전체 PDF 페이지 렌더를 판독함. 표·그림·글자 잘림 없음. 참고자료 원문을 읽고 적용 활동 확인. 이름·점수 노출 없음. DOCX는 문서 구조 및 필드 검증, Word 화면 검토는 하지 않음.",
+        "snapshot": {
+          "13개 대응목록.csv": "e6ba26b59c24cf1c5444906673cba6219d2922b189a508bde52722d7336a00ee",
+          "article.html": "ab57600368ad53fbf264a3786ca3635a5b4a59861809f5244d3487b9640947f6",
+          "content.json": "a801cc2c4292c50fbf3476104210907979fd330e0e37ad79ad4c6700497745d7",
+          "guide.html": "39141b9e963b0b09a9452bd986626c702bce37a31c48d1e026bc5225fdb15e9e",
+          "post.json": "865a3f1c615be5c366aeec170d913b670763ae3442da58b94ffb21c47cf45cf9",
+          "근거연결.png": "40f34b3b4ec0baf0c0dcb25ae3a50d393daca168b4a388555a69827591980243",
+          "빈칸양식/01_실습.csv": "52c5460647f27b75dc493ed3c05737606d5016882d73a16bca608d53bf1c2a15",
+          "빈칸양식/02_실습.csv": "8e57a1fe9a4c7a1ace5db651e7b41ab1f7d7dcdcf81d7879611f0f58ae637c7b",
+          "빈칸양식/03_실습.csv": "c618a8e2efca561f0b31f6a012c64a8cb2f478daae7446f2a2fc533a46e7ab02",
+          "빈칸양식/04_실습.csv": "400915fc93b836150734447a99c7eba14e4f895c1125936afb77a89ff132ec41",
+          "실습양식.docx": "d423d01060663419ae69ae41afe0a1482068dadc29a1ffefcb81619791e34241",
+          "읽는순서.txt": "09ebbf240e31a0b59d82080d931e3b45243112830c38abf3de402f0a96e0df2e",
+          "학습자료.pdf": "0856ec276f11284ed844ed51f1aa9bb6b7c4737e90c34ea0471e4d9da21c1ba0",
+          "학습자료.zip": "80d8f20b1515bebfca56530f555883b704c3b79a047865b09b154fccfc6d997d"
+        },
+        "recorded_at": "2026-10-29T13:04:30+09:00"
+      },
+      "registered": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "B",
+        "post_date": "2026-08-21",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 제작 B그룹 지원자료",
+        "post_id": "1071",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1071",
+        "checked_at": "2026-10-29T04:06:21.506Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://toss.tech/article/toss-design-system-guide",
+          "https://toss.im/tossfeed/article/toss-designer-interview"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "80d8f20b1515bebfca56530f555883b704c3b79a047865b09b154fccfc6d997d",
+        "course_confirmed": true,
+        "observed_in_list": true,
+        "recorded_at": "2026-10-29T13:07:58+09:00"
+      },
+      "verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "B",
+        "post_date": "2026-08-21",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 제작 B그룹 지원자료",
+        "post_id": "1071",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1071",
+        "checked_at": "2026-10-29T04:06:21.506Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://toss.tech/article/toss-design-system-guide",
+          "https://toss.im/tossfeed/article/toss-designer-interview"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "80d8f20b1515bebfca56530f555883b704c3b79a047865b09b154fccfc6d997d",
+        "course_confirmed": true,
+        "references_checked": true,
+        "layout_reviewed": true,
+        "observed_in_list": true,
+        "layout_evidence": "B_등록후본문.png",
+        "reference_review": "공개 한국어 원문의 지정 범위를 읽고 각 활동과 대조함.",
+        "recorded_at": "2026-10-29T13:07:58+09:00"
+      }
+    },
+    "C": {
+      "materials_verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "post_date": "2026-08-21",
+        "group": "C",
+        "checked_at": "2026-10-29T13:04:30+09:00",
+        "local_checks": true,
+        "pdf_reviewed": true,
+        "visual_reviewed": true,
+        "sources_reviewed": true,
+        "privacy_reviewed": true,
+        "pdf_page_count": 6,
+        "review_scope": "전체 PDF 페이지 렌더를 판독함. 표·그림·글자 잘림 없음. 참고자료 원문을 읽고 적용 활동 확인. 이름·점수 노출 없음. DOCX는 문서 구조 및 필드 검증, Word 화면 검토는 하지 않음.",
+        "snapshot": {
+          "13개 대응목록.csv": "e6ba26b59c24cf1c5444906673cba6219d2922b189a508bde52722d7336a00ee",
+          "article.html": "a1c318bfc3eab8f4e7ed2023ba485559324c8c76031049dfb95d0b7c7b6f724a",
+          "content.json": "b40e334848bbd297503e85e3c644fe0fb8678f6912aae38c3fbfb207ae37cd39",
+          "guide.html": "89f6ad2cc601d87d8d0ca0aa332e1c4c343bc04cfcf352b86a103d26cf99627e",
+          "post.json": "78530f91cfc381c58d20042d52e355999db9bbb18e545332e00a5836f03c3be1",
+          "빈칸양식/01_실습.csv": "49bcf186d7400699af5c8c7746b9667cb5be904237bfba06b508f5ecc2bb3d46",
+          "빈칸양식/02_실습.csv": "2f330ca01744d8ea470550dc2b7ea9b934e4289b3c28f61fd7146820c1fb9cc0",
+          "빈칸양식/03_실습.csv": "bab28e234e1fa8d67a70824ad389e5178f3eaae0d4ee021b448ee77cf8a0e2dd",
+          "실습양식.docx": "eaddeacfb1fa02b7ba45ce2210a230b74ef5d3f0b17026e0e4881acc29223399",
+          "역할구분.png": "841c65cbf8830eb6f291dc4c26ad4aa0c98b0c5192c92717316543f536ab3809",
+          "읽는순서.txt": "436bd58a28f8e71ceadd43f0e009b69b4c6b2a10905630ee48e23b02f9d1d744",
+          "학습자료.pdf": "abb68c95defc1014bd1b63aae720aa6b737eb09918e78f1edef495bdf2f955a5",
+          "학습자료.zip": "e2dd6af64896b6e7d648389efc4dfd234ac7e15aeaec28eaed1f9831766a6f05"
+        },
+        "recorded_at": "2026-10-29T13:04:30+09:00"
+      },
+      "registered": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "C",
+        "post_date": "2026-08-21",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 제작 C그룹 지원자료",
+        "post_id": "1072",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1072",
+        "checked_at": "2026-10-29T04:06:59.604Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://toss.im/tossfeed/article/toss-designer-interview",
+          "https://toss.tech/article/toss-design-system-guide"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "e2dd6af64896b6e7d648389efc4dfd234ac7e15aeaec28eaed1f9831766a6f05",
+        "course_confirmed": true,
+        "observed_in_list": true,
+        "recorded_at": "2026-10-29T13:07:58+09:00"
+      },
+      "verified": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "group": "C",
+        "post_date": "2026-08-21",
+        "title": "[능력단위평가_지원내역] 디자인 구성요소 제작 C그룹 지원자료",
+        "post_id": "1072",
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1072",
+        "checked_at": "2026-10-29T04:06:59.604Z",
+        "title_exact": true,
+        "date_exact": true,
+        "text_exact": true,
+        "images_loaded": true,
+        "anchors_valid": true,
+        "reference_urls": [
+          "https://toss.im/tossfeed/article/toss-designer-interview",
+          "https://toss.tech/article/toss-design-system-guide"
+        ],
+        "styles": {
+          "maxWidth": "980px",
+          "fontSize": "17px",
+          "lineHeight": "33.15px",
+          "tablePadding": "14px 16px"
+        },
+        "anchor_navigation": true,
+        "attachment_status": 200,
+        "attachment_sha256": "e2dd6af64896b6e7d648389efc4dfd234ac7e15aeaec28eaed1f9831766a6f05",
+        "course_confirmed": true,
+        "references_checked": true,
+        "layout_reviewed": true,
+        "observed_in_list": true,
+        "layout_evidence": "C_등록후본문.png",
+        "reference_review": "공개 한국어 원문의 지정 범위를 읽고 각 활동과 대조함.",
+        "recorded_at": "2026-10-29T13:07:58+09:00"
+      }
+    }
+  },
+  "history": [
+    {
+      "stage": "target_confirmed",
+      "group": null,
+      "recorded_at": "2026-10-29T12:55:49+09:00",
+      "evidence_sha256": "50222b251387cc044e8a46c1b5cb13fcf105fb6a1e1d25ade1c49a56ea630a09"
+    },
+    {
+      "stage": "sources_collected",
+      "group": null,
+      "recorded_at": "2026-10-29T12:55:49+09:00",
+      "evidence_sha256": "88edc0809ba1a2be3f63e7da56ec2cdfb1939ae6f4a95fe85c5915dd9e8041e2"
+    },
+    {
+      "stage": "meeting_resolved",
+      "group": null,
+      "recorded_at": "2026-10-29T12:55:50+09:00",
+      "evidence_sha256": "2b85ecc3917fc8ffbb71abc490b3c8cd61b4694056fe5fe37e42988b633eeefe"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "A",
+      "recorded_at": "2026-10-29T13:04:30+09:00",
+      "evidence_sha256": "72b53865138d378135e6ce76f44b10be2d1df6bf0ef20e38ebcbec6442c29649"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "B",
+      "recorded_at": "2026-10-29T13:04:30+09:00",
+      "evidence_sha256": "aa8fdbc33026afa7b667ad5661f0d4c4e1d1b149a079ca655d02951c3eae62c9"
+    },
+    {
+      "stage": "materials_verified",
+      "group": "C",
+      "recorded_at": "2026-10-29T13:04:30+09:00",
+      "evidence_sha256": "c493954891f83f9f05bbd97f32e821877f2112b1cabdbfd4f73890ff196e5b83"
+    },
+    {
+      "stage": "registered",
+      "group": "A",
+      "recorded_at": "2026-10-29T13:07:58+09:00",
+      "evidence_sha256": "7e8196de2fdc8416289631b2737ba245db402ea43e1694f4b8212941808bcda8"
+    },
+    {
+      "stage": "verified",
+      "group": "A",
+      "recorded_at": "2026-10-29T13:07:58+09:00",
+      "evidence_sha256": "aa4a119a8972c87cb11be789fb4f1286e4f5f59b494e84c503251281d5c11f0a"
+    },
+    {
+      "stage": "registered",
+      "group": "B",
+      "recorded_at": "2026-10-29T13:07:58+09:00",
+      "evidence_sha256": "b8409340557d0c08035439f1860634473a46dc41aeb9acfa7897607c65f96715"
+    },
+    {
+      "stage": "verified",
+      "group": "B",
+      "recorded_at": "2026-10-29T13:07:58+09:00",
+      "evidence_sha256": "55890d38bd31896e9fb98d5df7d10e82ea95fe553949b0b86a350aaa72009c9a"
+    },
+    {
+      "stage": "registered",
+      "group": "C",
+      "recorded_at": "2026-10-29T13:07:58+09:00",
+      "evidence_sha256": "5fb0deb0744138a885048a107be8ae0cc09a17e17a797b7c6106e72a68f41790"
+    },
+    {
+      "stage": "verified",
+      "group": "C",
+      "recorded_at": "2026-10-29T13:07:58+09:00",
+      "evidence_sha256": "213f0732f4d7c3e81a843fcef12c593853cfb856596b6c8093f4b37a5a7351d9"
+    }
+  ]
+}

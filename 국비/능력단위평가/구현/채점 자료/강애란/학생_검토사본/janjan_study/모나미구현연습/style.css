@@ -1,0 +1,37 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+.headtop{
+    height: 59px;
+    border-bottom: 1px solid red;
+}
+.conwrap{
+    display: flex;
+    height: 30px;
+    background-color: aqua;
+}
+.lang{
+    text-align: center;
+    height: 30px;
+    width: 88px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;;
+}
+.sns{
+    width: 111px;
+    height: 30px;
+    background-color: pink;
+    display: flex;
+}
+.topmenu{
+    height: 44px;
+    width: 1269px;
+
+}
+.gnb{
+    height: 89px;
+    width: 1269px;
+    border-bottom: 1px solid pink;
+}

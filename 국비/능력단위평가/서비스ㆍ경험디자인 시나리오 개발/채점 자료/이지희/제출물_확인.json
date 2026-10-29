@@ -1,0 +1,15 @@
+{
+  "student": "이지희",
+  "unit": "서비스ㆍ경험디자인 시나리오 개발",
+  "Sid": "sbsartdj1120",
+  "receivedAt": "2026-10-23T04:11:42.277342+00:00",
+  "sourceUrl": "https://sbsartdj.maniaro.net/uflist/download.php?type=project_appraisal&pcode=300002&lcode=12&file=1790675300_95e16561.pdf",
+  "files": [
+    {
+      "filename": "원본/1790675300_95e16561.pdf",
+      "bytes": 7386116,
+      "sha256": "8aa3c5a7953d2d9fb2991927d28b22925127e28dc8b2d1a217fab948ac17290a"
+    }
+  ],
+  "review": "원본 변경 없이 보존. 복원 텍스트는 가시 rawdict 줄과 glyph origin을 대응한 검토용이며 그림·연결선은 원본 렌더링으로 확인."
+}

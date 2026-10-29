@@ -1,0 +1,48 @@
+{
+  "name": "이주원",
+  "Sid": "sbsartdj1171",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1171",
+  "downloads": [
+    {
+      "filename": "1792725263_d5c93ef6.zip",
+      "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725263_d5c93ef6.zip",
+      "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/이주원/원본/1792725263_d5c93ef6.zip"
+    }
+  ],
+  "currentScore": "0 / 100",
+  "submittedAnswer": "",
+  "submittedLinks": [
+    {
+      "href": "https://github.com/LJW8178/261023_Test.git",
+      "onclick": null
+    }
+  ],
+  "receivedAt": "2026-10-26T04:22:19.651Z",
+  "archiveBytes": 577628,
+  "sha256": "1cc70c00b1f69a67620cc00b3e4b9913395a4fb39e0f6ce471f95822842426a8",
+  "memberCount": 72,
+  "codeFiles": [
+    {
+      "path": "학생_검토사본\\261023_Test\\index.html",
+      "bytes": 4704,
+      "monami": true
+    },
+    {
+      "path": "학생_검토사본\\261023_Test\\memo.md",
+      "bytes": 2033,
+      "monami": true
+    },
+    {
+      "path": "학생_검토사본\\261023_Test\\style.css",
+      "bytes": 2968,
+      "monami": false
+    }
+  ],
+  "git": [
+    {
+      "directory": "학생_검토사본\\261023_Test",
+      "head": "ref: refs/heads/main",
+      "commit": "4e687bd441d335a1827703dab256f1968f41e79a"
+    }
+  ]
+}

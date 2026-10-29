@@ -1,0 +1,12 @@
+{
+  "student": "홍석경",
+  "repository": "lf2net080/TEST_MONAMI",
+  "requestedCommit": "e76065cabef5d39c9e3c05e450adbc8e1602c6df",
+  "isError": true,
+  "content": [
+    {
+      "type": "text",
+      "text": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"}"
+    }
+  ]
+}

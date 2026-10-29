@@ -1,0 +1,83 @@
+{
+  "group": "C",
+  "title": "[능력단위평가_지원내역] 시안 디자인 개발 심화 C그룹 지원자료",
+  "date": "2026-07-06",
+  "uploaded": {
+    "process.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729539_cc975570.png",
+    "system.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729540_27e35028.png",
+    "variation.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729540_60eb9eca.png",
+    "checks.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729541_3f7fe9cd.png"
+  },
+  "preflight": {
+    "Pcode": "300002",
+    "BoardCode": "85",
+    "date": "2026-07-06",
+    "images": 4,
+    "anchors": 10,
+    "refs": 4,
+    "headings": 11,
+    "placeholder": false
+  },
+  "saved": {
+    "status": 200,
+    "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+  },
+  "rows": [
+    {
+      "text": "\n\t\t\t\t\t\t\t\t\t\t18\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시안 디자인 개발 심화 C그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06\n\t\t\t\t\t\t\t\t\t",
+      "id": "1053"
+    }
+  ],
+  "verification": {
+    "group": "C",
+    "id": "1053",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1053",
+    "exactText": true,
+    "title": true,
+    "date": true,
+    "images": [
+      {
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729539_cc975570.png",
+        "loaded": true
+      },
+      {
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729540_27e35028.png",
+        "loaded": true
+      },
+      {
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729540_60eb9eca.png",
+        "loaded": true
+      },
+      {
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792729541_3f7fe9cd.png",
+        "loaded": true
+      }
+    ],
+    "anchors": 10,
+    "anchorTargets": true,
+    "references": [
+      "https://design.samsung.com/kr/contents/design-career-1/vcd.html",
+      "https://design.samsung.com/kr/contents/blue-story/",
+      "https://spoqa.github.io/2012/12/03/Typography.html",
+      "https://helpx.adobe.com/kr/illustrator/using/pdf-options.html"
+    ],
+    "headings": 11,
+    "styles": {
+      "maxWidth": "980px",
+      "font": "17px",
+      "lineHeight": "33.15px",
+      "tablePadding": "14px 16px"
+    },
+    "placeholder": false,
+    "anchorNavigation": {
+      "hash": "#c-learning-1",
+      "targetTop": 0.28125,
+      "scrollY": 1138
+    },
+    "attachment": {
+      "status": 200,
+      "bytes": 476386,
+      "exactBytes": true
+    }
+  }
+}

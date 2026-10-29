@@ -1,0 +1,338 @@
+[
+  {
+    "name": "김규린",
+    "Sid": "sbsartdj1165",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1165",
+    "downloads": [
+      {
+        "filename": "1792725262_8b1bedde.zip",
+        "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725262_8b1bedde.zip",
+        "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/김규린/원본/1792725262_8b1bedde.zip"
+      }
+    ],
+    "currentScore": "0 / 100",
+    "submittedAnswer": "",
+    "submittedLinks": [
+      {
+        "href": "https://github.com/wonsi708934/EXAM_KGR.git",
+        "onclick": null
+      }
+    ],
+    "receivedAt": "2026-10-26T04:22:14.240Z",
+    "archiveBytes": 262997,
+    "sha256": "d733abbc40a17acc53ded8d01eadf7adcb24b219f75853377f10eeef01b67aef",
+    "memberCount": 53,
+    "codeFiles": [
+      {
+        "path": "학생_검토사본\\EXAM\\index.html",
+        "bytes": 804,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\EXAM\\style.css",
+        "bytes": 549,
+        "monami": false
+      },
+      {
+        "path": "학생_검토사본\\README.md",
+        "bytes": 10,
+        "monami": false
+      }
+    ],
+    "git": [
+      {
+        "directory": "학생_검토사본",
+        "head": "ref: refs/heads/main",
+        "commit": "9dfa6cab7571aea69cb2ee7e804b3702e24bce27"
+      }
+    ]
+  },
+  {
+    "name": "김형관",
+    "Sid": "sbsartdj1166",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1166",
+    "downloads": [
+      {
+        "filename": "1792725266_86ea1fb0.zip",
+        "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725266_86ea1fb0.zip",
+        "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/김형관/원본/1792725266_86ea1fb0.zip"
+      }
+    ],
+    "currentScore": "0 / 100",
+    "submittedAnswer": "",
+    "submittedLinks": [
+      {
+        "href": "https://github.com/gudrhks1403-droid/uiuxb1023.git",
+        "onclick": null
+      }
+    ],
+    "receivedAt": "2026-10-26T04:22:15.035Z",
+    "archiveBytes": 4291502,
+    "sha256": "54819901bfa7fdd1b43d24e45d2a125e9feb5e5f4221099046dd1d8d911fd55f",
+    "memberCount": 82,
+    "codeFiles": [
+      {
+        "path": "학생_검토사본\\시험\\index.html",
+        "bytes": 2897,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\시험\\style.css",
+        "bytes": 2235,
+        "monami": false
+      }
+    ],
+    "git": [
+      {
+        "directory": "학생_검토사본",
+        "head": "ref: refs/heads/main",
+        "commit": "dcf4b75f9168548d3010e66e24538f4b4302ff89"
+      }
+    ]
+  },
+  {
+    "name": "박선환",
+    "Sid": "sbsartdj1167",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1167",
+    "downloads": [
+      {
+        "filename": "1792725263_d1be2f2d.zip",
+        "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725263_d1be2f2d.zip",
+        "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/박선환/원본/1792725263_d1be2f2d.zip"
+      }
+    ],
+    "currentScore": "0 / 100",
+    "submittedAnswer": "",
+    "submittedLinks": [
+      {
+        "href": "https://github.com/gugu99-seon/hawn-10.23-.git",
+        "onclick": null
+      }
+    ],
+    "receivedAt": "2026-10-26T04:22:17.133Z",
+    "archiveBytes": 717666,
+    "sha256": "a22974e4e56520a204717a28880bc2d1ffd50c7aa59797d9497eb23b0274fd3f",
+    "memberCount": 77,
+    "codeFiles": [
+      {
+        "path": "학생_검토사본\\monami 시험\\index.html",
+        "bytes": 3383,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\monami 시험\\memo.md",
+        "bytes": 2407,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\monami 시험\\style.css",
+        "bytes": 4059,
+        "monami": false
+      }
+    ],
+    "git": [
+      {
+        "directory": "학생_검토사본",
+        "head": "ref: refs/heads/main",
+        "commit": "3f539cb3a4c2a0cc380e91d5a4ed914802e18a5f"
+      }
+    ]
+  },
+  {
+    "name": "신윤아",
+    "Sid": "sbsartdj1168",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1168",
+    "downloads": [
+      {
+        "filename": "1792725263_79afaba7.zip",
+        "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725263_79afaba7.zip",
+        "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/신윤아/원본/1792725263_79afaba7.zip"
+      }
+    ],
+    "currentScore": "0 / 100",
+    "submittedAnswer": "",
+    "submittedLinks": [
+      {
+        "href": "https://github.com/fngk2580-prog/first_test_MNM.git",
+        "onclick": null
+      }
+    ],
+    "receivedAt": "2026-10-26T04:22:17.533Z",
+    "archiveBytes": 1043073,
+    "sha256": "c682a266829af22aec88f9c7e83fea3c6064cd9b7ce2b32dffa6066c0aad9979",
+    "memberCount": 204,
+    "codeFiles": [
+      {
+        "path": "학생_검토사본\\first_test_MNM\\README.md",
+        "bytes": 16,
+        "monami": false
+      },
+      {
+        "path": "학생_검토사본\\first_test_MNM\\모나미 1차\\index.html",
+        "bytes": 2510,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\first_test_MNM\\모나미 1차\\style.css",
+        "bytes": 4818,
+        "monami": true
+      }
+    ],
+    "git": [
+      {
+        "directory": "학생_검토사본\\first_test_MNM",
+        "head": "ref: refs/heads/main",
+        "commit": "84179335a3781ac41e88429816da64919adad889"
+      }
+    ]
+  },
+  {
+    "name": "이주원",
+    "Sid": "sbsartdj1171",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1171",
+    "downloads": [
+      {
+        "filename": "1792725263_d5c93ef6.zip",
+        "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725263_d5c93ef6.zip",
+        "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/이주원/원본/1792725263_d5c93ef6.zip"
+      }
+    ],
+    "currentScore": "0 / 100",
+    "submittedAnswer": "",
+    "submittedLinks": [
+      {
+        "href": "https://github.com/LJW8178/261023_Test.git",
+        "onclick": null
+      }
+    ],
+    "receivedAt": "2026-10-26T04:22:19.651Z",
+    "archiveBytes": 577628,
+    "sha256": "1cc70c00b1f69a67620cc00b3e4b9913395a4fb39e0f6ce471f95822842426a8",
+    "memberCount": 72,
+    "codeFiles": [
+      {
+        "path": "학생_검토사본\\261023_Test\\index.html",
+        "bytes": 4704,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\261023_Test\\memo.md",
+        "bytes": 2033,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\261023_Test\\style.css",
+        "bytes": 2968,
+        "monami": false
+      }
+    ],
+    "git": [
+      {
+        "directory": "학생_검토사본\\261023_Test",
+        "head": "ref: refs/heads/main",
+        "commit": "4e687bd441d335a1827703dab256f1968f41e79a"
+      }
+    ]
+  },
+  {
+    "name": "전해주",
+    "Sid": "sbsartdj1169",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1169",
+    "downloads": [
+      {
+        "filename": "1792725262_796219d4.zip",
+        "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725262_796219d4.zip",
+        "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/전해주/원본/1792725262_796219d4.zip"
+      }
+    ],
+    "currentScore": "0 / 100",
+    "submittedAnswer": "",
+    "submittedLinks": [
+      {
+        "href": "https://github.com/wjsgown630-stack/test-1.git",
+        "onclick": null
+      }
+    ],
+    "receivedAt": "2026-10-26T04:22:19.976Z",
+    "archiveBytes": 817764,
+    "sha256": "8e53cd9640a9626b27e8d81543b9b57c6798e7d525751a8160c4d560770913c7",
+    "memberCount": 89,
+    "codeFiles": [
+      {
+        "path": "학생_검토사본\\마켓컬리 코드\\index.html",
+        "bytes": 6001,
+        "monami": false
+      },
+      {
+        "path": "학생_검토사본\\마켓컬리 코드\\style.css",
+        "bytes": 5297,
+        "monami": false
+      },
+      {
+        "path": "학생_검토사본\\모나미시험\\index.html",
+        "bytes": 1612,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\모나미시험\\style.css",
+        "bytes": 1721,
+        "monami": false
+      }
+    ],
+    "git": [
+      {
+        "directory": "학생_검토사본",
+        "head": "ref: refs/heads/main",
+        "commit": "a70185dc16c3d3a66c7ec63dd626001306ad4cf9"
+      }
+    ]
+  },
+  {
+    "name": "홍석경",
+    "Sid": "sbsartdj1170",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1170",
+    "downloads": [
+      {
+        "filename": "1792725262_db6975e6.zip",
+        "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725262_db6975e6.zip",
+        "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/홍석경/원본/1792725262_db6975e6.zip"
+      }
+    ],
+    "currentScore": "0 / 100",
+    "submittedAnswer": "",
+    "submittedLinks": [
+      {
+        "href": "https://github.com/lf2net080/TEST_MONAMI.git",
+        "onclick": null
+      }
+    ],
+    "receivedAt": "2026-10-26T04:22:22.051Z",
+    "archiveBytes": 507065,
+    "sha256": "9d13cf2e2c7f98e46d6a7cc90b42d7af25ac9003e398296f77fe9fb65563077d",
+    "memberCount": 71,
+    "codeFiles": [
+      {
+        "path": "학생_검토사본\\chatGPT.md",
+        "bytes": 1802,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\index.html",
+        "bytes": 1290,
+        "monami": true
+      },
+      {
+        "path": "학생_검토사본\\style.css",
+        "bytes": 1707,
+        "monami": false
+      }
+    ],
+    "git": [
+      {
+        "directory": "학생_검토사본",
+        "head": "ref: refs/heads/main",
+        "commit": "e76065cabef5d39c9e3c05e450adbc8e1602c6df"
+      }
+    ]
+  }
+]

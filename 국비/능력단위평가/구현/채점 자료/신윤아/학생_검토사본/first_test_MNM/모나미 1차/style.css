@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+/* 컴퓨터에 폰트가 없어서 불러옴 */
+
+html {
+  overflow-y: scroll; /* 원본처럼 스크롤바 공간 유지 */
+}
+body {
+  font-family: Montserrat, "Noto Sans KR", sans-serif;
+  margin: 0; /* 브라우저 기본 바깥 여백 제거 */
+} 
+/* Montserrat는 우측 상단 UL, Noto Sans는 상단 카테고리 UL에 쓰임*/
+
+/* 상단바 */
+.head_top {
+  height: 58px; /* 고정 높이 */
+  border-bottom: 1px solid #eaeaea;
+}
+.head_top .conwrap {
+  display: flex; /* 왼쪽 links와 오른쪽 topmenu를 한 줄에 배치 */
+  justify-content: space-between;
+  height: 44px;
+  width: 94%;
+  /* conwrap는 head_top보다 가로 너비가 21.55px(약 6% 작음) */
+  margin: 0 auto;
+  /* 위아래 여백을 0, 좌우는 자동으로 설정 */
+}
+.sns ul{
+  display: flex; /* 가로로 나란히 배치 */
+  gap: 7px; /* 이미지들 사이의 여백 */
+  list-style: none;
+  padding: 0; /* 들여쓰기 */
+  margin: 0; /* 위아래 여백 */
+}
+.sns img {
+  display: block; /* 이미지 아래에 생기는 기본 공백 제거 */
+  width: 30px;
+  height: 30px;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+.topmenu {
+  float: right; /* 남는 공간을 왼쪽 여백으로 사용해 오른쪽으로 이동 */
+  margin-top: 20px;
+  color: #9b9a9a;
+  font-size: 11px;
+  line-height: 20px;
+}
+.topmenu ul {
+  display: flex;
+  gap: 22px; /* 메뉴 글자 사이 간격 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lang {
+  box-sizing: border-box; /* 패딩과 테두리의 크기 유지 */
+  display: flex;
+  align-items: center;
+  gap: 6px; /* 국기와 KOR 글자 사이 간격 */
+  width: 88px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  color: #000;
+  font-size: 11px; font-weight: 400; 
+}
+.lang img {
+  display: block;
+  width: 13px;
+  height: 11px;
+}
+.category {
+  height: 89px;
+  width: 94%;
+  margin: 0 auto;
+  display: flex; /* 메뉴와 검색 영역을 한 줄에 배치 */
+}
+.category ul {
+  display: flex;
+  flex: 1; /* 검색 영역을 제외한 나머지 너비 사용 */
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  font-size: 17px; color: #303030;
+  margin: 0; padding: 0; /* 바깥, 안쪽 여백을 모두 0으로 적용 */
+}
+.category ul li {
+  flex: 1; /* 메뉴 항목에 같은 너비 배분 */
+  text-align: center;
+}
+.category ul li:hover {
+  color: #c40f39; /* 마우스를 올리면 색 변경 */
+}
+.category .logo {
+  display: block; /* 로고 아래의 기본 공백 제거 */
+  margin-right: 5px; /* 로고와 메뉴 사이 여백 */
+}
+.search {
+  flex: 0 0 162px; /* 원본 검색 영역의 너비 */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px; /* 두 아이콘 사이 간격 */
+}
+.bgarea {
+  height: 652px; /* 모나미 원본 배너 높이 */
+}
+.new {
+  height: 999px;
+  box-sizing: border-box; /* 높이 999px에 위아래 패딩 포함 */
+  padding: 75px 0 90px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 콘텐츠를 위쪽에서 시작 */
+}
+.new .con {
+  width: 1200px;
+  height: 821px;
+  padding: 75px 0 90px;
+}
+.tit h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  margin: 0; /* h2의 기본 위아래 여백 제거 */
+}
+.tit h2::after {
+  /* 사이트 관리자모드로 확인해보니 h2:after로 명명되어 있고 설정값이 있어 적용해봄 */
+  content: "";  /* 빈 장식 요소 생성 */
+  display: block; /* 제목 아래 줄에 배치 */
+  width: 26px;
+  height: 4px;
+  margin-top: 10px;
+  background: #c40f39;
+}
+.tit p {
+  font-size: 13px;
+  color: #6e6e6e;
+  margin-top: 10px;
+}
+.toparea {
+  display: flex; /* 왼쪽 영역과 오른쪽 이미지를 가로로 배치 */
+  gap: 22px; /* 이미지 사이 간격 */
+  margin: 13px 0 22px;
+}
+.toparea .left {
+  width: 392px;
+  height: 360px;
+  display: flex;
+  flex-direction: column; /* 제목과 작은 이미지를 위아래로 배치 */
+  justify-content: space-between; /* 제목은 위, 이미지는 아래에 배치 */
+}
+.toparea img {
+  display: block; /* 이미지 아래 기본 공백 제거 */
+  border-radius: 20px;
+}
+.btmarea {
+  height: 439px;
+  display: flex;
+  align-items: flex-start; 
+  /* 이미지가 가운데 이미지 높이로 늘어나지 않도록 위쪽에 맞춤 */
+  gap: 22px;
+}
+.btmarea img {
+  border-radius: 20px;
+}
+.product {
+  
+}

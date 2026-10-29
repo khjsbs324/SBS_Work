@@ -1,0 +1,11 @@
+- generic [ref=f5e4]:
+  - generic [ref=f5e5]:
+    - img "한국어" [ref=f5e6]
+    - generic [ref=f5e7]: KOR
+  - list [ref=f5e9]:
+    - listitem [ref=f5e10]:
+      - img "페이스북" [ref=f5e11]
+    - listitem [ref=f5e12]:
+      - img "인스타그램" [ref=f5e13]
+    - listitem [ref=f5e14]:
+      - img "유투브" [ref=f5e15]

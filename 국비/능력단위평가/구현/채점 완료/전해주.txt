@@ -1,0 +1,134 @@
+전해주 — B과정 구현(모나미 선택 2섹션) 채점 결과
+
+최종점수: 79 / 100
+평가 영역: 상단 / BEST PRODUCT
+사이트 등록: 점수·피드백 저장 및 상세 화면 재검증 완료
+
+[교사용 근거]
+원점수 합계 48점. 공통 환산식 ROUND(60 + 원점수 × 0.4, 0)에 따라 최종 79점입니다.
+
+상단: 27/50
+- HTML 구조: 5/10 — 유틸리티의 언어·SNS·오른쪽 메뉴를 구분했으나 메인헤더는 없습니다.
+- 배치·크기·간격: 11/20 — 유틸리티의 가로 배치는 되지만 왼쪽 고정 폭 때문에 언어 상자가 축소되고 메인헤더 배치가 비어 있습니다.
+- 콘텐츠·이미지·대체 설명: 4/10 — SNS·국기 파일은 있으며 CONTECT US 오타와 로고·주 메뉴 누락이 있습니다.
+- 시각 스타일·가독성: 4/5 — 글자·테두리의 기본 표현은 있으나 언어 상자의 폭과 안쪽 여백을 정리해야 합니다.
+- CSS 유효성·요구 상태·실행: 3/5 — font-weight:auto는 무효이며 index.html 37행의 여분 닫는 div가 있습니다.
+
+BEST PRODUCT: 21/50
+- HTML 구조: 4/10 — 제목·강조선·설명 구조만 있고 탭과 상품 카드 부모가 없습니다.
+- 배치·크기·간격: 6/20 — 제목 중앙 정렬·배경은 있으나 목록·카드·가로 스크롤 배치 결과는 없습니다.
+- 콘텐츠·이미지·대체 설명: 2/10 — 브랜드 설명은 있으며, ZIP의 상품 이미지 11개가 HTML에서 사용되지 않았습니다.
+- 시각 스타일·가독성: 4/5 — 제목 32px과 빨간 선은 구현되어 있습니다.
+- CSS 유효성·요구 상태·실행: 5/5 — 작성된 코드·CSS는 실행됩니다. 핵심 목록 미완성은 해당 섹션의 하나의 미완성 묶음으로 반영했습니다.
+
+제출 ZIP과 모든 수록 파일의 SHA-256을 대조했고, 원본을 수정하지 않았습니다.
+상세 근거: ../채점 자료/전해주/모나미_2섹션_채점.json
+
+[사이트 등록 확인]
+확인 시각(UTC): 2026-10-26T04:41:21.562Z
+등록 총점: 79점
+항목별 정수 점수: 10·8·8·10·8·9·9·8·9
+기존 NCS 배점은 그대로 두고, 확정 실습 총점을 입력칸에 정수로 배분했습니다. 선택 2섹션의 실습 평가와 기존 NCS 항목의 입력 배분은 구분합니다.
+피드백 SHA-256: fadda170b9d90a1275b577de9ce11cddeb3dba06183d62daf35b0d6f42804810
+확인 URL: https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1169
+등록 증빙: ../채점 자료/전해주/사이트_등록확인.json
+
+[학생 공개 피드백]
+전해주 학생은 언어·SNS·HOME 계열을 가로로 배치했고, BEST PRODUCT의 제목·빨간 선·소개 문장을 구성했습니다. 국기와 SNS 이미지도 정상적으로 연결됩니다. 현재 상단에는 로고와 주 메뉴 줄이 없고, 인기상품에는 제목 아래의 카테고리와 상품 목록이 작성되지 않았습니다. 이번에는 실제 작업한 상단과 인기상품 두 영역을 기준으로 보완점을 정리했습니다.
+
+1. 상단 > 언어 상자의 축소와 실제 메뉴 문구
+
+[학생 코드 — 모나미시험/style.css]
+```css
+.head-left { width: 204px; display: flex; }
+.language { width: 86px; padding: 5px; }
+.sns { width: 204px; padding-left: 7px; padding-right: 7px; }
+```
+
+[수정 예시]
+```css
+.head-left { width: auto; gap: 14px; }
+.language {
+  flex: 0 0 86px;
+  width: 86px;
+  height: 28px;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sns { width: auto; padding: 0; }
+```
+
+왼쪽 부모와 SNS 자식에 모두 204px 너비가 지정되어 언어 상자까지 같은 공간에 들어가려 합니다. 그래서 언어 상자는 작성한 너비보다 작은 약81px로 표시됩니다. 왼쪽 부모는 내용에 따라 늘어나게 하고, 언어 상자는 줄어들지 않도록 설정하세요. 오른쪽의 `CONTECT US`는 `CONTACT US`로 바꾸면 됩니다.
+
+2. 상단 > 로고와 주 메뉴 줄 추가
+
+현재 `.head-top` 다음에는 바로 배너가 이어집니다. 유틸리티만으로 상단 전체가 완성된 것은 아니므로, 그 아래에 1400px 내부 부모와 89px 높이의 메인헤더를 추가하세요. 제공 자료의 로고, 일곱 개 주 메뉴, 검색·전체 메뉴 표시를 같은 부모 안에 가로로 배치하고 세로 가운데를 맞추면 됩니다. 먼저 표시와 정렬을 완성하는 데 집중하세요.
+
+3. BEST PRODUCT > 준비한 이미지 파일을 HTML 카드로 연결
+
+[학생 코드 — index.html]
+```html
+<div class="product">
+  <div class="product-txt">BEST PRODUCT</div>
+  <div class="line"></div>
+  <div class="txt">언제 어디서나 생활 속에 함께하는 모나미</div>
+</div>
+```
+
+[제목 아래에 추가할 카드 구조 예시]
+```html
+<div class="product-scroll" tabindex="0">
+  <div class="product-list">
+    <div class="product-card">
+      <img src="./product-images/01-pluspen-3000-prime.jpg" alt="프러스펜 3000 프라임">
+      <div class="product-info">
+        <p>프리미엄 펜</p>
+        <p>프러스펜 3000 프라임</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+제출 ZIP에는 상품 이미지 11개가 준비되어 있지만 현재 HTML에서는 사용되지 않았습니다. 위 예시는 이미 들어 있는 첫 이미지 파일을 연결하는 방법입니다. 각 파일에 맞는 상품명을 확인하고 같은 구조로 11개를 작성하세요. 그 위에는 프리미엄 펜·펜/펜슬·마카/컬러링·노트/사무용품의 표시도 추가해야 합니다.
+
+4. BEST PRODUCT > 가로 카드 목록과 실제 높이
+
+[추가할 CSS 예시]
+```css
+.product { height: auto; padding-bottom: 70px; }
+.product-scroll { overflow-x: auto; }
+.product-list { display: flex; gap: 9px; width: 3016px; }
+.product-card {
+  flex: 0 0 266px;
+  height: 505px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+.product-card > img {
+  display: block;
+  width: 266px;
+  height: 390px;
+  object-fit: cover;
+}
+.product-info { padding: 30px 28px 18px; }
+```
+
+현재 951px 높이의 회색 배경만 길게 남아 있습니다. 상품 카드와 그 부모를 실제로 만든 뒤 높이를 내용에 맞추세요. 3016px은 카드 11개와 사이 간격을 합한 값입니다. 완성 후 마지막 상품까지 가로로 이동되는지 확인하면 됩니다.
+
+5. 코드 문법 정리
+
+[학생 코드]
+```css
+font-weight: auto;
+```
+
+[수정 예시]
+```css
+font-weight: 400;
+```
+
+`font-weight`에 `auto`는 적용되지 않으므로 사용할 굵기를 숫자나 `normal`로 지정하세요. HTML에서는 `.product`를 닫은 다음 `</div>`가 하나 더 있으므로 여는 태그와 짝을 확인해 제거해야 합니다. 현재 페이지는 표시되지만 브라우저의 자동 보정에 기대지 않도록 정리하는 연습이 필요합니다.
+
+최종점수는 79점입니다. 우선 준비된 11개 상품 이미지를 실제 카드로 연결하고, 상단의 로고·주 메뉴 줄을 완성하세요.

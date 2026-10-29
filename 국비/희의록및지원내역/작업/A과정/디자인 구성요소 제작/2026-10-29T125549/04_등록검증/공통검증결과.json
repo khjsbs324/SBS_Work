@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "1a27f7",
+        "wall_time_seconds": 1.448405,
+        "exit_code": 0,
+        "original_token_count": 30,
+        "output": "..............\r\n----------------------------------------------------------------------\r\nRan 14 tests in 0.240s\r\n\r\nOK\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "408a02",
+        "wall_time_seconds": 8.1698008,
+        "exit_code": 0,
+        "original_token_count": 32,
+        "output": "........................\r\n----------------------------------------------------------------------\r\nRan 24 tests in 6.993s\r\n\r\nOK\r\n"
+      }
+    }
+  ],
+  "harness": {
+    "ok": false,
+    "preexisting": true,
+    "error": "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완"
+  },
+  "materials": "A/B/C 파일 검증 및 PDF 19쪽 검수 통과",
+  "registration": "본문·날짜·이미지·목차·다운로드 ZIP 동일 확인"
+}

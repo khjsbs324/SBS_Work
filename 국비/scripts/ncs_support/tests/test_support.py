@@ -15,6 +15,7 @@ from scripts.ncs_support.validate import validate_group
 from scripts.ncs_support.catalog import confirm_target, inventory, write_report
 from scripts.ncs_support.pipeline import next_in_course, next_step, start_unit
 from scripts.ncs_support.revisions import begin_revision
+from scripts.ncs_support.meeting import MEETING_PATH, REVIEW_CHECKS, check_meeting, material_plan, registration_check
 
 
 class DateTests(unittest.TestCase):
@@ -57,12 +58,41 @@ class WorkflowTests(unittest.TestCase):
     def globals(self, skip=False):
         self.save('target_confirmed', {'course_name':self.job['course']['name'], 'unit_end_date':'2026-07-03', 'screen_confirmed':True})
         self.save('sources_collected', {'task_basis':'original', 'original_task_full_text_available':True, 'task_read':True, 'scores_read':True, 'feedback_read':True, 'meeting_read':True, 'source_urls':['https://example.org/test-fixture']})
-        self.save('meeting_resolved', {'mode':'skipped' if skip else 'existing', 'exact_readback':True, 'reason':'isolated test fixture'})
+        self.save('meeting_resolved', self.meeting_receipt('skipped' if skip else 'existing'))
+
+    def meeting_receipt(self, mode='existing'):
+        path = self.run / MEETING_PATH
+        if not path.exists():
+            roster = {'course_id':'A', 'unit':'테스트 단위', 'lcode':'6', 'checked_at':now(),
+                      'source_url':self.job['course']['base_url']+'/appraisal/app/index.php?Pcode=300002&Lcode=6',
+                      'unit_elements':['실제 요소 제작하기'],
+                      'students':[{'id':g, 'name':'학생'+g} for g in 'ABC']}
+            write_json(self.run/'01_근거자료/평가대상.json', roster)
+            names = '\n'.join(g+'그룹 : [학생'+g+']' for g in 'ABC')
+            write_json(path, {'schema_version':1, 'example':False, 'unit':'테스트 단위',
+                'actual_date':'2026-10-29', 'meeting_date':'2026-10-29',
+                'roster_path':'01_근거자료/평가대상.json',
+                'analysis':'주제\n목적\n결과\n'+names+'\n실제 요소 제작하기\n종합 의견\n건의사항',
+                'improvement':'조치사항\n'+names+'\n학생 변화\n교수법 개선\n후속 지도',
+                'groups':{g:{'student_ids':[g], 'basis':'Observed basis '+g, 'strengths':'Strength '+g,
+                             'needs':'Need '+g, 'activities':'Activity '+g, 'criteria':'Criterion '+g} for g in 'ABC'},
+                'teaching_link':{'previous_unit':'이전 단위', 'next_unit':'다음 단위', 'follow_up':'실제 후속 지도'}})
+        doc = read_json(path)
+        checks = check_meeting(self.run)
+        return {'mode':mode, 'reason':'isolated test fixture', 'meeting_path':MEETING_PATH,
+                'meeting_sha256':checks['meeting_sha256'], 'roster_sha256':checks['roster_sha256'],
+                'review_checks':{k:True for k in REVIEW_CHECKS}, 'review_notes':'Fixture manual review',
+                'local_reviewed':True, 'exclusion_request':'Explicit fixture exclusion' if mode=='skipped' else '',
+                'exact_readback':True, 'readback':{**{k:doc[k] for k in ('analysis','improvement','meeting_date')},
+                    'checked_at':now(), 'url':self.job['course']['base_url']+'/appraisal/analysis/index.php?Pcode=300002&Lcode=6'}}
 
     def materials(self, group='A'):
+        if 'meeting_resolved' not in load_run(self.run)[2]['global']:
+            self.globals()
         p = group_dir(self.run, group)
         (p / 'process.png').write_bytes(base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII='))
         data = {'example':False,'group':group,'unit':'테스트 단위','subtitle':'Fixture learning goal',
+                'support_plan_sha256':material_plan(self.run, group)['support_plan_sha256'],
                 'sections':[{'title':'Observe, practice and check','html':'<p>Isolated fixture.</p><p><img src="@@process.png@@" alt="test fixture" /></p><table><tr><th>Observe</th><th>Check</th></tr><tr><td>A</td><td>B</td></tr></table>'}],
                 'images':['process.png'], 'sources':[{'url':'https://example.org/test-fixture','provider':'test fixture','title':'Fixture reference','language':'ko','free':True,'scope':'test scope','activity':'test activity','checked_at':now()}],
                 'worksheets':[{'title':'Practice evidence','fields':['File','Reason','Result']}],
@@ -75,7 +105,10 @@ class WorkflowTests(unittest.TestCase):
         return p
 
     def review(self, group='A'):
-        self.save('materials_verified', {'pdf_page_count':2, **{k:True for k in ('local_checks','pdf_reviewed','visual_reviewed','sources_reviewed','privacy_reviewed')}}, group)
+        self.save('materials_verified', {'pdf_page_count':2,
+            'support_plan_sha256':material_plan(self.run, group)['support_plan_sha256'],
+            'plan_alignment_reviewed':True, 'plan_alignment_notes':'Fixture needs/activity/criteria review',
+            **{k:True for k in ('local_checks','pdf_reviewed','visual_reviewed','sources_reviewed','privacy_reviewed')}}, group)
 
     def registration(self, group='A'):
         p = group_dir(self.run, group)
@@ -173,7 +206,7 @@ class WorkflowTests(unittest.TestCase):
         self.save('sources_collected', {'task_basis':'original','original_task_full_text_available':True,'task_read':True,'scores_read':True,'feedback_read':True,'meeting_read':True,'source_urls':['https://example.org']})
         with self.assertRaises(ValueError): self.save('meeting_resolved',{'mode':'skipped','reason':'not requested'})
         job=read_json(self.run/'작업정보.json');job['meeting_mode']='skip';write_json(self.run/'작업정보.json',job)
-        self.save('meeting_resolved',{'mode':'skipped','reason':'explicit user exclusion'})
+        self.save('meeting_resolved',self.meeting_receipt('skipped'))
 
     def test_templates_and_unverified_sources_are_rejected(self):
         p=self.materials();data=read_json(p/'content.json');data['example']=True;write_json(p/'content.json',data)
@@ -292,13 +325,12 @@ class WorkflowTests(unittest.TestCase):
         self.save('sources_collected', {'task_basis':'original','original_task_full_text_available':True,
                   'task_read':True,'scores_read':True,'feedback_read':True,'meeting_read':True,'source_urls':['https://example.org']})
         draft=self.run/'02_회의록/회의록.json'
-        write_json(draft,{'example':False,'analysis':'Actual draft','improvement':'Actual plan','actual_date':'2026-10-28'})
-        self.save('meeting_resolved',{'mode':'drafted','reason':'local preparation','local_reviewed':True,'draft_path':'02_회의록/회의록.json'})
+        self.save('meeting_resolved',self.meeting_receipt('drafted'))
         self.assertEqual(load_run(self.run)[2]['global']['meeting_resolved']['draft_sha256'],sha256(draft))
-        content=read_json(draft);content['analysis']='Updated draft';write_json(draft,content)
+        content=read_json(draft);content['analysis']+='\nUpdated draft';write_json(draft,content)
         self.assertEqual(status(self.run)['stale_global'],['meeting_resolved'])
         self.assertEqual(next_step(self.run)['stage'],'meeting_resolved')
-        self.save('meeting_resolved',{'mode':'drafted','reason':'reviewed correction','local_reviewed':True,'draft_path':'02_회의록/회의록.json'})
+        self.save('meeting_resolved',self.meeting_receipt('drafted'))
         self.assertEqual(status(self.run)['stale_global'],[])
         self.assertTrue(any(e['stage']=='draft_review_replaced' for e in load_run(self.run)[2]['history']))
 
@@ -315,6 +347,111 @@ class WorkflowTests(unittest.TestCase):
         with self.assertRaises(ValueError): begin_revision(self.run,'A',evidence,'test','test')
         self.assertEqual(sha256(self.run/'진행상태.json'),before)
         self.assertEqual(next_step(self.run)['stage'],'inspect_changed_materials')
+
+    def test_no_material_mutation_before_complete_meeting(self):
+        for call in (lambda: build_group(self.run, 'A'), lambda: package_group(self.run, 'A'),
+                     lambda: material_plan(self.run, 'A'), lambda: registration_check(self.run, 'A')):
+            with self.subTest(call=call), self.assertRaises(ValueError): call()
+        self.assertFalse((group_dir(self.run, 'A')/'article.html').exists())
+        self.assertFalse((group_dir(self.run, 'A')/'학습자료.zip').exists())
+
+    def test_existing_flag_is_not_a_review(self):
+        self.globals()
+        before = sha256(self.run/'진행상태.json')
+        with self.assertRaises(ValueError):
+            self.save('meeting_resolved', {'mode':'existing','exact_readback':True,'reason':'exists'})
+        self.assertEqual(before, sha256(self.run/'진행상태.json'))
+
+    def test_empty_duplicate_missing_unknown_and_body_mismatched_students_rejected(self):
+        self.meeting_receipt()
+        path = self.run/MEETING_PATH
+        good = read_json(path)
+        variants=[]
+        for members in ([], ['A'], ['unknown'], ['C','C']):
+            bad=copy.deepcopy(good);bad['groups']['C']['student_ids']=members;variants.append(bad)
+        bad=copy.deepcopy(good);bad['analysis']=bad['analysis'].replace('C그룹 : [학생C]', 'C그룹 : [해당 없음]');variants.append(bad)
+        for bad in variants:
+            with self.subTest(group=bad['groups']['C']):
+                write_json(path,bad)
+                with self.assertRaises(ValueError): check_meeting(self.run)
+        write_json(path,good)
+        roster_path=self.run/good['roster_path'];roster=read_json(roster_path)
+        roster['students'].append({'id':'D','name':'누락학생'});write_json(roster_path,roster)
+        with self.assertRaises(ValueError): check_meeting(self.run)
+
+    def test_summary_metadata_and_missing_element_cannot_pass(self):
+        self.meeting_receipt();path=self.run/MEETING_PATH;good=read_json(path)
+        for body in ('간략한 교수법 기록만 있음',good['analysis'].replace('실제 요소 제작하기',''),
+                     good['analysis']+'\n추가 기록일 : 2026-10-29',good['analysis']+'\nT01 안내'):
+            write_json(path,{**good,'analysis':body})
+            with self.subTest(body=body), self.assertRaises(ValueError): check_meeting(self.run)
+
+    def test_saved_meeting_requires_exact_date_text_target_and_manual_review(self):
+        self.globals();good=self.meeting_receipt()
+        for field,value in [('meeting_date','2026-01-01'),('analysis','wrong body'),
+                            ('url',good['readback']['url'].replace('Lcode=6','Lcode=99'))]:
+            bad=copy.deepcopy(good);bad['readback'][field]=value
+            with self.subTest(field=field), self.assertRaises(ValueError): self.save('meeting_resolved',bad)
+        bad=copy.deepcopy(good);bad['review_checks']['support_alignment']=False
+        with self.assertRaises(ValueError): self.save('meeting_resolved',bad)
+        with self.assertRaises(ValueError): self.save('meeting_resolved',self.meeting_receipt('drafted'))
+
+    def test_plan_change_blocks_build_and_registration_and_only_stales_affected_group(self):
+        self.complete_fixture()
+        path=self.run/MEETING_PATH;doc=read_json(path)
+        doc['groups']['B']['needs']='New observed need';write_json(path,doc)
+        result=status(self.run)
+        self.assertEqual(result['stale_global'],['meeting_resolved'])
+        self.assertEqual(result['stale_groups'],['B'])
+        with self.assertRaises(ValueError): registration_check(self.run,'A')
+        self.save('meeting_resolved',self.meeting_receipt())
+        self.assertEqual(status(self.run)['stale_groups'],['B'])
+        self.assertEqual(registration_check(self.run,'A')['group'],'A')
+        with self.assertRaises(ValueError): registration_check(self.run,'B')
+        self.assertEqual(next_step(self.run)['stage'],'inspect_changed_materials')
+
+    def test_text_only_meeting_revision_preserves_group_reviews(self):
+        self.complete_fixture();old=load_run(self.run)[2]['global']['meeting_resolved']['meeting_sha256']
+        path=self.run/MEETING_PATH;doc=read_json(path);doc['analysis']+='\n문장 설명 보완';write_json(path,doc)
+        self.assertEqual(status(self.run)['stale_groups'],[])
+        self.assertEqual(status(self.run)['status'],'in_progress')
+        self.save('meeting_resolved',self.meeting_receipt())
+        self.assertEqual(status(self.run)['status'],'complete')
+        history=load_run(self.run)[2]['history']
+        self.assertTrue(any(e.get('previous',{}).get('meeting_sha256')==old for e in history))
+
+    def test_new_roster_observation_invalidates_meeting(self):
+        self.globals();path=self.run/'01_근거자료/평가대상.json';roster=read_json(path)
+        roster['new_observation']='Recheck';write_json(path,roster)
+        self.assertEqual(status(self.run)['stale_global'],['meeting_resolved'])
+        with self.assertRaises(ValueError): material_plan(self.run,'A')
+
+    def test_outdated_content_reference_and_missing_alignment_review_blocked(self):
+        self.globals();folder=self.materials()
+        data=read_json(folder/'content.json');data['support_plan_sha256']='0'*64;write_json(folder/'content.json',data)
+        with self.assertRaises(ValueError): build_group(self.run,'A')
+        with self.assertRaises(ValueError): package_group(self.run,'A')
+        data['support_plan_sha256']=material_plan(self.run,'A')['support_plan_sha256'];write_json(folder/'content.json',data)
+        with self.assertRaises(ValueError):
+            self.save('materials_verified',{'pdf_page_count':2,**{k:True for k in ('local_checks','pdf_reviewed','visual_reviewed','sources_reviewed','privacy_reviewed')}},'A')
+        self.review()
+        self.assertEqual(registration_check(self.run,'A')['support_plan_sha256'],data['support_plan_sha256'])
+
+    def test_legacy_history_readable_but_mutations_require_new_meeting(self):
+        self.complete_fixture()
+        job=read_json(self.run/'작업정보.json');job['evidence_version']=2;write_json(self.run/'작업정보.json',job)
+        state=read_json(self.run/'진행상태.json')
+        state['global']['meeting_resolved']={'mode':'existing','exact_readback':True,'reason':'legacy'}
+        write_json(self.run/'진행상태.json',state)
+        before=sha256(self.run/'진행상태.json')
+        self.assertEqual(status(self.run)['status'],'complete')
+        self.assertEqual(next_step(self.run)['stage'],'done')
+        self.assertTrue(validate_group(self.run,'A')['ok'])
+        self.assertEqual(before,sha256(self.run/'진행상태.json'))
+        with self.assertRaises(ValueError): registration_check(self.run,'A')
+        with self.assertRaises(ValueError): build_group(self.run,'A')
+        self.save('meeting_resolved',self.meeting_receipt())
+        self.assertEqual(registration_check(self.run,'A')['group'],'A')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,1262 @@
+{
+  "URL": "sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/appraisal.php?Pcode=300002&Lcode=12&AppCode=B",
+  "Document": "SBS아카데미 대전",
+  "Nodes": [
+    {
+      "Type": "ControlType.Text",
+      "Name": "SBS아카데미 대전",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "로그아웃",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "김혜지",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Button",
+      "Name": "정보수정",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Button",
+      "Name": "비번변경",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Button",
+      "Name": "PIN변경",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "훈련과정",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "훈련과정",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "공지사항",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "공지사항",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "고객센터",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "고객센터",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "카톡문의",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "카톡문의",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Table",
+      "Name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A ",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "(1회차)",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "처음으로",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "개강일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-05-20",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "종강일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-12-04",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "강사",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "김가경, 김혜지",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "실시인원",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "11",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "수강인원",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "9",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "수강포기인원",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "집체훈련",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "집체훈련",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "시간표",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "시간표",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "훈련생",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "훈련생",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "사전평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "사전평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "오리엔테이션",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "오리엔테이션",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "출석현황",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "출석현황",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "능력단위평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "능력단위평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "훈련생평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "훈련생평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "상담일지",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "상담일지",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "이의신청",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "이의신청",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "보충수업",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "보충수업",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "훈련일지",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "훈련일지",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "교재관리",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "교재관리",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "과정회의록",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "과정회의록",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "과정공지사항",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "과정공지사항",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "지원내역",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "지원내역",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "과제",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "과제",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "서식공유",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "서식공유",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "게시판생성",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "게시판생성",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "게시판순서변경",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "게시판순서변경",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "평가내역평가결과 분석회의록과정명[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차교과목(전공)서비스 경험 디자인 조사 및 시나리오 개발능력단위개강일2026-09-10종강일2026-10-02평가도구포트폴리오",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Table",
+      "Name": "평가내역 평가결과 분석회의록",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "평가내역",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "평가결과 분석회의록",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "과정명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "교과목",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "(전공)서비스 경험 디자인 조사 및 시나리오 개발",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "능력단위",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서비스ㆍ경험디자인 시나리오 개발",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "개강일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-09-10",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "종강일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가도구",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "포트폴리오",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "평가정보돌아가기구분본평가결석자평가재평가사전평가능력단위평가날짜평가시간커트라인패널티2026-10-0214:00~16:0060점0점평가문제\n미등록(0/100)평가문제\n미등록(0/100)72.7382.33평가인원900",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Table",
+      "Name": "평가정보 돌아가기",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Text",
+      "Name": "평가정보",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "돌아가기",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "사전평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "능력단위",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가날짜 평가시간 커트라인 패널티",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02 14:00~16:00 60점 0점",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "2026-10-02 14:00~16:00 60점 0점",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가문제 미등록 (0/100)",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가문제 미등록 (0/100)",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "72.73",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "82.33",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가인원",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "9",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "0",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "0",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Table",
+      "Name": "전체점수 포트폴리오 평가문제",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "전체점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "포트폴리오",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "평가문제",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "강민경구분본평가결석자평가재평가점수89평가일2026-10-02서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "강민경",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "89",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "89",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Image",
+      "Name": "서명. 누락된 이미지 설명을 확인하려면 컨텍스트 메뉴를 여세요.",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "박주연구분본평가결석자평가재평가점수79평가일2026-10-02서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "박주연",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "79",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "79",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Image",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "박찬미구분본평가결석자평가재평가점수78평가일2026-10-02서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "박찬미",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "78",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "78",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Image",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "이은경구분본평가결석자평가재평가점수83평가일2026-10-02서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "이은경",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "83",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "83",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Image",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "이은수구분본평가결석자평가재평가점수82평가일2026-10-02서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "이은수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "82",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "82",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Image",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "이지희구분본평가결석자평가재평가점수85평가일2026-10-02서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "이지희",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "85",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "85",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Image",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "임연우구분본평가결석자평가재평가점수88평가일2026-10-02서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "임연우",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "88",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "88",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Image",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "최지혜구분본평가결석자평가재평가점수80평가일2026-10-02서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "최지혜",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "80",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "80",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Image",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "허지민구분본평가결석자평가재평가점수77평가일2026-10-02서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "허지민",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "점수",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "77",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Hyperlink",
+      "Name": "77",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "평가일",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-10-02",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.Image",
+      "Name": "서명",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "김정은구분본평가결석자평가재평가2026-09-10 기타 사유로 수강포기",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "김정은",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-09-10 기타 사유로 수강포기",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.ListItem",
+      "Name": "김지선구분본평가결석자평가재평가2026-08-20 기타 사유로 수강포기",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "김지선",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "구분",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "본평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "결석자평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "재평가",
+      "Value": null
+    },
+    {
+      "Type": "ControlType.DataItem",
+      "Name": "2026-08-20 기타 사유로 수강포기",
+      "Value": null
+    }
+  ],
+  "capturedAt": "2026-10-23T04:39:17.955998+00:00"
+}

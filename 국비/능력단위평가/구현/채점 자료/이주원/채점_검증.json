@@ -1,0 +1,30 @@
+{
+  "student": "이주원",
+  "sourceHashesVerified": true,
+  "browserTwoDesktopWidthsVerified": true,
+  "publicFeedbackReviewed": true,
+  "rawTotal": 93,
+  "registeredTotal": 97,
+  "sumOfSiteIntegerScores": 97,
+  "siteIntegerScores": [
+    12,
+    10,
+    10,
+    12,
+    10,
+    11,
+    11,
+    10,
+    11
+  ],
+  "lmsSaved": true,
+  "studentSourceModified": false,
+  "feedbackCodeProposalsChecked": true,
+  "scoreAndIdentityChecksPassed": true,
+  "strictSubmissionHashesPassed": true,
+  "lmsVerifiedAt": "2026-10-26T04:41:17.306Z",
+  "lmsTotal": 97,
+  "lmsIntegerScoresVerified": true,
+  "lmsFeedbackExactMatch": true,
+  "lmsProofFile": "사이트_등록확인.json"
+}

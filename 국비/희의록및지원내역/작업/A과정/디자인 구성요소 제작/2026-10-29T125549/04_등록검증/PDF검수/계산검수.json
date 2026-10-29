@@ -1,0 +1,134 @@
+{
+  "A": {
+    "pdf_page_count": 6,
+    "pages": [
+      {
+        "page": 1,
+        "text_chars": 509,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 2,
+        "text_chars": 385,
+        "images": 1,
+        "outside": []
+      },
+      {
+        "page": 3,
+        "text_chars": 590,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 4,
+        "text_chars": 541,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 5,
+        "text_chars": 556,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 6,
+        "text_chars": 389,
+        "images": 0,
+        "outside": []
+      }
+    ],
+    "privacy_checked": true
+  },
+  "B": {
+    "pdf_page_count": 7,
+    "pages": [
+      {
+        "page": 1,
+        "text_chars": 488,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 2,
+        "text_chars": 600,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 3,
+        "text_chars": 379,
+        "images": 1,
+        "outside": []
+      },
+      {
+        "page": 4,
+        "text_chars": 532,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 5,
+        "text_chars": 514,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 6,
+        "text_chars": 456,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 7,
+        "text_chars": 389,
+        "images": 0,
+        "outside": []
+      }
+    ],
+    "privacy_checked": true
+  },
+  "C": {
+    "pdf_page_count": 6,
+    "pages": [
+      {
+        "page": 1,
+        "text_chars": 446,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 2,
+        "text_chars": 385,
+        "images": 1,
+        "outside": []
+      },
+      {
+        "page": 3,
+        "text_chars": 512,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 4,
+        "text_chars": 530,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 5,
+        "text_chars": 486,
+        "images": 0,
+        "outside": []
+      },
+      {
+        "page": 6,
+        "text_chars": 399,
+        "images": 0,
+        "outside": []
+      }
+    ],
+    "privacy_checked": true
+  }
+}

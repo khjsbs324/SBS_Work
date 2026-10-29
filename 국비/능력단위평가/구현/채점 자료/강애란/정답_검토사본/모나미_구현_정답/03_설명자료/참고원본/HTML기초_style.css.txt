@@ -1,0 +1,27 @@
+.flex-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.row01 {
+  /* 배경색 */
+  background-color: red;
+  /* 높이 */
+  height: 100px;
+  /* 너비 */
+  width: 300px;
+}
+
+.row02 {
+  /* 배경색 */
+  background-color: orange;
+  /* 높이 */
+  height: 200px;
+}
+
+.row03 {
+  /* 배경색 */
+  background-color: green;
+  /* 높이 */
+  height: 300px;
+}

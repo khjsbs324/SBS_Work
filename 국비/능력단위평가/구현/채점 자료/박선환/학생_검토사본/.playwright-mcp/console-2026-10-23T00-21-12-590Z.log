@@ -1,0 +1,7 @@
+[   11498ms] [ERROR] Mixed Content: The page at 'https://noonnu.cc/index' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/earlyaccess/nanumgothic.css'. This request has been blocked; the content must be served over HTTPS. @ https://cdn.noonnu.cc/public/vite/assets/tosspayments_controller-Ag-EGOmF.js:416
+[   11928ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   11929ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   11929ms] [WARNING] Failed to decode downloaded font: https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2 @ https://noonnu.cc/index:0
+[   11929ms] [WARNING] OTS parsing error: Unable to instantiate font face from font data. @ https://noonnu.cc/index:0
+[   18120ms] [LOG] Failed to read a named property 'document' from 'Window': Blocked a frame with origin "https://googleads.g.doubleclick.net" from accessing a cross-origin frame. @ https://choices.trustarc.com/get?name=pmw2.js:0
+[   18353ms] [LOG] Failed to read a named property 'document' from 'Window': Blocked a frame with origin "https://googleads.g.doubleclick.net" from accessing a cross-origin frame. @ https://choices.trustarc.com/get?name=pmw2.js:0

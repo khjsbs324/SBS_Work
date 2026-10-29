@@ -1,0 +1,29 @@
+{
+  "scope": "menu_icon_comments_only",
+  "normalizedCodeComparison": {
+    "checkedAt": "2026-10-23T02:32:57.495462+00:00",
+    "scope": "menu_icon_comments_only",
+    "codeFilesCompared": 17,
+    "changedFiles": [
+      "02_전체통합\\index.html",
+      "02_전체통합\\style.css",
+      "02_전체통합\\전체코드.html",
+      "01_섹션별\\MON-01_상단\\index.html",
+      "01_섹션별\\MON-01_상단\\style.css"
+    ],
+    "executableMarkupAndCSSUnchanged": true,
+    "previousBrowserVerificationStillApplicable": true
+  },
+  "staticCheck": {
+    "exitCode": 0,
+    "output": "PASS: 9 HTML pages, nesting, local dependencies, 7 section/combined matches, inline CSS, 32 image/3 font hashes, reference source preservation and CSS property scope."
+  },
+  "workspaceHarness": {
+    "exitCode": 1,
+    "errors": [
+      "능력단위평가\\수정 보완\\CLAUDE.md: Missing link/import: 수정 보완",
+      "능력단위평가\\수정 보완\\Exam.md: Unsupported or malformed Exam headings"
+    ],
+    "note": "기존 수정 보완 평가 문서 오류 2건. 이번 주석 변경의 정적 검사와 실행 코드 보존 검사는 통과."
+  }
+}

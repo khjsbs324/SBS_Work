@@ -1,0 +1,16 @@
+- generic [ref=f13e3]:
+  - generic [ref=f13e4]:
+    - generic [ref=f13e5]:
+      - img "한국어" [ref=f13e6]
+      - generic [ref=f13e7]: KOR
+    - list [ref=f13e9]:
+      - listitem [ref=f13e10]:
+        - img "페이스북" [ref=f13e11]
+      - listitem [ref=f13e12]:
+        - img "인스타그램" [ref=f13e13]
+      - listitem [ref=f13e14]:
+        - img "유투브" [ref=f13e15]
+  - list [ref=f13e17]:
+    - listitem [ref=f13e18]: HOME
+    - listitem [ref=f13e19]: SITE MAP
+    - listitem [ref=f13e20]: CONTACT US

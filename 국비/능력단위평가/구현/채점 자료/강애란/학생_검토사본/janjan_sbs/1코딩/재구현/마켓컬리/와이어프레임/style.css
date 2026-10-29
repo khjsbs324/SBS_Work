@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+/* body: html자식 */
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* component */
+.con {
+  width: 1050px; 
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+
+.top-banner {
+  height: 42px;
+  background-color: #5F0080;
+  /* 글자 색상 color */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.utility-menu {
+  /* 선 */
+}
+.utility-con {
+  height: 35px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.con>nav>ul {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+.signup-link {
+ color: #5F0080;
+}
+.m-header-con {
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.brand {
+  display: flex; gap: 20px;
+  align-items: center;
+  width: 250px;
+}
+.brand-tabs {
+  display: flex; gap: 22px;
+  font-size: 18px;
+  color: #B5B5B5;
+}
+.brand-tab.active {
+  color: #5F0080;
+  font-weight: 500;
+}
+.search {
+  width: 400px; height: 48px;
+  border: 1px solid #5F0080;
+  border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* 태그 크기안에 padding과 선 크기 포함 */
+  box-sizing: border-box;
+  display: flex; align-items: center;
+  font-size: 16px; color: #999;
+}
+.actions {
+  width: 250px;
+  display: flex;
+  justify-content: flex-end;
+}

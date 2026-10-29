@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../image/logo.jpg">
+  <title>MONAMI | MON-03 신제품</title>
+  <!-- UIUXB_2610의 HTML/CSS 수업 예제를 참고한 모나미 데스크톱 학습용 정답 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ============================================================
+  MON-03 시작: NEW ARRIVALS
+  참고: 마켓컬리 product-list > product-card > product-image 패턴
+  행 1: (제목 + 392×205 이미지) 392px + 간격 22px + 786×360 이미지
+  행 2: 392×292 + 450×439 + 314×292, 간격 각 22px
+  협업: 두 행 모두 폭 합계가 1200px입니다. 이미지 하나만 늘리면 행 전체가 달라집니다.
+  공통: 이 영역의 .new-con은 .con의 폭만 1200px로 재정의합니다.
+  상품명: 각 img alt에 기록했습니다. 원사이트의 hover 오버레이는 추가하지 않았습니다.
+============================================================ -->
+<div id="MON-03" class="new-products">
+  <div class="con new-con">
+    <div class="new-row">
+      <div class="new-left">
+        <div class="new-heading">
+          <h2 class="section-title"><span>NEW</span><span>ARRIVALS</span></h2>
+          <div class="title-line"></div>
+          <p class="section-desc">가장 먼저 만나는 설레는 기다림</p>
+        </div>
+        <div class="new-card new-card-01">
+          <img src="../../image/new-01.jpg" alt="PEN — FX ZETA C3, 여러 색상의 볼펜">
+        </div>
+      </div>
+      <div class="new-card new-card-02">
+        <img src="../../image/new-02.jpg" alt="NOTE — 지퀀스, 세 가지 색상의 노트">
+      </div>
+    </div>
+    <div class="new-row">
+      <div class="new-card new-card-03">
+        <img src="../../image/new-03.jpg" alt="PREMIUM PEN — 프러스펜3000프라임과 케이스">
+      </div>
+      <div class="new-card new-card-04">
+        <img src="../../image/new-04.jpg" alt="FOUNTAIN PEN — 153 아이디 만년필과 케이스">
+      </div>
+      <div class="new-card new-card-05">
+        <img src="../../image/new-05.jpg" alt="WATER-BASED MARKER — 프러스펜 3000, 60색 마커">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MON-03 끝 -->
+</body>
+</html>

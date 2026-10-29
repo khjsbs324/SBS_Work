@@ -1,0 +1,42 @@
+{
+  "course_id": "A",
+  "unit": "수정 보완",
+  "lcode": "8",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "group": "B",
+  "post_date": "2026-08-19",
+  "title": "[능력단위평가_지원내역] 수정 보완 B그룹 지원자료",
+  "post_id": "1068",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1068",
+  "checked_at": "2026-10-29T01:38:54.783Z",
+  "title_exact": true,
+  "date_exact": true,
+  "text_exact": true,
+  "images_loaded": true,
+  "anchors_valid": true,
+  "reference_urls": [
+    "https://opentutorials.org/course/3086/18327",
+    "https://developer.chrome.com/docs/devtools/css/reference?hl=ko",
+    "https://developer.mozilla.org/ko/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties",
+    "https://docs.github.com/ko/pull-requests/how-tos/create-pull-requests/creating-a-pull-request"
+  ],
+  "styles": {
+    "maxWidth": "980px",
+    "fontSize": "17px",
+    "lineHeight": "33.15px",
+    "tablePadding": "14px 16px"
+  },
+  "anchor_navigation": true,
+  "attachment_status": 200,
+  "attachment_sha256": "3bfaf5a4e132a61ef445b1d20a29f862a32792e0d7f8e1deba26e3fe7bd3a877",
+  "course_confirmed": true,
+  "observed_in_list": true,
+  "references_checked": true,
+  "layout_reviewed": true,
+  "layout_evidence": [
+    "04_등록검증/B_등록화면.png",
+    "04_등록검증/B_코드예시화면.png"
+  ]
+}

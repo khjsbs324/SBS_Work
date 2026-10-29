@@ -1,0 +1,153 @@
+- generic [ref=f21e1]:
+  - banner [ref=f21e2]:
+    - generic [ref=f21e3]:
+      - generic [ref=f21e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=f21e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=f21e8]:
+    - generic [ref=f21e9]:
+      - generic [ref=f21e10]:
+        - generic [ref=f21e11]: 김혜지
+        - generic [ref=f21e12]:
+          - button "정보수정" [ref=f21e13] [cursor=pointer]
+          - button "비번변경" [ref=f21e14] [cursor=pointer]
+          - button "PIN변경" [ref=f21e15] [cursor=pointer]
+      - list [ref=f21e16]:
+        - listitem [ref=f21e17] [cursor=pointer]:
+          - generic [ref=f21e18]:
+            - generic [aria-hidden] [ref=f21e19]: 
+            - text: 훈련과정
+        - listitem [ref=f21e20] [cursor=pointer]:
+          - generic [ref=f21e21]:
+            - generic [aria-hidden] [ref=f21e22]: 
+            - text: 공지사항
+      - list [ref=f21e23]:
+        - listitem [ref=f21e24] [cursor=pointer]:
+          - generic [ref=f21e25]:
+            - paragraph [ref=f21e26]:
+              - generic [aria-hidden] [ref=f21e27]: 
+            - paragraph [ref=f21e28]: 고객센터
+        - listitem [ref=f21e29] [cursor=pointer]:
+          - generic [ref=f21e30]:
+            - paragraph [ref=f21e31]:
+              - generic [aria-hidden] [ref=f21e32]: 
+            - paragraph [ref=f21e33]: 카톡문의
+    - generic [ref=f21e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=f21e35]:
+        - caption [ref=f21e36]:
+          - generic [ref=f21e37]:
+            - generic [ref=f21e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=f21e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=f21e48]:
+          - row [ref=f21e49]:
+            - cell "개강일" [ref=f21e50]
+            - cell "2026-05-20" [ref=f21e51]
+            - cell "종강일" [ref=f21e52]
+            - cell "2026-12-04" [ref=f21e53]
+            - cell "강사" [ref=f21e54]
+            - cell "김가경, 김혜지" [ref=f21e55]
+          - row [ref=f21e56]:
+            - cell "실시인원" [ref=f21e57]
+            - cell "11" [ref=f21e58]
+            - cell "수강인원" [ref=f21e59]
+            - cell "9" [ref=f21e60]
+            - cell "수강포기인원" [ref=f21e61]
+            - cell "2" [ref=f21e62]
+      - list [ref=f21e63]:
+        - listitem [ref=f21e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=f21e65]
+        - listitem [ref=f21e66] [cursor=pointer]:
+          - generic "시간표" [ref=f21e67]
+        - listitem [ref=f21e68] [cursor=pointer]:
+          - generic "훈련생" [ref=f21e69]
+        - listitem [ref=f21e70] [cursor=pointer]:
+          - generic "사전평가" [ref=f21e71]
+        - listitem [ref=f21e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=f21e73]
+        - listitem [ref=f21e74] [cursor=pointer]:
+          - generic "출석현황" [ref=f21e75]
+        - listitem [ref=f21e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=f21e77]
+        - listitem [ref=f21e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=f21e79]
+        - listitem [ref=f21e80] [cursor=pointer]:
+          - generic "상담일지" [ref=f21e81]
+        - listitem [ref=f21e82] [cursor=pointer]:
+          - generic "이의신청" [ref=f21e83]
+        - listitem [ref=f21e84] [cursor=pointer]:
+          - generic "보충수업" [ref=f21e85]
+        - listitem [ref=f21e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=f21e87]
+        - listitem [ref=f21e88] [cursor=pointer]:
+          - generic "교재관리" [ref=f21e89]
+        - listitem [ref=f21e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=f21e91]
+        - listitem [ref=f21e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=f21e93]
+        - listitem [ref=f21e94] [cursor=pointer]:
+          - generic "지원내역" [ref=f21e95]
+        - listitem [ref=f21e96] [cursor=pointer]:
+          - generic "과제" [ref=f21e97]
+        - listitem [ref=f21e98] [cursor=pointer]:
+          - generic "서식공유" [ref=f21e99]
+        - listitem [ref=f21e100] [cursor=pointer]:
+          - generic [ref=f21e101]: 게시판생성
+        - listitem [ref=f21e102] [cursor=pointer]:
+          - generic [ref=f21e103]: 게시판순서변경
+      - table "평가정보 돌아가기" [ref=f21e104]:
+        - caption [ref=f21e105]:
+          - generic [ref=f21e106]:
+            - generic [ref=f21e107]: 평가정보
+            - link "돌아가기" [ref=f21e109] [cursor=pointer]:
+              - /url: ../app/appraisal.php?Pcode=300002&Lcode=13&AppCode=AF
+        - rowgroup [ref=f21e116]:
+          - row [ref=f21e117]:
+            - cell "능력단위명" [ref=f21e118]
+            - cell "프로토타입 기초데이터 수집 및 스케치" [ref=f21e119]
+            - cell "평가일시" [ref=f21e120]
+            - cell "2026-10-22" [ref=f21e121]
+            - cell [ref=f21e122]:
+              - paragraph [ref=f21e123]: 0 / 100
+              - paragraph [ref=f21e124]: "패널티 : 0점"
+          - row [ref=f21e125]:
+            - cell "훈련강사" [ref=f21e126]
+            - cell "김*지, 김*경" [ref=f21e127]
+            - cell "훈련생명" [ref=f21e128]
+            - cell "강민경" [ref=f21e129]
+      - table "평가내역 평가점수 일괄등록" [ref=f21e131]:
+        - caption [ref=f21e132]:
+          - generic [ref=f21e133]:
+            - generic [ref=f21e134]: 평가내역
+            - link "평가점수 일괄등록" [ref=f21e136] [cursor=pointer]:
+              - /url: "#"
+        - rowgroup [ref=f21e144]:
+          - row [ref=f21e145]:
+            - columnheader "문항" [ref=f21e146]
+            - columnheader "문제" [ref=f21e147]
+            - columnheader "모범답안" [ref=f21e148]
+            - columnheader "제출답안" [ref=f21e149]
+            - columnheader "파일" [ref=f21e150]
+            - columnheader "링크" [ref=f21e151]
+        - rowgroup [ref=f21e152]:
+          - row [ref=f21e153]:
+            - cell "1" [ref=f21e154]
+            - cell "기초데이터와 레퍼런스를 분석하여 제작한 스토리보드 및 프로토타입 스케치를 제출해 주세요" [ref=f21e155]
+            - cell [ref=f21e156]:
+              - button "모범답안" [ref=f21e157] [cursor=pointer]
+            - cell [ref=f21e158]:
+              - button "제출답안" [ref=f21e159] [cursor=pointer]
+            - cell [ref=f21e160]:
+              - link "다운로드" [ref=f21e161] [cursor=pointer]:
+                - /url: /uflist/download.php?type=project_appraisal&pcode=300002&lcode=13&file=1792594876_1564e890.zip
+            - cell "-" [ref=f21e162]
+  - dialog [active] [ref=f21e163]:
+    - generic [ref=f21e164]:
+      - generic [ref=f21e165]:
+        - heading "제출답안" [level=5] [ref=f21e166]
+        - button "Close" [ref=f21e167] [cursor=pointer]
+      - table [ref=f21e170]:
+        - rowgroup [ref=f21e171]:
+          - row [ref=f21e172]:
+            - cell [ref=f21e173]:
+              - paragraph [ref=f21e174]: 리포지터리 주소 ; httpsgithub.comkmk20201681-codeUIUX-Antigravity.git 깃허브 링크 ; https://github.com/kmk20201681-code/UIUX-Antigravity

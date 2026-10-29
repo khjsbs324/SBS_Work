@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="1450" viewBox="0 0 1040 1450">
+<title>SOAPHE 브랜드 소개 · 카테고리 간략 와이어프레임</title><desc>사용자 제공 SOAPHE HTML의 섹션 순서를 요약한 간략한 와이어프레임. 사진 없이 SVG 도형과 텍스트로 구성.</desc>
+<rect width="1040" height="1450" fill="white"/>
+<text x="60" y="53" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="26" text-anchor="start" fill="#242424">브랜드 소개 페이지</text><text x="560" y="53" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="26" text-anchor="start" fill="#242424">카테고리 페이지</text><text x="60" y="81" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">HTML 기반 · 간략 구조</text><text x="560" y="81" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">HTML 기반 · 간략 구조</text><g id="brand-page"><g id="brand-header">
+<rect x="60" y="110" width="420" height="64" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="141" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">SOAPHE</text>
+</g>
+<text x="462" y="139" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="12" text-anchor="end" fill="#242424">브랜드 소개   |   전체 제품   |   퀴즈</text>
+<g id="brand-chapter-menu">
+<rect x="60" y="174" width="420" height="44" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="205" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#242424">철학  ·  탄생  ·  설계  ·  소재  ·  두 번째 쓰임  ·  선물</text>
+</g>
+<g id="brand-philosophy">
+<rect x="60" y="218" width="420" height="150" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="249" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">철학 / 브랜드 메시지</text>
+<text x="78" y="275" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">사라지는 비누와 오래 머무는 오브제</text>
+</g>
+<text x="78" y="308" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="start" fill="#707070">비누와 오브제의 대비 이미지</text>
+<rect x="78" y="322" width="154" height="34" fill="white" stroke="#777777" stroke-width="1.6"/><text x="155.0" y="345" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">브랜드 이야기 읽기</text>
+<g id="brand-origin">
+<rect x="60" y="368" width="420" height="130" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="399" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">01  탄생 배경</text>
+<text x="78" y="425" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">물 고임 · 비누의 무름 · 버려지는 받침</text>
+</g>
+<text x="78" y="463" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="start" fill="#707070">문제 설명 + 사용 전후 비교</text>
+<g id="brand-design">
+<rect x="60" y="498" width="420" height="150" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="529" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">02  기능 설계</text>
+<text x="78" y="555" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">접점 · 배수 · 마감</text>
+</g>
+<text x="78" y="589" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="start" fill="#707070">구조도 / 단면도</text>
+<text x="78" y="622" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">형태 설계 → 소재별 제작 → 마감 → 검수</text>
+<g id="brand-materials">
+<rect x="60" y="648" width="420" height="130" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="679" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">03  소재</text>
+<text x="78" y="705" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">화강석 · 백자 · 강화유리</text>
+</g>
+<rect x="78" y="723" width="122" height="37" fill="white" stroke="#777777" stroke-width="1.6"/><text x="139" y="747" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">화강석</text>
+<rect x="208" y="723" width="122" height="37" fill="white" stroke="#777777" stroke-width="1.6"/><text x="269" y="747" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">백자</text>
+<rect x="338" y="723" width="122" height="37" fill="white" stroke="#777777" stroke-width="1.6"/><text x="399" y="747" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">강화유리</text>
+<g id="brand-ritual">
+<rect x="60" y="778" width="420" height="110" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="809" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">04  일상 리추얼</text>
+<text x="78" y="835" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">TOUCH → BREATHE → REST</text>
+</g>
+<g id="brand-second-life">
+<rect x="60" y="888" width="420" height="130" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="919" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">05  두 번째 쓰임</text>
+<text x="78" y="945" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">욕실 → 현관 · 서재 · 파우더룸</text>
+</g>
+<text x="78" y="982" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="start" fill="#707070">비누 받침 사용 / 생활 트레이 활용 비교</text>
+<g id="brand-gifting">
+<rect x="60" y="1018" width="420" height="110" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="1049" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">06  선물</text>
+<text x="78" y="1075" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">GIVE → USE → STAY</text>
+</g>
+<rect x="302" y="1083" width="160" height="34" fill="white" stroke="#777777" stroke-width="1.6"/><text x="382.0" y="1106" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">선물 컬렉션 보기</text>
+<g id="brand-collection-links">
+<rect x="60" y="1128" width="420" height="100" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="1159" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">컬렉션 / 사용 모습</text>
+</g>
+<rect x="78" y="1177" width="174" height="34" fill="white" stroke="#777777" stroke-width="1.6"/><text x="165.0" y="1200" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">SOAPHE 컬렉션 보기</text>
+<rect x="264" y="1177" width="198" height="34" fill="white" stroke="#777777" stroke-width="1.6"/><text x="363.0" y="1200" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">실제 공간의 사용 모습 보기</text>
+<g id="brand-footer">
+<rect x="60" y="1228" width="420" height="70" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="78" y="1259" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">푸터</text>
+</g></g><g id="category-page"><g id="category-header">
+<rect x="560" y="110" width="420" height="64" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="578" y="141" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">SOAPHE</text>
+</g>
+<text x="962" y="139" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="12" text-anchor="end" fill="#242424">브랜드 소개   |   전체 제품   |   퀴즈</text>
+<g id="category-intro">
+<rect x="560" y="174" width="420" height="100" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="578" y="205" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">전체 컬렉션 소개</text>
+<text x="578" y="231" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">온기를 담는 세 가지 방식</text>
+</g>
+<g id="category-signature-sets">
+<rect x="560" y="274" width="420" height="220" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="578" y="305" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">소재별 대표 세트 3종</text>
+<text x="578" y="331" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">화강석 · 백자 · 강화유리</text>
+</g>
+<rect x="578" y="352" width="122" height="98" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="639" y="405" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">화강석 세트</text>
+<text x="639" y="475" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="12" text-anchor="middle" fill="#242424">제품 상세 보기</text>
+<rect x="708" y="352" width="122" height="98" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="769" y="405" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">백자 세트</text>
+<text x="769" y="475" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="12" text-anchor="middle" fill="#242424">제품 상세 보기</text>
+<rect x="838" y="352" width="122" height="98" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="899" y="405" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">유리 세트</text>
+<text x="899" y="475" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="12" text-anchor="middle" fill="#242424">제품 상세 보기</text>
+<g id="category-filters">
+<rect x="560" y="494" width="420" height="190" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="578" y="525" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">전체 상품 필터</text>
+</g>
+<text x="578" y="560" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="start" fill="#242424">전체 (25) / 세트 (8) / 비누 (9) / 오브제 (8)</text>
+<text x="578" y="592" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="start" fill="#242424">제품군별 세부 유형 · 소재 선택</text>
+<text x="578" y="624" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#242424">공간: 전체 / 욕실 / 서재 / 파우더룸 / 선물</text>
+<line x1="578" y1="643" x2="962" y2="643" stroke="#777777" stroke-width="1.2"/>
+<text x="578" y="668" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#242424">선택 조건 · 상품 수</text>
+<text x="962" y="668" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="end" fill="#242424">조건 초기화</text>
+<g id="category-product-list">
+<rect x="560" y="684" width="420" height="590" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="578" y="715" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">상품 리스트</text>
+<text x="578" y="741" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13" text-anchor="start" fill="#707070">필터 조건에 맞는 상품 목록</text>
+</g>
+<text x="578" y="778" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="start" fill="#707070">상품 이미지 · 제품명</text>
+<text x="578" y="806" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="start" fill="#707070">규격 · 추천 공간 · 간단 설명</text>
+<text x="578" y="834" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="start" fill="#707070">카드 정보 펼침 / 제품 상세 보기</text>
+<text x="770.0" y="1036" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="18" text-anchor="middle" fill="#707070">상품 목록 영역</text>
+<g id="category-footer">
+<rect x="560" y="1274" width="420" height="124" fill="white" stroke="#777777" stroke-width="1.6"/>
+<text x="578" y="1305" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20" text-anchor="start" fill="#242424">푸터</text>
+</g>
+<rect x="802" y="1343" width="160" height="34" fill="white" stroke="#777777" stroke-width="1.6"/><text x="882.0" y="1366" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="14" text-anchor="middle" fill="#242424">메인으로 돌아가기</text></g>
+</svg>

@@ -1,0 +1,4 @@
+[     801ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://opentutorials.org/manifest.json:0
+[     801ms] [ERROR] Manifest fetch from https://opentutorials.org/manifest.json failed, code 404 @ https://opentutorials.org/course/3084:0
+[     873ms] [WARNING] <iframe gesture="media"> is not supported. Use <iframe allow="autoplay">, https://goo.gl/ximf56 @ https://opentutorials.org/course/3084:830
+[    1104ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://opentutorials.org/course/3084:0

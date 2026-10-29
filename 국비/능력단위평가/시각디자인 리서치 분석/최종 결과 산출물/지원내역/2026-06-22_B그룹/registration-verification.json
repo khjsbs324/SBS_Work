@@ -1,0 +1,111 @@
+{
+  "registration": {
+    "group": "B",
+    "preflight": {
+      "valid": true,
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "title": "[능력단위평가_지원내역] 시각디자인 리서치 분석 B그룹 지원자료",
+      "date": "2026-06-22",
+      "images": 2,
+      "anchors": 10,
+      "externalLinks": 5,
+      "placeholder": false,
+      "file": "시각디자인리서치분석_B그룹_학습자료.zip"
+    },
+    "saved": {
+      "status": 200,
+      "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+    },
+    "uploaded": {
+      "trace.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727815_e56044a6.png",
+      "position.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727815_50a190e4.png"
+    },
+    "rows": [
+      {
+        "text": "\n\t\t\t\t\t\t\t\t\t\t11\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 시각디자인 리서치 분석 B그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-06-22\n\t\t\t\t\t\t\t\t\t",
+        "id": "1046"
+      }
+    ]
+  },
+  "verification": {
+    "group": "B",
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1046",
+    "correctCourse": true,
+    "textMatches": true,
+    "titleMatches": true,
+    "dateMatches": true,
+    "images": [
+      {
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727815_e56044a6.png",
+        "loaded": true
+      },
+      {
+        "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792727815_50a190e4.png",
+        "loaded": true
+      }
+    ],
+    "anchors": [
+      {
+        "href": "#b-learning-1",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-2",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-3",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-4",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-5",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-6",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-7",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-8",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-9",
+        "exists": true
+      },
+      {
+        "href": "#b-learning-10",
+        "exists": true
+      }
+    ],
+    "sources": [
+      "https://story.pxd.co.kr/176",
+      "https://story.pxd.co.kr/1343",
+      "https://www.samsungsds.com/kr/insights/design-thinking-3.html",
+      "https://toss.tech/article/26109",
+      "https://www.youtube.com/watch?v=8HzYbvzoPqw"
+    ],
+    "headings": 11,
+    "style": {
+      "maxWidth": "980px",
+      "fontSize": "17px",
+      "lineHeight": "33.15px",
+      "cellPadding": "14px 16px"
+    },
+    "attachment": {
+      "status": 200,
+      "bytes": 271033,
+      "exact": true
+    },
+    "anchorScrollWorks": true
+  }
+}

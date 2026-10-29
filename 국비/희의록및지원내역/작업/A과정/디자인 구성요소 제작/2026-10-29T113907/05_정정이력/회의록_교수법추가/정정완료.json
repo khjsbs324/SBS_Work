@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "request": "그 다음에 교수법 실행해",
+  "completed_at": "2026-10-29T03:03:33.973656+00:00",
+  "unit": "디자인 구성요소 제작",
+  "Lcode": "9",
+  "ordinal": 8,
+  "scope": "new_retrospective_meeting",
+  "meeting_date": "2026-10-29",
+  "unit_end_date": "2026-08-20",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=9",
+  "exact_readback": true,
+  "original_preserved": true,
+  "reassessment_record_preserved": true,
+  "assessment_preservation": {
+    "summary_unchanged": true,
+    "scores_and_targets_unchanged": true
+  },
+  "screen_read": true,
+  "source_scope": [
+    "학생 변화는 현재 평가 피드백의 대표 사례와 기존 회의록 및 확인 가능한 훈련일지에 근거한다.",
+    "실제 교수법 적용 시점이 확인되지 않은 절차는 향후 실행 계획으로 구분했다.",
+    "서로 다른 과제·제출본·관측 조건의 비교이며 교수법의 인과 효과를 확정하지 않는다.",
+    "동일 종료일 및 수업기간 중첩은 시간상 한계를 표시했다.",
+    "2026-11-03 종료 예정 단위는 평가 결과가 없어 LMS 회의록을 작성하지 않았다."
+  ],
+  "historical_support_state_modified": false,
+  "file_sha256": {
+    "회의록_수정전.json": "dd9fb8b4a2b20fdf253a4cf37a511cb29181c6327d9a37d2477cd0c4bee0fcba",
+    "회의록_추가안.json": "7f26d78ee7a8fd67929c32f5a66903730be2b15dd3500d51bd6de4779c06b23c",
+    "교수법_근거자료.json": "ce97cdae8a8f85b7c863f80d83ebfd7d44879326e1e6d1ea0758c404ff96d881",
+    "저장확인.json": "a8f01e3d3430ec5810e291af03e72b545f07de668cbb75ba745b88786a300956",
+    "평가보존확인.json": "bb439c7a13e9792b9cc9593e409b994d0bf015902542268954c116c016c4ff9a",
+    "추가후화면.png": "b3e55a49bc93faa17b506c91c702ea7c1fb1baac0ab81545cc5a0f08639718d0"
+  },
+  "checks_ref": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\검증\\교수법연계_2026-10-29T113907.json"
+}

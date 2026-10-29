@@ -80,11 +80,16 @@ def inspect_files(folder, files):
 
 
 def validate_group(run, group):
-    run, job, _ = load_run(run)
+    run, job, state = load_run(run)
     folder = group_dir(run, group)
     content = content_check(folder, job, group)
+    if job.get('evidence_version', 1) >= 3 or state['global'].get('meeting_resolved', {}).get('contract_version') == 1:
+        from .meeting import require_plan
+        require_plan(run, job, state, group, content)
     files = inspect_files(folder, content['files'])
     post = read_json(folder / 'post.json')
+    if 'support_plan_sha256' in content:
+        require(post.get('support_plan_sha256') == content['support_plan_sha256'], 'Post/plan reference differs')
     require(post['group'] == group and post['date'] == job['post_date'], 'Post date/group mismatch')
     require(post['title'] == f"[능력단위평가_지원내역] {job['unit']} {group}그룹 지원자료", 'Post title mismatch')
     require(post['images'] == content['images'] and post['sections'] == len(content['sections']) + 1, 'Post structure mismatch')

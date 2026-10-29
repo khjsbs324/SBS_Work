@@ -1,0 +1,393 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: SBS아카데미 대전
+      - link "로그아웃" [ref=e6] [cursor=pointer]:
+        - /url: /auth/logout.php
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: 김혜지
+        - generic [ref=e12]:
+          - button "정보수정" [ref=e13] [cursor=pointer]
+          - button "비번변경" [ref=e14] [cursor=pointer]
+          - button "PIN변경" [ref=e15] [cursor=pointer]
+      - list [ref=e16]:
+        - listitem [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]:
+            - generic [aria-hidden] [ref=e19]: 
+            - text: 훈련과정
+        - listitem [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]:
+            - generic [aria-hidden] [ref=e22]: 
+            - text: 공지사항
+      - list [ref=e23]:
+        - listitem [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]:
+            - paragraph [ref=e26]:
+              - generic [aria-hidden] [ref=e27]: 
+            - paragraph [ref=e28]: 고객센터
+        - listitem [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]:
+            - paragraph [ref=e31]:
+              - generic [aria-hidden] [ref=e32]: 
+            - paragraph [ref=e33]: 카톡문의
+    - generic [ref=e34]:
+      - table "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로" [ref=e35]:
+        - caption [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)"
+            - link "처음으로" [ref=e40] [cursor=pointer]:
+              - /url: /teacher/curri/index.php
+        - rowgroup [ref=e48]:
+          - row [ref=e49]:
+            - cell "개강일" [ref=e50]
+            - cell "2026-05-20" [ref=e51]
+            - cell "종강일" [ref=e52]
+            - cell "2026-12-04" [ref=e53]
+            - cell "강사" [ref=e54]
+            - cell "김가경, 김혜지" [ref=e55]
+          - row [ref=e56]:
+            - cell "실시인원" [ref=e57]
+            - cell "11" [ref=e58]
+            - cell "수강인원" [ref=e59]
+            - cell "9" [ref=e60]
+            - cell "수강포기인원" [ref=e61]
+            - cell "2" [ref=e62]
+      - list [ref=e63]:
+        - listitem [ref=e64] [cursor=pointer]:
+          - generic "집체훈련" [ref=e65]
+        - listitem [ref=e66] [cursor=pointer]:
+          - generic "시간표" [ref=e67]
+        - listitem [ref=e68] [cursor=pointer]:
+          - generic "훈련생" [ref=e69]
+        - listitem [ref=e70] [cursor=pointer]:
+          - generic "사전평가" [ref=e71]
+        - listitem [ref=e72] [cursor=pointer]:
+          - generic "오리엔테이션" [ref=e73]
+        - listitem [ref=e74] [cursor=pointer]:
+          - generic "출석현황" [ref=e75]
+        - listitem [ref=e76] [cursor=pointer]:
+          - generic "능력단위평가" [ref=e77]
+        - listitem [ref=e78] [cursor=pointer]:
+          - generic "훈련생평가" [ref=e79]
+        - listitem [ref=e80] [cursor=pointer]:
+          - generic "상담일지" [ref=e81]
+        - listitem [ref=e82] [cursor=pointer]:
+          - generic "이의신청" [ref=e83]
+        - listitem [ref=e84] [cursor=pointer]:
+          - generic "보충수업" [ref=e85]
+        - listitem [ref=e86] [cursor=pointer]:
+          - generic "훈련일지" [ref=e87]
+        - listitem [ref=e88] [cursor=pointer]:
+          - generic "교재관리" [ref=e89]
+        - listitem [ref=e90] [cursor=pointer]:
+          - generic "과정회의록" [ref=e91]
+        - listitem [ref=e92] [cursor=pointer]:
+          - generic "과정공지사항" [ref=e93]
+        - listitem [ref=e94] [cursor=pointer]:
+          - generic "지원내역" [ref=e95]
+        - listitem [ref=e96] [cursor=pointer]:
+          - generic "과제" [ref=e97]
+        - listitem [ref=e98] [cursor=pointer]:
+          - generic "서식공유" [ref=e99]
+        - listitem [ref=e100] [cursor=pointer]:
+          - generic [ref=e101]: 게시판생성
+        - listitem [ref=e102] [cursor=pointer]:
+          - generic [ref=e103]: 게시판순서변경
+      - list [ref=e104]:
+        - listitem [ref=e105]:
+          - table [ref=e106]:
+            - caption [ref=e107]:
+              - list [ref=e110]:
+                - listitem [ref=e111] [cursor=pointer]: 평가내역
+                - listitem [ref=e112] [cursor=pointer]: 평가결과 분석회의록
+            - rowgroup [ref=e118]:
+              - row [ref=e119]:
+                - cell "과정명" [ref=e120]
+                - cell "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차" [ref=e121]
+              - row [ref=e122]:
+                - cell "교과목" [ref=e123]
+                - cell "(전공)퍼블리싱 구현 및 수정보완" [ref=e124]
+              - row [ref=e125]:
+                - cell "능력단위" [ref=e126]
+                - cell "수정 보완" [ref=e127]:
+                  - combobox [ref=e128]:
+                    - option "선택하세요"
+                    - option "구현"
+                    - option "구현 응용"
+                    - option "시각디자인 리서치 조사"
+                    - option "시각디자인 리서치 분석"
+                    - option "시안 디자인 개발 심화"
+                    - option "디자인 구성요소 설계"
+                    - option "수정 보완" [selected]
+                    - option "디자인 구성요소 제작"
+                    - option "디지털디자인 사후관리"
+                    - option "서비스ㆍ경험디자인 관찰조사"
+                    - option "서비스ㆍ경험디자인 시나리오 개발"
+                    - option "프로토타입 기초데이터 수집 및 스케치"
+                    - option "스마트문화앱 UI 디자인"
+                    - option "프로토타입 제작 및 사용성 테스트"
+                    - option "(비NCS 실기)AI 기획과 발상"
+                    - option "(비NCS 실기)취업포트폴리오 제작"
+              - row [ref=e129]:
+                - cell "개강일" [ref=e130]
+                - cell "2026-07-06" [ref=e131]
+                - cell "종강일" [ref=e132]
+                - cell "2026-08-18" [ref=e133]
+              - row [ref=e134]:
+                - cell "평가도구" [ref=e135]
+                - cell "피평가자체크리스트, 평가자체크리스트" [ref=e136]
+        - listitem [ref=e137]:
+          - table "평가정보 돌아가기" [ref=e138]:
+            - caption [ref=e139]:
+              - generic [ref=e140]:
+                - generic [ref=e141]: 평가정보
+                - link "돌아가기" [ref=e143] [cursor=pointer]:
+                  - /url: ../index.php?Pcode=300002
+            - rowgroup [ref=e151]:
+              - row [ref=e152]:
+                - columnheader "구분" [ref=e153]
+                - columnheader "본평가" [ref=e154]
+                - columnheader "결석자평가" [ref=e155]
+                - columnheader "재평가" [ref=e156]
+                - columnheader "사전평가" [ref=e157]
+                - columnheader "능력단위" [ref=e158]
+            - rowgroup [ref=e159]:
+              - row [ref=e160]:
+                - cell [ref=e161]:
+                  - paragraph [ref=e162]: 평가날짜
+                  - paragraph [ref=e163]: 평가시간
+                  - paragraph [ref=e164]: 커트라인
+                  - paragraph [ref=e165]: 패널티
+                - cell [ref=e166]:
+                  - link [ref=e167] [cursor=pointer]:
+                    - /url: "#"
+                    - paragraph [ref=e168]: 2026-08-18
+                    - paragraph [ref=e169]: 14:00~16:00
+                    - paragraph [ref=e170]: 60점
+                    - paragraph [ref=e171]: 0점
+                - cell [ref=e172]:
+                  - generic [ref=e173]:
+                    - paragraph [ref=e174]: 평가문제미등록
+                    - paragraph [ref=e175]: (0/100)
+                - cell [ref=e176]:
+                  - generic [ref=e177]:
+                    - paragraph [ref=e178]: 평가문제미등록
+                    - paragraph [ref=e179]: (0/100)
+                - cell "81.82" [ref=e180]
+                - cell "79" [ref=e181]
+              - row [ref=e182]:
+                - cell "평가인원" [ref=e183]
+                - cell "10" [ref=e184]
+                - cell "0" [ref=e185]
+                - cell "0" [ref=e186]
+      - table [ref=e188]:
+        - caption [ref=e189]:
+          - generic [ref=e190]:
+            - list [ref=e192]:
+              - listitem [ref=e193] [cursor=pointer]: 전체점수
+              - listitem [ref=e194] [cursor=pointer]: 피평가자체크리스트
+              - listitem [ref=e195] [cursor=pointer]: 평가자체크리스트
+            - generic [ref=e197]:
+              - combobox [ref=e198]:
+                - option "선택하세요" [selected]
+                - option "본평가"
+                - option "결석자평가"
+                - option "재평가"
+                - option "평가전체"
+              - button "평가내역삭제" [ref=e199] [cursor=pointer]
+        - rowgroup [ref=e211]:
+          - row [ref=e212]:
+            - columnheader [ref=e213]:
+              - checkbox [ref=e214]
+            - columnheader "석차" [ref=e215]
+            - columnheader "이름" [ref=e216]
+            - columnheader "평가점수" [ref=e217]
+            - columnheader "가중치" [ref=e218]
+            - columnheader "총점" [ref=e219]
+            - columnheader "피드백확인시간" [ref=e220]
+            - columnheader "수행평가" [ref=e221]
+            - columnheader "피평가자" [ref=e222]
+            - columnheader "피드백" [ref=e223]
+        - rowgroup [ref=e224]:
+          - row [ref=e225]:
+            - cell [ref=e226]:
+              - checkbox [ref=e227]
+            - cell "1" [ref=e228]
+            - cell "이은경" [ref=e229]
+            - cell "90" [ref=e230]
+            - cell "9.2" [ref=e231]
+            - cell "8.28" [ref=e232]
+            - cell [ref=e233]:
+              - link "2026-08-20 14:10:22" [ref=e234] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e235]:
+              - link "보기" [ref=e236] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1119
+            - cell [ref=e237]:
+              - link "보기" [ref=e238] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1119
+            - cell [ref=e239]
+          - row [ref=e240]:
+            - cell [ref=e241]:
+              - checkbox [ref=e242]
+            - cell "2" [ref=e243]
+            - cell "이은수" [ref=e244]
+            - cell "80" [ref=e245]
+            - cell "9.2" [ref=e246]
+            - cell "7.36" [ref=e247]
+            - cell [ref=e248]:
+              - link "2026-08-20 13:58:29" [ref=e249] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e250]:
+              - link "보기" [ref=e251] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1123
+            - cell [ref=e252]:
+              - link "보기" [ref=e253] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1123
+            - cell [ref=e254]
+          - row [ref=e255]:
+            - cell [ref=e256]:
+              - checkbox [ref=e257]
+            - cell "3" [ref=e258]
+            - cell "김정은" [ref=e259]
+            - cell "79" [ref=e260]
+            - cell "9.2" [ref=e261]
+            - cell "7.27" [ref=e262]
+            - cell [ref=e263]:
+              - link "2026-08-20 14:01:09" [ref=e264] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e265]:
+              - link "보기" [ref=e266] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1115
+            - cell [ref=e267]:
+              - link "보기" [ref=e268] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1115
+            - cell [ref=e269]
+          - row [ref=e270]:
+            - cell [ref=e271]:
+              - checkbox [ref=e272]
+            - cell "3" [ref=e273]
+            - cell "임연우" [ref=e274]
+            - cell "79" [ref=e275]
+            - cell "9.2" [ref=e276]
+            - cell "7.27" [ref=e277]
+            - cell [ref=e278]:
+              - link "2026-08-20 14:49:12" [ref=e279] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e280]:
+              - link "보기" [ref=e281] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1121
+            - cell [ref=e282]:
+              - link "보기" [ref=e283] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1121
+            - cell [ref=e284]
+          - row [ref=e285]:
+            - cell [ref=e286]:
+              - checkbox [ref=e287]
+            - cell "5" [ref=e288]
+            - cell "박주연" [ref=e289]
+            - cell "78" [ref=e290]
+            - cell "9.2" [ref=e291]
+            - cell "7.18" [ref=e292]
+            - cell [ref=e293]:
+              - link "2026-08-20 14:01:50" [ref=e294] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e295]:
+              - link "보기" [ref=e296] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1117
+            - cell [ref=e297]:
+              - link "보기" [ref=e298] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1117
+            - cell [ref=e299]
+          - row [ref=e300]:
+            - cell [ref=e301]:
+              - checkbox [ref=e302]
+            - cell "5" [ref=e303]
+            - cell "이지희" [ref=e304]
+            - cell "78" [ref=e305]
+            - cell "9.2" [ref=e306]
+            - cell "7.18" [ref=e307]
+            - cell [ref=e308]:
+              - link "2026-08-20 13:57:48" [ref=e309] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e310]:
+              - link "보기" [ref=e311] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1120
+            - cell [ref=e312]:
+              - link "보기" [ref=e313] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1120
+            - cell [ref=e314]
+          - row [ref=e315]:
+            - cell [ref=e316]:
+              - checkbox [ref=e317]
+            - cell "7" [ref=e318]
+            - cell "박찬미" [ref=e319]
+            - cell "77" [ref=e320]
+            - cell "9.2" [ref=e321]
+            - cell "7.08" [ref=e322]
+            - cell [ref=e323]:
+              - link "2026-08-20 14:08:07" [ref=e324] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e325]:
+              - link "보기" [ref=e326] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1118
+            - cell [ref=e327]:
+              - link "보기" [ref=e328] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1118
+            - cell [ref=e329]
+          - row [ref=e330]:
+            - cell [ref=e331]:
+              - checkbox [ref=e332]
+            - cell "7" [ref=e333]
+            - cell "허지민" [ref=e334]
+            - cell "77" [ref=e335]
+            - cell "9.2" [ref=e336]
+            - cell "7.08" [ref=e337]
+            - cell [ref=e338]:
+              - link "2026-08-20 14:08:13" [ref=e339] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e340]:
+              - link "보기" [ref=e341] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1122
+            - cell [ref=e342]:
+              - link "보기" [ref=e343] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1122
+            - cell [ref=e344]
+          - row [ref=e345]:
+            - cell [ref=e346]:
+              - checkbox [ref=e347]
+            - cell "9" [ref=e348]
+            - cell "강민경" [ref=e349]
+            - cell "76" [ref=e350]
+            - cell "9.2" [ref=e351]
+            - cell "6.99" [ref=e352]
+            - cell [ref=e353]:
+              - link "피드백 날짜등록" [ref=e354] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e355]:
+              - link "보기" [ref=e356] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1114
+            - cell [ref=e357]:
+              - link "보기" [ref=e358] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1114
+            - cell [ref=e359]
+          - row [ref=e360]:
+            - cell [ref=e361]:
+              - checkbox [ref=e362]
+            - cell "9" [ref=e363]
+            - cell "최지혜" [ref=e364]
+            - cell "76" [ref=e365]
+            - cell "9.2" [ref=e366]
+            - cell "6.99" [ref=e367]
+            - cell [ref=e368]:
+              - link "2026-08-20 14:36:42" [ref=e369] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=e370]:
+              - link "보기" [ref=e371] [cursor=pointer]:
+                - /url: ./teacher.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1124
+            - cell [ref=e372]:
+              - link "보기" [ref=e373] [cursor=pointer]:
+                - /url: ./student.php?Pcode=300002&Lcode=8&FollowNo=1&Sid=sbsartdj1124
+            - cell [ref=e374]

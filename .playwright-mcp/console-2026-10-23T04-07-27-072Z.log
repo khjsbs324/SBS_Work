@@ -1,0 +1,4 @@
+[     361ms] missing ) after argument list
+[     493ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://opentutorials.org/manifest.json:0
+[     493ms] [ERROR] Manifest fetch from https://opentutorials.org/manifest.json failed, code 404 @ https://opentutorials.org/module/2367/13516:1439
+[     596ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://opentutorials.org/module/2367/13516:0

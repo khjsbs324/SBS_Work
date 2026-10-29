@@ -1,0 +1,18 @@
+{
+  "course_id": "A",
+  "unit": "테스트 단위",
+  "lcode": "6",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-29T13:49:56+09:00",
+  "task_basis": "original",
+  "original_task_full_text_available": true,
+  "task_read": true,
+  "scores_read": true,
+  "feedback_read": true,
+  "meeting_read": true,
+  "source_urls": [
+    "https://example.org/test-fixture"
+  ]
+}

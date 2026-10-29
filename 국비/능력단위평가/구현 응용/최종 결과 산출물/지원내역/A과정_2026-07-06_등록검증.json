@@ -1,0 +1,893 @@
+{
+  "course": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "unit": "구현 응용",
+  "unitEndDate": "2026-07-03",
+  "postingDate": "2026-07-06",
+  "meeting": {
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=3",
+    "original": {
+      "date": "",
+      "analysis": "",
+      "improvement": ""
+    },
+    "result": {
+      "status": 200,
+      "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/appraisal\\/analysis\\/index.php?Pcode=300002\\u0026Lcode=3\"}"
+    },
+    "exact": true,
+    "saved": {
+      "date": "2026-10-23",
+      "analysis": "구현 응용 평가결과 분석 및 A·B·C그룹별 학습지원 계획\n\n기록 작성일: 2026-10-23\n평가일: 2026-07-03 / 능력단위 종강일: 2026-07-03\n분석 작성: 김혜지 강사\n기록 구분: 현재 등록된 평가점수와 개별 피드백을 검토하여 사후 작성한 분석·지원계획임. 과거 회의의 실제 개최일·참석자 확인자료는 없어 임의로 기재하지 않음.\n\n1. 분석 목적\n현재 평가에서 확인된 상단바 구성, 2·3차 메뉴 중첩과 hover 상태, 부모·자식 선택자, 위치 기준, 링크·SVG 아이콘, CSS 초기화 및 최종 점검의 보완사항을 학습지원 자료로 연결함. 새 기능을 무리하게 추가하기보다 기존 구조를 이해하고 오류를 수정·재확인하는 능력을 기르고자 함.\n\n2. 평가결과 및 학습지원 그룹\n현재 등록점수와 개별 피드백의 수행 수준을 함께 검토하여 자료 제공을 위한 그룹을 구분함. 아래 A·B·C는 학습지원 그룹이며 공식 성적등급이나 기존 평가점수를 변경하지 않음.\n\nA그룹(4명): 임연우(95점), 이은경(92점), 이은수(88점), 박주연(85점)\nB그룹(4명): 김지선(79점), 강민경(77점), 박찬미(75점), 이지희(72점)\nC그룹(3명): 최지혜(66점), 김정은(63점), 허지민(60점)\n\n3. A그룹 분석 및 지원 방향\n1차 상단바 구성이 확인되고, 2차 메뉴 또는 3차 메뉴의 확장 시도가 상대적으로 잘 이루어짐. 학습자별로 header·로고 링크의 의미 구조, 3차 메뉴 누락, 기본 닫힘 상태, 부모 위치 기준, 명세의 클래스명·이미지 파일명과 실제 코드의 대응, tel 링크와 인라인 SVG, 중복 선택자와 잘못된 CSS 값에 보완사항이 있음.\n- 지원자료: 구조·상태 명세표, 직접 자식 선택자와 위치 기준 도식, 닫힘·2차·3차 상태 화면, 공통 규칙 정리와 수정 전후 비교, 링크·SVG·초점 점검 가이드.\n- 학습 활동: 현재 코드에서 한 항목씩 수정하고 같은 환경에서 비교함. 하위 메뉴의 이동 경로와 화면 안정성, 키보드 초점을 추가 학습으로 확인함.\n- 완료 기준: 지정 명세와 코드의 차이, 수정 이유, 상태별 결과와 남은 제한을 근거로 설명할 수 있는지 확인함.\n\n4. B그룹 분석 및 지원 방향\n1차 상단바의 주요 요소를 구성한 흐름이 확인됨. 2차 메뉴의 부모 안 배치, 3차 메뉴 중첩, hover 선택자·상태 표현, 클래스명·파일명 오타, 이미지·전화 링크·SVG, 고정 너비와 테스트용 스타일을 순차적으로 보완할 필요가 있음.\n- 지원자료: 증상→파일 연결→HTML 중첩→선택자→상태→재확인 순서의 진단표, 오류가 있는 독립 연습 파일과 수정 비교 예시, 구조·상태 도식, 실습 점검 양식.\n- 학습 활동: 2차 메뉴 한 항목과 그 안의 3차 메뉴를 먼저 완성한 뒤 같은 구조를 반복함. 보이는 모양과 실제 링크·상태가 일치하는지 확인함.\n- 완료 기준: 원인 위치를 찾고 2차·3차 메뉴의 열림·닫힘을 설명하며, 파일·선택자·링크·SVG를 대조할 수 있는지 확인함.\n\n5. C그룹 분석 및 지원 방향\n1차 상단바를 구성하려는 시도는 확인되나 로고·메뉴의 역할 구분, 태그 닫힘과 목록 중첩, 2·3차 메뉴 구성, 실제 구조와 연결되는 선택자, 기본 CSS 값과 링크·SVG 등 기초부터 확인할 필요가 있음.\n- 지원자료: 상단바 세 영역 구조도, 1차 구성→2차 구조→3차 중첩→상태 연결의 단계별 연습 파일, 용어 풀이, 짧은 HTML·CSS 예제와 빈칸 점검 양식.\n- 학습 활동: 한 단계마다 실제 브라우저 화면과 코드를 함께 확인함. 한 항목을 완성한 후 반복하고, 이해하지 못한 위치는 파일·선택자·화면과 함께 질문하도록 함.\n- 완료 기준: 로고·내비게이션·보조 링크의 역할을 말하고, 부모·자식 구조와 hover 조건을 따라 설명하며, 목표 상태를 스스로 확인할 수 있는지 점검함.\n\n6. 공통 판단과 자료 범위\n현재 사이트의 문제해결시나리오 평가 및 개별 피드백에 나타난 HTML·CSS 상단바·하위 메뉴 구현을 지원 범위로 삼음. 별도 제작된 포트폴리오 평가안의 고급 기능이나 서버·프레임워크·배포·성능 점수를 현재 평가의 추가 필수 조건으로 적용하지 않음.\n연습은 별도의 가상 자료실 내비게이션으로 제작하고, 원래 평가의 정답 코드와 학생 제출물을 복제하지 않음. 연습 클래스명·높이·색상은 평가의 지정값이 아니며 원래 문제의 명세를 대조하도록 안내함. 키보드·좁은 화면 점검은 보완학습으로 제공하며 기존 점수를 다시 산정하지 않음.",
+      "improvement": "7. 지원자료 제공 및 후속 계획\n① 지원내역에 구현 응용 A·B·C그룹 자료를 별도 글로 등록할 계획임. 게시물 작성일은 능력단위 종강일 2026-07-03 다음 첫 평일인 2026-07-06으로 설정함.\n② 국내 한국어 무료 강의와 공개 참고자료를 부모·자식 선택자, hover, position, SVG 학습 항목에 연결하고 열람 후 수행할 실습을 제시함.\n③ 그룹별 설명 본문, 복사 가능한 짧은 코드, 구조 도식, 닫힘·2차·3차 상태 화면, 실행 가능한 독립 연습 파일과 실습·점검 양식을 제공함.\n④ 연습 파일은 의도한 오류 사례와 정상·단계별 사례를 구분하여 실제 브라우저에서 확인함. 정상 사례의 마우스 이동·키보드 초점·파일 연결·좁은 화면 결과를 확인하고 검증하지 않은 환경은 통과로 기록하지 않음.\n⑤ 학습자는 자신의 결과물에서 증상·원인·수정 위치·수정 전후·재확인 조건을 기록하고 이해가 어려운 부분을 질문으로 남김. 실제로 진행하지 않은 보충수업·학생 제출·협업 응답을 완료로 작성하지 않음.\n\n8. 종합 의견\nA그룹은 구조·상태의 정확성과 재사용 가능한 정리, B그룹은 누락된 하위 메뉴와 선택자·상태 진단, C그룹은 기본 영역 구분과 한 단계씩 연결하는 수행에 중점을 둠. 공통 목표는 요구 조건과 코드·화면의 관계를 이해하고, 오류의 원인 한 곳을 수정한 뒤 결과를 다시 확인하는 것임."
+    }
+  },
+  "scoreSource": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=3",
+  "scores": [
+    {
+      "name": "임연우",
+      "score": 95
+    },
+    {
+      "name": "이은경",
+      "score": 92
+    },
+    {
+      "name": "이은수",
+      "score": 88
+    },
+    {
+      "name": "박주연",
+      "score": 85
+    },
+    {
+      "name": "김지선",
+      "score": 79
+    },
+    {
+      "name": "강민경",
+      "score": 77
+    },
+    {
+      "name": "박찬미",
+      "score": 75
+    },
+    {
+      "name": "이지희",
+      "score": 72
+    },
+    {
+      "name": "최지혜",
+      "score": 66
+    },
+    {
+      "name": "김정은",
+      "score": 63
+    },
+    {
+      "name": "허지민",
+      "score": 60
+    }
+  ],
+  "registration": [
+    {
+      "group": "A",
+      "preflight": {
+        "valid": true,
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "title": "[능력단위평가_지원내역] 구현 응용 A그룹 지원자료",
+        "date": "2026-07-06",
+        "images": 3,
+        "anchors": 10,
+        "externalLinks": 4,
+        "codeBlocks": 7,
+        "placeholder": false,
+        "file": "구현응용_A그룹_학습자료.zip"
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+      },
+      "uploaded": {
+        "structure.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728577_9bfcd3b4.png",
+        "closed.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728577_37a7dbca.png",
+        "opened.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728578_209a606b.png"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t13\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 응용 A그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06\n\t\t\t\t\t\t\t\t\t",
+          "id": "1048"
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "preflight": {
+        "valid": true,
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "title": "[능력단위평가_지원내역] 구현 응용 B그룹 지원자료",
+        "date": "2026-07-06",
+        "images": 3,
+        "anchors": 10,
+        "externalLinks": 4,
+        "codeBlocks": 7,
+        "placeholder": false,
+        "file": "구현응용_B그룹_학습자료.zip"
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+      },
+      "uploaded": {
+        "structure.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728579_117e8377.png",
+        "closed.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728579_c107e16b.png",
+        "opened.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728580_504ef626.png"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t14\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 응용 B그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06\n\t\t\t\t\t\t\t\t\t",
+          "id": "1049"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "preflight": {
+        "valid": true,
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "title": "[능력단위평가_지원내역] 구현 응용 C그룹 지원자료",
+        "date": "2026-07-06",
+        "images": 3,
+        "anchors": 10,
+        "externalLinks": 4,
+        "codeBlocks": 7,
+        "placeholder": false,
+        "file": "구현응용_C그룹_학습자료.zip"
+      },
+      "saved": {
+        "status": 200,
+        "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=85\"}"
+      },
+      "uploaded": {
+        "structure.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728581_1716c8f2.png",
+        "closed.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728581_88621614.png",
+        "opened.png": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728582_e2161455.png"
+      },
+      "rows": [
+        {
+          "text": "\n\t\t\t\t\t\t\t\t\t\t15\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 응용 C그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06\n\t\t\t\t\t\t\t\t\t",
+          "id": "1050"
+        }
+      ]
+    }
+  ],
+  "verification": [
+    {
+      "group": "A",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1048",
+      "correctCourse": true,
+      "textMatches": true,
+      "titleMatches": true,
+      "dateMatches": true,
+      "images": [
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728577_9bfcd3b4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728577_37a7dbca.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728578_209a606b.png",
+          "loaded": true
+        }
+      ],
+      "anchors": [
+        {
+          "href": "#a-learning-1",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-2",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-3",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-4",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-5",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-6",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-7",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-8",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-9",
+          "exists": true
+        },
+        {
+          "href": "#a-learning-10",
+          "exists": true
+        }
+      ],
+      "sources": [
+        "https://opentutorials.org/module/2367/13348",
+        "https://opentutorials.org/module/2367/13516",
+        "https://opentutorials.org/module/2367/13414",
+        "https://www.tcpschool.com/html/html5_graphic_svg"
+      ],
+      "headings": 11,
+      "codeBlocks": 7,
+      "style": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "cellPadding": "14px 16px"
+      },
+      "attachment": {
+        "status": 200,
+        "bytes": 377185,
+        "exact": true
+      },
+      "anchorScrollWorks": true
+    },
+    {
+      "group": "B",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1049",
+      "correctCourse": true,
+      "textMatches": true,
+      "titleMatches": true,
+      "dateMatches": true,
+      "images": [
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728579_117e8377.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728579_c107e16b.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728580_504ef626.png",
+          "loaded": true
+        }
+      ],
+      "anchors": [
+        {
+          "href": "#b-learning-1",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-2",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-3",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-4",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-5",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-6",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-7",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-8",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-9",
+          "exists": true
+        },
+        {
+          "href": "#b-learning-10",
+          "exists": true
+        }
+      ],
+      "sources": [
+        "https://opentutorials.org/module/2367/13348",
+        "https://opentutorials.org/module/2367/13516",
+        "https://opentutorials.org/module/2367/13414",
+        "https://www.tcpschool.com/html/html5_graphic_svg"
+      ],
+      "headings": 11,
+      "codeBlocks": 7,
+      "style": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "cellPadding": "14px 16px"
+      },
+      "attachment": {
+        "status": 200,
+        "bytes": 369612,
+        "exact": true
+      },
+      "anchorScrollWorks": true
+    },
+    {
+      "group": "C",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1050",
+      "correctCourse": true,
+      "textMatches": true,
+      "titleMatches": true,
+      "dateMatches": true,
+      "images": [
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728581_1716c8f2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728581_88621614.png",
+          "loaded": true
+        },
+        {
+          "src": "https://maniarodata.mycafe24.com/lms_file/sbsartdj/images/1792728582_e2161455.png",
+          "loaded": true
+        }
+      ],
+      "anchors": [
+        {
+          "href": "#c-learning-1",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-2",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-3",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-4",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-5",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-6",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-7",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-8",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-9",
+          "exists": true
+        },
+        {
+          "href": "#c-learning-10",
+          "exists": true
+        }
+      ],
+      "sources": [
+        "https://opentutorials.org/module/2367/13348",
+        "https://opentutorials.org/module/2367/13516",
+        "https://opentutorials.org/module/2367/13414",
+        "https://www.tcpschool.com/html/html5_graphic_svg"
+      ],
+      "headings": 11,
+      "codeBlocks": 7,
+      "style": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "cellPadding": "14px 16px"
+      },
+      "attachment": {
+        "status": 200,
+        "bytes": 378443,
+        "exact": true
+      },
+      "anchorScrollWorks": true
+    }
+  ],
+  "finalList": [
+    "15\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 응용 C그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06",
+    "14\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 응용 B그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06",
+    "13\n\t\t\t\t\t\n\t\t\t\t\t\t[능력단위평가_지원내역] 구현 응용 A그룹 지원자료\t\t\t\t\t\n\t\t\t\t\t김혜지\n\t\t\t\t\t2026-07-06"
+  ],
+  "practiceVerification": [
+    {
+      "group": "A",
+      "closedHidden": true,
+      "second": true,
+      "third": true,
+      "pathStable": true,
+      "hiddenAgain": true,
+      "keyboard": [
+        {
+          "text": "",
+          "href": "#main",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "none",
+          "third": "none"
+        },
+        {
+          "text": "자료 살펴보기",
+          "href": "#library",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "none"
+        },
+        {
+          "text": "디자인",
+          "href": "#design",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "flex"
+        },
+        {
+          "text": "타이포그래피",
+          "href": "#type",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "flex"
+        },
+        {
+          "text": "레이아웃",
+          "href": "#layout",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "flex"
+        }
+      ],
+      "linkHash": "#type",
+      "widths": [
+        {
+          "width": 1200,
+          "overflow": false,
+          "panelInside": true,
+          "images": true,
+          "inlineCircles": 3
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "panelInside": true,
+          "images": true,
+          "inlineCircles": 3
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "panelInside": true,
+          "images": true,
+          "inlineCircles": 3
+        }
+      ],
+      "normalErrors": []
+    },
+    {
+      "group": "A",
+      "intentionalBefore": {
+        "overflow": true,
+        "panelHeight": 2,
+        "overflowStyle": "visible",
+        "inlineSVG": 0,
+        "brandLink": false
+      },
+      "expectedMissingCSS": [
+        {
+          "url": "http://127.0.0.1:4629/2026-07-06_A%EA%B7%B8%EB%A3%B9/practice/01_before/styles.css",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "group": "A",
+      "pdfPages": [
+        {
+          "n": 1,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 2,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 4,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 5,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 6,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 7,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 8,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 9,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 10,
+          "h": 1122.515625,
+          "overflow": false
+        }
+      ],
+      "imagesLoaded": true
+    },
+    {
+      "group": "B",
+      "closedHidden": true,
+      "second": true,
+      "third": true,
+      "pathStable": true,
+      "hiddenAgain": true,
+      "keyboard": [
+        {
+          "text": "",
+          "href": "#main",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "none",
+          "third": "none"
+        },
+        {
+          "text": "자료 살펴보기",
+          "href": "#library",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "none"
+        },
+        {
+          "text": "디자인",
+          "href": "#design",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "flex"
+        },
+        {
+          "text": "타이포그래피",
+          "href": "#type",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "flex"
+        },
+        {
+          "text": "레이아웃",
+          "href": "#layout",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "flex"
+        }
+      ],
+      "linkHash": "#type",
+      "widths": [
+        {
+          "width": 1200,
+          "overflow": false,
+          "panelInside": true,
+          "images": true,
+          "inlineCircles": 3
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "panelInside": true,
+          "images": true,
+          "inlineCircles": 3
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "panelInside": true,
+          "images": true,
+          "inlineCircles": 3
+        }
+      ],
+      "normalErrors": []
+    },
+    {
+      "group": "B",
+      "intentionalBefore": {
+        "overflow": true,
+        "panelHeight": 2,
+        "overflowStyle": "visible",
+        "inlineSVG": 0,
+        "brandLink": false
+      },
+      "expectedMissingCSS": [
+        {
+          "url": "http://127.0.0.1:4629/2026-07-06_B%EA%B7%B8%EB%A3%B9/practice/01_before/styles.css",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "pdfPages": [
+        {
+          "n": 1,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 2,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 4,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 5,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 6,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 7,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 8,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 9,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 10,
+          "h": 1122.515625,
+          "overflow": false
+        }
+      ],
+      "imagesLoaded": true
+    },
+    {
+      "group": "C",
+      "closedHidden": true,
+      "second": true,
+      "third": true,
+      "pathStable": true,
+      "hiddenAgain": true,
+      "keyboard": [
+        {
+          "text": "",
+          "href": "#main",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "none",
+          "third": "none"
+        },
+        {
+          "text": "자료 살펴보기",
+          "href": "#library",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "none"
+        },
+        {
+          "text": "디자인",
+          "href": "#design",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "flex"
+        },
+        {
+          "text": "타이포그래피",
+          "href": "#type",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "flex"
+        },
+        {
+          "text": "레이아웃",
+          "href": "#layout",
+          "visible": "visible",
+          "outline": "3px",
+          "sub": "block",
+          "third": "flex"
+        }
+      ],
+      "linkHash": "#type",
+      "widths": [
+        {
+          "width": 1200,
+          "overflow": false,
+          "panelInside": true,
+          "images": true,
+          "inlineCircles": 3
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "panelInside": true,
+          "images": true,
+          "inlineCircles": 3
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "panelInside": true,
+          "images": true,
+          "inlineCircles": 3
+        }
+      ],
+      "normalErrors": []
+    },
+    {
+      "group": "C",
+      "stages": [
+        {
+          "stage": "01_shell",
+          "panels": 0,
+          "thirdLists": 0,
+          "shown": null
+        },
+        {
+          "stage": "02_second",
+          "panels": 1,
+          "thirdLists": 0,
+          "shown": "block"
+        },
+        {
+          "stage": "03_third",
+          "panels": 1,
+          "thirdLists": 2,
+          "shown": "block"
+        },
+        {
+          "stage": "04_states",
+          "panels": 1,
+          "thirdLists": 2,
+          "shown": "none"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "pdfPages": [
+        {
+          "n": 1,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 2,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 4,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 5,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 6,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 7,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 8,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 9,
+          "h": 1122.515625,
+          "overflow": false
+        },
+        {
+          "n": 10,
+          "h": 1122.515625,
+          "overflow": false
+        }
+      ],
+      "imagesLoaded": true
+    }
+  ],
+  "pdfPageCounts": {
+    "A": 10,
+    "B": 10,
+    "C": 10
+  },
+  "localHarness": {
+    "ok": false,
+    "existingError": "능력단위평가\\수정 보완\\CLAUDE.md: Missing link/import: 수정 보완",
+    "changeRelated": false
+  }
+}

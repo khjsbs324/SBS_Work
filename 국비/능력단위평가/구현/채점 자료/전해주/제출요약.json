@@ -1,0 +1,53 @@
+{
+  "name": "전해주",
+  "Sid": "sbsartdj1169",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/evalC/answer.php?Pcode=500000&Lcode=8&AppCode=D&FollowNo=1&Sid=sbsartdj1169",
+  "downloads": [
+    {
+      "filename": "1792725262_796219d4.zip",
+      "url": "/uflist/download.php?type=project_appraisal&pcode=500000&lcode=8&file=1792725262_796219d4.zip",
+      "path": "C:/khjsbs324/SBS_Work/국비/능력단위평가/구현/채점 자료/전해주/원본/1792725262_796219d4.zip"
+    }
+  ],
+  "currentScore": "0 / 100",
+  "submittedAnswer": "",
+  "submittedLinks": [
+    {
+      "href": "https://github.com/wjsgown630-stack/test-1.git",
+      "onclick": null
+    }
+  ],
+  "receivedAt": "2026-10-26T04:22:19.976Z",
+  "archiveBytes": 817764,
+  "sha256": "8e53cd9640a9626b27e8d81543b9b57c6798e7d525751a8160c4d560770913c7",
+  "memberCount": 89,
+  "codeFiles": [
+    {
+      "path": "학생_검토사본\\마켓컬리 코드\\index.html",
+      "bytes": 6001,
+      "monami": false
+    },
+    {
+      "path": "학생_검토사본\\마켓컬리 코드\\style.css",
+      "bytes": 5297,
+      "monami": false
+    },
+    {
+      "path": "학생_검토사본\\모나미시험\\index.html",
+      "bytes": 1612,
+      "monami": true
+    },
+    {
+      "path": "학생_검토사본\\모나미시험\\style.css",
+      "bytes": 1721,
+      "monami": false
+    }
+  ],
+  "git": [
+    {
+      "directory": "학생_검토사본",
+      "head": "ref: refs/heads/main",
+      "commit": "a70185dc16c3d3a66c7ec63dd626001306ad4cf9"
+    }
+  ]
+}

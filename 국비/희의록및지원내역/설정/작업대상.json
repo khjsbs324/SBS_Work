@@ -3,19 +3,109 @@
   "course_id": "A",
   "note": "A반 NCS 능력단위의 로컬 후보 목록. 순서는 현재 목록 순서이며 실제 교육 순서는 LMS 종료일 확인 후 조정한다. observation=null은 LMS 대상 미확인이다. B반과 비NCS 과정은 이번 일괄 작업 범위에 포함하지 않는다.",
   "units": [
-    {"unit": "구현", "enabled": true, "observation": null},
-    {"unit": "구현 응용", "enabled": true, "observation": null},
-    {"unit": "시각디자인 리서치 조사", "enabled": true, "observation": null},
-    {"unit": "시각디자인 리서치 분석", "enabled": true, "observation": null},
-    {"unit": "시안 디자인 개발 심화", "enabled": true, "observation": null},
-    {"unit": "디자인 구성요소 설계", "enabled": true, "observation": null},
-    {"unit": "디자인 구성요소 제작", "enabled": true, "observation": null},
-    {"unit": "디지털디자인 사후관리", "enabled": true, "observation": null},
-    {"unit": "서비스ㆍ경험디자인 관찰조사", "enabled": true, "observation": null},
-    {"unit": "서비스ㆍ경험디자인 시나리오 개발", "enabled": true, "observation": null},
-    {"unit": "수정 보완", "enabled": true, "observation": null},
-    {"unit": "스마트문화앱 UI 디자인", "enabled": true, "observation": null},
-    {"unit": "프로토타입 기초데이터 수집 및 스케치", "enabled": true, "observation": null},
-    {"unit": "프로토타입 제작 및 사용성 테스트", "enabled": true, "observation": null}
+    {
+      "unit": "구현",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "구현 응용",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "시각디자인 리서치 조사",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "enabled": true,
+      "observation": {
+        "course_id": "A",
+        "unit": "디자인 구성요소 제작",
+        "lcode": "9",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+        "unit_end_date": "2026-08-20",
+        "screen_confirmed": true,
+        "checked_at": "2026-10-29T12:55:49+09:00",
+        "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=9"
+      }
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "수정 보완",
+      "enabled": true,
+      "observation": {
+        "course_id": "A",
+        "unit": "수정 보완",
+        "lcode": "8",
+        "Pcode": "300002",
+        "BoardCode": "85",
+        "version": "ver4",
+        "checked_at": "2026-10-29T01:25:41.462Z",
+        "course_name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+        "unit_end_date": "2026-08-18",
+        "screen_confirmed": true,
+        "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=8",
+        "support_list_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/list.php?Pcode=300002&BoardCode=85",
+        "duplicate_checked": true,
+        "support_list_pages": 1,
+        "existing_posts": [],
+        "meeting_original": {
+          "date": "",
+          "analysis": "",
+          "improvement": ""
+        },
+        "meeting_form_observed": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=8"
+      }
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "enabled": true,
+      "observation": null
+    },
+    {
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "enabled": true,
+      "observation": null
+    }
   ]
 }

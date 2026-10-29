@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../image/logo.jpg">
+  <title>MONAMI | MON-01 상단</title>
+  <!-- UIUXB_2610의 HTML/CSS 수업 예제를 참고한 모나미 데스크톱 학습용 정답 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ============================================================
+  MON-01 시작: 상단 유틸리티 + 로고 + 주 메뉴
+  참고: 마켓컬리 index.html의 header, utility-menu, brand, nav, actions
+  구조: header > utility-menu + main-header
+  협업: .con 1400px은 푸터와 공유합니다. 메뉴를 추가하면 폭 합계도 확인합니다.
+  이미지: logo.jpg 162×89, SNS 이미지 각 30×30
+  범위: 메뉴·검색·전체 메뉴는 화면 구성 학습용 표시입니다. 새 JS를 넣지 않았습니다.
+============================================================ -->
+<header id="MON-01">
+  <div class="utility-menu">
+    <div class="con utility-con">
+      <div class="utility-left">
+        <div class="language">🇰🇷 KOR <span>⌄</span></div>
+        <div class="social-list">
+          <img src="../../image/facebook.gif" alt="모나미 페이스북 아이콘">
+          <img src="../../image/instagram.gif" alt="모나미 인스타그램 아이콘">
+          <img src="../../image/youtube.png" alt="모나미 유튜브 아이콘">
+        </div>
+      </div>
+      <nav class="utility-nav" aria-label="유틸리티 메뉴 표시">
+        <ul><li>HOME</li><li>SITE MAP</li><li>CONTACT US</li></ul>
+      </nav>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="con m-header-con">
+      <h1 class="brand"><img src="../../image/logo.jpg" alt="MONAMI 모나미"></h1>
+      <nav class="main-nav" aria-label="주 메뉴 표시">
+        <ul>
+          <li>모나미소개</li><li>모나미제품</li><li>NEWS &amp; VIDEO</li>
+          <li>브랜드스토어</li><li>모나미 미술대회</li><li>고객지원</li>
+          <li>기업 구매 / 개발</li>
+        </ul>
+      </nav>
+      <!-- actions: 검색 이미지와 전체 메뉴 아이콘을 한 줄로 묶는 부모입니다.
+           가로 배치와 두 아이콘 사이 간격은 CSS .actions에서 지정합니다. -->
+      <div class="actions">
+        <!-- 검색은 준비된 이미지 파일을 사용합니다. alt는 이미지의 의미를 설명합니다. -->
+        <img src="../../image/search.gif" alt="검색 아이콘">
+
+        <!-- 전체 메뉴 아이콘(☰)은 이미지 파일 대신 아래의 빈 div 3개로 그립니다.
+             div 안에 글자가 없어도 CSS로 너비·높이·배경색을 주면 선이 보입니다.
+             부모 .menu-lines: 선 3개를 세로로 배치하고, 선 사이를 5px 띄웁니다.
+             자식 .menu-lines div: 각 선을 너비 20px, 높이 2px, 회색(#555)으로 만듭니다.
+             role="img": 이 묶음을 화면 읽기 프로그램에 하나의 이미지로 알려줍니다.
+             aria-label: 그 이미지의 이름을 '전체 메뉴 아이콘'으로 알려줍니다.
+             현재는 모양만 표시합니다. 클릭해서 메뉴를 여는 기능은 없습니다. -->
+        <div class="menu-lines" role="img" aria-label="전체 메뉴 아이콘">
+          <div></div> <!-- 첫 번째 자식: 위쪽 가로선 -->
+          <div></div> <!-- 두 번째 자식: 가운데 가로선 -->
+          <div></div> <!-- 세 번째 자식: 아래쪽 가로선 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- MON-01 끝 -->
+</body>
+</html>

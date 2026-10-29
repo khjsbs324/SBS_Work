@@ -1,0 +1,12 @@
+{
+  "student": "신윤아",
+  "repository": "fngk2580-prog/first_test_MNM",
+  "requestedCommit": "84179335a3781ac41e88429816da64919adad889",
+  "isError": true,
+  "content": [
+    {
+      "type": "text",
+      "text": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"}"
+    }
+  ]
+}

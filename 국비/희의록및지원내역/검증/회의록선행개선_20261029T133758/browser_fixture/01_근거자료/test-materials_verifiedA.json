@@ -1,0 +1,20 @@
+{
+  "course_id": "A",
+  "unit": "테스트 단위",
+  "lcode": "6",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "checked_at": "2026-10-29T13:49:56+09:00",
+  "group": "A",
+  "post_date": "2026-07-06",
+  "pdf_page_count": 2,
+  "support_plan_sha256": "49b885ff31b02b2348ea18b09e4725241773735e3c82170a79230068b2a96b4e",
+  "plan_alignment_reviewed": true,
+  "plan_alignment_notes": "Fixture needs/activity/criteria review",
+  "local_checks": true,
+  "pdf_reviewed": true,
+  "visual_reviewed": true,
+  "sources_reviewed": true,
+  "privacy_reviewed": true
+}
