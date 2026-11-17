@@ -1,0 +1,16 @@
+{
+  "content_reviewed": true,
+  "six_sections_matched": true,
+  "students": 11,
+  "total_score": 809,
+  "test_harness_passed": 14,
+  "test_support_passed": 34,
+  "global_harness_error": "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완",
+  "site_saved": true,
+  "pending": "실제 회의 개최일 확인; 이번 요청은 날짜 확인에 한정",
+  "meeting_sha256": "5b3c985df1b1a2464ca12bd998f01c90680c1a3b012e33face537ed78f0f2edb",
+  "registration_actor": "user",
+  "saved_meeting_date": "2026-05-21",
+  "local_draft_date_matches_site": false,
+  "full_text_readback_performed": false
+}

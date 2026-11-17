@@ -1,0 +1,722 @@
+{
+    "URL":  "sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/check_list.php?Pcode=300002",
+    "observedAt":  "2026-11-13T00:50:45.5264134Z",
+    "Document":  "SBS아카데미 대전",
+    "Nodes":  [
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "SBS아카데미 대전",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Hyperlink",
+                      "Name":  "로그아웃",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "김혜지",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Button",
+                      "Name":  "정보수정",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Button",
+                      "Name":  "비번변경",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Button",
+                      "Name":  "PIN변경",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "훈련과정",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "훈련과정",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "공지사항",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "공지사항",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "고객센터",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "고객센터",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "카톡문의",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "카톡문의",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Table",
+                      "Name":  "[디지털디자인] AI 기반 UIUX 웹디자인 \u0026 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차) 처음으로",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "[디지털디자인] AI 기반 UIUX 웹디자인 \u0026 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A ",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "(1회차)",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Hyperlink",
+                      "Name":  "처음으로",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "개강일",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "2026-05-20",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "종강일",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "2026-12-04",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "강사",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "김가경, 김혜지",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "실시인원",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "11",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "수강인원",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "9",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "수강포기인원",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "2",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "집체훈련",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "집체훈련",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "시간표",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "시간표",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "훈련생",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "훈련생",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "사전평가",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "사전평가",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "오리엔테이션",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "오리엔테이션",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "출석현황",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "출석현황",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "능력단위평가",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "능력단위평가",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "훈련생평가",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "훈련생평가",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "상담일지",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "상담일지",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "이의신청",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "이의신청",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "보충수업",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "보충수업",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "훈련일지",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "훈련일지",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "교재관리",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "교재관리",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "과정회의록",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "과정회의록",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "과정공지사항",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "과정공지사항",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "지원내역",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "지원내역",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "과제",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "과제",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "서식공유",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "서식공유",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "게시판생성",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "게시판생성",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.ListItem",
+                      "Name":  "게시판순서변경",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "게시판순서변경",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Table",
+                      "Name":  "자가진단 문항 돌아가기",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Text",
+                      "Name":  "자가진단 문항",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.Hyperlink",
+                      "Name":  "돌아가기",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "분류명",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "자가진단명",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보기1",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보기2",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보기3",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보기4",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보기5",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "NCS 훈련과정 이해",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 국가직무능력표준(NCS)가 산업현장에서 직무를 수행하기 위해 요구되는 지식, 기술, 태도 등의 내용을 국가가 체계화한 것임을 알고 있다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "전혀모른다 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "거의모른다 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보통이다 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "잘안다 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "매우잘안다 5점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 NCS 채용을 통한 기업의 능력중심 인사관리 및 근로자의 평생경력 관리 지원에 활용하는 것을 알고 있다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "전혀모른다 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "거의모른다 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보통이다 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "잘안다 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "매우잘안다 5점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 NCS훈련과정은 훈련생 성취도 평가를 위해 능력단위별 평가를 실시 한다는 사실을 알고 있다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "전혀모른다 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "거의모른다 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보통이다 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "잘안다 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "매우잘안다 5점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "훈련과정 이해도",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 해당 훈련과정과 유사한 과목을 학교에서 수강한 경험이 있다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "0회 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "1회 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "2회 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "3회 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "4회이상 5점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 해당 훈련과정과 유사한 훈련과정을 정규교육과정 이외에 수강한 경험이 있다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "0회 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "1회 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "2회 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "3회 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "4회이상 5점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 해당 훈련과정의 훈련목표를 숙지하고 있다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "전혀모른다 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "거의모른다 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보통이다 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "잘안다 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "매우잘안다 5점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 해당 훈련과정 수강을 통해 성취도가 향상되리라 생각한다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "전혀아니다 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "약간아니다 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보통이다 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "약간그렇다 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "매우그렇다 5점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "교육의지",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 훈련과정과 관련된 수업내용에 대한 관심을 가지고 있다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "전혀아니다 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "약간아니다 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보통이다 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "약간그렇다 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "매우그렇다 5점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 훈련과정 수강 중 평가와 관련된 정보를 제공받길 희망한다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "전혀아니다 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "약간아니다 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보통이다 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "약간그렇다 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "매우그렇다 5점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "나는 지각, 조퇴, 결석없이 훈련과정을 성실하게 수강한다.",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "그렇지않다 1점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "그렇지않은편이다 2점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "보통이다 3점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "그런편이다 4점",
+                      "Value":  null
+                  },
+                  {
+                      "Type":  "ControlType.DataItem",
+                      "Name":  "그렇다 5점",
+                      "Value":  null
+                  }
+              ]
+}

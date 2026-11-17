@@ -1,0 +1,1351 @@
+{
+  "course": "A과정",
+  "Pcode": "300002",
+  "sourceObservation": "설정/관측자료/A과정_사전평가_20261113.json",
+  "sourceQuestions": {
+    "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_list.php?Pcode=300002",
+    "observedAt": "2026-11-13T00:50:06.4284333Z"
+  },
+  "students": [
+    {
+      "name": "이은경",
+      "selfResponses": [
+        3,
+        3,
+        3,
+        1,
+        1,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "selfAverage": 3.1,
+      "selfDomainMeans": [
+        3.0,
+        2.5,
+        4.0
+      ],
+      "total": 85,
+      "unitScores": {
+        "디자인 구성요소 설계": 7,
+        "구현": 4,
+        "구현 응용": 7,
+        "수정 보완": 7,
+        "디자인 구성요소 제작": 7,
+        "서비스ㆍ경험디자인 관찰조사": 7,
+        "프로토타입 기초데이터 수집 및 스케치": 7,
+        "시각디자인 리서치 조사": 3,
+        "시각디자인 리서치 분석": 7,
+        "서비스ㆍ경험디자인 시나리오 개발": 7,
+        "프로토타입 제작 및 사용성 테스트": 7,
+        "시안 디자인 개발 심화": 7,
+        "디지털디자인 사후관리": 7,
+        "스마트문화앱 UI 디자인": 1
+      },
+      "incorrectQuestions": [
+        6,
+        24,
+        28,
+        41,
+        42
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1119",
+        "observedAt": "2026-11-13T00:51:23.8892177Z"
+      }
+    },
+    {
+      "name": "이은수",
+      "selfResponses": [
+        4,
+        3,
+        3,
+        1,
+        1,
+        4,
+        4,
+        5,
+        4,
+        5
+      ],
+      "selfAverage": 3.4,
+      "selfDomainMeans": [
+        3.3333333333333335,
+        2.5,
+        4.666666666666667
+      ],
+      "total": 85,
+      "unitScores": {
+        "디자인 구성요소 설계": 7,
+        "구현": 4,
+        "구현 응용": 5,
+        "수정 보완": 7,
+        "디자인 구성요소 제작": 7,
+        "서비스ㆍ경험디자인 관찰조사": 6,
+        "프로토타입 기초데이터 수집 및 스케치": 5,
+        "시각디자인 리서치 조사": 7,
+        "시각디자인 리서치 분석": 4,
+        "서비스ㆍ경험디자인 시나리오 개발": 8,
+        "프로토타입 제작 및 사용성 테스트": 6,
+        "시안 디자인 개발 심화": 7,
+        "디지털디자인 사후관리": 5,
+        "스마트문화앱 UI 디자인": 7
+      },
+      "incorrectQuestions": [
+        6,
+        8,
+        16,
+        20,
+        25,
+        26,
+        31,
+        38
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1123",
+        "observedAt": "2026-11-13T00:51:44.8209131Z"
+      }
+    },
+    {
+      "name": "박주연",
+      "selfResponses": [
+        2,
+        2,
+        3,
+        1,
+        1,
+        5,
+        4,
+        5,
+        4,
+        5
+      ],
+      "selfAverage": 3.2,
+      "selfDomainMeans": [
+        2.3333333333333335,
+        2.75,
+        4.666666666666667
+      ],
+      "total": 83,
+      "unitScores": {
+        "디자인 구성요소 설계": 6,
+        "구현": 4,
+        "구현 응용": 1,
+        "수정 보완": 7,
+        "디자인 구성요소 제작": 7,
+        "서비스ㆍ경험디자인 관찰조사": 7,
+        "프로토타입 기초데이터 수집 및 스케치": 7,
+        "시각디자인 리서치 조사": 7,
+        "시각디자인 리서치 분석": 6,
+        "서비스ㆍ경험디자인 시나리오 개발": 8,
+        "프로토타입 제작 및 사용성 테스트": 7,
+        "시안 디자인 개발 심화": 6,
+        "디지털디자인 사후관리": 3,
+        "스마트문화앱 UI 디자인": 7
+      },
+      "incorrectQuestions": [
+        1,
+        6,
+        8,
+        9,
+        25,
+        34,
+        39
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1117",
+        "observedAt": "2026-11-13T00:51:50.9216674Z"
+      }
+    },
+    {
+      "name": "이지희",
+      "selfResponses": [
+        4,
+        4,
+        3,
+        1,
+        1,
+        3,
+        5,
+        5,
+        5,
+        5
+      ],
+      "selfAverage": 3.6,
+      "selfDomainMeans": [
+        3.6666666666666665,
+        2.5,
+        5.0
+      ],
+      "total": 81,
+      "unitScores": {
+        "디자인 구성요소 설계": 7,
+        "구현": 4,
+        "구현 응용": 4,
+        "수정 보완": 5,
+        "디자인 구성요소 제작": 7,
+        "서비스ㆍ경험디자인 관찰조사": 7,
+        "프로토타입 기초데이터 수집 및 스케치": 5,
+        "시각디자인 리서치 조사": 7,
+        "시각디자인 리서치 분석": 5,
+        "서비스ㆍ경험디자인 시나리오 개발": 5,
+        "프로토타입 제작 및 사용성 테스트": 5,
+        "시안 디자인 개발 심화": 6,
+        "디지털디자인 사후관리": 7,
+        "스마트문화앱 UI 디자인": 7
+      },
+      "incorrectQuestions": [
+        6,
+        7,
+        8,
+        11,
+        20,
+        26,
+        29,
+        32,
+        34
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1120",
+        "observedAt": "2026-11-13T00:51:57.0502404Z"
+      }
+    },
+    {
+      "name": "김지선",
+      "selfResponses": [
+        4,
+        4,
+        4,
+        1,
+        1,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "selfAverage": 3.9,
+      "selfDomainMeans": [
+        4.0,
+        3.0,
+        5.0
+      ],
+      "total": 79,
+      "unitScores": {
+        "디자인 구성요소 설계": 7,
+        "구현": 8,
+        "구현 응용": 5,
+        "수정 보완": 7,
+        "디자인 구성요소 제작": 3,
+        "서비스ㆍ경험디자인 관찰조사": 6,
+        "프로토타입 기초데이터 수집 및 스케치": 4,
+        "시각디자인 리서치 조사": 5,
+        "시각디자인 리서치 분석": 5,
+        "서비스ㆍ경험디자인 시나리오 개발": 8,
+        "프로토타입 제작 및 사용성 테스트": 6,
+        "시안 디자인 개발 심화": 7,
+        "디지털디자인 사후관리": 3,
+        "스마트문화앱 UI 디자인": 5
+      },
+      "incorrectQuestions": [
+        8,
+        15,
+        16,
+        19,
+        20,
+        23,
+        26,
+        31,
+        39,
+        41
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1116",
+        "observedAt": "2026-11-13T00:52:17.5483621Z"
+      }
+    },
+    {
+      "name": "박찬미",
+      "selfResponses": [
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "selfAverage": 4.7,
+      "selfDomainMeans": [
+        4.0,
+        5.0,
+        5.0
+      ],
+      "total": 79,
+      "unitScores": {
+        "디자인 구성요소 설계": 7,
+        "구현": 4,
+        "구현 응용": 5,
+        "수정 보완": 7,
+        "디자인 구성요소 제작": 3,
+        "서비스ㆍ경험디자인 관찰조사": 7,
+        "프로토타입 기초데이터 수집 및 스케치": 5,
+        "시각디자인 리서치 조사": 7,
+        "시각디자인 리서치 분석": 7,
+        "서비스ㆍ경험디자인 시나리오 개발": 4,
+        "프로토타입 제작 및 사용성 테스트": 7,
+        "시안 디자인 개발 심화": 6,
+        "디지털디자인 사후관리": 3,
+        "스마트문화앱 UI 디자인": 7
+      },
+      "incorrectQuestions": [
+        6,
+        8,
+        15,
+        20,
+        28,
+        29,
+        34,
+        39
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1118",
+        "observedAt": "2026-11-13T00:52:11.4586898Z"
+      }
+    },
+    {
+      "name": "강민경",
+      "selfResponses": [
+        3,
+        3,
+        3,
+        1,
+        2,
+        4,
+        5,
+        5,
+        5,
+        4
+      ],
+      "selfAverage": 3.5,
+      "selfDomainMeans": [
+        3.0,
+        3.0,
+        4.666666666666667
+      ],
+      "total": 77,
+      "unitScores": {
+        "디자인 구성요소 설계": 7,
+        "구현": 3,
+        "구현 응용": 5,
+        "수정 보완": 5,
+        "디자인 구성요소 제작": 3,
+        "서비스ㆍ경험디자인 관찰조사": 7,
+        "프로토타입 기초데이터 수집 및 스케치": 7,
+        "시각디자인 리서치 조사": 5,
+        "시각디자인 리서치 분석": 5,
+        "서비스ㆍ경험디자인 시나리오 개발": 8,
+        "프로토타입 제작 및 사용성 테스트": 6,
+        "시안 디자인 개발 심화": 7,
+        "디지털디자인 사후관리": 6,
+        "스마트문화앱 UI 디자인": 3
+      },
+      "incorrectQuestions": [
+        4,
+        6,
+        8,
+        11,
+        15,
+        23,
+        26,
+        31,
+        37,
+        42
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1114",
+        "observedAt": "2026-11-13T00:53:35.4256214Z"
+      }
+    },
+    {
+      "name": "임연우",
+      "selfResponses": [
+        4,
+        3,
+        3,
+        3,
+        1,
+        4,
+        5,
+        5,
+        5,
+        5
+      ],
+      "selfAverage": 3.8,
+      "selfDomainMeans": [
+        3.3333333333333335,
+        3.25,
+        5.0
+      ],
+      "total": 68,
+      "unitScores": {
+        "디자인 구성요소 설계": 7,
+        "구현": 1,
+        "구현 응용": 5,
+        "수정 보완": 7,
+        "디자인 구성요소 제작": 3,
+        "서비스ㆍ경험디자인 관찰조사": 7,
+        "프로토타입 기초데이터 수집 및 스케치": 7,
+        "시각디자인 리서치 조사": 7,
+        "시각디자인 리서치 분석": 1,
+        "서비스ㆍ경험디자인 시나리오 개발": 3,
+        "프로토타입 제작 및 사용성 테스트": 4,
+        "시안 디자인 개발 심화": 6,
+        "디지털디자인 사후관리": 7,
+        "스마트문화앱 UI 디자인": 3
+      },
+      "incorrectQuestions": [
+        5,
+        6,
+        8,
+        15,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        34,
+        42
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1121",
+        "observedAt": "2026-11-13T00:52:30.7330913Z"
+      }
+    },
+    {
+      "name": "김정은",
+      "selfResponses": [
+        3,
+        3,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5
+      ],
+      "selfAverage": 3.2,
+      "selfDomainMeans": [
+        3.0,
+        2.5,
+        4.333333333333333
+      ],
+      "total": 66,
+      "unitScores": {
+        "디자인 구성요소 설계": 3,
+        "구현": 1,
+        "구현 응용": 4,
+        "수정 보완": 3,
+        "디자인 구성요소 제작": 3,
+        "서비스ㆍ경험디자인 관찰조사": 7,
+        "프로토타입 기초데이터 수집 및 스케치": 7,
+        "시각디자인 리서치 조사": 7,
+        "시각디자인 리서치 분석": 1,
+        "서비스ㆍ경험디자인 시나리오 개발": 8,
+        "프로토타입 제작 및 사용성 테스트": 7,
+        "시안 디자인 개발 심화": 7,
+        "디지털디자인 사후관리": 3,
+        "스마트문화앱 UI 디자인": 5
+      },
+      "incorrectQuestions": [
+        2,
+        5,
+        6,
+        7,
+        8,
+        12,
+        15,
+        26,
+        27,
+        39,
+        41
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1115",
+        "observedAt": "2026-11-13T00:53:51.0698855Z"
+      }
+    },
+    {
+      "name": "허지민",
+      "selfResponses": [
+        3,
+        3,
+        4,
+        1,
+        1,
+        4,
+        5,
+        5,
+        5,
+        5
+      ],
+      "selfAverage": 3.6,
+      "selfDomainMeans": [
+        3.3333333333333335,
+        2.75,
+        5.0
+      ],
+      "total": 60,
+      "unitScores": {
+        "디자인 구성요소 설계": 7,
+        "구현": 4,
+        "구현 응용": 0,
+        "수정 보완": 6,
+        "디자인 구성요소 제작": 6,
+        "서비스ㆍ경험디자인 관찰조사": 7,
+        "프로토타입 기초데이터 수집 및 스케치": 6,
+        "시각디자인 리서치 조사": 7,
+        "시각디자인 리서치 분석": 0,
+        "서비스ㆍ경험디자인 시나리오 개발": 1,
+        "프로토타입 제작 및 사용성 테스트": 6,
+        "시안 디자인 개발 심화": 6,
+        "디지털디자인 사후관리": 3,
+        "스마트문화앱 UI 디자인": 1
+      },
+      "incorrectQuestions": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        19,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        34,
+        39,
+        41,
+        42
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1122",
+        "observedAt": "2026-11-13T00:53:58.7546125Z"
+      }
+    },
+    {
+      "name": "최지혜",
+      "selfResponses": [
+        4,
+        4,
+        4,
+        3,
+        1,
+        5,
+        5,
+        5,
+        4,
+        5
+      ],
+      "selfAverage": 4.0,
+      "selfDomainMeans": [
+        4.0,
+        3.5,
+        4.666666666666667
+      ],
+      "total": 46,
+      "unitScores": {
+        "디자인 구성요소 설계": 3,
+        "구현": 3,
+        "구현 응용": 2,
+        "수정 보완": 1,
+        "디자인 구성요소 제작": 3,
+        "서비스ㆍ경험디자인 관찰조사": 2,
+        "프로토타입 기초데이터 수집 및 스케치": 7,
+        "시각디자인 리서치 조사": 2,
+        "시각디자인 리서치 분석": 0,
+        "서비스ㆍ경험디자인 시나리오 개발": 7,
+        "프로토타입 제작 및 사용성 테스트": 6,
+        "시안 디자인 개발 심화": 7,
+        "디지털디자인 사후관리": 2,
+        "스마트문화앱 UI 디자인": 1
+      },
+      "incorrectQuestions": [
+        2,
+        4,
+        6,
+        7,
+        9,
+        11,
+        12,
+        15,
+        16,
+        18,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        31,
+        37,
+        39,
+        41,
+        42
+      ],
+      "source": {
+        "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/basic/pc/basic_answer.php?Pcode=300002&Sid=sbsartdj1124",
+        "observedAt": "2026-11-13T00:54:06.8716208Z"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "unit": "디자인 구성요소 설계",
+      "question": "매체를 만들기 전 주요 장면(스토리, 이야기 등)을 시각적 형태로 정리해 놓은 문서는?",
+      "difficulty": "하",
+      "answer": 3,
+      "points": 1,
+      "incorrectStudents": [
+        "박주연"
+      ],
+      "correctCount": 10
+    },
+    {
+      "number": 2,
+      "unit": "디자인 구성요소 설계",
+      "question": "각 페이지의 전체적 레이아웃을 간단한 선(Wire)으로 단순하게 표현한 스케치를 의미하는 것은?",
+      "difficulty": "상",
+      "answer": 2,
+      "points": 4,
+      "incorrectStudents": [
+        "김정은",
+        "최지혜"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 3,
+      "unit": "디자인 구성요소 설계",
+      "question": "경향이나 유행을 뜻하는 것으로 시간의 흐름 또는 기술의 발달로 변화하고 있는 것을 뜻하는 말은? (집단의 취향)",
+      "difficulty": "중",
+      "answer": 1,
+      "points": 2,
+      "incorrectStudents": [],
+      "correctCount": 11
+    },
+    {
+      "number": 4,
+      "unit": "구현",
+      "question": "다양한 매체를 가지고 인터넷과 컴퓨터 정보통신을 가지고 제작하는 제작물 또는 창작물을 뜻하는 말은?",
+      "difficulty": "하",
+      "answer": 4,
+      "points": 1,
+      "incorrectStudents": [
+        "강민경",
+        "최지혜"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 5,
+      "unit": "구현",
+      "question": "멀티미디어의 특성으로 맞지 않은 것은?",
+      "difficulty": "중",
+      "answer": 3,
+      "points": 3,
+      "incorrectStudents": [
+        "임연우",
+        "김정은"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 6,
+      "unit": "구현",
+      "question": "객체 지향 언어의 특성으로 맞지 않은 것은?",
+      "difficulty": "상",
+      "answer": 1,
+      "points": 4,
+      "incorrectStudents": [
+        "이은경",
+        "이은수",
+        "박주연",
+        "이지희",
+        "박찬미",
+        "강민경",
+        "임연우",
+        "김정은",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 1
+    },
+    {
+      "number": 7,
+      "unit": "구현 응용",
+      "question": "웹사이트의 모습을 기술하기 위한 마크업 언어로 적절한 것은 ?",
+      "difficulty": "하",
+      "answer": 1,
+      "points": 1,
+      "incorrectStudents": [
+        "이지희",
+        "김정은",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 7
+    },
+    {
+      "number": 8,
+      "unit": "구현 응용",
+      "question": "디자인 설계 시 정보의 흐름, 순서, 단계 등을 시각화 하여 표현하는 도구를 뜻하는 말은?",
+      "difficulty": "중",
+      "answer": 2,
+      "points": 2,
+      "incorrectStudents": [
+        "이은수",
+        "박주연",
+        "이지희",
+        "김지선",
+        "박찬미",
+        "강민경",
+        "임연우",
+        "김정은",
+        "허지민"
+      ],
+      "correctCount": 2
+    },
+    {
+      "number": 9,
+      "unit": "구현 응용",
+      "question": "웹사이트를 구현하기 위해 사용하는 언어로 적절하지 않는 것은?",
+      "difficulty": "상",
+      "answer": 4,
+      "points": 4,
+      "incorrectStudents": [
+        "박주연",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 8
+    },
+    {
+      "number": 10,
+      "unit": "수정 보완",
+      "question": "수정보완 작업의 우선순위에서 보기 중 가장 먼저 시행해야 하는 작업은?",
+      "difficulty": "하",
+      "answer": 2,
+      "points": 1,
+      "incorrectStudents": [
+        "허지민"
+      ],
+      "correctCount": 10
+    },
+    {
+      "number": 11,
+      "unit": "수정 보완",
+      "question": "두 가지 이상의 색상을 잘 어울리도록 배치하는 일을 뜻하는 말은?",
+      "difficulty": "중",
+      "answer": 4,
+      "points": 2,
+      "incorrectStudents": [
+        "이지희",
+        "강민경",
+        "최지혜"
+      ],
+      "correctCount": 8
+    },
+    {
+      "number": 12,
+      "unit": "수정 보완",
+      "question": "결함을 찾는 작업으로 제작된 산출물을 시험하고 논평하는 행동으로 맞는 것은?",
+      "difficulty": "상",
+      "answer": 2,
+      "points": 4,
+      "incorrectStudents": [
+        "김정은",
+        "최지혜"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 13,
+      "unit": "디자인 구성요소 제작",
+      "question": "색의 3요소로 맞지 않는 것은?",
+      "difficulty": "하",
+      "answer": 3,
+      "points": 1,
+      "incorrectStudents": [
+        "허지민"
+      ],
+      "correctCount": 10
+    },
+    {
+      "number": 14,
+      "unit": "디자인 구성요소 제작",
+      "question": "화면에 중심축을 세우고 그 축을 기준으로 심미적 요소들을 상하좌우로 동일한 형태나 무게감으로 배치하는 형식을 말하는 것은?",
+      "difficulty": "중",
+      "answer": 3,
+      "points": 2,
+      "incorrectStudents": [],
+      "correctCount": 11
+    },
+    {
+      "number": 15,
+      "unit": "디자인 구성요소 제작",
+      "question": "사용자가 제품이나 시스템을 이용하면서 얻게 되는 느낌이나 생각등 을 포함한 총체적 경험을 의미하는 것은?",
+      "difficulty": "상",
+      "answer": 1,
+      "points": 4,
+      "incorrectStudents": [
+        "김지선",
+        "박찬미",
+        "강민경",
+        "임연우",
+        "김정은",
+        "최지혜"
+      ],
+      "correctCount": 5
+    },
+    {
+      "number": 16,
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "question": "사용자 유형 분류에서 물리적 특성과 다른 것은?",
+      "difficulty": "하",
+      "answer": 3,
+      "points": 1,
+      "incorrectStudents": [
+        "이은수",
+        "김지선",
+        "최지혜"
+      ],
+      "correctCount": 8
+    },
+    {
+      "number": 17,
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "question": "사용자 유형 분류에서 심리적 특성과 다른 것은?",
+      "difficulty": "중",
+      "answer": 4,
+      "points": 2,
+      "incorrectStudents": [],
+      "correctCount": 11
+    },
+    {
+      "number": 18,
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "question": "기존의 출판된 자료를 바탕으로 정보를 바탕으로 정보를 수집하는 방법은?",
+      "difficulty": "상",
+      "answer": 2,
+      "points": 4,
+      "incorrectStudents": [
+        "최지혜"
+      ],
+      "correctCount": 10
+    },
+    {
+      "number": 19,
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "question": "특정한 목적을 달성하기 위해서 조직적으로 수행되는 일련의 작업을 뜻하는 것은?",
+      "difficulty": "하",
+      "answer": 2,
+      "points": 1,
+      "incorrectStudents": [
+        "김지선",
+        "허지민"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 20,
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "question": "디지털 디자인의 기초 데이터에 해당 하지 않는 것은?",
+      "difficulty": "중",
+      "answer": 3,
+      "points": 2,
+      "incorrectStudents": [
+        "이은수",
+        "이지희",
+        "김지선",
+        "박찬미"
+      ],
+      "correctCount": 7
+    },
+    {
+      "number": 21,
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "question": "특정한 주제 또는 문제에 대해서 참여자 모두가 사전 조율 없이 그대로 내놓는 아이디어 발상법은?",
+      "difficulty": "상",
+      "answer": 1,
+      "points": 4,
+      "incorrectStudents": [],
+      "correctCount": 11
+    },
+    {
+      "number": 22,
+      "unit": "시각디자인 리서치 조사",
+      "question": "사용자의 니즈를 만족하는 사용자의 경험, 실험, 사용성 등을 조사하는 방법은?",
+      "difficulty": "하",
+      "answer": 2,
+      "points": 1,
+      "incorrectStudents": [
+        "최지혜"
+      ],
+      "correctCount": 10
+    },
+    {
+      "number": 23,
+      "unit": "시각디자인 리서치 조사",
+      "question": "사용자 조사의 종류와 다른 것은?",
+      "difficulty": "중",
+      "answer": 4,
+      "points": 2,
+      "incorrectStudents": [
+        "김지선",
+        "강민경"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 24,
+      "unit": "시각디자인 리서치 조사",
+      "question": "사용자 관찰 조사 중 연결이 잘못 되어 있는 것은?",
+      "difficulty": "상",
+      "answer": 3,
+      "points": 4,
+      "incorrectStudents": [
+        "이은경",
+        "최지혜"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 25,
+      "unit": "시각디자인 리서치 분석",
+      "question": "포지셔닝 중에 여러 이미지를 비교하여 제품 특성별 시각화 하는 방식은?",
+      "difficulty": "하",
+      "answer": 1,
+      "points": 1,
+      "incorrectStudents": [
+        "이은수",
+        "박주연",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 7
+    },
+    {
+      "number": 26,
+      "unit": "시각디자인 리서치 분석",
+      "question": "브랜드와 경쟁 브랜드에 대한 소비자의 인식을 2차원이나 3차원 그래프로 표시 정리하는 방식은?",
+      "difficulty": "중",
+      "answer": 3,
+      "points": 2,
+      "incorrectStudents": [
+        "이은수",
+        "이지희",
+        "김지선",
+        "강민경",
+        "임연우",
+        "김정은",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 3
+    },
+    {
+      "number": 27,
+      "unit": "시각디자인 리서치 분석",
+      "question": "시장 세분화 조사는 인구 통계학적 변수와 지리적 변수를 사용한다. 다음에 인구 통계학적 변수가 아닌것은?",
+      "difficulty": "상",
+      "answer": 4,
+      "points": 4,
+      "incorrectStudents": [
+        "임연우",
+        "김정은",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 7
+    },
+    {
+      "number": 28,
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "question": "경험 디자인에서 어떤 서비스나 제품 사이트등을 사용하는 다양한 사용자들의 유형을 대표하는 가상의 캐릭터를 뜻하는 말은?",
+      "difficulty": "하",
+      "answer": 3,
+      "points": 1,
+      "incorrectStudents": [
+        "이은경",
+        "박찬미",
+        "임연우",
+        "최지혜"
+      ],
+      "correctCount": 7
+    },
+    {
+      "number": 29,
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "question": "사용자가 제품이나 서비스를 통해 경험할 수 있는 구체적인 행동의 연속을 기술한 이야기는 무엇인가?",
+      "difficulty": "중",
+      "answer": 2,
+      "points": 3,
+      "incorrectStudents": [
+        "이지희",
+        "박찬미",
+        "허지민"
+      ],
+      "correctCount": 8
+    },
+    {
+      "number": 30,
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "question": "사용자 시나리오를 구성할 때 필수적으로 고려해야 하는 요소는 무엇인가?",
+      "difficulty": "상",
+      "answer": 3,
+      "points": 4,
+      "incorrectStudents": [
+        "임연우",
+        "허지민"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 31,
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "question": "사용자 인터페이스 디자인 과정에서 실제 제품이나 서비스의 초기 버전을 만들어 내부 검토나 사용자 테스트에 사용하는 것은 무엇인가?",
+      "difficulty": "하",
+      "answer": 4,
+      "points": 1,
+      "incorrectStudents": [
+        "이은수",
+        "김지선",
+        "강민경",
+        "임연우",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 5
+    },
+    {
+      "number": 32,
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "question": "사용자가 애플리케이션 또는 웹사이트를 사용할 때 직접 상호작용하는 그래픽 요소들의 집합을 무엇이라고 하는가?",
+      "difficulty": "중",
+      "answer": 2,
+      "points": 2,
+      "incorrectStudents": [
+        "이지희",
+        "임연우"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 33,
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "question": "사이트나 앱의 디자인과 기능이 실제 사용자의 요구와 얼마나 잘 맞는지 평가하기 위해 사용하는 방법은 무엇인가?",
+      "difficulty": "상",
+      "answer": 4,
+      "points": 4,
+      "incorrectStudents": [],
+      "correctCount": 11
+    },
+    {
+      "number": 34,
+      "unit": "시안 디자인 개발 심화",
+      "question": "시안 디자인 개발 심화 과정에서 복잡한 정보를 구조화하고 시각적으로 표현하는 데 사용되는 그래픽 도구는 무엇인가?",
+      "difficulty": "하",
+      "answer": 4,
+      "points": 1,
+      "incorrectStudents": [
+        "박주연",
+        "이지희",
+        "박찬미",
+        "임연우",
+        "허지민"
+      ],
+      "correctCount": 6
+    },
+    {
+      "number": 35,
+      "unit": "시안 디자인 개발 심화",
+      "question": "디자인 초안을 빠르게 그리는 초기 단계에서 디자이너들이 사용하는 간단한 그림은 무엇인가?",
+      "difficulty": "중",
+      "answer": 1,
+      "points": 2,
+      "incorrectStudents": [],
+      "correctCount": 11
+    },
+    {
+      "number": 36,
+      "unit": "시안 디자인 개발 심화",
+      "question": "브랜드 아이덴티티를 구성하는 요소 중, 브랜드의 핵심 가치와 메시지를 시각적으로 전달하는 데 사용되는 기호나 로고를 무엇이라고 하는가?",
+      "difficulty": "상",
+      "answer": 4,
+      "points": 4,
+      "incorrectStudents": [],
+      "correctCount": 11
+    },
+    {
+      "number": 37,
+      "unit": "디지털디자인 사후관리",
+      "question": "프로젝트 완료 후 오류 발생을 방지하기 위해 콘텐츠, 표준, 기능, 보안 등을 지속적이고 정기적으로 점검하는 활동을 무엇이라고 하는가?",
+      "difficulty": "하",
+      "answer": 3,
+      "points": 1,
+      "incorrectStudents": [
+        "강민경",
+        "최지혜"
+      ],
+      "correctCount": 9
+    },
+    {
+      "number": 38,
+      "unit": "디지털디자인 사후관리",
+      "question": "웹 사이트 구축 계약 시 기존 페이지의 텍스트 수정이나 이미지 교체 등 원활한 운영을 돕는 '유지 보수' 범위를 초과하여, 신규 페이지나 팝업, 배너 등을 새롭게 제작하는 업무는 무엇인가?",
+      "difficulty": "중",
+      "answer": 2,
+      "points": 2,
+      "incorrectStudents": [
+        "이은수"
+      ],
+      "correctCount": 10
+    },
+    {
+      "number": 39,
+      "unit": "디지털디자인 사후관리",
+      "question": "데이터 백업 방식 중 하나로, 매일 데이터 전체를 백업하는 대신 마지막 백업 이후 변경된 데이터만 선택적으로 백업하여 시간과 저장 공간을 효율적으로 관리하는 방식은?",
+      "difficulty": "상",
+      "answer": 2,
+      "points": 4,
+      "incorrectStudents": [
+        "박주연",
+        "김지선",
+        "박찬미",
+        "김정은",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 5
+    },
+    {
+      "number": 40,
+      "unit": "스마트문화앱 UI 디자인",
+      "question": "컴퓨터 시스템과 사용자 간의 상호작용을 그래픽 요소를 통해 이루어지게 하는 인터페이스는 무엇인가?",
+      "difficulty": "하",
+      "answer": 1,
+      "points": 1,
+      "incorrectStudents": [],
+      "correctCount": 11
+    },
+    {
+      "number": 41,
+      "unit": "스마트문화앱 UI 디자인",
+      "question": "사용자 인터페이스(UI) 디자인에서 정보와 컨텐츠를 시각적으로 구조화하고 조직하여 사용자가 정보를 쉽게 이해하고 탐색할 수 있도록 도와주는 것은 무엇인가?",
+      "difficulty": "중",
+      "answer": 4,
+      "points": 2,
+      "incorrectStudents": [
+        "이은경",
+        "김지선",
+        "김정은",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 6
+    },
+    {
+      "number": 42,
+      "unit": "스마트문화앱 UI 디자인",
+      "question": "스마트 앱의 사용자 인터페이스(UI) 디자인에서 사용자가 앱을 쉽게 사용할 수 있도록 도와주는 터치 기반의 입력 방식은 무엇인가?",
+      "difficulty": "상",
+      "answer": 1,
+      "points": 4,
+      "incorrectStudents": [
+        "이은경",
+        "강민경",
+        "임연우",
+        "허지민",
+        "최지혜"
+      ],
+      "correctCount": 6
+    }
+  ],
+  "unitSummary": [
+    {
+      "unit": "디자인 구성요소 설계",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 68,
+      "mean": 6.18,
+      "rate": 88.31
+    },
+    {
+      "unit": "구현",
+      "maxPoints": 8,
+      "questionCount": 3,
+      "total": 40,
+      "mean": 3.64,
+      "rate": 45.45
+    },
+    {
+      "unit": "구현 응용",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 43,
+      "mean": 3.91,
+      "rate": 55.84
+    },
+    {
+      "unit": "수정 보완",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 62,
+      "mean": 5.64,
+      "rate": 80.52
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 52,
+      "mean": 4.73,
+      "rate": 67.53
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 70,
+      "mean": 6.36,
+      "rate": 90.91
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 67,
+      "mean": 6.09,
+      "rate": 87.01
+    },
+    {
+      "unit": "시각디자인 리서치 조사",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 64,
+      "mean": 5.82,
+      "rate": 83.12
+    },
+    {
+      "unit": "시각디자인 리서치 분석",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 41,
+      "mean": 3.73,
+      "rate": 53.25
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "maxPoints": 8,
+      "questionCount": 3,
+      "total": 67,
+      "mean": 6.09,
+      "rate": 76.14
+    },
+    {
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 67,
+      "mean": 6.09,
+      "rate": 87.01
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 72,
+      "mean": 6.55,
+      "rate": 93.51
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 49,
+      "mean": 4.45,
+      "rate": 63.64
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "maxPoints": 7,
+      "questionCount": 3,
+      "total": 47,
+      "mean": 4.27,
+      "rate": 61.04
+    }
+  ],
+  "groups": {
+    "A": [
+      "이은경",
+      "이은수",
+      "박주연",
+      "이지희"
+    ],
+    "B": [
+      "김지선",
+      "박찬미",
+      "강민경",
+      "임연우",
+      "김정은",
+      "허지민"
+    ],
+    "C": [
+      "최지혜"
+    ]
+  },
+  "selfDomainMeans": [
+    3.36,
+    3.02,
+    4.73
+  ],
+  "selfQuestionMeans": [
+    3.45,
+    3.27,
+    3.36,
+    1.73,
+    1.55,
+    4.18,
+    4.64,
+    4.82,
+    4.55,
+    4.82
+  ],
+  "selfOverallMean": 3.64,
+  "unassessedUnits": [
+    "(비NCS 이론)재량교과",
+    "(비NCS 실기)AI 기획과 발상",
+    "(비NCS 실기)취업포트폴리오 제작"
+  ],
+  "verification": {
+    "students": 11,
+    "questions": 42,
+    "maxPoints": 100,
+    "allTotalsMatched": true,
+    "allUnitScoresMatched": true,
+    "selfAggregationExplained": true
+  }
+}
