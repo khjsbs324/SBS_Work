@@ -1,0 +1,17 @@
+{
+  "unit": "스마트문화앱 UI 디자인",
+  "lcode": 14,
+  "request": "ㅇㅇ 전부 수정해",
+  "checked_at": "2026-11-13T01:03:18.111Z",
+  "analysis_sha256": "30795d72842944b462b984641f122a597558ca5e5eb5715e9f479f23fc2c5449",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "analysis_exact": true,
+  "detail_text_exact": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=14",
+  "backup": "회의록_수정전.json",
+  "proposal": "수정안.json",
+  "readback": "저장확인.json",
+  "screenshot": "수정후화면.png",
+  "visual_review": "pending"
+}

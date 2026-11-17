@@ -1,0 +1,17 @@
+{
+  "unit": "서비스ㆍ경험디자인 시나리오 개발",
+  "lcode": 12,
+  "request": "ㅇㅇ 전부 수정해",
+  "checked_at": "2026-11-13T01:03:12.936Z",
+  "analysis_sha256": "2a726cf8c60d64f7fe67c9f1e70c37fb0f26ee5fa0e986dac619b2ec843e52e6",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "analysis_exact": true,
+  "detail_text_exact": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=12",
+  "backup": "회의록_수정전.json",
+  "proposal": "수정안.json",
+  "readback": "저장확인.json",
+  "screenshot": "수정후화면.png",
+  "visual_review": "pending"
+}

@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "group": "A",
+  "sections": 7,
+  "images": 1,
+  "sources": 2,
+  "files": [
+    {
+      "file": "학습자료.pdf",
+      "bytes": 128619,
+      "sha256": "fe942a33b15b56a789b42ae923fdd39487ee19d49093658ec76272e2dd068d6f"
+    },
+    {
+      "file": "실습양식.docx",
+      "bytes": 4277,
+      "sha256": "7e63a3a69f9d48740c1e5c5869aac3d23266a262a8bb0e0b6bd535e22bf3cc19"
+    },
+    {
+      "file": "읽는순서.txt",
+      "bytes": 583,
+      "sha256": "0ca89406ef56cf80f0919fe1f33c759bde09ab888b90fe6509aca2b319593c8c"
+    },
+    {
+      "file": "핵심예시.png",
+      "bytes": 24002,
+      "sha256": "1e118eca46c60c0335a90d287cd86fd33d034b6cef97a882f49d684e5b6cdccb"
+    },
+    {
+      "file": "빈칸양식/01_실습.csv",
+      "bytes": 246,
+      "sha256": "5707f30330645226c86c118068dc008678018db1896f8527d45ed527e61736d6"
+    },
+    {
+      "file": "빈칸양식/02_실습.csv",
+      "bytes": 277,
+      "sha256": "8d7d44a150e938169f31671d3a0e045fb8f7c346c823b35c013f5f02fb543980"
+    },
+    {
+      "file": "빈칸양식/03_실습.csv",
+      "bytes": 245,
+      "sha256": "676d13ce343c5b1e128058fc5b02464602e74c67f22f27c80512f1195f39f6d9"
+    }
+  ],
+  "zip_sha256": "03816f6f176bc5c4786912bd9d0162e00759a0ac99dfe2e7b7ad24be0a4cd5fb",
+  "manual_reviews_required": [
+    "PDF page count/clipping",
+    "visual quality",
+    "source content",
+    "privacy",
+    "live LMS readback"
+  ]
+}

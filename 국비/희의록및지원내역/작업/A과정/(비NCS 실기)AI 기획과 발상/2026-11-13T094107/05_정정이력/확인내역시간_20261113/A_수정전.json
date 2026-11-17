@@ -1,0 +1,176 @@
+{
+  "request": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시.",
+  "plan": {
+    "post_id": "1115",
+    "unit": "(비NCS 실기)AI 기획과 발상",
+    "group": "A",
+    "run": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\(비NCS 실기)AI 기획과 발상\\2026-11-13T094107",
+    "date": "2026-11-06",
+    "title": "[능력단위평가_지원내역] (비NCS 실기)AI 기획과 발상 A그룹 지원자료",
+    "set_number": 117,
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "dropout": false,
+        "time": "18:16:28"
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "dropout": false,
+        "time": "15:59:36"
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "dropout": false,
+        "time": "18:20:59"
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "dropout": false,
+        "time": "18:30:02"
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "dropout": false,
+        "time": "15:30:57"
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "dropout": false,
+        "time": "15:34:54"
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "dropout": false,
+        "time": "17:27:46"
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "dropout": false,
+        "time": "15:41:16"
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "dropout": false,
+        "time": "14:55:29"
+      }
+    ],
+    "unused_times": [
+      "15:26:14",
+      "16:38:56"
+    ],
+    "source": "확인시간 120세트.txt",
+    "scope": "재학생 9명. 수강포기자 제외. 세트 내부는 화면 표시 순서.",
+    "authorization": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시."
+  },
+  "before": {
+    "post_id": "1115",
+    "checked_at": "2026-11-13T01:10:10.504Z",
+    "detail": {
+      "header": [
+        "제목\t[능력단위평가_지원내역] (비NCS 실기)AI 기획과 발상 A그룹 지원자료",
+        "작성자\t김혜지\t작성일\t2026-11-06"
+      ],
+      "content_sha256": "b6f6008d1bf8b15f98758dece805e5060783cd8d4466d3d25f19292d62f91583",
+      "attachment": "./download.php?Pcode=300002&file=1794531549_bd53961e.zip"
+    },
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "dropout": true
+      },
+      {
+        "dropout": true
+      }
+    ]
+  }
+}

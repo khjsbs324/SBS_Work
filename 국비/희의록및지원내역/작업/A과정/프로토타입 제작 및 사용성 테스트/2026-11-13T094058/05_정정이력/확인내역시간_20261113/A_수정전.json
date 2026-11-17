@@ -1,0 +1,176 @@
+{
+  "request": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시.",
+  "plan": {
+    "post_id": "1112",
+    "unit": "프로토타입 제작 및 사용성 테스트",
+    "group": "A",
+    "run": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\프로토타입 제작 및 사용성 테스트\\2026-11-13T094058",
+    "date": "2026-11-04",
+    "title": "[능력단위평가_지원내역] 프로토타입 제작 및 사용성 테스트 A그룹 지원자료",
+    "set_number": 120,
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "dropout": false,
+        "time": "14:50:21"
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "dropout": false,
+        "time": "18:48:09"
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "dropout": false,
+        "time": "17:55:14"
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "dropout": false,
+        "time": "18:32:20"
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "dropout": false,
+        "time": "18:28:29"
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "dropout": false,
+        "time": "16:51:35"
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "dropout": false,
+        "time": "18:26:44"
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "dropout": false,
+        "time": "18:58:40"
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "dropout": false,
+        "time": "17:05:27"
+      }
+    ],
+    "unused_times": [
+      "15:17:33",
+      "16:02:53"
+    ],
+    "source": "확인시간 120세트.txt",
+    "scope": "재학생 9명. 수강포기자 제외. 세트 내부는 화면 표시 순서.",
+    "authorization": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시."
+  },
+  "before": {
+    "post_id": "1112",
+    "checked_at": "2026-11-13T01:10:08.847Z",
+    "detail": {
+      "header": [
+        "제목\t[능력단위평가_지원내역] 프로토타입 제작 및 사용성 테스트 A그룹 지원자료",
+        "작성자\t김혜지\t작성일\t2026-11-04"
+      ],
+      "content_sha256": "6e10ee201ff24f5b808f2e1d86394fc716161c79379ffa56bd25410fe8185e15",
+      "attachment": "./download.php?Pcode=300002&file=1794531395_eb924476.zip"
+    },
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "date": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "dropout": false
+      },
+      {
+        "dropout": true
+      },
+      {
+        "dropout": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "lcode": "16",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=16",
+  "checked_at": "2026-11-13T00:31:42.767Z",
+  "analysis_visible": true,
+  "improvement_visible": true,
+  "date_visible": true,
+  "screenshot": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/(비NCS 실기)AI 기획과 발상/2026-11-13T092904/04_등록검증/상세화면.png",
+  "tail": "과 읽기 어려운 부분을 적게 하여 의도와 전달 결과를 비교하도록 함.\n\n5. 후속 지도 :\n‘(비NCS 실기)취업포트폴리오 제작’에서 이번에 정리한 브랜드 문장과 시각 규칙을 실제 프로젝트 소개에 적용하도록 함. 프로토타입의 문제 발견·수정 전후·재확인 결과를 본인의 작업 사례로 활용하고, 첫 화면에서 제시한 강점이 프로젝트 내용에서도 드러나는지 확인하기로 함. 공개 전에는 실제 이름·교육 및 자격 상태·개인정보 공개 범위·이미지와 서체 출처를 최종본에서 다시 확인하며, 미결정 내용은 확정된 사실처럼 제시하지 않도록 지도하기로 함.",
+  "layout_reviewed": true,
+  "preservation": {
+    "checks": [
+      {
+        "lcode": "15",
+        "scores_and_feedback_unchanged": true
+      },
+      {
+        "lcode": "16",
+        "scores_and_feedback_unchanged": true
+      }
+    ],
+    "previous_meeting_unchanged": true,
+    "checked_at": "2026-11-13T00:32:28.161Z"
+  }
+}

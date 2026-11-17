@@ -1,0 +1,51 @@
+{
+  "course_id": "A",
+  "unit": "(비NCS 실기)AI 기획과 발상",
+  "lcode": "16",
+  "checked_at": "2026-11-13T00:25:25.525Z",
+  "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=16",
+  "unit_elements": [
+    "자기분석과 브랜드 방향 설정",
+    "AI 활용과 대안 선택·수정",
+    "최종 화면 적용과 정보·출처 검토"
+  ],
+  "element_basis": "실제 평가 피드백을 묶은 분석용 평가영역. NCS 공식 능력단위요소가 아님.",
+  "students": [
+    {
+      "id": "sbsartdj1114",
+      "name": "강민경"
+    },
+    {
+      "id": "sbsartdj1121",
+      "name": "임연우"
+    },
+    {
+      "id": "sbsartdj1120",
+      "name": "이지희"
+    },
+    {
+      "id": "sbsartdj1123",
+      "name": "이은수"
+    },
+    {
+      "id": "sbsartdj1119",
+      "name": "이은경"
+    },
+    {
+      "id": "sbsartdj1122",
+      "name": "허지민"
+    },
+    {
+      "id": "sbsartdj1124",
+      "name": "최지혜"
+    },
+    {
+      "id": "sbsartdj1117",
+      "name": "박주연"
+    },
+    {
+      "id": "sbsartdj1118",
+      "name": "박찬미"
+    }
+  ]
+}

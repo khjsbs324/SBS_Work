@@ -1,0 +1,16 @@
+{
+  "request": "ㅇㅇ 전부 수정해",
+  "attendees_source": "사용자가 최초 요청에서 제공한 참석자 3명",
+  "reason": "사용자가 승인한 회의록 상단 공통 문구 보충 계획 반영",
+  "checked_at": "2026-11-13T00:58:36.962Z",
+  "original_analysis_sha256": "00d6eab4b3f284ede34aae463252c41a3f19a01ecb351a951c543af16b6eb472",
+  "proposed_analysis_sha256": "3c1482088461bec1e8c736e0dd096d1120edadedef654a1e976ae4eb8ed19537",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "operations": [
+    {
+      "before": "회의 참석자 : 별도 확인 필요(당시 회의 개최·참석 기록은 확인되지 않음)",
+      "after": "회의 참석자 : 김봉섭 부원장, 김혜지 강사, 김지수 사원"
+    }
+  ]
+}

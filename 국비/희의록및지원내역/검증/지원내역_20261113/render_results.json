@@ -1,0 +1,98 @@
+[
+  {
+    "lcode": "15",
+    "group": "A",
+    "kind": "guide",
+    "pages": 7,
+    "characters": [
+      506,
+      460,
+      587,
+      532,
+      533,
+      466,
+      334
+    ],
+    "contact": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\프로토타입 제작 및 사용성 테스트\\2026-11-13T094058\\04_등록검증\\A_렌더\\guide-contact.png"
+  },
+  {
+    "lcode": "15",
+    "group": "B",
+    "kind": "guide",
+    "pages": 7,
+    "characters": [
+      468,
+      422,
+      514,
+      544,
+      525,
+      436,
+      334
+    ],
+    "contact": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\프로토타입 제작 및 사용성 테스트\\2026-11-13T094058\\04_등록검증\\B_렌더\\guide-contact.png"
+  },
+  {
+    "lcode": "15",
+    "group": "C",
+    "kind": "guide",
+    "pages": 7,
+    "characters": [
+      502,
+      413,
+      516,
+      520,
+      506,
+      425,
+      334
+    ],
+    "contact": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\프로토타입 제작 및 사용성 테스트\\2026-11-13T094058\\04_등록검증\\C_렌더\\guide-contact.png"
+  },
+  {
+    "lcode": "16",
+    "group": "A",
+    "kind": "guide",
+    "pages": 7,
+    "characters": [
+      444,
+      443,
+      528,
+      521,
+      513,
+      426,
+      450
+    ],
+    "contact": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\(비NCS 실기)AI 기획과 발상\\2026-11-13T094107\\04_등록검증\\A_렌더\\guide-contact.png"
+  },
+  {
+    "lcode": "16",
+    "group": "B",
+    "kind": "guide",
+    "pages": 7,
+    "characters": [
+      391,
+      446,
+      522,
+      475,
+      506,
+      458,
+      450
+    ],
+    "contact": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\(비NCS 실기)AI 기획과 발상\\2026-11-13T094107\\04_등록검증\\B_렌더\\guide-contact.png"
+  },
+  {
+    "lcode": "16",
+    "group": "C",
+    "kind": "guide",
+    "pages": 7,
+    "characters": [
+      400,
+      481,
+      424,
+      477,
+      496,
+      463,
+      450
+    ],
+    "contact": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\(비NCS 실기)AI 기획과 발상\\2026-11-13T094107\\04_등록검증\\C_렌더\\guide-contact.png"
+  }
+]

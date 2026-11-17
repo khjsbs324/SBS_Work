@@ -1,0 +1,27 @@
+{
+  "request": "ㅇㅇ 전부 수정해",
+  "attendees_source": "사용자가 최초 요청에서 제공한 참석자 3명",
+  "reason": "사용자가 승인한 회의록 상단 공통 문구 보충 계획 반영",
+  "checked_at": "2026-11-13T00:58:36.962Z",
+  "original_analysis_sha256": "bb52ee4d38049c2420911771d5d4b9934a68a30d29a1894ab9dea249cda5e795",
+  "proposed_analysis_sha256": "333ef071cfeb31010f8bbc3450d63f85a66177ea811880076acfaef8b67761f2",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "operations": [
+    {
+      "before": "*평가결과 분석내용\n\n",
+      "after": ""
+    },
+    {
+      "before": "1. 주제",
+      "after": "1. 세부 분석 주제"
+    },
+    {
+      "before": "\n목적 :",
+      "after": "\n세부 지도 목적 :"
+    },
+    {
+      "prepend": "*평가결과 분석내용\n회의 참석자 : 김봉섭 부원장, 김혜지 강사, 김지수 사원\n주제 : '디지털디자인 사후관리' 평가결과에 대한 분석 및 의견\n목적 : '디지털디자인 사후관리' 평가결과에서 부족한 부분과 잘 되는 부분을 확인하여 앞으로 수업하는 데 활용하기 위함.\n\n"
+    }
+  ]
+}

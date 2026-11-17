@@ -1,0 +1,17 @@
+{
+  "unit": "프로토타입 제작 및 사용성 테스트",
+  "lcode": 15,
+  "request": "ㅇㅇ 전부 수정해",
+  "checked_at": "2026-11-13T01:03:26.316Z",
+  "analysis_sha256": "017471a30e8b8c01d691084a33aa139b474eabbdaa1477dcb017f282b5370040",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "analysis_exact": true,
+  "detail_text_exact": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=15",
+  "backup": "회의록_수정전.json",
+  "proposal": "수정안.json",
+  "readback": "저장확인.json",
+  "screenshot": "수정후화면.png",
+  "visual_review": "pending"
+}

@@ -1,0 +1,17 @@
+{
+  "unit": "디자인 구성요소 제작",
+  "lcode": 9,
+  "request": "ㅇㅇ 전부 수정해",
+  "checked_at": "2026-11-13T01:02:36.989Z",
+  "analysis_sha256": "3dcd4ec79219b395e5923104fa2fbf9c5867ea0a74fcf8848857b5a9ca0b057c",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "analysis_exact": true,
+  "detail_text_exact": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=9",
+  "backup": "회의록_수정전.json",
+  "proposal": "수정안.json",
+  "readback": "저장확인.json",
+  "screenshot": "수정후화면.png",
+  "visual_review": "pending"
+}

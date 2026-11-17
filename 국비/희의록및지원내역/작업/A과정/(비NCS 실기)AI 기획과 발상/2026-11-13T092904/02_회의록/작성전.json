@@ -1,0 +1,49 @@
+{
+  "lcode": "16",
+  "tab": 5,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/write.php?Pcode=300002&Lcode=16",
+  "checked_at": "2026-11-13T00:24:50.926Z",
+  "text": "SBS아카데미 대전\n로그아웃\n김혜지\n정보수정\n비번변경\nPIN변경\n 훈련과정\n 공지사항\n\n고객센터\n\n카톡문의\n\n[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)\n처음으로\n개강일\t2026-05-20\t종강일\t2026-12-04\t강사\t김가경, 김혜지\n실시인원\t11\t수강인원\t9\t수강포기인원\t2\n집체훈련\n시간표\n훈련생\n사전평가\n오리엔테이션\n출석현황\n능력단위평가\n훈련생평가\n상담일지\n이의신청\n보충수업\n훈련일지\n교재관리\n과정회의록\n과정공지사항\n지원내역\n과제\n서식공유\n게시판생성\n게시판순서변경\n평가내역\n평가결과 분석회의록\n과정명\t[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A - 1회차\n교과목\t(비NCS 실기)AI 기획과 발상\n능력단위\t\n선택하세요\n구현\n구현 응용\n시각디자인 리서치 조사\n시각디자인 리서치 분석\n시안 디자인 개발 심화\n디자인 구성요소 설계\n수정 보완\n디자인 구성요소 제작\n디지털디자인 사후관리\n서비스ㆍ경험디자인 관찰조사\n서비스ㆍ경험디자인 시나리오 개발\n프로토타입 기초데이터 수집 및 스케치\n스마트문화앱 UI 디자인\n프로토타입 제작 및 사용성 테스트\n(비NCS 실기)AI 기획과 발상\n(비NCS 실기)취업포트폴리오 제작\n\n개강일\t2026-11-04\t종강일\t2026-11-05\n평가도구\t평가자체크리스트\n평가정보\n돌아가기\n구분\t본평가\t결석자평가\t재평가\t사전평가\t능력단위\n\n\n평가날짜\n\n평가시간\n\n커트라인\n\n패널티\n\n\t\n\n2026-11-05\n\n14:00~19:00\n\n60점\n\n0점\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t\n\n평가문제\n미등록\n\n(0/100)\n\n\t0\t86.22\n평가인원\t9\t0\t0\n평가결과분석회의록\n돌아가기\n회의일자\t\n\n평가결과 분석내용\t\n\n개선사항\t\n\n회의사진\t\n\n\n0B\n100MB\n등록하기",
+  "fields": [
+    {
+      "tag": "INPUT",
+      "name": "strMeetDate",
+      "type": "date",
+      "value": ""
+    },
+    {
+      "tag": "TEXTAREA",
+      "name": "strContents",
+      "type": "textarea",
+      "value": ""
+    },
+    {
+      "tag": "TEXTAREA",
+      "name": "strContents2",
+      "type": "textarea",
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "name": "UserFile1",
+      "type": "file",
+      "value": ""
+    }
+  ],
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "정보수정\n\t\t\t\t\t",
+      "onclick": null,
+      "type": "button",
+      "href": null
+    },
+    {
+      "tag": "BUTTON",
+      "text": "등록하기",
+      "onclick": null,
+      "type": "button",
+      "href": null
+    }
+  ]
+}

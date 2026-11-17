@@ -1,0 +1,193 @@
+{
+  "revision_id": "회의록상단보완_20261113T095836",
+  "status": "complete",
+  "completed_at": "2026-11-13T01:12:11.376Z",
+  "checked_units": 16,
+  "updated": 14,
+  "previously_compliant": 1,
+  "compliant_registered_meetings": 15,
+  "not_registered": 1,
+  "unchanged": [
+    {
+      "unit": "시각디자인 리서치 분석",
+      "lcode": 5,
+      "reason": "기존 상단 내용 충족"
+    },
+    {
+      "unit": "(비NCS 실기)취업포트폴리오 제작",
+      "lcode": 17,
+      "reason": "평가·회의록 미등록"
+    }
+  ],
+  "targets": [
+    {
+      "unit": "시각디자인 리서치 조사",
+      "lcode": 4,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=4",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/시각디자인 리서치 조사/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "구현",
+      "lcode": 2,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=2",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/구현/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "구현 응용",
+      "lcode": 3,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=3",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/구현 응용/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "시안 디자인 개발 심화",
+      "lcode": 6,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=6",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/시안 디자인 개발 심화/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "디자인 구성요소 설계",
+      "lcode": 7,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=7",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/디자인 구성요소 설계/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "수정 보완",
+      "lcode": 8,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=8",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/수정 보완/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "디자인 구성요소 제작",
+      "lcode": 9,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=9",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/디자인 구성요소 제작/2026-10-29T125549/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "디지털디자인 사후관리",
+      "lcode": 10,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=10",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/디지털디자인 사후관리/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 관찰조사",
+      "lcode": 11,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=11",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/서비스ㆍ경험디자인 관찰조사/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "서비스ㆍ경험디자인 시나리오 개발",
+      "lcode": 12,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=12",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/서비스ㆍ경험디자인 시나리오 개발/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "스마트문화앱 UI 디자인",
+      "lcode": 14,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=14",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/스마트문화앱 UI 디자인/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "프로토타입 기초데이터 수집 및 스케치",
+      "lcode": 13,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=13",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/프로토타입 기초데이터 수집 및 스케치/2026-10-29T122159/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "lcode": 15,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=15",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/프로토타입 제작 및 사용성 테스트/2026-11-13T094058/05_정정이력/회의록상단보완_20261113T095836"
+    },
+    {
+      "unit": "(비NCS 실기)AI 기획과 발상",
+      "lcode": 16,
+      "status": "complete",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=16",
+      "analysis_exact": true,
+      "date_preserved": true,
+      "improvement_preserved": true,
+      "visual_review": "passed",
+      "evidence_dir": "../../작업/A과정/(비NCS 실기)AI 기획과 발상/2026-11-13T094107/05_정정이력/회의록상단보완_20261113T095836"
+    }
+  ],
+  "local_checks": {
+    "harness": {
+      "ok": false,
+      "existing_issue": "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완",
+      "known_before_this_change": true
+    },
+    "harness_unittest": {
+      "passed": 14
+    },
+    "ncs_support_unittest": {
+      "passed": 34
+    },
+    "python": "3.14",
+    "note": "이번 작업은 회의록 및 정정 증빙에 한정하며 자동화 코드·규칙 파일은 수정하지 않음. 기존 링크 오류는 사이트 저장 검증과 별개임."
+  }
+}

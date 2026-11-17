@@ -1,0 +1,17 @@
+{
+  "unit": "구현",
+  "lcode": 2,
+  "request": "ㅇㅇ 전부 수정해",
+  "checked_at": "2026-11-13T01:01:27.343Z",
+  "analysis_sha256": "c5031fd13d52d99e9d0d633470b5e821a8f0c1be4c5d2898574d15594328f22b",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "analysis_exact": true,
+  "detail_text_exact": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=2",
+  "backup": "회의록_수정전.json",
+  "proposal": "수정안.json",
+  "readback": "저장확인.json",
+  "screenshot": "수정후화면.png",
+  "visual_review": "pending"
+}

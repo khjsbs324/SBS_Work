@@ -1,0 +1,17 @@
+{
+  "unit": "디지털디자인 사후관리",
+  "lcode": 10,
+  "request": "ㅇㅇ 전부 수정해",
+  "checked_at": "2026-11-13T01:02:43.126Z",
+  "analysis_sha256": "333ef071cfeb31010f8bbc3450d63f85a66177ea811880076acfaef8b67761f2",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "analysis_exact": true,
+  "detail_text_exact": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=10",
+  "backup": "회의록_수정전.json",
+  "proposal": "수정안.json",
+  "readback": "저장확인.json",
+  "screenshot": "수정후화면.png",
+  "visual_review": "pending"
+}

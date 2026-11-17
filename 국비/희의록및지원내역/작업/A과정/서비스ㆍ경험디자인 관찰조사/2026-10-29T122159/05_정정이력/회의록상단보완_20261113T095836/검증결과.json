@@ -1,0 +1,17 @@
+{
+  "unit": "서비스ㆍ경험디자인 관찰조사",
+  "lcode": 11,
+  "request": "ㅇㅇ 전부 수정해",
+  "checked_at": "2026-11-13T01:02:48.272Z",
+  "analysis_sha256": "cb03285753f2f634175338edb3097e46926888105a0206221cbcecc27d7d91f2",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "analysis_exact": true,
+  "detail_text_exact": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=11",
+  "backup": "회의록_수정전.json",
+  "proposal": "수정안.json",
+  "readback": "저장확인.json",
+  "screenshot": "수정후화면.png",
+  "visual_review": "pending"
+}

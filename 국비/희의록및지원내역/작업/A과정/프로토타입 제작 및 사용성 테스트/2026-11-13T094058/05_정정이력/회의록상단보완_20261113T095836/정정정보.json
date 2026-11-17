@@ -1,0 +1,27 @@
+{
+  "request": "ㅇㅇ 전부 수정해",
+  "attendees_source": "사용자가 최초 요청에서 제공한 참석자 3명",
+  "reason": "사용자가 승인한 회의록 상단 공통 문구 보충 계획 반영",
+  "checked_at": "2026-11-13T00:58:36.962Z",
+  "original_analysis_sha256": "65004c6997e8101fd9e169bb7d097372b686f8d3a9076323c075fcfe5f8f8972",
+  "proposed_analysis_sha256": "017471a30e8b8c01d691084a33aa139b474eabbdaa1477dcb017f282b5370040",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "operations": [
+    {
+      "before": "*평가결과 분석내용\n\n",
+      "after": ""
+    },
+    {
+      "before": "1. 주제 : ‘프로토타입 제작 및 사용성 테스트’ 평가결과에 대한 분석 및 의견\n\n",
+      "after": ""
+    },
+    {
+      "before": "2. 목적 :",
+      "after": "세부 지도 목적 :"
+    },
+    {
+      "prepend": "*평가결과 분석내용\n회의 참석자 : 김봉섭 부원장, 김혜지 강사, 김지수 사원\n주제 : '프로토타입 제작 및 사용성 테스트' 평가결과에 대한 분석 및 의견\n목적 : '프로토타입 제작 및 사용성 테스트' 평가결과에서 부족한 부분과 잘 되는 부분을 확인하여 앞으로 수업하는 데 활용하기 위함.\n\n"
+    }
+  ]
+}

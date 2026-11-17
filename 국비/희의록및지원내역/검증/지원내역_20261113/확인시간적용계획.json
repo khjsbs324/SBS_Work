@@ -1,0 +1,434 @@
+[
+  {
+    "post_id": "1112",
+    "unit": "프로토타입 제작 및 사용성 테스트",
+    "group": "A",
+    "run": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\프로토타입 제작 및 사용성 테스트\\2026-11-13T094058",
+    "date": "2026-11-04",
+    "title": "[능력단위평가_지원내역] 프로토타입 제작 및 사용성 테스트 A그룹 지원자료",
+    "set_number": 120,
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "dropout": false,
+        "time": "14:50:21"
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "dropout": false,
+        "time": "18:48:09"
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "dropout": false,
+        "time": "17:55:14"
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "dropout": false,
+        "time": "18:32:20"
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "dropout": false,
+        "time": "18:28:29"
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "dropout": false,
+        "time": "16:51:35"
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "dropout": false,
+        "time": "18:26:44"
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "dropout": false,
+        "time": "18:58:40"
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "dropout": false,
+        "time": "17:05:27"
+      }
+    ],
+    "unused_times": [
+      "15:17:33",
+      "16:02:53"
+    ],
+    "source": "확인시간 120세트.txt",
+    "scope": "재학생 9명. 수강포기자 제외. 세트 내부는 화면 표시 순서.",
+    "authorization": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시."
+  },
+  {
+    "post_id": "1113",
+    "unit": "프로토타입 제작 및 사용성 테스트",
+    "group": "B",
+    "run": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\프로토타입 제작 및 사용성 테스트\\2026-11-13T094058",
+    "date": "2026-11-04",
+    "title": "[능력단위평가_지원내역] 프로토타입 제작 및 사용성 테스트 B그룹 지원자료",
+    "set_number": 119,
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "dropout": false,
+        "time": "15:00:36"
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "dropout": false,
+        "time": "17:54:22"
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "dropout": false,
+        "time": "18:08:37"
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "dropout": false,
+        "time": "16:15:26"
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "dropout": false,
+        "time": "15:33:25"
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "dropout": false,
+        "time": "17:09:28"
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "dropout": false,
+        "time": "17:44:12"
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "dropout": false,
+        "time": "17:34:17"
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "dropout": false,
+        "time": "18:20:08"
+      }
+    ],
+    "unused_times": [
+      "16:24:38",
+      "16:11:56"
+    ],
+    "source": "확인시간 120세트.txt",
+    "scope": "재학생 9명. 수강포기자 제외. 세트 내부는 화면 표시 순서.",
+    "authorization": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시."
+  },
+  {
+    "post_id": "1114",
+    "unit": "프로토타입 제작 및 사용성 테스트",
+    "group": "C",
+    "run": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\프로토타입 제작 및 사용성 테스트\\2026-11-13T094058",
+    "date": "2026-11-04",
+    "title": "[능력단위평가_지원내역] 프로토타입 제작 및 사용성 테스트 C그룹 지원자료",
+    "set_number": 118,
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "dropout": false,
+        "time": "17:43:37"
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "dropout": false,
+        "time": "16:27:39"
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "dropout": false,
+        "time": "18:12:15"
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "dropout": false,
+        "time": "15:56:58"
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "dropout": false,
+        "time": "17:07:29"
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "dropout": false,
+        "time": "14:48:18"
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "dropout": false,
+        "time": "18:36:48"
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "dropout": false,
+        "time": "15:33:10"
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "dropout": false,
+        "time": "17:44:33"
+      }
+    ],
+    "unused_times": [
+      "18:13:23",
+      "15:46:43"
+    ],
+    "source": "확인시간 120세트.txt",
+    "scope": "재학생 9명. 수강포기자 제외. 세트 내부는 화면 표시 순서.",
+    "authorization": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시."
+  },
+  {
+    "post_id": "1115",
+    "unit": "(비NCS 실기)AI 기획과 발상",
+    "group": "A",
+    "run": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\(비NCS 실기)AI 기획과 발상\\2026-11-13T094107",
+    "date": "2026-11-06",
+    "title": "[능력단위평가_지원내역] (비NCS 실기)AI 기획과 발상 A그룹 지원자료",
+    "set_number": 117,
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "dropout": false,
+        "time": "18:16:28"
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "dropout": false,
+        "time": "15:59:36"
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "dropout": false,
+        "time": "18:20:59"
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "dropout": false,
+        "time": "18:30:02"
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "dropout": false,
+        "time": "15:30:57"
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "dropout": false,
+        "time": "15:34:54"
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "dropout": false,
+        "time": "17:27:46"
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "dropout": false,
+        "time": "15:41:16"
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "dropout": false,
+        "time": "14:55:29"
+      }
+    ],
+    "unused_times": [
+      "15:26:14",
+      "16:38:56"
+    ],
+    "source": "확인시간 120세트.txt",
+    "scope": "재학생 9명. 수강포기자 제외. 세트 내부는 화면 표시 순서.",
+    "authorization": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시."
+  },
+  {
+    "post_id": "1116",
+    "unit": "(비NCS 실기)AI 기획과 발상",
+    "group": "B",
+    "run": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\(비NCS 실기)AI 기획과 발상\\2026-11-13T094107",
+    "date": "2026-11-06",
+    "title": "[능력단위평가_지원내역] (비NCS 실기)AI 기획과 발상 B그룹 지원자료",
+    "set_number": 116,
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "dropout": false,
+        "time": "17:14:31"
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "dropout": false,
+        "time": "17:46:15"
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "dropout": false,
+        "time": "16:18:18"
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "dropout": false,
+        "time": "18:35:13"
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "dropout": false,
+        "time": "14:27:55"
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "dropout": false,
+        "time": "15:45:35"
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "dropout": false,
+        "time": "15:07:38"
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "dropout": false,
+        "time": "16:39:41"
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "dropout": false,
+        "time": "17:20:27"
+      }
+    ],
+    "unused_times": [
+      "16:17:32",
+      "16:29:23"
+    ],
+    "source": "확인시간 120세트.txt",
+    "scope": "재학생 9명. 수강포기자 제외. 세트 내부는 화면 표시 순서.",
+    "authorization": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시."
+  },
+  {
+    "post_id": "1117",
+    "unit": "(비NCS 실기)AI 기획과 발상",
+    "group": "C",
+    "run": "C:\\khjsbs324\\SBS_Work\\국비\\희의록및지원내역\\작업\\A과정\\(비NCS 실기)AI 기획과 발상\\2026-11-13T094107",
+    "date": "2026-11-06",
+    "title": "[능력단위평가_지원내역] (비NCS 실기)AI 기획과 발상 C그룹 지원자료",
+    "set_number": 115,
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "dropout": false,
+        "time": "16:22:40"
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "dropout": false,
+        "time": "17:42:54"
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "dropout": false,
+        "time": "14:56:43"
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "dropout": false,
+        "time": "17:10:03"
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "dropout": false,
+        "time": "17:07:53"
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "dropout": false,
+        "time": "18:14:49"
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "dropout": false,
+        "time": "15:03:06"
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "dropout": false,
+        "time": "14:54:47"
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "dropout": false,
+        "time": "15:39:09"
+      }
+    ],
+    "unused_times": [
+      "17:47:22",
+      "16:25:42"
+    ],
+    "source": "확인시간 120세트.txt",
+    "scope": "재학생 9명. 수강포기자 제외. 세트 내부는 화면 표시 순서.",
+    "authorization": "사용자: 확인시간 120세트 메모를 폴더에 넣었으며 가장 아래 시간부터 등록 지시."
+  }
+]

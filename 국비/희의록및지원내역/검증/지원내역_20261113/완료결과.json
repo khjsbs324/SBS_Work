@@ -1,0 +1,240 @@
+{
+  "completed_at": "2026-11-13T01:01:38.266Z",
+  "posts": [
+    {
+      "course_id": "A",
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "lcode": "15",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "group": "A",
+      "post_date": "2026-11-04",
+      "title": "[능력단위평가_지원내역] 프로토타입 제작 및 사용성 테스트 A그룹 지원자료",
+      "post_id": "1112",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1112",
+      "checked_at": "2026-11-13T00:56:41.867Z",
+      "title_exact": true,
+      "date_exact": true,
+      "text_exact": true,
+      "images_loaded": true,
+      "anchors_valid": true,
+      "reference_urls": [
+        "https://help.figma.com/hc/ko/articles/360040315773-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%97%B0%EA%B2%B0",
+        "https://help.figma.com/hc/ko/articles/360039823894-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%ED%9D%90%EB%A6%84-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EA%B4%80%EB%A6%AC"
+      ],
+      "styles": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "tablePadding": "14px 16px"
+      },
+      "anchor_navigation": true,
+      "attachment_status": 200,
+      "attachment_sha256": "03816f6f176bc5c4786912bd9d0162e00759a0ac99dfe2e7b7ad24be0a4cd5fb",
+      "course_confirmed": true
+    },
+    {
+      "course_id": "A",
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "lcode": "15",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "group": "B",
+      "post_date": "2026-11-04",
+      "title": "[능력단위평가_지원내역] 프로토타입 제작 및 사용성 테스트 B그룹 지원자료",
+      "post_id": "1113",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1113",
+      "checked_at": "2026-11-13T00:57:35.101Z",
+      "title_exact": true,
+      "date_exact": true,
+      "text_exact": true,
+      "images_loaded": true,
+      "anchors_valid": true,
+      "reference_urls": [
+        "https://help.figma.com/hc/ko/articles/360040315773-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%97%B0%EA%B2%B0",
+        "https://help.figma.com/hc/ko/articles/360039823894-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%ED%9D%90%EB%A6%84-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EA%B4%80%EB%A6%AC"
+      ],
+      "styles": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "tablePadding": "14px 16px"
+      },
+      "anchor_navigation": true,
+      "attachment_status": 200,
+      "attachment_sha256": "a4eb00ec9900376f6c76dd24b59c6c1416ba3721c9458c1f7787df5327291b98",
+      "course_confirmed": true
+    },
+    {
+      "course_id": "A",
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "lcode": "15",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "group": "C",
+      "post_date": "2026-11-04",
+      "title": "[능력단위평가_지원내역] 프로토타입 제작 및 사용성 테스트 C그룹 지원자료",
+      "post_id": "1114",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1114",
+      "checked_at": "2026-11-13T00:58:08.954Z",
+      "title_exact": true,
+      "date_exact": true,
+      "text_exact": true,
+      "images_loaded": true,
+      "anchors_valid": true,
+      "reference_urls": [
+        "https://help.figma.com/hc/ko/articles/360040315773-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%97%B0%EA%B2%B0",
+        "https://help.figma.com/hc/ko/articles/360039823894-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%ED%9D%90%EB%A6%84-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EA%B4%80%EB%A6%AC"
+      ],
+      "styles": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "tablePadding": "14px 16px"
+      },
+      "anchor_navigation": true,
+      "attachment_status": 200,
+      "attachment_sha256": "56484f68155e10831e5c6d2eee3062f0af83a16baf3b88866981a7138f7fee99",
+      "course_confirmed": true
+    },
+    {
+      "course_id": "A",
+      "unit": "(비NCS 실기)AI 기획과 발상",
+      "lcode": "16",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "group": "A",
+      "post_date": "2026-11-06",
+      "title": "[능력단위평가_지원내역] (비NCS 실기)AI 기획과 발상 A그룹 지원자료",
+      "post_id": "1115",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1115",
+      "checked_at": "2026-11-13T00:59:04.217Z",
+      "title_exact": true,
+      "date_exact": true,
+      "text_exact": true,
+      "images_loaded": true,
+      "anchors_valid": true,
+      "reference_urls": [
+        "https://helpx.adobe.com/kr/firefly/web/work-with-images/generate-images/writing-effective-text-prompts.html",
+        "https://helpx.adobe.com/kr/fonts/web/font-licensing/font-licensing.html"
+      ],
+      "styles": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "tablePadding": "14px 16px"
+      },
+      "anchor_navigation": true,
+      "attachment_status": 200,
+      "attachment_sha256": "dd3aa152d2f262e35f3033b67f7715e68895abf94976f8ba3a7d3599194fd22f",
+      "course_confirmed": true
+    },
+    {
+      "course_id": "A",
+      "unit": "(비NCS 실기)AI 기획과 발상",
+      "lcode": "16",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "group": "B",
+      "post_date": "2026-11-06",
+      "title": "[능력단위평가_지원내역] (비NCS 실기)AI 기획과 발상 B그룹 지원자료",
+      "post_id": "1116",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1116",
+      "checked_at": "2026-11-13T00:59:41.612Z",
+      "title_exact": true,
+      "date_exact": true,
+      "text_exact": true,
+      "images_loaded": true,
+      "anchors_valid": true,
+      "reference_urls": [
+        "https://helpx.adobe.com/kr/firefly/web/work-with-images/generate-images/writing-effective-text-prompts.html",
+        "https://helpx.adobe.com/kr/fonts/web/font-licensing/font-licensing.html"
+      ],
+      "styles": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "tablePadding": "14px 16px"
+      },
+      "anchor_navigation": true,
+      "attachment_status": 200,
+      "attachment_sha256": "e2e7d65efca6365b9ba1e1743f38dc0a3f4107b70fbbea45e7dd5c02663819b6",
+      "course_confirmed": true
+    },
+    {
+      "course_id": "A",
+      "unit": "(비NCS 실기)AI 기획과 발상",
+      "lcode": "16",
+      "Pcode": "300002",
+      "BoardCode": "85",
+      "version": "ver4",
+      "group": "C",
+      "post_date": "2026-11-06",
+      "title": "[능력단위평가_지원내역] (비NCS 실기)AI 기획과 발상 C그룹 지원자료",
+      "post_id": "1117",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1117",
+      "checked_at": "2026-11-13T01:00:15.751Z",
+      "title_exact": true,
+      "date_exact": true,
+      "text_exact": true,
+      "images_loaded": true,
+      "anchors_valid": true,
+      "reference_urls": [
+        "https://helpx.adobe.com/kr/firefly/web/work-with-images/generate-images/writing-effective-text-prompts.html",
+        "https://helpx.adobe.com/kr/fonts/web/font-licensing/font-licensing.html"
+      ],
+      "styles": {
+        "maxWidth": "980px",
+        "fontSize": "17px",
+        "lineHeight": "33.15px",
+        "tablePadding": "14px 16px"
+      },
+      "anchor_navigation": true,
+      "attachment_status": 200,
+      "attachment_sha256": "b7b4cd884f978ec269e643d616cb7e8175595ae894a511587fea08894bf18f04",
+      "course_confirmed": true
+    }
+  ],
+  "meeting_preservation": [
+    {
+      "lcode": "15",
+      "analysis_unchanged": true,
+      "improvement_unchanged": true,
+      "date_unchanged": true,
+      "checked_at": "2026-11-13T01:01:00.140Z"
+    },
+    {
+      "lcode": "16",
+      "analysis_unchanged": true,
+      "improvement_unchanged": true,
+      "date_unchanged": true,
+      "checked_at": "2026-11-13T01:01:00.273Z"
+    }
+  ],
+  "tests": {
+    "support": {
+      "passed": 34
+    },
+    "harness_unit": {
+      "passed": 14
+    },
+    "harness_check": {
+      "passed": false,
+      "preexisting_error": "능력단위평가/수정 보완/CLAUDE.md: Missing link/import: 수정 보완"
+    }
+  },
+  "document_review": {
+    "pdfs": 6,
+    "pdf_pages": 42,
+    "docx": 6,
+    "worksheet_pages": 18,
+    "docx_preview": "실제 DOCX를 docx-preview 0.3.6으로 렌더하여 확인. Word PDF 내보내기가 완료되지 않아 Word 자체 출력 배치는 미검증.",
+    "screenshots": "각 실행의 04_등록검증/*_렌더 및 *_상세전체.png"
+  },
+  "report_scope": "작업현황.md는 기존 A반 NCS 대상 14개를 표시함. 명시적으로 요청된 비NCS AI 기획과 발상은 해당 실행의 진행상태.json에 완료 기록됨."
+}

@@ -1,0 +1,37 @@
+{
+  "course_id": "A",
+  "unit": "(비NCS 실기)AI 기획과 발상",
+  "lcode": "16",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "group": "C",
+  "post_date": "2026-11-06",
+  "title": "[능력단위평가_지원내역] (비NCS 실기)AI 기획과 발상 C그룹 지원자료",
+  "post_id": "1117",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=85&no=1117",
+  "checked_at": "2026-11-13T01:00:15.751Z",
+  "title_exact": true,
+  "date_exact": true,
+  "text_exact": true,
+  "images_loaded": true,
+  "anchors_valid": true,
+  "reference_urls": [
+    "https://helpx.adobe.com/kr/firefly/web/work-with-images/generate-images/writing-effective-text-prompts.html",
+    "https://helpx.adobe.com/kr/fonts/web/font-licensing/font-licensing.html"
+  ],
+  "styles": {
+    "maxWidth": "980px",
+    "fontSize": "17px",
+    "lineHeight": "33.15px",
+    "tablePadding": "14px 16px"
+  },
+  "anchor_navigation": true,
+  "attachment_status": 200,
+  "attachment_sha256": "b7b4cd884f978ec269e643d616cb7e8175595ae894a511587fea08894bf18f04",
+  "course_confirmed": true,
+  "references_checked": true,
+  "layout_reviewed": true,
+  "layout_notes": "실제 상세 전체 캡처를 판독. 목차·시각 예시·표·참고 링크와 본문 순서 및 여백 확인.",
+  "observed_in_list": true
+}

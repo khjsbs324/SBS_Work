@@ -1,0 +1,17 @@
+{
+  "unit": "시안 디자인 개발 심화",
+  "lcode": 6,
+  "request": "ㅇㅇ 전부 수정해",
+  "checked_at": "2026-11-13T01:02:30.898Z",
+  "analysis_sha256": "a501609ff29fb204f47191cd9566ef7957bcc71032be6a65cb0bf3b59f607526",
+  "date_preserved": true,
+  "improvement_preserved": true,
+  "analysis_exact": true,
+  "detail_text_exact": true,
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/analysis/index.php?Pcode=300002&Lcode=6",
+  "backup": "회의록_수정전.json",
+  "proposal": "수정안.json",
+  "readback": "저장확인.json",
+  "screenshot": "수정후화면.png",
+  "visual_review": "pending"
+}

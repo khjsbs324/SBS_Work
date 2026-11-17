@@ -1,0 +1,16 @@
+{
+  "course_id": "A",
+  "unit": "프로토타입 제작 및 사용성 테스트",
+  "lcode": "15",
+  "course": {
+    "name": "[디지털디자인] AI 기반 UIUX 웹디자인 & 웹퍼블리셔 양성과정(Figma, HTML5, CSS) A (1회차)",
+    "base_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4",
+    "Pcode": "300002",
+    "BoardCode": "85",
+    "version": "ver4"
+  },
+  "checked_at": "2026-11-13T00:25:25.519Z",
+  "source_url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/appraisal/app/index.php?Pcode=300002&Lcode=15",
+  "unit_end_date": "2026-11-03",
+  "scope": "회의록 작성 및 저장. 지원자료 전체 실행 상태는 생성하지 않음."
+}

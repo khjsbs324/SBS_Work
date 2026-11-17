@@ -1,0 +1,66 @@
+{
+  "post_id": "1117",
+  "unit": "(비NCS 실기)AI 기획과 발상",
+  "group": "C",
+  "set_number": 115,
+  "date": "2026-11-06",
+  "checked_at": "2026-11-13T01:11:27.218Z",
+  "response": {
+    "status": 200,
+    "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/view.php?Pcode=300002\\u0026BoardCode=85\\u0026no=1117\"}"
+  },
+  "rows": [
+    {
+      "sid": "sbsartdj1114",
+      "date": "2026-11-06",
+      "time": "16:22:40"
+    },
+    {
+      "sid": "sbsartdj1117",
+      "date": "2026-11-06",
+      "time": "17:42:54"
+    },
+    {
+      "sid": "sbsartdj1118",
+      "date": "2026-11-06",
+      "time": "14:56:43"
+    },
+    {
+      "sid": "sbsartdj1119",
+      "date": "2026-11-06",
+      "time": "17:10:03"
+    },
+    {
+      "sid": "sbsartdj1123",
+      "date": "2026-11-06",
+      "time": "17:07:53"
+    },
+    {
+      "sid": "sbsartdj1120",
+      "date": "2026-11-06",
+      "time": "18:14:49"
+    },
+    {
+      "sid": "sbsartdj1121",
+      "date": "2026-11-06",
+      "time": "15:03:06"
+    },
+    {
+      "sid": "sbsartdj1124",
+      "date": "2026-11-06",
+      "time": "14:54:47"
+    },
+    {
+      "sid": "sbsartdj1122",
+      "date": "2026-11-06",
+      "time": "15:39:09"
+    }
+  ],
+  "exact_readback": true,
+  "content_and_attachment_preserved": true,
+  "detail": {
+    "content_sha256": "ee36cb201bd47eaac47caa9b7354ab9ac164b869d664acefe86a46f15a3dd4b1",
+    "attachment": "./download.php?Pcode=300002&file=1794531620_f554800e.zip",
+    "confirmation_text": "확인내역시간 수정하기\n\n강민경 (2026-11-06 16:22:40)\n\n박주연 (2026-11-06 17:42:54)\n\n박찬미 (2026-11-06 14:56:43)\n\n이은경 (2026-11-06 17:10:03)\n\n이은수 (2026-11-06 17:07:53)\n\n이지희 (2026-11-06 18:14:49)\n\n임연우 (2026-11-06 15:03:06)\n\n최지혜 (2026-11-06 14:54:47)\n\n허지민 (2026-11-06 15:39:09)\n\n김정은 (수강포기)\n\n김지선 (수강포기)"
+  }
+}

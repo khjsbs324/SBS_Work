@@ -1,0 +1,23 @@
+{
+  "course_id": "A",
+  "unit": "프로토타입 제작 및 사용성 테스트",
+  "lcode": "15",
+  "Pcode": "300002",
+  "BoardCode": "85",
+  "version": "ver4",
+  "group": "A",
+  "post_date": "2026-11-04",
+  "checked_at": "2026-11-13T09:55:41+09:00",
+  "local_checks": true,
+  "pdf_reviewed": true,
+  "visual_reviewed": true,
+  "sources_reviewed": true,
+  "privacy_reviewed": true,
+  "pdf_page_count": 7,
+  "support_plan_sha256": "920d7d513104e3664a21b3c821b0bff2edcae0fdb39e7448ca04e537dcb58ce9",
+  "plan_alignment_reviewed": true,
+  "plan_alignment_notes": "안내·완료·복귀 점검, 동료 두 명의 실제 관찰, 문제별 수정·재확인을 학습 본문과 세 양식에 연결함.",
+  "visual_review_notes": "PDF 전 페이지를 Poppler PNG로 판독. 글자·표·이미지 잘림 및 빈 페이지 없음. 실제 DOCX를 docx-preview 0.3.6으로 렌더한 3페이지를 판독하고 입력 칸·한글·페이지 범위를 확인함.",
+  "docx_render_method": "docx-preview 0.3.6 browser rendering of actual OOXML; native Word PDF export did not complete; packaged LibreOffice unavailable. Native Word pagination not verified.",
+  "source_review_notes": "Figma Learn 두 한국어 문서의 연결·흐름 본문, Adobe Firefly 프롬프트 작성 및 Fonts FAQ 적용 대상·사용 안내를 직접 열어 확인함. 무료 범위는 문서 읽기이며 유료 도구 사용을 요구하지 않음."
+}

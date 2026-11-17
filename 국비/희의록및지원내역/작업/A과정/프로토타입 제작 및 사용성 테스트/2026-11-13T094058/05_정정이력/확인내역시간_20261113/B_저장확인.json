@@ -1,0 +1,66 @@
+{
+  "post_id": "1113",
+  "unit": "프로토타입 제작 및 사용성 테스트",
+  "group": "B",
+  "set_number": 119,
+  "date": "2026-11-04",
+  "checked_at": "2026-11-13T01:11:18.798Z",
+  "response": {
+    "status": 200,
+    "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/view.php?Pcode=300002\\u0026BoardCode=85\\u0026no=1113\"}"
+  },
+  "rows": [
+    {
+      "sid": "sbsartdj1114",
+      "date": "2026-11-04",
+      "time": "15:00:36"
+    },
+    {
+      "sid": "sbsartdj1117",
+      "date": "2026-11-04",
+      "time": "17:54:22"
+    },
+    {
+      "sid": "sbsartdj1118",
+      "date": "2026-11-04",
+      "time": "18:08:37"
+    },
+    {
+      "sid": "sbsartdj1119",
+      "date": "2026-11-04",
+      "time": "16:15:26"
+    },
+    {
+      "sid": "sbsartdj1123",
+      "date": "2026-11-04",
+      "time": "15:33:25"
+    },
+    {
+      "sid": "sbsartdj1120",
+      "date": "2026-11-04",
+      "time": "17:09:28"
+    },
+    {
+      "sid": "sbsartdj1121",
+      "date": "2026-11-04",
+      "time": "17:44:12"
+    },
+    {
+      "sid": "sbsartdj1124",
+      "date": "2026-11-04",
+      "time": "17:34:17"
+    },
+    {
+      "sid": "sbsartdj1122",
+      "date": "2026-11-04",
+      "time": "18:20:08"
+    }
+  ],
+  "exact_readback": true,
+  "content_and_attachment_preserved": true,
+  "detail": {
+    "content_sha256": "655d1773e6858b05e880db042ec8c89b3779affcb13cb9b755b95b336b371f9a",
+    "attachment": "./download.php?Pcode=300002&file=1794531461_d537a764.zip",
+    "confirmation_text": "확인내역시간 수정하기\n\n강민경 (2026-11-04 15:00:36)\n\n박주연 (2026-11-04 17:54:22)\n\n박찬미 (2026-11-04 18:08:37)\n\n이은경 (2026-11-04 16:15:26)\n\n이은수 (2026-11-04 15:33:25)\n\n이지희 (2026-11-04 17:09:28)\n\n임연우 (2026-11-04 17:44:12)\n\n최지혜 (2026-11-04 17:34:17)\n\n허지민 (2026-11-04 18:20:08)\n\n김정은 (수강포기)\n\n김지선 (수강포기)"
+  }
+}
