@@ -1,0 +1,114 @@
+{
+  "post_id": "1110",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=84&no=1110",
+  "date": "2026-11-06",
+  "set_number": 103,
+  "applied_students": 9,
+  "excluded": 2,
+  "unused_times": [
+    "14:49:28",
+    "15:43:53"
+  ],
+  "submitted": {
+    "status": 200,
+    "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/view.php?Pcode=300002\\u0026BoardCode=84\\u0026no=1110\"}"
+  },
+  "times_exact": true,
+  "content_unchanged": true,
+  "readback": {
+    "view": {
+      "html": "\n\t\t<caption class=\"caption-top\">\n\t\t\t<div class=\"d-flex justify-content-between align-items-center\">\n\t\t\t\t<div class=\"p-3\">과정공지사항</div>\n\t\t\t\t<div class=\"me-2\">\n\t\t\t\t\t<div class=\"input-group\" style=\"width: auto;\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"./write.php?Pcode=300002&amp;BoardCode=84&amp;no=1110&amp;mode=update\" class=\"btn btn-primary\">수정하기</a>\n\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"./list.php?Pcode=300002&amp;BoardCode=84\" class=\"btn btn-dark\">돌아가기</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</caption>\n\t\t<colgroup>\n\t\t\t<col style=\"width:10%;\">\n\t\t\t<col style=\"width:auto;\">\n\t\t\t<col style=\"width:10%;\">\n\t\t\t<col style=\"width:auto;\">\n\t\t</colgroup>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td class=\"bg-gray\">제목</td>\n\t\t\t\t<td colspan=\"3\">[강사 변경 공지] 강사 변경 공지 드립니다.</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td class=\"bg-gray\">작성자</td>\n\t\t\t\t<td>김지수</td>\n\t\t\t\t<td class=\"bg-gray\">작성일</td>\n\t\t\t\t<td>2026-11-06</td>\n\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t<td class=\"bg-gray\">내용</td>\n\t\t\t\t<td colspan=\"3\" class=\"content-view\">\n\t\t\t\t\t<p>김혜지 강사님 수업 일정으로 인해 아래와 같이 강사 변경이 진행됩니다.</p><p>수업 일정 확인 부탁드립니다.</p><p><br></p><p>- 기존:</p><p>· 2026-11-16~2026-12-04 14:00~19:00 김혜지 강사 5H</p><p>· 2026-11-20, 2026-11-27 14:00~15:00 김가경 강사 1H 15:00~19:00 김혜지 강사 4H</p><p>· 2026-12-04 14:00~15:00 김가경 강사 1H 15:00~17:00 김혜지 강사 2H </p><p><br></p><p>- 변경: 2026-11-16~2026-12-04 14:00~19:00 김가경 강사 5H</p>\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t\t\t</tbody>\n\t",
+      "text": "과정공지사항\n수정하기\n돌아가기\n제목\t[강사 변경 공지] 강사 변경 공지 드립니다.\n작성자\t김지수\t작성일\t2026-11-06\n내용\t\n\n김혜지 강사님 수업 일정으로 인해 아래와 같이 강사 변경이 진행됩니다.\n\n수업 일정 확인 부탁드립니다.\n\n\n\n\n- 기존:\n\n· 2026-11-16~2026-12-04 14:00~19:00 김혜지 강사 5H\n\n· 2026-11-20, 2026-11-27 14:00~15:00 김가경 강사 1H 15:00~19:00 김혜지 강사 4H\n\n· 2026-12-04 14:00~15:00 김가경 강사 1H 15:00~17:00 김혜지 강사 2H\n\n\n\n\n- 변경: 2026-11-16~2026-12-04 14:00~19:00 김가경 강사 5H",
+      "sha256": "04d78f6ce0f15cf45936e1b5371fdab0e19be1ae29224ecddc903cc1a6df5c13"
+    },
+    "form": {
+      "action": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/exe.php",
+      "mode": "date_update",
+      "post_id": "1110",
+      "board": "84",
+      "course": "300002",
+      "rows": [
+        {
+          "name": "강민경",
+          "sid": "sbsartdj1114",
+          "date": "2026-11-06",
+          "hour": "16",
+          "minute": "05",
+          "second": "43"
+        },
+        {
+          "name": "박주연",
+          "sid": "sbsartdj1117",
+          "date": "2026-11-06",
+          "hour": "17",
+          "minute": "43",
+          "second": "05"
+        },
+        {
+          "name": "박찬미",
+          "sid": "sbsartdj1118",
+          "date": "2026-11-06",
+          "hour": "15",
+          "minute": "05",
+          "second": "24"
+        },
+        {
+          "name": "이은경",
+          "sid": "sbsartdj1119",
+          "date": "2026-11-06",
+          "hour": "14",
+          "minute": "10",
+          "second": "27"
+        },
+        {
+          "name": "이은수",
+          "sid": "sbsartdj1123",
+          "date": "2026-11-06",
+          "hour": "16",
+          "minute": "51",
+          "second": "41"
+        },
+        {
+          "name": "이지희",
+          "sid": "sbsartdj1120",
+          "date": "2026-11-06",
+          "hour": "18",
+          "minute": "30",
+          "second": "32"
+        },
+        {
+          "name": "임연우",
+          "sid": "sbsartdj1121",
+          "date": "2026-11-06",
+          "hour": "18",
+          "minute": "20",
+          "second": "45"
+        },
+        {
+          "name": "최지혜",
+          "sid": "sbsartdj1124",
+          "date": "2026-11-06",
+          "hour": "16",
+          "minute": "25",
+          "second": "30"
+        },
+        {
+          "name": "허지민",
+          "sid": "sbsartdj1122",
+          "date": "2026-11-06",
+          "hour": "18",
+          "minute": "32",
+          "second": "33"
+        },
+        {
+          "name": "김정은\n\n2026-09-10 수강포기"
+        },
+        {
+          "name": "김지선\n\n2026-08-20 수강포기"
+        }
+      ]
+    },
+    "observed_at": "2026-11-13T02:34:11.710Z"
+  },
+  "verified_at": "2026-11-13T02:34:12.074Z"
+}

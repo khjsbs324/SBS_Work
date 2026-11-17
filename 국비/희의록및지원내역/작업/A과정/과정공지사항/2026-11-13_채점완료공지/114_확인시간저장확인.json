@@ -1,0 +1,104 @@
+{
+  "post_id": "1118",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=84&no=1118",
+  "board": "84",
+  "unit": "프로토타입 제작 및 사용성 테스트",
+  "date": "2026-11-04",
+  "set_number": 114,
+  "submitted": {
+    "status": 200,
+    "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/view.php?Pcode=300002\\u0026BoardCode=84\\u0026no=1118\"}"
+  },
+  "readback": {
+    "post_id": "1118",
+    "board": "84",
+    "course": "300002",
+    "rows": [
+      {
+        "name": "강민경",
+        "sid": "sbsartdj1114",
+        "date": "2026-11-04",
+        "hour": "18",
+        "minute": "40",
+        "second": "12"
+      },
+      {
+        "name": "박주연",
+        "sid": "sbsartdj1117",
+        "date": "2026-11-04",
+        "hour": "16",
+        "minute": "52",
+        "second": "36"
+      },
+      {
+        "name": "박찬미",
+        "sid": "sbsartdj1118",
+        "date": "2026-11-04",
+        "hour": "14",
+        "minute": "42",
+        "second": "42"
+      },
+      {
+        "name": "이은경",
+        "sid": "sbsartdj1119",
+        "date": "2026-11-04",
+        "hour": "18",
+        "minute": "05",
+        "second": "29"
+      },
+      {
+        "name": "이은수",
+        "sid": "sbsartdj1123",
+        "date": "2026-11-04",
+        "hour": "15",
+        "minute": "11",
+        "second": "24"
+      },
+      {
+        "name": "이지희",
+        "sid": "sbsartdj1120",
+        "date": "2026-11-04",
+        "hour": "17",
+        "minute": "34",
+        "second": "30"
+      },
+      {
+        "name": "임연우",
+        "sid": "sbsartdj1121",
+        "date": "2026-11-04",
+        "hour": "16",
+        "minute": "04",
+        "second": "58"
+      },
+      {
+        "name": "최지혜",
+        "sid": "sbsartdj1124",
+        "date": "2026-11-04",
+        "hour": "18",
+        "minute": "26",
+        "second": "17"
+      },
+      {
+        "name": "허지민",
+        "sid": "sbsartdj1122",
+        "date": "2026-11-04",
+        "hour": "17",
+        "minute": "25",
+        "second": "50"
+      },
+      {
+        "name": "김정은\n\n2026-09-10 수강포기"
+      },
+      {
+        "name": "김지선\n\n2026-08-20 수강포기"
+      }
+    ]
+  },
+  "times_exact": true,
+  "body_unchanged": true,
+  "unused_times": [
+    "15:29:15",
+    "15:22:03"
+  ],
+  "verified_at": "2026-11-13T02:15:59.806Z"
+}

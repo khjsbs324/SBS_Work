@@ -1,0 +1,18 @@
+{
+  "submitted": {
+    "status": 200,
+    "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/list.php?Pcode=300002\\u0026BoardCode=84\"}"
+  },
+  "post_id": "1118",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=84&no=1118",
+  "unit": "프로토타입 제작 및 사용성 테스트",
+  "date": "2026-11-04",
+  "title": "[채점공지] '프로토타입 제작 및 사용성 테스트' 능력단위평가 채점 완료",
+  "set_number": 114,
+  "checked_at": "2026-11-13T02:06:56.458Z",
+  "title_exact": true,
+  "date_exact": true,
+  "text_exact": true,
+  "content_sha256": "ff84d27c068f2ff9a5d4643cace5c2aa56d72bf165c43cfcdbc95198b61f613f",
+  "body": "채점 공지일: 2026년 11월 04일 (수요일)\n\n\n\n\n'프로토타입 제작 및 사용성 테스트' 능력단위 평가의 채점이 완료되었습니다.\n\n피드백 내용 확인해주시고 이의사항 있으시면 말씀해주시기 바랍니다.\n\n앞으로의 포트폴리오 제작에 있어 피드백 사항 반영하여 수정해주시기 바랍니다.\n\n평가 진행하느라 수고 많으셨습니다."
+}

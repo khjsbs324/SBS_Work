@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "notice_count": 10,
+  "student_timestamps": 98,
+  "sets_used": [
+    112,
+    111,
+    110,
+    109,
+    108,
+    107,
+    106,
+    105,
+    104,
+    103
+  ],
+  "next_set": 102,
+  "all_times_verified": true,
+  "all_notice_content_unchanged": true,
+  "verified_at": "2026-11-13T02:34:12.074Z"
+}

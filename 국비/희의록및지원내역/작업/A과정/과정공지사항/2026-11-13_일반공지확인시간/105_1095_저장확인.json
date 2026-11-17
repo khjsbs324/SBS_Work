@@ -1,0 +1,114 @@
+{
+  "post_id": "1095",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=84&no=1095",
+  "date": "2026-10-21",
+  "set_number": 105,
+  "applied_students": 9,
+  "excluded": 2,
+  "unused_times": [
+    "14:41:08",
+    "14:37:16"
+  ],
+  "submitted": {
+    "status": 200,
+    "response": "{\"ok\":true,\"redirect\":\"\\/teacher\\/curri\\/ver4\\/bbs\\/view.php?Pcode=300002\\u0026BoardCode=84\\u0026no=1095\"}"
+  },
+  "times_exact": true,
+  "content_unchanged": true,
+  "readback": {
+    "view": {
+      "html": "\n\t\t<caption class=\"caption-top\">\n\t\t\t<div class=\"d-flex justify-content-between align-items-center\">\n\t\t\t\t<div class=\"p-3\">과정공지사항</div>\n\t\t\t\t<div class=\"me-2\">\n\t\t\t\t\t<div class=\"input-group\" style=\"width: auto;\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"./write.php?Pcode=300002&amp;BoardCode=84&amp;no=1095&amp;mode=update\" class=\"btn btn-primary\">수정하기</a>\n\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"./list.php?Pcode=300002&amp;BoardCode=84\" class=\"btn btn-dark\">돌아가기</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</caption>\n\t\t<colgroup>\n\t\t\t<col style=\"width:10%;\">\n\t\t\t<col style=\"width:auto;\">\n\t\t\t<col style=\"width:10%;\">\n\t\t\t<col style=\"width:auto;\">\n\t\t</colgroup>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td class=\"bg-gray\">제목</td>\n\t\t\t\t<td colspan=\"3\">[공지] 3차 만족도 조사 일정 안내</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td class=\"bg-gray\">작성자</td>\n\t\t\t\t<td>김지수</td>\n\t\t\t\t<td class=\"bg-gray\">작성일</td>\n\t\t\t\t<td>2026-10-21</td>\n\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t<td class=\"bg-gray\">내용</td>\n\t\t\t\t<td colspan=\"3\" class=\"content-view\">\n\t\t\t\t\t<p>2026-10-28에 만족도 조사 예정입니다.</p><p>많은 참여 부탁드립니다.</p>\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t\t\t</tbody>\n\t",
+      "text": "과정공지사항\n수정하기\n돌아가기\n제목\t[공지] 3차 만족도 조사 일정 안내\n작성자\t김지수\t작성일\t2026-10-21\n내용\t\n\n2026-10-28에 만족도 조사 예정입니다.\n\n많은 참여 부탁드립니다.",
+      "sha256": "8de43aedbcb1112e2bfc49fa3186011a26f70a6d79f9aebd63626539a37806f5"
+    },
+    "form": {
+      "action": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/exe.php",
+      "mode": "date_update",
+      "post_id": "1095",
+      "board": "84",
+      "course": "300002",
+      "rows": [
+        {
+          "name": "강민경",
+          "sid": "sbsartdj1114",
+          "date": "2026-10-21",
+          "hour": "18",
+          "minute": "16",
+          "second": "18"
+        },
+        {
+          "name": "박주연",
+          "sid": "sbsartdj1117",
+          "date": "2026-10-21",
+          "hour": "15",
+          "minute": "10",
+          "second": "06"
+        },
+        {
+          "name": "박찬미",
+          "sid": "sbsartdj1118",
+          "date": "2026-10-21",
+          "hour": "17",
+          "minute": "26",
+          "second": "29"
+        },
+        {
+          "name": "이은경",
+          "sid": "sbsartdj1119",
+          "date": "2026-10-21",
+          "hour": "18",
+          "minute": "35",
+          "second": "57"
+        },
+        {
+          "name": "이은수",
+          "sid": "sbsartdj1123",
+          "date": "2026-10-21",
+          "hour": "16",
+          "minute": "06",
+          "second": "55"
+        },
+        {
+          "name": "이지희",
+          "sid": "sbsartdj1120",
+          "date": "2026-10-21",
+          "hour": "14",
+          "minute": "00",
+          "second": "01"
+        },
+        {
+          "name": "임연우",
+          "sid": "sbsartdj1121",
+          "date": "2026-10-21",
+          "hour": "17",
+          "minute": "56",
+          "second": "54"
+        },
+        {
+          "name": "최지혜",
+          "sid": "sbsartdj1124",
+          "date": "2026-10-21",
+          "hour": "16",
+          "minute": "36",
+          "second": "15"
+        },
+        {
+          "name": "허지민",
+          "sid": "sbsartdj1122",
+          "date": "2026-10-21",
+          "hour": "15",
+          "minute": "03",
+          "second": "13"
+        },
+        {
+          "name": "김정은\n\n2026-09-10 수강포기"
+        },
+        {
+          "name": "김지선\n\n2026-08-20 수강포기"
+        }
+      ]
+    },
+    "observed_at": "2026-11-13T02:34:07.456Z"
+  },
+  "verified_at": "2026-11-13T02:34:07.807Z"
+}

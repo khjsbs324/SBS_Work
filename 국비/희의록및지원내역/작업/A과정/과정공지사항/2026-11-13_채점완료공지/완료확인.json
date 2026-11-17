@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "course": "A과정",
+  "course_code": "300002",
+  "board_code": "84",
+  "notices": [
+    {
+      "post_id": "1118",
+      "title": "[채점공지] '프로토타입 제작 및 사용성 테스트' 능력단위평가 채점 완료",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=84&no=1118",
+      "date": "2026-11-04",
+      "set_number": 114,
+      "title_exact": true,
+      "date_exact": true,
+      "text_exact": true,
+      "times_exact": true,
+      "body_unchanged": true,
+      "applied_students": 9
+    },
+    {
+      "post_id": "1119",
+      "title": "[채점공지] '(비NCS 실기)AI 기획과 발상' 능력단위평가 채점 완료",
+      "url": "https://sbsartdj.maniaro.net/teacher/curri/ver4/bbs/view.php?Pcode=300002&BoardCode=84&no=1119",
+      "date": "2026-11-06",
+      "set_number": 113,
+      "title_exact": true,
+      "date_exact": true,
+      "text_exact": true,
+      "times_exact": true,
+      "body_unchanged": true,
+      "applied_students": 9
+    }
+  ],
+  "next_set": 112,
+  "verified_at": "2026-11-13T02:16:21.573Z"
+}

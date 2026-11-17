@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "source_file": "확인시간 120세트.txt",
+  "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1",
+  "order": "파일의 마지막 세트부터 역순 사용. 세트 내부의 시간은 LMS 학생 표시 순서에 대응.",
+  "next_set": 102,
+  "updated_at": "2026-11-13T02:34:12.074Z",
+  "request": "사용자가 확인시간 120세트 메모를 추가하고 가장 아래 시간부터 등록하도록 지시함.",
+  "entries": [
+    {
+      "post_id": "1112",
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "group": "A",
+      "set_number": 120,
+      "confirmation_date": "2026-11-04",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "15:17:33",
+        "16:02:53"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T01:10:54.528Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/프로토타입 제작 및 사용성 테스트/2026-11-13T094058/05_정정이력/확인내역시간_20261113/A_저장확인.json"
+    },
+    {
+      "post_id": "1113",
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "group": "B",
+      "set_number": 119,
+      "confirmation_date": "2026-11-04",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "16:24:38",
+        "16:11:56"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T01:11:18.798Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/프로토타입 제작 및 사용성 테스트/2026-11-13T094058/05_정정이력/확인내역시간_20261113/B_저장확인.json"
+    },
+    {
+      "post_id": "1114",
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "group": "C",
+      "set_number": 118,
+      "confirmation_date": "2026-11-04",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "18:13:23",
+        "15:46:43"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T01:11:21.860Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/프로토타입 제작 및 사용성 테스트/2026-11-13T094058/05_정정이력/확인내역시간_20261113/C_저장확인.json"
+    },
+    {
+      "post_id": "1115",
+      "unit": "(비NCS 실기)AI 기획과 발상",
+      "group": "A",
+      "set_number": 117,
+      "confirmation_date": "2026-11-06",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "15:26:14",
+        "16:38:56"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T01:11:23.730Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/(비NCS 실기)AI 기획과 발상/2026-11-13T094107/05_정정이력/확인내역시간_20261113/A_저장확인.json"
+    },
+    {
+      "post_id": "1116",
+      "unit": "(비NCS 실기)AI 기획과 발상",
+      "group": "B",
+      "set_number": 116,
+      "confirmation_date": "2026-11-06",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "16:17:32",
+        "16:29:23"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T01:11:25.427Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/(비NCS 실기)AI 기획과 발상/2026-11-13T094107/05_정정이력/확인내역시간_20261113/B_저장확인.json"
+    },
+    {
+      "post_id": "1117",
+      "unit": "(비NCS 실기)AI 기획과 발상",
+      "group": "C",
+      "set_number": 115,
+      "confirmation_date": "2026-11-06",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "17:47:22",
+        "16:25:42"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T01:11:27.218Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/(비NCS 실기)AI 기획과 발상/2026-11-13T094107/05_정정이력/확인내역시간_20261113/C_저장확인.json"
+    },
+    {
+      "post_id": "1118",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "unit": "프로토타입 제작 및 사용성 테스트",
+      "set_number": 114,
+      "confirmation_date": "2026-11-04",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "15:29:15",
+        "15:22:03"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:15:59.806Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_채점완료공지/114_확인시간저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1119",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "unit": "(비NCS 실기)AI 기획과 발상",
+      "set_number": 113,
+      "confirmation_date": "2026-11-06",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "16:13:01",
+        "16:03:32"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:16:21.573Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_채점완료공지/113_확인시간저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1092",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 112,
+      "confirmation_date": "2026-05-28",
+      "applied_students": 11,
+      "excluded": "수강포기 0명",
+      "unused_times": [],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:33:24.346Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/112_1092_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1093",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 111,
+      "confirmation_date": "2026-06-18",
+      "applied_students": 11,
+      "excluded": "수강포기 0명",
+      "unused_times": [],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:33:26.876Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/111_1093_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1111",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 110,
+      "confirmation_date": "2026-07-02",
+      "applied_students": 11,
+      "excluded": "수강포기 0명",
+      "unused_times": [],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:33:29.024Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/110_1111_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1094",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 109,
+      "confirmation_date": "2026-08-24",
+      "applied_students": 10,
+      "excluded": "수강포기 1명",
+      "unused_times": [
+        "17:00:16"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:33:41.041Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/109_1094_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1101",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 108,
+      "confirmation_date": "2026-08-27",
+      "applied_students": 10,
+      "excluded": "수강포기 1명",
+      "unused_times": [
+        "16:09:29"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:33:43.196Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/108_1101_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1103",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 107,
+      "confirmation_date": "2026-09-14",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "17:24:55",
+        "17:30:01"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:33:45.349Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/107_1103_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1104",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 106,
+      "confirmation_date": "2026-09-14",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "17:18:15",
+        "14:59:26"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:33:47.476Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/106_1104_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1095",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 105,
+      "confirmation_date": "2026-10-21",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "14:41:08",
+        "14:37:16"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:34:07.807Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/105_1095_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1109",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 104,
+      "confirmation_date": "2026-10-22",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "16:28:21",
+        "16:24:53"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:34:09.937Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/104_1109_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    },
+    {
+      "post_id": "1110",
+      "board_code": "84",
+      "board": "과정공지사항",
+      "title": "과정공지사항",
+      "set_number": 103,
+      "confirmation_date": "2026-11-06",
+      "applied_students": 9,
+      "excluded": "수강포기 2명",
+      "unused_times": [
+        "14:49:28",
+        "15:43:53"
+      ],
+      "status": "verified",
+      "verified_at": "2026-11-13T02:34:12.074Z",
+      "evidence": "C:/khjsbs324/SBS_Work/국비/희의록및지원내역/작업/A과정/과정공지사항/2026-11-13_일반공지확인시간/103_1110_저장확인.json",
+      "source_sha256": "0120b109b8548a17d1ed2e6e7cf59bf4938020d1eb1a3e52a45eef5be7199be1"
+    }
+  ],
+  "previous_source_sha256": "46aa8bf6aa072131cefbe64267964554ce4cfc0cf2c77480904a119e1919d3d1",
+  "source_version_note": "114·113세트는 이번 작업 시작 시 읽은 현재 메모를 사용함. 앞선 120~115세트 기록은 이전 원본 해시와 기존 저장 증빙을 보존함."
+}
