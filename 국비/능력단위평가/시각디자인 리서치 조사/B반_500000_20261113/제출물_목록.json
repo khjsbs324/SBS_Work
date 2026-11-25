@@ -1,0 +1,345 @@
+[
+  {
+    "student": "강애란",
+    "zip_sha256": "c36383d4b7b06bd734fa399733048147f436e283bcbc00ef7d48d2b5cc9bab9c",
+    "zip_size": 3675259,
+    "files": [
+      {
+        "path": "채점 자료\\강애란\\제출물\\강애란.pdf",
+        "size": 4833520,
+        "sha256": "cd3f5a19a5f54da9fc1bbcf9f2d708dcbb415c6e425c97931fead915a754c90a"
+      },
+      {
+        "path": "채점 자료\\강애란\\제출물\\강애란_보고서초안.md",
+        "size": 41934,
+        "sha256": "4cdf7c70bdcfcc9d49a7201252dc91112ca20fe4d9e3f8fb03683ccc1db5be22"
+      }
+    ],
+    "pdfs": [
+      {
+        "file": "강애란.pdf",
+        "pages": 1,
+        "text_chars": 12046,
+        "review": "국비\\능력단위평가\\시각디자인 리서치 조사\\B반_500000_20261113\\채점 자료\\강애란\\검토\\pdf1",
+        "lowtext_pages": []
+      }
+    ],
+    "links": [
+      "https://www.ibulgyo.com/news/articleView.html?idxno=442243",
+      "https://www.khan.co.kr/article/202610230600141",
+      "https://www.joongang.co.kr/article/25462954",
+      "https://chatgpt.com/library?file_id=libfile_32bf490c98fc8191a0c0970b6c38ee8e&account_id=personal",
+      "https://www.osulloc.com/",
+      "https://delphic.kr/",
+      "https://magpie-and-tiger.com/",
+      "https://www.brownze.co.kr/",
+      "https://kinto.co.jp/",
+      "https://twl-shop.com/",
+      "https://smartstore.naver.com/boubouworks",
+      "https://www.chaye.kr/",
+      "https://samadoyo.shop/",
+      "https://teaware.house/",
+      "https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/a3lBRzAwZ1BxTzZWMFRscVhBQkhjUT09/company_nm/%28%EC%A3%BC%29%EC%98%A4%EC%84%A4%EB%A1%9D",
+      "https://www.jobkorea.co.kr/recruit/co_read/c/brownze",
+      "https://www.jobkorea.co.kr/recruit/co_read/c/chaye02",
+      "https://www.saramin.co.kr/zf_user/company-info/view-inner-finance?csn=NU1QdFRCMDh2VkNaZjRwdHpaZ1JJUT09",
+      "https://chatgpt.com/library?file_id=libfile_7ba63d72aec48191a2b96743c6db0a14&account_id=personal",
+      "https://www.khan.co.kr/article/202610230600141#ENT"
+    ],
+    "dimensions": {
+      "width": 1920.0,
+      "height": 18360.0,
+      "logical_slides": 17
+    }
+  },
+  {
+    "student": "김규린",
+    "zip_sha256": "5b76936e33b45ed33469b095575ee3d3748890a7869296647566a68bb48af20c",
+    "zip_size": 2722888,
+    "files": [
+      {
+        "path": "채점 자료\\김규린\\제출물\\틈새로\\Cobalt Paper\\김규린.pdf",
+        "size": 2722628,
+        "sha256": "5fb74465731987bde61ef9327c9d8444ec7ab65fbe6f15f808c311b75a562c7e"
+      }
+    ],
+    "pdfs": [
+      {
+        "file": "김규린.pdf",
+        "pages": 1,
+        "text_chars": 10430,
+        "review": "국비\\능력단위평가\\시각디자인 리서치 조사\\B반_500000_20261113\\채점 자료\\김규린\\검토\\pdf1",
+        "lowtext_pages": []
+      }
+    ],
+    "links": [],
+    "dimensions": {
+      "width": 1920.0,
+      "height": 17280.0,
+      "logical_slides": 16
+    }
+  },
+  {
+    "student": "김형관",
+    "zip_sha256": "dff4e996276881e15f1b3e41ce4f64a6098eb01d0fcbacf3f14ef966d34c6458",
+    "zip_size": 5734197,
+    "files": [
+      {
+        "path": "채점 자료\\김형관\\제출물\\김형관.pdf",
+        "size": 7801366,
+        "sha256": "ed0d3470b3903d28334feab77aef06ae9a3b57c1db5435e524862295c1aecb38"
+      },
+      {
+        "path": "채점 자료\\김형관\\제출물\\김형관_보고서_초안.md",
+        "size": 28808,
+        "sha256": "67a0a9c0ffc086d5e59601c4ce8eb71e59c2f0bd2b2ba406de3bd39578e7c0a2"
+      }
+    ],
+    "pdfs": [
+      {
+        "file": "김형관.pdf",
+        "pages": 1,
+        "text_chars": 33346,
+        "review": "국비\\능력단위평가\\시각디자인 리서치 조사\\B반_500000_20261113\\채점 자료\\김형관\\검토\\pdf1",
+        "lowtext_pages": []
+      }
+    ],
+    "links": [
+      "https://www.mordorintelligence.kr/industry-reports/mobile-protective-cases-market",
+      "https://www.ceoscoredaily.com/page/view/2024062510105143266",
+      "https://www.newscj.com/news/articleView.html?idxno=3272011"
+    ],
+    "dimensions": {
+      "width": 1920.0,
+      "height": 21600.0,
+      "logical_slides": 20
+    }
+  },
+  {
+    "student": "박선환",
+    "zip_sha256": "85f7c0301b51ac642f0bfabc66ad0c4d955fde4d1ec571920967c582aefa0372",
+    "zip_size": 5134133,
+    "files": [
+      {
+        "path": "채점 자료\\박선환\\제출물\\박선환.pdf",
+        "size": 6393193,
+        "sha256": "59e291dc40763bc4ebf14a49c79ca85a0c9fd6304f0f8081caefe8b4b4013fc4"
+      },
+      {
+        "path": "채점 자료\\박선환\\제출물\\박선환_보고서_초안.md",
+        "size": 34690,
+        "sha256": "36041f585cd5a3c600adbbec9f567047cf7cc6b01123617241733b50e3fb29eb"
+      }
+    ],
+    "pdfs": [
+      {
+        "file": "박선환.pdf",
+        "pages": 1,
+        "text_chars": 12605,
+        "review": "국비\\능력단위평가\\시각디자인 리서치 조사\\B반_500000_20261113\\채점 자료\\박선환\\검토\\pdf1",
+        "lowtext_pages": []
+      }
+    ],
+    "links": [
+      "https://www.kbfg.com/kbresearch/brand/brandView.do?reportId=2000531",
+      "https://www.news1.kr/industry/general-industry/6221959",
+      "https://www.mafra.go.kr/home/5109/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGaG9tZSUyRjc5MiUyRjU3Njk2MSUyRmFydGNsVmlldy5kbyUzRnV0bV9zb3VyY2UlM0RjaGF0Z3B0LmNvbSUyNg%3D%3D"
+    ],
+    "dimensions": {
+      "width": 1920.0,
+      "height": 20520.0,
+      "logical_slides": 19
+    }
+  },
+  {
+    "student": "신윤아",
+    "zip_sha256": "18dcfd78cb600f1d289ba8e33c9bc52e935026b62b35277df3e86f15000960be",
+    "zip_size": 3767991,
+    "files": [
+      {
+        "path": "채점 자료\\신윤아\\제출물\\신윤아\\신윤아.pdf",
+        "size": 4268024,
+        "sha256": "7a531a4db12580fae22781462272dd3cd1d9ece43992e7fa9a5504e9cceffd73"
+      },
+      {
+        "path": "채점 자료\\신윤아\\제출물\\신윤아\\신윤아_보고서_초안.md",
+        "size": 45236,
+        "sha256": "b2353c59268579dcd8dae5d631d648e7a6bf5a8ecae797ff3ee06bddc6317d49"
+      }
+    ],
+    "pdfs": [
+      {
+        "file": "신윤아.pdf",
+        "pages": 1,
+        "text_chars": 7345,
+        "review": "국비\\능력단위평가\\시각디자인 리서치 조사\\B반_500000_20261113\\채점 자료\\신윤아\\검토\\pdf1",
+        "lowtext_pages": []
+      }
+    ],
+    "links": [
+      "https://newspim.com/news/view/20260902000781",
+      "https://notebooktherapy.com/collections/junk-journal",
+      "https://www.10x10.co.kr/event/eventmain.asp?eventid=132672",
+      "https://thehappyplanner.com/collections/value-pack-sticker-books",
+      "https://www.newspim.com/news/view/20260729000183",
+      "https://www.newsis.com/view/NISX20261013_0003823398",
+      "https://www.dailian.co.kr/news/view/1449628/29CM-%EB%94%94%EC%9E%90%EC%9D%B4%EB%84%88-%EB%AC%B8%EA%B5%AC-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC-%EA%B1%B0%EB%9E%98-2025",
+      "https://www.donga.com/news/Economy/article/all/20250121/130906321/2",
+      "https://zdnet.co.kr/view/?no=20260902161353",
+      "https://www.20slab.org/Archives/38822",
+      "https://www.20slab.org/Archives/38849",
+      "https://www.20slab.org/Archives/38757",
+      "https://www.figma.com/slides/otiwIeg639wri5bw62M96W",
+      "https://www.w3.org/WAI/WCAG22/quickref/"
+    ],
+    "dimensions": {
+      "width": 1920.0,
+      "height": 22200.0,
+      "logical_slides": 21
+    }
+  },
+  {
+    "student": "이주원",
+    "zip_sha256": "888fe8bd20d392e0636584a1f63fd61aefc3eb6dabfba8e7d1d14e4ea96385ed",
+    "zip_size": 2882727,
+    "files": [
+      {
+        "path": "채점 자료\\이주원\\제출물\\이주원.pdf",
+        "size": 3865435,
+        "sha256": "fe3ca1126d533c60260485de7e0e0a79b2ebb0e39c4ebab8050c06b5f6f95cfe"
+      },
+      {
+        "path": "채점 자료\\이주원\\제출물\\이주원_보고서_초안.md",
+        "size": 34798,
+        "sha256": "8b480e11db56b17da976634c548b08e9c0fd4dd05049bfb7d372de9f860efedd"
+      }
+    ],
+    "pdfs": [
+      {
+        "file": "이주원.pdf",
+        "pages": 1,
+        "text_chars": 10848,
+        "review": "국비\\능력단위평가\\시각디자인 리서치 조사\\B반_500000_20261113\\채점 자료\\이주원\\검토\\pdf1",
+        "lowtext_pages": []
+      }
+    ],
+    "links": [
+      "https://ohstory.io/press/media/15138",
+      "https://www.jobkorea.co.kr/goodjob/tip/View?News_No=18587",
+      "https://www.dnews.co.kr/uhtml/view.jsp?idxno=201705260954197630683",
+      "https://www.ikea.com/kr/ko/p/elloven-monitor-stand-with-drawer-anthracite-80485102/",
+      "https://grovemade.com/desk-shelf-system/",
+      "https://www.balolo.de/en/collections/setup-cockpit",
+      "https://www.kdca.go.kr/bbs/kdca/46/304995/download.do",
+      "https://www.sjweh.fi/article/4228?utm_source=chatgpt.com",
+      "https://www.khan.co.kr/article/202603070700005",
+      "https://www.jobkorea.co.kr/goodjob/tip/View?News_No=18587&utm_source=chatgpt.com",
+      "https://www.dnews.co.kr/uhtml/view.jsp?idxno=201705260954197630683&utm_source=chatgpt.com",
+      "https://www.figma.com/slides/O8LkWErsHlf6jcNIz3uAY5"
+    ],
+    "dimensions": {
+      "width": 1920.0,
+      "height": 17280.0,
+      "logical_slides": 16
+    }
+  },
+  {
+    "student": "전해주",
+    "zip_sha256": "f42ac1a92986795aa401ce67aba91fa95920985838f4ad139aa749d47984e164",
+    "zip_size": 1846095,
+    "files": [
+      {
+        "path": "채점 자료\\전해주\\제출물\\전해주.pdf",
+        "size": 2366687,
+        "sha256": "aa124a99c71534b834bdbe6057a35ade1ba3e847ebcc0537bba19b09e586bfd8"
+      },
+      {
+        "path": "채점 자료\\전해주\\제출물\\전해주_보고서_초안.md",
+        "size": 37883,
+        "sha256": "acefb7b2ea9f7621677f84fc77699aa2115fae31890e705e0b817d17784b57f6"
+      }
+    ],
+    "pdfs": [
+      {
+        "file": "전해주.pdf",
+        "pages": 1,
+        "text_chars": 8104,
+        "review": "국비\\능력단위평가\\시각디자인 리서치 조사\\B반_500000_20261113\\채점 자료\\전해주\\검토\\pdf1",
+        "lowtext_pages": []
+      }
+    ],
+    "links": [
+      "https://news.sbs.co.kr/news/endPage.do?newsId=N1008687097",
+      "https://www.trendmonitor.co.kr/tmweb/trend/allTrend/detail.do?bIdx=3301&trendType=CKOREA",
+      "https://sulleda.com/bandinity/index.html#t-FLOWER",
+      "https://jampalz.shop/",
+      "https://headsnaps.co.uk/",
+      "https://www.guitarplayer.tw/",
+      "https://sulleda.com/bandinity/index.html",
+      "https://stormguitar.com/",
+      "https://www.axecanvas.com/shopinfo/company.html",
+      "https://elsonidostrap.com/",
+      "https://franoi.kr/",
+      "https://andantannerie.com/",
+      "https://www.gopherwood.co.kr/",
+      "https://www.jimdunlop.com/products/guitar-picks/",
+      "https://perris.ca/",
+      "https://www.souldier.us/",
+      "https://www.rightonstraps.com/",
+      "https://www.levysleathers.com/",
+      "https://www.yna.co.kr/view/AKR20241010058200005",
+      "https://v.daum.net/v/20260525060238853",
+      "https://v.daum.net/v/20260424144415615",
+      "https://www.fender.com/newsroom/271667-guitar-isn-t-dead-research-shows-learning-to-play-helps-us-live-better-lives/"
+    ],
+    "dimensions": {
+      "width": 1920.0,
+      "height": 12960.0,
+      "logical_slides": 12
+    }
+  },
+  {
+    "student": "홍석경",
+    "zip_sha256": "36be2881b45e1e1671b319308ae06b34c28590fb2b754390ac9b609543d44561",
+    "zip_size": 5995014,
+    "files": [
+      {
+        "path": "채점 자료\\홍석경\\제출물\\LUVOLT_research_report.md",
+        "size": 29968,
+        "sha256": "264fa4d9c2af5440ae26557dd123adffe5a93e33c5faff119b0c30f06b276dc5"
+      },
+      {
+        "path": "채점 자료\\홍석경\\제출물\\브랜딩보고서_홍석경_초안03.pdf",
+        "size": 6925683,
+        "sha256": "c98ce9f3d43be53c3020ecdcef4cdeec6f688346459ffebc7ab3618cbcc5dd94"
+      }
+    ],
+    "pdfs": [
+      {
+        "file": "브랜딩보고서_홍석경_초안03.pdf",
+        "pages": 1,
+        "text_chars": 9637,
+        "review": "국비\\능력단위평가\\시각디자인 리서치 조사\\B반_500000_20261113\\채점 자료\\홍석경\\검토\\pdf1",
+        "lowtext_pages": []
+      }
+    ],
+    "links": [
+      "https://kcia.or.kr/inc/down.php?dir=BOARD&file_name=202605_177978900248248_2.pdf&rename=5.22.%ED%99%94%EC%9E%A5%ED%92%88%EC%A0%95%EC%B1%85%EA%B3%BC.pdf&utm_source=chatgpt.com",
+      "https://cjnews.cj.net/?p=72533&utm_source=chatgpt.com",
+      "https://www.20slab.org/Archives/39012?utm_source=chatgpt.com",
+      "https://www.figma.com/slides/0E8077VpgRx95wzdDdMvIX?node-id=24-52",
+      "https://www.figma.com/slides/0E8077VpgRx95wzdDdMvIX?node-id=28-450",
+      "https://www.figma.com/slides/0E8077VpgRx95wzdDdMvIX?node-id=37-872",
+      "https://www.figma.com/slides/0E8077VpgRx95wzdDdMvIX?node-id=39-1087",
+      "https://www.figma.com/slides/0E8077VpgRx95wzdDdMvIX?node-id=13-595",
+      "https://www.figma.com/slides/0E8077VpgRx95wzdDdMvIX?node-id=25-174",
+      "https://www.figma.com/slides/0E8077VpgRx95wzdDdMvIX?node-id=52-106",
+      "https://www.figma.com/slides/0E8077VpgRx95wzdDdMvIX"
+    ],
+    "dimensions": {
+      "width": 1920.0,
+      "height": 17280.0,
+      "logical_slides": 16
+    }
+  }
+]

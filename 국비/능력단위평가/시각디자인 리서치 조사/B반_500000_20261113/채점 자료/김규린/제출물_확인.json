@@ -1,0 +1,16 @@
+{
+  "student": "김규린",
+  "unit": "시각디자인 리서치 조사",
+  "Pcode": "500000",
+  "Sid": "sbsartdj1165",
+  "archive": "원본.zip",
+  "archive_sha256": "5b76936e33b45ed33469b095575ee3d3748890a7869296647566a68bb48af20c",
+  "receivedAt": "2026-11-25",
+  "files": [
+    {
+      "filename": "제출물\\틈새로\\Cobalt Paper\\김규린.pdf",
+      "bytes": 2722628,
+      "sha256": "5fb74465731987bde61ef9327c9d8444ec7ab65fbe6f15f808c311b75a562c7e"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "ownTaskPassed": true,
+  "students": 8,
+  "detailedFeedbacksSavedAndReopened": 8,
+  "fullFeedbacksExactlyMatch": true,
+  "criterionScoresPreserved": 104,
+  "totalScoresPreserved": 8,
+  "maximaAndCriterionIdsPreserved": true,
+  "overviewFeedbacksAndTotalsVerified": true,
+  "localPayloadAndTeacherRecordsMatch": true,
+  "originalZIPsAndExtractedFilesPreserved": 23,
+  "initialRegistrationProofsAndScoreCSVPreserved": 4,
+  "previousFeedbacksBackedUp": true,
+  "sharedHarnessExitCode": 1,
+  "sharedHarnessPreexistingErrors": [
+    {
+      "path": "국비/능력단위평가/수정 보완/CLAUDE.md",
+      "unchangedFromHEAD": true
+    },
+    {
+      "path": "국비/능력단위평가/수정 보완/Exam.md",
+      "unchangedFromHEAD": true
+    }
+  ],
+  "sharedHarnessNote": "기존 수정 보완/CLAUDE.md 링크 및 Exam.md 제목 형식 오류. 공통 검사는 실패 상태를 유지하며 본 B반 피드백·점수·원본 보존은 별도 실데이터 검사함.",
+  "verifiedAt": "2026-11-25T09:31:28.376Z"
+}

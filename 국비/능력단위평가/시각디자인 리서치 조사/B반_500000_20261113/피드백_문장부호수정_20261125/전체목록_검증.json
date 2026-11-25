@@ -1,0 +1,71 @@
+{
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/app/index.php?Pcode=500000&Lcode=4",
+  "verifiedAt": "2026-11-25T09:38:04.744Z",
+  "students": [
+    {
+      "name": "강애란",
+      "Sid": "sbsartdj1172",
+      "total": 91,
+      "scoreMatches": true,
+      "fullTextMatches": true,
+      "remainingMiddleDots": 0
+    },
+    {
+      "name": "김규린",
+      "Sid": "sbsartdj1165",
+      "total": 81,
+      "scoreMatches": true,
+      "fullTextMatches": true,
+      "remainingMiddleDots": 0
+    },
+    {
+      "name": "김형관",
+      "Sid": "sbsartdj1166",
+      "total": 88,
+      "scoreMatches": true,
+      "fullTextMatches": true,
+      "remainingMiddleDots": 0
+    },
+    {
+      "name": "박선환",
+      "Sid": "sbsartdj1167",
+      "total": 92,
+      "scoreMatches": true,
+      "fullTextMatches": true,
+      "remainingMiddleDots": 0
+    },
+    {
+      "name": "신윤아",
+      "Sid": "sbsartdj1168",
+      "total": 92,
+      "scoreMatches": true,
+      "fullTextMatches": true,
+      "remainingMiddleDots": 0
+    },
+    {
+      "name": "이주원",
+      "Sid": "sbsartdj1171",
+      "total": 86,
+      "scoreMatches": true,
+      "fullTextMatches": true,
+      "remainingMiddleDots": 0
+    },
+    {
+      "name": "전해주",
+      "Sid": "sbsartdj1169",
+      "total": 92,
+      "scoreMatches": true,
+      "fullTextMatches": true,
+      "remainingMiddleDots": 0
+    },
+    {
+      "name": "홍석경",
+      "Sid": "sbsartdj1170",
+      "total": 88,
+      "scoreMatches": true,
+      "fullTextMatches": true,
+      "remainingMiddleDots": 0
+    }
+  ],
+  "verified": true
+}

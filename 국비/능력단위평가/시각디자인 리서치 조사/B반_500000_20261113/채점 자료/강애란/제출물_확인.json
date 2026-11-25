@@ -1,0 +1,21 @@
+{
+  "student": "강애란",
+  "unit": "시각디자인 리서치 조사",
+  "Pcode": "500000",
+  "Sid": "sbsartdj1172",
+  "archive": "원본.zip",
+  "archive_sha256": "c36383d4b7b06bd734fa399733048147f436e283bcbc00ef7d48d2b5cc9bab9c",
+  "receivedAt": "2026-11-25",
+  "files": [
+    {
+      "filename": "제출물\\강애란.pdf",
+      "bytes": 4833520,
+      "sha256": "cd3f5a19a5f54da9fc1bbcf9f2d708dcbb415c6e425c97931fead915a754c90a"
+    },
+    {
+      "filename": "제출물\\강애란_보고서초안.md",
+      "bytes": 41934,
+      "sha256": "4cdf7c70bdcfcc9d49a7201252dc91112ca20fe4d9e3f8fb03683ccc1db5be22"
+    }
+  ]
+}

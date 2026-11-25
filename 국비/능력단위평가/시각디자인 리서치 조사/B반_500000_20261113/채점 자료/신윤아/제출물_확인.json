@@ -1,0 +1,21 @@
+{
+  "student": "신윤아",
+  "unit": "시각디자인 리서치 조사",
+  "Pcode": "500000",
+  "Sid": "sbsartdj1168",
+  "archive": "원본.zip",
+  "archive_sha256": "18dcfd78cb600f1d289ba8e33c9bc52e935026b62b35277df3e86f15000960be",
+  "receivedAt": "2026-11-25",
+  "files": [
+    {
+      "filename": "제출물\\신윤아\\신윤아.pdf",
+      "bytes": 4268024,
+      "sha256": "7a531a4db12580fae22781462272dd3cd1d9ece43992e7fa9a5504e9cceffd73"
+    },
+    {
+      "filename": "제출물\\신윤아\\신윤아_보고서_초안.md",
+      "bytes": 45236,
+      "sha256": "b2353c59268579dcd8dae5d631d648e7a6bf5a8ecae797ff3ee06bddc6317d49"
+    }
+  ]
+}

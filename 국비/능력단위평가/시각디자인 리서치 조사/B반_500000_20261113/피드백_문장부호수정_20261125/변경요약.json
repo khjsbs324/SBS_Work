@@ -1,0 +1,46 @@
+{
+  "scope": "B반 8명 학생 공개 피드백의 U+00B7을 쉼표로만 치환",
+  "students": [
+    {
+      "name": "강애란",
+      "replacements": 29,
+      "total": 91
+    },
+    {
+      "name": "김규린",
+      "replacements": 31,
+      "total": 81
+    },
+    {
+      "name": "김형관",
+      "replacements": 25,
+      "total": 88
+    },
+    {
+      "name": "박선환",
+      "replacements": 35,
+      "total": 92
+    },
+    {
+      "name": "신윤아",
+      "replacements": 29,
+      "total": 92
+    },
+    {
+      "name": "이주원",
+      "replacements": 31,
+      "total": 86
+    },
+    {
+      "name": "전해주",
+      "replacements": 29,
+      "total": 92
+    },
+    {
+      "name": "홍석경",
+      "replacements": 40,
+      "total": 88
+    }
+  ],
+  "replacements": 249
+}

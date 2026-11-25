@@ -1,0 +1,21 @@
+{
+  "student": "이주원",
+  "unit": "시각디자인 리서치 조사",
+  "Pcode": "500000",
+  "Sid": "sbsartdj1171",
+  "archive": "원본.zip",
+  "archive_sha256": "888fe8bd20d392e0636584a1f63fd61aefc3eb6dabfba8e7d1d14e4ea96385ed",
+  "receivedAt": "2026-11-25",
+  "files": [
+    {
+      "filename": "제출물\\이주원.pdf",
+      "bytes": 3865435,
+      "sha256": "fe3ca1126d533c60260485de7e0e0a79b2ebb0e39c4ebab8050c06b5f6f95cfe"
+    },
+    {
+      "filename": "제출물\\이주원_보고서_초안.md",
+      "bytes": 34798,
+      "sha256": "8b480e11db56b17da976634c548b08e9c0fd4dd05049bfb7d372de9f860efedd"
+    }
+  ]
+}

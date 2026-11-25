@@ -1,0 +1,21 @@
+{
+  "student": "홍석경",
+  "unit": "시각디자인 리서치 조사",
+  "Pcode": "500000",
+  "Sid": "sbsartdj1170",
+  "archive": "원본.zip",
+  "archive_sha256": "36be2881b45e1e1671b319308ae06b34c28590fb2b754390ac9b609543d44561",
+  "receivedAt": "2026-11-25",
+  "files": [
+    {
+      "filename": "제출물\\LUVOLT_research_report.md",
+      "bytes": 29968,
+      "sha256": "264fa4d9c2af5440ae26557dd123adffe5a93e33c5faff119b0c30f06b276dc5"
+    },
+    {
+      "filename": "제출물\\브랜딩보고서_홍석경_초안03.pdf",
+      "bytes": 6925683,
+      "sha256": "c98ce9f3d43be53c3020ecdcef4cdeec6f688346459ffebc7ab3618cbcc5dd94"
+    }
+  ]
+}

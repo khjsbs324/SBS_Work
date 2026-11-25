@@ -1,0 +1,47 @@
+{
+  "verifiedAt": "2026-11-25T09:11:57.208Z",
+  "url": "https://sbsartdj.maniaro.net/teacher/curri/ver5/evaluation/app/index.php?Pcode=500000&Lcode=4",
+  "students": [
+    {
+      "student": "박선환",
+      "total": 92,
+      "feedbackMatched": true
+    },
+    {
+      "student": "신윤아",
+      "total": 92,
+      "feedbackMatched": true
+    },
+    {
+      "student": "전해주",
+      "total": 92,
+      "feedbackMatched": true
+    },
+    {
+      "student": "강애란",
+      "total": 91,
+      "feedbackMatched": true
+    },
+    {
+      "student": "김형관",
+      "total": 88,
+      "feedbackMatched": true
+    },
+    {
+      "student": "홍석경",
+      "total": 88,
+      "feedbackMatched": true
+    },
+    {
+      "student": "이주원",
+      "total": 86,
+      "feedbackMatched": true
+    },
+    {
+      "student": "김규린",
+      "total": 81,
+      "feedbackMatched": true
+    }
+  ],
+  "allVerified": true
+}

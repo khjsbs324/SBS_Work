@@ -1,0 +1,79 @@
+{
+  "students": [
+    {
+      "name": "강애란",
+      "Sid": "sbsartdj1172",
+      "total": 91,
+      "scoresUnchanged": true,
+      "oldCharacters": 879,
+      "newCharacters": 2112,
+      "paragraphs": 7
+    },
+    {
+      "name": "김규린",
+      "Sid": "sbsartdj1165",
+      "total": 81,
+      "scoresUnchanged": true,
+      "oldCharacters": 844,
+      "newCharacters": 2143,
+      "paragraphs": 8
+    },
+    {
+      "name": "김형관",
+      "Sid": "sbsartdj1166",
+      "total": 88,
+      "scoresUnchanged": true,
+      "oldCharacters": 856,
+      "newCharacters": 2138,
+      "paragraphs": 7
+    },
+    {
+      "name": "박선환",
+      "Sid": "sbsartdj1167",
+      "total": 92,
+      "scoresUnchanged": true,
+      "oldCharacters": 832,
+      "newCharacters": 2107,
+      "paragraphs": 7
+    },
+    {
+      "name": "신윤아",
+      "Sid": "sbsartdj1168",
+      "total": 92,
+      "scoresUnchanged": true,
+      "oldCharacters": 793,
+      "newCharacters": 2037,
+      "paragraphs": 7
+    },
+    {
+      "name": "이주원",
+      "Sid": "sbsartdj1171",
+      "total": 86,
+      "scoresUnchanged": true,
+      "oldCharacters": 818,
+      "newCharacters": 2042,
+      "paragraphs": 7
+    },
+    {
+      "name": "전해주",
+      "Sid": "sbsartdj1169",
+      "total": 92,
+      "scoresUnchanged": true,
+      "oldCharacters": 786,
+      "newCharacters": 2086,
+      "paragraphs": 7
+    },
+    {
+      "name": "홍석경",
+      "Sid": "sbsartdj1170",
+      "total": 88,
+      "scoresUnchanged": true,
+      "oldCharacters": 793,
+      "newCharacters": 2102,
+      "paragraphs": 7
+    }
+  ],
+  "scoresPreserved": 104,
+  "basis": "기존 A반 참고 및 B반 각 학생의 실제 제출 PDF·동봉 초안·교사용 판단 기록과 대조. 새 용어는 의미·해당 과제 예시·수정 및 확인 방법으로 설명. 추가 예시와 후속 검증은 제안으로 구분.",
+  "originalFilesVerified": 23
+}
